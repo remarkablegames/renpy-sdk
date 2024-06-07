@@ -8,6 +8,8 @@ tmp/
 *.rpyb
 __pycache__/
 cache/
+renpy/common/**/*.rpyc
+renpy/common/**/*.rpymc
 
 # Log files
 errors.txt
