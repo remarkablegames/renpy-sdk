@@ -2,6 +2,7 @@
 launcher/game/saves/persistent
 saves/
 tmp/
+update/
 
 # Compiled source
 *.pyc
