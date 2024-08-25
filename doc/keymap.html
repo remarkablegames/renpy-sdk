@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Customizing the Keymap &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/keymap.html" />
@@ -17,14 +17,13 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -66,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -75,8 +75,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
@@ -94,6 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -125,10 +126,8 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -140,6 +139,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul>
@@ -207,7 +207,7 @@
            <div itemprop="articleBody">
              
   <section id="customizing-the-keymap">
-<span id="keymap"></span><h1>Customizing the Keymap<a class="headerlink" href="#customizing-the-keymap" title="Permalink to this heading"> link</a></h1>
+<span id="keymap"></span><h1>Customizing the Keymap<a class="headerlink" href="#customizing-the-keymap" title="Link to this heading"></a></h1>
 <p>The variable <a class="reference internal" href="config.html#var-config.keymap"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.keymap</span></code></a> contains a map from event names to lists
 of keysyms that cause those events to occur.</p>
 <div class="admonition note">
@@ -240,14 +240,16 @@ separated by underscores:</p>
 <dt>alt</dt><dd><p>Matches if the Alt key is pressed. Keysyms without this prefix match
 when the Alt key is not pressed.</p>
 </dd>
-<dt>meta</dt><dd><p>Matches if the meta, Command, or Windows key is pressed. Keysyms without
+<dt>meta</dt><dd><p>Matches if the Meta, Command, or Windows key is pressed. Keysyms without
 this prefix match when the meta key is not pressed.</p>
 </dd>
 <dt>ctrl</dt><dd><p>Matches if the Ctrl key is pressed. Keysyms without this prefix match
 when the Ctrl key is not pressed. (Ctrl is not very useful, as it
 usually triggers skipping.)</p>
 </dd>
-<dt>osctrl</dt><dd><p>This is alt on the Macintosh, and ctrl elsewhere.</p>
+<dt>osctrl</dt><dd><p>This is Alt on the Macintosh, and Ctrl elsewhere.</p>
+</dd>
+<dt>anymod</dt><dd><p>Matches regardless of the state of the Alt, Meta, or Ctrl keys.</p>
 </dd>
 <dt>shift</dt><dd><p>Matches when the Shift key is pressed.</p>
 </dd>
@@ -265,7 +267,7 @@ usually triggers skipping.)</p>
 without the repeat or any prefixes do not match repeats. (This does not
 work with mouse buttons.)</p>
 </dd>
-<dt>any</dt><dd><p>Matches both initial keypresses and repeats.</p>
+<dt>anyrepeat</dt><dd><p>Matches both initial keypresses and repeats.</p>
 </dd>
 <dt>keydown</dt><dd><p>Matches when the key is being pressed down (the default).</p>
 </dd>
@@ -422,13 +424,14 @@ gamepad bindings is given below:</p>
     <span class="s2">&quot;pad_start_press&quot;</span> <span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;game_menu&quot;</span><span class="p">,</span> <span class="p">],</span>
 
     <span class="s2">&quot;pad_y_press&quot;</span> <span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;hide_windows&quot;</span><span class="p">,</span> <span class="p">],</span>
+    <span class="s2">&quot;pad_x_press&quot;</span> <span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;button_alternate&quot;</span> <span class="p">],</span>
 
     <span class="s2">&quot;pad_rightshoulder_press&quot;</span> <span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;rollforward&quot;</span><span class="p">,</span> <span class="p">],</span>
     <span class="s2">&quot;repeat_pad_rightshoulder_press&quot;</span> <span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;rollforward&quot;</span><span class="p">,</span> <span class="p">],</span>
 
     <span class="s2">&quot;pad_righttrigger_pos&quot;</span> <span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;dismiss&quot;</span><span class="p">,</span> <span class="s2">&quot;button_select&quot;</span><span class="p">,</span> <span class="s2">&quot;bar_activate&quot;</span><span class="p">,</span> <span class="s2">&quot;bar_deactivate&quot;</span> <span class="p">],</span>
     <span class="s2">&quot;pad_a_press&quot;</span> <span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;dismiss&quot;</span><span class="p">,</span> <span class="s2">&quot;button_select&quot;</span><span class="p">,</span> <span class="s2">&quot;bar_activate&quot;</span><span class="p">,</span> <span class="s2">&quot;bar_deactivate&quot;</span><span class="p">],</span>
-    <span class="s2">&quot;pad_b_press&quot;</span> <span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;button_alternate&quot;</span> <span class="p">],</span>
+    <span class="s2">&quot;pad_b_press&quot;</span> <span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;game_menu&quot;</span> <span class="p">],</span>
 
     <span class="s2">&quot;pad_dpleft_press&quot;</span> <span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;focus_left&quot;</span><span class="p">,</span> <span class="s2">&quot;bar_left&quot;</span><span class="p">,</span> <span class="s2">&quot;viewport_leftarrow&quot;</span> <span class="p">],</span>
     <span class="s2">&quot;pad_leftx_neg&quot;</span> <span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;focus_left&quot;</span><span class="p">,</span> <span class="s2">&quot;bar_left&quot;</span><span class="p">,</span> <span class="s2">&quot;viewport_leftarrow&quot;</span> <span class="p">],</span>
@@ -467,14 +470,14 @@ gamepad bindings is given below:</p>
 <p>Gamepad buttons have an event name of the form &quot;pad_*button*_press&quot; or
 &quot;pad_*button*_release&quot;. Analog axis events have the form &quot;pad_*axis*_pos&quot;,
 &quot;pad_*axis*_neg&quot;, or &quot;pad_*axis*_zero&quot;. If held down, a second gamepad binding
-is generated, with the the &quot;repeat_&quot; prefix.</p>
+is generated, with the &quot;repeat_&quot; prefix.</p>
 <p>Gamepads that do not work without special initialization are disabled by
 default. This includes the Nintendo Switch Pro Controller, which requires
 special initialization to work on a PC. This blocklisting is controlled by
 <a class="reference internal" href="config.html#var-config.controller_blocklist"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.controller_blocklist</span></code></a>.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.clear_keymap_cache">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">clear_keymap_cache</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.clear_keymap_cache" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">clear_keymap_cache</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.clear_keymap_cache" title="Link to this definition"></a></dt>
 <dd><p>Clears the keymap cache. This allows changes to <a class="reference internal" href="config.html#var-config.keymap"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.keymap</span></code></a> to
 take effect without restarting Ren'Py.</p>
 </dd></dl>

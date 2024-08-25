@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Layered Images &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/layeredimage.html" />
@@ -17,14 +17,13 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -66,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -75,8 +75,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Layered Images</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#defining-layered-images">Defining Layered Images</a><ul>
@@ -117,6 +117,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -145,10 +146,8 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -160,6 +159,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul>
@@ -227,7 +227,7 @@
            <div itemprop="articleBody">
              
   <section id="layered-images">
-<h1>Layered Images<a class="headerlink" href="#layered-images" title="Permalink to this heading"> link</a></h1>
+<h1>Layered Images<a class="headerlink" href="#layered-images" title="Link to this heading"></a></h1>
 <p>When a sprite-set gets to a certain level of complexity, defining every
 possible combination may become unwieldy. For example, a character with
 4 outfits, 4 hairstyles, and 6 emotions already has 96 possible
@@ -245,7 +245,7 @@ it's not a <a class="reference internal" href="displayables.html"><span class="d
 statement and used like one.</p>
 <p>The bottom of this page contains advice and examples of use.</p>
 <section id="defining-layered-images">
-<h2>Defining Layered Images<a class="headerlink" href="#defining-layered-images" title="Permalink to this heading"> link</a></h2>
+<h2>Defining Layered Images<a class="headerlink" href="#defining-layered-images" title="Link to this heading"></a></h2>
 <p>The language used to define layered images consists of only a few statements,
 to introduce the layers. Here is an example which, while not making much
 practical sense, is technically correct and outlines the layeredimage syntax:</p>
@@ -279,10 +279,10 @@ practical sense, is technically correct and outlines the layeredimage syntax:</p
 </pre></div>
 </div>
 <section id="layeredimage">
-<span id="layeredimage-statement"></span><h3>Layeredimage<a class="headerlink" href="#layeredimage" title="Permalink to this heading"> link</a></h3>
+<span id="layeredimage-statement"></span><h3>Layeredimage<a class="headerlink" href="#layeredimage" title="Link to this heading"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">layeredimage</span></code> statements opens the show. The statement is part of the
 Ren'Py script language, and runs at <a class="reference internal" href="lifecycle.html#init-phase"><span class="std std-ref">init time</span></a>. Like the
-<a class="reference internal" href="atl.html#atl-image-statement"><span class="std std-ref">Image Statement With ATL Block</span></a>, it takes an image name and opens a block, although
+<a class="reference internal" href="transforms.html#atl-image-statement"><span class="std std-ref">Image Statement with ATL Block</span></a>, it takes an image name and opens a block, although
 what's in the block differs greatly. The image name may contain spaces, just
 like any other image name in Ren'Py.</p>
 <p>Inside the block will fit the statements described further down, as well as the
@@ -307,7 +307,7 @@ information about when and how this is called.</p>
 </dd>
 <dt><cite>at</cite></dt><dd><p>A transform or list of transforms that are applied to the layered image.</p>
 </dd>
-<dt><a class="reference internal" href="atl.html#transform-properties"><span class="std std-ref">transform properties</span></a></dt><dd><p>If given, these are used to construct a transform that is applied to the
+<dt><a class="reference internal" href="transform_properties.html#id1"><span class="std std-ref">transform properties</span></a></dt><dd><p>If given, these are used to construct a transform that is applied to the
 displayable.</p>
 </dd>
 <dt><cite>offer_screen</cite></dt><dd><p>If this is True, the layeredimage will place its children, and size its
@@ -322,7 +322,7 @@ which defaults to True.</p>
 </dl>
 </section>
 <section id="always">
-<h3>Always<a class="headerlink" href="#always" title="Permalink to this heading"> link</a></h3>
+<h3>Always<a class="headerlink" href="#always" title="Link to this heading"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">always</span></code> statement declares an image that is always shown inside the
 layeredimage, and which will not be attached to an attribute. It
 must be supplied a displayable, and can also take properties. Both can
@@ -341,7 +341,7 @@ are present.</p>
 given, this layer is only displayed if none of the named attributes are
 present.</p>
 </dd>
-<dt><a class="reference internal" href="atl.html#transform-properties"><span class="std std-ref">transform properties</span></a></dt><dd><p>If given, these are used to construct a transform that is applied
+<dt><a class="reference internal" href="transform_properties.html#id1"><span class="std std-ref">transform properties</span></a></dt><dd><p>If given, these are used to construct a transform that is applied
 to the displayable.</p>
 </dd>
 <dt><cite>at</cite></dt><dd><p>A transform or list of transforms that are applied to the provided
@@ -349,7 +349,7 @@ displayable.</p>
 </dd>
 </dl>
 <section id="if">
-<h4>If<a class="headerlink" href="#if" title="Permalink to this heading"> link</a></h4>
+<h4>If<a class="headerlink" href="#if" title="Link to this heading"></a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">if</span></code> statement (or more fully the if-elif-else statement) allows you
 to supply one or more conditions that are evaluated at runtime. Each
 condition is associated with a displayable, with the first true condition
@@ -380,7 +380,7 @@ are present.</p>
 given, this condition is only considered if none of the named attributes are
 present.</p>
 </dd>
-<dt><a class="reference internal" href="atl.html#transform-properties"><span class="std std-ref">transform properties</span></a></dt><dd><p>If present, these are used to construct a transform that is applied
+<dt><a class="reference internal" href="transform_properties.html#id1"><span class="std std-ref">transform properties</span></a></dt><dd><p>If present, these are used to construct a transform that is applied
 to the displayable.</p>
 </dd>
 <dt><cite>at</cite></dt><dd><p>A transform or list of transforms that are applied to the displayable.</p>
@@ -390,7 +390,7 @@ to the displayable.</p>
 <code class="docutils literal notranslate"><span class="pre">layeredimage</span></code> statement runs.</p>
 <dl class="std var">
 <dt class="sig sig-object std" id="var-layeredimage.predict_all">
-<span class="sig-name descname"><span class="pre">layeredimage.predict_all</span></span> <span class="pre">=</span> <span class="pre">None</span><a class="headerlink" href="#var-layeredimage.predict_all" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">layeredimage.predict_all</span></span> <span class="pre">=</span> <span class="pre">None</span><a class="headerlink" href="#var-layeredimage.predict_all" title="Link to this definition"></a></dt>
 <dd><p>Sets the value of <cite>predict_all</cite> for the ConditionSwitches produced
 by layeredimages' <code class="docutils literal notranslate"><span class="pre">if</span></code> statements.</p>
 </dd></dl>
@@ -402,7 +402,7 @@ character customization options that don't change often.</p>
 </section>
 </section>
 <section id="attribute">
-<h3>Attribute<a class="headerlink" href="#attribute" title="Permalink to this heading"> link</a></h3>
+<h3>Attribute<a class="headerlink" href="#attribute" title="Link to this heading"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">attribute</span></code> statement adds a displayable that is part of the resulting
 image when the given attribute is used to display it. For example, using the
 previous example, calling <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">augustina</span> <span class="pre">dress</span></code> will cause the
@@ -437,7 +437,7 @@ are present.</p>
 present, this layer is only displayed if none of the named attributes are
 present.</p>
 </dd>
-<dt><a class="reference internal" href="atl.html#transform-properties"><span class="std std-ref">transform properties</span></a></dt><dd><p>If present, these are used to construct a transform that is applied
+<dt><a class="reference internal" href="transform_properties.html#id1"><span class="std std-ref">transform properties</span></a></dt><dd><p>If present, these are used to construct a transform that is applied
 to the layer.</p>
 </dd>
 <dt><cite>at</cite></dt><dd><p>A transform or list of transforms that are applied to the layer.</p>
@@ -460,7 +460,7 @@ still be part of the attributes list, which means the <code class="docutils lite
 display.</p>
 </section>
 <section id="group">
-<h3>Group<a class="headerlink" href="#group" title="Permalink to this heading"> link</a></h3>
+<h3>Group<a class="headerlink" href="#group" title="Link to this heading"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">group</span></code> statement groups attributes together, making them mutually
 exclusive. Unless the group is <code class="docutils literal notranslate"><span class="pre">multiple</span></code>, when attributes <cite>a</cite> and <cite>b</cite> are in
 the same group, it is an error to include both of the attributes at the same
@@ -546,7 +546,7 @@ block, they are both in the same group.</p>
 </section>
 </section>
 <section id="pattern-and-format-function">
-<span id="layeredimage-pattern"></span><h2>Pattern and format function<a class="headerlink" href="#pattern-and-format-function" title="Permalink to this heading"> link</a></h2>
+<span id="layeredimage-pattern"></span><h2>Pattern and format function<a class="headerlink" href="#pattern-and-format-function" title="Link to this heading"></a></h2>
 <p>The pattern, used to find images for attributes when they are not explicitly
 given one, consists of:</p>
 <ul class="simple">
@@ -579,7 +579,7 @@ implement the behavior described above. You can see what arguments it takes, in
 case you want to supply your own <cite>format_function</cite> to replace it.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="layeredimage.format_function">
-<span class="sig-prename descclassname"><span class="pre">layeredimage.</span></span><span class="sig-name descname"><span class="pre">format_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">what</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variant</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_format</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#layeredimage.format_function" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">layeredimage.</span></span><span class="sig-name descname"><span class="pre">format_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">what</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variant</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_format</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#layeredimage.format_function" title="Link to this definition"></a></dt>
 <dd><p>This is called to format the information about an attribute
 or condition into a displayable. This can be replaced by a
 creator, but the new function should ignore unknown kwargs.</p>
@@ -617,7 +617,7 @@ argument.</p>
 
 </section>
 <section id="proxying-layered-images">
-<h2>Proxying Layered Images<a class="headerlink" href="#proxying-layered-images" title="Permalink to this heading"> link</a></h2>
+<h2>Proxying Layered Images<a class="headerlink" href="#proxying-layered-images" title="Link to this heading"></a></h2>
 <p>Sometimes, it can be useful (and even necessary) to proxy a layered image, to
 use the same layered image in multiple places. One reason for this would be to
 have a transformed version of a given layeredimage, while another would be to
@@ -656,7 +656,7 @@ this:</p>
 </div>
 <dl class="py class">
 <dt class="sig sig-object py" id="LayeredImageProxy">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LayeredImageProxy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#LayeredImageProxy" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LayeredImageProxy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#LayeredImageProxy" title="Link to this definition"></a></dt>
 <dd><p>This is an image-like object that proxies attributes passed to it to
 another layered image.</p>
 <dl class="simple">
@@ -670,7 +670,7 @@ image after it has been proxied.</p>
 
 </section>
 <section id="selecting-attributes-to-display">
-<span id="attribute-selection-process"></span><h2>Selecting attributes to display<a class="headerlink" href="#selecting-attributes-to-display" title="Permalink to this heading"> link</a></h2>
+<span id="attribute-selection-process"></span><h2>Selecting attributes to display<a class="headerlink" href="#selecting-attributes-to-display" title="Link to this heading"></a></h2>
 <p>Several factors influence what gets displayed following a given
 <a class="reference internal" href="displaying_images.html#show-statement"><span class="std std-ref">Show Statement</span></a>. To provide more clarity as to what happens in which
 order, this section showcases the life of a set of attributes, from the show
@@ -713,7 +713,7 @@ attributes are called into display.</p></li>
 </ul>
 </section>
 <section id="advice">
-<h2>Advice<a class="headerlink" href="#advice" title="Permalink to this heading"> link</a></h2>
+<h2>Advice<a class="headerlink" href="#advice" title="Link to this heading"></a></h2>
 <p><strong>Use underscores in image filenames.</strong></p>
 <p>By default, Ren'Py's layered images use underscores to separate sections
 of image names. It might be tempting to use images with spaces between
@@ -756,7 +756,7 @@ unless you ask for it with the <code class="docutils literal notranslate"><span 
 attributes and use a dedicated <a class="reference internal" href="config.html#var-config.adjust_attributes"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.adjust_attributes</span></code></a> function.</p>
 </section>
 <section id="examples">
-<span id="layeredimage-examples"></span><h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading"> link</a></h2>
+<span id="layeredimage-examples"></span><h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
 <p><strong>Pattern and auto groups</strong></p>
 <p>From the following files in the images/ directory (or one of its subfolders) and
 written code:</p>

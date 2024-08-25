@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sprites &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/sprites.html" />
@@ -17,14 +17,13 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -66,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -75,8 +75,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
@@ -94,6 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -139,10 +140,8 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -154,6 +153,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul>
@@ -221,13 +221,13 @@
            <div itemprop="articleBody">
              
   <section id="sprites">
-<span id="id1"></span><h1>Sprites<a class="headerlink" href="#sprites" title="Permalink to this heading"> link</a></h1>
+<span id="id1"></span><h1>Sprites<a class="headerlink" href="#sprites" title="Link to this heading"></a></h1>
 <p>To support the display of a large number of images at once, Ren'Py supports
 a sprite system. This system allows one to create sprites, where each sprite
 contains a displayable. The sprites can then have their location on the
 screen and vertical ordering changed.</p>
 <p>If one ignores performance, the sprite system is conceptually similar
-to a <a class="reference internal" href="displayables.html#Fixed" title="Fixed"><code class="xref py py-func docutils literal notranslate"><span class="pre">Fixed()</span></code></a> wrapping <a class="reference internal" href="trans_trans_python.html#Transform" title="Transform"><code class="xref py py-func docutils literal notranslate"><span class="pre">Transform()</span></code></a>s. Sprites are much
+to a <a class="reference internal" href="displayables.html#Fixed" title="Fixed"><code class="xref py py-func docutils literal notranslate"><span class="pre">Fixed()</span></code></a> wrapping <a class="reference internal" href="transforms.html#Transform" title="Transform"><code class="xref py py-func docutils literal notranslate"><span class="pre">Transform()</span></code></a>s. Sprites are much
 faster than transforms, but also less flexible. The big performance
 improvement of sprites is that each Displayable is rendered only once
 per frame, even if that Displayable is used by many sprites. The limitation
@@ -240,10 +240,10 @@ the screen. By supplying <cite>update</cite> and <cite>event</cite> arguments to
 SpriteManager, you can have the sprites change over time, and react to
 user input.</p>
 <section id="sprite-classes">
-<h2>Sprite Classes<a class="headerlink" href="#sprite-classes" title="Permalink to this heading"> link</a></h2>
+<h2>Sprite Classes<a class="headerlink" href="#sprite-classes" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="Sprite">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Sprite</span></span><a class="headerlink" href="#Sprite" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Sprite</span></span><a class="headerlink" href="#Sprite" title="Link to this definition"></a></dt>
 <dd><p>This represents a sprite that is managed by the SpriteManager. It contains
 fields that control the placement of the sprite on the screen. Sprites
 should not be created directly. Instead, they should be created by
@@ -265,14 +265,14 @@ them).</p>
 <p>The methods of a Sprite object are:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="Sprite.destroy">
-<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Sprite.destroy" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Sprite.destroy" title="Link to this definition"></a></dt>
 <dd><p>Destroys this sprite, preventing it from being displayed and
 removing it from the SpriteManager.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="Sprite.set_child">
-<span class="sig-name descname"><span class="pre">set_child</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Sprite.set_child" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">set_child</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Sprite.set_child" title="Link to this definition"></a></dt>
 <dd><p>Changes the Displayable associated with this sprite to <cite>d</cite>.</p>
 </dd></dl>
 
@@ -280,7 +280,7 @@ removing it from the SpriteManager.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="SpriteManager">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SpriteManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SpriteManager" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SpriteManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SpriteManager" title="Link to this definition"></a></dt>
 <dd><p>This displayable manages a collection of sprites, and displays
 them at the fastest speed possible.</p>
 <dl class="simple">
@@ -321,14 +321,14 @@ SpriteManagers have the following fields:</p>
 <p>SpriteManagers have the following methods:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="SpriteManager.create">
-<span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SpriteManager.create" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SpriteManager.create" title="Link to this definition"></a></dt>
 <dd><p>Creates a new Sprite for the displayable <cite>d</cite>, and adds it to this
 SpriteManager.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="SpriteManager.redraw">
-<span class="sig-name descname"><span class="pre">redraw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SpriteManager.redraw" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">redraw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SpriteManager.redraw" title="Link to this definition"></a></dt>
 <dd><p>Causes this SpriteManager to be redrawn in <cite>delay</cite> seconds.</p>
 </dd></dl>
 
@@ -336,7 +336,7 @@ SpriteManager.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="SnowBlossom">
-<span class="sig-name descname"><span class="pre">SnowBlossom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">border</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xspeed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(20,</span> <span class="pre">50)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yspeed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(100,</span> <span class="pre">200)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fast</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">horizontal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SnowBlossom" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">SnowBlossom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">border</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xspeed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(20,</span> <span class="pre">50)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yspeed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(100,</span> <span class="pre">200)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fast</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">horizontal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SnowBlossom" title="Link to this definition"></a></dt>
 <dd><p>The snowblossom effect moves multiple instances of a sprite up,
 down, left or right on the screen. When a sprite leaves the screen, it
 is returned to the start.</p>
@@ -368,7 +368,7 @@ rather than the top or bottom.</p>
 
 </section>
 <section id="sprite-examples">
-<h2>Sprite Examples<a class="headerlink" href="#sprite-examples" title="Permalink to this heading"> link</a></h2>
+<h2>Sprite Examples<a class="headerlink" href="#sprite-examples" title="Link to this heading"></a></h2>
 <p>The SnowBlossom class is an easy-to use way of placing falling things
 on the screen.</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">image</span> <span class="n">snow</span> <span class="o">=</span> <span class="n">SnowBlossom</span><span class="p">(</span><span class="s2">&quot;snow.png&quot;</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Developer Tools &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/developer_tools.html" />
@@ -17,14 +17,13 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -66,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -75,8 +75,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
@@ -94,6 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul class="current">
@@ -145,10 +146,8 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -160,6 +159,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul>
@@ -227,11 +227,11 @@
            <div itemprop="articleBody">
              
   <section id="developer-tools">
-<h1>Developer Tools<a class="headerlink" href="#developer-tools" title="Permalink to this heading"> link</a></h1>
+<h1>Developer Tools<a class="headerlink" href="#developer-tools" title="Link to this heading"></a></h1>
 <p>Ren'Py includes a number of features to make a developer's life easier. Many of
 them need the variable <a class="reference internal" href="config.html#var-config.developer"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.developer</span></code></a> to be set to True to operate.</p>
 <section id="lint">
-<span id="id1"></span><h2>Lint<a class="headerlink" href="#lint" title="Permalink to this heading"> link</a></h2>
+<span id="id1"></span><h2>Lint<a class="headerlink" href="#lint" title="Link to this heading"></a></h2>
 <p>The Lint tool (available from the launcher) checks the game for potential errors
 or misoptimizations, and advises the developing team about how to best improve it.
 Since some of these errors will only affect users on other platforms, it’s
@@ -241,7 +241,7 @@ triggered locally.</p>
 <p>Note that using Lint is not a substitute for thorough testing.</p>
 </section>
 <section id="shift-o-console">
-<span id="console"></span><h2>Shift+O Console<a class="headerlink" href="#shift-o-console" title="Permalink to this heading"> link</a></h2>
+<span id="console"></span><h2>Shift+O Console<a class="headerlink" href="#shift-o-console" title="Link to this heading"></a></h2>
 <p>The debug console makes it possible to interactively run Ren'Py script and
 Python statements, and immediately see the results. The console is available in
 developer mode or when <a class="reference internal" href="config.html#var-config.console"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.console</span></code></a> is True, and can be accessed by
@@ -278,18 +278,18 @@ pressing Shift+O.</p>
 </ul>
 </section>
 <section id="shift-e-editor-support">
-<h2>Shift+E Editor Support<a class="headerlink" href="#shift-e-editor-support" title="Permalink to this heading"> link</a></h2>
+<h2>Shift+E Editor Support<a class="headerlink" href="#shift-e-editor-support" title="Link to this heading"></a></h2>
 <p>Shift+E opens the default text editor, as set in the launcher and customizable
 using <a class="reference internal" href="editor.html"><span class="doc">Text Editor Integration</span></a>, to open the script file in and line number at which the
 current statement is written.</p>
 </section>
 <section id="shift-d-developer-menu">
-<h2>Shift+D Developer Menu<a class="headerlink" href="#shift-d-developer-menu" title="Permalink to this heading"> link</a></h2>
+<h2>Shift+D Developer Menu<a class="headerlink" href="#shift-d-developer-menu" title="Link to this heading"></a></h2>
 <p>When <a class="reference internal" href="config.html#var-config.developer"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.developer</span></code></a> is true, hitting Shift+D will display a developer
 menu that provides easy access to some of the features given below.</p>
 </section>
 <section id="shift-r-reloading">
-<h2>Shift+R Reloading<a class="headerlink" href="#shift-r-reloading" title="Permalink to this heading"> link</a></h2>
+<h2>Shift+R Reloading<a class="headerlink" href="#shift-r-reloading" title="Link to this heading"></a></h2>
 <p>When <a class="reference internal" href="config.html#var-config.developer"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.developer</span></code></a> is True, hitting Shift+R will save the current
 game, reload the game script, and reload the game. This will often place you at
 the last unchanged statement encountered before Shift+R was pressed.</p>
@@ -307,13 +307,13 @@ new effect.</p>
 they are only meant to be used in developer mode.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_autoreload">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_autoreload</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_autoreload" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_autoreload</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_autoreload" title="Link to this definition"></a></dt>
 <dd><p>Gets the autoreload flag.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.reload_script">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">reload_script</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.reload_script" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">reload_script</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.reload_script" title="Link to this definition"></a></dt>
 <dd><p>Causes Ren'Py to save the game, reload the script, and then load the
 save.</p>
 <p>This should only be called during development. It works on Windows, macOS,
@@ -322,7 +322,7 @@ and Linux, but may not work on other platforms.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.set_autoreload">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">set_autoreload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">autoreload</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.set_autoreload" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">set_autoreload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">autoreload</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.set_autoreload" title="Link to this definition"></a></dt>
 <dd><p>Sets the autoreload flag, which determines if the game will be
 automatically reloaded after file changes. Autoreload will not be
 fully enabled until the game is reloaded with <a class="reference internal" href="#renpy.reload_script" title="renpy.reload_script"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.reload_script()</span></code></a>.</p>
@@ -330,7 +330,7 @@ fully enabled until the game is reloaded with <a class="reference internal" href
 
 </section>
 <section id="shift-i-style-inspecting">
-<span id="style-inspector"></span><h2>Shift+I Style Inspecting<a class="headerlink" href="#shift-i-style-inspecting" title="Permalink to this heading"> link</a></h2>
+<span id="style-inspector"></span><h2>Shift+I Style Inspecting<a class="headerlink" href="#shift-i-style-inspecting" title="Link to this heading"></a></h2>
 <p>When <a class="reference internal" href="config.html#var-config.developer"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.developer</span></code></a> is true, pressing Shift+I will cause style
 inspection to occur. This will display a list of displayables underneath the
 mouse, in the order they are drawn to the screen (that is, the last displayable
@@ -340,16 +340,16 @@ type, the style used, and the size it is being rendered at.</p>
 from, and the properties each style contributes to the final displayable.</p>
 </section>
 <section id="fast-skipping">
-<h2>&gt; Fast Skipping<a class="headerlink" href="#fast-skipping" title="Permalink to this heading"> link</a></h2>
+<h2>&gt; Fast Skipping<a class="headerlink" href="#fast-skipping" title="Link to this heading"></a></h2>
 <p>When <a class="reference internal" href="config.html#var-config.developer"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.developer</span></code></a> or <a class="reference internal" href="config.html#var-config.fast_skipping"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.fast_skipping</span></code></a> is True, pressing
-the <cite>fast_skip</cite> key (by default, &quot;&gt;&quot;) causes the the game to immediately skip to
+the <cite>fast_skip</cite> key (by default, &quot;&gt;&quot;) causes the game to immediately skip to
 the next important interaction.  For this purpose, an important interaction is
 one that is not caused by a say statement, transition, or pause command.
 Usually, this means skipping to the next menu, but it will also stop when
 user-defined forms of interaction occur.</p>
 </section>
 <section id="warping-to-a-line">
-<span id="id2"></span><h2>Warping to a Line<a class="headerlink" href="#warping-to-a-line" title="Permalink to this heading"> link</a></h2>
+<span id="id2"></span><h2>Warping to a Line<a class="headerlink" href="#warping-to-a-line" title="Link to this heading"></a></h2>
 <p>Ren'Py supports warping to a line in the script, without the developer to play
 through the entire game to get there. While this warping technique has a number
 of warnings associated with it, it still may be useful in providing a live
@@ -384,17 +384,17 @@ program, and then return to the preview.</p>
 <p>The warp feature requires <a class="reference internal" href="config.html#var-config.developer"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.developer</span></code></a> to be True to operate.</p>
 </section>
 <section id="debug-functions">
-<h2>Debug Functions<a class="headerlink" href="#debug-functions" title="Permalink to this heading"> link</a></h2>
+<h2>Debug Functions<a class="headerlink" href="#debug-functions" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_filename_line">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_filename_line</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_filename_line" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_filename_line</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_filename_line" title="Link to this definition"></a></dt>
 <dd><p>Returns a pair giving the filename and line number of the current
 statement.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.log">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.log" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.log" title="Link to this definition"></a></dt>
 <dd><p>If <a class="reference internal" href="config.html#var-config.log"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.log</span></code></a> is not set, this does nothing. Otherwise, it opens
 the logfile (if not already open), formats the message to <a class="reference internal" href="config.html#var-config.log_width"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.log_width</span></code></a>
 columns, and prints it to the logfile.</p>
@@ -402,13 +402,13 @@ columns, and prints it to the logfile.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.unwatch">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">unwatch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.unwatch" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">unwatch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.unwatch" title="Link to this definition"></a></dt>
 <dd><p>Stops watching the given Python expression.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.warp_to_line">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">warp_to_line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">warp_spec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.warp_to_line" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">warp_to_line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">warp_spec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.warp_to_line" title="Link to this definition"></a></dt>
 <dd><p>This takes as an argument a filename:linenumber pair, and tries to warp to
 the statement before that line number.</p>
 <p>This works samely as the <cite>--warp</cite> command.</p>
@@ -416,7 +416,7 @@ the statement before that line number.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.watch">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">watch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.watch" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">watch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.watch" title="Link to this definition"></a></dt>
 <dd><p>This watches the given Python expression, by displaying it in the
 upper-right corner of the screen.</p>
 </dd></dl>

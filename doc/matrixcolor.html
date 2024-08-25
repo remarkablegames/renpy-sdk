@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Matrixcolor &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/matrixcolor.html" />
@@ -17,19 +17,18 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Layered Images" href="layeredimage.html" />
-    <link rel="prev" title="Animation and Transformation Language" href="atl.html" /> 
+    <link rel="prev" title="Transitions" href="transitions.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -66,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -75,8 +75,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Matrixcolor</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#premultiplied-alpha-color">Premultiplied Alpha Color</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#using-a-matrix-to-change-colors">Using a Matrix to Change Colors</a></li>
@@ -115,6 +115,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -143,10 +144,8 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -158,6 +157,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul>
@@ -225,12 +225,12 @@
            <div itemprop="articleBody">
              
   <section id="matrixcolor">
-<h1>Matrixcolor<a class="headerlink" href="#matrixcolor" title="Permalink to this heading"> link</a></h1>
-<p>Ren'Py supports recoloring images using the <a class="reference internal" href="atl.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform
+<h1>Matrixcolor<a class="headerlink" href="#matrixcolor" title="Link to this heading"></a></h1>
+<p>Ren'Py supports recoloring images using the <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform
 property. This property can take either a <a class="reference internal" href="matrix.html#Matrix" title="Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a> or a ColorMatrix
 object.</p>
 <section id="premultiplied-alpha-color">
-<h2>Premultiplied Alpha Color<a class="headerlink" href="#premultiplied-alpha-color" title="Permalink to this heading"> link</a></h2>
+<h2>Premultiplied Alpha Color<a class="headerlink" href="#premultiplied-alpha-color" title="Link to this heading"></a></h2>
 <p>When an image is loaded, Ren'Py decompresses the image, and then copies it
 to the GPU of your computer or mobile device. As part of the copying, each
 of the four color channels (red, green, blue, and alpha - with alpha representing
@@ -256,7 +256,7 @@ white. By storing colors in this way, Ren'Py can draw them to the screen
 correctly, and not get weird artifacts when scaling.</p>
 </section>
 <section id="using-a-matrix-to-change-colors">
-<h2>Using a Matrix to Change Colors<a class="headerlink" href="#using-a-matrix-to-change-colors" title="Permalink to this heading"> link</a></h2>
+<h2>Using a Matrix to Change Colors<a class="headerlink" href="#using-a-matrix-to-change-colors" title="Link to this heading"></a></h2>
 <p>The <a class="reference internal" href="matrix.html#Matrix" title="Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a> objects used to change colors can consist of 16
 numbers, which can in turn be arranged into a 4x4 grid. Here's a
 way of doing this that assigns a letter to each number:</p>
@@ -293,7 +293,7 @@ expressed in this way. Matrices can be combined by multiplying them
 together, and when that happens the matrices are combined right to left.</p>
 </section>
 <section id="colormatrix">
-<span id="id1"></span><h2>ColorMatrix<a class="headerlink" href="#colormatrix" title="Permalink to this heading"> link</a></h2>
+<span id="id1"></span><h2>ColorMatrix<a class="headerlink" href="#colormatrix" title="Link to this heading"></a></h2>
 <p>While Matrix objects are suitable for static color changes, they're not
 useful for animating color changes. It's also useful to have a way of
 taking common matrices and encapsulating them in a way that allows the
@@ -363,8 +363,8 @@ TintMatrix class.</p>
 </pre></div>
 </div>
 <section id="structural-similarity">
-<h3>Structural Similarity<a class="headerlink" href="#structural-similarity" title="Permalink to this heading"> link</a></h3>
-<p>In ATL, interpolating a the <a class="reference internal" href="atl.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> property requires the
+<h3>Structural Similarity<a class="headerlink" href="#structural-similarity" title="Link to this heading"></a></h3>
+<p>In ATL, interpolating a the <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> property requires the
 use of ColorMatrixes that have structural similarity. That means the same
 types of ColorMatrix, multiplied together in the same order.</p>
 <p>As an example, the following will interpolate from normal to a desaturated
@@ -381,13 +381,13 @@ interpolation would be skipped.</p>
 </section>
 </section>
 <section id="built-in-colormatrix-subclasses">
-<h2>Built-In ColorMatrix Subclasses<a class="headerlink" href="#built-in-colormatrix-subclasses" title="Permalink to this heading"> link</a></h2>
+<h2>Built-In ColorMatrix Subclasses<a class="headerlink" href="#built-in-colormatrix-subclasses" title="Link to this heading"></a></h2>
 <p>The following is the list of ColorMatrix subclasses that are built into
 Ren'Py.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="BrightnessMatrix">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BrightnessMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BrightnessMatrix" title="Permalink to this definition"> link</a></dt>
-<dd><p>A ColorMatrix that can be used with <a class="reference internal" href="atl.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> to change
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BrightnessMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BrightnessMatrix" title="Link to this definition"></a></dt>
+<dd><p>A ColorMatrix that can be used with <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> to change
 the brightness of an image, while leaving the Alpha channel
 alone.</p>
 <dl class="simple">
@@ -400,8 +400,8 @@ image and 1 the brightest.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ColorizeMatrix">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ColorizeMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">black_color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">white_color</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ColorizeMatrix" title="Permalink to this definition"> link</a></dt>
-<dd><p>A ColorMatrix that can be used with <a class="reference internal" href="atl.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> to colorize
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ColorizeMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">black_color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">white_color</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ColorizeMatrix" title="Link to this definition"></a></dt>
+<dd><p>A ColorMatrix that can be used with <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> to colorize
 black and white displayables. It uses the color of each pixel
 in the black and white to interpolate between the black color
 and the white color.</p>
@@ -417,8 +417,8 @@ strange results when used with images that are not black and white.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ContrastMatrix">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ContrastMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ContrastMatrix" title="Permalink to this definition"> link</a></dt>
-<dd><p>A ColorMatrix that can be used with <a class="reference internal" href="atl.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> to change
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ContrastMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ContrastMatrix" title="Link to this definition"></a></dt>
+<dd><p>A ColorMatrix that can be used with <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> to change
 the brightness of an image, while leaving the Alpha channel
 alone.</p>
 <dl class="simple">
@@ -430,23 +430,23 @@ the contrast, while values above 1.0 increase the contrast.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="HueMatrix">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HueMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HueMatrix" title="Permalink to this definition"> link</a></dt>
-<dd><p>A ColorMatrix that can be used with <a class="reference internal" href="atl.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> to rotate the hue by
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HueMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HueMatrix" title="Link to this definition"></a></dt>
+<dd><p>A ColorMatrix that can be used with <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> to rotate the hue by
 <cite>value</cite> degrees. While <cite>value</cite> can be any number, positive or negative,
 360 degrees makes a complete rotation. The alpha channel is left alone.</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="IdentityMatrix">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IdentityMatrix</span></span><a class="headerlink" href="#IdentityMatrix" title="Permalink to this definition"> link</a></dt>
-<dd><p>A ColorMatrix that can be used with <a class="reference internal" href="atl.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> that does not
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IdentityMatrix</span></span><a class="headerlink" href="#IdentityMatrix" title="Link to this definition"></a></dt>
+<dd><p>A ColorMatrix that can be used with <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> that does not
 change the color or alpha of what is supplied to it.</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="InvertMatrix">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InvertMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#InvertMatrix" title="Permalink to this definition"> link</a></dt>
-<dd><p>A ColorMatrix that can be used with <a class="reference internal" href="atl.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> to invert
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InvertMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#InvertMatrix" title="Link to this definition"></a></dt>
+<dd><p>A ColorMatrix that can be used with <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> to invert
 each of the color channels. The alpha channel is left alone.</p>
 <dl class="simple">
 <dt><cite>value</cite></dt><dd><p>The amount to inverty by. 0.0 is not inverted, 1.0 is fully
@@ -457,8 +457,8 @@ inverted. Used to animate inversion.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="OpacityMatrix">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OpacityMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#OpacityMatrix" title="Permalink to this definition"> link</a></dt>
-<dd><p>A ColorMatrix that can be used with <a class="reference internal" href="atl.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> to change
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OpacityMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#OpacityMatrix" title="Link to this definition"></a></dt>
+<dd><p>A ColorMatrix that can be used with <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> to change
 the opacity of an image, while leaving color channels alone.</p>
 <dl class="simple">
 <dt><cite>value</cite></dt><dd><p>The amount the alpha channel should be multiplied by,
@@ -469,8 +469,8 @@ a number between 0.0 and 1.0.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="SaturationMatrix">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SaturationMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0.2126,</span> <span class="pre">0.7152,</span> <span class="pre">0.0722)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SaturationMatrix" title="Permalink to this definition"> link</a></dt>
-<dd><p>A ColorMatrix that can be used with <a class="reference internal" href="atl.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> that alters
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SaturationMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0.2126,</span> <span class="pre">0.7152,</span> <span class="pre">0.0722)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SaturationMatrix" title="Link to this definition"></a></dt>
+<dd><p>A ColorMatrix that can be used with <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> that alters
 the saturation of an image, while leaving the alpha channel
 alone.</p>
 <dl class="simple">
@@ -490,8 +490,8 @@ kept then the other two channels.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="SepiaMatrix">
-<span class="sig-name descname"><span class="pre">SepiaMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#ffeec2'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0.2126,</span> <span class="pre">0.7152,</span> <span class="pre">0.0722)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SepiaMatrix" title="Permalink to this definition"> link</a></dt>
-<dd><p>A function that returns a ColorMatrix that can be used with <a class="reference internal" href="atl.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a>
+<span class="sig-name descname"><span class="pre">SepiaMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#ffeec2'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0.2126,</span> <span class="pre">0.7152,</span> <span class="pre">0.0722)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SepiaMatrix" title="Link to this definition"></a></dt>
+<dd><p>A function that returns a ColorMatrix that can be used with <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a>
 to sepia-tone a displayable. This is the equivalent of:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">TintMatrix</span><span class="p">(</span><span class="n">tint</span><span class="p">)</span> <span class="o">*</span> <span class="n">SaturationMatrix</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">desat</span><span class="p">)</span>
 </pre></div>
@@ -500,8 +500,8 @@ to sepia-tone a displayable. This is the equivalent of:</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="TintMatrix">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TintMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TintMatrix" title="Permalink to this definition"> link</a></dt>
-<dd><p>A ColorMatrix can be used with <a class="reference internal" href="atl.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> to tint
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TintMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TintMatrix" title="Link to this definition"></a></dt>
+<dd><p>A ColorMatrix can be used with <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> to tint
 an image, while leaving the alpha channel alone.</p>
 <dl class="simple">
 <dt><cite>color</cite></dt><dd><p>The color that the matrix will tint things to. This is passed
@@ -518,7 +518,7 @@ as its first argument.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="atl.html" class="btn btn-neutral float-left" title="Animation and Transformation Language" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="transitions.html" class="btn btn-neutral float-left" title="Transitions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="layeredimage.html" class="btn btn-neutral float-right" title="Layered Images" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

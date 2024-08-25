@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Android &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/android.html" />
@@ -17,14 +17,13 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -66,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -75,8 +75,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
@@ -94,6 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -122,10 +123,8 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -137,6 +136,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul class="current">
@@ -230,7 +230,7 @@
            <div itemprop="articleBody">
              
   <section id="android">
-<span id="id1"></span><h1>Android<a class="headerlink" href="#android" title="Permalink to this heading"> link</a></h1>
+<span id="id1"></span><h1>Android<a class="headerlink" href="#android" title="Link to this heading"></a></h1>
 <p>Ren'Py support devices running the Android operating system, such as
 smartphones and tablets. While these devices do not support 100% of
 Ren'Py's functionality, with minimal modification visual novels can be
@@ -240,7 +240,7 @@ from Ren'Py, that creates an Android package for testing or release purposes.</p
 <p>Ren'Py runs on Android 5.0 and later, though older devices may lack the
 resources to run larger games properly.</p>
 <section id="required-language">
-<h2>Required Language<a class="headerlink" href="#required-language" title="Permalink to this heading"> link</a></h2>
+<h2>Required Language<a class="headerlink" href="#required-language" title="Link to this heading"></a></h2>
 <p>Some of the libraries used by RAPT are licensed under the terms
 of the GNU Lesser/Library General Public License. You'll need to comply
 with the terms of that license to distribute Ren'Py. We believe including
@@ -253,7 +253,7 @@ software is available at <a class="reference external" href="https://www.renpy.o
 </div></blockquote>
 </section>
 <section id="user-instructions">
-<h2>User Instructions<a class="headerlink" href="#user-instructions" title="Permalink to this heading"> link</a></h2>
+<h2>User Instructions<a class="headerlink" href="#user-instructions" title="Link to this heading"></a></h2>
 <p>When a Ren'Py game has been launched on Android, the following
 keybindings work:</p>
 <dl class="simple">
@@ -267,7 +267,7 @@ loaded when the user returns to the game.</p>
 </dl>
 </section>
 <section id="platform-differences">
-<span id="android-platform-differences"></span><h2>Platform Differences<a class="headerlink" href="#platform-differences" title="Permalink to this heading"> link</a></h2>
+<span id="android-platform-differences"></span><h2>Platform Differences<a class="headerlink" href="#platform-differences" title="Link to this heading"></a></h2>
 <p>There are many important differences between the touch-based Android
 platform and the mouse-based platforms that Ren'Py supports. Changes
 due to the Android software and hardware are:</p>
@@ -296,7 +296,7 @@ is limited only to this game and its updates, i.e. it cannot be shared by
 another game.</p>
 </section>
 <section id="testing-and-emulation">
-<h2>Testing and Emulation<a class="headerlink" href="#testing-and-emulation" title="Permalink to this heading"> link</a></h2>
+<h2>Testing and Emulation<a class="headerlink" href="#testing-and-emulation" title="Link to this heading"></a></h2>
 <p>For testing purposes, Ren'Py supports three Android emulation modes. These
 are accessed from the Android screen of the launcher.</p>
 <dl>
@@ -321,7 +321,7 @@ also test on real hardware. The emulators do not deal with some human-factors
 issues, like the size of a user's fingers.</p>
 </section>
 <section id="building-android-applications">
-<span id="android-building"></span><h2>Building Android Applications<a class="headerlink" href="#building-android-applications" title="Permalink to this heading"> link</a></h2>
+<span id="android-building"></span><h2>Building Android Applications<a class="headerlink" href="#building-android-applications" title="Link to this heading"></a></h2>
 <p>Ren'Py contains tools that help you take a packaging-centric approach
 to Android game development. In this approach, you will use a PC to
 build an Android package and upload it to your device. You can then
@@ -342,7 +342,7 @@ package. You'll only need to run step 3 when you decide to make changes to your
 game's configuration or when configuring a new game entirely; you'll run step
 4 most often, whenever you need to make a new build of your game.</p>
 <section id="step-1-installing-the-dependencies">
-<h3>Step 1: Installing the Dependencies<a class="headerlink" href="#step-1-installing-the-dependencies" title="Permalink to this heading"> link</a></h3>
+<h3>Step 1: Installing the Dependencies<a class="headerlink" href="#step-1-installing-the-dependencies" title="Link to this heading"></a></h3>
 <p>There are three things you may need to manually download and install
 before you can build packages:</p>
 <p><strong>Java Development Kit.</strong>
@@ -368,7 +368,7 @@ that x86 is not supported). Setting the emulator up is outside of the scope
 of this document.</p>
 </section>
 <section id="step-2-set-up-the-android-sdk-and-development-environment">
-<h3>Step 2: Set up the Android SDK and Development Environment<a class="headerlink" href="#step-2-set-up-the-android-sdk-and-development-environment" title="Permalink to this heading"> link</a></h3>
+<h3>Step 2: Set up the Android SDK and Development Environment<a class="headerlink" href="#step-2-set-up-the-android-sdk-and-development-environment" title="Link to this heading"></a></h3>
 <p>The next step is to set up the Android SDK and the rest of your
 development environment. This step will:</p>
 <ul class="simple">
@@ -386,7 +386,7 @@ named sdk.txt containing a single line that is the path to the
 already-installed SDK.</p>
 </section>
 <section id="step-3-generate-keys">
-<h3>Step 3: Generate keys<a class="headerlink" href="#step-3-generate-keys" title="Permalink to this heading"> link</a></h3>
+<h3>Step 3: Generate keys<a class="headerlink" href="#step-3-generate-keys" title="Link to this heading"></a></h3>
 <p>After this, choose &quot;Generate Keys&quot; to generate Android and Bundle
 keys for your package.</p>
 <div class="admonition warning">
@@ -404,7 +404,7 @@ especially if version control is being used.</p>
 backs up script files. This isn't a substitute for making your own backups.</p>
 </section>
 <section id="step-4-configure-your-game">
-<h3>Step 4: Configure Your Game<a class="headerlink" href="#step-4-configure-your-game" title="Permalink to this heading"> link</a></h3>
+<h3>Step 4: Configure Your Game<a class="headerlink" href="#step-4-configure-your-game" title="Link to this heading"></a></h3>
 <p>Before building a package, you must give Ren'Py some information
 about the Android build of your game. To do this, choose &quot;Configure&quot;
 from the Android screen of the Ren'Py launcher.</p>
@@ -412,7 +412,7 @@ from the Android screen of the Ren'Py launcher.</p>
 Your previous choices will be remembered.</p>
 </section>
 <section id="step-5-build-and-install-the-package">
-<h3>Step 5: Build and Install the Package<a class="headerlink" href="#step-5-build-and-install-the-package" title="Permalink to this heading"> link</a></h3>
+<h3>Step 5: Build and Install the Package<a class="headerlink" href="#step-5-build-and-install-the-package" title="Link to this heading"></a></h3>
 <p>Finally, you can build and install the package.  You'll first want to
 choose between one of the two release modes:</p>
 <dl>
@@ -439,16 +439,16 @@ application for testing.</p>
 </section>
 </section>
 <section id="very-large-games">
-<h2>Very Large Games<a class="headerlink" href="#very-large-games" title="Permalink to this heading"> link</a></h2>
+<h2>Very Large Games<a class="headerlink" href="#very-large-games" title="Link to this heading"></a></h2>
 <p>It's possible to build games that are larger than 2 GB. This is done using
 the <a class="reference internal" href="downloader.html"><span class="doc">Downloader for Large Games on Mobile</span></a>, with a small game being included in the Play
 bundle or Universal APK, and the rest of the game being downloaded
 from a capable web server.</p>
 </section>
 <section id="icon-and-presplash-images">
-<h2>Icon and Presplash Images<a class="headerlink" href="#icon-and-presplash-images" title="Permalink to this heading"> link</a></h2>
+<h2>Icon and Presplash Images<a class="headerlink" href="#icon-and-presplash-images" title="Link to this heading"></a></h2>
 <section id="icon">
-<h3>Icon<a class="headerlink" href="#icon" title="Permalink to this heading"> link</a></h3>
+<h3>Icon<a class="headerlink" href="#icon" title="Link to this heading"></a></h3>
 <p>Ren'Py will create an icon from your app from two files in the game's
 base directory:</p>
 <dl class="simple">
@@ -474,7 +474,7 @@ appropriate size for each device, and will generate static icons for devices
 that do not support adaptive icons.</p>
 </section>
 <section id="presplash">
-<span id="android-presplash"></span><h3>Presplash<a class="headerlink" href="#presplash" title="Permalink to this heading"> link</a></h3>
+<span id="android-presplash"></span><h3>Presplash<a class="headerlink" href="#presplash" title="Link to this heading"></a></h3>
 <p>The presplash is shown before Ren'Py fully loads, before the main splashscreen
 starts. It's especially important on Android, as the first time Ren'Py runs
 it will unpack supporting files, which make take some time.</p>
@@ -496,7 +496,7 @@ right sides of the screen, showing download progress.</p>
 </section>
 </section>
 <section id="pyjnius">
-<span id="id2"></span><h2>Pyjnius<a class="headerlink" href="#pyjnius" title="Permalink to this heading"> link</a></h2>
+<span id="id2"></span><h2>Pyjnius<a class="headerlink" href="#pyjnius" title="Link to this heading"></a></h2>
 <p>When running on Android, a version of the <a class="reference external" href="https://pyjnius.readthedocs.io/en/stable/">Pyjnius</a>
 library is available. This allows advanced creators to call into the Android
 libraries.</p>
@@ -512,14 +512,14 @@ field in the org.renpy.android.PythonSDLActivity class. For example:</p>
 </div>
 </section>
 <section id="permissions">
-<span id="android-permissions"></span><h2>Permissions<a class="headerlink" href="#permissions" title="Permalink to this heading"> link</a></h2>
+<span id="android-permissions"></span><h2>Permissions<a class="headerlink" href="#permissions" title="Link to this heading"></a></h2>
 <p>While Ren'Py doesn't require additional permissions to run, if your
 game uses Pyjnius to call into Android, it might be necessary to
 request permissions. Ren'Py has a variable and two functions to
 interact with the Android permissions system.</p>
 <dl class="std var">
 <dt class="sig sig-object std" id="var-build.android_permissions">
-<span class="sig-name descname"><span class="pre">build.android_permissions</span></span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">]</span><a class="headerlink" href="#var-build.android_permissions" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">build.android_permissions</span></span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">]</span><a class="headerlink" href="#var-build.android_permissions" title="Link to this definition"></a></dt>
 <dd><p>This is a list of strings, with each string giving the full name
 of an Android permission. For example, &quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;.
 This simply declares that the application might request these permissions, it's
@@ -529,7 +529,7 @@ to request the permission.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.check_permission">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">check_permission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">permission</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.check_permission" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">check_permission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">permission</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.check_permission" title="Link to this definition"></a></dt>
 <dd><p>Checks to see if an Android permission has been granted to this application.</p>
 <dl class="simple">
 <dt><cite>permission</cite></dt><dd><p>A string giving the name of the permission, for example, &quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;.</p>
@@ -541,7 +541,7 @@ a non-Android platform.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.request_permission">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">request_permission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">permission</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.request_permission" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">request_permission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">permission</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.request_permission" title="Link to this definition"></a></dt>
 <dd><p>Asks Android to grant a permission to this application. The user may be
 prompted to grant the permission.</p>
 <dl class="simple">

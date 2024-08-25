@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Screens and Screen Language &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/screens.html" />
@@ -17,14 +17,13 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -66,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -75,8 +75,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
@@ -166,6 +166,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -194,10 +195,8 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -209,6 +208,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul>
@@ -276,7 +276,7 @@
            <div itemprop="articleBody">
              
   <section id="screens-and-screen-language">
-<span id="screens"></span><h1>Screens and Screen Language<a class="headerlink" href="#screens-and-screen-language" title="Permalink to this heading"> link</a></h1>
+<span id="screens"></span><h1>Screens and Screen Language<a class="headerlink" href="#screens-and-screen-language" title="Link to this heading"></a></h1>
 <p>The things that a user sees when looking at a Ren'Py game can be
 divided into images and user interface. Images are displayed to
 the user using the scene, show, and hide statements, and are generally
@@ -365,7 +365,7 @@ Python source code that will be used in a screen context. Generators
 can be used in Python functions called from a screen, but not in the
 screen itself.</p>
 <section id="screen-language">
-<h2>Screen Language<a class="headerlink" href="#screen-language" title="Permalink to this heading"> link</a></h2>
+<h2>Screen Language<a class="headerlink" href="#screen-language" title="Link to this heading"></a></h2>
 <p>The screen language is a mostly-declarative way of displaying
 screens. It consists of a statement that declares a new screen,
 statements that add displayables to that screen, and control
@@ -389,7 +389,7 @@ two parameters, <cite>who</cite> and <cite>what</cite>.</p>
 that box is 10 pixels. It contains two text fields, one displaying the name of
 the speaker, and the displaying what is being spoken.</p>
 <section id="screen-language-syntax">
-<h3>Screen Language Syntax<a class="headerlink" href="#screen-language-syntax" title="Permalink to this heading"> link</a></h3>
+<h3>Screen Language Syntax<a class="headerlink" href="#screen-language-syntax" title="Link to this heading"></a></h3>
 <p>Most screen language statements share a common syntax. (Some of the
 control statements have other syntaxes.)  A statement starts at the
 beginning of a line, with a keyword that introduces the statement.</p>
@@ -408,7 +408,7 @@ in a block may be one of two things:</p>
 </ul>
 </section>
 <section id="screen-statement">
-<span id="id1"></span><h3>Screen Statement<a class="headerlink" href="#screen-statement" title="Permalink to this heading"> link</a></h3>
+<span id="id1"></span><h3>Screen Statement<a class="headerlink" href="#screen-statement" title="Link to this heading"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">screen</span></code> statement is a Ren'Py script language statement that is
 used to declare a new screen. It is parsed using the screen language
 common syntax.</p>
@@ -416,7 +416,7 @@ common syntax.</p>
 expression. It takes the following properties:</p>
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-modal">
-<span class="sig-name descname"><span class="pre">modal</span></span><a class="headerlink" href="#screen-property-modal" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">modal</span></span><a class="headerlink" href="#screen-property-modal" title="Link to this definition"></a></dt>
 <dd><p>If True, the screen is modal. A modal screen prevents the user
 from interacting with displayables below it, except
 for the default keymap. This is evaluated once, when the
@@ -425,14 +425,14 @@ game starts.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-sensitive">
-<span class="sig-name descname"><span class="pre">sensitive</span></span><a class="headerlink" href="#screen-property-sensitive" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">sensitive</span></span><a class="headerlink" href="#screen-property-sensitive" title="Link to this definition"></a></dt>
 <dd><p>An expression that determines whether the screen is sensitive or not.
 This expression is evaluated at least once per interaction.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-tag">
-<span class="sig-name descname"><span class="pre">tag</span></span><a class="headerlink" href="#screen-property-tag" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">tag</span></span><a class="headerlink" href="#screen-property-tag" title="Link to this definition"></a></dt>
 <dd><p>Parsed as a name, not an expression. This specifies a tag
 associated with this screen. Showing a screen replaces other
 screens with the same tag. This can be used to ensure that only
@@ -441,7 +441,7 @@ one screen of a menu is shown at a time, in the same context.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-zorder">
-<span class="sig-name descname"><span class="pre">zorder</span></span><a class="headerlink" href="#screen-property-zorder" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">zorder</span></span><a class="headerlink" href="#screen-property-zorder" title="Link to this definition"></a></dt>
 <dd><p>This controls how close to the user a screen is displayed. The
 larger the number, the closer the screen is displayed to the
 user. It defaults to 0.</p>
@@ -449,28 +449,28 @@ user. It defaults to 0.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-variant">
-<span class="sig-name descname"><span class="pre">variant</span></span><a class="headerlink" href="#screen-property-variant" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">variant</span></span><a class="headerlink" href="#screen-property-variant" title="Link to this definition"></a></dt>
 <dd><p>If present, this should be a string or list of strings giving the
 variant of screen to be defined. See <a class="reference internal" href="#screen-variants"><span class="std std-ref">Screen Variants</span></a>.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-style_prefix">
-<span class="sig-name descname"><span class="pre">style_prefix</span></span><a class="headerlink" href="#screen-property-style_prefix" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">style_prefix</span></span><a class="headerlink" href="#screen-property-style_prefix" title="Link to this definition"></a></dt>
 <dd><p>A string that's used to provide a prefix for the style for the
 children of this screen, as <a class="reference internal" href="#style-prefix"><span class="std std-ref">described below</span></a>.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-layer">
-<span class="sig-name descname"><span class="pre">layer</span></span><a class="headerlink" href="#screen-property-layer" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">layer</span></span><a class="headerlink" href="#screen-property-layer" title="Link to this definition"></a></dt>
 <dd><p>A string giving the name of the layer the screen is shown on by
 default.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-roll_forward">
-<span class="sig-name descname"><span class="pre">roll_forward</span></span><a class="headerlink" href="#screen-property-roll_forward" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">roll_forward</span></span><a class="headerlink" href="#screen-property-roll_forward" title="Link to this definition"></a></dt>
 <dd><p>If true, roll forward will be enabled when the screen is used in a
 <code class="docutils literal notranslate"><span class="pre">call</span> <span class="pre">screen</span></code> statement. If false, roll forward is disabled, and
 if None or not given, the value of <a class="reference internal" href="config.html#var-config.call_screen_roll_forward"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.call_screen_roll_forward</span></code></a>
@@ -506,7 +506,7 @@ parameters.</p>
 </section>
 </section>
 <section id="user-interface-statements">
-<h2>User Interface Statements<a class="headerlink" href="#user-interface-statements" title="Permalink to this heading"> link</a></h2>
+<h2>User Interface Statements<a class="headerlink" href="#user-interface-statements" title="Link to this heading"></a></h2>
 <p>The user interface statements create displayables and add them either
 to the screen, or to an enclosing displayable. They allow the user to
 display information, allow the user to interact with the game, or
@@ -514,7 +514,7 @@ allow the game to react to various events.</p>
 <p id="common-properties">All user interface statements take the following common properties:</p>
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-at">
-<span class="sig-name descname"><span class="pre">at</span></span><a class="headerlink" href="#screen-property-at" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">at</span></span><a class="headerlink" href="#screen-property-at" title="Link to this definition"></a></dt>
 <dd><p>This can be a transform, or a list of transforms, or an anonymous
 transform (a transform that is defined directly in at)</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">transform</span> <span class="n">hello_t</span><span class="p">:</span>
@@ -553,7 +553,7 @@ applied first.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-default_focus">
-<span class="sig-name descname"><span class="pre">default_focus</span></span><a class="headerlink" href="#screen-property-default_focus" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">default_focus</span></span><a class="headerlink" href="#screen-property-default_focus" title="Link to this definition"></a></dt>
 <dd><p>If given and true, the displayable is focused by default. When
 multiple displayables have this, the values are compared and the
 displayable with the greatest default focus becomes the default.</p>
@@ -563,7 +563,7 @@ a mouse click, mouse movement, or touch.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-extra_alt">
-<span class="sig-name descname"><span class="pre">extra_alt</span></span><a class="headerlink" href="#screen-property-extra_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">extra_alt</span></span><a class="headerlink" href="#screen-property-extra_alt" title="Link to this definition"></a></dt>
 <dd><p>This is used to specify extra alt text for <a class="reference internal" href="self_voicing.html"><span class="doc">Self-Voicing</span></a>.
 If defined, the extra alt text is spoken to the player when the
 '?' key is pressed, and self-voicing ie enabled.</p>
@@ -575,7 +575,7 @@ additional information about groups of displayables.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-focus">
-<span class="sig-name descname"><span class="pre">focus</span></span><a class="headerlink" href="#screen-property-focus" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">focus</span></span><a class="headerlink" href="#screen-property-focus" title="Link to this definition"></a></dt>
 <dd><p>Takes a string or integer, and gives a name to the displayable
 for focus purposes. Ren'Py looks for structural similarity between
 focus names when deciding with displayable to give focus to at the
@@ -587,7 +587,7 @@ the start of the next interaction.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-group_alt">
-<span class="sig-name descname"><span class="pre">group_alt</span></span><a class="headerlink" href="#screen-property-group_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">group_alt</span></span><a class="headerlink" href="#screen-property-group_alt" title="Link to this definition"></a></dt>
 <dd><p>This is used to specify a group prefix for <a class="reference internal" href="self_voicing.html"><span class="doc">Self-Voicing</span></a>.
 When self-voicing is enabled, a group prefix is spoken the first time a displayable
 with the same group prefix is focused, but will not be spoken again until a
@@ -598,18 +598,19 @@ unless they have a more specific <code class="docutils literal notranslate"><spa
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-id">
-<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#screen-property-id" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#screen-property-id" title="Link to this definition"></a></dt>
 <dd><p>An identifier for the user-interface statement. When a screen is
 shown, property values can be supplied for the displayables with a
 given identifier. Some screens will require that a displayable
 with a given identifier is created.</p>
-<p>By default, the <code class="docutils literal notranslate"><span class="pre">id</span></code> is automatically-generated.</p>
+<p>When a displayable is created with an id, the id is stored as a
+string ion a attribute named id on the Displayable object.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-prefer_screen_to_id">
-<span class="sig-name descname"><span class="pre">prefer_screen_to_id</span></span><a class="headerlink" href="#screen-property-prefer_screen_to_id" title="Permalink to this definition"> link</a></dt>
-<dd><p>If true, when a property is provided by both the the screen and a
+<span class="sig-name descname"><span class="pre">prefer_screen_to_id</span></span><a class="headerlink" href="#screen-property-prefer_screen_to_id" title="Link to this definition"></a></dt>
+<dd><p>If true, when a property is provided by both the screen and a
 displayble identifier, the screen property is used. If false, the
 default, the displayable property is used. (This can be used to
 decide if the screen overrides properties set by a Character.)</p>
@@ -617,14 +618,14 @@ decide if the screen overrides properties set by a Character.)</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-style">
-<span class="sig-name descname"><span class="pre">style</span></span><a class="headerlink" href="#screen-property-style" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">style</span></span><a class="headerlink" href="#screen-property-style" title="Link to this definition"></a></dt>
 <dd><p>A string giving the name of the style applied to this displayable. The
 style gives default values for style properties.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-style_prefix_alt">
-<span class="sig-name descname"><span class="pre">style_prefix</span></span><a class="headerlink" href="#screen-property-style_prefix_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">style_prefix</span></span><a class="headerlink" href="#screen-property-style_prefix_alt" title="Link to this definition"></a></dt>
 <dd><p id="style-prefix">Provides a prefix to the style of this displayable and all of its
 children, unless those children have a more specific style or
 style prefix set.</p>
@@ -642,13 +643,13 @@ this displayable and its children.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-style_group">
-<span class="sig-name descname"><span class="pre">style_group</span></span><a class="headerlink" href="#screen-property-style_group" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">style_group</span></span><a class="headerlink" href="#screen-property-style_group" title="Link to this definition"></a></dt>
 <dd><p>An alias for <cite>style_prefix</cite>, used in older versions of Ren'Py.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-style_suffix">
-<span class="sig-name descname"><span class="pre">style_suffix</span></span><a class="headerlink" href="#screen-property-style_suffix" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">style_suffix</span></span><a class="headerlink" href="#screen-property-style_suffix" title="Link to this definition"></a></dt>
 <dd><p>Specifies the suffix that is combined with the <cite>style_prefix</cite> to
 generate a style name. If this is <code class="docutils literal notranslate"><span class="pre">&quot;small_button&quot;</span></code> and the
 style prefix is <code class="docutils literal notranslate"><span class="pre">&quot;pref&quot;</span></code>, the style <code class="docutils literal notranslate"><span class="pre">&quot;pref_small_button&quot;</span></code> is
@@ -660,7 +661,7 @@ a displayable and all children.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-tooltip">
-<span class="sig-name descname"><span class="pre">tooltip</span></span><a class="headerlink" href="#screen-property-tooltip" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">tooltip</span></span><a class="headerlink" href="#screen-property-tooltip" title="Link to this definition"></a></dt>
 <dd><p>Assigns a tooltip to this displayable. When the displayable gains
 focus, the value of this property will be made available from the
 <a class="reference internal" href="screen_actions.html#GetTooltip" title="GetTooltip"><code class="xref py py-func docutils literal notranslate"><span class="pre">GetTooltip()</span></code></a> function. See the <a class="reference internal" href="screen_actions.html#tooltips"><span class="std std-ref">Tooltips</span></a> section for
@@ -671,14 +672,14 @@ not supported, an infinite loop may occur.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-arguments">
-<span class="sig-name descname"><span class="pre">arguments</span></span><a class="headerlink" href="#screen-property-arguments" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">arguments</span></span><a class="headerlink" href="#screen-property-arguments" title="Link to this definition"></a></dt>
 <dd><p>A tuple or list containing additional positional arguments that
 are given to the displayable.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-properties">
-<span class="sig-name descname"><span class="pre">properties</span></span><a class="headerlink" href="#screen-property-properties" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">properties</span></span><a class="headerlink" href="#screen-property-properties" title="Link to this definition"></a></dt>
 <dd><p>A dictionary containing additional properties given to the
 displayable.</p>
 </dd></dl>
@@ -693,51 +694,51 @@ name, without any quotes. The displayable that the statement creates is
 assigned to the variable. (An example can be found in <a class="reference internal" href="drag_drop.html#as-example"><span class="std std-ref">the drag and drop
 documentation</span></a>.)</p>
 <section id="bar">
-<span id="sl-bar"></span><h3>Bar<a class="headerlink" href="#bar" title="Permalink to this heading"> link</a></h3>
+<span id="sl-bar"></span><h3>Bar<a class="headerlink" href="#bar" title="Link to this heading"></a></h3>
 <p>Creates a horizontally-oriented bar that can be used to view or adjust
 data. It takes the following properties:</p>
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-value">
-<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#screen-property-value" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#screen-property-value" title="Link to this definition"></a></dt>
 <dd><p>The current value of the bar. This can be either a <a class="reference internal" href="screen_actions.html#bar-values"><span class="std std-ref">bar value</span></a>
 object, or a number.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-range">
-<span class="sig-name descname"><span class="pre">range</span></span><a class="headerlink" href="#screen-property-range" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">range</span></span><a class="headerlink" href="#screen-property-range" title="Link to this definition"></a></dt>
 <dd><p>The maximum value of the bar. This is required if <cite>value</cite> is a
 number.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-adjustment">
-<span class="sig-name descname"><span class="pre">adjustment</span></span><a class="headerlink" href="#screen-property-adjustment" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">adjustment</span></span><a class="headerlink" href="#screen-property-adjustment" title="Link to this definition"></a></dt>
 <dd><p>A <a class="reference internal" href="screen_python.html#ui.adjustment" title="ui.adjustment"><code class="xref py py-func docutils literal notranslate"><span class="pre">ui.adjustment()</span></code></a> object that this bar adjusts.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-changed">
-<span class="sig-name descname"><span class="pre">changed</span></span><a class="headerlink" href="#screen-property-changed" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">changed</span></span><a class="headerlink" href="#screen-property-changed" title="Link to this definition"></a></dt>
 <dd><p>If given, this should be a Python function. The function is called
 with the value of the adjustment when the adjustment is changed.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-hovered">
-<span class="sig-name descname"><span class="pre">hovered</span></span><a class="headerlink" href="#screen-property-hovered" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">hovered</span></span><a class="headerlink" href="#screen-property-hovered" title="Link to this definition"></a></dt>
 <dd><p>An action to run when the bar gains focus.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-unhovered">
-<span class="sig-name descname"><span class="pre">unhovered</span></span><a class="headerlink" href="#screen-property-unhovered" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">unhovered</span></span><a class="headerlink" href="#screen-property-unhovered" title="Link to this definition"></a></dt>
 <dd><p>An action to run when the bar loses focus.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-released">
-<span class="sig-name descname"><span class="pre">released</span></span><a class="headerlink" href="#screen-property-released" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">released</span></span><a class="headerlink" href="#screen-property-released" title="Link to this definition"></a></dt>
 <dd><p>An action to run when the bar button is released. This will be invoked
 even if the bar has not changed its value.</p>
 </dd></dl>
@@ -761,12 +762,12 @@ function takes:</p>
 </div>
 </section>
 <section id="button">
-<span id="sl-button"></span><h3>Button<a class="headerlink" href="#button" title="Permalink to this heading"> link</a></h3>
+<span id="sl-button"></span><h3>Button<a class="headerlink" href="#button" title="Link to this heading"></a></h3>
 <p>Creates an area of the screen that can be activated to run an
 action. A button takes no parameters, and the following properties.</p>
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-action">
-<span class="sig-name descname"><span class="pre">action</span></span><a class="headerlink" href="#screen-property-action" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">action</span></span><a class="headerlink" href="#screen-property-action" title="Link to this definition"></a></dt>
 <dd><p>The action to run when the button is activated. A button is activated
 when it is clicked, or when the player selects it and hits enter on the
 keyboard. This also controls if the button is sensitive if <cite>sensitive</cite>
@@ -776,7 +777,7 @@ provided or None.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-alternate">
-<span class="sig-name descname"><span class="pre">alternate</span></span><a class="headerlink" href="#screen-property-alternate" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">alternate</span></span><a class="headerlink" href="#screen-property-alternate" title="Link to this definition"></a></dt>
 <dd><p>An action that is run if the button is activated in an alternate manner.
 Alternate activation occurs when the player right-clicks on the button
 on a mouse-based platform, or when the player long presses the button
@@ -785,19 +786,19 @@ on a touch-based platform.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-hovered_alt">
-<span class="sig-name descname"><span class="pre">hovered</span></span><a class="headerlink" href="#screen-property-hovered_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">hovered</span></span><a class="headerlink" href="#screen-property-hovered_alt" title="Link to this definition"></a></dt>
 <dd><p>An action to run when the button gains focus.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-unhovered_alt">
-<span class="sig-name descname"><span class="pre">unhovered</span></span><a class="headerlink" href="#screen-property-unhovered_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">unhovered</span></span><a class="headerlink" href="#screen-property-unhovered_alt" title="Link to this definition"></a></dt>
 <dd><p>An action to run when the button loses focus.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-selected">
-<span class="sig-name descname"><span class="pre">selected</span></span><a class="headerlink" href="#screen-property-selected" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">selected</span></span><a class="headerlink" href="#screen-property-selected" title="Link to this definition"></a></dt>
 <dd><p>An expression that determines whether the button is selected or not.
 This expression is evaluated at least once per interaction.
 If not provided or None, the action will be used to determine selectedness.</p>
@@ -805,7 +806,7 @@ If not provided or None, the action will be used to determine selectedness.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-sensitive_alt">
-<span class="sig-name descname"><span class="pre">sensitive</span></span><a class="headerlink" href="#screen-property-sensitive_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">sensitive</span></span><a class="headerlink" href="#screen-property-sensitive_alt" title="Link to this definition"></a></dt>
 <dd><p>An expression that determines whether the button is sensitive or not.
 This expression is evaluated at least once per interaction.
 If not provided or None, the action will be used to determine sensitivity.</p>
@@ -813,14 +814,14 @@ If not provided or None, the action will be used to determine sensitivity.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-keysym">
-<span class="sig-name descname"><span class="pre">keysym</span></span><a class="headerlink" href="#screen-property-keysym" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">keysym</span></span><a class="headerlink" href="#screen-property-keysym" title="Link to this definition"></a></dt>
 <dd><p>A string giving a <a class="reference internal" href="keymap.html"><span class="doc">keysym</span></a> describing a keyboard key that,
 when pressed, invokes the action of this button.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-alternate_keysym">
-<span class="sig-name descname"><span class="pre">alternate_keysym</span></span><a class="headerlink" href="#screen-property-alternate_keysym" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">alternate_keysym</span></span><a class="headerlink" href="#screen-property-alternate_keysym" title="Link to this definition"></a></dt>
 <dd><p>A string giving a <a class="reference internal" href="keymap.html"><span class="doc">keysym</span></a> describing a keyboard key that,
 when pressed, invokes the alternate action of this button.</p>
 </dd></dl>
@@ -832,11 +833,11 @@ when pressed, invokes the alternate action of this button.</p>
 <li><p><a class="reference internal" href="style_properties.html#window-style-properties"><span class="std std-ref">Window Style Properties</span></a></p></li>
 <li><p><a class="reference internal" href="style_properties.html#button-style-properties"><span class="std std-ref">Button Style Properties</span></a></p></li>
 </ul>
-<p>It takes one children. If zero, two, or more children are supplied,
+<p>It takes one child. If zero, two, or more children are supplied,
 they are implicitly added to a fixed, which is added to the button.</p>
 </section>
 <section id="dismiss">
-<span id="sl-dismiss"></span><h3>Dismiss<a class="headerlink" href="#dismiss" title="Permalink to this heading"> link</a></h3>
+<span id="sl-dismiss"></span><h3>Dismiss<a class="headerlink" href="#dismiss" title="Link to this heading"></a></h3>
 <p>The dismiss statement creates the highly specialized dismiss displayable,
 which gains focus when no other displayable has focus,
 and runs an action when it's activated. In this regard, it works
@@ -847,14 +848,14 @@ with a popup window.</p>
 <p>This takes the following properties:</p>
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-action_alt">
-<span class="sig-name descname"><span class="pre">action</span></span><a class="headerlink" href="#screen-property-action_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">action</span></span><a class="headerlink" href="#screen-property-action_alt" title="Link to this definition"></a></dt>
 <dd><p>The action performed when the dismiss is activated. This property is
 required.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-keysym_alt">
-<span class="sig-name descname"><span class="pre">keysym</span></span><a class="headerlink" href="#screen-property-keysym_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">keysym</span></span><a class="headerlink" href="#screen-property-keysym_alt" title="Link to this definition"></a></dt>
 <dd><p>A string giving a <a class="reference internal" href="keymap.html"><span class="doc">keysym</span></a> describing a key that,
 when pressed, invokes the action of this dismiss. This replaces the default
 &quot;dismiss&quot; keysym.</p>
@@ -862,8 +863,8 @@ when pressed, invokes the action of this dismiss. This replaces the default
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-modal_alt">
-<span class="sig-name descname"><span class="pre">modal</span></span><a class="headerlink" href="#screen-property-modal_alt" title="Permalink to this definition"> link</a></dt>
-<dd><p>By default, the dimiss is modal, preventing events from being processed
+<span class="sig-name descname"><span class="pre">modal</span></span><a class="headerlink" href="#screen-property-modal_alt" title="Link to this definition"></a></dt>
+<dd><p>By default, the dismiss is modal, preventing events from being processed
 by displayables &quot;behind&quot; it.</p>
 </dd></dl>
 
@@ -895,10 +896,10 @@ by displayables &quot;behind&quot; it.</p>
             <span class="na">action</span> <span class="n">Return</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>See also how dismiss is used in conjuction with <a class="reference internal" href="#sl-nearrect"><span class="std std-ref">nearrect</span></a>.</p>
+<p>See also how dismiss is used in conjunction with <a class="reference internal" href="#sl-nearrect"><span class="std std-ref">nearrect</span></a>.</p>
 </section>
 <section id="fixed">
-<span id="sl-fixed"></span><h3>Fixed<a class="headerlink" href="#fixed" title="Permalink to this heading"> link</a></h3>
+<span id="sl-fixed"></span><h3>Fixed<a class="headerlink" href="#fixed" title="Link to this heading"></a></h3>
 <p>This creates an area to which children can be added. By default, the
 fixed expands to fill the available area, but the <a class="reference internal" href="style_properties.html#style-property-xmaximum"><code class="xref std std-propref docutils literal notranslate"><span class="pre">xmaximum</span></code></a>
 and <a class="reference internal" href="style_properties.html#style-property-ymaximum"><code class="xref std std-propref docutils literal notranslate"><span class="pre">ymaximum</span></code></a> properties can change this.</p>
@@ -925,7 +926,7 @@ have two or more children.</p>
 </div>
 </section>
 <section id="frame">
-<span id="sl-frame"></span><h3>Frame<a class="headerlink" href="#frame" title="Permalink to this heading"> link</a></h3>
+<span id="sl-frame"></span><h3>Frame<a class="headerlink" href="#frame" title="Link to this heading"></a></h3>
 <p>A frame is a window that contains a background that is intended for
 displaying user-interface elements like buttons, bars, and text. It
 takes the following groups of properties:</p>
@@ -952,7 +953,7 @@ a fixed is created to contain them.</p>
 </div>
 </section>
 <section id="grid">
-<span id="sl-grid"></span><h3>Grid<a class="headerlink" href="#grid" title="Permalink to this heading"> link</a></h3>
+<span id="sl-grid"></span><h3>Grid<a class="headerlink" href="#grid" title="Link to this heading"></a></h3>
 <p>This displays its children in a grid. Each child is given an area of
 the same size, the size of the largest child.</p>
 <p>It takes two parameters. The first is the number of columns in the
@@ -961,7 +962,7 @@ is not full, the remaining cells are filled with the <code class="docutils liter
 <p>Grid takes one property:</p>
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-transpose">
-<span class="sig-name descname"><span class="pre">transpose</span></span><a class="headerlink" href="#screen-property-transpose" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">transpose</span></span><a class="headerlink" href="#screen-property-transpose" title="Link to this definition"></a></dt>
 <dd><p>If False (the default), rows are filled before columns. If True,
 then columns are filled before rows.</p>
 </dd></dl>
@@ -988,7 +989,7 @@ number of children is an error.</p>
 </div>
 </section>
 <section id="hbox">
-<span id="sl-hbox"></span><h3>Hbox<a class="headerlink" href="#hbox" title="Permalink to this heading"> link</a></h3>
+<span id="sl-hbox"></span><h3>Hbox<a class="headerlink" href="#hbox" title="Link to this heading"></a></h3>
 <p>This displays its children side by side, in an invisible horizontal
 box. It takes no parameters, and the following groups of properties:</p>
 <ul class="simple">
@@ -1005,13 +1006,13 @@ box. It takes no parameters, and the following groups of properties:</p>
 </div>
 </section>
 <section id="imagebutton">
-<span id="sl-imagebutton"></span><h3>Imagebutton<a class="headerlink" href="#imagebutton" title="Permalink to this heading"> link</a></h3>
+<span id="sl-imagebutton"></span><h3>Imagebutton<a class="headerlink" href="#imagebutton" title="Link to this heading"></a></h3>
 <p>Creates a button consisting of images, that change state when the user
 hovers over them. This takes no parameters, and the following
 properties:</p>
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-auto">
-<span class="sig-name descname"><span class="pre">auto</span></span><a class="headerlink" href="#screen-property-auto" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">auto</span></span><a class="headerlink" href="#screen-property-auto" title="Link to this definition"></a></dt>
 <dd><p>Used to automatically define the images used by this button. This
 should be a string that contains %s in it. If it is, and one of
 the image properties is omitted, %s is replaced with the name of
@@ -1026,37 +1027,37 @@ the <code class="docutils literal notranslate"><span class="pre">button</span> <
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-insensitive">
-<span class="sig-name descname"><span class="pre">insensitive</span></span><a class="headerlink" href="#screen-property-insensitive" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">insensitive</span></span><a class="headerlink" href="#screen-property-insensitive" title="Link to this definition"></a></dt>
 <dd><p>The image used when the button is insensitive.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-idle">
-<span class="sig-name descname"><span class="pre">idle</span></span><a class="headerlink" href="#screen-property-idle" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">idle</span></span><a class="headerlink" href="#screen-property-idle" title="Link to this definition"></a></dt>
 <dd><p>The image used when the button is not focused.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-hover">
-<span class="sig-name descname"><span class="pre">hover</span></span><a class="headerlink" href="#screen-property-hover" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">hover</span></span><a class="headerlink" href="#screen-property-hover" title="Link to this definition"></a></dt>
 <dd><p>The image used when the button is focused.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-selected_idle">
-<span class="sig-name descname"><span class="pre">selected_idle</span></span><a class="headerlink" href="#screen-property-selected_idle" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">selected_idle</span></span><a class="headerlink" href="#screen-property-selected_idle" title="Link to this definition"></a></dt>
 <dd><p>The image used when the button is selected and idle.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-selected_hover">
-<span class="sig-name descname"><span class="pre">selected_hover</span></span><a class="headerlink" href="#screen-property-selected_hover" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">selected_hover</span></span><a class="headerlink" href="#screen-property-selected_hover" title="Link to this definition"></a></dt>
 <dd><p>The image used when the button is selected and hovered.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-action_alt_alt">
-<span class="sig-name descname"><span class="pre">action</span></span><a class="headerlink" href="#screen-property-action_alt_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">action</span></span><a class="headerlink" href="#screen-property-action_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>The action to run when the button is activated. This also controls if
 the button is sensitive if <cite>sensitive</cite> is not provided or None, and if the button
 is selected if <cite>selected</cite> is not provided or None.</p>
@@ -1064,7 +1065,7 @@ is selected if <cite>selected</cite> is not provided or None.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-alternate_alt">
-<span class="sig-name descname"><span class="pre">alternate</span></span><a class="headerlink" href="#screen-property-alternate_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">alternate</span></span><a class="headerlink" href="#screen-property-alternate_alt" title="Link to this definition"></a></dt>
 <dd><p>An action that is run if the button is activated in an alternate manner.
 Alternate activation occurs when the player right-clicks on the button
 on a mouse-based platform, or when the player long presses the button
@@ -1073,19 +1074,19 @@ on a touch-based platform.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-hovered_alt_alt">
-<span class="sig-name descname"><span class="pre">hovered</span></span><a class="headerlink" href="#screen-property-hovered_alt_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">hovered</span></span><a class="headerlink" href="#screen-property-hovered_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>An action to run when the button gains focus.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-unhovered_alt_alt">
-<span class="sig-name descname"><span class="pre">unhovered</span></span><a class="headerlink" href="#screen-property-unhovered_alt_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">unhovered</span></span><a class="headerlink" href="#screen-property-unhovered_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>An action to run when the button loses focus.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-selected_alt">
-<span class="sig-name descname"><span class="pre">selected</span></span><a class="headerlink" href="#screen-property-selected_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">selected</span></span><a class="headerlink" href="#screen-property-selected_alt" title="Link to this definition"></a></dt>
 <dd><p>An expression that determines whether the button is selected or not.
 This expression is evaluated at least once per interaction.
 If not provided or None, the action will be used to determine selectedness.</p>
@@ -1093,7 +1094,7 @@ If not provided or None, the action will be used to determine selectedness.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-sensitive_alt_alt">
-<span class="sig-name descname"><span class="pre">sensitive</span></span><a class="headerlink" href="#screen-property-sensitive_alt_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">sensitive</span></span><a class="headerlink" href="#screen-property-sensitive_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>An expression that determines whether the button is sensitive or not.
 This expression is evaluated at least once per interaction.
 If not provided or None, the action will be used to determine sensitivity.</p>
@@ -1101,14 +1102,14 @@ If not provided or None, the action will be used to determine sensitivity.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-keysym_alt_alt">
-<span class="sig-name descname"><span class="pre">keysym</span></span><a class="headerlink" href="#screen-property-keysym_alt_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">keysym</span></span><a class="headerlink" href="#screen-property-keysym_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>A string giving a <a class="reference internal" href="keymap.html"><span class="doc">keysym</span></a> describing a keyboard key that,
 when pressed, invokes the action of this button.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-alternate_keysym_alt">
-<span class="sig-name descname"><span class="pre">alternate_keysym</span></span><a class="headerlink" href="#screen-property-alternate_keysym_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">alternate_keysym</span></span><a class="headerlink" href="#screen-property-alternate_keysym_alt" title="Link to this definition"></a></dt>
 <dd><p>A string giving a <a class="reference internal" href="keymap.html"><span class="doc">keysym</span></a> describing a keyboard key that,
 when pressed, invokes the alternate action of this button.</p>
 </dd></dl>
@@ -1131,7 +1132,7 @@ when pressed, invokes the alternate action of this button.</p>
 </div>
 </section>
 <section id="input">
-<span id="sl-input"></span><h3>Input<a class="headerlink" href="#input" title="Permalink to this heading"> link</a></h3>
+<span id="sl-input"></span><h3>Input<a class="headerlink" href="#input" title="Link to this heading"></a></h3>
 <p>Creates a text input area, which allows the user to enter text. When
 the user presses return, the text will be returned by the
 interaction. (When the screen is invoked through <code class="docutils literal notranslate"><span class="pre">call</span> <span class="pre">screen</span></code>, the result
@@ -1141,7 +1142,7 @@ the input displayable is limited to alphabetic characters.</p>
 <p>The input statement takes no parameters, and the following properties:</p>
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-value_alt">
-<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#screen-property-value_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#screen-property-value_alt" title="Link to this definition"></a></dt>
 <dd><p>An <a class="reference internal" href="screen_actions.html#input-values"><span class="std std-ref">input value</span></a> object that this input uses.
 InputValue objects determine where the default value is taken from,
 what happens when the text is changed, what happens when enter is
@@ -1151,83 +1152,93 @@ pressed, and if the text is editable by default.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-default">
-<span class="sig-name descname"><span class="pre">default</span></span><a class="headerlink" href="#screen-property-default" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">default</span></span><a class="headerlink" href="#screen-property-default" title="Link to this definition"></a></dt>
 <dd><p>The default text in this input.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-length">
-<span class="sig-name descname"><span class="pre">length</span></span><a class="headerlink" href="#screen-property-length" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">length</span></span><a class="headerlink" href="#screen-property-length" title="Link to this definition"></a></dt>
 <dd><p>The maximum length of the text in this input.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-pixel_width">
-<span class="sig-name descname"><span class="pre">pixel_width</span></span><a class="headerlink" href="#screen-property-pixel_width" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">pixel_width</span></span><a class="headerlink" href="#screen-property-pixel_width" title="Link to this definition"></a></dt>
 <dd><p>The maximum pixel width of the input. If typing a character would
 cause the input to exceed this width, the keypress is ignored.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-allow">
-<span class="sig-name descname"><span class="pre">allow</span></span><a class="headerlink" href="#screen-property-allow" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">allow</span></span><a class="headerlink" href="#screen-property-allow" title="Link to this definition"></a></dt>
 <dd><p>A string containing characters that are allowed to be typed into
 this input. (By default, allow all characters.)</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-exclude">
-<span class="sig-name descname"><span class="pre">exclude</span></span><a class="headerlink" href="#screen-property-exclude" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">exclude</span></span><a class="headerlink" href="#screen-property-exclude" title="Link to this definition"></a></dt>
 <dd><p>A string containing characters that are disallowed from being
 typed into this input. (By default, &quot;{}&quot;.)</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-copypaste">
-<span class="sig-name descname"><span class="pre">copypaste</span></span><a class="headerlink" href="#screen-property-copypaste" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">copypaste</span></span><a class="headerlink" href="#screen-property-copypaste" title="Link to this definition"></a></dt>
 <dd><p>If True, it becomes possible to copy and paste
 into this input. (By default, disabled.)</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-prefix">
-<span class="sig-name descname"><span class="pre">prefix</span></span><a class="headerlink" href="#screen-property-prefix" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">prefix</span></span><a class="headerlink" href="#screen-property-prefix" title="Link to this definition"></a></dt>
 <dd><p>An immutable string to prepend to what the user has typed.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-suffix">
-<span class="sig-name descname"><span class="pre">suffix</span></span><a class="headerlink" href="#screen-property-suffix" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">suffix</span></span><a class="headerlink" href="#screen-property-suffix" title="Link to this definition"></a></dt>
 <dd><p>An immutable string to append to what the user has typed.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-changed_alt">
-<span class="sig-name descname"><span class="pre">changed</span></span><a class="headerlink" href="#screen-property-changed_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">changed</span></span><a class="headerlink" href="#screen-property-changed_alt" title="Link to this definition"></a></dt>
 <dd><p>A Python function that is called with what the user has typed,
 when the string changes.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-mask">
-<span class="sig-name descname"><span class="pre">mask</span></span><a class="headerlink" href="#screen-property-mask" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">mask</span></span><a class="headerlink" href="#screen-property-mask" title="Link to this definition"></a></dt>
 <dd><p>If given, a string that replaces each displayable character in
 the text. This can be used to mask out a password.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-caret_blink">
-<span class="sig-name descname"><span class="pre">caret_blink</span></span><a class="headerlink" href="#screen-property-caret_blink" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">caret_blink</span></span><a class="headerlink" href="#screen-property-caret_blink" title="Link to this definition"></a></dt>
 <dd><p>If not False, the blinking period of the default caret.
 Overrides <a class="reference internal" href="config.html#var-config.input_caret_blink"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.input_caret_blink</span></code></a>.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-multiline">
-<span class="sig-name descname"><span class="pre">multiline</span></span><a class="headerlink" href="#screen-property-multiline" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">multiline</span></span><a class="headerlink" href="#screen-property-multiline" title="Link to this definition"></a></dt>
 <dd><p>If true, it becomes possible to move caret on the next line
 using keyboard (Shift+Enter by default,
 can be changed by modifying config.keymap['input_next_line']).</p>
+</dd></dl>
+
+<dl class="std screen-property">
+<dt class="sig sig-object std" id="screen-property-action_alt_alt_alt">
+<span class="sig-name descname"><span class="pre">action</span></span><a class="headerlink" href="#screen-property-action_alt_alt_alt" title="Link to this definition"></a></dt>
+<dd><p>If not None, an action that is run when enter is pressed and the
+input is active. This overrides the default action of returning
+the input value.</p>
+<p>Generally, this is is used with a <cite>value</cite> that stores the input into
+a variable, so the action can access it.</p>
 </dd></dl>
 
 <p>It also takes:</p>
@@ -1247,7 +1258,7 @@ can be changed by modifying config.keymap['input_next_line']).</p>
 </div>
 </section>
 <section id="key">
-<span id="sl-key"></span><h3>Key<a class="headerlink" href="#key" title="Permalink to this heading"> link</a></h3>
+<span id="sl-key"></span><h3>Key<a class="headerlink" href="#key" title="Link to this heading"></a></h3>
 <p>This creates a keybinding that runs an action when a key is pressed,
 or one of the keys in a given list. Key is used in a loose sense here,
 as it also allows joystick and mouse events.</p>
@@ -1255,18 +1266,18 @@ as it also allows joystick and mouse events.</p>
 bind. See the <a class="reference internal" href="keymap.html"><span class="doc">Customizing the Keymap</span></a> section for a description of available
 keysyms. It takes two properties:</p>
 <dl class="std screen-property">
-<dt class="sig sig-object std" id="screen-property-action_alt_alt_alt">
-<span class="sig-name descname"><span class="pre">action</span></span><a class="headerlink" href="#screen-property-action_alt_alt_alt" title="Permalink to this definition"> link</a></dt>
+<dt class="sig sig-object std" id="screen-property-action_alt_alt_alt_alt">
+<span class="sig-name descname"><span class="pre">action</span></span><a class="headerlink" href="#screen-property-action_alt_alt_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>This gives an action that is run when the key is pressed. This
 property is mandatory.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-capture">
-<span class="sig-name descname"><span class="pre">capture</span></span><a class="headerlink" href="#screen-property-capture" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">capture</span></span><a class="headerlink" href="#screen-property-capture" title="Link to this definition"></a></dt>
 <dd><p>If true, the default, the event will capture, and will not be
 processed by other displayables. If false and the action does
-not end the interaction, the event will be procssed by other
+not end the interaction, the event will be processed by other
 displayables.</p>
 </dd></dl>
 
@@ -1279,7 +1290,7 @@ displayables.</p>
 </div>
 </section>
 <section id="label">
-<span id="sl-label"></span><h3>Label<a class="headerlink" href="#label" title="Permalink to this heading"> link</a></h3>
+<span id="sl-label"></span><h3>Label<a class="headerlink" href="#label" title="Link to this heading"></a></h3>
 <p>Creates a window in the label style, and then places text inside that
 window. Together, this combination is used to label things inside a
 frame.</p>
@@ -1287,7 +1298,7 @@ frame.</p>
 the property:</p>
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-text_style">
-<span class="sig-name descname"><span class="pre">text_style</span></span><a class="headerlink" href="#screen-property-text_style" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">text_style</span></span><a class="headerlink" href="#screen-property-text_style" title="Link to this definition"></a></dt>
 <dd><p>The name of the style to use for the button text. If not supplied,
 and the <cite>style</cite> property is a string, then <code class="docutils literal notranslate"><span class="pre">&quot;_text&quot;</span></code> is appended
 to that string to give the default text style.</p>
@@ -1295,7 +1306,7 @@ to that string to give the default text style.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-text_">
-<span class="sig-name descname"><span class="pre">text_-</span></span><a class="headerlink" href="#screen-property-text_" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">text_-</span></span><a class="headerlink" href="#screen-property-text_" title="Link to this definition"></a></dt>
 <dd><p>Other properties prefixed with <a class="reference internal" href="#text">text</a> have this prefix stripped, and
 are then passed to the text displayable.</p>
 </dd></dl>
@@ -1318,26 +1329,26 @@ are then passed to the text displayable.</p>
 </div>
 </section>
 <section id="sl-mousearea">
-<span id="mousearea"></span><span id="id2"></span><h3>Mousearea<a class="headerlink" href="#sl-mousearea" title="Permalink to this heading"> link</a></h3>
+<span id="mousearea"></span><span id="id2"></span><h3>Mousearea<a class="headerlink" href="#sl-mousearea" title="Link to this heading"></a></h3>
 <p>A mouse area is an area of the screen that can react to the mouse
 entering or leaving it. Unlike a button, a mouse area does not take
 focus, so it's possible to have a mouse area with buttons inside it.
 The <code class="docutils literal notranslate"><span class="pre">mousearea</span></code> statement takes no parameters, and the following properties:</p>
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-hovered_alt_alt_alt">
-<span class="sig-name descname"><span class="pre">hovered</span></span><a class="headerlink" href="#screen-property-hovered_alt_alt_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">hovered</span></span><a class="headerlink" href="#screen-property-hovered_alt_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>An action to run when the mouse enters the mouse area.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-unhovered_alt_alt_alt">
-<span class="sig-name descname"><span class="pre">unhovered</span></span><a class="headerlink" href="#screen-property-unhovered_alt_alt_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">unhovered</span></span><a class="headerlink" href="#screen-property-unhovered_alt_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>An action to run when the mouse leaves the mouse area.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-focus_mask">
-<span class="sig-name descname"><span class="pre">focus_mask</span></span><a class="headerlink" href="#screen-property-focus_mask" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">focus_mask</span></span><a class="headerlink" href="#screen-property-focus_mask" title="Link to this definition"></a></dt>
 <dd><p>The <a class="reference internal" href="style_properties.html#style-property-focus_mask"><code class="xref std std-propref docutils literal notranslate"><span class="pre">focus_mask</span></code></a> style property, which may be a Displayable
 or None. If a displayable, the mousearea will only be hovered if the
 mouse is over an opaque portion of the displayable. (The displayable
@@ -1379,7 +1390,7 @@ means.</p>
 </div>
 </section>
 <section id="nearrect">
-<span id="sl-nearrect"></span><h3>Nearrect<a class="headerlink" href="#nearrect" title="Permalink to this heading"> link</a></h3>
+<span id="sl-nearrect"></span><h3>Nearrect<a class="headerlink" href="#nearrect" title="Link to this heading"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">nearrect</span></code> statement takes a single child, and lays that child out
 at a location near a rectangle. Usually, this is a rectangle focus captured using
 the <a class="reference internal" href="screen_actions.html#CaptureFocus" title="CaptureFocus"><code class="xref py py-func docutils literal notranslate"><span class="pre">CaptureFocus()</span></code></a> action. This can be used for tooltips and dropdown or
@@ -1387,14 +1398,14 @@ pulldown menus.</p>
 <p>Nearrect takes the following properties:</p>
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-rect">
-<span class="sig-name descname"><span class="pre">rect</span></span><a class="headerlink" href="#screen-property-rect" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">rect</span></span><a class="headerlink" href="#screen-property-rect" title="Link to this definition"></a></dt>
 <dd><p>If given, this should be an (x, y, w, h) rectangle that the child is
 positioned relative to, as described below.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-focus_alt">
-<span class="sig-name descname"><span class="pre">focus</span></span><a class="headerlink" href="#screen-property-focus_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">focus</span></span><a class="headerlink" href="#screen-property-focus_alt" title="Link to this definition"></a></dt>
 <dd><p>If given, this should be a string. This string is passed to the equivalent of
 <a class="reference internal" href="screen_actions.html#GetFocusRect" title="GetFocusRect"><code class="xref py py-func docutils literal notranslate"><span class="pre">GetFocusRect()</span></code></a> to find the rectangle. If a focus rectangle with that
 name is found, the child is rendered.</p>
@@ -1404,7 +1415,7 @@ was focused while displaying a tooltip.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-prefer_top">
-<span class="sig-name descname"><span class="pre">prefer_top</span></span><a class="headerlink" href="#screen-property-prefer_top" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">prefer_top</span></span><a class="headerlink" href="#screen-property-prefer_top" title="Link to this definition"></a></dt>
 <dd><p>If given, positioning the child above the focus rect is preferred.</p>
 </dd></dl>
 
@@ -1487,19 +1498,19 @@ to its child, rather the nearrect.</p>
 <p>Dropdowns may benefit from improved styling, which isn't done here.</p>
 </section>
 <section id="null">
-<span id="sl-null"></span><h3>Null<a class="headerlink" href="#null" title="Permalink to this heading"> link</a></h3>
+<span id="sl-null"></span><h3>Null<a class="headerlink" href="#null" title="Link to this heading"></a></h3>
 <p>The null statement inserts an empty area on the screen. This can be
 used to space things out. The null statement takes no parameters, and
 the following properties:</p>
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-width">
-<span class="sig-name descname"><span class="pre">width</span></span><a class="headerlink" href="#screen-property-width" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">width</span></span><a class="headerlink" href="#screen-property-width" title="Link to this definition"></a></dt>
 <dd><p>The width of the empty area, in pixels.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-height">
-<span class="sig-name descname"><span class="pre">height</span></span><a class="headerlink" href="#screen-property-height" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">height</span></span><a class="headerlink" href="#screen-property-height" title="Link to this definition"></a></dt>
 <dd><p>The height of the empty area, in pixels.</p>
 </dd></dl>
 
@@ -1518,7 +1529,7 @@ the following properties:</p>
 </div>
 </section>
 <section id="side">
-<span id="sl-side"></span><h3>Side<a class="headerlink" href="#side" title="Permalink to this heading"> link</a></h3>
+<span id="sl-side"></span><h3>Side<a class="headerlink" href="#side" title="Link to this heading"></a></h3>
 <p>This positions displayables in the corners or center of a grid. It
 takes a single parameter, string containing a space-separated list of
 places to place its children. Each component of this list should be
@@ -1530,7 +1541,7 @@ one of:</p>
 <p>A side takes the following properties:</p>
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-spacing">
-<span class="sig-name descname"><span class="pre">spacing</span></span><a class="headerlink" href="#screen-property-spacing" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">spacing</span></span><a class="headerlink" href="#screen-property-spacing" title="Link to this definition"></a></dt>
 <dd><p>The spacing between the rows and columns of the grid.</p>
 </dd></dl>
 
@@ -1559,7 +1570,7 @@ the same number of children as there are entries in the places list.</p>
 </div>
 </section>
 <section id="text">
-<span id="sl-text"></span><h3>Text<a class="headerlink" href="#text" title="Permalink to this heading"> link</a></h3>
+<span id="sl-text"></span><h3>Text<a class="headerlink" href="#text" title="Link to this heading"></a></h3>
 <p>The text statement displays text. It takes a single parameter, the
 text to display. It also takes the following groups of properties:</p>
 <ul class="simple">
@@ -1574,13 +1585,13 @@ text to display. It also takes the following groups of properties:</p>
 </div>
 </section>
 <section id="textbutton">
-<span id="sl-textbutton"></span><h3>Textbutton<a class="headerlink" href="#textbutton" title="Permalink to this heading"> link</a></h3>
+<span id="sl-textbutton"></span><h3>Textbutton<a class="headerlink" href="#textbutton" title="Link to this heading"></a></h3>
 <p>Creates a button containing a text label. The button takes a single
 parameter, the text to include as part of the button. It takes the
 following properties:</p>
 <dl class="std screen-property">
-<dt class="sig sig-object std" id="screen-property-action_alt_alt_alt_alt">
-<span class="sig-name descname"><span class="pre">action</span></span><a class="headerlink" href="#screen-property-action_alt_alt_alt_alt" title="Permalink to this definition"> link</a></dt>
+<dt class="sig sig-object std" id="screen-property-action_alt_alt_alt_alt_alt">
+<span class="sig-name descname"><span class="pre">action</span></span><a class="headerlink" href="#screen-property-action_alt_alt_alt_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>The action to run when the button is activated. This also controls if
 the button is sensitive if <cite>sensitive</cite> is not provided or None, and if the button
 is selected if <cite>selected</cite> is not provided or None.</p>
@@ -1588,7 +1599,7 @@ is selected if <cite>selected</cite> is not provided or None.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-alternate_alt_alt">
-<span class="sig-name descname"><span class="pre">alternate</span></span><a class="headerlink" href="#screen-property-alternate_alt_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">alternate</span></span><a class="headerlink" href="#screen-property-alternate_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>An action that is run if the button is activated in an alternate manner.
 Alternate activation occurs when the player right-clicks on the button
 on a mouse-based platform, or when the player long presses the button
@@ -1597,19 +1608,19 @@ on a touch-based platform.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-hovered_alt_alt_alt_alt">
-<span class="sig-name descname"><span class="pre">hovered</span></span><a class="headerlink" href="#screen-property-hovered_alt_alt_alt_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">hovered</span></span><a class="headerlink" href="#screen-property-hovered_alt_alt_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>An action to run when the button gains focus.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-unhovered_alt_alt_alt_alt">
-<span class="sig-name descname"><span class="pre">unhovered</span></span><a class="headerlink" href="#screen-property-unhovered_alt_alt_alt_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">unhovered</span></span><a class="headerlink" href="#screen-property-unhovered_alt_alt_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>An action to run when the button loses focus.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-selected_alt_alt">
-<span class="sig-name descname"><span class="pre">selected</span></span><a class="headerlink" href="#screen-property-selected_alt_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">selected</span></span><a class="headerlink" href="#screen-property-selected_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>An expression that determines whether the button is selected or not.
 This expression is evaluated at least once per interaction.
 If not provided or None, the action will be used to determine selectedness.</p>
@@ -1617,7 +1628,7 @@ If not provided or None, the action will be used to determine selectedness.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-sensitive_alt_alt_alt">
-<span class="sig-name descname"><span class="pre">sensitive</span></span><a class="headerlink" href="#screen-property-sensitive_alt_alt_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">sensitive</span></span><a class="headerlink" href="#screen-property-sensitive_alt_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>An expression that determines whether the button is sensitive or not.
 This expression is evaluated at least once per interaction.
 If not provided or None, the action will be used to determine sensitivity.</p>
@@ -1625,21 +1636,21 @@ If not provided or None, the action will be used to determine sensitivity.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-keysym_alt_alt_alt">
-<span class="sig-name descname"><span class="pre">keysym</span></span><a class="headerlink" href="#screen-property-keysym_alt_alt_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">keysym</span></span><a class="headerlink" href="#screen-property-keysym_alt_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>A string giving a <a class="reference internal" href="keymap.html"><span class="doc">keysym</span></a> describing a keyboard key that,
 when pressed, invokes the action of this button.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-alternate_keysym_alt_alt">
-<span class="sig-name descname"><span class="pre">alternate_keysym</span></span><a class="headerlink" href="#screen-property-alternate_keysym_alt_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">alternate_keysym</span></span><a class="headerlink" href="#screen-property-alternate_keysym_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>A string giving a <a class="reference internal" href="keymap.html"><span class="doc">keysym</span></a> describing a keyboard key that,
 when pressed, invokes the alternate action of this button.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-text_style_alt">
-<span class="sig-name descname"><span class="pre">text_style</span></span><a class="headerlink" href="#screen-property-text_style_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">text_style</span></span><a class="headerlink" href="#screen-property-text_style_alt" title="Link to this definition"></a></dt>
 <dd><p>The name of the style to use for the button text. If not supplied,
 and the <cite>style</cite> property is a string, then <code class="docutils literal notranslate"><span class="pre">&quot;_text&quot;</span></code> is appended
 to that string to give the default text style.</p>
@@ -1647,7 +1658,7 @@ to that string to give the default text style.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-text_-_alt">
-<span class="sig-name descname"><span class="pre">text_-</span></span><a class="headerlink" href="#screen-property-text_-_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">text_-</span></span><a class="headerlink" href="#screen-property-text_-_alt" title="Link to this definition"></a></dt>
 <dd><p>Other properties prefixed with <a class="reference internal" href="#text">text</a> have this prefix stripped, and are
 then passed to the text displayable.</p>
 </dd></dl>
@@ -1669,26 +1680,26 @@ then passed to the text displayable.</p>
 </div>
 </section>
 <section id="timer">
-<span id="sl-timer"></span><h3>Timer<a class="headerlink" href="#timer" title="Permalink to this heading"> link</a></h3>
+<span id="sl-timer"></span><h3>Timer<a class="headerlink" href="#timer" title="Link to this heading"></a></h3>
 <p>This creates a timer that runs an action when time runs out. It takes
 one positional parameter, giving the timeout time, in seconds. It
 takes the properties:</p>
 <dl class="std screen-property">
-<dt class="sig sig-object std" id="screen-property-action_alt_alt_alt_alt_alt">
-<span class="sig-name descname"><span class="pre">action</span></span><a class="headerlink" href="#screen-property-action_alt_alt_alt_alt_alt" title="Permalink to this definition"> link</a></dt>
+<dt class="sig sig-object std" id="screen-property-action_alt_alt_alt_alt_alt_alt">
+<span class="sig-name descname"><span class="pre">action</span></span><a class="headerlink" href="#screen-property-action_alt_alt_alt_alt_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>This gives an action that is run when the timer expires. This
 property is mandatory.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-repeat">
-<span class="sig-name descname"><span class="pre">repeat</span></span><a class="headerlink" href="#screen-property-repeat" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">repeat</span></span><a class="headerlink" href="#screen-property-repeat" title="Link to this definition"></a></dt>
 <dd><p>If True, the timer repeats after it times out.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-modal_alt_alt">
-<span class="sig-name descname"><span class="pre">modal</span></span><a class="headerlink" href="#screen-property-modal_alt_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">modal</span></span><a class="headerlink" href="#screen-property-modal_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>If True, the timer will not fire if it is blocked by a modal
 screen. If false or not given, the timer will fire even if it
 is blocked by a modal screen.</p>
@@ -1705,17 +1716,17 @@ is blocked by a modal screen.</p>
 </div>
 </section>
 <section id="transform">
-<span id="sl-transform"></span><h3>Transform<a class="headerlink" href="#transform" title="Permalink to this heading"> link</a></h3>
+<span id="sl-transform"></span><h3>Transform<a class="headerlink" href="#transform" title="Link to this heading"></a></h3>
 <p>Applies a transform to its child. This takes no parameters, and the
 following property groups:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#common-properties"><span class="std std-ref">Common Properties</span></a></p></li>
-<li><p><a class="reference internal" href="atl.html#transform-properties"><span class="std std-ref">Transform Properties</span></a></p></li>
+<li><p><a class="reference internal" href="transform_properties.html#id1"><span class="std std-ref">Transform Properties</span></a></p></li>
 </ul>
 <p>This should take a single child.</p>
 </section>
 <section id="vbar">
-<span id="sl-vbar"></span><h3>Vbar<a class="headerlink" href="#vbar" title="Permalink to this heading"> link</a></h3>
+<span id="sl-vbar"></span><h3>Vbar<a class="headerlink" href="#vbar" title="Link to this heading"></a></h3>
 <p>The vertically oriented equivalent of <a class="reference internal" href="#bar">bar</a>. Properties are the same
 as <cite>bar</cite>.</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">screen</span> <span class="n">volume_controls</span><span class="p">():</span>
@@ -1729,7 +1740,7 @@ as <cite>bar</cite>.</p>
 </div>
 </section>
 <section id="vbox">
-<span id="sl-vbox"></span><h3>Vbox<a class="headerlink" href="#vbox" title="Permalink to this heading"> link</a></h3>
+<span id="sl-vbox"></span><h3>Vbox<a class="headerlink" href="#vbox" title="Link to this heading"></a></h3>
 <p>This displays its children one above the other, in an invisible
 vertical box. It takes no parameters, and the following groups of
 properties:</p>
@@ -1747,14 +1758,14 @@ properties:</p>
 </div>
 </section>
 <section id="viewport">
-<span id="sl-viewport"></span><h3>Viewport<a class="headerlink" href="#viewport" title="Permalink to this heading"> link</a></h3>
+<span id="sl-viewport"></span><h3>Viewport<a class="headerlink" href="#viewport" title="Link to this heading"></a></h3>
 <p>A viewport is area of the screen that can be scrolled by dragging,
 with the mouse wheel, or with scrollbars. It can be used to display
 part of something that is bigger than the screen. It takes the
 following properties:</p>
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-child_size">
-<span class="sig-name descname"><span class="pre">child_size</span></span><a class="headerlink" href="#screen-property-child_size" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">child_size</span></span><a class="headerlink" href="#screen-property-child_size" title="Link to this definition"></a></dt>
 <dd><p>The size that is offered to the child for rendering. An (<cite>xsize</cite>,
 <cite>ysize</cite>) tuple. This can usually be omitted, when the child can
 compute it's own size. If either component is None, the child's
@@ -1763,7 +1774,7 @@ size is used.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-mousewheel">
-<span class="sig-name descname"><span class="pre">mousewheel</span></span><a class="headerlink" href="#screen-property-mousewheel" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">mousewheel</span></span><a class="headerlink" href="#screen-property-mousewheel" title="Link to this definition"></a></dt>
 <dd><p>This should be one of:</p>
 <dl class="simple">
 <dt>False</dt><dd><p>To ignore the mousewheel. (The default.)</p>
@@ -1786,7 +1797,7 @@ bottom.)</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-draggable">
-<span class="sig-name descname"><span class="pre">draggable</span></span><a class="headerlink" href="#screen-property-draggable" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">draggable</span></span><a class="headerlink" href="#screen-property-draggable" title="Link to this definition"></a></dt>
 <dd><p>If True, dragging the mouse will scroll the viewport. This can also be
 a <a class="reference internal" href="#screen-variants"><span class="std std-ref">variant</span></a>, in which case the viewport will be draggable
 if the variant is in place. (For example, <code class="docutils literal notranslate"><span class="pre">draggable</span> <span class="pre">&quot;touch&quot;</span></code>.)</p>
@@ -1794,7 +1805,7 @@ if the variant is in place. (For example, <code class="docutils literal notransl
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-edgescroll">
-<span class="sig-name descname"><span class="pre">edgescroll</span></span><a class="headerlink" href="#screen-property-edgescroll" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">edgescroll</span></span><a class="headerlink" href="#screen-property-edgescroll" title="Link to this definition"></a></dt>
 <dd><p>Controlls scrolling when the mouse reaches the edge of the
 viewport. If not None, this should be a two- or three-element
 tuple:</p>
@@ -1816,21 +1827,21 @@ implement constant-speed scrolling.</p></li>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-xadjustment">
-<span class="sig-name descname"><span class="pre">xadjustment</span></span><a class="headerlink" href="#screen-property-xadjustment" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">xadjustment</span></span><a class="headerlink" href="#screen-property-xadjustment" title="Link to this definition"></a></dt>
 <dd><p>The <a class="reference internal" href="screen_python.html#ui.adjustment" title="ui.adjustment"><code class="xref py py-func docutils literal notranslate"><span class="pre">ui.adjustment()</span></code></a> used for the x-axis of the
 viewport. When omitted, a new adjustment is created.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-yadjustment">
-<span class="sig-name descname"><span class="pre">yadjustment</span></span><a class="headerlink" href="#screen-property-yadjustment" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">yadjustment</span></span><a class="headerlink" href="#screen-property-yadjustment" title="Link to this definition"></a></dt>
 <dd><p>The <a class="reference internal" href="screen_python.html#ui.adjustment" title="ui.adjustment"><code class="xref py py-func docutils literal notranslate"><span class="pre">ui.adjustment()</span></code></a> used for the y-axis of the
 viewport. When omitted, a new adjustment is created.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-xinitial">
-<span class="sig-name descname"><span class="pre">xinitial</span></span><a class="headerlink" href="#screen-property-xinitial" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">xinitial</span></span><a class="headerlink" href="#screen-property-xinitial" title="Link to this definition"></a></dt>
 <dd><p>The initial horizontal offset of the viewport. This may be an integer
 giving the number of pixels, or a float giving a fraction of the
 possible offset.</p>
@@ -1838,7 +1849,7 @@ possible offset.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-yinitial">
-<span class="sig-name descname"><span class="pre">yinitial</span></span><a class="headerlink" href="#screen-property-yinitial" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">yinitial</span></span><a class="headerlink" href="#screen-property-yinitial" title="Link to this definition"></a></dt>
 <dd><p>The initial vertical offset of the viewport. This may be an integer
 giving the number of pixels, or a float giving a fraction of the
 possible offset.</p>
@@ -1846,7 +1857,7 @@ possible offset.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-scrollbars">
-<span class="sig-name descname"><span class="pre">scrollbars</span></span><a class="headerlink" href="#screen-property-scrollbars" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">scrollbars</span></span><a class="headerlink" href="#screen-property-scrollbars" title="Link to this definition"></a></dt>
 <dd><p>If not None, scrollbars are added along with this viewport.
 This works by creating a side layout, and placing the created
 viewport in the center of the side. If <cite>scrollbars</cite> is &quot;horizontal&quot;,
@@ -1868,7 +1879,7 @@ viewport.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-arrowkeys">
-<span class="sig-name descname"><span class="pre">arrowkeys</span></span><a class="headerlink" href="#screen-property-arrowkeys" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">arrowkeys</span></span><a class="headerlink" href="#screen-property-arrowkeys" title="Link to this definition"></a></dt>
 <dd><p>If true, the viewport can be scrolled with the left, right, up, and down
 arrow keys. This takes precedence over the usual function of these keys,
 which is changing focus. However, the arrow keys will change focus when the
@@ -1877,7 +1888,7 @@ viewport reaches its limits.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-pagekeys">
-<span class="sig-name descname"><span class="pre">pagekeys</span></span><a class="headerlink" href="#screen-property-pagekeys" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">pagekeys</span></span><a class="headerlink" href="#screen-property-pagekeys" title="Link to this definition"></a></dt>
 <dd><p>If true, the viewport can be scrolled up and down by the pageup and
 pagedown keys. This disables the usual functionality of these keys,
 which is to cause rollback and rollforward.</p>
@@ -1908,7 +1919,7 @@ id.</p>
 </div>
 </section>
 <section id="vpgrid">
-<span id="sl-vpgrid"></span><h3>Vpgrid<a class="headerlink" href="#vpgrid" title="Permalink to this heading"> link</a></h3>
+<span id="sl-vpgrid"></span><h3>Vpgrid<a class="headerlink" href="#vpgrid" title="Link to this heading"></a></h3>
 <p>A vpgrid (viewport grid) combines a viewport and grid into a single
 displayable. The vpgrid takes multiple children (like a grid) and is
 optimized so that only the children being displayed within the viewport
@@ -1920,22 +1931,22 @@ incorrectly, please ensure that all children are of the same size.</p>
 If one is omitted or None, the other is automatically determined from the
 size, spacing, and number of children. If a row or column would be underfull,
 <code class="docutils literal notranslate"><span class="pre">null</span></code> displayable are used to fill the remaining space.</p>
-<p>Vpgrids take the the following properties:</p>
+<p>Vpgrids take the following properties:</p>
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-cols">
-<span class="sig-name descname"><span class="pre">cols</span></span><a class="headerlink" href="#screen-property-cols" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">cols</span></span><a class="headerlink" href="#screen-property-cols" title="Link to this definition"></a></dt>
 <dd><p>The number of columns in the grid.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-rows">
-<span class="sig-name descname"><span class="pre">rows</span></span><a class="headerlink" href="#screen-property-rows" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">rows</span></span><a class="headerlink" href="#screen-property-rows" title="Link to this definition"></a></dt>
 <dd><p>The number of rows in the grid.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-transpose_alt">
-<span class="sig-name descname"><span class="pre">transpose</span></span><a class="headerlink" href="#screen-property-transpose_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">transpose</span></span><a class="headerlink" href="#screen-property-transpose_alt" title="Link to this definition"></a></dt>
 <dd><p>If true, columns are filled before rows. The default of this depends
 on the <cite>cols</cite> and <cite>rows</cite> properties. If <cite>cols</cite> is given, columns
 are filled before rows, otherwise rows are filled before columns.</p>
@@ -1975,7 +1986,7 @@ with <code class="docutils literal notranslate"><span class="pre">viewport_</spa
 </div>
 </section>
 <section id="window">
-<span id="sl-window"></span><h3>Window<a class="headerlink" href="#window" title="Permalink to this heading"> link</a></h3>
+<span id="sl-window"></span><h3>Window<a class="headerlink" href="#window" title="Link to this heading"></a></h3>
 <p>A window is a window that contains a background that is intended for
 displaying in-game dialogue. It takes the following groups of
 properties:</p>
@@ -1998,7 +2009,7 @@ a fixed is created to contain them.</p>
 </section>
 </section>
 <section id="imagemap-statements">
-<h2>Imagemap Statements<a class="headerlink" href="#imagemap-statements" title="Permalink to this heading"> link</a></h2>
+<h2>Imagemap Statements<a class="headerlink" href="#imagemap-statements" title="Link to this heading"></a></h2>
 <p>A convenient way of creating a screen, especially for those who think
 visually, is to create an imagemap. When creating an imagemap, the
 imagemap statement is used to specify up to six images. The hotspot
@@ -2025,12 +2036,12 @@ image, and apply actions and values to those areas.</p>
 </pre></div>
 </div>
 <section id="imagemap">
-<span id="sl-imagemap"></span><h3>Imagemap<a class="headerlink" href="#imagemap" title="Permalink to this heading"> link</a></h3>
+<span id="sl-imagemap"></span><h3>Imagemap<a class="headerlink" href="#imagemap" title="Link to this heading"></a></h3>
 <p>The imagemap statement is used to specify an imagemap. It takes no
 parameters, and the following properties:</p>
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-auto_alt">
-<span class="sig-name descname"><span class="pre">auto</span></span><a class="headerlink" href="#screen-property-auto_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">auto</span></span><a class="headerlink" href="#screen-property-auto_alt" title="Link to this definition"></a></dt>
 <dd><p>Used to automatically define the images used by this imagemap. This
 should be a string that contains %s in it. If it is, and one of
 the image properties is omitted, %s is replaced with the name of
@@ -2045,48 +2056,48 @@ idle defaults to &quot;imagemap_idle.png&quot;. If <cite>auto</cite> is &quot;im
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-ground">
-<span class="sig-name descname"><span class="pre">ground</span></span><a class="headerlink" href="#screen-property-ground" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">ground</span></span><a class="headerlink" href="#screen-property-ground" title="Link to this definition"></a></dt>
 <dd><p>The image used for portions of the imagemap that are not part of a
 hotspot or hotbar.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-insensitive_alt">
-<span class="sig-name descname"><span class="pre">insensitive</span></span><a class="headerlink" href="#screen-property-insensitive_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">insensitive</span></span><a class="headerlink" href="#screen-property-insensitive_alt" title="Link to this definition"></a></dt>
 <dd><p>The image used when a hotspot or hotbar is insensitive.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-idle_alt">
-<span class="sig-name descname"><span class="pre">idle</span></span><a class="headerlink" href="#screen-property-idle_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">idle</span></span><a class="headerlink" href="#screen-property-idle_alt" title="Link to this definition"></a></dt>
 <dd><p>The image used when a hotspot is not selected and not focused, and
 for the empty portion of unfocused hotbars.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-hover_alt">
-<span class="sig-name descname"><span class="pre">hover</span></span><a class="headerlink" href="#screen-property-hover_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">hover</span></span><a class="headerlink" href="#screen-property-hover_alt" title="Link to this definition"></a></dt>
 <dd><p>The image used when a hotspot is not selected and focused, and
 for the empty portion of focused hotbars.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-selected_idle_alt">
-<span class="sig-name descname"><span class="pre">selected_idle</span></span><a class="headerlink" href="#screen-property-selected_idle_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">selected_idle</span></span><a class="headerlink" href="#screen-property-selected_idle_alt" title="Link to this definition"></a></dt>
 <dd><p>The image used when a hotspot is selected and not focused, and
 for the full portion of unfocused hotbars.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-selected_hover_alt">
-<span class="sig-name descname"><span class="pre">selected_hover</span></span><a class="headerlink" href="#screen-property-selected_hover_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">selected_hover</span></span><a class="headerlink" href="#screen-property-selected_hover_alt" title="Link to this definition"></a></dt>
 <dd><p>The image used when a hotspot is selected and focused, and
 for the full portion of focused hotbars.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-alpha">
-<span class="sig-name descname"><span class="pre">alpha</span></span><a class="headerlink" href="#screen-property-alpha" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">alpha</span></span><a class="headerlink" href="#screen-property-alpha" title="Link to this definition"></a></dt>
 <dd><p>If true, the default, a hotspot only gains focus when the mouse is
 in an area of the hover image that is opaque. If false, the hotspot
 gains focus whenever the mouse is within its rectangular boundary.</p>
@@ -2094,7 +2105,7 @@ gains focus whenever the mouse is within its rectangular boundary.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-cache">
-<span class="sig-name descname"><span class="pre">cache</span></span><a class="headerlink" href="#screen-property-cache" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">cache</span></span><a class="headerlink" href="#screen-property-cache" title="Link to this definition"></a></dt>
 <dd><p>If true, the default, hotspot data is cached in to improve performance
 at the cost of some additional disk space.</p>
 </dd></dl>
@@ -2109,21 +2120,21 @@ at the cost of some additional disk space.</p>
 just hotspots and hotbars).</p>
 </section>
 <section id="hotspot">
-<span id="sl-hotspot"></span><h3>Hotspot<a class="headerlink" href="#hotspot" title="Permalink to this heading"> link</a></h3>
+<span id="sl-hotspot"></span><h3>Hotspot<a class="headerlink" href="#hotspot" title="Link to this heading"></a></h3>
 <p>A hotspot is a button consisting of a portion of the imagemap that
 contains it. It takes a single parameter, a (x, y, width, height)
 tuple giving the area of the imagemap that makes up the button. It
 also takes the following properties:</p>
 <dl class="std screen-property">
-<dt class="sig sig-object std" id="screen-property-action_alt_alt_alt_alt_alt_alt">
-<span class="sig-name descname"><span class="pre">action</span></span><a class="headerlink" href="#screen-property-action_alt_alt_alt_alt_alt_alt" title="Permalink to this definition"> link</a></dt>
+<dt class="sig sig-object std" id="screen-property-action_alt_alt_alt_alt_alt_alt_alt">
+<span class="sig-name descname"><span class="pre">action</span></span><a class="headerlink" href="#screen-property-action_alt_alt_alt_alt_alt_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>The action to run when the button is activated. This also controls
 if the button is sensitive, and if the button is selected.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-alternate_alt_alt_alt">
-<span class="sig-name descname"><span class="pre">alternate</span></span><a class="headerlink" href="#screen-property-alternate_alt_alt_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">alternate</span></span><a class="headerlink" href="#screen-property-alternate_alt_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>An action that is run if the hotspot is activated in an alternate manner.
 Alternate activation occurs when the player right-clicks on the hotspot
 on a mouse-based platform, or when the player long presses the hotspot
@@ -2132,19 +2143,19 @@ on a touch-based platform.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-hovered_alt_alt_alt_alt_alt">
-<span class="sig-name descname"><span class="pre">hovered</span></span><a class="headerlink" href="#screen-property-hovered_alt_alt_alt_alt_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">hovered</span></span><a class="headerlink" href="#screen-property-hovered_alt_alt_alt_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>An action to run when the button gains focus.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-unhovered_alt_alt_alt_alt_alt">
-<span class="sig-name descname"><span class="pre">unhovered</span></span><a class="headerlink" href="#screen-property-unhovered_alt_alt_alt_alt_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">unhovered</span></span><a class="headerlink" href="#screen-property-unhovered_alt_alt_alt_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>An action to run when the button loses focus.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-selected_alt_alt_alt">
-<span class="sig-name descname"><span class="pre">selected</span></span><a class="headerlink" href="#screen-property-selected_alt_alt_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">selected</span></span><a class="headerlink" href="#screen-property-selected_alt_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>An expression that determines whether the button is selected or not.
 This expression is evaluated at least once per interaction.
 If not provided or None, the action will be used to determine selectedness.</p>
@@ -2152,7 +2163,7 @@ If not provided or None, the action will be used to determine selectedness.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-sensitive_alt_alt_alt_alt">
-<span class="sig-name descname"><span class="pre">sensitive</span></span><a class="headerlink" href="#screen-property-sensitive_alt_alt_alt_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">sensitive</span></span><a class="headerlink" href="#screen-property-sensitive_alt_alt_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>An expression that determines whether the button is sensitive or not.
 This expression is evaluated at least once per interaction.
 If not provided or None, the action will be used to determine sensitivity.</p>
@@ -2160,14 +2171,14 @@ If not provided or None, the action will be used to determine sensitivity.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-keysym_alt_alt_alt_alt">
-<span class="sig-name descname"><span class="pre">keysym</span></span><a class="headerlink" href="#screen-property-keysym_alt_alt_alt_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">keysym</span></span><a class="headerlink" href="#screen-property-keysym_alt_alt_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>A string giving a <a class="reference internal" href="keymap.html"><span class="doc">keysym</span></a> describing a keyboard key that,
 when pressed, invokes the action of this button.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-alternate_keysym_alt_alt_alt">
-<span class="sig-name descname"><span class="pre">alternate_keysym</span></span><a class="headerlink" href="#screen-property-alternate_keysym_alt_alt_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">alternate_keysym</span></span><a class="headerlink" href="#screen-property-alternate_keysym_alt_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>A string giving a <a class="reference internal" href="keymap.html"><span class="doc">keysym</span></a> describing a keyboard key that,
 when pressed, invokes the alternate action of this button.</p>
 </dd></dl>
@@ -2184,28 +2195,28 @@ the children will be positioned relative to the hotspot.</p>
 self-voicing feature to work.</p>
 </section>
 <section id="hotbar">
-<span id="sl-hotbar"></span><h3>Hotbar<a class="headerlink" href="#hotbar" title="Permalink to this heading"> link</a></h3>
+<span id="sl-hotbar"></span><h3>Hotbar<a class="headerlink" href="#hotbar" title="Link to this heading"></a></h3>
 <p>A hotbar is a bar that consists of a portion of the imagemap that
 contains it. It takes a single parameter, a (x, y, width, height)
 tuple giving the area of the imagemap that makes up the button. It
 also takes the following properties:</p>
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-value_alt_alt">
-<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#screen-property-value_alt_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#screen-property-value_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>The current value of the bar. This can be either a <a class="reference internal" href="screen_actions.html#input-values"><span class="std std-ref">bar value</span></a>
 object, or a number.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-range_alt">
-<span class="sig-name descname"><span class="pre">range</span></span><a class="headerlink" href="#screen-property-range_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">range</span></span><a class="headerlink" href="#screen-property-range_alt" title="Link to this definition"></a></dt>
 <dd><p>The maximum value of the bar. This is required if <cite>value</cite> is a
 number.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-adjustment_alt">
-<span class="sig-name descname"><span class="pre">adjustment</span></span><a class="headerlink" href="#screen-property-adjustment_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">adjustment</span></span><a class="headerlink" href="#screen-property-adjustment_alt" title="Link to this definition"></a></dt>
 <dd><p>A <a class="reference internal" href="screen_python.html#ui.adjustment" title="ui.adjustment"><code class="xref py py-func docutils literal notranslate"><span class="pre">ui.adjustment()</span></code></a> object that this bar adjusts.</p>
 </dd></dl>
 
@@ -2221,15 +2232,15 @@ self-voicing feature to work.</p>
 </section>
 </section>
 <section id="add-statement">
-<h2>Add Statement<a class="headerlink" href="#add-statement" title="Permalink to this heading"> link</a></h2>
+<h2>Add Statement<a class="headerlink" href="#add-statement" title="Link to this heading"></a></h2>
 <p>The add statement is a bit special, as it adds an already-exising displayble
 to the screen. As a result, it doesn't take the properties common to the
 user interface statements.</p>
 <section id="add">
-<span id="sl-add"></span><h3>Add<a class="headerlink" href="#add" title="Permalink to this heading"> link</a></h3>
+<span id="sl-add"></span><h3>Add<a class="headerlink" href="#add" title="Link to this heading"></a></h3>
 <p>Adds an image or other displayable to the screen. This optionally
-takes <a class="reference internal" href="atl.html#transform-properties"><span class="std std-ref">transform properties</span></a>. If at least
-one transform property is given, a <a class="reference internal" href="trans_trans_python.html#Transform" title="Transform"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transform</span></code></a> is created to wrap the
+takes <a class="reference internal" href="transform_properties.html#id1"><span class="std std-ref">transform properties</span></a>. If at least
+one transform property is given, a <a class="reference internal" href="transforms.html#Transform" title="Transform"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transform</span></code></a> is created to wrap the
 image, and the properties are given to the transform.</p>
 <p>If the displayable is None, nothing is added to the screen.</p>
 <p>This does not take any children.</p>
@@ -2240,7 +2251,7 @@ image, and the properties are given to the transform.</p>
 </section>
 </section>
 <section id="advanced-displayables">
-<h2>Advanced Displayables<a class="headerlink" href="#advanced-displayables" title="Permalink to this heading"> link</a></h2>
+<h2>Advanced Displayables<a class="headerlink" href="#advanced-displayables" title="Link to this heading"></a></h2>
 <p>In addition to the commonly-used statements, the screen language has
 statements that correspond to advanced displayables. The mapping from
 displayable to statement is simple. Positional parameters of the
@@ -2249,26 +2260,26 @@ arguments and the relevant style properties become screen language
 properties.</p>
 <p>The advanced displayable statements are:</p>
 <section id="areapicker">
-<span id="sl-areapicker"></span><h3>Areapicker<a class="headerlink" href="#areapicker" title="Permalink to this heading"> link</a></h3>
+<span id="sl-areapicker"></span><h3>Areapicker<a class="headerlink" href="#areapicker" title="Link to this heading"></a></h3>
 <p>Intended for use in development tools, this lets the user select a
 rectangular area on the screen. It takes the following properties:</p>
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-cols_alt">
-<span class="sig-name descname"><span class="pre">cols</span></span><a class="headerlink" href="#screen-property-cols_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">cols</span></span><a class="headerlink" href="#screen-property-cols_alt" title="Link to this definition"></a></dt>
 <dd><p>If not None, the defaut, this divides the screen up into a grid
 with this many columns.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-rows_alt">
-<span class="sig-name descname"><span class="pre">rows</span></span><a class="headerlink" href="#screen-property-rows_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">rows</span></span><a class="headerlink" href="#screen-property-rows_alt" title="Link to this definition"></a></dt>
 <dd><p>If not None, the defaut, this divides the screen up into a grid
 with this many rows.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-position">
-<span class="sig-name descname"><span class="pre">position</span></span><a class="headerlink" href="#screen-property-position" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">position</span></span><a class="headerlink" href="#screen-property-position" title="Link to this definition"></a></dt>
 <dd><p>If not None, the default, this is a function called with the
 x and y coordinates of the location the user first clicked,
 rounded to the grid.</p>
@@ -2276,21 +2287,21 @@ rounded to the grid.</p>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-changed_alt_alt">
-<span class="sig-name descname"><span class="pre">changed</span></span><a class="headerlink" href="#screen-property-changed_alt_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">changed</span></span><a class="headerlink" href="#screen-property-changed_alt_alt" title="Link to this definition"></a></dt>
 <dd><p>This is called with the rectangle, an (x, y, width, height) tuple,
 whenever the user changes the selected area.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-finished">
-<span class="sig-name descname"><span class="pre">finished</span></span><a class="headerlink" href="#screen-property-finished" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">finished</span></span><a class="headerlink" href="#screen-property-finished" title="Link to this definition"></a></dt>
 <dd><p>This is called with the rectangle, an (x, y, width, height) tuple,
 when the user finishes selecting an area.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-persist">
-<span class="sig-name descname"><span class="pre">persist</span></span><a class="headerlink" href="#screen-property-persist" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">persist</span></span><a class="headerlink" href="#screen-property-persist" title="Link to this definition"></a></dt>
 <dd><p>If true, the child will be shown in the selected area when the
 selection is complete. If false, the default, the child will be
 hidden once the selection is complete.</p>
@@ -2304,7 +2315,7 @@ hidden once the selection is complete.</p>
 selected area.</p>
 </section>
 <section id="drag">
-<h3>Drag<a class="headerlink" href="#drag" title="Permalink to this heading"> link</a></h3>
+<h3>Drag<a class="headerlink" href="#drag" title="Link to this heading"></a></h3>
 <p>Creates a <a class="reference internal" href="drag_drop.html#Drag" title="Drag"><code class="xref py py-class docutils literal notranslate"><span class="pre">Drag</span></code></a> that can be dragged around the screen. With the
 exception of <cite>d</cite>, which is supplied by the screen language, this takes
 all properties defined in that class.</p>
@@ -2319,7 +2330,7 @@ properties</p></li>
 used to supply the child and its focused variants.</p>
 </section>
 <section id="draggroup">
-<h3>Draggroup<a class="headerlink" href="#draggroup" title="Permalink to this heading"> link</a></h3>
+<h3>Draggroup<a class="headerlink" href="#draggroup" title="Link to this heading"></a></h3>
 <p>Creates a <a class="reference internal" href="drag_drop.html#DragGroup" title="DragGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">DragGroup</span></code></a>.  This takes the same properties as <a class="reference internal" href="drag_drop.html#DragGroup" title="DragGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">DragGroup</span></code></a>,
 and also takes the following properties:</p>
 <ul class="simple">
@@ -2330,7 +2341,7 @@ non-drags as children, in which case it functions like fixed.</p>
 </section>
 </section>
 <section id="has-statement">
-<span id="sl-has"></span><h2>Has Statement<a class="headerlink" href="#has-statement" title="Permalink to this heading"> link</a></h2>
+<span id="sl-has"></span><h2>Has Statement<a class="headerlink" href="#has-statement" title="Link to this heading"></a></h2>
 <p>The has statement allows you to specify a container to use, instead of
 fixed, for statements that take only one child. The has statement
 may only be used inside a statement that takes one child. The keyword
@@ -2369,12 +2380,12 @@ container.</p>
 </div>
 </section>
 <section id="control-statements">
-<h2>Control Statements<a class="headerlink" href="#control-statements" title="Permalink to this heading"> link</a></h2>
+<h2>Control Statements<a class="headerlink" href="#control-statements" title="Link to this heading"></a></h2>
 <p>The screen language includes control statements for conditional
 execution, iteration, including other screens, executing actions when
 events occur, and executing arbitrary Python.</p>
 <section id="default">
-<span id="sl-default"></span><h3>Default<a class="headerlink" href="#default" title="Permalink to this heading"> link</a></h3>
+<span id="sl-default"></span><h3>Default<a class="headerlink" href="#default" title="Link to this heading"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">default</span></code> statement sets the default value of a variable, if it is not
 passed as an argument to the screen, or inherited from a screen that calls
 us using the use statement.</p>
@@ -2391,7 +2402,7 @@ us using the use statement.</p>
 </div>
 </section>
 <section id="for">
-<span id="sl-for"></span><h3>For<a class="headerlink" href="#for" title="Permalink to this heading"> link</a></h3>
+<span id="sl-for"></span><h3>For<a class="headerlink" href="#for" title="Link to this heading"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">for</span></code> statement is similar to the Python <code class="docutils literal notranslate"><span class="pre">for</span></code> statement, except that
 it does not support the <code class="docutils literal notranslate"><span class="pre">else</span></code> clause (it does, however, support the
 <code class="docutils literal notranslate"><span class="pre">continue</span></code> and <code class="docutils literal notranslate"><span class="pre">break</span></code> statements). It supports assignment to
@@ -2419,7 +2430,7 @@ when elements are added to or removed from a list you're iterating over,
 you might want to use an index clause.</p>
 </section>
 <section id="if">
-<span id="sl-if"></span><h3>If<a class="headerlink" href="#if" title="Permalink to this heading"> link</a></h3>
+<span id="sl-if"></span><h3>If<a class="headerlink" href="#if" title="Link to this heading"></a></h3>
 <p>The screen language <code class="docutils literal notranslate"><span class="pre">if</span></code> statement is the same as the Python/Ren'Py <code class="docutils literal notranslate"><span class="pre">if</span></code>
 statement. It supports the <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, and <code class="docutils literal notranslate"><span class="pre">else</span></code> clauses.</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">screen</span> <span class="n">skipping_indicator</span><span class="p">():</span>
@@ -2431,7 +2442,7 @@ statement. It supports the <code class="docutils literal notranslate"><span clas
 </div>
 </section>
 <section id="on">
-<span id="sl-on"></span><h3>On<a class="headerlink" href="#on" title="Permalink to this heading"> link</a></h3>
+<span id="sl-on"></span><h3>On<a class="headerlink" href="#on" title="Link to this heading"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">on</span></code> statement allows the screen to execute an action when an event
 occurs. It takes one parameter, a string giving the name of an
 event. This should be one of:</p>
@@ -2457,7 +2468,7 @@ occurs.</p>
 </div>
 </section>
 <section id="use">
-<span id="sl-use"></span><h3>Use<a class="headerlink" href="#use" title="Permalink to this heading"> link</a></h3>
+<span id="sl-use"></span><h3>Use<a class="headerlink" href="#use" title="Link to this heading"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">use</span></code> statement allows a screen to include another. The use
 statement takes the name of the screen to use. This can optionally be
 followed by an argument list, in parenthesis.</p>
@@ -2537,7 +2548,7 @@ them from the expression.</p>
 </pre></div>
 </div>
 <section id="use-and-transclude">
-<h4>Use and Transclude<a class="headerlink" href="#use-and-transclude" title="Permalink to this heading"> link</a></h4>
+<h4>Use and Transclude<a class="headerlink" href="#use-and-transclude" title="Link to this heading"></a></h4>
 <p>A use statement may also take a block containing screen language statements.
 When a block is given, the screen that is used may contain the <code class="docutils literal notranslate"><span class="pre">transclude</span></code>
 statement. The <code class="docutils literal notranslate"><span class="pre">transclude</span></code> statement is replaced with the statements
@@ -2572,7 +2583,7 @@ an example of how it can be used:</p>
 </section>
 </section>
 <section id="python">
-<span id="sl-python"></span><h3>Python<a class="headerlink" href="#python" title="Permalink to this heading"> link</a></h3>
+<span id="sl-python"></span><h3>Python<a class="headerlink" href="#python" title="Link to this heading"></a></h3>
 <p>The screen language also includes single-line and multiple-line Python
 statements, which can execute Python. The Python runs in the scope
 of the screen.</p>
@@ -2595,7 +2606,7 @@ has side effects, those side effects may occur at unpredictable times.</p>
 </section>
 </section>
 <section id="showif-statement">
-<span id="sl-showif"></span><h2>Showif Statement<a class="headerlink" href="#showif-statement" title="Permalink to this heading"> link</a></h2>
+<span id="sl-showif"></span><h2>Showif Statement<a class="headerlink" href="#showif-statement" title="Link to this heading"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">showif</span></code> statement takes a condition. It shows its children when the
 condition is true, and hides the children when the condition is false.
 When showif's children have transforms, it will supply them with ATL
@@ -2658,11 +2669,11 @@ when all prior conditions are false.</p>
 </div>
 </section>
 <section id="screen-statements">
-<h2>Screen Statements<a class="headerlink" href="#screen-statements" title="Permalink to this heading"> link</a></h2>
+<h2>Screen Statements<a class="headerlink" href="#screen-statements" title="Link to this heading"></a></h2>
 <p>In addition to the screen statement, there are three Ren'Py script
 language statements that involve screens.</p>
 <section id="show-screen">
-<span id="show-screen-statement"></span><h3>Show Screen<a class="headerlink" href="#show-screen" title="Permalink to this heading"> link</a></h3>
+<span id="show-screen-statement"></span><h3>Show Screen<a class="headerlink" href="#show-screen" title="Link to this heading"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">screen</span></code> statement causes a screen to be shown. It takes an
 screen name, a series of optional clauses, and optional Python arguments
 which are passed to the screen. <a class="reference internal" href="screen_python.html#renpy.show_screen" title="renpy.show_screen"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.show_screen()</span></code></a> and
@@ -2718,7 +2729,7 @@ hidden. This allows them to be used for overlay purposes.</p>
 </div>
 </section>
 <section id="hide-screen">
-<span id="hide-screen-statement"></span><h3>Hide Screen<a class="headerlink" href="#hide-screen" title="Permalink to this heading"> link</a></h3>
+<span id="hide-screen-statement"></span><h3>Hide Screen<a class="headerlink" href="#hide-screen" title="Link to this heading"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">hide</span> <span class="pre">screen</span></code> statement is used to hide a screen that is currently
 being shown. It takes a screen tag. It first tries to find a screen with
 the given tag on the given layer (see the <code class="docutils literal notranslate"><span class="pre">onlayer</span></code> clause). If none is
@@ -2755,7 +2766,7 @@ layer.</p>
 </div>
 </section>
 <section id="call-screen">
-<span id="call-screen-statement"></span><h3>Call Screen<a class="headerlink" href="#call-screen" title="Permalink to this heading"> link</a></h3>
+<span id="call-screen-statement"></span><h3>Call Screen<a class="headerlink" href="#call-screen" title="Link to this heading"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">call</span> <span class="pre">screen</span></code> statement shows a screen, and then hides it again at
 the end of the current interaction. If the screen returns a value,
 then the value is placed in the global <code class="docutils literal notranslate"><span class="pre">_return</span></code> variable.</p>
@@ -2821,7 +2832,7 @@ special keyword argument to the screen, as in the example below.</p>
 </section>
 </section>
 <section id="screen-variants">
-<span id="id3"></span><h2>Screen Variants<a class="headerlink" href="#screen-variants" title="Permalink to this heading"> link</a></h2>
+<span id="id3"></span><h2>Screen Variants<a class="headerlink" href="#screen-variants" title="Link to this heading"></a></h2>
 <p>Ren'Py runs both on traditional mouse-oriented devices such as Windows,
 Mac, and Linux PCs, and newer touch-oriented devices such as Android-based
 smartphones and tablets. Screen variants allow a game to supply
@@ -2904,7 +2915,7 @@ to allow precise pointing.</p>
 </div>
 </section>
 <section id="see-also">
-<h2>See also<a class="headerlink" href="#see-also" title="Permalink to this heading"> link</a></h2>
+<h2>See also<a class="headerlink" href="#see-also" title="Link to this heading"></a></h2>
 <p><a class="reference internal" href="screen_actions.html"><span class="doc">Screen Actions, Values, and Functions</span></a> : a comprehensive list of actions and other tools
 to be used with screens.</p>
 <p><a class="reference internal" href="screen_optimization.html"><span class="doc">Screen Language Optimization</span></a> : some useful ways of making screens as

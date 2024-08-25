@@ -1,5 +1,5 @@
-branch = 'fix'
+branch = 'master'
 nightly = False
 official = True
-version = '8.2.1.24030407'
-version_name = '64bit Sensation'
+version = '8.3.0.24082114'
+version_name = 'Second Star to the Right'

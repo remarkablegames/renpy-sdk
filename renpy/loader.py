@@ -34,6 +34,7 @@ import zlib
 import re
 import io
 import unicodedata
+import time
 
 from pygame_sdl2.rwobject import RWopsIO
 
@@ -708,14 +709,14 @@ def loadable_core(name):
     return False
 
 
-def loadable(name, directory=None):
+def loadable(name, tl=True, directory=None):
 
     name = name.lstrip('/')
 
     if (renpy.config.loadable_callback is not None) and renpy.config.loadable_callback(name):
         return True
 
-    for p in get_prefixes(directory=directory):
+    for p in get_prefixes(tl=tl, directory=directory):
         if loadable_core(p + name):
             return True
 
@@ -989,10 +990,14 @@ def add_auto(fn, force=False):
         auto_mtimes[fn] = mtime
 
 
+max_mtime = 0
+
 def auto_thread_function():
     """
     This thread sets need_autoreload when necessary.
     """
+
+    global max_mtime
 
     while True:
 
@@ -1010,7 +1015,12 @@ def auto_thread_function():
             if mtime is auto_blacklisted:
                 continue
 
-            if auto_mtime(fn) != mtime:
+            new_mtime = auto_mtime(fn)
+
+            if new_mtime is not None:
+                max_mtime = max(max_mtime, new_mtime)
+
+            if new_mtime != mtime:
 
                 with auto_lock:
                     if auto_mtime(fn) != auto_mtimes[fn]:
@@ -1038,13 +1048,24 @@ def check_git_index_lock():
     return False
 
 
+# Are we actively reloading?
+reloading = False
+
 def check_autoreload():
     """
     Checks to see if autoreload is required.
     """
 
+    global reloading
+
+    if reloading:
+        return
+
     # Defer loading while the git index lock is present.
     if needs_autoreload and check_git_index_lock():
+        return
+
+    if time.time() - max_mtime < .050:
         return
 
     while needs_autoreload:
@@ -1064,6 +1085,7 @@ def check_autoreload():
                 func(fn)
                 break
         else:
+            reloading = True
             renpy.exports.reload_script()
 
 

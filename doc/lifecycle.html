@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lifecycle of a Ren&#39;Py game &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/lifecycle.html" />
@@ -17,14 +17,13 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -66,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -75,8 +75,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
@@ -94,6 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -138,10 +139,8 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -153,6 +152,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul>
@@ -220,31 +220,31 @@
            <div itemprop="articleBody">
              
   <section id="lifecycle-of-a-ren-py-game">
-<h1>Lifecycle of a Ren'Py game<a class="headerlink" href="#lifecycle-of-a-ren-py-game" title="Permalink to this heading"> link</a></h1>
+<h1>Lifecycle of a Ren'Py game<a class="headerlink" href="#lifecycle-of-a-ren-py-game" title="Link to this heading"></a></h1>
 <p>When launching a Ren'Py game, be it from the executable or from the launcher, it follows a series
 of steps up until the point where it is closed. This page exposes the various phases of this
 lifecycle, and various related statements.</p>
 <section id="boot-time">
-<h2>Boot Time<a class="headerlink" href="#boot-time" title="Permalink to this heading"> link</a></h2>
+<h2>Boot Time<a class="headerlink" href="#boot-time" title="Link to this heading"></a></h2>
 <p>There are a lot of things happening before the game window appears. This is the boot time. The
 only thing that's possibly visible at that point is the <a class="reference internal" href="splashscreen_presplash.html#presplash"><span class="std std-ref">presplash</span></a>.</p>
 <section id="script-parsing-phase">
-<span id="early-phase"></span><h3>Script Parsing Phase<a class="headerlink" href="#script-parsing-phase" title="Permalink to this heading"> link</a></h3>
+<span id="early-phase"></span><h3>Script Parsing Phase<a class="headerlink" href="#script-parsing-phase" title="Link to this heading"></a></h3>
 <p>To read the game's code, Ren'Py reads each of the game's <code class="docutils literal notranslate"><span class="pre">.rpy</span></code> (and <code class="docutils literal notranslate"><span class="pre">_ren.py</span></code>) files one by
 one, in the unicode order of their filepaths. That's the &quot;parsing&quot; phase, or &quot;early&quot; phase.</p>
 <p>The first creator-written code being executed is what's written in <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">early</span></code> blocks. These
 are executed after the file they're in has been read and parsed, but before the next file gets
 read. This is why statements which modify how parsing works, like <a class="reference internal" href="cds.html"><span class="doc">Creator-Defined Statements</span></a>,
-<a class="reference internal" href="screen_python.html#creator-defined-sl"><span class="std std-ref">Creator-Defined Screen Language Statements</span></a> or new custom <a class="reference internal" href="atl.html#warpers"><span class="std std-ref">Warpers</span></a>, must be written in <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">early</span></code>
+<a class="reference internal" href="screen_python.html#creator-defined-sl"><span class="std std-ref">Creator-Defined Screen Language Statements</span></a> or new custom <a class="reference internal" href="transforms.html#warpers"><span class="std std-ref">Warpers</span></a>, must be written in <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">early</span></code>
 blocks.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">init</span> <span class="pre">python</span> <span class="pre">early</span></code> syntax is sometimes encountered, but it's redundant and doesn't change
 anything in how the code gets executed compared to <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">early</span></code>.</p>
 </section>
 <section id="init-phase">
-<span id="id1"></span><h3>Init Phase<a class="headerlink" href="#init-phase" title="Permalink to this heading"> link</a></h3>
+<span id="id1"></span><h3>Init Phase<a class="headerlink" href="#init-phase" title="Link to this heading"></a></h3>
 <p>After parsing/early phase, the &quot;init&quot; phase starts. Several statements are executed at that time,
 including the <a class="reference internal" href="python.html#init-python-statement"><span class="std std-ref">Init Python Statement</span></a>, the <a class="reference internal" href="python.html#define-statement"><span class="std std-ref">Define Statement</span></a>, the
-<a class="reference internal" href="atl.html#transform-statement"><span class="std std-ref">Transform Statement</span></a>, the <a class="reference internal" href="displaying_images.html#image-statement"><span class="std std-ref">Image Statement</span></a>, the <a class="reference internal" href="screens.html#screen-statement"><span class="std std-ref">Screen Statement</span></a>, and the
+<a class="reference internal" href="transforms.html#transform-statement"><span class="std std-ref">Transform Statement</span></a>, the <a class="reference internal" href="displaying_images.html#image-statement"><span class="std std-ref">Image Statement</span></a>, the <a class="reference internal" href="screens.html#screen-statement"><span class="std std-ref">Screen Statement</span></a>, and the
 <a class="reference internal" href="style.html"><span class="doc">style</span></a> statement. The init phase is divided in successive epochs, or init priorities,
 from -999 to 999. Contrary to what the term may imply, epochs of lower priority are executed before
 epochs of higher priority.</p>
@@ -257,7 +257,7 @@ statement adds or substracts from this 500, rather than replacing it.</p>
 the priority of the statements influences the order in which they will be executed, relative to
 one another.</p>
 <section id="init-offset-statement">
-<span id="id2"></span><h4>Init Offset Statement<a class="headerlink" href="#init-offset-statement" title="Permalink to this heading"> link</a></h4>
+<span id="id2"></span><h4>Init Offset Statement<a class="headerlink" href="#init-offset-statement" title="Link to this heading"></a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">init</span> <span class="pre">offset</span></code> statement sets a priority offset for all statements
 that run at init time. It should be placed at the top of the file, and it applies to all following
 statements in the current block and child blocks, up to the next
@@ -282,20 +282,20 @@ a value of 2.</p>
 </section>
 </section>
 <section id="script-execution">
-<h2>Script Execution<a class="headerlink" href="#script-execution" title="Permalink to this heading"> link</a></h2>
+<h2>Script Execution<a class="headerlink" href="#script-execution" title="Link to this heading"></a></h2>
 <p>This is what happens once the game window becomes visible. This is when normal Ren'Py statements
 execute, and when the rules described in <a class="reference internal" href="label.html"><span class="doc">Labels &amp; Control Flow</span></a> apply. This is also the time when the
 variables from <a class="reference internal" href="python.html#default-statement"><span class="std std-ref">default statements</span></a> are set for the first time - as
 opposed to <a class="reference internal" href="python.html#define-statement"><span class="std std-ref">define statements</span></a> which are set at init time.</p>
 <p>Config variables should not be changed once normal game execution starts.</p>
 <section id="splashscreen">
-<h3>Splashscreen<a class="headerlink" href="#splashscreen" title="Permalink to this heading"> link</a></h3>
+<h3>Splashscreen<a class="headerlink" href="#splashscreen" title="Link to this heading"></a></h3>
 <p>If it exists, the <a class="reference internal" href="splashscreen_presplash.html#adding-a-splashscreen"><span class="std std-ref">splashscreen</span></a> label is executed until it returns.</p>
 <p>A splashscreen is only displayed once per time Ren'Py is run, and is skipped when
 script execution restarts.</p>
 </section>
 <section id="main-menu">
-<h3>Main Menu<a class="headerlink" href="#main-menu" title="Permalink to this heading"> link</a></h3>
+<h3>Main Menu<a class="headerlink" href="#main-menu" title="Link to this heading"></a></h3>
 <p>If it exists, the <code class="docutils literal notranslate"><span class="pre">before_main_menu</span></code> label is executed. Then, once it returns, the
 <a class="reference internal" href="screen_special.html#main-menu-screen"><span class="std std-ref">main_menu</span></a> screen is shown, unless a <code class="docutils literal notranslate"><span class="pre">main_menu</span></code> label exists, in which
 case it is executed instead. See <a class="reference internal" href="label.html#special-labels"><span class="std std-ref">Special Labels</span></a> for more information.</p>
@@ -305,7 +305,7 @@ if none is specified. Returning from the <code class="docutils literal notransla
 <code class="docutils literal notranslate"><span class="pre">start</span></code> label, while loading a game enters the in-game phase at the spot where the game was saved.</p>
 </section>
 <section id="in-game-phase">
-<h3>In-Game Phase<a class="headerlink" href="#in-game-phase" title="Permalink to this heading"> link</a></h3>
+<h3>In-Game Phase<a class="headerlink" href="#in-game-phase" title="Link to this heading"></a></h3>
 <p>This is the phase in which an actual playthrough of the game occurs, and this is
 the mode in which players generally spend most of their time. This phase continues
 until the game quits, or the game restarts and the player returns to the main menu.</p>

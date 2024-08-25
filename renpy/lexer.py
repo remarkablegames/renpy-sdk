@@ -256,16 +256,36 @@ def list_logical_lines(filename, filedata=None, linenumber=1, add_lines=False):
     contents. In that case, `filename` need not exist.
     """
 
-    def munge_string(m):
-        brackets = m.group(1)
+    if renpy.config.munge_in_strings:
 
-        if (len(brackets) & 1) == 0:
-            return m.group(0)
+        munge_regexp = re.compile(r'\b__(\w+)')
 
-        if "__" in m.group(2):
-            return m.group(0)
+        def munge_string(m):
 
-        return brackets + prefix + m.group(2)
+            g1 = m.group(1)
+
+            if "__" in g1:
+                return m.group(0)
+
+            if g1.startswith("_"):
+                return m.group(0)
+
+            return prefix + m.group(1)
+
+    else:
+
+        munge_regexp = re.compile(r'(\.|\[+)__(\w+)')
+
+        def munge_string(m):
+            brackets = m.group(1)
+
+            if (len(brackets) & 1) == 0:
+                return m.group(0)
+
+            if "__" in m.group(2):
+                return m.group(0)
+
+            return brackets + prefix + m.group(2)
 
     global original_filename
 
@@ -456,10 +476,8 @@ def list_logical_lines(filename, filedata=None, linenumber=1, add_lines=False):
 
                 s = "".join(s)
 
-                if "[__" in s:
-
-                    # Munge substitutions.
-                    s = re.sub(r'(\.|\[+)__(\w+)', munge_string, s)
+                if "__" in s:
+                    s = munge_regexp.sub(munge_string, s)
 
                 line.append(s)
 
@@ -564,30 +582,23 @@ def group_logical_lines(lines):
 # Note: We need to be careful with what's in here, because these
 # are banned in simple_expressions, where we might want to use
 # some of them.
-KEYWORDS = set([
-    '$',
+KEYWORDS = {
     'as',
-    'at',
-    'behind',
-    'call',
-    'expression',
-    'hide',
     'if',
     'in',
-    'image',
-    'init',
-    'jump',
-    'menu',
-    'onlayer',
-    'python',
     'return',
-    'scene',
-    'show',
     'with',
     'while',
+}
+
+IMAGE_KEYWORDS = {
+    'behind',
+    'at',
+    'onlayer',
+    'with',
     'zorder',
     'transform',
-    ])
+}
 
 OPERATORS = [
     '<>',
@@ -758,6 +769,21 @@ class Lexer(object):
 
         self.skip_whitespace()
         return self.match_regexp(regexp)
+
+    def match_multiple(self, *regexps):
+        """
+        Matches multiple regular expressions. Return a tuple of matches
+        if all match, and if not returns None.
+        """
+
+        oldpos = self.pos
+
+        rv = tuple(self.match(i) for i in regexps)
+        if None in rv:
+            self.pos = oldpos
+            return None
+
+        return rv
 
     def keyword(self, word):
         """
@@ -1136,7 +1162,7 @@ class Lexer(object):
                 self.pos = oldpos
                 return None
 
-        if rv in KEYWORDS:
+        if (rv in KEYWORDS ) or (rv in IMAGE_KEYWORDS):
             self.pos = oldpos
             return None
 
@@ -1284,13 +1310,35 @@ class Lexer(object):
 
         return False
 
-    def simple_expression(self, comma=False, operator=True):
+    def simple_expression(self, comma=False, operator=True, image=False):
         """
         Tries to parse a simple_expression. Returns the text if it can, or
         None if it cannot.
+
+        If comma is True, then a comma is allowed to appear in the
+        expression.
+
+        If operator is True, then an operator is allowed to appear in
+        the expression.
+
+        If image is True, then the expression is being parsed as part of
+        an image, and so keywords that are special in the show/hide/scene
+        statements are not allowed.
         """
 
         start = self.pos
+
+        if image:
+            def lex_name():
+                oldpos = self.pos
+                n = self.name()
+                if n in IMAGE_KEYWORDS:
+                    self.pos = oldpos
+                    return None
+
+                return n
+        else:
+            lex_name = self.name
 
         # Operator.
         while True:
@@ -1304,7 +1352,7 @@ class Lexer(object):
             # We start with either a name, a python_string, or parenthesized
             # python
             if not (self.python_string() or
-                    self.name() or
+                    lex_name() or
                     self.float() or
                     self.parenthesised_python()):
 
@@ -1535,7 +1583,7 @@ def ren_py_to_rpy(text, filename):
 
     `filename`
         If not None, and an error occurs, the error is reported with the given filename.
-        Otherwise, errors are ignored and a a best effort is used.
+        Otherwise, errors are ignored and a best effort is used.
     """
 
     lines = text.splitlines()

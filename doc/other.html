@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Other Functions and Variables &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/other.html" />
@@ -17,14 +17,13 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -66,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -75,8 +75,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
@@ -94,6 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -122,10 +123,8 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -176,6 +175,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#renpy.get_mouse_name"><code class="docutils literal notranslate"><span class="pre">renpy.get_mouse_name()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.get_mouse_pos"><code class="docutils literal notranslate"><span class="pre">renpy.get_mouse_pos()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.get_on_battery"><code class="docutils literal notranslate"><span class="pre">renpy.get_on_battery()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.get_ongoing_transition"><code class="docutils literal notranslate"><span class="pre">renpy.get_ongoing_transition()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.get_physical_size"><code class="docutils literal notranslate"><span class="pre">renpy.get_physical_size()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.get_refresh_rate"><code class="docutils literal notranslate"><span class="pre">renpy.get_refresh_rate()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.get_renderer_info"><code class="docutils literal notranslate"><span class="pre">renpy.get_renderer_info()</span></code></a></li>
@@ -205,8 +205,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#renpy.quit_event"><code class="docutils literal notranslate"><span class="pre">renpy.quit_event()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.reset_physical_size"><code class="docutils literal notranslate"><span class="pre">renpy.reset_physical_size()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.restart_interaction"><code class="docutils literal notranslate"><span class="pre">renpy.restart_interaction()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#renpy.screenshot"><code class="docutils literal notranslate"><span class="pre">renpy.screenshot()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#renpy.screenshot_to_bytes"><code class="docutils literal notranslate"><span class="pre">renpy.screenshot_to_bytes()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.scry"><code class="docutils literal notranslate"><span class="pre">renpy.scry()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.set_mouse_pos"><code class="docutils literal notranslate"><span class="pre">renpy.set_mouse_pos()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.set_physical_size"><code class="docutils literal notranslate"><span class="pre">renpy.set_physical_size()</span></code></a></li>
@@ -220,6 +218,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul>
@@ -287,14 +286,14 @@
            <div itemprop="articleBody">
              
   <section id="other-functions-and-variables">
-<h1>Other Functions and Variables<a class="headerlink" href="#other-functions-and-variables" title="Permalink to this heading"> link</a></h1>
+<h1>Other Functions and Variables<a class="headerlink" href="#other-functions-and-variables" title="Link to this heading"></a></h1>
 <p>This page lists and documents various miscellaneous functions and variables
 not better listed somewhere else.</p>
 <section id="ren-py-version">
-<h2>Ren'Py Version<a class="headerlink" href="#ren-py-version" title="Permalink to this heading"> link</a></h2>
+<h2>Ren'Py Version<a class="headerlink" href="#ren-py-version" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.version">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tuple</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.version" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tuple</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.version" title="Link to this definition"></a></dt>
 <dd><p>If <cite>tuple</cite> is false, returns a string containing &quot;Ren'Py &quot;, followed by
 the current version of Ren'Py.</p>
 <p>If <cite>tuple</cite> is true, returns a tuple giving each component of the
@@ -303,20 +302,20 @@ version as an integer.</p>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-renpy.version_string">
-<span class="sig-name descname"><span class="pre">renpy.version_string</span></span><a class="headerlink" href="#var-renpy.version_string" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">renpy.version_string</span></span><a class="headerlink" href="#var-renpy.version_string" title="Link to this definition"></a></dt>
 <dd><p>The version number of Ren'Py, as a string of the form &quot;Ren'Py 1.2.3.456&quot;.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-renpy.version_only">
-<span class="sig-name descname"><span class="pre">renpy.version_only</span></span><a class="headerlink" href="#var-renpy.version_only" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">renpy.version_only</span></span><a class="headerlink" href="#var-renpy.version_only" title="Link to this definition"></a></dt>
 <dd><p>The version number of Ren'Py, without the Ren'Py prefix. A string of
 the form &quot;1.2.3.456&quot;.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-renpy.version_tuple">
-<span class="sig-name descname"><span class="pre">renpy.version_tuple</span></span><a class="headerlink" href="#var-renpy.version_tuple" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">renpy.version_tuple</span></span><a class="headerlink" href="#var-renpy.version_tuple" title="Link to this definition"></a></dt>
 <dd><p>The version number of Ren'Py, as a tuple of the form (1, 2, 3, 456).</p>
 <p>This is a namedtuple with four fields: <code class="docutils literal notranslate"><span class="pre">major</span></code>, <code class="docutils literal notranslate"><span class="pre">minor</span></code>, <code class="docutils literal notranslate"><span class="pre">patch</span></code>,
 and <code class="docutils literal notranslate"><span class="pre">commit</span></code>.</p>
@@ -324,61 +323,61 @@ and <code class="docutils literal notranslate"><span class="pre">commit</span></
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-renpy.version_name">
-<span class="sig-name descname"><span class="pre">renpy.version_name</span></span><a class="headerlink" href="#var-renpy.version_name" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">renpy.version_name</span></span><a class="headerlink" href="#var-renpy.version_name" title="Link to this definition"></a></dt>
 <dd><p>A human readable version name, of the form &quot;Example Version.&quot;</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-renpy.license">
-<span class="sig-name descname"><span class="pre">renpy.license</span></span><a class="headerlink" href="#var-renpy.license" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">renpy.license</span></span><a class="headerlink" href="#var-renpy.license" title="Link to this definition"></a></dt>
 <dd><p>A string giving license text that should be included in a game's
 about screen.</p>
 </dd></dl>
 
 </section>
 <section id="platform-detection">
-<h2>Platform Detection<a class="headerlink" href="#platform-detection" title="Permalink to this heading"> link</a></h2>
+<h2>Platform Detection<a class="headerlink" href="#platform-detection" title="Link to this heading"></a></h2>
 <p>Ren'Py includes a number of variables that are set based on which platform
 it's running on.</p>
 <dl class="std var">
 <dt class="sig sig-object std" id="var-renpy.windows">
-<span class="sig-name descname"><span class="pre">renpy.windows</span></span><a class="headerlink" href="#var-renpy.windows" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">renpy.windows</span></span><a class="headerlink" href="#var-renpy.windows" title="Link to this definition"></a></dt>
 <dd><p>Has a true value when running on Windows.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-renpy.macintosh">
-<span class="sig-name descname"><span class="pre">renpy.macintosh</span></span><a class="headerlink" href="#var-renpy.macintosh" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">renpy.macintosh</span></span><a class="headerlink" href="#var-renpy.macintosh" title="Link to this definition"></a></dt>
 <dd><p>Has a true value when running on macOS.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-renpy.linux">
-<span class="sig-name descname"><span class="pre">renpy.linux</span></span><a class="headerlink" href="#var-renpy.linux" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">renpy.linux</span></span><a class="headerlink" href="#var-renpy.linux" title="Link to this definition"></a></dt>
 <dd><p>Has a true value when running on Linux or other POSIX-like operating systems.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-renpy.android">
-<span class="sig-name descname"><span class="pre">renpy.android</span></span><a class="headerlink" href="#var-renpy.android" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">renpy.android</span></span><a class="headerlink" href="#var-renpy.android" title="Link to this definition"></a></dt>
 <dd><p>Has a true value when running on Android.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-renpy.ios">
-<span class="sig-name descname"><span class="pre">renpy.ios</span></span><a class="headerlink" href="#var-renpy.ios" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">renpy.ios</span></span><a class="headerlink" href="#var-renpy.ios" title="Link to this definition"></a></dt>
 <dd><p>Has a true value when running on iOS.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-renpy.emscripten">
-<span class="sig-name descname"><span class="pre">renpy.emscripten</span></span><a class="headerlink" href="#var-renpy.emscripten" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">renpy.emscripten</span></span><a class="headerlink" href="#var-renpy.emscripten" title="Link to this definition"></a></dt>
 <dd><p>Has a true value when running in the browser.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-renpy.mobile">
-<span class="sig-name descname"><span class="pre">renpy.mobile</span></span><a class="headerlink" href="#var-renpy.mobile" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">renpy.mobile</span></span><a class="headerlink" href="#var-renpy.mobile" title="Link to this definition"></a></dt>
 <dd><p>Has a true value when running on Android or iOS or in the browser.</p>
 </dd></dl>
 
@@ -387,10 +386,10 @@ in the emulators. These are more intended for use in platform-specific
 Python. For display layout, use <a class="reference internal" href="screens.html#screen-variants"><span class="std std-ref">screen variants</span></a>.</p>
 </section>
 <section id="memory-profiling">
-<h2>Memory Profiling<a class="headerlink" href="#memory-profiling" title="Permalink to this heading"> link</a></h2>
+<h2>Memory Profiling<a class="headerlink" href="#memory-profiling" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.diff_memory">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">diff_memory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_constants</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.diff_memory" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">diff_memory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_constants</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.diff_memory" title="Link to this definition"></a></dt>
 <dd><p>Profiles objects, surface, and texture memory use by Ren'Py and the game.
 Writes (to memory.txt and stdout) the difference in memory usage from the
 last time this function was called with <cite>update</cite> true.</p>
@@ -409,7 +408,7 @@ long time to complete.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.profile_memory">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">profile_memory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fraction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minimum</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_constants</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.profile_memory" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">profile_memory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fraction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minimum</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_constants</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.profile_memory" title="Link to this definition"></a></dt>
 <dd><p>Profiles object, surface, and texture memory use by Ren'Py and the
 game. Writes an accounting of memory use by to the memory.txt file and
 stdout.</p>
@@ -434,7 +433,7 @@ long time to complete.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.profile_rollback">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">profile_rollback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.profile_rollback" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">profile_rollback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.profile_rollback" title="Link to this definition"></a></dt>
 <dd><p>Profiles memory used by the rollback system. Writes (to memory.txt and
 stdout) the memory used by the rollback system. This tries to account
 for rollback memory used by various store variables, as well as by
@@ -443,7 +442,7 @@ internal aspects of the rollback system.</p>
 
 </section>
 <section id="renpy-random">
-<h2>renpy.random<a class="headerlink" href="#renpy-random" title="Permalink to this heading"> link</a></h2>
+<h2>renpy.random<a class="headerlink" href="#renpy-random" title="Link to this heading"></a></h2>
 <p>This object is a random number generator that implements
 <a class="reference external" href="https://docs.python.org/library/random.html">the Python random number generation interface</a>.
 Randomness can be generated by calling the various methods this object
@@ -486,7 +485,7 @@ It should be used instead of the standard Python random module.</p>
 with the specified value if provided.</p>
 </section>
 <section id="sdl">
-<span id="id1"></span><h2>SDL<a class="headerlink" href="#sdl" title="Permalink to this heading"> link</a></h2>
+<span id="id1"></span><h2>SDL<a class="headerlink" href="#sdl" title="Link to this heading"></a></h2>
 <p>The SDL2 dll can be accessed using <a class="reference internal" href="#renpy.get_sdl_dll" title="renpy.get_sdl_dll"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.get_sdl_dll()</span></code></a>.
 This allows the use of SDL2 functions directly. However, using them often
 requires knowledge of the Python ctypes module.</p>
@@ -500,7 +499,7 @@ important to check for a None value before proceeding.</p>
     <span class="kn">import</span> <span class="nn">ctypes</span>
 
     <span class="k">def</span> <span class="nf">get_window_position</span><span class="p">():</span>
-        <span class="sd">&quot;&quot;&quot;Retrieves the position of the window from SDL2.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Retrieves the position of the window from SDL2.</span>
 
 <span class="sd">        Returns the (x, y) of the upper left corner of the window, or</span>
 <span class="sd">        (0, 0) if it&#39;s not known.</span>
@@ -526,16 +525,16 @@ important to check for a None value before proceeding.</p>
 </div>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_sdl_dll">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_sdl_dll</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_sdl_dll" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_sdl_dll</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_sdl_dll" title="Link to this definition"></a></dt>
 <dd><p>Returns a ctypes.cdll object that refers to the library that contains
 the instance of SDL2 that Ren'Py is using. If this fails, None is returned.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_sdl_window_pointer">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_sdl_window_pointer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_sdl_window_pointer" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_sdl_window_pointer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_sdl_window_pointer" title="Link to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>ctypes.c_void_p | None</p>
 </dd>
 </dl>
@@ -545,10 +544,10 @@ displayed (or some other problem occurs).</p>
 
 </section>
 <section id="miscellaneous">
-<h2>Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permalink to this heading"> link</a></h2>
+<h2>Miscellaneous<a class="headerlink" href="#miscellaneous" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.add_python_directory">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">add_python_directory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.add_python_directory" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">add_python_directory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.add_python_directory" title="Link to this definition"></a></dt>
 <dd><p>Adds <cite>path</cite> to the list of paths searched for Python modules and packages.
 The path should be a string relative to the game directory. This must be
 called before an import statement.</p>
@@ -556,7 +555,7 @@ called before an import statement.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.add_to_all_stores">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">add_to_all_stores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.add_to_all_stores" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">add_to_all_stores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.add_to_all_stores" title="Link to this definition"></a></dt>
 <dd><p>Adds the <cite>value</cite> by the <cite>name</cite> to all creator defined namespaces. If the name
 already exist in that namespace - do nothing for it.</p>
 <p>This function may only be run from inside an init block. It is an
@@ -565,14 +564,14 @@ error to run this function once the game has started.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.can_fullscreen">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">can_fullscreen</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.can_fullscreen" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">can_fullscreen</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.can_fullscreen" title="Link to this definition"></a></dt>
 <dd><p>Returns True if the current platform supports fullscreen mode, False
 otherwise.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.capture_focus">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">capture_focus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.capture_focus" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">capture_focus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.capture_focus" title="Link to this definition"></a></dt>
 <dd><p>If a displayable is currently focused, captured the rectangular bounding
 box of that displayable, and stores it with <cite>name</cite>. If not, removes any
 focus stored with <cite>name</cite>.</p>
@@ -586,7 +585,7 @@ automatically captured when a displayable with a tooltip gains focus.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.choice_for_skipping">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">choice_for_skipping</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.choice_for_skipping" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">choice_for_skipping</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.choice_for_skipping" title="Link to this definition"></a></dt>
 <dd><p>Tells Ren'Py that a choice is coming up soon. This currently has
 two effects:</p>
 <ul class="simple">
@@ -598,26 +597,26 @@ to stop skipping, skipping is terminated.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.clear_capture_focus">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">clear_capture_focus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.clear_capture_focus" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">clear_capture_focus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.clear_capture_focus" title="Link to this definition"></a></dt>
 <dd><p>Clear the captured focus with <cite>name</cite>.
 If <cite>name</cite> is None, clear all captured focuses.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.clear_game_runtime">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">clear_game_runtime</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.clear_game_runtime" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">clear_game_runtime</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.clear_game_runtime" title="Link to this definition"></a></dt>
 <dd><p>Resets the game runtime counter.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.clear_retain">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">clear_retain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'screens'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'_retain'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.clear_retain" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">clear_retain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'screens'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'_retain'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.clear_retain" title="Link to this definition"></a></dt>
 <dd><p>Clears all retained screens</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.confirm">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">confirm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.confirm" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">confirm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.confirm" title="Link to this definition"></a></dt>
 <dd><p>This causes the a yes/no prompt screen with the given message
 to be displayed, and dismissed when the player hits yes or no.</p>
 <p>Returns True if the player hits yes, and False if the player hits no.</p>
@@ -630,33 +629,33 @@ to be displayed, and dismissed when the player hits yes or no.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.count_dialogue_blocks">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">count_dialogue_blocks</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.count_dialogue_blocks" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">count_dialogue_blocks</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.count_dialogue_blocks" title="Link to this definition"></a></dt>
 <dd><p>Returns the number of dialogue blocks in the game's original language.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.count_newly_seen_dialogue_blocks">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">count_newly_seen_dialogue_blocks</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.count_newly_seen_dialogue_blocks" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">count_newly_seen_dialogue_blocks</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.count_newly_seen_dialogue_blocks" title="Link to this definition"></a></dt>
 <dd><p>Returns the number of dialogue blocks the user has seen for the first time
 during this session.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.count_seen_dialogue_blocks">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">count_seen_dialogue_blocks</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.count_seen_dialogue_blocks" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">count_seen_dialogue_blocks</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.count_seen_dialogue_blocks" title="Link to this definition"></a></dt>
 <dd><p>Returns the number of dialogue blocks the user has seen in any play-through
 of the current game.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.display_notify">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">display_notify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.display_notify" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">display_notify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.display_notify" title="Link to this definition"></a></dt>
 <dd><p>The default implementation of <a class="reference internal" href="#renpy.notify" title="renpy.notify"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.notify()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.focus_coordinates">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">focus_coordinates</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.focus_coordinates" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">focus_coordinates</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.focus_coordinates" title="Link to this definition"></a></dt>
 <dd><p>This attempts to find the coordinates of the currently-focused
 displayable. If it can, it will return them as a (x, y, w, h)
 tuple. If not, it will return a (None, None, None, None) tuple.</p>
@@ -664,7 +663,7 @@ tuple. If not, it will return a (None, None, None, None) tuple.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.force_autosave">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">force_autosave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">take_screenshot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.force_autosave" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">force_autosave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">take_screenshot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.force_autosave" title="Link to this definition"></a></dt>
 <dd><p>Forces a background autosave to occur.</p>
 <dl class="simple">
 <dt><cite>take_screenshot</cite></dt><dd><p>If True, a new screenshot will be taken. If False, the existing
@@ -677,14 +676,14 @@ screenshot will be used.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.free_memory">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">free_memory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.free_memory" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">free_memory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.free_memory" title="Link to this definition"></a></dt>
 <dd><p>Attempts to free some memory. Useful before running a renpygame-based
 minigame.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.full_restart">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">full_restart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transition</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.full_restart" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">full_restart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transition</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.full_restart" title="Link to this definition"></a></dt>
 <dd><p>Causes Ren'Py to restart, returning the user to the main menu.</p>
 <dl class="simple">
 <dt><cite>transition</cite></dt><dd><p>If given, the transition to run, or None to not run a transition.
@@ -698,7 +697,7 @@ restarts and returns the user to the main menu.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_game_runtime">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_game_runtime</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_game_runtime" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_game_runtime</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_game_runtime" title="Link to this definition"></a></dt>
 <dd><p>Returns the game runtime counter.</p>
 <p>The game runtime counter counts the number of seconds that have
 elapsed while waiting for user input in the top-level context.
@@ -707,7 +706,7 @@ elapsed while waiting for user input in the top-level context.
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_image_load_log">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_image_load_log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">age</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_image_load_log" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_image_load_log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">age</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_image_load_log" title="Link to this definition"></a></dt>
 <dd><p>A generator that yields a log of image loading activity. For the last 100
 image loads, this returns:</p>
 <ul class="simple">
@@ -727,14 +726,14 @@ seconds are included.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_menu_args">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_menu_args</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_menu_args" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_menu_args</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_menu_args" title="Link to this definition"></a></dt>
 <dd><p>Returns a tuple giving the arguments (as a tuple) and the keyword arguments
 (as a dict) passed to the current menu statement.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_mouse_name">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_mouse_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">interaction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_mouse_name" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_mouse_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">interaction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_mouse_name" title="Link to this definition"></a></dt>
 <dd><p>Returns the name of the mouse that should be shown.</p>
 <dl class="simple">
 <dt><cite>interaction</cite></dt><dd><p>If true, get a mouse name that is based on the type of interaction
@@ -745,7 +744,7 @@ occuring. (This is rarely useful.)</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_mouse_pos">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_mouse_pos</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_mouse_pos" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_mouse_pos</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_mouse_pos" title="Link to this definition"></a></dt>
 <dd><p>Returns an (x, y) tuple giving the location of the mouse pointer or the
 current touch location. If the device does not support a mouse and is not
 currently being touched, x and y are numbers, but not meaningful.</p>
@@ -753,28 +752,39 @@ currently being touched, x and y are numbers, but not meaningful.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_on_battery">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_on_battery</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_on_battery" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_on_battery</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_on_battery" title="Link to this definition"></a></dt>
 <dd><p>Returns True if Ren'Py is running on a device that is powered by an internal
 battery, or False if the device is being charged by some external source.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="renpy.get_ongoing_transition">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_ongoing_transition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_ongoing_transition" title="Link to this definition"></a></dt>
+<dd><p>Returns the transition that is currently ongoing.</p>
+<dl class="simple">
+<dt><cite>layer</cite></dt><dd><p>If None, the top-level transition is returned. Otherwise, this should be a string giving a layer name,
+in which case the transition for that layer is returned.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_physical_size">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_physical_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_physical_size" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_physical_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_physical_size" title="Link to this definition"></a></dt>
 <dd><p>Returns the size of the physical window.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_refresh_rate">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_refresh_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_refresh_rate" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_refresh_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_refresh_rate" title="Link to this definition"></a></dt>
 <dd><p>Returns the refresh rate of the current screen, as a floating-point
 number of frames per second.</p>
 <dl>
-<dt><cite>precision</cite></dt><dd><p>The raw data Ren'Py gets is number of frames per second, rounded down.
-This means that a monitor that runs at 59.95 frames per second will
-be reported at 59 fps. The precision argument reduces the precision
-of this reading, such that the only valid readings are multiples of
-the precision.</p>
+<dt><cite>precision</cite></dt><dd><p>The raw data Ren'Py gets is the number of frames per second rounded down
+to the nearest integer. This means that a monitor that runs at 59.95
+frames per second will be reported at 59 fps. The precision argument
+then further reduces the precision of this reading, such that the only valid
+readings are multiples of the precision.</p>
 <p>Since all monitor framerates tend to be multiples of 5 (25, 30, 60,
 75, and 120), this likely will improve accuracy. Setting precision
 to 1 disables this.</p>
@@ -784,7 +794,7 @@ to 1 disables this.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_renderer_info">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_renderer_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_renderer_info" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_renderer_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_renderer_info" title="Link to this definition"></a></dt>
 <dd><p>Returns a dictionary, giving information about the renderer Ren'Py is
 currently using. Defined keys are:</p>
 <dl class="simple">
@@ -804,7 +814,7 @@ has been started (that is, after the init phase has finished).</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_say_attributes">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_say_attributes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_say_attributes" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_say_attributes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_say_attributes" title="Link to this definition"></a></dt>
 <dd><p>Gets the attributes associated with the current say statement, or
 None if no attributes are associated with this statement.</p>
 <p>This is only valid when executing or predicting a say statement.</p>
@@ -812,29 +822,31 @@ None if no attributes are associated with this statement.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_skipping">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_skipping</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_skipping" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_skipping</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_skipping" title="Link to this definition"></a></dt>
 <dd><p>Returns &quot;slow&quot; if the Ren'Py is skipping, &quot;fast&quot; if Ren'Py is fast skipping,
 and None if it is not skipping.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_transition">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_transition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_transition" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_transition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_transition" title="Link to this definition"></a></dt>
 <dd><p>Gets the transition for <cite>layer</cite>, or the entire scene if
 <cite>layer</cite> is None. This returns the transition that is queued up
 to run during the next interaction, or None if no such
 transition exists.</p>
+<p>Use <a class="reference internal" href="#renpy.get_ongoing_transition" title="renpy.get_ongoing_transition"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.get_ongoing_transition()</span></code></a> to get the transition that is
+in progress.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.iconify">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">iconify</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.iconify" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">iconify</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.iconify" title="Link to this definition"></a></dt>
 <dd><p>Iconifies the game.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.include_module">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">include_module</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.include_module" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">include_module</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.include_module" title="Link to this definition"></a></dt>
 <dd><p>Similar to <a class="reference internal" href="#renpy.load_module" title="renpy.load_module"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.load_module()</span></code></a>, but instead of loading the module right away,
 inserts it into the init queue somewhere after the current AST node.</p>
 <p>The module may not contain init blocks lower than the block that includes the module.
@@ -845,7 +857,7 @@ init 10.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.invoke_in_main_thread">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">invoke_in_main_thread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.invoke_in_main_thread" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">invoke_in_main_thread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.invoke_in_main_thread" title="Link to this definition"></a></dt>
 <dd><p>This runs the given function with the given arguments in the main
 thread. The function runs in an interaction context similar to an
 event handler. This is meant to be called from a separate thread,
@@ -865,7 +877,7 @@ guaranteed.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.invoke_in_thread">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">invoke_in_thread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.invoke_in_thread" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">invoke_in_thread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.invoke_in_thread" title="Link to this definition"></a></dt>
 <dd><p>Invokes the function <cite>fn</cite> in a background thread, passing it the
 provided arguments and keyword arguments. Restarts the interaction
 once the thread returns.</p>
@@ -887,19 +899,19 @@ without an error.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.is_init_phase">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">is_init_phase</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.is_init_phase" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">is_init_phase</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.is_init_phase" title="Link to this definition"></a></dt>
 <dd><p>Returns True if Ren'Py is currently executing init code, or False otherwise.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.is_mouse_visible">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">is_mouse_visible</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.is_mouse_visible" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">is_mouse_visible</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.is_mouse_visible" title="Link to this definition"></a></dt>
 <dd><p>Returns True if the mouse cursor is visible, False otherwise.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.is_seen">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">is_seen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ever</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.is_seen" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">is_seen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ever</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.is_seen" title="Link to this definition"></a></dt>
 <dd><p>Returns true if the current line has been seen by the player.</p>
 <p>If <cite>ever</cite> is true, we check to see if the line has ever been seen by the
 player. If false, we check if the line has been seen in the current
@@ -908,14 +920,14 @@ play-through.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.is_skipping">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">is_skipping</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.is_skipping" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">is_skipping</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.is_skipping" title="Link to this definition"></a></dt>
 <dd><p>Returns True if Ren'Py is currently skipping (in fast or slow skip mode),
 or False otherwise.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.is_start_interact">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">is_start_interact</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.is_start_interact" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">is_start_interact</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.is_start_interact" title="Link to this definition"></a></dt>
 <dd><p>Returns true if restart_interaction has not been called during the current
 interaction. This can be used to determine if the interaction is just being
 started, or has been restarted.</p>
@@ -923,7 +935,7 @@ started, or has been restarted.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.language_tailor">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">language_tailor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chars</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cls</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.language_tailor" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">language_tailor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chars</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cls</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.language_tailor" title="Link to this definition"></a></dt>
 <dd><p>This can be used to override the line breaking class of a unicode
 character. For
 example, the linebreaking class of a character can be set to ID to
@@ -940,7 +952,7 @@ character.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.last_say">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">last_say</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.last_say" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">last_say</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.last_say" title="Link to this definition"></a></dt>
 <dd><p>Returns an object containing information about the last say statement.</p>
 <p>While this can be called during a say statement, if the say statement is using
 a normal Character, the information will be about the <em>current</em> say statement,
@@ -967,7 +979,7 @@ or making it participate in rollback is not advised.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.load_module">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">load_module</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.load_module" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">load_module</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.load_module" title="Link to this definition"></a></dt>
 <dd><p>This loads the Ren'Py module named name. A Ren'Py module consists of Ren'Py script
 that is loaded into the usual (store) namespace, contained in a file named
 name.rpym or name.rpymc. If a .rpym file exists, and is newer than the
@@ -980,7 +992,7 @@ be found, or is ambiguous.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.load_string">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">load_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&lt;string&gt;'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.load_string" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">load_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&lt;string&gt;'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.load_string" title="Link to this definition"></a></dt>
 <dd><p>Loads <cite>s</cite> as Ren'Py script that can be called.</p>
 <p>Returns the name of the first statement in s.</p>
 <p><cite>filename</cite> is the name of the filename that statements in the string will
@@ -989,14 +1001,14 @@ appear to be from.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.maximum_framerate">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">maximum_framerate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.maximum_framerate" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">maximum_framerate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.maximum_framerate" title="Link to this definition"></a></dt>
 <dd><p>Forces Ren'Py to draw the screen at the maximum framerate for <cite>t</cite> seconds.
 If <cite>t</cite> is None, cancels the maximum framerate request.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.munge">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">munge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.munge" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">munge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.munge" title="Link to this definition"></a></dt>
 <dd><p>Munges <cite>name</cite>, which must begin with __.</p>
 <dl class="simple">
 <dt><cite>filename</cite></dt><dd><p>The filename the name is munged into. If None, the name is munged
@@ -1007,13 +1019,13 @@ into the filename containing the call to this function.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.not_infinite_loop">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">not_infinite_loop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delay</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.not_infinite_loop" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">not_infinite_loop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delay</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.not_infinite_loop" title="Link to this definition"></a></dt>
 <dd><p>Resets the infinite loop detection timer to <cite>delay</cite> seconds.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.notify">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">notify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.notify" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">notify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.notify" title="Link to this definition"></a></dt>
 <dd><p>Causes Ren'Py to display the <cite>message</cite> using the notify screen. By
 default, this will cause the message to be dissolved in, displayed
 for two seconds, and dissolved out again.</p>
@@ -1027,13 +1039,13 @@ to be replaced by assigning a new function to that variable.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.predicting">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">predicting</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.predicting" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">predicting</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.predicting" title="Link to this definition"></a></dt>
 <dd><p>Returns true if Ren'Py is currently in a predicting phase.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.queue_event">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">queue_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">up</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.queue_event" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">queue_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">up</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.queue_event" title="Link to this definition"></a></dt>
 <dd><p>Queues an event with the given name. <cite>Name</cite> should be one of the event
 names in <a class="reference internal" href="config.html#var-config.keymap"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.keymap</span></code></a>, or a list of such names.</p>
 <dl class="simple">
@@ -1050,7 +1062,7 @@ not work to replace an event with another - doing so will change event order.
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.quit">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">quit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relaunch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.quit" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">quit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relaunch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.quit" title="Link to this definition"></a></dt>
 <dd><p>This causes Ren'Py to exit entirely.</p>
 <dl class="simple">
 <dt><cite>relaunch</cite></dt><dd><p>If true, Ren'Py will run a second copy of itself before quitting.</p>
@@ -1066,14 +1078,14 @@ terminates.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.quit_event">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">quit_event</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.quit_event" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">quit_event</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.quit_event" title="Link to this definition"></a></dt>
 <dd><p>Triggers a quit event, as if the player clicked the quit button in the
 window chrome.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.reset_physical_size">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">reset_physical_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.reset_physical_size" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">reset_physical_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.reset_physical_size" title="Link to this definition"></a></dt>
 <dd><p>Attempts to set the size of the physical window to the size specified
 using <code class="xref std std-var docutils literal notranslate"><span class="pre">renpy.config.physical_height</span></code> and <code class="xref std std-var docutils literal notranslate"><span class="pre">renpy.config.physical_width</span></code>,
 or the size set using <code class="xref std std-var docutils literal notranslate"><span class="pre">renpy.config.screen_width</span></code> and <code class="xref std std-var docutils literal notranslate"><span class="pre">renpy.config.screen_height</span></code>
@@ -1082,7 +1094,7 @@ if not set.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.restart_interaction">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">restart_interaction</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.restart_interaction" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">restart_interaction</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.restart_interaction" title="Link to this definition"></a></dt>
 <dd><p>Restarts the current interaction. Among other things, this displays
 images added to the scene, re-evaluates screens, and starts any
 queued transitions.</p>
@@ -1092,41 +1104,8 @@ no effect.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="renpy.screenshot">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">screenshot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.screenshot" title="Permalink to this definition"> link</a></dt>
-<dd><p>Saves a screenshot in <cite>filename</cite>.</p>
-<p>Returns True if the screenshot was saved successfully, False if saving
-failed for some reason.</p>
-<p>The <a class="reference internal" href="config.html#var-config.screenshot_pattern"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.screenshot_pattern</span></code></a> and <a class="reference internal" href="store_variables.html#var-_screenshot_pattern"><code class="xref std std-var docutils literal notranslate"><span class="pre">_screenshot_pattern</span></code></a>
-variables control the file the screenshot is saved in.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="renpy.screenshot_to_bytes">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">screenshot_to_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.screenshot_to_bytes" title="Permalink to this definition"> link</a></dt>
-<dd><p>Returns a screenshot as a bytes object, that can be passed to im.Data().
-The bytes will be a png-format image, such that:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">$</span> <span class="n">data</span> <span class="o">=</span> <span class="n">renpy</span><span class="o">.</span><span class="n">screenshot_to_bytes</span><span class="p">((</span><span class="mi">640</span><span class="p">,</span> <span class="mi">360</span><span class="p">))</span>
-<span class="k">show</span> <span class="k">expression</span> <span class="n">im</span><span class="o">.</span><span class="n">Data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;screenshot.png&quot;</span><span class="p">):</span>
-    <span class="na">align</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Will show the image. The bytes objects returned can be stored in save
-files and persistent data. However, these may be large, and care should
-be taken to not include too many.</p>
-<dl class="simple">
-<dt><cite>size</cite></dt><dd><p>The size the screenshot will be resized to. If None, the screenshot
-will be resized, and hence will be the size of the player's window,
-without any letterbars.</p>
-</dd>
-</dl>
-<p>This function may be slow, and so it's intended for save-like screenshots,
-and not realtime effects.</p>
-</dd></dl>
-
-<dl class="py function">
 <dt class="sig sig-object py" id="renpy.scry">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">scry</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.scry" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">scry</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.scry" title="Link to this definition"></a></dt>
 <dd><p>Returns the scry object for the current statement. Returns None if
 there are no statements executing.</p>
 <p>The scry object tells Ren'Py about things that must be true in the
@@ -1159,7 +1138,7 @@ or making it participate in rollback is not advised.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.set_mouse_pos">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">set_mouse_pos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.set_mouse_pos" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">set_mouse_pos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.set_mouse_pos" title="Link to this definition"></a></dt>
 <dd><p>Jump the mouse pointer to the location given by arguments x and y.
 If the device does not have a mouse pointer, this does nothing.</p>
 <dl class="simple">
@@ -1171,14 +1150,14 @@ During this time, the mouse may be unresponsive.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.set_physical_size">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">set_physical_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.set_physical_size" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">set_physical_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.set_physical_size" title="Link to this definition"></a></dt>
 <dd><p>Attempts to set the size of the physical window to <cite>size</cite>. This has the
 side effect of taking the screen out of fullscreen mode.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.shown_window">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">shown_window</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.shown_window" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">shown_window</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.shown_window" title="Link to this definition"></a></dt>
 <dd><p>Call this to indicate that the window has been shown. This interacts
 with the &quot;window show&quot; statement, which shows an empty window whenever
 this functions has not been called during an interaction.</p>
@@ -1186,7 +1165,7 @@ this functions has not been called during an interaction.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.split_properties">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">split_properties</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">properties</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">prefixes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.split_properties" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">split_properties</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">properties</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">prefixes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.split_properties" title="Link to this definition"></a></dt>
 <dd><p>Splits up <cite>properties</cite> into multiple dictionaries, one per <cite>prefix</cite>. This
 function checks each key in properties against each prefix, in turn.
 When a prefix matches, the prefix is stripped from the key, and the
@@ -1202,7 +1181,7 @@ those that do not:</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.transition">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">transition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trans</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">always</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.transition" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">transition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trans</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">always</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.transition" title="Link to this definition"></a></dt>
 <dd><p>Sets the transition that will be used during the next interaction.</p>
 <dl class="simple">
 <dt><cite>layer</cite></dt><dd><p>The layer the transition applies to. If None, the transition
@@ -1216,7 +1195,7 @@ transition is always run.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.vibrate">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">vibrate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">duration</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.vibrate" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">vibrate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">duration</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.vibrate" title="Link to this definition"></a></dt>
 <dd><p>Causes the device to vibrate for <cite>duration</cite> seconds. Currently, this
 is only supported on Android.</p>
 </dd></dl>

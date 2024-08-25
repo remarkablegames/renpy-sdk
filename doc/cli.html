@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Command Line Interface &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/cli.html" />
@@ -17,14 +17,13 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -66,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -75,8 +75,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
@@ -94,6 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -122,10 +123,8 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -137,6 +136,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul>
@@ -223,7 +223,7 @@
            <div itemprop="articleBody">
              
   <section id="command-line-interface">
-<h1>Command Line Interface<a class="headerlink" href="#command-line-interface" title="Permalink to this heading"> link</a></h1>
+<h1>Command Line Interface<a class="headerlink" href="#command-line-interface" title="Link to this heading"></a></h1>
 <p>Ren'Py includes a command line interface (CLI) that can be used to automate
 some development tasks, allowing for continuous integration and for scripting
 releases. For most purposes, this isn't necessary - all these tasks can be
@@ -242,7 +242,7 @@ base directory of the project.</p>
 </dd></dl>
 
 <section id="build-commands">
-<h2>Build Commands<a class="headerlink" href="#build-commands" title="Permalink to this heading"> link</a></h2>
+<h2>Build Commands<a class="headerlink" href="#build-commands" title="Link to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>As part of the build process, Ren'Py will create .rpyc files that contain
@@ -252,7 +252,7 @@ build, either directly or in the old-game directory. Failure to do so
 may result in a game that can't load saves.</p>
 </div>
 <section id="android-build">
-<h3>Android Build<a class="headerlink" href="#android-build" title="Permalink to this heading"> link</a></h3>
+<h3>Android Build<a class="headerlink" href="#android-build" title="Link to this heading"></a></h3>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>./renpy.sh launcher android_build &lt;base&gt; [ options... ]
 </pre></div>
 </div>
@@ -261,7 +261,7 @@ has been used to install the Android SDK, generate keys, and configure the
 project.</p>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-destination">
-<span class="sig-name descname"><span class="pre">--destination</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;directory&gt;</span></span><a class="headerlink" href="#cmdoption-destination" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">--destination</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;directory&gt;</span></span><a class="headerlink" href="#cmdoption-destination" title="Link to this definition"></a></dt>
 <dd><p>The directory to place the output in. The default is a directory
 named &quot;<cite>name</cite>-<cite>version</cite>-dists&quot; in the current directory, taking information
 from <a class="reference internal" href="build.html#var-build.name"><code class="xref std std-var docutils literal notranslate"><span class="pre">build.name</span></code></a> and <code class="xref std std-var docutils literal notranslate"><span class="pre">build.version</span></code>.</p>
@@ -269,27 +269,27 @@ from <a class="reference internal" href="build.html#var-build.name"><code class=
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-bundle">
-<span class="sig-name descname"><span class="pre">--bundle</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-bundle" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">--bundle</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-bundle" title="Link to this definition"></a></dt>
 <dd><p>When given, Ren'Py will produce a .aab bundle. If not given, Ren'Py will
 produce an .apk file.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-install">
-<span class="sig-name descname"><span class="pre">--install</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-install" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">--install</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-install" title="Link to this definition"></a></dt>
 <dd><p>When given, Ren'Py will install the .apk or .aab file to a connected device.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-launch">
-<span class="sig-name descname"><span class="pre">--launch</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-launch" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">--launch</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-launch" title="Link to this definition"></a></dt>
 <dd><p>When given, Ren'Py will launch the game on a connected device. This implies
 <code class="docutils literal notranslate"><span class="pre">--install</span></code>.</p>
 </dd></dl>
 
 </section>
 <section id="add-from-to-call">
-<h3>Add From To Call<a class="headerlink" href="#add-from-to-call" title="Permalink to this heading"> link</a></h3>
+<h3>Add From To Call<a class="headerlink" href="#add-from-to-call" title="Link to this heading"></a></h3>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>./renpy.sh &lt;base&gt; add_from
 </pre></div>
 </div>
@@ -303,7 +303,7 @@ the changes it makes into your game.</p>
 </div>
 </section>
 <section id="check-script-lint">
-<h3>Check Script (Lint)<a class="headerlink" href="#check-script-lint" title="Permalink to this heading"> link</a></h3>
+<h3>Check Script (Lint)<a class="headerlink" href="#check-script-lint" title="Link to this heading"></a></h3>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>./renpy.sh &lt;base&gt; lint [ filename ] [ options... ]
 </pre></div>
 </div>
@@ -311,7 +311,7 @@ the changes it makes into your game.</p>
 button in the launcher.</p>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-arg-filename">
-<span class="sig-name descname"><span class="pre">filename</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-arg-filename" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">filename</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-arg-filename" title="Link to this definition"></a></dt>
 <dd><p>If given, the lint report will be written to this file rather than
 printed to standard output.</p>
 </dd></dl>
@@ -323,7 +323,7 @@ them, run:</p>
 </div>
 </section>
 <section id="compile">
-<h3>Compile<a class="headerlink" href="#compile" title="Permalink to this heading"> link</a></h3>
+<h3>Compile<a class="headerlink" href="#compile" title="Link to this heading"></a></h3>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>./renpy.sh &lt;base&gt; compile [ --keep-orphan-rpyc ]
 </pre></div>
 </div>
@@ -331,7 +331,7 @@ them, run:</p>
 equialent of the &quot;Force Recompile&quot; button in the Ren'Py launcher.</p>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-keep-orphan-rpyc">
-<span class="sig-name descname"><span class="pre">--keep-orphan-rpyc</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-keep-orphan-rpyc" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">--keep-orphan-rpyc</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-keep-orphan-rpyc" title="Link to this definition"></a></dt>
 <dd><p>By default, Ren'Py will delete .rpyc files that are not associated with
 a .rpy or _ren.py file of the same name. If this option is given, Ren'Py
 will not delete these files.</p>
@@ -339,7 +339,7 @@ will not delete these files.</p>
 
 </section>
 <section id="distribute">
-<h3>Distribute<a class="headerlink" href="#distribute" title="Permalink to this heading"> link</a></h3>
+<h3>Distribute<a class="headerlink" href="#distribute" title="Link to this heading"></a></h3>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>./renpy.sh launcher distribute &lt;base&gt; [ options... ]
 </pre></div>
 </div>
@@ -347,7 +347,7 @@ will not delete these files.</p>
 options this command takes are:</p>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-0">
-<span class="sig-name descname"><span class="pre">--destination</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;directory&gt;</span></span><a class="headerlink" href="#cmdoption-0" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">--destination</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;directory&gt;</span></span><a class="headerlink" href="#cmdoption-0" title="Link to this definition"></a></dt>
 <dd><p>The directory to place the distributions in. The default is a directory
 named &quot;<cite>name</cite>-<cite>version</cite>-dists&quot; in the current directory, taking information
 from <a class="reference internal" href="build.html#var-build.name"><code class="xref std std-var docutils literal notranslate"><span class="pre">build.name</span></code></a> and <code class="xref std std-var docutils literal notranslate"><span class="pre">build.version</span></code>.</p>
@@ -355,13 +355,13 @@ from <a class="reference internal" href="build.html#var-build.name"><code class=
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-no-update">
-<span class="sig-name descname"><span class="pre">--no-update</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-no-update" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">--no-update</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-no-update" title="Link to this definition"></a></dt>
 <dd><p>When given, Ren'Py will not build update files.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-package">
-<span class="sig-name descname"><span class="pre">--package</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;package&gt;</span></span><a class="headerlink" href="#cmdoption-package" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">--package</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;package&gt;</span></span><a class="headerlink" href="#cmdoption-package" title="Link to this definition"></a></dt>
 <dd><p>This gives the name of the package to build, where package is a package
 name like &quot;pc&quot;, &quot;mac&quot;, or &quot;markets&quot;. This option can be given multiple
 times to build multiple packages. The default is to build all packages.</p>
@@ -371,7 +371,7 @@ times to build multiple packages. The default is to build all packages.</p>
 itself.)</p>
 </section>
 <section id="ios-create">
-<h3>iOS Create<a class="headerlink" href="#ios-create" title="Permalink to this heading"> link</a></h3>
+<h3>iOS Create<a class="headerlink" href="#ios-create" title="Link to this heading"></a></h3>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>./renpy.sh launcher ios_create &lt;base&gt; &lt;destination&gt;
 </pre></div>
 </div>
@@ -380,13 +380,13 @@ the game. It's assumed that the launcher has been used to install iOS
 support once.</p>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-arg-destination">
-<span class="sig-name descname"><span class="pre">destination</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-arg-destination" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">destination</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-arg-destination" title="Link to this definition"></a></dt>
 <dd><p>The directory to place the Xcode project in.</p>
 </dd></dl>
 
 </section>
 <section id="ios-populate">
-<h3>iOS Populate<a class="headerlink" href="#ios-populate" title="Permalink to this heading"> link</a></h3>
+<h3>iOS Populate<a class="headerlink" href="#ios-populate" title="Link to this heading"></a></h3>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>./renpy.sh launcher ios_populate &lt;base&gt; &lt;destination&gt;
 </pre></div>
 </div>
@@ -394,20 +394,20 @@ support once.</p>
 is used to update a project created with the same version of Ren'Py.</p>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-arg-0">
-<span class="sig-name descname"><span class="pre">destination</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-arg-0" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">destination</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-arg-0" title="Link to this definition"></a></dt>
 <dd><p>The directory to update.</p>
 </dd></dl>
 
 </section>
 <section id="update-old-game">
-<h3>Update Old Game<a class="headerlink" href="#update-old-game" title="Permalink to this heading"> link</a></h3>
+<h3>Update Old Game<a class="headerlink" href="#update-old-game" title="Link to this heading"></a></h3>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>./renpy.sh launcher update_old_game &lt;base&gt;
 </pre></div>
 </div>
 <p>This command will copy .rpyc files from &lt;base&gt;/game to &lt;base&gt;/old-game.</p>
 </section>
 <section id="web-build">
-<h3>Web Build<a class="headerlink" href="#web-build" title="Permalink to this heading"> link</a></h3>
+<h3>Web Build<a class="headerlink" href="#web-build" title="Link to this heading"></a></h3>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>./renpy.sh launcher web_build &lt;base&gt; [ options... ]
 </pre></div>
 </div>
@@ -416,17 +416,17 @@ launcher has been used to install web support and that any configuration
 files (such as <code class="docutils literal notranslate"><span class="pre">progressive_download.txt</span></code>) are in place.</p>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-1">
-<span class="sig-name descname"><span class="pre">--destination</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;directory&gt;</span></span><a class="headerlink" href="#cmdoption-1" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">--destination</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;directory&gt;</span></span><a class="headerlink" href="#cmdoption-1" title="Link to this definition"></a></dt>
 <dd><p>The directory to place the web root in.</p>
 </dd></dl>
 
 </section>
 </section>
 <section id="launcher-commands">
-<h2>Launcher Commands<a class="headerlink" href="#launcher-commands" title="Permalink to this heading"> link</a></h2>
+<h2>Launcher Commands<a class="headerlink" href="#launcher-commands" title="Link to this heading"></a></h2>
 <p>These commands are used to control the Ren'Py launcher from the command line.</p>
 <section id="set-projects-directory">
-<h3>Set Projects Directory<a class="headerlink" href="#set-projects-directory" title="Permalink to this heading"> link</a></h3>
+<h3>Set Projects Directory<a class="headerlink" href="#set-projects-directory" title="Link to this heading"></a></h3>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>./renpy.sh launcher set_projects_directory &lt;directory&gt;
 </pre></div>
 </div>
@@ -436,7 +436,7 @@ a projects directory are available.</p>
 <p>This can only be done when the launcher is not running.</p>
 </section>
 <section id="set-project">
-<h3>Set Project<a class="headerlink" href="#set-project" title="Permalink to this heading"> link</a></h3>
+<h3>Set Project<a class="headerlink" href="#set-project" title="Link to this heading"></a></h3>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>./renpy.sh launcher set_project &lt;base&gt;
 </pre></div>
 </div>

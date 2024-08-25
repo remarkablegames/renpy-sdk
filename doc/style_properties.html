@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Style Properties &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/style_properties.html" />
@@ -17,14 +17,13 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -66,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -75,8 +75,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
@@ -115,6 +115,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -143,10 +144,8 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -158,6 +157,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul>
@@ -225,13 +225,13 @@
            <div itemprop="articleBody">
              
   <section id="style-properties">
-<h1>Style Properties<a class="headerlink" href="#style-properties" title="Permalink to this heading"> link</a></h1>
+<h1>Style Properties<a class="headerlink" href="#style-properties" title="Link to this heading"></a></h1>
 <p>The style properties associated with <a class="reference internal" href="style.html"><span class="doc">styles</span></a> control how
 Displayables are shown. Style properties can be either given without a prefix,
 in which case they apply to all states of the displayable, or with a prefix
 that limits the property to a limited number of states.</p>
 <section id="style-property-prefixes">
-<h2>Style Property Prefixes<a class="headerlink" href="#style-property-prefixes" title="Permalink to this heading"> link</a></h2>
+<h2>Style Property Prefixes<a class="headerlink" href="#style-property-prefixes" title="Link to this heading"></a></h2>
 <p>Applying a prefix to a style property indicates allows a displayable to change
 it's look in response to its focus or selection status. For example, a button
 can change its color when the mouse hovers above it, or to indicate when the
@@ -258,10 +258,6 @@ states. There is a system of implications set up, so that a prefix can imply
 setting the property for more than one state.</p>
 <p>The implications are:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>prefix</p></th>
 <th class="head"><p>states implied by prefix</p></th>
@@ -315,12 +311,12 @@ text.:</p>
 </div>
 </section>
 <section id="style-property-values">
-<h2>Style Property Values<a class="headerlink" href="#style-property-values" title="Permalink to this heading"> link</a></h2>
+<h2>Style Property Values<a class="headerlink" href="#style-property-values" title="Link to this heading"></a></h2>
 <p>Each style property expects a specific kind of data. Many of these are
 standard Python types, but a few are novel. Here are descriptions of the
 novel kinds of value a style property can expect.</p>
 <dl class="glossary">
-<dt id="term-position">position<a class="headerlink" href="#term-position" title="Permalink to this term"> link</a></dt><dd><p>Positions are used to specify locations relative to the upper-left
+<dt id="term-position">position<a class="headerlink" href="#term-position" title="Link to this term"></a></dt><dd><p>Positions are used to specify locations relative to the upper-left
 corner of the containing area. (For placement and size, the containing
 area is given by the layout the displayable is in, if one is given, or
 the screen otherwise. For anchors, the containing area is the size of
@@ -339,7 +335,7 @@ side.</p>
 </dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="absolute">
-<span class="sig-name descname"><span class="pre">absolute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#absolute" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">absolute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#absolute" title="Link to this definition"></a></dt>
 <dd><p>For example, <code class="docutils literal notranslate"><span class="pre">absolute(100.25)</span></code>, or <code class="docutils literal notranslate"><span class="pre">absolute(a+b)</span></code> when both
 <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> may be floats or ints.</p>
 <p>An <code class="docutils literal notranslate"><span class="pre">absolute</span></code> number is interpreted as the number of pixels from
@@ -349,7 +345,7 @@ rendering.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="position">
-<span class="sig-name descname"><span class="pre">position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">absolute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#position" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">absolute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#position" title="Link to this definition"></a></dt>
 <dd><p>For example, <code class="docutils literal notranslate"><span class="pre">position(-10,</span> <span class="pre">.5)</span></code>.</p>
 <p>A combination of <cite>absolute</cite>, which will be treated as an absolute
 position, and <cite>relative</cite>, which will be treated as a relative
@@ -360,10 +356,10 @@ results may occur.</p>
 </dd></dl>
 
 </dd>
-<dt id="term-displayable">displayable<a class="headerlink" href="#term-displayable" title="Permalink to this term"> link</a></dt><dd><p>Any displayable. If a displayable contains a &quot;[prefix_]&quot; substitution,
+<dt id="term-displayable">displayable<a class="headerlink" href="#term-displayable" title="Link to this term"></a></dt><dd><p>Any displayable. If a displayable contains a &quot;[prefix_]&quot; substitution,
 a prefix search is performed as described below.</p>
 </dd>
-<dt id="term-color">color<a class="headerlink" href="#term-color" title="Permalink to this term"> link</a></dt><dd><p>Colors in Ren'Py can be expressed as strings beginning with the hash
+<dt id="term-color">color<a class="headerlink" href="#term-color" title="Link to this term"></a></dt><dd><p>Colors in Ren'Py can be expressed as strings beginning with the hash
 mark (#), followed by a hex triple or hex quadruple, with each of the
 three or four elements consisting of a one or two hexadecimal character
 color code.</p>
@@ -386,7 +382,7 @@ red, green, blue, and alpha, in that order.</p>
 </dd>
 </dl>
 <section id="style-prefix-search">
-<span id="id1"></span><h3>Style Prefix Search<a class="headerlink" href="#style-prefix-search" title="Permalink to this heading"> link</a></h3>
+<span id="id1"></span><h3>Style Prefix Search<a class="headerlink" href="#style-prefix-search" title="Link to this heading"></a></h3>
 <p>When a style property contains the &quot;[prefix_]&quot; substitution, a prefix
 search is performed. The prefix search is performed separately for
 each state, including states that are implied by the original property
@@ -399,10 +395,6 @@ assigned.</p>
 <p>separate searches are performed for the hover and selected_hover states. The
 prefixes searched vary based on the state.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>state</p></th>
 <th class="head"><p>search order</p></th>
@@ -456,18 +448,18 @@ including containers, transforms, and frames.</p>
 </section>
 </section>
 <section id="list-of-all-style-properties">
-<h2>List of All Style Properties<a class="headerlink" href="#list-of-all-style-properties" title="Permalink to this heading"> link</a></h2>
+<h2>List of All Style Properties<a class="headerlink" href="#list-of-all-style-properties" title="Link to this heading"></a></h2>
 <p>The style properties control the look of the various displayables. Not all
 style properties apply to all displayables, so we've divided them up into
 groups.</p>
 <section id="position-style-properties">
-<span id="id2"></span><h3>Position Style Properties<a class="headerlink" href="#position-style-properties" title="Permalink to this heading"> link</a></h3>
+<span id="id2"></span><h3>Position Style Properties<a class="headerlink" href="#position-style-properties" title="Link to this heading"></a></h3>
 <p>These properties apply to all displayables, and mostly control the
 position of a displayable inside the area allocated to it by a layout,
 or on the screen when not inside a layout.</p>
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-alt">
-<span class="sig-name descname"><span class="pre">alt</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">alt</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-alt" title="Link to this definition"></a></dt>
 <dd><p>Alternative text used for the displayable when self-voicing is
 enabled. See the <a class="reference internal" href="self_voicing.html"><span class="doc">self voicing</span></a> section for
 more information.</p>
@@ -475,35 +467,35 @@ more information.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-xpos">
-<span class="sig-name descname"><span class="pre">xpos</span></span> <span class="pre">-</span>&#160; <span class="pre">position</span><a class="headerlink" href="#style-property-xpos" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">xpos</span></span> <span class="pre">-</span>&#160; <span class="pre">position</span><a class="headerlink" href="#style-property-xpos" title="Link to this definition"></a></dt>
 <dd><p>The position of the displayable relative to the left side of the
 containing area.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-ypos">
-<span class="sig-name descname"><span class="pre">ypos</span></span> <span class="pre">-</span>&#160; <span class="pre">position</span><a class="headerlink" href="#style-property-ypos" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">ypos</span></span> <span class="pre">-</span>&#160; <span class="pre">position</span><a class="headerlink" href="#style-property-ypos" title="Link to this definition"></a></dt>
 <dd><p>The position of the displayable relative to the top side of the
 containing area.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-pos">
-<span class="sig-name descname"><span class="pre">pos</span></span> <span class="pre">-</span>&#160; <span class="pre">tuple</span> <span class="pre">of</span> <span class="pre">(position,</span> <span class="pre">position)</span><a class="headerlink" href="#style-property-pos" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">pos</span></span> <span class="pre">-</span>&#160; <span class="pre">tuple</span> <span class="pre">of</span> <span class="pre">(position,</span> <span class="pre">position)</span><a class="headerlink" href="#style-property-pos" title="Link to this definition"></a></dt>
 <dd><p>Equivalent to setting xpos to the first component of the tuple,
 and ypos to the second component of the tuple.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-xanchor">
-<span class="sig-name descname"><span class="pre">xanchor</span></span> <span class="pre">-</span>&#160; <span class="pre">position</span><a class="headerlink" href="#style-property-xanchor" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">xanchor</span></span> <span class="pre">-</span>&#160; <span class="pre">position</span><a class="headerlink" href="#style-property-xanchor" title="Link to this definition"></a></dt>
 <dd><p>The position of the anchor relative to the left side of the
 displayable.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-yanchor">
-<span class="sig-name descname"><span class="pre">yanchor</span></span> <span class="pre">-</span>&#160; <span class="pre">position</span><a class="headerlink" href="#style-property-yanchor" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">yanchor</span></span> <span class="pre">-</span>&#160; <span class="pre">position</span><a class="headerlink" href="#style-property-yanchor" title="Link to this definition"></a></dt>
 <dd><p>The position of the anchor relative to the top side of the
 displayable.</p>
 <p>If the displayable is a <a class="reference internal" href="text.html#Text" title="Text"><code class="xref py py-func docutils literal notranslate"><span class="pre">Text()</span></code></a>, then there is one special value
@@ -513,14 +505,14 @@ is set to the baseline of the first line of text.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-anchor">
-<span class="sig-name descname"><span class="pre">anchor</span></span> <span class="pre">-</span>&#160; <span class="pre">tuple</span> <span class="pre">of</span> <span class="pre">(position,</span> <span class="pre">position)</span><a class="headerlink" href="#style-property-anchor" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">anchor</span></span> <span class="pre">-</span>&#160; <span class="pre">tuple</span> <span class="pre">of</span> <span class="pre">(position,</span> <span class="pre">position)</span><a class="headerlink" href="#style-property-anchor" title="Link to this definition"></a></dt>
 <dd><p>Equivalent to setting xanchor to the first component of the tuple,
 and yanchor to the second component of the tuple.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-xalign">
-<span class="sig-name descname"><span class="pre">xalign</span></span> <span class="pre">-</span>&#160; <span class="pre">float</span><a class="headerlink" href="#style-property-xalign" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">xalign</span></span> <span class="pre">-</span>&#160; <span class="pre">float</span><a class="headerlink" href="#style-property-xalign" title="Link to this definition"></a></dt>
 <dd><p>Equivalent to setting xpos and xanchor to the same value. This has
 the effect of placing the displayable at a relative location on
 the screen, with 0.0 being the left side, 0.5 the center, and 1.0
@@ -529,7 +521,7 @@ being the right side.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-yalign">
-<span class="sig-name descname"><span class="pre">yalign</span></span> <span class="pre">-</span>&#160; <span class="pre">float</span><a class="headerlink" href="#style-property-yalign" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">yalign</span></span> <span class="pre">-</span>&#160; <span class="pre">float</span><a class="headerlink" href="#style-property-yalign" title="Link to this definition"></a></dt>
 <dd><p>Equivalent to setting ypos and yanchor to the same value. This has
 the effect of placing the displayable at a relative location on
 the screen, with 0.0 being the top, 0.5 the center, and 1.0
@@ -538,96 +530,96 @@ the bottom.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-align">
-<span class="sig-name descname"><span class="pre">align</span></span> <span class="pre">-</span>&#160; <span class="pre">tuple</span> <span class="pre">of</span> <span class="pre">(float,</span> <span class="pre">float)</span><a class="headerlink" href="#style-property-align" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">align</span></span> <span class="pre">-</span>&#160; <span class="pre">tuple</span> <span class="pre">of</span> <span class="pre">(float,</span> <span class="pre">float)</span><a class="headerlink" href="#style-property-align" title="Link to this definition"></a></dt>
 <dd><p>Equivalent to setting xalign to the first component of the tuple,
 and yalign to the second.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-xcenter">
-<span class="sig-name descname"><span class="pre">xcenter</span></span> <span class="pre">-</span>&#160; <span class="pre">position</span><a class="headerlink" href="#style-property-xcenter" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">xcenter</span></span> <span class="pre">-</span>&#160; <span class="pre">position</span><a class="headerlink" href="#style-property-xcenter" title="Link to this definition"></a></dt>
 <dd><p>Equivalent to setting xpos to the value of this property, and
 xanchor to 0.5.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-ycenter">
-<span class="sig-name descname"><span class="pre">ycenter</span></span> <span class="pre">-</span>&#160; <span class="pre">position</span><a class="headerlink" href="#style-property-ycenter" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">ycenter</span></span> <span class="pre">-</span>&#160; <span class="pre">position</span><a class="headerlink" href="#style-property-ycenter" title="Link to this definition"></a></dt>
 <dd><p>Equivalent to setting ypos to the value of this property, and
 yanchor to 0.5.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-xycenter">
-<span class="sig-name descname"><span class="pre">xycenter</span></span> <span class="pre">-</span>&#160; <span class="pre">tuple</span> <span class="pre">of</span> <span class="pre">(position,</span> <span class="pre">position)</span><a class="headerlink" href="#style-property-xycenter" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">xycenter</span></span> <span class="pre">-</span>&#160; <span class="pre">tuple</span> <span class="pre">of</span> <span class="pre">(position,</span> <span class="pre">position)</span><a class="headerlink" href="#style-property-xycenter" title="Link to this definition"></a></dt>
 <dd><p>Equivalent to setting xcenter to the first component of the tuple,
 and ycenter to the second.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-xoffset">
-<span class="sig-name descname"><span class="pre">xoffset</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-xoffset" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">xoffset</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-xoffset" title="Link to this definition"></a></dt>
 <dd><p>Gives a number of pixels that are added to the horizontal position
 computed using xpos and xalign.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-yoffset">
-<span class="sig-name descname"><span class="pre">yoffset</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-yoffset" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">yoffset</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-yoffset" title="Link to this definition"></a></dt>
 <dd><p>Gives a number of pixels that are added to the vertical position
 computed using ypos and yalign.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-offset">
-<span class="sig-name descname"><span class="pre">offset</span></span> <span class="pre">-</span>&#160; <span class="pre">tuple</span> <span class="pre">of</span> <span class="pre">(int,</span> <span class="pre">int)</span><a class="headerlink" href="#style-property-offset" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">offset</span></span> <span class="pre">-</span>&#160; <span class="pre">tuple</span> <span class="pre">of</span> <span class="pre">(int,</span> <span class="pre">int)</span><a class="headerlink" href="#style-property-offset" title="Link to this definition"></a></dt>
 <dd><p>Equivalent to setting xoffset to the first component of the tuple,
 and yoffset to the second component of the tuple.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-xmaximum">
-<span class="sig-name descname"><span class="pre">xmaximum</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-xmaximum" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">xmaximum</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-xmaximum" title="Link to this definition"></a></dt>
 <dd><p>Specifies the maximum horizontal size of the displayable, in pixels.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-ymaximum">
-<span class="sig-name descname"><span class="pre">ymaximum</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-ymaximum" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">ymaximum</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-ymaximum" title="Link to this definition"></a></dt>
 <dd><p>Specifies the maximum vertical size of the displayable in pixels.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-maximum">
-<span class="sig-name descname"><span class="pre">maximum</span></span> <span class="pre">-</span>&#160; <span class="pre">tuple</span> <span class="pre">of</span> <span class="pre">(int,</span> <span class="pre">int)</span><a class="headerlink" href="#style-property-maximum" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">maximum</span></span> <span class="pre">-</span>&#160; <span class="pre">tuple</span> <span class="pre">of</span> <span class="pre">(int,</span> <span class="pre">int)</span><a class="headerlink" href="#style-property-maximum" title="Link to this definition"></a></dt>
 <dd><p>Equivalent to setting xmaximum to the first component of the
 tuple, and ymaximum to the second.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-xminimum">
-<span class="sig-name descname"><span class="pre">xminimum</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-xminimum" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">xminimum</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-xminimum" title="Link to this definition"></a></dt>
 <dd><p>Sets the minimum width of the displayable, in pixels. Only works
 with displayables that can vary their size.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-yminimum">
-<span class="sig-name descname"><span class="pre">yminimum</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-yminimum" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">yminimum</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-yminimum" title="Link to this definition"></a></dt>
 <dd><p>Sets the minimum height of the displayables, in pixels. Only works
 with displayables that can vary their size.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-minimum">
-<span class="sig-name descname"><span class="pre">minimum</span></span> <span class="pre">-</span>&#160; <span class="pre">tuple</span> <span class="pre">of</span> <span class="pre">(int,</span> <span class="pre">int)</span><a class="headerlink" href="#style-property-minimum" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">minimum</span></span> <span class="pre">-</span>&#160; <span class="pre">tuple</span> <span class="pre">of</span> <span class="pre">(int,</span> <span class="pre">int)</span><a class="headerlink" href="#style-property-minimum" title="Link to this definition"></a></dt>
 <dd><p>Equivalent to setting xminimum to the first component of the
 tuple, and yminimum to the second.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-xsize">
-<span class="sig-name descname"><span class="pre">xsize</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span> <span class="pre">or</span> <span class="pre">float</span><a class="headerlink" href="#style-property-xsize" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">xsize</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span> <span class="pre">or</span> <span class="pre">float</span><a class="headerlink" href="#style-property-xsize" title="Link to this definition"></a></dt>
 <dd><p>Equivalent to setting xminimum and xmaximum to the same value. This
 has the effect of setting the width of the displayable.  f the size
 is a float, it's relative to the width of the containing area.</p>
@@ -635,7 +627,7 @@ is a float, it's relative to the width of the containing area.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-ysize">
-<span class="sig-name descname"><span class="pre">ysize</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span> <span class="pre">or</span> <span class="pre">float</span><a class="headerlink" href="#style-property-ysize" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">ysize</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span> <span class="pre">or</span> <span class="pre">float</span><a class="headerlink" href="#style-property-ysize" title="Link to this definition"></a></dt>
 <dd><p>Equivalent to setting yminimum and ymaximum to the same value. This
 has the effect of setting the height of the displayable. If the size
 is a float, it's relative to the height of the containing area.</p>
@@ -643,14 +635,14 @@ is a float, it's relative to the height of the containing area.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-xysize">
-<span class="sig-name descname"><span class="pre">xysize</span></span> <span class="pre">-</span>&#160; <span class="pre">tuple</span> <span class="pre">of</span> <span class="pre">(int</span> <span class="pre">or</span> <span class="pre">float,</span> <span class="pre">int</span> <span class="pre">or</span> <span class="pre">float)</span><a class="headerlink" href="#style-property-xysize" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">xysize</span></span> <span class="pre">-</span>&#160; <span class="pre">tuple</span> <span class="pre">of</span> <span class="pre">(int</span> <span class="pre">or</span> <span class="pre">float,</span> <span class="pre">int</span> <span class="pre">or</span> <span class="pre">float)</span><a class="headerlink" href="#style-property-xysize" title="Link to this definition"></a></dt>
 <dd><p>Equivalent to setting xsize to the first component of
 the tuple, and ysize to the second component.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-xfill">
-<span class="sig-name descname"><span class="pre">xfill</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-xfill" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">xfill</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-xfill" title="Link to this definition"></a></dt>
 <dd><p>If true, the displayable will expand to fill all available
 horizontal space. If not true, it will only be large enough to
 contain its children.</p>
@@ -659,7 +651,7 @@ contain its children.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-yfill">
-<span class="sig-name descname"><span class="pre">yfill</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-yfill" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">yfill</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-yfill" title="Link to this definition"></a></dt>
 <dd><p>If true, the displayable will expand to fill all available
 vertical space. If not true, it will only be large enough to
 contain its children.</p>
@@ -668,7 +660,7 @@ contain its children.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-area">
-<span class="sig-name descname"><span class="pre">area</span></span> <span class="pre">-</span>&#160; <span class="pre">tuple</span> <span class="pre">of</span> <span class="pre">(int,</span> <span class="pre">int,</span> <span class="pre">int,</span> <span class="pre">int)</span><a class="headerlink" href="#style-property-area" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">area</span></span> <span class="pre">-</span>&#160; <span class="pre">tuple</span> <span class="pre">of</span> <span class="pre">(int,</span> <span class="pre">int,</span> <span class="pre">int,</span> <span class="pre">int)</span><a class="headerlink" href="#style-property-area" title="Link to this definition"></a></dt>
 <dd><p>The tuple is interpreted as (<cite>xpos</cite>, <cite>ypos</cite>, <cite>width</cite>,
 <cite>height</cite>). Attempts to position the displayable such that it's
 upper-left corner is at <cite>xpos</cite> and <cite>ypos</cite>, and its size is <cite>width</cite>
@@ -681,7 +673,7 @@ properties to appropriate values.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-mipmap">
-<span class="sig-name descname"><span class="pre">mipmap</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-mipmap" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">mipmap</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-mipmap" title="Link to this definition"></a></dt>
 <dd><p>This controls if textures created by this displayable are mipmapped.
 This applies only to certain displayables, including <a class="reference internal" href="text.html#Text" title="Text"><code class="xref py py-func docutils literal notranslate"><span class="pre">Text()</span></code></a>,
 <a class="reference internal" href="movie.html#Movie" title="Movie"><code class="xref py py-func docutils literal notranslate"><span class="pre">Movie()</span></code></a>, and dissolves.</p>
@@ -692,17 +684,17 @@ as <a class="reference internal" href="config.html#var-config.mipmap_text"><code
 
 </section>
 <section id="text-style-properties">
-<span id="id3"></span><h3>Text Style Properties<a class="headerlink" href="#text-style-properties" title="Permalink to this heading"> link</a></h3>
+<span id="id3"></span><h3>Text Style Properties<a class="headerlink" href="#text-style-properties" title="Link to this heading"></a></h3>
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-antialias">
-<span class="sig-name descname"><span class="pre">antialias</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-antialias" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">antialias</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-antialias" title="Link to this definition"></a></dt>
 <dd><p>If True, the default, TrueType font text will be rendered
 anti-aliased.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-adjust_spacing">
-<span class="sig-name descname"><span class="pre">adjust_spacing</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span> <span class="pre">or</span> <span class="pre">str</span><a class="headerlink" href="#style-property-adjust_spacing" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">adjust_spacing</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span> <span class="pre">or</span> <span class="pre">str</span><a class="headerlink" href="#style-property-adjust_spacing" title="Link to this definition"></a></dt>
 <dd><p>If True, Ren'Py will adjust the spacing of drawable-resolution text
 to match the spacing of the text rendered at virtual resolution, to
 ensure the size of frames and other containers holding text does not
@@ -718,14 +710,14 @@ the vertical direction only.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-altruby_style">
-<span class="sig-name descname"><span class="pre">altruby_style</span></span> <span class="pre">-</span>&#160; <span class="pre">style</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-altruby_style" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">altruby_style</span></span> <span class="pre">-</span>&#160; <span class="pre">style</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-altruby_style" title="Link to this definition"></a></dt>
 <dd><p>If not None, this should be a style object. The style that's used for
 alternate ruby text.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-axis">
-<span class="sig-name descname"><span class="pre">axis</span></span> <span class="pre">-</span>&#160; <span class="pre">dict</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-axis" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">axis</span></span> <span class="pre">-</span>&#160; <span class="pre">dict</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-axis" title="Link to this definition"></a></dt>
 <dd><p>This allows the axes of a <a class="reference internal" href="text.html#variable-fonts"><span class="std std-ref">variable font</span></a> to be
 set. If not None, this should be a dictionary mapping axis names to
 values. For example:</p>
@@ -738,14 +730,16 @@ values. For example:</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-black_color">
-<span class="sig-name descname"><span class="pre">black_color</span></span> <span class="pre">-</span>&#160; <span class="pre">color</span><a class="headerlink" href="#style-property-black_color" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">black_color</span></span> <span class="pre">-</span>&#160; <span class="pre">color</span><a class="headerlink" href="#style-property-black_color" title="Link to this definition"></a></dt>
 <dd><p>When rendering an image-based font, black will be mapped to this
 color. This has no effect for TrueType fonts.</p>
+<p>This may be None in the case of ruby/furigana text, to use the same
+color as the parent text.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-bold">
-<span class="sig-name descname"><span class="pre">bold</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-bold" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">bold</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-bold" title="Link to this definition"></a></dt>
 <dd><p>If True, render the font in a bold style. For a TrueType font,
 this usually involves synthetically increasing the font weight. It
 can also cause the font to be remapped, using
@@ -754,7 +748,7 @@ can also cause the font to be remapped, using
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-caret">
-<span class="sig-name descname"><span class="pre">caret</span></span> <span class="pre">-</span>&#160; <span class="pre">displayable</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-caret" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">caret</span></span> <span class="pre">-</span>&#160; <span class="pre">displayable</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-caret" title="Link to this definition"></a></dt>
 <dd><p>If not None, this should be a displayable. The input widget will
 use this as the caret at the end of the text. If None, a 1 pixel
 wide blinking line is used as the caret.</p>
@@ -762,15 +756,17 @@ wide blinking line is used as the caret.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-color">
-<span class="sig-name descname"><span class="pre">color</span></span> <span class="pre">-</span>&#160; <span class="pre">color</span><a class="headerlink" href="#style-property-color" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">color</span></span> <span class="pre">-</span>&#160; <span class="pre">color</span><a class="headerlink" href="#style-property-color" title="Link to this definition"></a></dt>
 <dd><p>The color the text is rendered in. When using a TrueType font,
 the font is rendered in this color. When using an image-based
 font, white is mapped to this color.</p>
+<p>This may be None in the case of ruby/furigana text, to use the same
+color as the parent text.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-emoji_font">
-<span class="sig-name descname"><span class="pre">emoji_font</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span><a class="headerlink" href="#style-property-emoji_font" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">emoji_font</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span><a class="headerlink" href="#style-property-emoji_font" title="Link to this definition"></a></dt>
 <dd><p>The font that's used to render Emoji characters. This is automatically
 used when a sequence of one or more Emoji are encountered, and no
 font text tag is in use.</p>
@@ -778,14 +774,14 @@ font text tag is in use.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-first_indent">
-<span class="sig-name descname"><span class="pre">first_indent</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-first_indent" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">first_indent</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-first_indent" title="Link to this definition"></a></dt>
 <dd><p>The amount that the first line of text in a paragraph is indented
 by, in pixels.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-font">
-<span class="sig-name descname"><span class="pre">font</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span><a class="headerlink" href="#style-property-font" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">font</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span><a class="headerlink" href="#style-property-font" title="Link to this definition"></a></dt>
 <dd><p>A string giving the name of the font used to render text.</p>
 <p>For a TrueType font file, this is usually the name of the file
 containing the font (like <code class="docutils literal notranslate"><span class="pre">&quot;DejaVuSans.ttf&quot;</span></code>). To select a second
@@ -797,7 +793,7 @@ font.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-hinting">
-<span class="sig-name descname"><span class="pre">hinting</span></span> <span class="pre">-</span>&#160; <span class="pre">str</span><a class="headerlink" href="#style-property-hinting" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">hinting</span></span> <span class="pre">-</span>&#160; <span class="pre">str</span><a class="headerlink" href="#style-property-hinting" title="Link to this definition"></a></dt>
 <dd><p>Controls how the font will be hinted. This should be one of the following
 strings:</p>
 <dl class="simple">
@@ -817,7 +813,7 @@ hints vertically.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-hyperlink_functions">
-<span class="sig-name descname"><span class="pre">hyperlink_functions</span></span> <span class="pre">-</span>&#160; <span class="pre">tuple</span> <span class="pre">of</span> <span class="pre">(function,</span> <span class="pre">function,</span> <span class="pre">function)</span><a class="headerlink" href="#style-property-hyperlink_functions" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">hyperlink_functions</span></span> <span class="pre">-</span>&#160; <span class="pre">tuple</span> <span class="pre">of</span> <span class="pre">(function,</span> <span class="pre">function,</span> <span class="pre">function)</span><a class="headerlink" href="#style-property-hyperlink_functions" title="Link to this definition"></a></dt>
 <dd><p>This is a tuple of three functions relating to hyperlinks in text.</p>
 <p>The first item is the hyperlink style function. When called with a single
 argument, the argument of the hyperlink, it must return a style object to
@@ -834,7 +830,7 @@ the interaction returns that value.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-instance">
-<span class="sig-name descname"><span class="pre">instance</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-instance" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">instance</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-instance" title="Link to this definition"></a></dt>
 <dd><p>When using a <a class="reference internal" href="text.html#variable-fonts"><span class="std std-ref">variable font</span></a>, this can be
 a string giving a named instance of the font to use. For example,
 if the font has a &quot;Bold&quot; instance, this can be set to &quot;Bold&quot; to
@@ -843,7 +839,7 @@ use that instance.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-italic">
-<span class="sig-name descname"><span class="pre">italic</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-italic" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">italic</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-italic" title="Link to this definition"></a></dt>
 <dd><p>If true, the text will be rendered in italics. For a TrueType font,
 this usually involves synthetically increasing the font slant. It
 can also cause the font to be remapped, using
@@ -852,7 +848,7 @@ can also cause the font to be remapped, using
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-justify">
-<span class="sig-name descname"><span class="pre">justify</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-justify" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">justify</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-justify" title="Link to this definition"></a></dt>
 <dd><p>If True, additional whitespace is inserted between words so that
 the left and right margins of each line are even. This is not
 performed on the last line of a paragraph.</p>
@@ -860,7 +856,7 @@ performed on the last line of a paragraph.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-kerning">
-<span class="sig-name descname"><span class="pre">kerning</span></span> <span class="pre">-</span>&#160; <span class="pre">float</span><a class="headerlink" href="#style-property-kerning" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">kerning</span></span> <span class="pre">-</span>&#160; <span class="pre">float</span><a class="headerlink" href="#style-property-kerning" title="Link to this definition"></a></dt>
 <dd><p>A kerning adjustment, the number of pixels of space that's added
 between each pair of characters. (This can be negative to remove
 space between characters.)</p>
@@ -868,7 +864,7 @@ space between characters.)</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-language">
-<span class="sig-name descname"><span class="pre">language</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span><a class="headerlink" href="#style-property-language" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">language</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span><a class="headerlink" href="#style-property-language" title="Link to this definition"></a></dt>
 <dd><p>Controls the language family used to break text into lines, and
 for certain other text transformations. Legal values are:</p>
 <dl class="simple">
@@ -906,7 +902,7 @@ languages.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-layout">
-<span class="sig-name descname"><span class="pre">layout</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span><a class="headerlink" href="#style-property-layout" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">layout</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span><a class="headerlink" href="#style-property-layout" title="Link to this definition"></a></dt>
 <dd><p>Controls how words are allocated to lines. Legal values are:</p>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">&quot;tex&quot;</span></code> (default)</dt><dd><p>Uses the Knuth-Plass linebreaking algorithm, which attempts to minimize
@@ -924,13 +920,13 @@ the lengths of all lines.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-line_leading">
-<span class="sig-name descname"><span class="pre">line_leading</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-line_leading" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">line_leading</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-line_leading" title="Link to this definition"></a></dt>
 <dd><p>The number of pixels of spacing to include above each line.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-line_overlap_split">
-<span class="sig-name descname"><span class="pre">line_overlap_split</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-line_overlap_split" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">line_overlap_split</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-line_overlap_split" title="Link to this definition"></a></dt>
 <dd><p>When in slow text mode, and two lines overlap, this many pixels of
 the overlap are allocated to the top line. Increase this if the
 bottoms of characters on the top line are clipped.</p>
@@ -938,13 +934,13 @@ bottoms of characters on the top line are clipped.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-line_spacing">
-<span class="sig-name descname"><span class="pre">line_spacing</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-line_spacing" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">line_spacing</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-line_spacing" title="Link to this definition"></a></dt>
 <dd><p>The number of pixels of spacing to include below each line.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-min_width">
-<span class="sig-name descname"><span class="pre">min_width</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-min_width" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">min_width</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-min_width" title="Link to this definition"></a></dt>
 <dd><p>Sets the minimum width of each line of that. If a line is shorter
 than this, it is padded to this length, with <code class="docutils literal notranslate"><span class="pre">textalign</span></code> used to
 specify where such padding is placed.</p>
@@ -952,7 +948,7 @@ specify where such padding is placed.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-newline_indent">
-<span class="sig-name descname"><span class="pre">newline_indent</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-newline_indent" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">newline_indent</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-newline_indent" title="Link to this definition"></a></dt>
 <dd><p>If true, the <a class="reference internal" href="#style-property-first_indent"><code class="xref std std-propref docutils literal notranslate"><span class="pre">first_indent</span></code></a> indentation is used after
 each newline in a string. Otherwise, the <a class="reference internal" href="#style-property-rest_indent"><code class="xref std std-propref docutils literal notranslate"><span class="pre">rest_indent</span></code></a>
 indentation is used.</p>
@@ -960,7 +956,7 @@ indentation is used.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-outlines">
-<span class="sig-name descname"><span class="pre">outlines</span></span> <span class="pre">-</span>&#160; <span class="pre">list</span> <span class="pre">of</span> <span class="pre">tuple</span> <span class="pre">of</span> <span class="pre">(int,</span> <span class="pre">color,</span> <span class="pre">int,</span> <span class="pre">int)</span><a class="headerlink" href="#style-property-outlines" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">outlines</span></span> <span class="pre">-</span>&#160; <span class="pre">list</span> <span class="pre">of</span> <span class="pre">tuple</span> <span class="pre">of</span> <span class="pre">(int,</span> <span class="pre">color,</span> <span class="pre">int,</span> <span class="pre">int)</span><a class="headerlink" href="#style-property-outlines" title="Link to this definition"></a></dt>
 <dd><p>This is a list of outlines that are drawn behind the text. Each
 tuple specifies an outline, and outlines are drawn from back to
 front.</p>
@@ -984,7 +980,7 @@ text tag, or other method that applies to only a portion of the text.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-outline_scaling">
-<span class="sig-name descname"><span class="pre">outline_scaling</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span><a class="headerlink" href="#style-property-outline_scaling" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">outline_scaling</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span><a class="headerlink" href="#style-property-outline_scaling" title="Link to this definition"></a></dt>
 <dd><p>This determines how outline sizes and offsets are scaled when the
 window is scaled.</p>
 <dl>
@@ -1007,7 +1003,7 @@ results depending on the size of the game window.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-prefer_emoji">
-<span class="sig-name descname"><span class="pre">prefer_emoji</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-prefer_emoji" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">prefer_emoji</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-prefer_emoji" title="Link to this definition"></a></dt>
 <dd><p>Some unicode characters have both Emoji and non-Emjoji presentations. This
 style property chooses if such characters are given the Emoji presentation
 or not.</p>
@@ -1015,14 +1011,14 @@ or not.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-rest_indent">
-<span class="sig-name descname"><span class="pre">rest_indent</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-rest_indent" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">rest_indent</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-rest_indent" title="Link to this definition"></a></dt>
 <dd><p>Specifies the number of pixels the second and later lines in a
 paragraph are indented by.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-ruby_line_leading">
-<span class="sig-name descname"><span class="pre">ruby_line_leading</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-ruby_line_leading" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">ruby_line_leading</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-ruby_line_leading" title="Link to this definition"></a></dt>
 <dd><p>The number of pixels of spacing to include above each line that
 contains <a class="reference internal" href="text.html#ruby-text"><span class="std std-ref">ruby text</span></a>. This is in addition to
 <a class="reference internal" href="#style-property-line_leading"><code class="xref std std-propref docutils literal notranslate"><span class="pre">line_leading</span></code></a>.</p>
@@ -1030,14 +1026,14 @@ contains <a class="reference internal" href="text.html#ruby-text"><span class="s
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-ruby_style">
-<span class="sig-name descname"><span class="pre">ruby_style</span></span> <span class="pre">-</span>&#160; <span class="pre">style</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-ruby_style" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">ruby_style</span></span> <span class="pre">-</span>&#160; <span class="pre">style</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-ruby_style" title="Link to this definition"></a></dt>
 <dd><p>If not None, this should be a style object. The style that's used for
 ruby text.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-shaper">
-<span class="sig-name descname"><span class="pre">shaper</span></span> <span class="pre">-</span>&#160; <span class="pre">&quot;harfbuzz&quot;</span> <span class="pre">or</span> <span class="pre">&quot;freetype&quot;.</span><a class="headerlink" href="#style-property-shaper" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">shaper</span></span> <span class="pre">-</span>&#160; <span class="pre">&quot;harfbuzz&quot;</span> <span class="pre">or</span> <span class="pre">&quot;freetype&quot;.</span><a class="headerlink" href="#style-property-shaper" title="Link to this definition"></a></dt>
 <dd><p>The shaper used on text. This should be one of &quot;harfbuzz&quot; or &quot;freetype&quot;.
 The harfbuzz shaper is more capable but only works on Ren'Py 8, while
 &quot;freetype&quot; works in Ren'Py 7 as well.</p>
@@ -1048,7 +1044,7 @@ languages, and combining emjoi.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-size">
-<span class="sig-name descname"><span class="pre">size</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-size" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">size</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-size" title="Link to this definition"></a></dt>
 <dd><p>The size of the font on the screen. While this is nominally in
 pixels, font files may have creative interpretations of this
 value.</p>
@@ -1056,7 +1052,7 @@ value.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-slow_abortable">
-<span class="sig-name descname"><span class="pre">slow_abortable</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-slow_abortable" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">slow_abortable</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-slow_abortable" title="Link to this definition"></a></dt>
 <dd><p>If True, a click that reaches the Text object will cause the slow
 text to abort, which means that the rest of the slow text will be
 displayed instantly.</p>
@@ -1064,7 +1060,7 @@ displayed instantly.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-slow_cps">
-<span class="sig-name descname"><span class="pre">slow_cps</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span> <span class="pre">or</span> <span class="pre">True</span><a class="headerlink" href="#style-property-slow_cps" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">slow_cps</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span> <span class="pre">or</span> <span class="pre">True</span><a class="headerlink" href="#style-property-slow_cps" title="Link to this definition"></a></dt>
 <dd><p>If a number, shows text at the rate of that many characters per
 second. If True, shows text at the speed taken from the &quot;Text
 Speed&quot; preference.</p>
@@ -1072,7 +1068,7 @@ Speed&quot; preference.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-slow_cps_multiplier">
-<span class="sig-name descname"><span class="pre">slow_cps_multiplier</span></span> <span class="pre">-</span>&#160; <span class="pre">float</span><a class="headerlink" href="#style-property-slow_cps_multiplier" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">slow_cps_multiplier</span></span> <span class="pre">-</span>&#160; <span class="pre">float</span><a class="headerlink" href="#style-property-slow_cps_multiplier" title="Link to this definition"></a></dt>
 <dd><p>The speed of the text is multiplied by this number. This can be
 used to have a character that speaks at a faster-than-normal rate
 of speed.</p>
@@ -1080,13 +1076,13 @@ of speed.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-strikethrough">
-<span class="sig-name descname"><span class="pre">strikethrough</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-strikethrough" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">strikethrough</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-strikethrough" title="Link to this definition"></a></dt>
 <dd><p>If True, a line is drawn through the text.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-textalign">
-<span class="sig-name descname"><span class="pre">textalign</span></span> <span class="pre">-</span>&#160; <span class="pre">float</span><a class="headerlink" href="#style-property-textalign" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">textalign</span></span> <span class="pre">-</span>&#160; <span class="pre">float</span><a class="headerlink" href="#style-property-textalign" title="Link to this definition"></a></dt>
 <dd><p>This is used when a line is shorter than the width of the text
 displayable. It determines how much of the extra space is placed
 on the left side of the text. (And hence, the text alignment.)</p>
@@ -1096,17 +1092,17 @@ right-aligned text.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-underline">
-<span class="sig-name descname"><span class="pre">underline</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-underline" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">underline</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-underline" title="Link to this definition"></a></dt>
 <dd><p>If True, an underline will be added to the text.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-vertical">
-<span class="sig-name descname"><span class="pre">vertical</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-vertical" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">vertical</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-vertical" title="Link to this definition"></a></dt>
 <dd><p>If True, the text will be rendered vertically.</p>
 <p>There are multiple caveats:</p>
 <ul class="simple">
-<li><p>If <a class="reference internal" href="#style-property-shaper"><code class="xref std std-propref docutils literal notranslate"><span class="pre">shaper</span></code></a> is harfbuzz, layout will likely be incorrect.</p></li>
+<li><p>If <a class="reference internal" href="#style-property-shaper"><code class="xref std std-propref docutils literal notranslate"><span class="pre">shaper</span></code></a> is &quot;freetype&quot;, vertical layout will likely be incorrect.</p></li>
 <li><p>Harfbuzz will convert horizontal forms to vertical forms if those
 forms are present in the font.</p></li>
 <li><p>Characters will be laid out top to bottom, right to left, but will
@@ -1120,12 +1116,12 @@ better than non-ideographic text.</p></li>
 
 </section>
 <section id="window-style-properties">
-<span id="id4"></span><h3>Window Style Properties<a class="headerlink" href="#window-style-properties" title="Permalink to this heading"> link</a></h3>
+<span id="id4"></span><h3>Window Style Properties<a class="headerlink" href="#window-style-properties" title="Link to this heading"></a></h3>
 <p>Window properties are used to specify the look of windows, frames, and
 buttons. <a class="reference internal" href="#margin-style-properties"><span class="std std-ref">Margin Style Properties</span></a> also form part of this group.</p>
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-background">
-<span class="sig-name descname"><span class="pre">background</span></span> <span class="pre">-</span>&#160; <span class="pre">displayable</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-background" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">background</span></span> <span class="pre">-</span>&#160; <span class="pre">displayable</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-background" title="Link to this definition"></a></dt>
 <dd><p>A displayable that is used as the background of the window. This
 is often a <a class="reference internal" href="displayables.html#Frame" title="Frame"><code class="xref py py-func docutils literal notranslate"><span class="pre">Frame()</span></code></a>, allowing the size of the background to
 scale with the size of the window.</p>
@@ -1135,56 +1131,56 @@ if the background was present.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-foreground">
-<span class="sig-name descname"><span class="pre">foreground</span></span> <span class="pre">-</span>&#160; <span class="pre">displayable</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-foreground" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">foreground</span></span> <span class="pre">-</span>&#160; <span class="pre">displayable</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-foreground" title="Link to this definition"></a></dt>
 <dd><p>If not None, this displayable is drawn above the contents of the
 window.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-left_padding">
-<span class="sig-name descname"><span class="pre">left_padding</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-left_padding" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">left_padding</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-left_padding" title="Link to this definition"></a></dt>
 <dd><p>The amount of space between the background and the left side of
 the window content, in pixels.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-right_padding">
-<span class="sig-name descname"><span class="pre">right_padding</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-right_padding" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">right_padding</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-right_padding" title="Link to this definition"></a></dt>
 <dd><p>The amount of space between the background and the right side of
 the window content, in pixels.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-xpadding">
-<span class="sig-name descname"><span class="pre">xpadding</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-xpadding" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">xpadding</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-xpadding" title="Link to this definition"></a></dt>
 <dd><p>Equivalent to setting left_padding and right_padding to the same
 value.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-top_padding">
-<span class="sig-name descname"><span class="pre">top_padding</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-top_padding" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">top_padding</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-top_padding" title="Link to this definition"></a></dt>
 <dd><p>The amount of space between the background and the top side of
 the window content, in pixels.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-bottom_padding">
-<span class="sig-name descname"><span class="pre">bottom_padding</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-bottom_padding" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">bottom_padding</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-bottom_padding" title="Link to this definition"></a></dt>
 <dd><p>The amount of space between the background and the bottom side of
 the window content, in pixels.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-ypadding">
-<span class="sig-name descname"><span class="pre">ypadding</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-ypadding" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">ypadding</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-ypadding" title="Link to this definition"></a></dt>
 <dd><p>Equivalent to setting top_padding and bottom_padding to the same
 value.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-padding">
-<span class="sig-name descname"><span class="pre">padding</span></span> <span class="pre">-</span>&#160; <span class="pre">tuple</span><a class="headerlink" href="#style-property-padding" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">padding</span></span> <span class="pre">-</span>&#160; <span class="pre">tuple</span><a class="headerlink" href="#style-property-padding" title="Link to this definition"></a></dt>
 <dd><p>When given a two-item tuple, equivalent to setting xpadding and
 ypadding to the two items. When given a four-item tuple, equivalent
 to setting left_padding, top_padding, right_padding, and bottom_padding
@@ -1193,14 +1189,14 @@ to the four items.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-size_group">
-<span class="sig-name descname"><span class="pre">size_group</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-size_group" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">size_group</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-size_group" title="Link to this definition"></a></dt>
 <dd><p>If not None, this should be a string. Ren'Py will render all
 windows with the same size_group value at the same size.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-modal">
-<span class="sig-name descname"><span class="pre">modal</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span> <span class="pre">or</span> <span class="pre">callable</span><a class="headerlink" href="#style-property-modal" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">modal</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span> <span class="pre">or</span> <span class="pre">callable</span><a class="headerlink" href="#style-property-modal" title="Link to this definition"></a></dt>
 <dd><p>If True, the window is treated as modal. Events will stop propagating
 through layers while the mouse is within the window or button. If False,
 the window is not modal.</p>
@@ -1214,10 +1210,10 @@ returns false, it is not.</p>
 
 </section>
 <section id="button-style-properties">
-<span id="id5"></span><h3>Button Style Properties<a class="headerlink" href="#button-style-properties" title="Permalink to this heading"> link</a></h3>
+<span id="id5"></span><h3>Button Style Properties<a class="headerlink" href="#button-style-properties" title="Link to this heading"></a></h3>
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-child">
-<span class="sig-name descname"><span class="pre">child</span></span> <span class="pre">-</span>&#160; <span class="pre">displayable</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-child" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">child</span></span> <span class="pre">-</span>&#160; <span class="pre">displayable</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-child" title="Link to this definition"></a></dt>
 <dd><p>If not None, this gives a displayable that replaces the child of the
 button. For example, this (as insensitive_child) can be used to replace the
 contents of an insensitive button with an image that indicates the button
@@ -1226,27 +1222,27 @@ is locked.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-hover_sound">
-<span class="sig-name descname"><span class="pre">hover_sound</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span><a class="headerlink" href="#style-property-hover_sound" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">hover_sound</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span><a class="headerlink" href="#style-property-hover_sound" title="Link to this definition"></a></dt>
 <dd><p>A sound that is played when the button gains focus.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-activate_sound">
-<span class="sig-name descname"><span class="pre">activate_sound</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span><a class="headerlink" href="#style-property-activate_sound" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">activate_sound</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span><a class="headerlink" href="#style-property-activate_sound" title="Link to this definition"></a></dt>
 <dd><p>A sound that is played when the button is activated (clicked). This is also
 played when a bar or drag is activated.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-mouse">
-<span class="sig-name descname"><span class="pre">mouse</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span><a class="headerlink" href="#style-property-mouse" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">mouse</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span><a class="headerlink" href="#style-property-mouse" title="Link to this definition"></a></dt>
 <dd><p>The mouse style that is used when the button is focused. This
 should be one of the styles in <a class="reference internal" href="config.html#var-config.mouse"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.mouse</span></code></a>.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-focus_mask">
-<span class="sig-name descname"><span class="pre">focus_mask</span></span> <span class="pre">-</span>&#160; <span class="pre">multiple</span><a class="headerlink" href="#style-property-focus_mask" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">focus_mask</span></span> <span class="pre">-</span>&#160; <span class="pre">multiple</span><a class="headerlink" href="#style-property-focus_mask" title="Link to this definition"></a></dt>
 <dd><p>A mask that's used to control what portions of the button can be
 focused, and hence clicked on. The type of this property determines
 how it is interpreted.</p>
@@ -1274,16 +1270,28 @@ and height of the displayable.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-keyboard_focus">
-<span class="sig-name descname"><span class="pre">keyboard_focus</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-keyboard_focus" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">keyboard_focus</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-keyboard_focus" title="Link to this definition"></a></dt>
 <dd><p>If True, the default, this button can be focused using the keyboard focus
 mechanism, if it can be focused at all. If False, the keyboard focus
 mechanism will skip this button. (The keyboard focus mechanism is used
-by keyboards and keyboard-like devices, such as joypads.)</p>
+by keyboards and keyboard-like devices, such as gamepads.)</p>
+</dd></dl>
+
+<dl class="std style-property">
+<dt class="sig sig-object std" id="style-property-keyboard_focus_insets">
+<span class="sig-name descname"><span class="pre">keyboard_focus_insets</span></span> <span class="pre">-</span>&#160; <span class="pre">(int,</span> <span class="pre">int,</span> <span class="pre">int,</span> <span class="pre">int)</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-keyboard_focus_insets" title="Link to this definition"></a></dt>
+<dd><p>If not None, this should be a tuple of four integers, giving the
+number of pixels that are used to shrink the left, top, right, and
+bottom sides of the focus rectangle, when it's used for keyboard
+focus.</p>
+<p>This can be useful when buttons overlap. The keyboard focus algorithm
+doesn't work with overlapping buttons, and so this can be used to to
+shrink the size of the buttons internally, allowing focus to work.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-key_events">
-<span class="sig-name descname"><span class="pre">key_events</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-key_events" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">key_events</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-key_events" title="Link to this definition"></a></dt>
 <dd><p>If True, keyboard-generated events are passed to the children of this
 button. If False, those events are not propagated. In this default style,
 this is set to True while the button is hovered, and False otherwise.</p>
@@ -1293,7 +1301,7 @@ inside a button, even when the button isn't focused.</p>
 
 </section>
 <section id="bar-style-properties">
-<span id="id6"></span><h3>Bar Style Properties<a class="headerlink" href="#bar-style-properties" title="Permalink to this heading"> link</a></h3>
+<span id="id6"></span><h3>Bar Style Properties<a class="headerlink" href="#bar-style-properties" title="Link to this heading"></a></h3>
 <p>Bars are drawn with gutters on the left and right, that when clicked can cause
 the bar to move by a small amount. The remaining space is the portion of the
 bar that can change, with the amount on each side proportional to the bar's
@@ -1306,76 +1314,76 @@ property. If it's True, the top and bottom sides are relevant. Otherwise, the
 left and right sides are used.</p>
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-bar_vertical">
-<span class="sig-name descname"><span class="pre">bar_vertical</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-bar_vertical" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">bar_vertical</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-bar_vertical" title="Link to this definition"></a></dt>
 <dd><p>If True, the bar has a vertical orientation. If False, it has a
 horizontal orientation.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-bar_invert">
-<span class="sig-name descname"><span class="pre">bar_invert</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-bar_invert" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">bar_invert</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-bar_invert" title="Link to this definition"></a></dt>
 <dd><p>If True, the value of the bar is represented on the right/top
 side of the bar, rather than the left/bottom side.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-bar_resizing">
-<span class="sig-name descname"><span class="pre">bar_resizing</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-bar_resizing" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">bar_resizing</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-bar_resizing" title="Link to this definition"></a></dt>
 <dd><p>If True, we resize the sides of the bar. If False, we render the
 sides of the bar at full size, and then crop them.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-left_gutter">
-<span class="sig-name descname"><span class="pre">left_gutter</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-left_gutter" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">left_gutter</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-left_gutter" title="Link to this definition"></a></dt>
 <dd><p>The size of the gutter on the left side of the bar, in pixels.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-right_gutter">
-<span class="sig-name descname"><span class="pre">right_gutter</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-right_gutter" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">right_gutter</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-right_gutter" title="Link to this definition"></a></dt>
 <dd><p>The size of the gutter on the right side of the bar, in pixels.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-top_gutter">
-<span class="sig-name descname"><span class="pre">top_gutter</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-top_gutter" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">top_gutter</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-top_gutter" title="Link to this definition"></a></dt>
 <dd><p>The size of the gutter on the top side of the bar, in pixels.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-bottom_gutter">
-<span class="sig-name descname"><span class="pre">bottom_gutter</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-bottom_gutter" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">bottom_gutter</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-bottom_gutter" title="Link to this definition"></a></dt>
 <dd><p>The size of the gutter on the bottom side of the bar, in pixels.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-left_bar">
-<span class="sig-name descname"><span class="pre">left_bar</span></span> <span class="pre">-</span>&#160; <span class="pre">displayable</span><a class="headerlink" href="#style-property-left_bar" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">left_bar</span></span> <span class="pre">-</span>&#160; <span class="pre">displayable</span><a class="headerlink" href="#style-property-left_bar" title="Link to this definition"></a></dt>
 <dd><p>The displayable used for the left side of the bar.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-right_bar">
-<span class="sig-name descname"><span class="pre">right_bar</span></span> <span class="pre">-</span>&#160; <span class="pre">displayable</span><a class="headerlink" href="#style-property-right_bar" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">right_bar</span></span> <span class="pre">-</span>&#160; <span class="pre">displayable</span><a class="headerlink" href="#style-property-right_bar" title="Link to this definition"></a></dt>
 <dd><p>The displayable used for the right side of the bar.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-top_bar">
-<span class="sig-name descname"><span class="pre">top_bar</span></span> <span class="pre">-</span>&#160; <span class="pre">displayable</span><a class="headerlink" href="#style-property-top_bar" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">top_bar</span></span> <span class="pre">-</span>&#160; <span class="pre">displayable</span><a class="headerlink" href="#style-property-top_bar" title="Link to this definition"></a></dt>
 <dd><p>The displayable used for the top side of the bar.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-bottom_bar">
-<span class="sig-name descname"><span class="pre">bottom_bar</span></span> <span class="pre">-</span>&#160; <span class="pre">displayable</span><a class="headerlink" href="#style-property-bottom_bar" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">bottom_bar</span></span> <span class="pre">-</span>&#160; <span class="pre">displayable</span><a class="headerlink" href="#style-property-bottom_bar" title="Link to this definition"></a></dt>
 <dd><p>The displayable uses for the bottom side of the bar.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-base_bar">
-<span class="sig-name descname"><span class="pre">base_bar</span></span> <span class="pre">-</span>&#160; <span class="pre">displayable</span><a class="headerlink" href="#style-property-base_bar" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">base_bar</span></span> <span class="pre">-</span>&#160; <span class="pre">displayable</span><a class="headerlink" href="#style-property-base_bar" title="Link to this definition"></a></dt>
 <dd><p>A single displayable that is used for left_bar/right_bar or
 top_bar/bottom_bar, as appropriate. (This can be used
 with thumb to make a slider or scrollbar.)</p>
@@ -1383,21 +1391,21 @@ with thumb to make a slider or scrollbar.)</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-thumb">
-<span class="sig-name descname"><span class="pre">thumb</span></span> <span class="pre">-</span>&#160; <span class="pre">displayable</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-thumb" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">thumb</span></span> <span class="pre">-</span>&#160; <span class="pre">displayable</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-thumb" title="Link to this definition"></a></dt>
 <dd><p>If not None, this is a displayable that is drawn over the break
 between the sides of the bar.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-thumb_shadow">
-<span class="sig-name descname"><span class="pre">thumb_shadow</span></span> <span class="pre">-</span>&#160; <span class="pre">displayable</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-thumb_shadow" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">thumb_shadow</span></span> <span class="pre">-</span>&#160; <span class="pre">displayable</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-thumb_shadow" title="Link to this definition"></a></dt>
 <dd><p>If not None, this is a displayable that is drawn over the break
 between the sides of the bar.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-thumb_offset">
-<span class="sig-name descname"><span class="pre">thumb_offset</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-thumb_offset" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">thumb_offset</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-thumb_offset" title="Link to this definition"></a></dt>
 <dd><p>The amount that by which the thumb overlaps the bars, in
 pixels. To have the left and right bars continue unbroken, set
 this to half the width of the thumb in pixels.</p>
@@ -1405,14 +1413,14 @@ this to half the width of the thumb in pixels.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-mouse_alt">
-<span class="sig-name descname"><span class="pre">mouse</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span><a class="headerlink" href="#style-property-mouse_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">mouse</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span><a class="headerlink" href="#style-property-mouse_alt" title="Link to this definition"></a></dt>
 <dd><p>The mouse style that is used when the button is focused. This
 should be one of the styles in <a class="reference internal" href="config.html#var-config.mouse"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.mouse</span></code></a>.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-unscrollable">
-<span class="sig-name descname"><span class="pre">unscrollable</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-unscrollable" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">unscrollable</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-unscrollable" title="Link to this definition"></a></dt>
 <dd><p>Controls what happens if the bar is unscrollable (if the range is
 set to 0, as is the case with a viewport containing a displayable
 smaller than itself). There are three possible values:</p>
@@ -1430,7 +1438,7 @@ for the bar, but nothing will be drawn in that space.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-keyboard_focus_alt">
-<span class="sig-name descname"><span class="pre">keyboard_focus</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-keyboard_focus_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">keyboard_focus</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-keyboard_focus_alt" title="Link to this definition"></a></dt>
 <dd><p>If True, the default, this button can be focused using the keyboard focus
 mechanism, if it can be focused at all. If False, the keyboard focus
 mechanism will skip this button. (The keyboard focus mechanism is used
@@ -1439,24 +1447,24 @@ by keyboards and keyboard-like devices, such as joypads.)</p>
 
 </section>
 <section id="box-style-properties">
-<span id="id7"></span><h3>Box Style Properties<a class="headerlink" href="#box-style-properties" title="Permalink to this heading"> link</a></h3>
+<span id="id7"></span><h3>Box Style Properties<a class="headerlink" href="#box-style-properties" title="Link to this heading"></a></h3>
 <p>These are used for the horizontal and vertical box layouts.</p>
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-spacing">
-<span class="sig-name descname"><span class="pre">spacing</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-spacing" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">spacing</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-spacing" title="Link to this definition"></a></dt>
 <dd><p>The spacing between members of this box, in pixels.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-first_spacing">
-<span class="sig-name descname"><span class="pre">first_spacing</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-first_spacing" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">first_spacing</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-first_spacing" title="Link to this definition"></a></dt>
 <dd><p>If not None, the spacing between the first and second members of
 this box, in pixels. This overrides the spacing property.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-box_reverse">
-<span class="sig-name descname"><span class="pre">box_reverse</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-box_reverse" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">box_reverse</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-box_reverse" title="Link to this definition"></a></dt>
 <dd><p>If True, the placement of the items in the box will be reversed. When
 this is True, a hbox will be filled right-to-left, and a vbox will
 be filled bottom-to-top. This defaults to False.</p>
@@ -1464,60 +1472,85 @@ be filled bottom-to-top. This defaults to False.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-box_wrap">
-<span class="sig-name descname"><span class="pre">box_wrap</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-box_wrap" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">box_wrap</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-box_wrap" title="Link to this definition"></a></dt>
 <dd><p>If True, then boxes will wrap when they reach the end of a line or column.
 If False (the default), they will extend past the end of the line.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-box_wrap_spacing">
-<span class="sig-name descname"><span class="pre">box_wrap_spacing</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-box_wrap_spacing" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">box_wrap_spacing</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-box_wrap_spacing" title="Link to this definition"></a></dt>
 <dd><p>When box_wrap is True, this is the spacing between wrapped lines
 or columns. (So it is the vertical spacing between lines in a wrapped
 hbox, and the horizontal spacing between columns in a wrapped vbox.)</p>
 </dd></dl>
 
 <dl class="std style-property">
+<dt class="sig sig-object std" id="style-property-box_align">
+<span class="sig-name descname"><span class="pre">box_align</span></span> <span class="pre">-</span>&#160; <span class="pre">float</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-box_align" title="Link to this definition"></a></dt>
+<dd><p>This determines the alignment of rows or columns in a box. If 0.0,
+the default, rows are left-aligned and columns are top-aligned. If 0.5,
+it will center wrapped rows.</p>
+<p>When this is not None, addional space will not be offered to the child when
+<a class="reference internal" href="#style-property-xfill"><code class="xref std std-propref docutils literal notranslate"><span class="pre">xfill</span></code></a> or <a class="reference internal" href="#style-property-yfill"><code class="xref std std-propref docutils literal notranslate"><span class="pre">yfill</span></code></a> is set, ignoring the child's position
+in the box's primary direction.</p>
+</dd></dl>
+
+<dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-order_reverse">
-<span class="sig-name descname"><span class="pre">order_reverse</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-order_reverse" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">order_reverse</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-order_reverse" title="Link to this definition"></a></dt>
 <dd><p>If False, the default, the items in the box will be drawn first-to-last,
 with the first item in the box being below the second, and so on. If True,
 this order will be reversed, and the first item in the box will be above
 all other items in the box.</p>
 </dd></dl>
 
+<dl class="std style-property">
+<dt class="sig sig-object std" id="style-property-box_justify">
+<span class="sig-name descname"><span class="pre">box_justify</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span> <span class="pre">or</span> <span class="pre">&quot;first&quot;</span> <span class="pre">or</span> <span class="pre">&quot;all&quot;</span><a class="headerlink" href="#style-property-box_justify" title="Link to this definition"></a></dt>
+<dd><p>If not False, the contents of the box will be justified - that is, the items
+inside the box will have the spacing between them adjusted so they evenly
+span the size of the box. True will cause all lines but the final line to be
+justified. &quot;first&quot; will cause only the first line to be justified. &quot;all&quot;
+will cause all lines to be justified, including the final line. Justified
+lines do not obey box_align, except when there is only one item in a line.</p>
+<p>When this is not false, addional space will not be offered to the child when
+<a class="reference internal" href="#style-property-xfill"><code class="xref std std-propref docutils literal notranslate"><span class="pre">xfill</span></code></a> or <a class="reference internal" href="#style-property-yfill"><code class="xref std std-propref docutils literal notranslate"><span class="pre">yfill</span></code></a> is set, ignoring the child's position
+in the box's primary direction.</p>
+</dd></dl>
+
 </section>
 <section id="grid-style-properties">
-<span id="id8"></span><h3>Grid Style Properties<a class="headerlink" href="#grid-style-properties" title="Permalink to this heading"> link</a></h3>
+<span id="id8"></span><h3>Grid Style Properties<a class="headerlink" href="#grid-style-properties" title="Link to this heading"></a></h3>
 <p>These are the properties used by the grid and vpgrid displayables.
 <a class="reference internal" href="#margin-style-properties"><span class="std std-ref">Margin Style Properties</span></a> also form part of this group.</p>
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-spacing_alt">
-<span class="sig-name descname"><span class="pre">spacing</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-spacing_alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">spacing</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-spacing_alt" title="Link to this definition"></a></dt>
 <dd><p>The spacing between cells of the grid, in pixels.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-xspacing">
-<span class="sig-name descname"><span class="pre">xspacing</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-xspacing" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">xspacing</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-xspacing" title="Link to this definition"></a></dt>
 <dd><p>The spacing between cells of the grid in the horizontal direction, in pixels.
 This takes precedence over the spacing property when it is not None.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-yspacing">
-<span class="sig-name descname"><span class="pre">yspacing</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-yspacing" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">yspacing</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-yspacing" title="Link to this definition"></a></dt>
 <dd><p>The spacing between cells of the grid in the vertical direction, in pixels.
 This takes precedence over the spacing property when it is not None.</p>
 </dd></dl>
 
 </section>
 <section id="fixed-style-properties">
-<span id="id9"></span><h3>Fixed Style Properties<a class="headerlink" href="#fixed-style-properties" title="Permalink to this heading"> link</a></h3>
+<span id="id9"></span><h3>Fixed Style Properties<a class="headerlink" href="#fixed-style-properties" title="Link to this heading"></a></h3>
 <p>These are used with the fixed layout.</p>
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-fit_first">
-<span class="sig-name descname"><span class="pre">fit_first</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span> <span class="pre">or</span> <span class="pre">&quot;width&quot;</span> <span class="pre">or</span> <span class="pre">&quot;height&quot;</span><a class="headerlink" href="#style-property-fit_first" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">fit_first</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span> <span class="pre">or</span> <span class="pre">&quot;width&quot;</span> <span class="pre">or</span> <span class="pre">&quot;height&quot;</span><a class="headerlink" href="#style-property-fit_first" title="Link to this definition"></a></dt>
 <dd><p>If True, then the size of the fixed layout is shrunk to be equal with
 the size of the first item in the layout. If &quot;width&quot;, only the width is changed
 (the fixed will fill the screen vertically). Similarly, &quot;height&quot; only changes
@@ -1527,14 +1560,14 @@ the height.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-xfit">
-<span class="sig-name descname"><span class="pre">xfit</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-xfit" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">xfit</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-xfit" title="Link to this definition"></a></dt>
 <dd><p>If True, the size of the fixed layout is shrunk horizontally to match the
 right side of the rightmost child of the fixed.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-yfit">
-<span class="sig-name descname"><span class="pre">yfit</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-yfit" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">yfit</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-yfit" title="Link to this definition"></a></dt>
 <dd><p>If True, the size of the fixed layout is shrunk vertically to match the
 bottom side of the bottommost child of the fixed.</p>
 </dd></dl>
@@ -1545,53 +1578,53 @@ and placement of the children are known, these properties are then used
 to select the size of the fixed.</p>
 </section>
 <section id="margin-style-properties">
-<span id="id10"></span><h3>Margin Style Properties<a class="headerlink" href="#margin-style-properties" title="Permalink to this heading"> link</a></h3>
+<span id="id10"></span><h3>Margin Style Properties<a class="headerlink" href="#margin-style-properties" title="Link to this heading"></a></h3>
 <p>Margin properties are used to add transparent space around some
 displayables. Most notably: windows, frames, buttons and outside
 a grid or vpgrid.</p>
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-left_margin">
-<span class="sig-name descname"><span class="pre">left_margin</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-left_margin" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">left_margin</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-left_margin" title="Link to this definition"></a></dt>
 <dd><p>The amount of transparent space to the left of the displayable, in
 pixels.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-right_margin">
-<span class="sig-name descname"><span class="pre">right_margin</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-right_margin" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">right_margin</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-right_margin" title="Link to this definition"></a></dt>
 <dd><p>The amount of transparent space to the right of the displayable, in
 pixels.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-xmargin">
-<span class="sig-name descname"><span class="pre">xmargin</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-xmargin" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">xmargin</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-xmargin" title="Link to this definition"></a></dt>
 <dd><p>Equivalent to setting left_margin and right_margin to the same
 value.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-top_margin">
-<span class="sig-name descname"><span class="pre">top_margin</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-top_margin" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">top_margin</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-top_margin" title="Link to this definition"></a></dt>
 <dd><p>The amount of transparent space above the displayable, in pixels.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-bottom_margin">
-<span class="sig-name descname"><span class="pre">bottom_margin</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-bottom_margin" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">bottom_margin</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-bottom_margin" title="Link to this definition"></a></dt>
 <dd><p>The amount of transparent space below the displayable, in pixels.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-ymargin">
-<span class="sig-name descname"><span class="pre">ymargin</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-ymargin" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">ymargin</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-ymargin" title="Link to this definition"></a></dt>
 <dd><p>Equivalent to setting top_margin and bottom_margin to the same
 value.</p>
 </dd></dl>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-margin">
-<span class="sig-name descname"><span class="pre">margin</span></span> <span class="pre">-</span>&#160; <span class="pre">tuple</span><a class="headerlink" href="#style-property-margin" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">margin</span></span> <span class="pre">-</span>&#160; <span class="pre">tuple</span><a class="headerlink" href="#style-property-margin" title="Link to this definition"></a></dt>
 <dd><p>When given a two-item tuple, equivalent to setting xmargin and
 ymargin to the two items. When given a four-item tuple, equivalent
 to setting left_margin, top_margin, right_margin, and bottom_margin

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Text &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/text.html" />
@@ -17,14 +17,13 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -66,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -122,8 +122,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
@@ -141,6 +141,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -169,10 +170,8 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -184,6 +183,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul>
@@ -251,7 +251,7 @@
            <div itemprop="articleBody">
              
   <section id="text">
-<span id="id1"></span><h1>Text<a class="headerlink" href="#text" title="Permalink to this heading"> link</a></h1>
+<span id="id1"></span><h1>Text<a class="headerlink" href="#text" title="Link to this heading"></a></h1>
 <p>Ren'Py contains several ways of displaying text. The <a class="reference internal" href="dialogue.html#say-statement"><span class="std std-ref">say</span></a>
 and <a class="reference internal" href="menus.html"><span class="doc">menu</span></a> statements are primarily concerned with the
 display of text to the user. The user interface often contains text,
@@ -271,7 +271,7 @@ the following order:</p>
 </ol>
 <p>This chapter discusses the process of text display in Ren'Py.</p>
 <section id="escape-characters">
-<h2>Escape Characters<a class="headerlink" href="#escape-characters" title="Permalink to this heading"> link</a></h2>
+<h2>Escape Characters<a class="headerlink" href="#escape-characters" title="Link to this heading"></a></h2>
 <p>There are three special characters that can control the way Ren'Py
 displays text. A creator needs to be aware of these characters to
 ensure that their writing is not accidentally misinterpreted by the engine.</p>
@@ -311,7 +311,7 @@ text. To include a left lenticular bracket in your text, double it
 </dl>
 </section>
 <section id="interpolating-data">
-<span id="text-interpolation"></span><h2>Interpolating Data<a class="headerlink" href="#interpolating-data" title="Permalink to this heading"> link</a></h2>
+<span id="text-interpolation"></span><h2>Interpolating Data<a class="headerlink" href="#interpolating-data" title="Link to this heading"></a></h2>
 <p>Ren'Py supports interpolating data into the text string before it is
 displayed. For example, if the player's name is stored in the
 <code class="docutils literal notranslate"><span class="pre">playername</span></code> variable, one could write a line of dialogue like:</p>
@@ -368,7 +368,7 @@ capitalize the first character, and force the remaining text to lowercase.</p>
 <ul class="simple">
 <li><p>the order in which the flags are given does not change the result : <code class="docutils literal notranslate"><span class="pre">!cl</span></code>
 will do just the same as <code class="docutils literal notranslate"><span class="pre">!lc</span></code>.</p></li>
-<li><p>Supplementarly exclamation marks will be ignored, and will not circumvent
+<li><p>Supplementary exclamation marks will be ignored, and will not circumvent
 the previous rule : <code class="docutils literal notranslate"><span class="pre">!l!c</span></code> will do the same as <code class="docutils literal notranslate"><span class="pre">!c!l</span></code> or <code class="docutils literal notranslate"><span class="pre">!cl</span></code>.</p></li>
 </ul>
 <p>The transformations are done in the following order:</p>
@@ -383,7 +383,7 @@ the previous rule : <code class="docutils literal notranslate"><span class="pre"
 </ol>
 </section>
 <section id="styling-and-text-tags">
-<h2>Styling and Text Tags<a class="headerlink" href="#styling-and-text-tags" title="Permalink to this heading"> link</a></h2>
+<h2>Styling and Text Tags<a class="headerlink" href="#styling-and-text-tags" title="Link to this heading"></a></h2>
 <p>In Ren'Py, text gains style information in two ways. The first is from
 the style that is applied to the entire block of text. Please see the
 section about the <a class="reference internal" href="style.html"><span class="doc">style system</span></a> for more details,
@@ -414,11 +414,11 @@ followed by an equals sign (=), and the argument. The argument may
 not contain the right-brace (}) character. The meaning of the
 argument varies based on the text tag.</p>
 <section id="general-text-tags">
-<h3>General Text Tags<a class="headerlink" href="#general-text-tags" title="Permalink to this heading"> link</a></h3>
+<h3>General Text Tags<a class="headerlink" href="#general-text-tags" title="Link to this heading"></a></h3>
 <p>Tags that apply to all text are:</p>
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-a">
-<span class="sig-name descname"><span class="pre">a</span></span><a class="headerlink" href="#text-tag-a" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">a</span></span><a class="headerlink" href="#text-tag-a" title="Link to this definition"></a></dt>
 <dd><p>The anchor tag creates a hyperlink between itself and its closing
 tag. While the behavior of the hyperlink is controlled by the
 <a class="reference internal" href="style_properties.html#style-property-hyperlink_functions"><code class="xref std std-propref docutils literal notranslate"><span class="pre">hyperlink_functions</span></code></a> style property, the default handler
@@ -459,7 +459,7 @@ protocols using <a class="reference internal" href="config.html#var-config.hyper
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-alpha">
-<span class="sig-name descname"><span class="pre">alpha</span></span><a class="headerlink" href="#text-tag-alpha" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">alpha</span></span><a class="headerlink" href="#text-tag-alpha" title="Link to this definition"></a></dt>
 <dd><p>The alpha text tag renders the text between itself and its closing
 tag in the specified opacity. The opacity should be a value between
 0.0 and 1.0, corresponding to fully invisible and fully opaque,
@@ -476,7 +476,7 @@ that amount.</p>
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-alt">
-<span class="sig-name descname"><span class="pre">alt</span></span><a class="headerlink" href="#text-tag-alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">alt</span></span><a class="headerlink" href="#text-tag-alt" title="Link to this definition"></a></dt>
 <dd><p>The alt tag prevents text from being rendered, while still making the
 text available for the text-to-speech system.</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="s2">&quot;Good to see you! {image=heart.png}</span><span class="si">{alt}</span><span class="s2">heart{/alt}&quot;</span>
@@ -487,7 +487,7 @@ text available for the text-to-speech system.</p>
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-art">
-<span class="sig-name descname"><span class="pre">art</span></span><a class="headerlink" href="#text-tag-art" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">art</span></span><a class="headerlink" href="#text-tag-art" title="Link to this definition"></a></dt>
 <dd><p>The alternate ruby top tag marks text between itself and its closing tag as
 alternate ruby top text. See the section on <a class="reference internal" href="#ruby-text"><span class="std std-ref">Ruby Text</span></a> for
 more information.</p>
@@ -495,7 +495,7 @@ more information.</p>
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-b">
-<span class="sig-name descname"><span class="pre">b</span></span><a class="headerlink" href="#text-tag-b" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">b</span></span><a class="headerlink" href="#text-tag-b" title="Link to this definition"></a></dt>
 <dd><p>The bold tag renders the text between itself and its closing tag
 in a bold font.</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;An example of </span><span class="si">{b}</span><span class="s2">bold test{/b}.&quot;</span>
@@ -505,7 +505,7 @@ in a bold font.</p>
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-color">
-<span class="sig-name descname"><span class="pre">color</span></span><a class="headerlink" href="#text-tag-color" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">color</span></span><a class="headerlink" href="#text-tag-color" title="Link to this definition"></a></dt>
 <dd><p>The color text tag renders the text between itself and its closing
 tag in the specified color. The color should be in #rgb, #rgba,
 #rrggbb, or #rrggbbaa format.</p>
@@ -516,7 +516,7 @@ tag in the specified color. The color should be in #rgb, #rgba,
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-cps">
-<span class="sig-name descname"><span class="pre">cps</span></span><a class="headerlink" href="#text-tag-cps" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">cps</span></span><a class="headerlink" href="#text-tag-cps" title="Link to this definition"></a></dt>
 <dd><p>The characters per second tag sets the speed of text display, for
 text between the tag and its closing tag. If the argument begins
 with an asterisk, it's taken as a multiplier to the current text
@@ -529,7 +529,7 @@ at, in characters per second.</p>
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-font">
-<span class="sig-name descname"><span class="pre">font</span></span><a class="headerlink" href="#text-tag-font" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">font</span></span><a class="headerlink" href="#text-tag-font" title="Link to this definition"></a></dt>
 <dd><p>The font tag renders the text between itself and its closing tag
 in the specified font. The argument is the filename of the font to
 use.</p>
@@ -540,7 +540,7 @@ use.</p>
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-i">
-<span class="sig-name descname"><span class="pre">i</span></span><a class="headerlink" href="#text-tag-i" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">i</span></span><a class="headerlink" href="#text-tag-i" title="Link to this definition"></a></dt>
 <dd><p>The italics tag renders the text between itself and its closing tag
 in italics.</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Visit the </span><span class="si">{i}</span><span class="s2">leaning tower of Pisa{/i}.&quot;</span>
@@ -550,7 +550,7 @@ in italics.</p>
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-image">
-<span class="sig-name descname"><span class="pre">image</span></span><a class="headerlink" href="#text-tag-image" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">image</span></span><a class="headerlink" href="#text-tag-image" title="Link to this definition"></a></dt>
 <dd><p>The image tag is a self-closing tag that inserts an image into the
 text. The image should be the height of a single line of text. The
 argument should be either the image filename, or the name of an
@@ -562,7 +562,7 @@ image defined with the image statement.</p>
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-k">
-<span class="sig-name descname"><span class="pre">k</span></span><a class="headerlink" href="#text-tag-k" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">k</span></span><a class="headerlink" href="#text-tag-k" title="Link to this definition"></a></dt>
 <dd><p>The kerning tag is a tag that adjust the kerning of characters
 between itself and its closing tag. It takes as an argument a
 floating point number giving the number of pixels of kerning to add
@@ -575,10 +575,10 @@ kerning.)</p>
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-noalt">
-<span class="sig-name descname"><span class="pre">noalt</span></span><a class="headerlink" href="#text-tag-noalt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">noalt</span></span><a class="headerlink" href="#text-tag-noalt" title="Link to this definition"></a></dt>
 <dd><p>The noalt tag prevents text from being spoken by the text-to-speech
-system. This is often used in conjuction with the alt tag, to provide
-accessible and visual optiopns</p>
+system. This is often used in conjunction with the alt tag, to provide
+accessible and visual options</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="s2">&quot;Good to see you! </span><span class="si">{noalt}</span><span class="s2">&lt;3{/noalt}</span><span class="si">{alt}</span><span class="s2">heart{/alt}&quot;</span>
 </pre></div>
 </div>
@@ -586,7 +586,7 @@ accessible and visual optiopns</p>
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-outlinecolor">
-<span class="sig-name descname"><span class="pre">outlinecolor</span></span><a class="headerlink" href="#text-tag-outlinecolor" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">outlinecolor</span></span><a class="headerlink" href="#text-tag-outlinecolor" title="Link to this definition"></a></dt>
 <dd><p>The outline text tag changes all the outlines (including drop
 shadows) to the given color. The color should be in #rgb, #rgba,
 #rrggbb, or #rrggbbaa format.</p>
@@ -597,7 +597,7 @@ shadows) to the given color. The color should be in #rgb, #rgba,
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-plain">
-<span class="sig-name descname"><span class="pre">plain</span></span><a class="headerlink" href="#text-tag-plain" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">plain</span></span><a class="headerlink" href="#text-tag-plain" title="Link to this definition"></a></dt>
 <dd><p>The plain tag ensures the text does not have bold, italics, underline,
 or strikethrough applied.</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;</span><span class="si">{b}</span><span class="s2">This is bold. </span><span class="si">{plain}</span><span class="s2">This is not.{/plain} This is bold.{/b}&quot;</span>
@@ -607,7 +607,7 @@ or strikethrough applied.</p>
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-rb">
-<span class="sig-name descname"><span class="pre">rb</span></span><a class="headerlink" href="#text-tag-rb" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">rb</span></span><a class="headerlink" href="#text-tag-rb" title="Link to this definition"></a></dt>
 <dd><p>The ruby bottom tag marks text between itself and its closing tag
 as ruby bottom text. See the section on <a class="reference internal" href="#ruby-text"><span class="std std-ref">Ruby Text</span></a>
 for more information.</p>
@@ -615,7 +615,7 @@ for more information.</p>
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-rt">
-<span class="sig-name descname"><span class="pre">rt</span></span><a class="headerlink" href="#text-tag-rt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">rt</span></span><a class="headerlink" href="#text-tag-rt" title="Link to this definition"></a></dt>
 <dd><p>The ruby top tag marks text between itself and its closing tag as
 ruby top text. See the section on <a class="reference internal" href="#ruby-text"><span class="std std-ref">Ruby Text</span></a> for
 more information.</p>
@@ -623,7 +623,7 @@ more information.</p>
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-s">
-<span class="sig-name descname"><span class="pre">s</span></span><a class="headerlink" href="#text-tag-s" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">s</span></span><a class="headerlink" href="#text-tag-s" title="Link to this definition"></a></dt>
 <dd><p>The strikethrough tag draws a line through text between itself and
 its closing tag.</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="s2">&quot;It&#39;s good </span><span class="si">{s}</span><span class="s2">to see you{/s}.&quot;</span>
@@ -632,8 +632,19 @@ its closing tag.</p>
 </dd></dl>
 
 <dl class="std text-tag">
+<dt class="sig sig-object std" id="text-tag-shader">
+<span class="sig-name descname"><span class="pre">shader</span></span><a class="headerlink" href="#text-tag-shader" title="Link to this definition"></a></dt>
+<dd><p>The shader tag applies a text shader to a section of text.
+The argument is the name of the shader to apply.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;This text is {shader=jitter:speed=3}jittery{/shader}.&quot;</span>
+</pre></div>
+</div>
+<p>See <a class="reference internal" href="textshaders.html"><span class="doc">Text Shaders</span></a> for more information.</p>
+</dd></dl>
+
+<dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-size">
-<span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#text-tag-size" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#text-tag-size" title="Link to this definition"></a></dt>
 <dd><p>The size tag changes the size of text between itself and its
 closing tag. The argument should be an integer, optionally preceded
 by + or -. If the argument is just an integer, the size is set to
@@ -652,7 +663,7 @@ rounded down.</p>
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-space">
-<span class="sig-name descname"><span class="pre">space</span></span><a class="headerlink" href="#text-tag-space" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">space</span></span><a class="headerlink" href="#text-tag-space" title="Link to this definition"></a></dt>
 <dd><p>The space tag is a self-closing tag that inserts horizontal space
 into a line of text. As an argument, it takes an integer giving the
 number of pixels of space to add.</p>
@@ -663,7 +674,7 @@ number of pixels of space to add.</p>
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-u">
-<span class="sig-name descname"><span class="pre">u</span></span><a class="headerlink" href="#text-tag-u" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">u</span></span><a class="headerlink" href="#text-tag-u" title="Link to this definition"></a></dt>
 <dd><p>The underline tag underlines the text between itself and its
 closing tag.</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="s2">&quot;It&#39;s good to </span><span class="si">{u}</span><span class="s2">see{/u} you.&quot;</span>
@@ -673,7 +684,7 @@ closing tag.</p>
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-vspace">
-<span class="sig-name descname"><span class="pre">vspace</span></span><a class="headerlink" href="#text-tag-vspace" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">vspace</span></span><a class="headerlink" href="#text-tag-vspace" title="Link to this definition"></a></dt>
 <dd><p>The vspace tag is a self-closing tag that inserts vertical space
 between lines of text. As an argument, it takes an integer giving
 the number of pixels of space to add.</p>
@@ -684,7 +695,7 @@ the number of pixels of space to add.</p>
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-0">
-<span class="sig-name descname"><span class="pre">#</span></span><a class="headerlink" href="#text-tag-0" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">#</span></span><a class="headerlink" href="#text-tag-0" title="Link to this definition"></a></dt>
 <dd><p>Text tags beginning with # are ignored, but can be included to distinguish
 strings for the purpose of translation.</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;New{#playlist}&quot;</span>
@@ -694,11 +705,11 @@ strings for the purpose of translation.</p>
 
 </section>
 <section id="dialogue-text-tags">
-<h3>Dialogue Text Tags<a class="headerlink" href="#dialogue-text-tags" title="Permalink to this heading"> link</a></h3>
+<h3>Dialogue Text Tags<a class="headerlink" href="#dialogue-text-tags" title="Link to this heading"></a></h3>
 <p>Text tags that only apply to dialogue are:</p>
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-w">
-<span class="sig-name descname"><span class="pre">w</span></span><a class="headerlink" href="#text-tag-w" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">w</span></span><a class="headerlink" href="#text-tag-w" title="Link to this definition"></a></dt>
 <dd><p>The wait tag is a self-closing tag that waits for the user to
 click to continue. If it is given an argument, the argument is
 interpreted as a number, and the wait automatically ends after
@@ -710,7 +721,7 @@ that many seconds have passed.</p>
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-p">
-<span class="sig-name descname"><span class="pre">p</span></span><a class="headerlink" href="#text-tag-p" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">p</span></span><a class="headerlink" href="#text-tag-p" title="Link to this definition"></a></dt>
 <dd><p>The paragraph pause tag is a self-closing tag that terminates the
 current paragraph, and waits for the user to click to continue. If
 it is given an argument, the argument is interpreted as a number,
@@ -723,7 +734,7 @@ passed.</p>
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-nw">
-<span class="sig-name descname"><span class="pre">nw</span></span><a class="headerlink" href="#text-tag-nw" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">nw</span></span><a class="headerlink" href="#text-tag-nw" title="Link to this definition"></a></dt>
 <dd><p>The no-wait tag is a self-closing tag that causes the current line
 of dialogue to automatically dismiss itself once the end of line
 has been displayed.</p>
@@ -744,7 +755,7 @@ advancing.</p>
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-fast">
-<span class="sig-name descname"><span class="pre">fast</span></span><a class="headerlink" href="#text-tag-fast" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">fast</span></span><a class="headerlink" href="#text-tag-fast" title="Link to this definition"></a></dt>
 <dd><p>If the fast tag is displayed in a line of text, then all text
 before it is displayed instantly, even in slow text mode. The
 fast tag is a self-closing tag.</p>
@@ -759,7 +770,7 @@ the previous line.</p>
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-done">
-<span class="sig-name descname"><span class="pre">done</span></span><a class="headerlink" href="#text-tag-done" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">done</span></span><a class="headerlink" href="#text-tag-done" title="Link to this definition"></a></dt>
 <dd><p>Text after the done tag is not displayed. Why would you want this?
 It's to allow text to avoid jumping around when <a class="reference internal" href="style_properties.html#style-property-adjust_spacing"><code class="xref std std-propref docutils literal notranslate"><span class="pre">adjust_spacing</span></code></a>
 is True.</p>
@@ -775,7 +786,7 @@ tag.:</p>
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-clear">
-<span class="sig-name descname"><span class="pre">clear</span></span><a class="headerlink" href="#text-tag-clear" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">clear</span></span><a class="headerlink" href="#text-tag-clear" title="Link to this definition"></a></dt>
 <dd><p>The clear text tag only makes sense on a line by itself in the <a class="reference internal" href="nvl_mode.html#nvl-monologue-mode"><span class="std std-ref">NVL monologue mode</span></a>.
 It does the same thing at the <code class="docutils literal notranslate"><span class="pre">nvl</span> <span class="pre">clear</span></code> statement without ending the block of text.</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -797,11 +808,11 @@ It does the same thing at the <code class="docutils literal notranslate"><span c
 Python.</p>
 </section>
 <section id="style-text-tags">
-<h3>Style Text Tags<a class="headerlink" href="#style-text-tags" title="Permalink to this heading"> link</a></h3>
+<h3>Style Text Tags<a class="headerlink" href="#style-text-tags" title="Link to this heading"></a></h3>
 <p>Ren'Py supports text tags that access styles. These are text tags
 where the tag name is empty. In this case, the argument
 is taken to be the name of a style. For example, the {=mystyle} tag
-will acces the <code class="docutils literal notranslate"><span class="pre">mystyle</span></code> style.</p>
+will access the <code class="docutils literal notranslate"><span class="pre">mystyle</span></code> style.</p>
 <p>The text between the tag and the corresponding closing tag has the following
 properties set to those defined in the style:</p>
 <ul class="simple">
@@ -819,7 +830,7 @@ properties set to those defined in the style:</p>
 </section>
 </section>
 <section id="non-english-languages">
-<h2>Non-English Languages<a class="headerlink" href="#non-english-languages" title="Permalink to this heading"> link</a></h2>
+<h2>Non-English Languages<a class="headerlink" href="#non-english-languages" title="Link to this heading"></a></h2>
 <p>The default font for Ren'Py contains characters for English and many
 other languages. For size reasons, it doesn't contain the characters
 required to render other languages, including Chinese, Japanese, and
@@ -850,20 +861,20 @@ game is displaying huge amounts of text, such as in NVL-mode.</p>
 <p>The line breaking algorithms can be further configured using the
 <a class="reference internal" href="other.html#renpy.language_tailor" title="renpy.language_tailor"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.language_tailor()</span></code></a> function.</p>
 <section id="vertical-text">
-<h3>Vertical Text<a class="headerlink" href="#vertical-text" title="Permalink to this heading"> link</a></h3>
+<h3>Vertical Text<a class="headerlink" href="#vertical-text" title="Link to this heading"></a></h3>
 <p>When the <a class="reference internal" href="style_properties.html#style-property-vertical"><code class="xref std std-propref docutils literal notranslate"><span class="pre">vertical</span></code></a> style property is set, Ren'Py will produce
 vertically oriented text. The text is written top-to-bottom,
 right-to-left.</p>
 <p>There are two text tags that interact with vertical text.</p>
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-horiz">
-<span class="sig-name descname"><span class="pre">horiz</span></span><a class="headerlink" href="#text-tag-horiz" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">horiz</span></span><a class="headerlink" href="#text-tag-horiz" title="Link to this definition"></a></dt>
 <dd><p>Includes horizontally-oriented text inside vertical text.</p>
 </dd></dl>
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-vert">
-<span class="sig-name descname"><span class="pre">vert</span></span><a class="headerlink" href="#text-tag-vert" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">vert</span></span><a class="headerlink" href="#text-tag-vert" title="Link to this definition"></a></dt>
 <dd><p>Includes vertically-oriented text inside horizontal text. (This will
 not rotate the text to the vertical orientation.)</p>
 </dd></dl>
@@ -878,7 +889,7 @@ releases.</p>
 </section>
 </section>
 <section id="ruby-text">
-<span id="id2"></span><h2>Ruby Text<a class="headerlink" href="#ruby-text" title="Permalink to this heading"> link</a></h2>
+<span id="id2"></span><h2>Ruby Text<a class="headerlink" href="#ruby-text" title="Link to this heading"></a></h2>
 <p>Ruby text (also known as furigana or interlinear annotations) is a way
 of placing small text above a character or word. There are several
 steps required for your game to support ruby text.</p>
@@ -900,6 +911,7 @@ text.</p></li>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">style</span> <span class="na">ruby_style</span> <span class="k">is</span> <span class="k">default</span><span class="p">:</span>
     <span class="na">size</span> <span class="mi">12</span>
     <span class="na">yoffset</span> <span class="o">-</span><span class="mi">20</span>
+    <span class="na">color</span> <span class="kc">None</span> <span class="c1"># Use the same color as the parent text.</span>
 
 <span class="k">style</span> <span class="n">say_dialogue</span><span class="p">:</span>
     <span class="n">ruby_line_leading</span> <span class="mi">12</span>
@@ -943,7 +955,7 @@ ruby top text. This is introduced with the {art} text tag (instead of {rt}),
 and the <a class="reference internal" href="style_properties.html#style-property-altruby_style"><code class="xref std std-propref docutils literal notranslate"><span class="pre">altruby_style</span></code></a> property (instead of <a class="reference internal" href="style_properties.html#style-property-ruby_style"><code class="xref std std-propref docutils literal notranslate"><span class="pre">ruby_style</span></code></a>).</p>
 </section>
 <section id="fonts">
-<h2>Fonts<a class="headerlink" href="#fonts" title="Permalink to this heading"> link</a></h2>
+<h2>Fonts<a class="headerlink" href="#fonts" title="Link to this heading"></a></h2>
 <p>Ren'Py supports TrueType/OpenType fonts and collections, and
 Image-Based fonts.</p>
 <p>A TrueType or OpenType font is specified by giving the name of the font
@@ -957,7 +969,7 @@ the first font in a collection, &quot;1&#64;font.ttc&quot; the second, and so on
 in the <code class="file docutils literal notranslate"><span class="pre">game/fonts</span></code> directory. For example, when looking for &quot;test.ttf&quot;, Ren'Py
 will first search for <code class="file docutils literal notranslate"><span class="pre">game/test.ttf</span></code>, and then for <code class="file docutils literal notranslate"><span class="pre">game/fonts/test.ttf</span></code>.</p>
 <section id="font-replacement">
-<h3>Font Replacement<a class="headerlink" href="#font-replacement" title="Permalink to this heading"> link</a></h3>
+<h3>Font Replacement<a class="headerlink" href="#font-replacement" title="Link to this heading"></a></h3>
 <p>The <a class="reference internal" href="config.html#var-config.font_replacement_map"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.font_replacement_map</span></code></a> variable is used to map
 fonts. The combination of font filename, boldness, and italics is
 mapped to a similar combination. This allows a font with proper
@@ -972,7 +984,7 @@ download the oblique font from the web):</p>
 <p>This mapping can improve the look of italic text.</p>
 </section>
 <section id="font-names-and-aliases">
-<h3>Font names and aliases<a class="headerlink" href="#font-names-and-aliases" title="Permalink to this heading"> link</a></h3>
+<h3>Font names and aliases<a class="headerlink" href="#font-names-and-aliases" title="Link to this heading"></a></h3>
 <p>The <a class="reference internal" href="config.html#var-config.font_name_map"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.font_name_map</span></code></a> variable is used to give names
 or aliases to fonts. This allows two things : first, to make dialogues
 using the <code class="docutils literal notranslate"><span class="pre">{font}</span></code> tag shorter and easier to use, and second, to
@@ -987,7 +999,7 @@ enable <a class="reference internal" href="#fontgroup"><span class="std std-ref"
 </div>
 </section>
 <section id="image-based-fonts">
-<h3>Image-Based Fonts<a class="headerlink" href="#image-based-fonts" title="Permalink to this heading"> link</a></h3>
+<h3>Image-Based Fonts<a class="headerlink" href="#image-based-fonts" title="Link to this heading"></a></h3>
 <p>Image based fonts can be registered by calling one of the following
 registration functions. Registering an image-based font requires the
 specification of a name, size, boldness, italicness, and
@@ -995,7 +1007,7 @@ underline. When all of these properties match the registered font,
 the registered font is used.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.register_bmfont">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">register_bmfont</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">italics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">underline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_bmfont" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">register_bmfont</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">italics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">underline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_bmfont" title="Link to this definition"></a></dt>
 <dd><p>This registers a BMFont with the given details. Please note that size, bold,
 italic, and underline are all advisory (used for matching), and do not
 change the appearance of the font.</p>
@@ -1025,7 +1037,7 @@ to ensure all of the Ren'Py interface can render.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.register_mudgefont">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">register_mudgefont</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">italics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">underline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xml</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spacewidth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_kern</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kerns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_mudgefont" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">register_mudgefont</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">italics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">underline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xml</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spacewidth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_kern</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kerns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_mudgefont" title="Link to this definition"></a></dt>
 <dd><p>This registers a MudgeFont with the given details. Please note that size,
 bold, italic, and underline are all advisory (used for matching), and do not
 change the appearance of the font.</p>
@@ -1061,7 +1073,7 @@ those characters.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.register_sfont">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">register_sfont</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">italics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">underline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spacewidth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baseline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_kern</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kerns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">charset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'!&quot;#$%&amp;\'()*+,-./0123456789:;&lt;=&gt;?&#64;ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_sfont" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">register_sfont</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">italics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">underline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spacewidth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baseline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_kern</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kerns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">charset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'!&quot;#$%&amp;\'()*+,-./0123456789:;&lt;=&gt;?&#64;ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_sfont" title="Link to this definition"></a></dt>
 <dd><p>This registers an SFont with the given details. Please note that size, bold,
 italic, and underline are all advisory (used for matching), and do not
 change the appearance of the font.</p>
@@ -1119,7 +1131,7 @@ BMFont use is:</p>
 </div>
 </section>
 <section id="font-groups">
-<span id="fontgroup"></span><h3>Font Groups<a class="headerlink" href="#font-groups" title="Permalink to this heading"> link</a></h3>
+<span id="fontgroup"></span><h3>Font Groups<a class="headerlink" href="#font-groups" title="Link to this heading"></a></h3>
 <p>When creating a multilingual game, it may not be possible to find a single
 font that covers every writing system the game use while projecting the
 the mood the creator intends. To support this, Ren'Py supports font groups
@@ -1136,11 +1148,11 @@ points, and the first range to cover a point is used.</p>
 </div>
 <dl class="py class">
 <dt class="sig sig-object py" id="FontGroup">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FontGroup</span></span><a class="headerlink" href="#FontGroup" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FontGroup</span></span><a class="headerlink" href="#FontGroup" title="Link to this definition"></a></dt>
 <dd><p>A group of fonts that can be used as a single font.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="FontGroup.add">
-<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">font</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_increment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#FontGroup.add" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">font</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_increment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#FontGroup.add" title="Link to this definition"></a></dt>
 <dd><p>Associates a range of characters with a <cite>font</cite>.</p>
 <dl class="simple">
 <dt><cite>start</cite></dt><dd><p>The start of the range. This may be a single-character string, or
@@ -1170,7 +1182,7 @@ chained together.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="FontGroup.remap">
-<span class="sig-name descname"><span class="pre">remap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#FontGroup.remap" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">remap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#FontGroup.remap" title="Link to this definition"></a></dt>
 <dd><p>Remaps one or a set of characters to a single target character.</p>
 <dl class="simple">
 <dt><cite>cha</cite></dt><dd><p>The character or characters to remap. This may be a single-character
@@ -1195,13 +1207,13 @@ defined using that variable.</p>
 </section>
 </section>
 <section id="text-displayables">
-<span id="id3"></span><h2>Text Displayables<a class="headerlink" href="#text-displayables" title="Permalink to this heading"> link</a></h2>
+<span id="id3"></span><h2>Text Displayables<a class="headerlink" href="#text-displayables" title="Link to this heading"></a></h2>
 <p>Text can also be used as a <a class="reference internal" href="displayables.html"><span class="doc">displayable</span></a>, which
 allows you to apply transforms to text, displaying it as if it was an
 image and moving it around the screen.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ParameterizedText">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ParameterizedText</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ParameterizedText" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ParameterizedText</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ParameterizedText" title="Link to this definition"></a></dt>
 <dd><p>This is a displayable that can be shown with an additional string
 parameter, which then shows that string as if it was an image.
 This is usually used as part of the pre-defined <code class="docutils literal notranslate"><span class="pre">text</span></code> image.</p>
@@ -1225,7 +1237,7 @@ different style properties. For example, one can write:</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="Text">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">substitute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slow_done</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenized</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Text" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">substitute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slow_done</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenized</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Text" title="Link to this definition"></a></dt>
 <dd><p>A displayable that displays text on the screen.</p>
 <dl class="simple">
 <dt><cite>text</cite></dt><dd><p>The text to display on the screen. This may be a string, or a list of
@@ -1255,10 +1267,10 @@ introduced in the <a class="reference internal" href="custom_text_tags.html"><sp
 
 </section>
 <section id="text-utility-functions">
-<h2>Text Utility Functions<a class="headerlink" href="#text-utility-functions" title="Permalink to this heading"> link</a></h2>
+<h2>Text Utility Functions<a class="headerlink" href="#text-utility-functions" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.filter_text_tags">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">filter_text_tags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deny</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.filter_text_tags" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">filter_text_tags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deny</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.filter_text_tags" title="Link to this definition"></a></dt>
 <dd><p>Returns a copy of <cite>s</cite> with the text tags filtered. Exactly one of the <cite>allow</cite> and <cite>deny</cite> keyword
 arguments must be given.</p>
 <dl class="simple">
@@ -1271,7 +1283,7 @@ arguments must be given.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.substitute">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">substitute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.substitute" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">substitute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.substitute" title="Link to this definition"></a></dt>
 <dd><p>Applies translation and new-style formatting to the string <cite>s</cite>.</p>
 <dl class="simple">
 <dt><cite>scope</cite></dt><dd><p>If not None, a scope which is used in formatting, in addition to the
@@ -1285,7 +1297,7 @@ default store.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.transform_text">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">transform_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.transform_text" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">transform_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.transform_text" title="Link to this definition"></a></dt>
 <dd><p>Transforms <cite>s</cite>, while leaving text tags and interpolation the same.</p>
 <dl class="simple">
 <dt><cite>function</cite></dt><dd><p>A function that is called with strings corresponding to runs of
@@ -1304,7 +1316,7 @@ of text.</p>
 
 </section>
 <section id="slow-text-concerns">
-<h2>Slow Text Concerns<a class="headerlink" href="#slow-text-concerns" title="Permalink to this heading"> link</a></h2>
+<h2>Slow Text Concerns<a class="headerlink" href="#slow-text-concerns" title="Link to this heading"></a></h2>
 <p>Ren'Py allows the creator or user to indicate that text should be
 displayed slowly. In this case, Ren'Py will render the text to a
 texture, and then draw rectangles from the texture to the screen.</p>
@@ -1322,7 +1334,7 @@ a single frame.</p>
 other parts of the user interface.</p>
 </section>
 <section id="text-overflow-logging">
-<h2>Text Overflow Logging<a class="headerlink" href="#text-overflow-logging" title="Permalink to this heading"> link</a></h2>
+<h2>Text Overflow Logging<a class="headerlink" href="#text-overflow-logging" title="Link to this heading"></a></h2>
 <p>Ren'Py can log cases where text expands outside of the area allocated
 for it. To enable text overflow logging, the following steps are
 necessary.</p>
@@ -1336,7 +1348,7 @@ displayable, or a container enclosing it.</p></li>
 will log an error to the text_overflow.txt file.</p>
 </section>
 <section id="variable-fonts">
-<span id="id4"></span><h2>Variable Fonts<a class="headerlink" href="#variable-fonts" title="Permalink to this heading"> link</a></h2>
+<span id="id4"></span><h2>Variable Fonts<a class="headerlink" href="#variable-fonts" title="Link to this heading"></a></h2>
 <p>Ren'Py has support for OpenType variable fonts. These fonts may support
 multiple axes, such as weight and width, and based on the value of these
 axes, the display of the font can change. Variable fonts may also have
@@ -1359,17 +1371,17 @@ and &quot;bold&quot; for bold text.</p>
 <p>There are two text tags that support the use of variable fonts.</p>
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-instance">
-<span class="sig-name descname"><span class="pre">instance</span></span><a class="headerlink" href="#text-tag-instance" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">instance</span></span><a class="headerlink" href="#text-tag-instance" title="Link to this definition"></a></dt>
 <dd><p>The instance tag changes the instance that is being used. For example:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;This is {instance=heavy}heavy{/instance} text.&quot;</span>
 </pre></div>
 </div>
-<p>When the instance tag is used, the axis properties are overriden.</p>
+<p>When the instance tag is used, the axis properties are overridden.</p>
 </dd></dl>
 
 <dl class="std text-tag">
 <dt class="sig sig-object std" id="text-tag-axis">
-<span class="sig-name descname"><span class="pre">axis</span></span><a class="headerlink" href="#text-tag-axis" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">axis</span></span><a class="headerlink" href="#text-tag-axis" title="Link to this definition"></a></dt>
 <dd><p>The axis tag changes the value of one or more axes. For example:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;This is {axis:width=125}wide{/axis} text.&quot;</span>
 </pre></div>
@@ -1391,7 +1403,7 @@ shift+O to open the console, and then type:</p>
 <p>This will display information for the nunito.ttf font.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.variable_font_info">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">variable_font_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">font</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.variable_font_info" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">variable_font_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">font</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.variable_font_info" title="Link to this definition"></a></dt>
 <dd><p>Returns information about a variable font, or None if the font is not
 variable.</p>
 <dl class="simple">

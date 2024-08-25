@@ -184,9 +184,17 @@ init -1 python hide:
     #####################
     # More customizations can go here.
 
-    config.sound = False
+    config.has_sound = False
+    config.has_music = False
+    config.has_voice = False
+    config.force_sound = False
     config.quit_action = Quit(confirm=False)
-    config.window_icon = "images/logo.png"
+
+    if renpy.macintosh:
+        config.window_icon = "images/window-icon-mac.png"
+    else:
+        config.window_icon = "images/window-icon.png"
+
     config.has_autosave = False
     config.log_enable = False
     config.mouse_hide_time = None

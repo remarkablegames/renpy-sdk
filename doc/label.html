@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Labels &amp; Control Flow &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/label.html" />
@@ -17,14 +17,13 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -96,6 +95,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -105,8 +105,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
@@ -124,6 +124,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -152,10 +153,8 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -167,6 +166,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul>
@@ -234,9 +234,9 @@
            <div itemprop="articleBody">
              
   <section id="labels-control-flow">
-<h1>Labels &amp; Control Flow<a class="headerlink" href="#labels-control-flow" title="Permalink to this heading"> link</a></h1>
+<h1>Labels &amp; Control Flow<a class="headerlink" href="#labels-control-flow" title="Link to this heading"></a></h1>
 <section id="label-statement">
-<span id="id1"></span><h2>Label Statement<a class="headerlink" href="#label-statement" title="Permalink to this heading"> link</a></h2>
+<span id="id1"></span><h2>Label Statement<a class="headerlink" href="#label-statement" title="Link to this heading"></a></h2>
 <p>Label statements allow the given name to be assigned to a program point. They
 exist solely to be called or jumped to, either from Ren'Py script, Python
 functions, or from screens.</p>
@@ -250,16 +250,26 @@ functions, or from screens.</p>
 </div>
 <p>A label statement may have a block associated with it. In that case, control
 enters the block whenever the label statement is reached, and proceeds with the
-statement after the label statement whenever the end of the block is reached.</p>
+statement after the label statement whenever the end of the block is reached:
+the following code, when jumping to the &quot;origin&quot; label, produces the &quot;a, b, c&quot;
+sequence.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">label</span> <span class="n">origin</span><span class="p">:</span>
+<span class="s2">&quot;a&quot;</span>
+<span class="k">label</span> <span class="n">hasblock</span><span class="p">:</span>
+    <span class="s2">&quot;b&quot;</span>
+<span class="s2">&quot;c&quot;</span>
+<span class="k">return</span>
+</pre></div>
+</div>
 <p>There are two kinds of labels: <em>global</em> and <em>local</em> labels. Global labels live
-in one global scope shared across all project files and thus should have unique
+in one global namespace shared across all project files and thus should have unique
 names per game. A local label on the other hand refer to a global label, so several
 local labels in the game can have the same name, provided they are related to
 different global labels. To declare a local label, prefix its name with a period
 <code class="docutils literal notranslate"><span class="pre">.</span></code>, and put it under a global label which it will belong to.
 For example:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">label</span> <span class="n">global_label</span><span class="p">:</span>
-    <span class="s2">&quot;Inside a global label..&quot;</span>
+    <span class="s2">&quot;Under a global label..&quot;</span>
 <span class="k">label</span> <span class="o">.</span><span class="n">local_label</span><span class="p">:</span>
     <span class="s2">&quot;..resides a local one.&quot;</span>
     <span class="k">jump</span> <span class="o">.</span><span class="n">another_local</span>
@@ -277,18 +287,36 @@ declared in, or by their full name, consisting of global and local name parts:</
 </div>
 <p>The label statement may take an optional list of parameters. These parameters
 are processed as described in <span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-0570/"><strong>PEP 570</strong></a>, with two exceptions:</p>
-<ul class="simple">
-<li><p>The values of default parameters are evaluated at call time.</p></li>
-<li><p>The variables are dynamically, rather than lexically, scoped.</p></li>
-</ul>
-<p>When a variable is dynamically scoped, its value lasts until a return
-statement following the label. It doesn't generally make sense to
-have a label with parameters that is reached by a jump or a previous
-statement. For an example of labels with parameters, see the
+<p>First, the values of default parameters are evaluated at call time.</p>
+<p>Second, the variables are scoped dynamically, rather than lexically. This means
+that when a variable gets its value from a label parameter, it will be reverted
+(to the previous value of the variable if it had one, or to the absence of the
+variable otherwise) when a return statement is reached. It also means that given
+a statement using a certain variable, that variable may or may not get its value
+from a label parameter depending on how the statement was reached ; that is not
+possible in pure Python code.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">default</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="k">label</span> <span class="n">start</span><span class="p">:</span>
+    <span class="k">menu</span><span class="p">:</span>
+        <span class="s2">&quot;Call&quot;</span><span class="p">:</span>
+            <span class="k">call</span> <span class="n">label_with_params</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+        <span class="s2">&quot;Jump&quot;</span><span class="p">:</span>
+            <span class="k">jump</span> <span class="n">label_without_params</span>
+    <span class="k">jump</span> <span class="n">start</span>
+
+<span class="k">label</span> <span class="n">label_with_params</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<span class="k">label</span> <span class="n">label_without_params</span><span class="p">:</span>
+    <span class="n">e</span> <span class="s2">&quot;a = [a]&quot;</span> <span class="c1"># displays 5 or 3 depending on what path was taken</span>
+    <span class="k">return</span>
+</pre></div>
+</div>
+<p>It doesn't generally make sense to have a label with parameters be reached by a
+jump or a previous statement. For an example of labels with parameters, see the
 <a class="reference internal" href="#call-statement"><span class="std std-ref">call statement</span></a>.</p>
 </section>
 <section id="jump-statement">
-<span id="id2"></span><h2>Jump Statement<a class="headerlink" href="#jump-statement" title="Permalink to this heading"> link</a></h2>
+<span id="id2"></span><h2>Jump Statement<a class="headerlink" href="#jump-statement" title="Link to this heading"></a></h2>
 <p>The jump statement is used to transfer control to the given label.</p>
 <p>If the <code class="docutils literal notranslate"><span class="pre">expression</span></code> keyword is present, the expression following it is
 evaluated, and the string so computed is used as the label name of the
@@ -308,13 +336,13 @@ result, there's no way to return to where you've jumped from.</p>
 </div>
 </section>
 <section id="call-statement">
-<span id="id3"></span><h2>Call Statement<a class="headerlink" href="#call-statement" title="Permalink to this heading"> link</a></h2>
+<span id="id3"></span><h2>Call Statement<a class="headerlink" href="#call-statement" title="Link to this heading"></a></h2>
 <p>The call statement is used to transfer control to the given label. It
 also pushes the next statement onto the call stack, allowing the return statement
 to return control to the statement following the call.</p>
 <p>If the <code class="docutils literal notranslate"><span class="pre">expression</span></code> keyword is present, the expression following it is evaluated, and the
-string so computed is used as the name of the label to call. If the
-<code class="docutils literal notranslate"><span class="pre">expression</span></code> keyword is not present, the name of the statement to call must be
+resulting string is used as the name of the label to call. If the
+<code class="docutils literal notranslate"><span class="pre">expression</span></code> keyword is not present, the name of the label to call must be
 explicitly given.</p>
 <p>A local label name can be passed, either with <code class="docutils literal notranslate"><span class="pre">expression</span></code> or without,
 and either with the global label prepended (&quot;global_label.local_label&quot;),
@@ -362,7 +390,7 @@ distribution can solve that issue.</p>
 </div>
 </section>
 <section id="return-statement">
-<span id="id4"></span><h2>Return Statement<a class="headerlink" href="#return-statement" title="Permalink to this heading"> link</a></h2>
+<span id="id4"></span><h2>Return Statement<a class="headerlink" href="#return-statement" title="Link to this heading"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">return</span></code> statement pops the top statement off of the call stack, and transfers
 control to it. If the call stack is empty, the return statement restarts
 Ren'Py, returning control to the main menu.</p>
@@ -371,7 +399,7 @@ is stored in the <code class="docutils literal notranslate"><span class="pre">_r
 context.</p>
 </section>
 <section id="special-labels">
-<span id="id5"></span><h2>Special Labels<a class="headerlink" href="#special-labels" title="Permalink to this heading"> link</a></h2>
+<span id="id5"></span><h2>Special Labels<a class="headerlink" href="#special-labels" title="Link to this heading"></a></h2>
 <p>The following labels are used by Ren'Py:</p>
 <dl>
 <dt><code class="docutils literal notranslate"><span class="pre">start</span></code></dt><dd><p>By default, Ren'Py jumps to this label when the game starts.</p>
@@ -382,7 +410,7 @@ quits the game.</p>
 <dt><code class="docutils literal notranslate"><span class="pre">after_load</span></code></dt><dd><p>If it exists, this label is called when a game is loaded. It can be
 use to fix data when the game is updated. If data is changed by this
 label, <a class="reference internal" href="save_load_rollback.html#renpy.block_rollback" title="renpy.block_rollback"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.block_rollback()</span></code></a> should be called to prevent those
-changes from being reverted inf the player rolls back past the load
+changes from being reverted if the player rolls back past the load
 point.</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">splashscreen</span></code></dt><dd><p>If it exists, this label is called when the game is first run, before
@@ -412,10 +440,10 @@ continues.</p>
 </dl>
 </section>
 <section id="labels-control-flow-functions">
-<h2>Labels &amp; Control Flow Functions<a class="headerlink" href="#labels-control-flow-functions" title="Permalink to this heading"> link</a></h2>
+<h2>Labels &amp; Control Flow Functions<a class="headerlink" href="#labels-control-flow-functions" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.call_stack_depth">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">call_stack_depth</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.call_stack_depth" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">call_stack_depth</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.call_stack_depth" title="Link to this definition"></a></dt>
 <dd><p>Returns the depth of the call stack of the current context - the number
 of calls that have run without being returned from or popped from the
 call stack.</p>
@@ -423,7 +451,7 @@ call stack.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.dynamic">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">dynamic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">variables</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.dynamic" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">dynamic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">variables</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.dynamic" title="Link to this definition"></a></dt>
 <dd><p>This can be given one or more variable names as arguments. This makes the
 variables dynamically scoped to the current call. When the call returns, the
 variables will be reset to the value they had when this function was called.</p>
@@ -440,14 +468,14 @@ is assigned to the variable name.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_all_labels">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_all_labels</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_all_labels" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_all_labels</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_all_labels" title="Link to this definition"></a></dt>
 <dd><p>Returns the set of all labels defined in the program, including labels
 defined for internal use in the libraries.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_return_stack">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_return_stack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_return_stack" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_return_stack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_return_stack" title="Link to this definition"></a></dt>
 <dd><p>Returns a list giving the current return stack. The return stack is a
 list of statement names.</p>
 <p>The statement names will be strings (for labels), or opaque tuples (for
@@ -456,7 +484,7 @@ non-label statements).</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.has_label">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">has_label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.has_label" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">has_label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.has_label" title="Link to this definition"></a></dt>
 <dd><p>Returns true if <cite>name</cite> is a valid label in the program, or false
 otherwise.</p>
 <dl class="simple">
@@ -468,21 +496,21 @@ also be an opaque tuple giving the name of a non-label statement.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.mark_label_seen">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">mark_label_seen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.mark_label_seen" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">mark_label_seen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.mark_label_seen" title="Link to this definition"></a></dt>
 <dd><p>Marks the named label as if it has been already executed on the current user's
 system.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.mark_label_unseen">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">mark_label_unseen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.mark_label_unseen" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">mark_label_unseen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.mark_label_unseen" title="Link to this definition"></a></dt>
 <dd><p>Marks the named label as if it has not been executed on the current user's
 system yet.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.pop_call">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">pop_call</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.pop_call" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">pop_call</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.pop_call" title="Link to this definition"></a></dt>
 <dd><p>Pops the current call from the call stack, without returning to the
 location. Also reverts the values of <a class="reference internal" href="#renpy.dynamic" title="renpy.dynamic"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamic</span></code></a>
 variables, the same way the Ren'Py return statement would.</p>
@@ -492,7 +520,7 @@ to its caller.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.seen_label">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">seen_label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.seen_label" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">seen_label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.seen_label" title="Link to this definition"></a></dt>
 <dd><p>Returns true if the named label has executed at least once on the current user's
 system, and false otherwise. This can be used to unlock scene galleries, for
 example.</p>
@@ -500,7 +528,7 @@ example.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.set_return_stack">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">set_return_stack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stack</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.set_return_stack" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">set_return_stack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stack</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.set_return_stack" title="Link to this definition"></a></dt>
 <dd><p>Sets the current return stack. The return stack is a list of statement
 names.</p>
 <p>Statement names may be strings (for labels) or opaque tuples (for
@@ -514,7 +542,7 @@ non-label statements).</p>
 
 </section>
 <section id="contexts">
-<span id="context"></span><h2>Contexts<a class="headerlink" href="#contexts" title="Permalink to this heading"> link</a></h2>
+<span id="context"></span><h2>Contexts<a class="headerlink" href="#contexts" title="Link to this heading"></a></h2>
 <p>Contexts are used internally by Ren'Py to manage the changeable and saveable
 state of the game. Contexts include:</p>
 <ul class="simple">
@@ -540,18 +568,25 @@ one context), and only the base context is saved, which is why the game menu
 uses a context.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.call_in_new_context">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">call_in_new_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.call_in_new_context" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">call_in_new_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.call_in_new_context" title="Link to this definition"></a></dt>
 <dd><p>This creates a new context, and then starts executing Ren'Py script
 from the given label in that context. Rollback is disabled in the
 new context, and saving/loading will occur in the top level
 context.</p>
 <p>Use this to begin a second interaction with the user while
 inside an interaction.</p>
+<p>This takes an optional  keyword argument:</p>
+<dl class="simple">
+<dt><cite>_clear_layers</cite></dt><dd><p>If True (the default), the layers are cleared before the new
+interaction starts. If False, the layers are not cleared. If a
+list, only the layers in the list are cleared.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.context">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">context</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.context" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">context</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.context" title="Link to this definition"></a></dt>
 <dd><p>Returns an object that is unique to the current context. The object
 is copied when entering a new context, but changes to the copy do
 not change the original.</p>
@@ -560,7 +595,7 @@ not change the original.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.context_dynamic">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">context_dynamic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">variables</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.context_dynamic" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">context_dynamic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">variables</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.context_dynamic" title="Link to this definition"></a></dt>
 <dd><p>This can be given one or more variable names as arguments. This makes the
 variables dynamically scoped to the current context. When returning to the
 prior context, the variables will be reset to the value they had when this
@@ -575,7 +610,7 @@ function was called.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.context_nesting_level">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">context_nesting_level</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.context_nesting_level" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">context_nesting_level</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.context_nesting_level" title="Link to this definition"></a></dt>
 <dd><p>Returns the nesting level of the current context. This is 0 for the
 outermost context (the context that is saved, loaded, and rolled-back),
 and is non-zero in other contexts, such as menu and replay contexts.</p>
@@ -583,10 +618,10 @@ and is non-zero in other contexts, such as menu and replay contexts.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.invoke_in_new_context">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">invoke_in_new_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callable</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.invoke_in_new_context" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">invoke_in_new_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callable</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.invoke_in_new_context" title="Link to this definition"></a></dt>
 <dd><p>This function creates a new context, and invokes the given Python
 callable (function) in that context. When the function returns
-or raises an exception, control returns to the the original context.
+or raises an exception, control returns to the original context.
 It's generally used to call a Python function that needs to display
 information to the player (like a confirmation prompt) from inside
 an event handler.</p>
@@ -597,18 +632,25 @@ Functions that would change the flow of Ren'Py script, like
 <a class="reference internal" href="statement_equivalents.html#renpy.jump" title="renpy.jump"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.jump()</span></code></a>, are handled by the outer context. If you want
 to call Ren'Py script rather than a Python function, use
 <a class="reference internal" href="#renpy.call_in_new_context" title="renpy.call_in_new_context"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.call_in_new_context()</span></code></a> instead.</p>
+<p>This takes an optional  keyword argument:</p>
+<dl class="simple">
+<dt><cite>_clear_layers</cite></dt><dd><p>If True (the default), the layers are cleared before the new
+interaction starts. If False, the layers are not cleared. If a
+list, only the layers in the list are cleared.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.jump_out_of_context">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">jump_out_of_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.jump_out_of_context" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">jump_out_of_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.jump_out_of_context" title="Link to this definition"></a></dt>
 <dd><p>Causes control to leave the current context, and then to be
 transferred in the parent context to the given label.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.reset_all_contexts">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">reset_all_contexts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.reset_all_contexts" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">reset_all_contexts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.reset_all_contexts" title="Link to this definition"></a></dt>
 <dd><p>This pops all contexts off the context stack, resetting the dynamic variables
 as it does so. When this is done, a new context is created, the current statement
 ends, and the game continues from the next statement. This will put Ren'Py

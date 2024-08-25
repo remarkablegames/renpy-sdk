@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Web / HTML5 &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/web.html" />
@@ -17,14 +17,13 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -66,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -75,8 +75,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
@@ -94,6 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -122,10 +123,8 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -137,6 +136,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul class="current">
@@ -147,6 +147,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#limitations">Limitations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#supported-browsers">Supported Browsers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#packaging-your-game">Packaging your Game</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#generated-folders">Generated folders</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#uploading-your-game">Uploading your Game</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#presplash">Presplash</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#icon">Icon</a></li>
@@ -222,14 +223,14 @@
            <div itemprop="articleBody">
              
   <section id="web-html5">
-<h1>Web / HTML5<a class="headerlink" href="#web-html5" title="Permalink to this heading"> link</a></h1>
+<h1>Web / HTML5<a class="headerlink" href="#web-html5" title="Link to this heading"></a></h1>
 <p>Ren'Py supports running games in a web browser. This is done by with a
 version of Ren'Py that has been compiled to WebAssembly, allowing as much
 as possible of Ren'Py to run in the browser. This page will explain
 some of the limitations of running inside a browser, help you design your
 game to run well, and explain how to build your game for the web.</p>
 <section id="limitations">
-<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this heading"> link</a></h2>
+<h2>Limitations<a class="headerlink" href="#limitations" title="Link to this heading"></a></h2>
 <p>Like all games running inside a web browser, Ren'Py games have a number of
 limitations on them. Some of these are imposed by the sandbox in the browser,
 while others have been chosen to reduce the amount of data that needs to be
@@ -251,6 +252,7 @@ port this is not possible, and so image loading may cause framerate glitches.</p
 sandbox prevents Ren'Py from making arbitrary network requests. This means
 that sockets and the requests library will return errors when run inside
 the web browser.</p></li>
+<li><p>Live2D is not supported.</p></li>
 </ul>
 <p>In addition, there are some limitations that can be caused by where you host
 your game. Some hosting providers limit the size of a game and the number
@@ -261,7 +263,7 @@ in size won't be cached, which means big files will be downloaded every time
 your game is run.</p>
 </section>
 <section id="supported-browsers">
-<h2>Supported Browsers<a class="headerlink" href="#supported-browsers" title="Permalink to this heading"> link</a></h2>
+<h2>Supported Browsers<a class="headerlink" href="#supported-browsers" title="Link to this heading"></a></h2>
 <p>We try to keep Ren'Py running in recent versions of evergreen browsers
 like Chrome, Edge, Firefox, and Safari, as well as the mobile versions of
 these browsers on iOS and Android. Ren'Py may work in other browsers, but
@@ -276,7 +278,7 @@ to ensure the browsers keep working, but it's possible that a change to
 the browser will require your game to be updated.</p>
 </section>
 <section id="packaging-your-game">
-<h2>Packaging your Game<a class="headerlink" href="#packaging-your-game" title="Permalink to this heading"> link</a></h2>
+<h2>Packaging your Game<a class="headerlink" href="#packaging-your-game" title="Link to this heading"></a></h2>
 <p>Ren'Py games can be packaged for the web by using the &quot;Web (Beta)&quot; section
 of the Launcher. This has four main options in it.</p>
 <dl>
@@ -299,8 +301,15 @@ computer, without the full build process.</p>
 </dd>
 </dl>
 </section>
+<section id="generated-folders">
+<h2>Generated folders<a class="headerlink" href="#generated-folders" title="Link to this heading"></a></h2>
+<p>Say, your project is in the renpy/projects/main/yourproject folder. Then you
+will find a new renpy/projects/main/yourproject-1.0-dists folder. This folder
+contains a yourproject-1.0-web subfolder, and this subfolder's zipped version,
+a yourproject-1.0-web.zip file.</p>
+</section>
 <section id="uploading-your-game">
-<h2>Uploading your Game<a class="headerlink" href="#uploading-your-game" title="Permalink to this heading"> link</a></h2>
+<h2>Uploading your Game<a class="headerlink" href="#uploading-your-game" title="Link to this heading"></a></h2>
 <p>Once you've built your game, you'll need to upload it to a public web
 server. For game hosting services like itch.io, you'll need to upload
 the web.zip file, which contains all of the files. For other hosting
@@ -310,21 +319,21 @@ server serves .wasm files using the application/wasm MIME type. Doing
 so will make the game load faster, and prevent a warning from happening.</p>
 </section>
 <section id="presplash">
-<span id="web-presplash"></span><h2>Presplash<a class="headerlink" href="#presplash" title="Permalink to this heading"> link</a></h2>
+<span id="web-presplash"></span><h2>Presplash<a class="headerlink" href="#presplash" title="Link to this heading"></a></h2>
 <p>The Web platform natively uses a default presplash image. To override it, you can supply
 an image named <cite>web-presplash</cite>, <cite>.jpg</cite>, <cite>.png</cite> or <cite>.webp</cite>, and it will replace
 the default.</p>
 <p>The <cite>.webp</cite> format allows for an animated presplash image, if that's required.</p>
 </section>
 <section id="icon">
-<h2>Icon<a class="headerlink" href="#icon" title="Permalink to this heading"> link</a></h2>
+<h2>Icon<a class="headerlink" href="#icon" title="Link to this heading"></a></h2>
 <p>The Web page icon can be customized by putting an image file with the name <cite>web-icon.png</cite>
 in the base directory of your project. This image must have a minimum resolution of
 512x512 and its width and height must be equal.
 If no custom image is given, the default Ren'Py icon is used.</p>
 </section>
 <section id="progressive-downloading">
-<h2>Progressive Downloading<a class="headerlink" href="#progressive-downloading" title="Permalink to this heading"> link</a></h2>
+<h2>Progressive Downloading<a class="headerlink" href="#progressive-downloading" title="Link to this heading"></a></h2>
 <p>Ren'Py supports a progressive download feature, which is configured by
 editing the file named <code class="docutils literal notranslate"><span class="pre">progressive_download.txt</span></code> in the base directory
 of your project. If this file doesn't exist, it will be created when you
@@ -365,7 +374,7 @@ the web server.</p>
 <p>Finally, the last columns is the path to match.</p>
 </section>
 <section id="audio-and-video">
-<h2>Audio and Video<a class="headerlink" href="#audio-and-video" title="Permalink to this heading"> link</a></h2>
+<h2>Audio and Video<a class="headerlink" href="#audio-and-video" title="Link to this heading"></a></h2>
 <p>Due to limitations in the browser intended to stop advertisements from
 playing audio, sound and music files won't play until the user clicks
 inside the game at least once.</p>
@@ -400,26 +409,26 @@ is that <a class="reference external" href="https://share.renpy.org/oa4_launch.w
 and then <a class="reference external" href="https://share.renpy.org/oa4_launch.mp4">https://share.renpy.org/oa4_launch.mp4</a> will be tried if it exists.</p>
 </section>
 <section id="javascript">
-<h2>Javascript<a class="headerlink" href="#javascript" title="Permalink to this heading"> link</a></h2>
+<h2>Javascript<a class="headerlink" href="#javascript" title="Link to this heading"></a></h2>
 <p>Ren'Py can run Javascript, using three functions in the <code class="docutils literal notranslate"><span class="pre">emscripten</span></code>
 module. This module is only present when running inside the web browser,
 which can be tested using <a class="reference internal" href="other.html#var-renpy.emscripten"><code class="xref std std-var docutils literal notranslate"><span class="pre">renpy.emscripten</span></code></a> - though you still need
 to import the module before using it.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="emscripten.run_script">
-<span class="sig-prename descclassname"><span class="pre">emscripten.</span></span><span class="sig-name descname"><span class="pre">run_script</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">script</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emscripten.run_script" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">emscripten.</span></span><span class="sig-name descname"><span class="pre">run_script</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">script</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emscripten.run_script" title="Link to this definition"></a></dt>
 <dd><p>Runs the given Javascript script. This does not return a result.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="emscripten.run_script_int">
-<span class="sig-prename descclassname"><span class="pre">emscripten.</span></span><span class="sig-name descname"><span class="pre">run_script_int</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">script</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emscripten.run_script_int" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">emscripten.</span></span><span class="sig-name descname"><span class="pre">run_script_int</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">script</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emscripten.run_script_int" title="Link to this definition"></a></dt>
 <dd><p>Runs the given Javascript script, and returns its result as an integer.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="emscripten.run_script_string">
-<span class="sig-prename descclassname"><span class="pre">emscripten.</span></span><span class="sig-name descname"><span class="pre">run_script_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">script</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emscripten.run_script_string" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">emscripten.</span></span><span class="sig-name descname"><span class="pre">run_script_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">script</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emscripten.run_script_string" title="Link to this definition"></a></dt>
 <dd><p>Runs the given Javascript script, and returns its result as a string.</p>
 </dd></dl>
 
@@ -431,7 +440,7 @@ and window.renpy_set functions. For the documentation of these functions, please
 read <code class="docutils literal notranslate"><span class="pre">web/renpy-pre.js</span></code>.</p>
 </section>
 <section id="bytecode-cache">
-<h2>Bytecode Cache<a class="headerlink" href="#bytecode-cache" title="Permalink to this heading"> link</a></h2>
+<h2>Bytecode Cache<a class="headerlink" href="#bytecode-cache" title="Link to this heading"></a></h2>
 <p>In Ren'Py 8.1, loading may take longer than required, as Ren'Py may need
 to compile the python into bytecode after downloading it. To avoid this, retrieve
 the bytecode cache by:</p>
@@ -444,7 +453,7 @@ your browser to download <code class="docutils literal notranslate"><span class=
 </ul>
 </section>
 <section id="hamburger-menu">
-<h2>Hamburger Menu<a class="headerlink" href="#hamburger-menu" title="Permalink to this heading"> link</a></h2>
+<h2>Hamburger Menu<a class="headerlink" href="#hamburger-menu" title="Link to this heading"></a></h2>
 <p>The hamburger menu is a menu that appears in the top left corner of the game.
 It has three options:</p>
 <dl class="simple">

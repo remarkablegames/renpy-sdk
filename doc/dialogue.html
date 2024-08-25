@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dialogue and Narration &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/dialogue.html" />
@@ -17,14 +17,13 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -82,6 +81,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -91,8 +91,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
@@ -110,6 +110,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -138,10 +139,8 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -153,6 +152,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul>
@@ -220,7 +220,7 @@
            <div itemprop="articleBody">
              
   <section id="dialogue-and-narration">
-<h1>Dialogue and Narration<a class="headerlink" href="#dialogue-and-narration" title="Permalink to this heading"> link</a></h1>
+<h1>Dialogue and Narration<a class="headerlink" href="#dialogue-and-narration" title="Link to this heading"></a></h1>
 <p>Text is fundamental to visual novels, and generally quite important to
 storytelling-based games. This text may consist of dialogue labeled
 with the character that is saying it, and narration, which does not
@@ -232,7 +232,7 @@ look of dialogue to suit their game.</p>
 dialogue may be customized on a per-character basis by using Character
 objects.</p>
 <section id="say-statement">
-<span id="id1"></span><h2>Say Statement<a class="headerlink" href="#say-statement" title="Permalink to this heading"> link</a></h2>
+<span id="id1"></span><h2>Say Statement<a class="headerlink" href="#say-statement" title="Link to this heading"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">say</span></code> statement is used for dialogue and narration. Since it's
 almost always the most frequently used statement in Ren'Py scripts,
 the say statement has a syntax that minimizes the overhead in
@@ -276,7 +276,7 @@ backslash to prevent it from closing the string. For example:</p>
 object. More details about this in <a class="reference internal" href="statement_equivalents.html#say-proxy"><span class="std std-ref">this section</span></a>.</p>
 </section>
 <section id="defining-character-objects">
-<span id="id2"></span><h2>Defining Character Objects<a class="headerlink" href="#defining-character-objects" title="Permalink to this heading"> link</a></h2>
+<span id="id2"></span><h2>Defining Character Objects<a class="headerlink" href="#defining-character-objects" title="Link to this heading"></a></h2>
 <p>By creating a Character object and using it in a say statement, you
 can customize the look (and to some extent, the behavior) of
 dialogue. Characters are created by using the <code class="docutils literal notranslate"><span class="pre">define</span></code> statement to
@@ -293,7 +293,7 @@ arguments. These keyword arguments control the behavior of the
 character.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="Character">
-<span class="sig-name descname"><span class="pre">Character</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">...</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">adv</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Character" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">Character</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">...</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">adv</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Character" title="Link to this definition"></a></dt>
 <dd><p>Creates and returns a Character object, which controls the look
 and feel of dialogue and narration.</p>
 <dl>
@@ -378,9 +378,6 @@ auto-forward mode) will also work. If false, the player will be
 unable to move past the say statement unless an alternate means
 (such as a jump hyperlink or screen) is provided.</p>
 </dd>
-<dt><cite>mode</cite></dt><dd><p>A string giving the mode to enter when this character
-speaks. See the section on <a class="reference internal" href="modes.html#modes"><span class="std std-ref">modes</span></a> for more details.</p>
-</dd>
 <dt><cite>callback</cite></dt><dd><p>A function that is called when events occur while the
 character is speaking. See the section on
 <a class="reference internal" href="character_callbacks.html#character-callbacks"><span class="std std-ref">Character Callbacks</span></a> for more information.</p>
@@ -453,7 +450,7 @@ speaking character.</p>
 
 </section>
 <section id="say-with-image-attributes">
-<h2>Say with Image Attributes<a class="headerlink" href="#say-with-image-attributes" title="Permalink to this heading"> link</a></h2>
+<h2>Say with Image Attributes<a class="headerlink" href="#say-with-image-attributes" title="Link to this heading"></a></h2>
 <p>When a character is defined with an associated image tag, say
 statement involving that character may have image attributes
 placed between the character name and the second string.</p>
@@ -466,7 +463,7 @@ attributes for use by side images, but will not show an image.</p>
 
 <span class="k">label</span> <span class="n">start</span><span class="p">:</span>
 
-    <span class="k">show</span> <span class="n">eileen</span> <span class="n">mad</span>
+    <span class="k">show</span> <span class="n">eileen</span> <span class="n">concerned</span>
     <span class="n">e</span> <span class="s2">&quot;I&#39;m a little upset at you.&quot;</span>
 
     <span class="n">e</span> <span class="n">happy</span> <span class="s2">&quot;But it&#39;s just a passing thing.&quot;</span>
@@ -477,16 +474,16 @@ attributes for use by side images, but will not show an image.</p>
 
 <span class="k">label</span> <span class="n">start</span><span class="p">:</span>
 
-    <span class="k">show</span> <span class="n">eileen</span> <span class="n">mad</span>
+    <span class="k">show</span> <span class="n">eileen</span> <span class="n">concerned</span>
     <span class="n">e</span> <span class="s2">&quot;I&#39;m a little upset at you.&quot;</span>
 
     <span class="k">show</span> <span class="n">eileen</span> <span class="n">happy</span>
     <span class="n">e</span> <span class="s2">&quot;But it&#39;s just a passing thing.&quot;</span>
 </pre></div>
 </div>
-<p>In the above example, the <code class="docutils literal notranslate"><span class="pre">mad</span></code> and <code class="docutils literal notranslate"><span class="pre">happy</span></code> replace one another.
+<p>In the above example, the <code class="docutils literal notranslate"><span class="pre">concerned</span></code> and <code class="docutils literal notranslate"><span class="pre">happy</span></code> replace one another.
 But it is possible to revert to a <code class="docutils literal notranslate"><span class="pre">happy</span></code>-less eileen without specifying
-the <code class="docutils literal notranslate"><span class="pre">mad</span></code> attribute. An attribute name prepended with the minus sign ( - )
+the <code class="docutils literal notranslate"><span class="pre">concerned</span></code> attribute. An attribute name prepended with the minus sign ( - )
 has that effect, just as it does with the <a class="reference internal" href="displaying_images.html#show-statement"><span class="std std-ref">show statement</span></a>.</p>
 <p>For example:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">define</span> <span class="n">e</span> <span class="o">=</span> <span class="n">Character</span><span class="p">(</span><span class="s2">&quot;Eileen&quot;</span><span class="p">)</span>
@@ -494,7 +491,7 @@ has that effect, just as it does with the <a class="reference internal" href="di
 <span class="k">label</span> <span class="n">start</span><span class="p">:</span>
 
     <span class="k">show</span> <span class="n">eileen</span>
-    <span class="n">e</span> <span class="n">mad</span> <span class="s2">&quot;I&#39;m a little upset at you.&quot;</span>
+    <span class="n">e</span> <span class="n">concerned</span> <span class="s2">&quot;I&#39;m a little upset at you.&quot;</span>
 
     <span class="n">e</span> <span class="n">happy</span> <span class="s2">&quot;That&#39;s funny.&quot;</span>
 
@@ -508,7 +505,7 @@ has an only temporary effect, and is reverted at the end of the line of dialogue
 
 <span class="k">label</span> <span class="n">start</span><span class="p">:</span>
 
-    <span class="k">show</span> <span class="n">eileen</span> <span class="n">mad</span>
+    <span class="k">show</span> <span class="n">eileen</span> <span class="n">concerned</span>
     <span class="n">e</span> <span class="s2">&quot;I&#39;m a little upset at you.&quot;</span>
 
     <span class="n">e</span> <span class="o">@</span> <span class="n">happy</span> <span class="s2">&quot;That&#39;s funny.&quot;</span>
@@ -522,7 +519,7 @@ the &#64;, and temporary ones coming after.</p>
 </pre></div>
 </div>
 <p>The minus sign can also be used after the &#64; sign:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="o">@</span> <span class="n">right</span> <span class="o">-</span><span class="n">mad</span> <span class="s2">&quot;My anger is temporarily suspended...&quot;</span>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="o">@</span> <span class="n">right</span> <span class="o">-</span><span class="n">concerned</span> <span class="s2">&quot;My anger is temporarily suspended...&quot;</span>
 <span class="n">e</span> <span class="s2">&quot;HOWEVER !&quot;</span>
 </pre></div>
 </div>
@@ -531,7 +528,7 @@ the &#64;, and temporary ones coming after.</p>
 use <a class="reference internal" href="config.html#var-config.say_attribute_transition_callback"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.say_attribute_transition_callback</span></code></a>.</p>
 </section>
 <section id="example-characters">
-<h2>Example Characters<a class="headerlink" href="#example-characters" title="Permalink to this heading"> link</a></h2>
+<h2>Example Characters<a class="headerlink" href="#example-characters" title="Link to this heading"></a></h2>
 <p>Here are a few example characters:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="c1"># A character that has its dialogue enclosed in parenthesis.</span>
 <span class="k">define</span> <span class="n">e</span> <span class="o">=</span> <span class="n">Character</span><span class="p">(</span><span class="s2">&quot;Eileen&quot;</span><span class="p">,</span> <span class="n">what_prefix</span><span class="o">=</span><span class="s1">&#39;(&#39;</span><span class="p">,</span> <span class="n">what_suffix</span><span class="o">=</span><span class="s1">&#39;)&#39;</span><span class="p">)</span>
@@ -542,7 +539,7 @@ use <a class="reference internal" href="config.html#var-config.say_attribute_tra
 </div>
 </section>
 <section id="special-characters">
-<h2>Special Characters<a class="headerlink" href="#special-characters" title="Permalink to this heading"> link</a></h2>
+<h2>Special Characters<a class="headerlink" href="#special-characters" title="Link to this heading"></a></h2>
 <p>A few character names are defined by default, and are used
 automatically in certain situations. Intentionally redefining these
 characters can change the behavior of Ren'Py, but accidentally using
@@ -603,12 +600,12 @@ the extend.</p>
 </div>
 </section>
 <section id="dialogue-window-management">
-<span id="id3"></span><h2>Dialogue Window Management<a class="headerlink" href="#dialogue-window-management" title="Permalink to this heading"> link</a></h2>
+<span id="id3"></span><h2>Dialogue Window Management<a class="headerlink" href="#dialogue-window-management" title="Link to this heading"></a></h2>
 <p>Ren'Py includes several statements that allow for management of the
 dialogue window. As dialogue window is always shown during dialogue,
 these statements control the presence or absence of the window during
 non-dialogue interactions.</p>
-<dl class="simple">
+<dl>
 <dt><code class="docutils literal notranslate"><span class="pre">window</span> <span class="pre">show</span></code></dt><dd><p>The window show statement causes the window to be shown.
 It takes as an argument an optional transition, which is used to show the
 window. If the transition is omitted, <a class="reference internal" href="config.html#var-config.window_show_transition"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.window_show_transition</span></code></a>
@@ -619,17 +616,15 @@ argument an optional transition, which is used to hide the window. If
 the transition is omitted, <a class="reference internal" href="config.html#var-config.window_hide_transition"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.window_hide_transition</span></code></a> is
 used.</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">window</span> <span class="pre">auto</span></code></dt><dd><p>This enables automatic management of the window. The window is shown
+<dt><code class="docutils literal notranslate"><span class="pre">window</span> <span class="pre">auto</span> <span class="pre">True</span></code></dt><dd><p>This enables automatic management of the window. The window is shown
 before statements listed in <a class="reference internal" href="config.html#var-config.window_auto_show"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.window_auto_show</span></code></a> – by default,
 say statements. The window is hidden before statements listed in
 <a class="reference internal" href="config.html#var-config.window_auto_hide"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.window_auto_hide</span></code></a> – by default, <code class="docutils literal notranslate"><span class="pre">scene</span></code> and <code class="docutils literal notranslate"><span class="pre">call</span> <span class="pre">screen</span></code>
-statements, and <code class="docutils literal notranslate"><span class="pre">menu</span></code> statements without a caption.
-(Only statements are considered, not statement equivalent
-functions.)</p>
+statements, and <code class="docutils literal notranslate"><span class="pre">menu</span></code> statements without a caption.</p>
+<p>Only statements are considered, not statement equivalent functions.</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">window</span> <span class="pre">auto</span> <span class="pre">hide</span></code>, <code class="docutils literal notranslate"><span class="pre">window</span> <span class="pre">auto</span> <span class="pre">show</span></code></dt><dd><p>These statements show or hide the window, with an optional transition,
-like <code class="docutils literal notranslate"><span class="pre">window</span> <span class="pre">show</span></code> or <code class="docutils literal notranslate"><span class="pre">window</span> <span class="pre">hide</span></code> do. However, unlike those
-statements, this keeps automatic management enabled.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">window</span> <span class="pre">auto</span> <span class="pre">False</span></code></dt><dd><p>This disables automatic management of the window. The window is not
+shown or hidden automatically.</p>
 </dd>
 </dl>
 <p>The <code class="docutils literal notranslate"><span class="pre">window</span> <span class="pre">auto</span></code> statement uses <a class="reference internal" href="config.html#var-config.window_show_transition"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.window_show_transition</span></code></a>
@@ -647,7 +642,7 @@ respectively. <code class="docutils literal notranslate"><span class="pre">windo
 <span class="k">pause</span>                <span class="c1"># the window is hidden during this pause.</span>
 
 
-<span class="k">window</span> <span class="k">auto</span>
+<span class="k">window</span> <span class="k">auto</span> <span class="kc">True</span>
 
 <span class="s2">&quot;The window is automatically shown before this line of dialogue.&quot;</span>
 <span class="k">pause</span>                <span class="c1"># the window is shown during this pause.</span>
@@ -655,12 +650,12 @@ respectively. <code class="docutils literal notranslate"><span class="pre">windo
 <span class="k">scene</span> <span class="n">bg</span> <span class="n">washington</span>  <span class="c1"># the window is hidden before the scene change.</span>
 <span class="k">with</span> <span class="n">dissolve</span>
 
-<span class="k">window</span> <span class="k">auto</span> <span class="k">show</span>     <span class="c1"># Shows the window before it normally would be shown.</span>
+<span class="k">window</span> <span class="k">show</span>     <span class="c1"># Shows the window before it normally would be shown.</span>
 
 <span class="k">show</span> <span class="n">eileen</span>
 <span class="k">with</span> <span class="n">dissolve</span>
 
-<span class="s2">&quot;Without window auto show, the window would have been shown here.&quot;</span>
+<span class="s2">&quot;Without window show, the window would have been shown here.&quot;</span>
 </pre></div>
 </div>
 <p>Dialogue window management is subject to the &quot;show empty window&quot;
@@ -668,7 +663,7 @@ respectively. <code class="docutils literal notranslate"><span class="pre">windo
 have no effect.</p>
 </section>
 <section id="say-with-arguments">
-<span id="id4"></span><h2>Say with Arguments<a class="headerlink" href="#say-with-arguments" title="Permalink to this heading"> link</a></h2>
+<span id="id4"></span><h2>Say with Arguments<a class="headerlink" href="#say-with-arguments" title="Link to this heading"></a></h2>
 <p>Additional arguments can be passed to the say statement by including them
 in parenthesis after the say statement. For example, one can write:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="s2">&quot;Hello, world.&quot;</span> <span class="p">(</span><span class="n">what_color</span><span class="o">=</span><span class="s2">&quot;#8c8&quot;</span><span class="p">)</span>
@@ -678,8 +673,7 @@ in parenthesis after the say statement. For example, one can write:</p>
 if it is not None. If any remain, they are then passed to the character,
 which treats them as if they were present when the character was defined.
 So, the example above displays the dialogue in green.
-Special keywords <cite>_mode</cite> and <cite>_with_node</cite> will override the ones set in
-the character only for this interaction.</p>
+The keyword <cite>_with_none</cite> will override the <cite>with_none</cite> attribute of the character.</p>
 <p>The <cite>interact</cite> parameter is a special case : when it was passed as False
 when defining the Character, passing <code class="docutils literal notranslate"><span class="pre">interact=True</span></code> will not override
 that, meaning no interaction will happen in that case.</p>
@@ -698,7 +692,7 @@ For example:</p>
 </div>
 </section>
 <section id="monologue-mode">
-<span id="id5"></span><h2>Monologue Mode<a class="headerlink" href="#monologue-mode" title="Permalink to this heading"> link</a></h2>
+<span id="id5"></span><h2>Monologue Mode<a class="headerlink" href="#monologue-mode" title="Link to this heading"></a></h2>
 <p>Some visual novels have extended narration, or multiple blocks of dialogue
 from the same character. In these cases, typing the name of the character
 and the quotes multiple times is somewhat redundant.</p>
@@ -735,7 +729,7 @@ triple quotes be displayed as a single message, conserving line breaks, you can
 do it with <code class="docutils literal notranslate"><span class="pre">rpy</span> <span class="pre">monologue</span> <span class="pre">none</span></code>.</p>
 </section>
 <section id="the-character-store">
-<h2>The <code class="docutils literal notranslate"><span class="pre">character</span></code> Store<a class="headerlink" href="#the-character-store" title="Permalink to this heading"> link</a></h2>
+<h2>The <code class="docutils literal notranslate"><span class="pre">character</span></code> Store<a class="headerlink" href="#the-character-store" title="Link to this heading"></a></h2>
 <p><em>Main article:</em> <a class="reference internal" href="python.html#named-stores"><span class="std std-ref">Other Named Stores</span></a></p>
 <p>The say statement will search the <code class="docutils literal notranslate"><span class="pre">character</span></code> named store before the default
 store. If you want to have a character with the same name as a variable in
@@ -771,13 +765,13 @@ character in a namespace without conflicting with the say statement:</p>
 </div>
 </section>
 <section id="alternative-presentations">
-<h2>Alternative Presentations<a class="headerlink" href="#alternative-presentations" title="Permalink to this heading"> link</a></h2>
+<h2>Alternative Presentations<a class="headerlink" href="#alternative-presentations" title="Link to this heading"></a></h2>
 <p><a class="reference internal" href="nvl_mode.html"><span class="doc">NVL-Mode Tutorial</span></a> : a mode that displays dialogue over the entire screen.</p>
 <p><a class="reference internal" href="bubble.html"><span class="doc">Speech Bubbles</span></a> : a mode that displays dialogue in speech bubbles that can be
 positioned interactively.</p>
 </section>
 <section id="see-also">
-<h2>See Also<a class="headerlink" href="#see-also" title="Permalink to this heading"> link</a></h2>
+<h2>See Also<a class="headerlink" href="#see-also" title="Link to this heading"></a></h2>
 <p><a class="reference internal" href="statement_equivalents.html"><span class="doc">Statement Equivalents</span></a> : how to use most of the features described here in
 a python context, although with some drawbacks and limitations.</p>
 <p><a class="reference internal" href="other.html#renpy.last_say" title="renpy.last_say"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.last_say()</span></code></a> : provides information about the last say statement.</p>

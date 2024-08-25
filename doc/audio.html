@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Audio &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/audio.html" />
@@ -17,18 +17,17 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Movie" href="movie.html" />
+    <link rel="next" title="Audio Filters" href="audio_filters.html" />
     <link rel="prev" title="Conditional Statements" href="conditional.html" /> 
 </head>
 
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -81,6 +80,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#renpy.mark_audio_unseen"><code class="docutils literal notranslate"><span class="pre">renpy.mark_audio_unseen()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.play"><code class="docutils literal notranslate"><span class="pre">renpy.play()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.seen_audio"><code class="docutils literal notranslate"><span class="pre">renpy.seen_audio()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.music.channel_defined"><code class="docutils literal notranslate"><span class="pre">renpy.music.channel_defined()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.music.get_all_mixers"><code class="docutils literal notranslate"><span class="pre">renpy.music.get_all_mixers()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.music.get_duration"><code class="docutils literal notranslate"><span class="pre">renpy.music.get_duration()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.music.get_loop"><code class="docutils literal notranslate"><span class="pre">renpy.music.get_loop()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.music.get_pause"><code class="docutils literal notranslate"><span class="pre">renpy.music.get_pause()</span></code></a></li>
@@ -91,6 +92,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#renpy.music.pump"><code class="docutils literal notranslate"><span class="pre">renpy.music.pump()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.music.queue"><code class="docutils literal notranslate"><span class="pre">renpy.music.queue()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.music.register_channel"><code class="docutils literal notranslate"><span class="pre">renpy.music.register_channel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.music.set_audio_filter"><code class="docutils literal notranslate"><span class="pre">renpy.music.set_audio_filter()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.music.set_mixer"><code class="docutils literal notranslate"><span class="pre">renpy.music.set_mixer()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.music.set_pan"><code class="docutils literal notranslate"><span class="pre">renpy.music.set_pan()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.music.set_pause"><code class="docutils literal notranslate"><span class="pre">renpy.music.set_pause()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.music.set_queue_empty_callback"><code class="docutils literal notranslate"><span class="pre">renpy.music.set_queue_empty_callback()</span></code></a></li>
@@ -101,6 +104,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#sound-functions">Sound Functions</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -110,8 +114,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
@@ -129,6 +133,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -157,10 +162,8 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -172,6 +175,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul>
@@ -239,7 +243,7 @@
            <div itemprop="articleBody">
              
   <section id="audio">
-<span id="id1"></span><h1>Audio<a class="headerlink" href="#audio" title="Permalink to this heading"> link</a></h1>
+<span id="id1"></span><h1>Audio<a class="headerlink" href="#audio" title="Link to this heading"></a></h1>
 <p>Ren'Py supports playing music and sound effects in the background,
 using the following audio file formats:</p>
 <ul class="simple">
@@ -279,7 +283,7 @@ respectively.</p>
 <p>In-game, the usual way to play music and sound in Ren'Py is using
 the three music/sound statements.</p>
 <section id="play-statement">
-<span id="id2"></span><h2>Play Statement<a class="headerlink" href="#play-statement" title="Permalink to this heading"> link</a></h2>
+<span id="id2"></span><h2>Play Statement<a class="headerlink" href="#play-statement" title="Link to this heading"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">play</span></code> statement is used to play sound and music. If a file is
 currently playing on a normal channel, it is interrupted and replaced with
 the new file.</p>
@@ -335,10 +339,17 @@ time:</p>
 </div>
 <p>Files placed into the audio namespace may automatically define variables that can
 be used like this.</p>
+<p id="synchro-start">When multiple play statements are run at the same time, the audio in each channel will start synchronized.
+Specifically, the audio will start:</p>
+<ul class="simple">
+<li><p>When the audio files on every channel have been loaded and audio samples are available.</p></li>
+<li><p>When all all channels have been faded out.</p></li>
+</ul>
+<p>The play statement will delay starting new audio until these conditions have been met.</p>
 </section>
 <section id="stop-statement">
-<h2>Stop Statement<a class="headerlink" href="#stop-statement" title="Permalink to this heading"> link</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">stop</span></code> statement begins with the keyword <code class="docutils literal notranslate"><span class="pre">stop</span></code>, followed by the the name of a
+<h2>Stop Statement<a class="headerlink" href="#stop-statement" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">stop</span></code> statement begins with the keyword <code class="docutils literal notranslate"><span class="pre">stop</span></code>, followed by the name of a
 channel to stop sound on. It may optionally have a <code class="docutils literal notranslate"><span class="pre">fadeout</span></code> clause. If the
 fadeout clause is not given, <a class="reference internal" href="config.html#var-config.fadeout_audio"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.fadeout_audio</span></code></a> is used.</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">stop</span> <span class="k">sound</span>
@@ -347,10 +358,10 @@ fadeout clause is not given, <a class="reference internal" href="config.html#var
 </div>
 </section>
 <section id="queue-statement">
-<h2>Queue Statement<a class="headerlink" href="#queue-statement" title="Permalink to this heading"> link</a></h2>
+<h2>Queue Statement<a class="headerlink" href="#queue-statement" title="Link to this heading"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">queue</span></code> statement is used to queue up audio files. They will be played when
 the channel finishes playing the currently playing file.</p>
-<p>The queue statement begins with keyword <code class="docutils literal notranslate"><span class="pre">queue</span></code>, followed by the the name of a
+<p>The queue statement begins with keyword <code class="docutils literal notranslate"><span class="pre">queue</span></code>, followed by the name of a
 channel to play sound on. It optionally takes the <code class="docutils literal notranslate"><span class="pre">fadein</span></code>, <code class="docutils literal notranslate"><span class="pre">loop</span></code> and <code class="docutils literal notranslate"><span class="pre">noloop</span></code> clauses.</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">queue</span> <span class="k">sound</span> <span class="s2">&quot;woof.mp3&quot;</span>
 <span class="k">queue</span> <span class="k">music</span> <span class="p">[</span> <span class="s2">&quot;a.ogg&quot;</span><span class="p">,</span> <span class="s2">&quot;b.ogg&quot;</span> <span class="p">]</span>
@@ -382,7 +393,7 @@ access to allow music and sound to be controlled from Python, and to expose
 advanced (rarely used) features.</p>
 </section>
 <section id="partial-playback">
-<span id="id3"></span><h2>Partial Playback<a class="headerlink" href="#partial-playback" title="Permalink to this heading"> link</a></h2>
+<span id="id3"></span><h2>Partial Playback<a class="headerlink" href="#partial-playback" title="Link to this heading"></a></h2>
 <p>Ren'Py supports partial of audio files. This is done by putting a playback
 specification, enclosed in angle brackets, at the start of the file.
 The partial playback specification should consist of alternating
@@ -413,7 +424,7 @@ given by <code class="docutils literal notranslate"><span class="pre">from</span
 second mark before playing it again all the way through to the end.</p>
 </section>
 <section id="sync-start-position">
-<span id="sync-start"></span><h2>Sync Start Position<a class="headerlink" href="#sync-start-position" title="Permalink to this heading"> link</a></h2>
+<span id="sync-start"></span><h2>Sync Start Position<a class="headerlink" href="#sync-start-position" title="Link to this heading"></a></h2>
 <p>The position in the file at which the clip begins playing can also be synced to
 another channel with a currently-playing track using a filename like
 &quot;&lt;sync channelname&gt;track.opus&quot;, where channelname is the name of the channel,
@@ -428,7 +439,7 @@ subsequent iterations. (By default, the <code class="file docutils literal notra
 modified even in subsequent iterations in the loop.)</p>
 </section>
 <section id="volume">
-<span id="id4"></span><h2>Volume<a class="headerlink" href="#volume" title="Permalink to this heading"> link</a></h2>
+<span id="id4"></span><h2>Volume<a class="headerlink" href="#volume" title="Link to this heading"></a></h2>
 <p>The volume at which a given track is going to be played depends on a number
 of variables:</p>
 <ul class="simple">
@@ -458,9 +469,10 @@ the channel relates to. If enabled, it will reduce the played volume to 0.
 They can be set using the <a class="reference internal" href="screen_actions.html#SetMute" title="SetMute"><code class="xref py py-func docutils literal notranslate"><span class="pre">SetMute()</span></code></a> or <a class="reference internal" href="screen_actions.html#ToggleMute" title="ToggleMute"><code class="xref py py-func docutils literal notranslate"><span class="pre">ToggleMute()</span></code></a> actions, or
 using the <a class="reference internal" href="screen_actions.html#Preference" title="Preference"><code class="xref py py-func docutils literal notranslate"><span class="pre">Preference()</span></code></a> action with the &quot;mixer &lt;mixer&gt; mute&quot; key, or using
 the <a class="reference internal" href="preferences.html#preferences.set_mute" title="preferences.set_mute"><code class="xref py py-func docutils literal notranslate"><span class="pre">preferences.set_mute()</span></code></a> function.</p>
+<p>7.. _silence:</p>
 </section>
 <section id="playing-silence">
-<span id="silence"></span><h2>Playing Silence<a class="headerlink" href="#playing-silence" title="Permalink to this heading"> link</a></h2>
+<h2>Playing Silence<a class="headerlink" href="#playing-silence" title="Link to this heading"></a></h2>
 <p>A specified duration of silence can played using a filename like
 &quot;&lt;silence 3.0&gt;&quot;, where 3.0 is the number of seconds of silence that is
 desired. This can be used to delay the start of a sound file. For example:</p>
@@ -470,7 +482,7 @@ desired. This can be used to delay the start of a sound file. For example:</p>
 <p>Will play silence for half a second, and then an explosion sound.</p>
 </section>
 <section id="audio-namespace-and-directory">
-<span id="audio-namespace"></span><h2>Audio Namespace and Directory<a class="headerlink" href="#audio-namespace-and-directory" title="Permalink to this heading"> link</a></h2>
+<span id="audio-namespace"></span><h2>Audio Namespace and Directory<a class="headerlink" href="#audio-namespace-and-directory" title="Link to this heading"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">play</span></code> and <code class="docutils literal notranslate"><span class="pre">queue</span></code> statements evaluate their arguments in the
 audio namespace. This means it is possible to use the define statement
 to provide an alias for an audio file.</p>
@@ -505,14 +517,14 @@ in the audio directory. For example:</p>
 <code class="file docutils literal notranslate"><span class="pre">game/audio/opening.ogg</span></code>.</p>
 </section>
 <section id="actions">
-<h2>Actions<a class="headerlink" href="#actions" title="Permalink to this heading"> link</a></h2>
+<h2>Actions<a class="headerlink" href="#actions" title="Link to this heading"></a></h2>
 <p>See <a class="reference internal" href="screen_actions.html#audio-actions"><span class="std std-ref">Audio Actions</span></a>.</p>
 </section>
 <section id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"> link</a></h2>
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="AudioData">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AudioData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AudioData" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AudioData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AudioData" title="Link to this definition"></a></dt>
 <dd><p>This class wraps a bytes object containing audio data, so it can be
 passed to the audio playback system. The audio data should be contained
 in some format Ren'Py supports. (For examples RIFF WAV format headers,
@@ -535,21 +547,21 @@ example:</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.mark_audio_seen">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">mark_audio_seen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.mark_audio_seen" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">mark_audio_seen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.mark_audio_seen" title="Link to this definition"></a></dt>
 <dd><p>Marks the given filename as if it has been already played on the current user's
 system.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.mark_audio_unseen">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">mark_audio_unseen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.mark_audio_unseen" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">mark_audio_unseen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.mark_audio_unseen" title="Link to this definition"></a></dt>
 <dd><p>Marks the given filename as if it has not been played on the current user's
 system yet.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.play">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">play</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.play" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">play</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.play" title="Link to this definition"></a></dt>
 <dd><p>Plays a sound effect. If <cite>channel</cite> is None, it defaults to
 <a class="reference internal" href="config.html#var-config.play_channel"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.play_channel</span></code></a>. This is used to play sounds defined in
 styles, <a class="reference internal" href="style_properties.html#style-property-hover_sound"><code class="xref std std-propref docutils literal notranslate"><span class="pre">hover_sound</span></code></a> and <a class="reference internal" href="style_properties.html#style-property-activate_sound"><code class="xref std std-propref docutils literal notranslate"><span class="pre">activate_sound</span></code></a>.</p>
@@ -557,14 +569,26 @@ styles, <a class="reference internal" href="style_properties.html#style-property
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.seen_audio">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">seen_audio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.seen_audio" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">seen_audio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.seen_audio" title="Link to this definition"></a></dt>
 <dd><p>Returns True if the given filename has been played at least once on the current
 user's system.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="renpy.music.channel_defined">
+<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">channel_defined</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.channel_defined" title="Link to this definition"></a></dt>
+<dd><p>Returns True if the channel exists, or False otherwise.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.music.get_all_mixers">
+<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">get_all_mixers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.get_all_mixers" title="Link to this definition"></a></dt>
+<dd><p>This gets all mixers in use.</p>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="renpy.music.get_duration">
-<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">get_duration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.get_duration" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">get_duration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.get_duration" title="Link to this definition"></a></dt>
 <dd><p>Returns the duration of the audio or video file on <cite>channel</cite>. Returns
 0.0 if no file is playing on <cite>channel</cite>, or the duration is unknown.
 Some formats - notably MP3 - do not include duration information in a
@@ -573,7 +597,7 @@ format Ren'Py can access.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.music.get_loop">
-<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">get_loop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.get_loop" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">get_loop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.get_loop" title="Link to this definition"></a></dt>
 <dd><p>Return a list of filenames that are being looped on <cite>channel</cite>, or None
 if no files are being looped. In the case where a loop is queued, but
 is not yet playing, the loop is returned, not the currently playing
@@ -582,20 +606,20 @@ music.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.music.get_pause">
-<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">get_pause</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.get_pause" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">get_pause</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.get_pause" title="Link to this definition"></a></dt>
 <dd><p>Returns the pause flag for <cite>channel</cite>.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.music.get_playing">
-<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">get_playing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.get_playing" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">get_playing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.get_playing" title="Link to this definition"></a></dt>
 <dd><p>If the given channel is playing, returns the playing file name.
 Otherwise, returns None.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.music.get_pos">
-<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">get_pos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.get_pos" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">get_pos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.get_pos" title="Link to this definition"></a></dt>
 <dd><p>Returns the current position of the audio or video file on <cite>channel</cite>, in
 seconds. Returns None if no audio is playing on <cite>channel</cite>.</p>
 <p>As this may return None before a channel starts playing, or if the audio
@@ -605,14 +629,14 @@ always handle a None value.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.music.is_playing">
-<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">is_playing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.is_playing" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">is_playing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.is_playing" title="Link to this definition"></a></dt>
 <dd><p>Returns True if the channel is currently playing a sound, False if
 it is not, or if the sound system isn't working.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.music.play">
-<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">play</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filenames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fadeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">synchro_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fadein</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">if_changed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_volume</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.play" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">play</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filenames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fadeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">synchro_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fadein</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">if_changed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_volume</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.play" title="Link to this definition"></a></dt>
 <dd><p>This stops the music currently playing on the numbered channel, dequeues
 any queued music, and begins playing the specified file or files.</p>
 <dl class="simple">
@@ -627,10 +651,10 @@ in the queue.</p>
 fadeout time is taken from config.fadeout_audio. This is ignored if
 the channel is paused when the music is played.</p>
 </dd>
-<dt><cite>synchro_start</cite></dt><dd><p>Ren'Py will ensure that all channels of with synchro_start set to true
-will start playing at exactly the same time. Synchro_start should be
-true when playing two audio files that are meant to be synchronized
-with each other.</p>
+<dt><cite>synchro_start</cite></dt><dd><p>When True, all channels that have synchro_start set to true will start
+playing at exactly the same time. This may lead to a pause before the
+channels start playing. This is useful when playing two audio files that
+are meant to be synchronized with each other.</p>
 </dd>
 <dt><cite>fadein</cite></dt><dd><p>This is the number of seconds to fade the music in for, on the
 first loop only.</p>
@@ -654,7 +678,7 @@ original volume as determined by the mixer, channel and secondary volume.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.music.pump">
-<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">pump</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.pump" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">pump</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.pump" title="Link to this definition"></a></dt>
 <dd><p>This 'pumps' the audio system. Normally, the effects of the <code class="docutils literal notranslate"><span class="pre">play</span></code>,
 <code class="docutils literal notranslate"><span class="pre">queue</span></code>, and <code class="docutils literal notranslate"><span class="pre">stop</span></code> statements and the function equivalents take
 place at the start of the next interaction. In some cases, the effects
@@ -672,7 +696,7 @@ to be faded out.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.music.queue">
-<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">queue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filenames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clear_queue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fadein</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_volume</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.queue" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">queue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filenames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clear_queue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fadein</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_volume</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.queue" title="Link to this definition"></a></dt>
 <dd><p>This queues the given filenames on the specified channel.</p>
 <dl class="simple">
 <dt><cite>filenames</cite></dt><dd><p>This may be a single file, or a list of files to be played.</p>
@@ -704,7 +728,7 @@ original volume as determined by the mixer, channel and secondary volume.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.music.register_channel">
-<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">register_channel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mixer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_on_mute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_suffix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer_queue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">movie</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">framedrop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.register_channel" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">register_channel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mixer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_on_mute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_suffix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer_queue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">movie</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">framedrop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.register_channel" title="Link to this definition"></a></dt>
 <dd><p>This registers a new audio channel named <cite>name</cite>. Audio can then be
 played on the channel by supplying the channel name to the play or
 queue statements.</p>
@@ -746,8 +770,38 @@ Ren'Py will display frames late rather than dropping them.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="renpy.music.set_audio_filter">
+<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">set_audio_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">audio_filter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.016</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.set_audio_filter" title="Link to this definition"></a></dt>
+<dd><p>Sets the audio filter for sounds about to be queued to <cite>audio_filter</cite>.</p>
+<dl class="simple">
+<dt><cite>audio_filter</cite></dt><dd><p>Must be a an <a class="reference internal" href="audio_filters.html"><span class="doc">audio filter</span></a> or list of
+audio filters, or None to remove the audio filter.</p>
+</dd>
+<dt><cite>replace</cite></dt><dd><p>If True, the audio filter replaces the current audio filter immediately,
+changing currently playing and queued sounds. If False, the audio
+filter will be used the next time a sound is played or queued.</p>
+</dd>
+<dt><cite>duration</cite></dt><dd><p>The duration to change from the current to the new filter, in seconds.
+This prevents a popping sound when changing filters.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.music.set_mixer">
+<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">set_mixer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mixer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.set_mixer" title="Link to this definition"></a></dt>
+<dd><p>This sets the name of the mixer associated with a given
+channel. By default, there are two mixers, 'sfx' and
+'music'. 'sfx' is on channels 0 to 3, and 'music'
+on 3 to 7. The voice module calls this function to set channel 2 to voice.
+You can create your own mixer, but will need to add a preference if you
+wish to allow the user to set it.</p>
+<p>This function should only be called in an init block.</p>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="renpy.music.set_pan">
-<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">set_pan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pan</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.set_pan" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">set_pan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pan</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.set_pan" title="Link to this definition"></a></dt>
 <dd><p>Sets the pan of this channel.</p>
 <dl class="simple">
 <dt><cite>pan</cite></dt><dd><p>A number between -1 and 1 that control the placement of the audio.
@@ -764,14 +818,14 @@ then all audio is sent to the right ear.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.music.set_pause">
-<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">set_pause</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.set_pause" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">set_pause</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.set_pause" title="Link to this definition"></a></dt>
 <dd><p>Sets the pause flag for <cite>channel</cite> to <cite>value</cite>. If True, the channel
 will pause, otherwise it will play normally.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.music.set_queue_empty_callback">
-<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">set_queue_empty_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.set_queue_empty_callback" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">set_queue_empty_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.set_queue_empty_callback" title="Link to this definition"></a></dt>
 <dd><p>This sets a callback that is called when the queue is empty. This
 callback is called when the queue first becomes empty, and at
 least once per interaction while the queue is empty.</p>
@@ -783,7 +837,7 @@ long as a queue slot is empty.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.music.set_volume">
-<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">set_volume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">volume</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.set_volume" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">set_volume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">volume</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.set_volume" title="Link to this definition"></a></dt>
 <dd><p>Sets the volume of this channel, as a fraction of the volume of the
 mixer controlling the channel.</p>
 <dl class="simple">
@@ -801,7 +855,7 @@ in rollback.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.music.stop">
-<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fadeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.stop" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fadeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.stop" title="Link to this definition"></a></dt>
 <dd><p>This stops the music that is currently playing, and dequeues all
 queued music. If fadeout is None, the music is faded out for the
 time given in config.fadeout_audio, otherwise it is faded for fadeout
@@ -819,7 +873,7 @@ the channel is paused.</p>
 
 </section>
 <section id="sound-functions">
-<h2>Sound Functions<a class="headerlink" href="#sound-functions" title="Permalink to this heading"> link</a></h2>
+<h2>Sound Functions<a class="headerlink" href="#sound-functions" title="Link to this heading"></a></h2>
 <p>Most <code class="docutils literal notranslate"><span class="pre">renpy.music</span></code> functions have aliases in <code class="docutils literal notranslate"><span class="pre">renpy.sound</span></code>. These functions are similar,
 except they default to the sound channel rather than the music channel, and default
 to not looping.</p>
@@ -831,7 +885,7 @@ to not looping.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="conditional.html" class="btn btn-neutral float-left" title="Conditional Statements" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="movie.html" class="btn btn-neutral float-right" title="Movie" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="audio_filters.html" class="btn btn-neutral float-right" title="Audio Filters" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

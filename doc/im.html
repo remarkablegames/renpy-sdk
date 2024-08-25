@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Image Manipulators &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/im.html" />
@@ -17,14 +17,13 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
@@ -47,7 +46,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -64,6 +63,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -73,8 +73,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
@@ -92,6 +92,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -120,10 +121,8 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -135,6 +134,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul>
@@ -202,7 +202,7 @@
            <div itemprop="articleBody">
              
   <section id="image-manipulators">
-<h1>Image Manipulators<a class="headerlink" href="#image-manipulators" title="Permalink to this heading"> link</a></h1>
+<h1>Image Manipulators<a class="headerlink" href="#image-manipulators" title="Link to this heading"></a></h1>
 <p>An image manipulator is a displayable that takes an image or image
 manipulator, and either loads it or performs an operation on it.
 Image manipulators can only take images or other
@@ -215,12 +215,12 @@ Image can be used whenever an image manipulator is required.</p>
 <p>The use of image manipulators is
 historic. A number of image manipulators that had been documented in the
 past should no longer be used, as they suffer from inherent problems,
-and in general (except for <a class="reference internal" href="#im.Data" title="im.Data"><code class="xref py py-func docutils literal notranslate"><span class="pre">im.Data()</span></code></a>), the <a class="reference internal" href="trans_trans_python.html#Transform" title="Transform"><code class="xref py py-func docutils literal notranslate"><span class="pre">Transform()</span></code></a>
+and in general (except for <a class="reference internal" href="#im.Data" title="im.Data"><code class="xref py py-func docutils literal notranslate"><span class="pre">im.Data()</span></code></a>), the <a class="reference internal" href="transforms.html#Transform" title="Transform"><code class="xref py py-func docutils literal notranslate"><span class="pre">Transform()</span></code></a>
 displayable provides similar functionality while fixing the problems.</p>
 </div>
 <dl class="py class">
 <dt class="sig sig-object py" id="im.AlphaMask">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">im.</span></span><span class="sig-name descname"><span class="pre">AlphaMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.AlphaMask" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">im.</span></span><span class="sig-name descname"><span class="pre">AlphaMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.AlphaMask" title="Link to this definition"></a></dt>
 <dd><p>An image manipulator that takes two image manipulators, <cite>base</cite> and
 <cite>mask</cite>, as arguments. It replaces the alpha channel of <cite>base</cite> with
 the red channel of <cite>mask</cite>.</p>
@@ -235,7 +235,7 @@ which uses the mask's alpha channel.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="im.Blur">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">im.</span></span><span class="sig-name descname"><span class="pre">Blur</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xrad</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yrad</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.Blur" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">im.</span></span><span class="sig-name descname"><span class="pre">Blur</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xrad</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yrad</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.Blur" title="Link to this definition"></a></dt>
 <dd><p>An image manipulator that blurs the image manipulator <cite>im</cite> using
 an elliptical kernel described by <cite>xrad</cite> and optionally <cite>yrad</cite>.</p>
 <p>If <cite>yrad</cite> is None, it will take the value of <cite>xrad</cite> resulting in
@@ -244,26 +244,26 @@ a circular kernel being used.</p>
 </pre></div>
 </div>
 <div class="deprecated">
-<p><span class="versionmodified deprecated">Deprecated since version 7.4.0: </span>Use the <a class="reference internal" href="atl.html#transform-property-blur"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">blur</span></code></a> transform property.</p>
+<p><span class="versionmodified deprecated">Deprecated since version 7.4.0: </span>Use the <a class="reference internal" href="transform_properties.html#transform-property-blur"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">blur</span></code></a> transform property.</p>
 </div>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="im.Crop">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">im.</span></span><span class="sig-name descname"><span class="pre">Crop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rect</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.Crop" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">im.</span></span><span class="sig-name descname"><span class="pre">Crop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rect</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.Crop" title="Link to this definition"></a></dt>
 <dd><p>An image manipulator that crops <cite>rect</cite>, a (x, y, width, height) tuple,
 out of <cite>im</cite>, an image manipulator.</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">image</span> <span class="n">logo</span> <span class="na">crop</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">Crop</span><span class="p">(</span><span class="s2">&quot;logo.png&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">307</span><span class="p">))</span>
 </pre></div>
 </div>
 <div class="deprecated">
-<p><span class="versionmodified deprecated">Deprecated since version 7.4.0: </span>Use the <a class="reference internal" href="atl.html#transform-property-crop"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">crop</span></code></a> transform property.</p>
+<p><span class="versionmodified deprecated">Deprecated since version 7.4.0: </span>Use the <a class="reference internal" href="transform_properties.html#transform-property-crop"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">crop</span></code></a> transform property.</p>
 </div>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="im.Data">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">im.</span></span><span class="sig-name descname"><span class="pre">Data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.Data" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">im.</span></span><span class="sig-name descname"><span class="pre">Data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.Data" title="Link to this definition"></a></dt>
 <dd><p>This image manipulator loads an image from binary data.</p>
 <dl class="simple">
 <dt><cite>data</cite></dt><dd><p>A string of bytes, giving the compressed image data in a standard
@@ -278,7 +278,7 @@ loaded from disk.)</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="im.FactorScale">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">im.</span></span><span class="sig-name descname"><span class="pre">FactorScale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bilinear</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.FactorScale" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">im.</span></span><span class="sig-name descname"><span class="pre">FactorScale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bilinear</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.FactorScale" title="Link to this definition"></a></dt>
 <dd><p>An image manipulator that scales <cite>im</cite> (a second image manipulator)
 to <cite>width</cite> times its original <cite>width</cite>, and <cite>height</cite> times its
 original height. If <cite>height</cite> is omitted, it defaults to <cite>width</cite>.</p>
@@ -288,14 +288,14 @@ the scaling. Otherwise, nearest neighbor interpolation is used.</p>
 </pre></div>
 </div>
 <div class="deprecated">
-<p><span class="versionmodified deprecated">Deprecated since version 7.4.0: </span>Use the <a class="reference internal" href="atl.html#transform-property-zoom"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">zoom</span></code></a>, or the
-<a class="reference internal" href="atl.html#transform-property-xzoom"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">xzoom</span></code></a> and <a class="reference internal" href="atl.html#transform-property-yzoom"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">yzoom</span></code></a> transform properties.</p>
+<p><span class="versionmodified deprecated">Deprecated since version 7.4.0: </span>Use the <a class="reference internal" href="transform_properties.html#transform-property-zoom"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">zoom</span></code></a>, or the
+<a class="reference internal" href="transform_properties.html#transform-property-xzoom"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">xzoom</span></code></a> and <a class="reference internal" href="transform_properties.html#transform-property-yzoom"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">yzoom</span></code></a> transform properties.</p>
 </div>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="im.Flip">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">im.</span></span><span class="sig-name descname"><span class="pre">Flip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">horizontal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vertical</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.Flip" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">im.</span></span><span class="sig-name descname"><span class="pre">Flip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">horizontal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vertical</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.Flip" title="Link to this definition"></a></dt>
 <dd><p>An image manipulator that flips <cite>im</cite> (an image manipulator)
 vertically or horizontally.  <cite>vertical</cite> and <cite>horizontal</cite> control
 the directions in which the image is flipped.</p>
@@ -303,36 +303,36 @@ the directions in which the image is flipped.</p>
 </pre></div>
 </div>
 <div class="deprecated">
-<p><span class="versionmodified deprecated">Deprecated since version 7.4.0: </span>Set <a class="reference internal" href="atl.html#transform-property-xzoom"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">xzoom</span></code></a> (for horizontal flip)
-or <a class="reference internal" href="atl.html#transform-property-yzoom"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">yzoom</span></code></a> (for vertical flip) to a negative value.</p>
+<p><span class="versionmodified deprecated">Deprecated since version 7.4.0: </span>Set <a class="reference internal" href="transform_properties.html#transform-property-xzoom"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">xzoom</span></code></a> (for horizontal flip)
+or <a class="reference internal" href="transform_properties.html#transform-property-yzoom"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">yzoom</span></code></a> (for vertical flip) to a negative value.</p>
 </div>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="im.Grayscale">
-<span class="sig-prename descclassname"><span class="pre">im.</span></span><span class="sig-name descname"><span class="pre">Grayscale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.Grayscale" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">im.</span></span><span class="sig-name descname"><span class="pre">Grayscale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.Grayscale" title="Link to this definition"></a></dt>
 <dd><p>An image manipulator that creates a desaturated version of the image
 manipulator <cite>im</cite>.</p>
 <div class="deprecated">
-<p><span class="versionmodified deprecated">Deprecated since version 7.4.0: </span>Set the <a class="reference internal" href="atl.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform property to
+<p><span class="versionmodified deprecated">Deprecated since version 7.4.0: </span>Set the <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform property to
 <a class="reference internal" href="matrixcolor.html#SaturationMatrix" title="SaturationMatrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">SaturationMatrix(0)</span></code></a>.</p>
 </div>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="im.Sepia">
-<span class="sig-prename descclassname"><span class="pre">im.</span></span><span class="sig-name descname"><span class="pre">Sepia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.Sepia" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">im.</span></span><span class="sig-name descname"><span class="pre">Sepia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.Sepia" title="Link to this definition"></a></dt>
 <dd><p>An image manipulator that creates a sepia-toned version of the image
 manipulator <cite>im</cite>.</p>
 <div class="deprecated">
-<p><span class="versionmodified deprecated">Deprecated since version 7.4.0: </span>Set the <a class="reference internal" href="atl.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform property to
+<p><span class="versionmodified deprecated">Deprecated since version 7.4.0: </span>Set the <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform property to
 <a class="reference internal" href="matrixcolor.html#SepiaMatrix" title="SepiaMatrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">SepiaMatrix()</span></code></a></p>
 </div>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="im.Tile">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">im.</span></span><span class="sig-name descname"><span class="pre">Tile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.Tile" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">im.</span></span><span class="sig-name descname"><span class="pre">Tile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.Tile" title="Link to this definition"></a></dt>
 <dd><p>An image manipulator that tiles the image manipulator <cite>im</cite>, until
 it is <cite>size</cite>.</p>
 <dl class="simple">
@@ -346,7 +346,7 @@ it is <cite>size</cite>.</p>
 </dd></dl>
 
 <section id="im-matrixcolor">
-<h2>im.MatrixColor<a class="headerlink" href="#im-matrixcolor" title="Permalink to this heading"> link</a></h2>
+<h2>im.MatrixColor<a class="headerlink" href="#im-matrixcolor" title="Link to this heading"></a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The im.MatrixColor image manipulator has been replaced by Transforms
@@ -377,7 +377,7 @@ ones. With X being the Matrix corresponding to im.Matrixcolor.x,
 </div>
 <dl class="py class">
 <dt class="sig sig-object py" id="im.MatrixColor">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">im.</span></span><span class="sig-name descname"><span class="pre">MatrixColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.MatrixColor" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">im.</span></span><span class="sig-name descname"><span class="pre">MatrixColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.MatrixColor" title="Link to this definition"></a></dt>
 <dd><p>An image operator that uses <cite>matrix</cite> to linearly transform the
 image manipulator <cite>im</cite>.</p>
 <p><cite>Matrix</cite> should be a list, tuple, or <a class="reference internal" href="#im.matrix" title="im.matrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">im.matrix()</span></code></a> that is 20
@@ -404,13 +404,13 @@ of the matrix are named:</p>
 range [0.0, 1.0].</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 7.4.0: </span>Use <code class="docutils literal notranslate"><span class="pre">Transform(im,</span> <span class="pre">matrixcolor=matrix,</span> <span class="pre">**properties)</span></code>.
-See <a class="reference internal" href="trans_trans_python.html#Transform" title="Transform"><code class="xref py py-func docutils literal notranslate"><span class="pre">Transform()</span></code></a> and <a class="reference internal" href="atl.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a>.</p>
+See <a class="reference internal" href="transforms.html#Transform" title="Transform"><code class="xref py py-func docutils literal notranslate"><span class="pre">Transform()</span></code></a> and <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a>.</p>
 </div>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="im.matrix">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">im.</span></span><span class="sig-name descname"><span class="pre">matrix</span></span><a class="headerlink" href="#im.matrix" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">im.</span></span><span class="sig-name descname"><span class="pre">matrix</span></span><a class="headerlink" href="#im.matrix" title="Link to this definition"></a></dt>
 <dd><p>Constructs an im.matrix object from <cite>matrix</cite>. im.matrix objects
 support The operations supported are matrix multiplication, scalar
 multiplication, element-wise addition, and element-wise
@@ -428,7 +428,7 @@ suitable for multiplication.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="im.matrix.brightness">
-<span class="sig-prename descclassname"><span class="pre">im.matrix.</span></span><span class="sig-name descname"><span class="pre">brightness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.matrix.brightness" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">im.matrix.</span></span><span class="sig-name descname"><span class="pre">brightness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.matrix.brightness" title="Link to this definition"></a></dt>
 <dd><p>Returns an im.matrix that alters the brightness of an image.</p>
 <dl class="simple">
 <dt><cite>b</cite></dt><dd><p>The amount of change in image brightness. This should be
@@ -438,13 +438,13 @@ image and 1 the brightest.</p>
 </dl>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 7.4.0: </span>Use <a class="reference internal" href="matrixcolor.html#BrightnessMatrix" title="BrightnessMatrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">BrightnessMatrix(b)</span></code></a>
-with the <a class="reference internal" href="atl.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform property.</p>
+with the <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform property.</p>
 </div>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="im.matrix.colorize">
-<span class="sig-prename descclassname"><span class="pre">im.matrix.</span></span><span class="sig-name descname"><span class="pre">colorize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">black_color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">white_color</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.matrix.colorize" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">im.matrix.</span></span><span class="sig-name descname"><span class="pre">colorize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">black_color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">white_color</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.matrix.colorize" title="Link to this definition"></a></dt>
 <dd><p>Returns an im.matrix that colorizes a black and white image.
 <cite>black_color</cite> and <cite>white_color</cite> are Ren'Py style colors, so
 they may be specified as strings or tuples of (0-255) color
@@ -457,81 +457,81 @@ values.</p>
 </div>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 7.4.0: </span>Use <a class="reference internal" href="matrixcolor.html#ColorizeMatrix" title="ColorizeMatrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">ColorizeMatrix(black_color,</span> <span class="pre">white_color)</span></code></a>
-with the <a class="reference internal" href="atl.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform property.</p>
+with the <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform property.</p>
 </div>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="im.matrix.contrast">
-<span class="sig-prename descclassname"><span class="pre">im.matrix.</span></span><span class="sig-name descname"><span class="pre">contrast</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.matrix.contrast" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">im.matrix.</span></span><span class="sig-name descname"><span class="pre">contrast</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.matrix.contrast" title="Link to this definition"></a></dt>
 <dd><p>Returns an im.matrix that alters the contrast of an image. <cite>c</cite> should
 be greater than 0.0, with values between 0.0 and 1.0 decreasing contrast, and
 values greater than 1.0 increasing contrast.</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 7.4.0: </span>Use <a class="reference internal" href="matrixcolor.html#ContrastMatrix" title="ContrastMatrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">ContrastMatrix(c)</span></code></a>
-with the <a class="reference internal" href="atl.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform property.</p>
+with the <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform property.</p>
 </div>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="im.matrix.desaturate">
-<span class="sig-prename descclassname"><span class="pre">im.matrix.</span></span><span class="sig-name descname"><span class="pre">desaturate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#im.matrix.desaturate" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">im.matrix.</span></span><span class="sig-name descname"><span class="pre">desaturate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#im.matrix.desaturate" title="Link to this definition"></a></dt>
 <dd><p>Returns an im.matrix that desaturates the image (makes it
 grayscale). This is equivalent to calling
 im.matrix.saturation(0).</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 7.4.0: </span>Use <a class="reference internal" href="matrixcolor.html#SaturationMatrix" title="SaturationMatrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">SaturationMatrix(0)</span></code></a>
-with the <a class="reference internal" href="atl.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform property.</p>
+with the <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform property.</p>
 </div>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="im.matrix.hue">
-<span class="sig-prename descclassname"><span class="pre">im.matrix.</span></span><span class="sig-name descname"><span class="pre">hue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.matrix.hue" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">im.matrix.</span></span><span class="sig-name descname"><span class="pre">hue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.matrix.hue" title="Link to this definition"></a></dt>
 <dd><p>Returns an im.matrix that rotates the hue by <cite>h</cite> degrees, while
 preserving luminosity.</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 7.4.0: </span>Use <a class="reference internal" href="matrixcolor.html#HueMatrix" title="HueMatrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">HueMatrix(h)</span></code></a>
-with the <a class="reference internal" href="atl.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform property.</p>
+with the <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform property.</p>
 </div>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="im.matrix.identity">
-<span class="sig-prename descclassname"><span class="pre">im.matrix.</span></span><span class="sig-name descname"><span class="pre">identity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#im.matrix.identity" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">im.matrix.</span></span><span class="sig-name descname"><span class="pre">identity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#im.matrix.identity" title="Link to this definition"></a></dt>
 <dd><p>Returns an identity matrix, one that does not change color or
 alpha.</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 7.4.0: </span>Use <a class="reference internal" href="matrixcolor.html#IdentityMatrix" title="IdentityMatrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">IdentityMatrix()</span></code></a>
-with the <a class="reference internal" href="atl.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform property.</p>
+with the <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform property.</p>
 </div>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="im.matrix.invert">
-<span class="sig-prename descclassname"><span class="pre">im.matrix.</span></span><span class="sig-name descname"><span class="pre">invert</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#im.matrix.invert" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">im.matrix.</span></span><span class="sig-name descname"><span class="pre">invert</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#im.matrix.invert" title="Link to this definition"></a></dt>
 <dd><p>Returns an im.matrix that inverts the red, green, and blue
 channels of the image without changing the alpha channel.</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 7.4.0: </span>Use <a class="reference internal" href="matrixcolor.html#InvertMatrix" title="InvertMatrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">InvertMatrix(1.0)</span></code></a>
-with the <a class="reference internal" href="atl.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform property.</p>
+with the <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform property.</p>
 </div>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="im.matrix.opacity">
-<span class="sig-prename descclassname"><span class="pre">im.matrix.</span></span><span class="sig-name descname"><span class="pre">opacity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">o</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.matrix.opacity" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">im.matrix.</span></span><span class="sig-name descname"><span class="pre">opacity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">o</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.matrix.opacity" title="Link to this definition"></a></dt>
 <dd><p>Returns an im.matrix that alters the opacity of an image. An
 <cite>o</cite> of 0.0 is fully transparent, while 1.0 is fully opaque.</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 7.4.0: </span>Use <a class="reference internal" href="matrixcolor.html#OpacityMatrix" title="OpacityMatrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">OpacityMatrix(o)</span></code></a>
-with the <a class="reference internal" href="atl.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform property.</p>
+with the <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform property.</p>
 </div>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="im.matrix.saturation">
-<span class="sig-prename descclassname"><span class="pre">im.matrix.</span></span><span class="sig-name descname"><span class="pre">saturation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0.2126,</span> <span class="pre">0.7152,</span> <span class="pre">0.0722)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.matrix.saturation" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">im.matrix.</span></span><span class="sig-name descname"><span class="pre">saturation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0.2126,</span> <span class="pre">0.7152,</span> <span class="pre">0.0722)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.matrix.saturation" title="Link to this definition"></a></dt>
 <dd><p>Returns an im.matrix that alters the saturation of an
 image. The alpha channel is untouched.</p>
 <dl class="simple">
@@ -549,13 +549,13 @@ kept then the other two channels.</p>
 </dl>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 7.4.0: </span>Use <a class="reference internal" href="matrixcolor.html#SaturationMatrix" title="SaturationMatrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">SaturationMatrix(value,</span> <span class="pre">desat)</span></code></a>
-with the <a class="reference internal" href="atl.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform property.</p>
+with the <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform property.</p>
 </div>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="im.matrix.tint">
-<span class="sig-prename descclassname"><span class="pre">im.matrix.</span></span><span class="sig-name descname"><span class="pre">tint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.matrix.tint" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">im.matrix.</span></span><span class="sig-name descname"><span class="pre">tint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#im.matrix.tint" title="Link to this definition"></a></dt>
 <dd><p>Returns an im.matrix that tints an image, without changing
 the alpha channel. <cite>r</cite>, <cite>g</cite>, and <cite>b</cite> should be numbers between
 0 and 1, and control what fraction of the given channel is
@@ -564,7 +564,7 @@ the value of the red channel is 100, the transformed color
 will have a red value of 50.)</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 7.4.0: </span>Use <a class="reference internal" href="matrixcolor.html#TintMatrix" title="TintMatrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">TintMatrix(Color((r,</span> <span class="pre">g,</span> <span class="pre">b)))</span></code></a>
-with the <a class="reference internal" href="atl.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform property.</p>
+with the <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform property.</p>
 </div>
 </dd></dl>
 

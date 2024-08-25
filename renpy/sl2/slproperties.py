@@ -102,6 +102,7 @@ text_property_names = [
     "slow_abortable",
     "strikethrough",
     "textalign",
+    "textshader",
     "text_align",
     "text_y_fudge",
     "underline",
@@ -148,6 +149,7 @@ button_properties = [ Style(i) for i in [
     "focus_mask",
     "child",
     "keyboard_focus",
+    "keyboard_focus_insets",
     "key_events",
     ] ] + [
         Keyword("action"),
@@ -187,10 +189,13 @@ scrollbar_bar_properties = [ PrefixStyle("scrollbar_", i) for i in bar_property_
 vscrollbar_bar_properties = [ PrefixStyle("vscrollbar_", i) for i in bar_property_names ]
 
 box_property_names = [
+    "box_align",
+    "box_justify",
     "box_layout",
     "box_wrap",
     "box_wrap_spacing",
     "box_reverse",
+    "justify",
     "order_reverse",
     "spacing",
     "first_spacing",

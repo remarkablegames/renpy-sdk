@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Statement Equivalents &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/statement_equivalents.html" />
@@ -17,14 +17,13 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -66,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -75,8 +75,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
@@ -94,6 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -133,6 +134,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#choice-menus">Choice Menus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.Choice"><code class="docutils literal notranslate"><span class="pre">renpy.Choice</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.display_menu"><code class="docutils literal notranslate"><span class="pre">renpy.display_menu()</span></code></a></li>
 </ul>
 </li>
@@ -176,10 +178,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -191,6 +191,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul>
@@ -258,7 +259,7 @@
            <div itemprop="articleBody">
              
   <section id="statement-equivalents">
-<h1>Statement Equivalents<a class="headerlink" href="#statement-equivalents" title="Permalink to this heading"> link</a></h1>
+<h1>Statement Equivalents<a class="headerlink" href="#statement-equivalents" title="Link to this heading"></a></h1>
 <p>To allow Ren'Py to be scripted in Python, each Ren'Py statement has
 a Python equivalent. This usually consists of a Python function,
 but may also consist of a pattern of Python calls that perform an action
@@ -268,7 +269,7 @@ usually removes any possible <a class="reference internal" href="developer_tools
 optimizations, making your game less easily checkable and possibly less
 fluid. It can also disable features in certain cases.</p>
 <section id="dialogue">
-<h2>Dialogue<a class="headerlink" href="#dialogue" title="Permalink to this heading"> link</a></h2>
+<h2>Dialogue<a class="headerlink" href="#dialogue" title="Link to this heading"></a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Several features, such as skipping already-seen dialogues, are not
@@ -287,7 +288,7 @@ character.</p>
 </pre></div>
 </div>
 <section id="proxy-functions">
-<span id="say-proxy"></span><h3>Proxy functions<a class="headerlink" href="#proxy-functions" title="Permalink to this heading"> link</a></h3>
+<span id="say-proxy"></span><h3>Proxy functions<a class="headerlink" href="#proxy-functions" title="Link to this heading"></a></h3>
 <p>This equivalence of characters and function objects works in the other
 direction as well. It is possible to declare a Python function, and
 then use that function in the place of a character object in a native say statement.
@@ -344,7 +345,7 @@ have <code class="docutils literal notranslate"><span class="pre">e</span></code
 <p>There is one additional way of replacing the say statement using Python:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.say">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">say</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">who</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">what</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.say" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">say</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">who</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">what</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.say" title="Link to this definition"></a></dt>
 <dd><p>The equivalent of the say statement.</p>
 <dl class="simple">
 <dt><cite>who</cite></dt><dd><p>Either the character that will say something, None for the narrator,
@@ -371,13 +372,13 @@ equivalent.</p>
 
 </section>
 <section id="dialogue-window-management">
-<h3>Dialogue Window Management<a class="headerlink" href="#dialogue-window-management" title="Permalink to this heading"> link</a></h3>
+<h3>Dialogue Window Management<a class="headerlink" href="#dialogue-window-management" title="Link to this heading"></a></h3>
 <p><a class="reference internal" href="dialogue.html#dialogue-window-management"><span class="std std-ref">Window management</span></a> is performed by setting
 the <a class="reference internal" href="store_variables.html#var-_window"><code class="xref std std-var docutils literal notranslate"><span class="pre">_window</span></code></a> and <a class="reference internal" href="store_variables.html#var-_window_auto"><code class="xref std std-var docutils literal notranslate"><span class="pre">_window_auto</span></code></a> variables, and by using the following
 two functions:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="window_hide">
-<span class="sig-name descname"><span class="pre">_window_hide</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trans</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#window_hide" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">_window_hide</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trans</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#window_hide" title="Link to this definition"></a></dt>
 <dd><p>The Python equivalent of the <code class="docutils literal notranslate"><span class="pre">window</span> <span class="pre">hide</span></code> statement.</p>
 <dl class="simple">
 <dt><cite>trans</cite></dt><dd><p>If False, the default window hide transition is used. If None,
@@ -392,7 +393,7 @@ statment.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="window_show">
-<span class="sig-name descname"><span class="pre">_window_show</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trans</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#window_show" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">_window_show</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trans</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#window_show" title="Link to this definition"></a></dt>
 <dd><p>The Python equivalent of the <code class="docutils literal notranslate"><span class="pre">window</span> <span class="pre">show</span></code> statement.</p>
 <dl class="simple">
 <dt><cite>trans</cite></dt><dd><p>If False, the default window show transition is used. If None,
@@ -400,7 +401,7 @@ no transition is used. Otherwise, the specified transition is
 used.</p>
 </dd>
 <dt><cite>auto</cite></dt><dd><p>If True, this becomes the equivalent of the <code class="docutils literal notranslate"><span class="pre">window</span> <span class="pre">auto</span> <span class="pre">show</span></code>
-statment.</p>
+statement.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -408,16 +409,31 @@ statment.</p>
 </section>
 </section>
 <section id="choice-menus">
-<h2>Choice Menus<a class="headerlink" href="#choice-menus" title="Permalink to this heading"> link</a></h2>
+<h2>Choice Menus<a class="headerlink" href="#choice-menus" title="Link to this heading"></a></h2>
 <p>The <a class="reference internal" href="menus.html"><span class="doc">menu statement</span></a> has an equivalent Python function.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="renpy.Choice">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">Choice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.Choice" title="Link to this definition"></a></dt>
+<dd><p>This encapsulates a menu choice with with arguments. The first positional argument is is the value
+that will be returned, and the other arguments are the arguments that will be passed to the choice
+screen.</p>
+<p>This is intended for use in the items list of <a class="reference internal" href="#renpy.display_menu" title="renpy.display_menu"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.display_menu()</span></code></a> to supply arguments to
+that screen.</p>
+<dl class="simple">
+<dt><cite>value</cite></dt><dd><p>The value that will be given to the choice screen.</p>
+</dd>
+</dl>
+<p>Positional arguments and keyword arguments are stored in this object and used by renpy.display_menu.</p>
+</dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.display_menu">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">display_menu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">items</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interact</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'choice'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.display_menu" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">display_menu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">items</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interact</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'choice'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'menu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.display_menu" title="Link to this definition"></a></dt>
 <dd><p>This displays a menu to the user. <cite>items</cite> should be a list of 2-item tuples.
 In each tuple, the first item is a textual label, and the second item is
 the value to be returned if that item is selected. If the value is None,
 the first item is used as a menu caption.</p>
-<p>This function takes many arguments, of which only a few are documented.
+<p>This function takes many optional arguments, of which only a few are documented.
 Except for <cite>items</cite>, all arguments should be given as keyword arguments.</p>
 <dl class="simple">
 <dt><cite>interact</cite></dt><dd><p>If false, the menu is displayed, but no interaction is performed.</p>
@@ -430,6 +446,12 @@ Otherwise, it is displayed in ADV mode.</p>
 <dt><cite>_layer</cite></dt><dd><p>The layer to display the menu on. If not given, defaults to <a class="reference internal" href="config.html#var-config.choice_layer"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.choice_layer</span></code></a>
 for normal choice menus, and <code class="xref std std-var docutils literal notranslate"><span class="pre">config.nvl_choice_layer</span></code> for NVL choice menus.</p>
 </dd>
+<dt><cite>_args</cite></dt><dd><p>If not None, this should be a tuple containing the positional <a class="reference internal" href="menus.html#menu-arguments"><span class="std std-ref">menu arguments</span></a>
+supplied to this menu.</p>
+</dd>
+<dt><cite>_kwargs</cite></dt><dd><p>If not None, this should be a dict containing the keyword <a class="reference internal" href="menus.html#menu-arguments"><span class="std std-ref">menu arguments</span></a>
+supplied to this menu.</p>
+</dd>
 </dl>
 <p>Note that most Ren'Py games do not use menu captions, but use narration
 instead. To display a menu using narration, write:</p>
@@ -437,16 +459,23 @@ instead. To display a menu using narration, write:</p>
 <span class="k">$</span> <span class="n">result</span> <span class="o">=</span> <span class="n">renpy</span><span class="o">.</span><span class="n">display_menu</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;East&quot;</span><span class="p">,</span> <span class="s2">&quot;east&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;West&quot;</span><span class="p">,</span> <span class="s2">&quot;west&quot;</span><span class="p">)</span> <span class="p">])</span>
 </pre></div>
 </div>
+<p>If you need to supply per-item arguments, use <a class="reference internal" href="#renpy.Choice" title="renpy.Choice"><code class="xref py py-class docutils literal notranslate"><span class="pre">renpy.Choice</span></code></a> objects as the values. For example:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">renpy</span><span class="o">.</span><span class="n">display_menu</span><span class="p">([</span>
+    <span class="p">(</span><span class="s2">&quot;East&quot;</span><span class="p">,</span> <span class="n">renpy</span><span class="o">.</span><span class="n">Choice</span><span class="p">(</span><span class="s2">&quot;east&quot;</span><span class="p">,</span> <span class="n">icon</span><span class="o">=</span><span class="s2">&quot;right_arrow&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;West&quot;</span><span class="p">,</span> <span class="n">renpy</span><span class="o">.</span><span class="n">Choice</span><span class="p">(</span><span class="s2">&quot;west&quot;</span><span class="p">,</span> <span class="n">icon</span><span class="o">=</span><span class="s2">&quot;left_arrow&quot;</span><span class="p">),</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </section>
 <section id="displaying-images">
-<h2>Displaying Images<a class="headerlink" href="#displaying-images" title="Permalink to this heading"> link</a></h2>
+<h2>Displaying Images<a class="headerlink" href="#displaying-images" title="Link to this heading"></a></h2>
 <p>The image, scene, show, and hide statements each have an equivalent
 Python function (see <a class="reference internal" href="displaying_images.html"><span class="doc">Displaying Images</span></a> for the original statements).</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_at_list">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_at_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_at_list" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_at_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_at_list" title="Link to this definition"></a></dt>
 <dd><p>Returns the list of transforms being applied to the image with tag <cite>name</cite>
 on <cite>layer</cite>. Returns an empty list if no transforms are being applied, or
 None if the image is not shown.</p>
@@ -455,7 +484,7 @@ None if the image is not shown.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.hide">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">hide</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.hide" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">hide</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.hide" title="Link to this definition"></a></dt>
 <dd><p>Hides an image from a layer. The Python equivalent of the hide statement.</p>
 <dl class="simple">
 <dt><cite>name</cite></dt><dd><p>The name of the image to hide. Only the image tag is used, and
@@ -469,7 +498,7 @@ layer associated with the tag.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.image">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.image" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.image" title="Link to this definition"></a></dt>
 <dd><p>Defines an image. This function is the Python equivalent of the
 image statement.</p>
 <dl class="simple">
@@ -484,7 +513,7 @@ error to run this function once the game has started.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.scene">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">scene</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'master'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.scene" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">scene</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'master'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.scene" title="Link to this definition"></a></dt>
 <dd><p>Removes all displayables from <cite>layer</cite>. This is equivalent to the scene
 statement, when the scene statement is not given an image to show.</p>
 <p>A full scene statement is equivalent to a call to renpy.scene followed by a
@@ -501,7 +530,7 @@ call to <a class="reference internal" href="#renpy.show" title="renpy.show"><cod
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.show">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">at_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">what</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zorder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">behind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.show" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">at_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">what</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zorder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">behind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.show" title="Link to this definition"></a></dt>
 <dd><p>Shows an image on a layer. This is the programmatic equivalent of the show
 statement.</p>
 <dl class="simple">
@@ -528,6 +557,9 @@ equivalent of the <code class="docutils literal notranslate"><span class="pre">a
 <dt><cite>behind</cite></dt><dd><p>A list of strings, giving image tags that this image is shown behind.
 The equivalent of the <code class="docutils literal notranslate"><span class="pre">behind</span></code> property.</p>
 </dd>
+<dt><cite>atl</cite></dt><dd><p>If not None, an ATL Transform that will be applied. This takes only the ATL itself,
+it does not apply prior state.</p>
+</dd>
 </dl>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">show</span> <span class="n">a</span>
 <span class="k">$</span> <span class="n">renpy</span><span class="o">.</span><span class="k">show</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
@@ -550,7 +582,7 @@ The equivalent of the <code class="docutils literal notranslate"><span class="pr
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.show_layer_at">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">show_layer_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'master'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">camera</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.show_layer_at" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">show_layer_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'master'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">camera</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.show_layer_at" title="Link to this definition"></a></dt>
 <dd><p>The Python equivalent of the <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">layer</span></code> <cite>layer</cite> <code class="docutils literal notranslate"><span class="pre">at</span></code> <cite>at_list</cite>
 statement. If <cite>camera</cite> is True, the equivalent of the <code class="docutils literal notranslate"><span class="pre">camera</span></code> statement.</p>
 <dl class="simple">
@@ -563,12 +595,12 @@ to update that state.</p>
 
 </section>
 <section id="transitions">
-<h2>Transitions<a class="headerlink" href="#transitions" title="Permalink to this heading"> link</a></h2>
+<h2>Transitions<a class="headerlink" href="#transitions" title="Link to this heading"></a></h2>
 <p>The equivalent of the <a class="reference internal" href="displaying_images.html#with-statement"><span class="std std-ref">With Statement</span></a> is the <a class="reference internal" href="#renpy.with_statement" title="renpy.with_statement"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.with_statement()</span></code></a>
 function.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.with_statement">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">with_statement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trans</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">always</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.with_statement" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">with_statement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trans</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">always</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.with_statement" title="Link to this definition"></a></dt>
 <dd><p>Causes a transition to occur. This is the Python equivalent of the
 with statement.</p>
 <dl class="simple">
@@ -584,22 +616,22 @@ and false otherwise.</p>
 
 </section>
 <section id="jump">
-<h2>Jump<a class="headerlink" href="#jump" title="Permalink to this heading"> link</a></h2>
+<h2>Jump<a class="headerlink" href="#jump" title="Link to this heading"></a></h2>
 <p>The equivalent of the <a class="reference internal" href="label.html#jump-statement"><span class="std std-ref">Jump Statement</span></a> is the <a class="reference internal" href="#renpy.jump" title="renpy.jump"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.jump()</span></code></a> function.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.jump">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">jump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.jump" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">jump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.jump" title="Link to this definition"></a></dt>
 <dd><p>Causes the current statement to end, and control to jump to the given
 label.</p>
 </dd></dl>
 
 </section>
 <section id="call">
-<h2>Call<a class="headerlink" href="#call" title="Permalink to this heading"> link</a></h2>
+<h2>Call<a class="headerlink" href="#call" title="Link to this heading"></a></h2>
 <p>The equivalent of the <a class="reference internal" href="label.html#call-statement"><span class="std std-ref">Call Statement</span></a> is the <a class="reference internal" href="#renpy.call" title="renpy.call"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.call()</span></code></a> function.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.call">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_current</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.call" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_current</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.call" title="Link to this definition"></a></dt>
 <dd><p>Causes the current Ren'Py statement to terminate, and a jump to a
 <cite>label</cite> to occur. When the jump returns, control will be passed
 to the statement following the current statement.</p>
@@ -616,17 +648,17 @@ keyword argument.)</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.return_statement">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">return_statement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.return_statement" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">return_statement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.return_statement" title="Link to this definition"></a></dt>
 <dd><p>Causes Ren'Py to return from the current Ren'Py-level call.</p>
 </dd></dl>
 
 </section>
 <section id="pause">
-<h2>Pause<a class="headerlink" href="#pause" title="Permalink to this heading"> link</a></h2>
+<h2>Pause<a class="headerlink" href="#pause" title="Link to this heading"></a></h2>
 <p>The equivalent of the <a class="reference internal" href="quickstart.html#pause-statement"><span class="std std-ref">Pause Statement</span></a> is the <a class="reference internal" href="#renpy.pause" title="renpy.pause"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.pause()</span></code></a> function.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.pause">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">pause</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hard</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.pause" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">pause</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hard</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.pause" title="Link to this definition"></a></dt>
 <dd><p>Causes Ren'Py to pause. Returns true if the user clicked to end the pause,
 or false if the pause timed out or was skipped.</p>
 <dl class="simple">
@@ -667,13 +699,13 @@ player.</p>
 
 </section>
 <section id="layeredimage">
-<h2>Layeredimage<a class="headerlink" href="#layeredimage" title="Permalink to this heading"> link</a></h2>
+<h2>Layeredimage<a class="headerlink" href="#layeredimage" title="Link to this heading"></a></h2>
 <p>The <a class="reference internal" href="layeredimage.html#layeredimage-statement"><span class="std std-ref">Layeredimage</span></a> statement has Python equivalents. The group
 statement does not: the name of the group is supplied to <a class="reference internal" href="#Attribute" title="Attribute"><code class="xref py py-class docutils literal notranslate"><span class="pre">Attribute</span></code></a>,
 and the <code class="docutils literal notranslate"><span class="pre">auto</span></code> feature can be implemented using <a class="reference internal" href="displaying_images.html#renpy.list_images" title="renpy.list_images"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.list_images()</span></code></a>.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="Attribute">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Attribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Attribute" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Attribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Attribute" title="Link to this definition"></a></dt>
 <dd><p>This is used to represent a layer of an LayeredImage that is
 controlled by an attribute. A single attribute can control
 multiple layers, in which case all layers corresponding to
@@ -718,7 +750,7 @@ to generate an image filename.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="Condition">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Condition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">condition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Condition" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Condition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">condition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Condition" title="Link to this definition"></a></dt>
 <dd><p>When the condition is true, the layer is displayed. Otherwise, nothing
 is displayed.</p>
 <p>This is used to implement a single <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code> <strong>or</strong> <code class="docutils literal notranslate"><span class="pre">else</span></code>
@@ -752,7 +784,7 @@ horizontally and 200 vertically.)</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ConditionGroup">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ConditionGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conditions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ConditionGroup" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ConditionGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conditions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ConditionGroup" title="Link to this definition"></a></dt>
 <dd><p>Takes a list of <a class="reference internal" href="#Condition" title="Condition"><code class="xref py py-class docutils literal notranslate"><span class="pre">Condition</span></code></a> to combine them into a single
 <a class="reference internal" href="displayables.html#ConditionSwitch" title="ConditionSwitch"><code class="xref py py-func docutils literal notranslate"><span class="pre">ConditionSwitch()</span></code></a>.</p>
 <p>Implements the if/elif/else statement.</p>
@@ -760,7 +792,7 @@ horizontally and 200 vertically.)</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="LayeredImage">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LayeredImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attributes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">at</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format_function</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute_function</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offer_screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#LayeredImage" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LayeredImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attributes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">at</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format_function</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute_function</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offer_screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#LayeredImage" title="Link to this definition"></a></dt>
 <dd><p>This is an image-like object that, when shown with the proper set of
 attributes, shows a displayable created by compositing together the
 displayables associated with those attribute.</p>
@@ -814,7 +846,7 @@ it should either be displayed through a scene or show statement, or by
 an image name string used as a displayable.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="LayeredImage.add">
-<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#LayeredImage.add" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#LayeredImage.add" title="Link to this definition"></a></dt>
 <dd><dl class="simple">
 <dt><cite>a</cite></dt><dd><p>An Attribute, Condition, ConditionGroup or <a class="reference internal" href="displayables.html"><span class="doc">displayable</span></a>
 object.</p>

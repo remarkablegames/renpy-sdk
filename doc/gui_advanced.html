@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Advanced GUI &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/gui_advanced.html" />
@@ -17,19 +17,18 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Screens and Python" href="screen_python.html" />
-    <link rel="prev" title="Transforms and Transitions in Python" href="trans_trans_python.html" /> 
+    <link rel="prev" title="Persistent Data" href="persistent.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -66,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -75,8 +75,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
@@ -94,6 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -122,7 +123,6 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Advanced GUI</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#python-functions">Python Functions</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#gui.button_properties"><code class="docutils literal notranslate"><span class="pre">gui.button_properties()</span></code></a></li>
@@ -144,7 +144,6 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -156,6 +155,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul>
@@ -223,14 +223,14 @@
            <div itemprop="articleBody">
              
   <section id="advanced-gui">
-<span id="gui-advanced"></span><h1>Advanced GUI<a class="headerlink" href="#advanced-gui" title="Permalink to this heading"> link</a></h1>
+<span id="gui-advanced"></span><h1>Advanced GUI<a class="headerlink" href="#advanced-gui" title="Link to this heading"></a></h1>
 <p>This section has some odds and ends about advanced usage of the GUI.</p>
 <section id="python-functions">
-<h2>Python Functions<a class="headerlink" href="#python-functions" title="Permalink to this heading"> link</a></h2>
+<h2>Python Functions<a class="headerlink" href="#python-functions" title="Link to this heading"></a></h2>
 <p>There are some Python functions that support the GUI.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="gui.button_properties">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">button_properties</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kind</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.button_properties" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">button_properties</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kind</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.button_properties" title="Link to this definition"></a></dt>
 <dd><p>Given a <cite>kind</cite> of button, returns a dictionary giving standard style
 properties for that button. This sets:</p>
 <dl class="simple">
@@ -261,7 +261,7 @@ documentation.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="gui.init">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fov</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">75</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.init" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fov</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">75</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.init" title="Link to this definition"></a></dt>
 <dd><p>Initializes the gui.</p>
 <dl class="simple">
 <dt><cite>width</cite></dt><dd><p>The width of the default window.</p>
@@ -275,14 +275,14 @@ documentation.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="gui.rebuild">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">rebuild</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.rebuild" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">rebuild</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.rebuild" title="Link to this definition"></a></dt>
 <dd><p>Rebuilds the GUI.</p>
 <p>Note: This is a very slow function.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="gui.text_properties">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">text_properties</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">accent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.text_properties" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">text_properties</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">accent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.text_properties" title="Link to this definition"></a></dt>
 <dd><p>Given a <cite>kind</cite> of button, returns a dictionary giving standard style
 properties for that button. This sets:
 Given a <cite>kind</cite> of textbutton, returns a dictionary giving standard style
@@ -326,7 +326,7 @@ gui.kind_text_kerning sets kerning, and so on.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="gui.variant">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">variant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variant</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.variant" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">variant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variant</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.variant" title="Link to this definition"></a></dt>
 <dd><p>A decorator that causes a function to be called when the gui is first
 initialized, and again each time the gui is rebuilt.  This is intended
 to be used as a function decorator,  of the form:</p>
@@ -347,7 +347,7 @@ giving the variant name.</p>
 </dd></dl>
 
 <section id="more-on-gui-rebuild">
-<h3>More on gui.rebuild<a class="headerlink" href="#more-on-gui-rebuild" title="Permalink to this heading"> link</a></h3>
+<h3>More on gui.rebuild<a class="headerlink" href="#more-on-gui-rebuild" title="Link to this heading"></a></h3>
 <p>The gui.rebuild function is a rather slow function that updates the GUI
 to reflect the current state of Ren'Py. What it does is:</p>
 <ul class="simple">
@@ -369,7 +369,7 @@ namespace.</p></li>
 <p>are different.</p>
 </section>
 <section id="the-default-statement-the-gui-namespace-and-gui-rebuild">
-<h3>The default statement, the gui namespace, and gui.rebuild<a class="headerlink" href="#the-default-statement-the-gui-namespace-and-gui-rebuild" title="Permalink to this heading"> link</a></h3>
+<h3>The default statement, the gui namespace, and gui.rebuild<a class="headerlink" href="#the-default-statement-the-gui-namespace-and-gui-rebuild" title="Link to this heading"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">default</span></code> statement has changed semantics when applied to the <code class="docutils literal notranslate"><span class="pre">gui</span></code>
 namespace. When applied to a variable in the <code class="docutils literal notranslate"><span class="pre">gui</span></code> namespace, the
 default statement runs interleaved with the define statement, and
@@ -393,12 +393,12 @@ to have parts of the GUI that change as the game progresses.</p>
 </section>
 </section>
 <section id="gui-preferences">
-<span id="id1"></span><h2>GUI Preferences<a class="headerlink" href="#gui-preferences" title="Permalink to this heading"> link</a></h2>
+<span id="id1"></span><h2>GUI Preferences<a class="headerlink" href="#gui-preferences" title="Link to this heading"></a></h2>
 <p>Ren'Py also supports a GUI preference system, consisting of a single function
 and a pair of actions.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="gui.SetPreference">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">SetPreference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rebuild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.SetPreference" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">SetPreference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rebuild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.SetPreference" title="Link to this definition"></a></dt>
 <dd><p>This Action sets the gui preference with <cite>name</cite> to <cite>value</cite>.</p>
 <dl class="simple">
 <dt><cite>rebuild</cite></dt><dd><p>If true, the default, <a class="reference internal" href="#gui.rebuild" title="gui.rebuild"><code class="xref py py-func docutils literal notranslate"><span class="pre">gui.rebuild()</span></code></a> is called to make
@@ -413,7 +413,7 @@ when a button is hovered.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="gui.TogglePreference">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">TogglePreference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rebuild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.TogglePreference" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">TogglePreference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rebuild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.TogglePreference" title="Link to this definition"></a></dt>
 <dd><p>This Action toggles the gui preference with <cite>name</cite> between
 value <cite>a</cite> and value <cite>b</cite>. It is selected if the value is equal
 to <cite>a</cite>.</p>
@@ -430,7 +430,7 @@ when a button is hovered.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="gui.preference">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">preference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">...</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.preference" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">preference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">...</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.preference" title="Link to this definition"></a></dt>
 <dd><p>This function returns the value of the gui preference with
 <cite>name</cite>.</p>
 <dl class="simple">
@@ -442,7 +442,7 @@ the preference is used.</p>
 </dd></dl>
 
 <section id="example">
-<h3>Example<a class="headerlink" href="#example" title="Permalink to this heading"> link</a></h3>
+<h3>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h3>
 <p>The GUI preference system is used by calling <a class="reference internal" href="#gui.preference" title="gui.preference"><code class="xref py py-func docutils literal notranslate"><span class="pre">gui.preference()</span></code></a> when defining
 variables, with the name of the preference and the default value.
 For example, one can use GUI preferences to define the text font and
@@ -475,7 +475,7 @@ that can be added to the preferences screen.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="trans_trans_python.html" class="btn btn-neutral float-left" title="Transforms and Transitions in Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="persistent.html" class="btn btn-neutral float-left" title="Persistent Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="screen_python.html" class="btn btn-neutral float-right" title="Screens and Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

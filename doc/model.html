@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Model-Based Rendering &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/model.html" />
@@ -17,14 +17,13 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -66,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -75,8 +75,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
@@ -94,6 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -122,10 +123,8 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -141,6 +140,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#renpy.register_shader"><code class="docutils literal notranslate"><span class="pre">renpy.register_shader()</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#shader-part-local-variables">Shader Part Local Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#transforms-and-model-based-rendering">Transforms and Model-Based Rendering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#blend-functions">Blend Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#uniforms-and-attributes">Uniforms and Attributes</a></li>
@@ -159,24 +159,13 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#animated-shaders">Animated Shaders</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#default-shader-parts">Default Shader Parts</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#renpy-geometry-priority-100">renpy.geometry (priority 100)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#renpy-alpha-mask-priority-200">renpy.alpha_mask (priority 200)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#renpy-blur-priority-200">renpy.blur (priority 200)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#renpy-dissolve-priority-200">renpy.dissolve (priority 200)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#renpy-imagedissolve-priority-200">renpy.imagedissolve (priority 200)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#renpy-mask-priority-200">renpy.mask (priority 200)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#renpy-solid-priority-200">renpy.solid (priority 200)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#renpy-texture-priority-200">renpy.texture (priority 200)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#renpy-matrixcolor-priority-400">renpy.matrixcolor (priority 400)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#renpy-alpha-priority-500">renpy.alpha (priority 500)</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#shader-parts">Shader Parts</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul>
@@ -244,14 +233,14 @@
            <div itemprop="articleBody">
              
   <section id="model-based-rendering">
-<span id="model"></span><h1>Model-Based Rendering<a class="headerlink" href="#model-based-rendering" title="Permalink to this heading"> link</a></h1>
+<span id="model"></span><h1>Model-Based Rendering<a class="headerlink" href="#model-based-rendering" title="Link to this heading"></a></h1>
 <p>While Ren'Py is primarily used with two dimensional rectangular images that
 are common in visual novels, underneath the hood it has a model-based renderer
 intended to to take advantage of features found in modern GPUs. This allows
 for a number of visual effects that would not otherwise be possible.</p>
 <p>As a warning, this is one of the most advanced features available in Ren'Py.
 In many cases, it's not necessary to understand how model-based rendering
-works behind the scenes - features like <a class="reference internal" href="atl.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> and Live2D support
+works behind the scenes - features like <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> and Live2D support
 can be used without understanding how Model-Based rendering works, and more
 such features will be added to the understanding. This documentation is
 intended for very advanced creators, and for developers looking to add
@@ -263,7 +252,7 @@ portions of the models that are passed directly to your GPU drivers, which
 may accept erroneous inputs, it's important to check on multiple kinds of
 hardware.</p>
 <section id="models-renders-and-drawing-operations">
-<h2>Models, Renders, and Drawing Operations<a class="headerlink" href="#models-renders-and-drawing-operations" title="Permalink to this heading"> link</a></h2>
+<h2>Models, Renders, and Drawing Operations<a class="headerlink" href="#models-renders-and-drawing-operations" title="Link to this heading"></a></h2>
 <p>The fundamental thing that Ren'Py draws to the screen is a Model. A model
 consists of the following things:</p>
 <ul class="simple">
@@ -307,7 +296,7 @@ as part of this walk, the appropriate shader program is activated on the GPU,
 all information is transferred, and a drawing operation occurs.</p>
 </section>
 <section id="where-models-are-created">
-<h2>Where Models are Created<a class="headerlink" href="#where-models-are-created" title="Permalink to this heading"> link</a></h2>
+<h2>Where Models are Created<a class="headerlink" href="#where-models-are-created" title="Link to this heading"></a></h2>
 <p>Ren'Py creates Models automatically as part of its normal operation.
 The main reason to understand where models are created is that models
 correspond to drawing operations, and hence are the units that shaders
@@ -327,13 +316,13 @@ shaders, and uniforms as is needed for its purposes.</p>
 <dt>Live2D</dt><dd><p>Live2D displayables may created multiple Models when rendered, generally
 one Model for each layer.</p>
 </dd>
-<dt><a class="reference internal" href="trans_trans_python.html#Transform" title="Transform"><code class="xref py py-func docutils literal notranslate"><span class="pre">Transform()</span></code></a> and ATL</dt><dd><p>A Transform creates a model if <a class="reference internal" href="#transform-property-mesh"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">mesh</span></code></a> is True, or if <a class="reference internal" href="atl.html#transform-property-blur"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">blur</span></code></a>
+<dt><a class="reference internal" href="transforms.html#Transform" title="Transform"><code class="xref py py-func docutils literal notranslate"><span class="pre">Transform()</span></code></a> and ATL</dt><dd><p>A Transform creates a model if <a class="reference internal" href="#transform-property-mesh"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">mesh</span></code></a> is True, or if <a class="reference internal" href="transform_properties.html#transform-property-blur"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">blur</span></code></a>
 is being used. In this case, the children of the Transform are rendered
 to textures, with the mesh of the first texture being used for the mesh
 associated with the model.</p>
 <p>Not every transform creates a Model. Some transforms will simply add
 shaders and uniforms to a Render (such as transforms that use
-<a class="reference internal" href="atl.html#transform-property-blur"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">blur</span></code></a> or <a class="reference internal" href="atl.html#transform-property-alpha"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">alpha</span></code></a>). Other transforms simply affect
+<a class="reference internal" href="transform_properties.html#transform-property-blur"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">blur</span></code></a> or <a class="reference internal" href="transform_properties.html#transform-property-alpha"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">alpha</span></code></a>). Other transforms simply affect
 geometry.</p>
 </dd>
 <dt><code class="xref py py-class docutils literal notranslate"><span class="pre">Render</span></code></dt><dd><p>A Transform creates a model if its <code class="docutils literal notranslate"><span class="pre">mesh</span></code> attribute is True.
@@ -346,7 +335,7 @@ the mesh associated with the model.</p>
 future.</p>
 </section>
 <section id="shader-program-generation">
-<h2>Shader Program Generation<a class="headerlink" href="#shader-program-generation" title="Permalink to this heading"> link</a></h2>
+<h2>Shader Program Generation<a class="headerlink" href="#shader-program-generation" title="Link to this heading"></a></h2>
 <p>Ren'Py generates a shader program by first assembling a list of shader part
 names. This list consists of &quot;renpy.geometry&quot;, the list of shader parts
 taken from Renders, and the list of shader parts found in the Model being
@@ -369,7 +358,7 @@ in shader use occur, this file should be edited or deleted so it can be
 re-created with valid data.</p>
 </section>
 <section id="creating-a-custom-shader">
-<span id="custom-shaders"></span><h2>Creating a Custom Shader<a class="headerlink" href="#creating-a-custom-shader" title="Permalink to this heading"> link</a></h2>
+<span id="custom-shaders"></span><h2>Creating a Custom Shader<a class="headerlink" href="#creating-a-custom-shader" title="Link to this heading"></a></h2>
 <p>New shader parts can be created by calling the renpy.register_shader
 function and supplying portions of GLSL shaders.</p>
 <p>Generally, shader parts should be of the form &quot;namespace.part&quot;, such as
@@ -377,7 +366,7 @@ function and supplying portions of GLSL shaders.</p>
 &quot;live2d.&quot; are reserved for Ren'Py, as are names beginning with _.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.register_shader">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">register_shader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_shader" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">register_shader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_shader" title="Link to this definition"></a></dt>
 <dd><p>This registers a shader part. This takes <cite>name</cite>, and then
 keyword arguments.</p>
 <dl>
@@ -457,23 +446,34 @@ lead to name collisions when using two independent shaders.</p>
 <p>There is a variable that can help in debugging custom shaders:</p>
 <dl class="std var">
 <dt class="sig sig-object std" id="var-config.log_gl_shaders">
-<span class="pre">define</span> <span class="sig-name descname"><span class="pre">config.log_gl_shaders</span></span> <span class="pre">=</span> <span class="pre">False</span><a class="headerlink" href="#var-config.log_gl_shaders" title="Permalink to this definition"> link</a></dt>
+<span class="pre">define</span> <span class="sig-name descname"><span class="pre">config.log_gl_shaders</span></span> <span class="pre">=</span> <span class="pre">False</span><a class="headerlink" href="#var-config.log_gl_shaders" title="Link to this definition"></a></dt>
 <dd><p>If true, source code for the GLSL shader programs will be written to
 log.txt on start.</p>
 </dd></dl>
 
 </section>
+<section id="shader-part-local-variables">
+<span id="shader-local-variables"></span><h2>Shader Part Local Variables<a class="headerlink" href="#shader-part-local-variables" title="Link to this heading"></a></h2>
+<p>Variables can be declared shader-local by using one of <code class="docutils literal notranslate"><span class="pre">u__</span></code>, <code class="docutils literal notranslate"><span class="pre">a__</span></code>,
+<code class="docutils literal notranslate"><span class="pre">v__</span></code>, or <code class="docutils literal notranslate"><span class="pre">l__</span></code> as a prefix. When this is done, the double underscores
+are filled in with the shader name with all dots replaced with underscores.
+For example, if the shader name is <code class="docutils literal notranslate"><span class="pre">example.gradient</span></code>, the prefix
+<code class="docutils literal notranslate"><span class="pre">u__</span></code> will be replaced with <code class="docutils literal notranslate"><span class="pre">u_example_gradient_</span></code>.</p>
+<p>The main use of this is with <a class="reference internal" href="textshaders.html"><span class="doc">text shaders</span></a>, where most
+uniforms are shader-local. Also, local variables inside the shader should
+be declared with <code class="docutils literal notranslate"><span class="pre">l__</span></code>.</p>
+</section>
 <section id="transforms-and-model-based-rendering">
-<h2>Transforms and Model-Based Rendering<a class="headerlink" href="#transforms-and-model-based-rendering" title="Permalink to this heading"> link</a></h2>
-<p>Model-Based rendering adds the following properties to ATL and <a class="reference internal" href="trans_trans_python.html#Transform" title="Transform"><code class="xref py py-func docutils literal notranslate"><span class="pre">Transform()</span></code></a>:</p>
+<h2>Transforms and Model-Based Rendering<a class="headerlink" href="#transforms-and-model-based-rendering" title="Link to this heading"></a></h2>
+<p>Model-Based rendering adds the following properties to ATL and <a class="reference internal" href="transforms.html#Transform" title="Transform"><code class="xref py py-func docutils literal notranslate"><span class="pre">Transform()</span></code></a>:</p>
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-mesh">
-<span class="sig-name descname"><span class="pre">mesh</span></span><a class="headerlink" href="#transform-property-mesh" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">mesh</span></span><a class="headerlink" href="#transform-property-mesh" title="Link to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>None or True or tuple</p>
 </dd>
-<dt class="field-even">Default</dt>
+<dt class="field-even">Default<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
@@ -490,18 +490,18 @@ child.</p></li>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-mesh_pad">
-<span class="sig-name descname"><span class="pre">mesh_pad</span></span><a class="headerlink" href="#transform-property-mesh_pad" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">mesh_pad</span></span><a class="headerlink" href="#transform-property-mesh_pad" title="Link to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>None or tuple</p>
 </dd>
-<dt class="field-even">Default</dt>
+<dt class="field-even">Default<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
 <p>If not None, this can either be a 2 or 4-component tuple. If mesh is
 True and this is given, this applies padding to the size of the textures
-applied to the the textures used by the mesh. A 2-component tuple applies
+applied to the textures used by the mesh. A 2-component tuple applies
 padding to the right and bottom, while a 4-component tuple applies
 padding to the left, top, right, and bottom.</p>
 <p>This can be used, in conjunction with the <code class="docutils literal notranslate"><span class="pre">gl_pixel_perfect</span></code> property,
@@ -522,12 +522,12 @@ of the text.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-shader">
-<span class="sig-name descname"><span class="pre">shader</span></span><a class="headerlink" href="#transform-property-shader" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">shader</span></span><a class="headerlink" href="#transform-property-shader" title="Link to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>None or str or list of str</p>
 </dd>
-<dt class="field-even">Default</dt>
+<dt class="field-even">Default<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
@@ -538,12 +538,12 @@ through this Render.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-blend">
-<span class="sig-name descname"><span class="pre">blend</span></span><a class="headerlink" href="#transform-property-blend" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">blend</span></span><a class="headerlink" href="#transform-property-blend" title="Link to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>None or str</p>
 </dd>
-<dt class="field-even">Default</dt>
+<dt class="field-even">Default<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
@@ -560,12 +560,12 @@ properties starting with gl_. For example, the color_mask property is made
 available as gl_color_mask.</p>
 </section>
 <section id="blend-functions">
-<h2>Blend Functions<a class="headerlink" href="#blend-functions" title="Permalink to this heading"> link</a></h2>
+<h2>Blend Functions<a class="headerlink" href="#blend-functions" title="Link to this heading"></a></h2>
 <dl class="std var">
 <dt class="sig sig-object std" id="var-config.gl_blend_func">
-<span class="pre">define</span> <span class="sig-name descname"><span class="pre">config.gl_blend_func</span></span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">...</span> <span class="pre">}</span><a class="headerlink" href="#var-config.gl_blend_func" title="Permalink to this definition"> link</a></dt>
+<span class="pre">define</span> <span class="sig-name descname"><span class="pre">config.gl_blend_func</span></span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">...</span> <span class="pre">}</span><a class="headerlink" href="#var-config.gl_blend_func" title="Link to this definition"></a></dt>
 <dd><p>A dictionary used to map a blend mode name to a blend function. The
-blend modes are supplied to the blend func property, given below.</p>
+blend modes are supplied to the <span class="xref std std-ref">gl_blend_func</span> property, given below.</p>
 </dd></dl>
 
 <p>The default blend modes are:</p>
@@ -576,9 +576,13 @@ blend modes are supplied to the blend func property, given below.</p>
 <span class="na">gl_blend_func</span><span class="p">[</span><span class="s2">&quot;max&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">GL_MAX</span><span class="p">,</span> <span class="n">GL_ONE</span><span class="p">,</span> <span class="n">GL_ONE</span><span class="p">,</span> <span class="n">GL_MAX</span><span class="p">,</span> <span class="n">GL_ONE</span><span class="p">,</span> <span class="n">GL_ONE</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>As Ren'Py uses premultiplied alpha, the results of some of these may be counterintuitive when a pixel
+is not opaque. In the GPU, the color (r, g, b, a) is represented as (r * a, g * a, b * a, a), and the blend function
+uses these premultiplied colors. This may be a different result that you get for these blend modes in a paint program,
+when what is drawn is not fully opaque.</p>
 </section>
 <section id="uniforms-and-attributes">
-<h2>Uniforms and Attributes<a class="headerlink" href="#uniforms-and-attributes" title="Permalink to this heading"> link</a></h2>
+<span id="model-uniforms"></span><h2>Uniforms and Attributes<a class="headerlink" href="#uniforms-and-attributes" title="Link to this heading"></a></h2>
 <p>The following uniforms are made available to all Models.</p>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">vec2</span> <span class="pre">u_model_size</span></code></dt><dd><p>The width and height of the model.</p>
@@ -604,6 +608,20 @@ are the coordinates of the bottom-left corner of the viewport, relative
 to the bottom-left corner of the window. u_viewport.pq is the width
 and height of the viewport.</p>
 </dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">vec2</span> <span class="pre">u_virtual_size</span></code></p>
+<blockquote>
+<div><p>This is the virtual size of the game (<a class="reference internal" href="config.html#var-config.screen_width"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.screen_width</span></code></a>, <a class="reference internal" href="config.html#var-config.screen_height"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.screen_height</span></code></a>).
+This can be used to convert from gl_Position to virtual coordinates using:</p>
+<div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="n">v_position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u_virtual_size</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kt">vec2</span><span class="p">(</span><span class="nb">gl_Position</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">.5</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">.5</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="nb">gl_Position</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">.5</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">vec2</span> <span class="pre">u_drawable_size</span></code></dt><dd><p>The size of the drawable are of the windows, in pixels, at the resolution
+the game is running at. For example, if a 1280x720 game is scaled up to
+1980x1080, this will be (1920, 1080).</p>
+</dd>
 <dt><code class="docutils literal notranslate"><span class="pre">sampler2D</span> <span class="pre">tex0</span></code>, <code class="docutils literal notranslate"><span class="pre">sampler2D</span> <span class="pre">tex1</span></code>, <code class="docutils literal notranslate"><span class="pre">sampler2D</span> <span class="pre">tex2</span></code></dt><dd><p>If textures are available, the corresponding samplers are placed in
 this variable.</p>
 </dd>
@@ -615,7 +633,8 @@ the rendered texture covered.</p>
 </dl>
 <p>The following attributes are available to all models:</p>
 <dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">vec4</span> <span class="pre">a_position</span></code></dt><dd><p>The position of the vertex being rendered.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">vec4</span> <span class="pre">a_position</span></code></dt><dd><p>The position of the vertex being rendered. This is in virtual pixels, relative to the upper
+left corner of the texture.</p>
 </dd>
 </dl>
 <p>If textures are available, so is the following attribute:</p>
@@ -625,11 +644,11 @@ the rendered texture covered.</p>
 </dl>
 </section>
 <section id="gl-properties">
-<span id="id1"></span><h2>GL Properties<a class="headerlink" href="#gl-properties" title="Permalink to this heading"> link</a></h2>
+<span id="id1"></span><h2>GL Properties<a class="headerlink" href="#gl-properties" title="Link to this heading"></a></h2>
 <p>GL properties change the global state of OpenGL, or the Model-Based renderer.
 These properties can be used with a Transform, or with the <code class="xref py py-func docutils literal notranslate"><span class="pre">Render.add_property()</span></code>
 function.</p>
-<dl>
+<dl id="gl-blend-func">
 <dt><code class="docutils literal notranslate"><span class="pre">gl_blend_func</span></code></dt><dd><p>If present, this is expected to be a six-component tuple, which is
 used to set the equation used to blend the pixel being drawn with the
 pixel it is being drawn to, and the parameters to that equation.</p>
@@ -694,16 +713,20 @@ axes of the created texture.</p>
     <span class="kn">from</span> <span class="nn">renpy.uguu</span> <span class="kn">import</span> <span class="n">GL_CLAMP_TO_EDGE</span><span class="p">,</span> <span class="n">GL_MIRRORED_REPEAT</span><span class="p">,</span> <span class="n">GL_REPEAT</span>
 </pre></div>
 </div>
+<p>This can also be customized for specific textures. <cite>gl_texture_wrap_tex0</cite> controls
+the first texture, <cite>gl_texture_wrap_tex1</cite> the second, <cite>gl_texture_wrap_tex2</cite>, the third,
+and <cite>gl_texture_wrap_tex3</cite> the fourth. While only these four are avalable through Transforms,
+it's possibe to supply &quot;texture_wrap_tex4&quot; or &quot;texture_wrap_myuniform&quot; to Render.add_property.</p>
 </dd>
 </dl>
 </section>
 <section id="model-displayable">
-<h2>Model Displayable<a class="headerlink" href="#model-displayable" title="Permalink to this heading"> link</a></h2>
+<h2>Model Displayable<a class="headerlink" href="#model-displayable" title="Link to this heading"></a></h2>
 <p>The Model displayable acts as a factory to created models for use with the
 model-based renderer.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="Model">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Model" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Model" title="Link to this definition"></a></dt>
 <dd><p>This is a displayable that causes Ren'Py to create a 2D or 3D model
 for use with the model-based renderer, that will be drawn in a single
 operation with the shaders given here, or selected by an enclosing
@@ -722,14 +745,14 @@ is supplied. Otherwise, a mesh that only sets a_position is used.</p>
 on, making it possible to chain calls.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="Model.child">
-<span class="sig-name descname"><span class="pre">child</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">displayable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Model.child" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">child</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">displayable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Model.child" title="Link to this definition"></a></dt>
 <dd><p>This is the same as the texture method, except that the <cite>focus</cite>
 and <cite>main</cite> parameters are set to true.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="Model.grid_mesh">
-<span class="sig-name descname"><span class="pre">grid_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Model.grid_mesh" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">grid_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Model.grid_mesh" title="Link to this definition"></a></dt>
 <dd><p>Creates a mesh that consists of a width x height grid of evenly
 spaced points, connecting each point to the closest points
 vertically and horizontally, and dividing each rectangle in
@@ -743,7 +766,7 @@ a integer that is at least 2.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="Model.property">
-<span class="sig-name descname"><span class="pre">property</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Model.property" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">property</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Model.property" title="Link to this definition"></a></dt>
 <dd><p>Sets the value of a gl property.</p>
 <dl class="simple">
 <dt><cite>name</cite></dt><dd><p>A string giving the name of the GL property, including the &quot;gl_&quot;
@@ -756,7 +779,7 @@ prefix.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="Model.shader">
-<span class="sig-name descname"><span class="pre">shader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shader</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Model.shader" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">shader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shader</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Model.shader" title="Link to this definition"></a></dt>
 <dd><p>Adds a shader to this model.</p>
 <dl class="simple">
 <dt><cite>shader</cite></dt><dd><p>A string given the name of a shader to use with this model.</p>
@@ -766,7 +789,7 @@ prefix.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="Model.texture">
-<span class="sig-name descname"><span class="pre">texture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">displayable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">focus</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">main</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Model.texture" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">texture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">displayable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">focus</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">main</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">texture_wrap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Model.texture" title="Link to this definition"></a></dt>
 <dd><p>Add a texture to this model, by rendering the given displayable.
 The first texture added will be <code class="docutils literal notranslate"><span class="pre">tex0</span></code>, the second <code class="docutils literal notranslate"><span class="pre">tex1</span></code>, a
 and so on.</p>
@@ -782,12 +805,15 @@ inspector.</p>
 <dt><cite>fit</cite></dt><dd><p>If true, the Model is given the size of the displayable.
 This may only be true for one texture.</p>
 </dd>
+<dt><cite>texture_wrap</cite></dt><dd><p>If not None, this is the <a class="reference internal" href="#gl-properties"><span class="std std-ref">gl_texture wrap GL property</span></a> that will be applied
+to this texture.</p>
+</dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="Model.uniform">
-<span class="sig-name descname"><span class="pre">uniform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Model.uniform" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">uniform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Model.uniform" title="Link to this definition"></a></dt>
 <dd><p>Sets the value of a uniform that is passed to the shaders.</p>
 <dl class="simple">
 <dt><cite>name</cite></dt><dd><p>A string giving the name of the uniform to set, including the
@@ -802,7 +828,7 @@ tuple of floats, or a Matrix.</p>
 </dd></dl>
 
 <section id="model-displayable-examples">
-<h3>Model Displayable Examples<a class="headerlink" href="#model-displayable-examples" title="Permalink to this heading"> link</a></h3>
+<h3>Model Displayable Examples<a class="headerlink" href="#model-displayable-examples" title="Link to this heading"></a></h3>
 <p>The Model displayable can be used in conjunction with an ATL transform and
 a built-in shader to create the Dissolve transform:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">transform</span> <span class="n">dt</span><span class="p">(</span><span class="na">delay</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">new_widget</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">old_widget</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -819,7 +845,7 @@ with <a class="reference internal" href="#transform-property-mesh"><code class="
 </section>
 </section>
 <section id="animated-shaders">
-<h2>Animated Shaders<a class="headerlink" href="#animated-shaders" title="Permalink to this heading"> link</a></h2>
+<h2>Animated Shaders<a class="headerlink" href="#animated-shaders" title="Link to this heading"></a></h2>
 <p>When using shaders that depend on <code class="docutils literal notranslate"><span class="pre">u_time</span></code> to animate, one must be aware,
 that even though every shader on screen will run on every frame displayed,
 Ren'Py does not run on constant FPS, and will fall back to the minimum frame
@@ -839,210 +865,9 @@ redraws to happen:</p>
 different values for <code class="docutils literal notranslate"><span class="pre">pause</span></code> to specify a minimum frame rate, like
 <code class="docutils literal notranslate"><span class="pre">pause</span> <span class="pre">1.0/30</span></code>.</p>
 </section>
-<section id="default-shader-parts">
-<h2>Default Shader Parts<a class="headerlink" href="#default-shader-parts" title="Permalink to this heading"> link</a></h2>
-<section id="renpy-geometry-priority-100">
-<h3>renpy.geometry (priority 100)<a class="headerlink" href="#renpy-geometry-priority-100" title="Permalink to this heading"> link</a></h3>
-<p>Variables:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">uniform</span> <span class="n">mat4</span> <span class="n">u_transform</span><span class="p">;</span>
-<span class="k">attribute</span> <span class="n">vec4</span> <span class="n">a_position</span><span class="p">;</span>
-</pre></div>
-</div>
-<p>Vertex shader:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">gl_Position</span> <span class="o">=</span> <span class="n">u_transform</span> <span class="o">*</span> <span class="n">a_position</span><span class="p">;</span>
-</pre></div>
-</div>
-</section>
-<section id="renpy-alpha-mask-priority-200">
-<h3>renpy.alpha_mask (priority 200)<a class="headerlink" href="#renpy-alpha-mask-priority-200" title="Permalink to this heading"> link</a></h3>
-<p>Variables:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">uniform</span> <span class="n">sampler2D</span> <span class="n">tex0</span><span class="p">;</span>
-<span class="n">uniform</span> <span class="n">sampler2D</span> <span class="n">tex1</span><span class="p">;</span>
-<span class="k">attribute</span> <span class="n">vec2</span> <span class="n">a_tex_coord</span><span class="p">;</span>
-<span class="n">varying</span> <span class="n">vec2</span> <span class="n">v_tex_coord</span><span class="p">;</span>
-</pre></div>
-</div>
-<p>Vertex shader:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">v_tex_coord</span> <span class="o">=</span> <span class="n">a_tex_coord</span><span class="p">;</span>
-</pre></div>
-</div>
-<p>Fragment shader:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">vec4</span> <span class="n">src</span>  <span class="o">=</span> <span class="n">texture2D</span><span class="p">(</span><span class="n">tex0</span><span class="p">,</span> <span class="n">v_tex_coord</span><span class="o">.</span><span class="n">xy</span><span class="p">);</span>
-<span class="n">vec4</span> <span class="na">mask</span> <span class="o">=</span> <span class="n">texture2D</span><span class="p">(</span><span class="n">tex1</span><span class="p">,</span> <span class="n">v_tex_coord</span><span class="o">.</span><span class="n">xy</span><span class="p">);</span>
-
-<span class="n">gl_FragColor</span> <span class="o">=</span> <span class="n">vec4</span><span class="p">(</span><span class="n">src</span><span class="o">.</span><span class="n">r</span> <span class="o">*</span> <span class="na">mask</span><span class="o">.</span><span class="n">r</span><span class="p">,</span> <span class="n">src</span><span class="o">.</span><span class="n">g</span> <span class="o">*</span> <span class="na">mask</span><span class="o">.</span><span class="n">r</span><span class="p">,</span> <span class="n">src</span><span class="o">.</span><span class="n">b</span> <span class="o">*</span> <span class="na">mask</span><span class="o">.</span><span class="n">r</span><span class="p">,</span> <span class="na">mask</span><span class="o">.</span><span class="n">r</span><span class="p">);</span>
-</pre></div>
-</div>
-</section>
-<section id="renpy-blur-priority-200">
-<h3>renpy.blur (priority 200)<a class="headerlink" href="#renpy-blur-priority-200" title="Permalink to this heading"> link</a></h3>
-<p>Variables:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">uniform</span> <span class="n">sampler2D</span> <span class="n">tex0</span><span class="p">;</span>
-<span class="k">attribute</span> <span class="n">vec2</span> <span class="n">a_tex_coord</span><span class="p">;</span>
-<span class="n">varying</span> <span class="n">vec2</span> <span class="n">v_tex_coord</span><span class="p">;</span>
-<span class="n">uniform</span> <span class="nb">float</span> <span class="n">u_renpy_blur_log2</span><span class="p">;</span>
-</pre></div>
-</div>
-<p>Vertex shader:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">v_tex_coord</span> <span class="o">=</span> <span class="n">a_tex_coord</span><span class="p">;</span>
-</pre></div>
-</div>
-<p>Fragment shader:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">gl_FragColor</span> <span class="o">=</span> <span class="n">vec4</span><span class="p">(</span><span class="mf">0.</span><span class="p">);</span>
-<span class="nb">float</span> <span class="n">renpy_blur_norm</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">;</span>
-
-<span class="k">for</span> <span class="p">(</span><span class="nb">float</span> <span class="n">i</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mf">1.</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mf">1.</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nb">float</span> <span class="n">renpy_blur_weight</span> <span class="o">=</span> <span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span> <span class="o">*</span> <span class="nb">pow</span><span class="p">(</span><span class="n">u_renpy_blur_log2</span> <span class="o">-</span> <span class="n">i</span><span class="p">,</span> <span class="mf">2.</span><span class="p">));</span>
-    <span class="n">renpy_blur_norm</span> <span class="o">+=</span> <span class="n">renpy_blur_weight</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="n">gl_FragColor</span> <span class="o">+=</span> <span class="n">renpy_blur_norm</span> <span class="o">*</span> <span class="n">texture2D</span><span class="p">(</span><span class="n">tex0</span><span class="p">,</span> <span class="n">v_tex_coord</span><span class="o">.</span><span class="n">xy</span><span class="p">,</span> <span class="mf">0.</span><span class="p">);</span>
-
-<span class="k">for</span> <span class="p">(</span><span class="nb">float</span> <span class="n">i</span> <span class="o">=</span> <span class="mf">1.</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mf">14.</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mf">1.</span><span class="p">)</span> <span class="p">{</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="n">u_renpy_blur_log2</span> <span class="o">+</span> <span class="mf">5.</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">break</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="nb">float</span> <span class="n">renpy_blur_weight</span> <span class="o">=</span> <span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span> <span class="o">*</span> <span class="nb">pow</span><span class="p">(</span><span class="n">u_renpy_blur_log2</span> <span class="o">-</span> <span class="n">i</span><span class="p">,</span> <span class="mf">2.</span><span class="p">));</span>
-    <span class="n">gl_FragColor</span> <span class="o">+=</span> <span class="n">renpy_blur_weight</span> <span class="o">*</span> <span class="n">texture2D</span><span class="p">(</span><span class="n">tex0</span><span class="p">,</span> <span class="n">v_tex_coord</span><span class="o">.</span><span class="n">xy</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
-    <span class="n">renpy_blur_norm</span> <span class="o">+=</span> <span class="n">renpy_blur_weight</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="k">if</span> <span class="p">(</span><span class="n">renpy_blur_norm</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">gl_FragColor</span> <span class="o">/=</span> <span class="n">renpy_blur_norm</span><span class="p">;</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="n">gl_FragColor</span> <span class="o">=</span> <span class="n">texture2D</span><span class="p">(</span><span class="n">tex0</span><span class="p">,</span> <span class="n">v_tex_coord</span><span class="o">.</span><span class="n">xy</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</section>
-<section id="renpy-dissolve-priority-200">
-<h3>renpy.dissolve (priority 200)<a class="headerlink" href="#renpy-dissolve-priority-200" title="Permalink to this heading"> link</a></h3>
-<p>Variables:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">uniform</span> <span class="nb">float</span> <span class="n">u_lod_bias</span><span class="p">;</span>
-<span class="n">uniform</span> <span class="n">sampler2D</span> <span class="n">tex0</span><span class="p">;</span>
-<span class="n">uniform</span> <span class="n">sampler2D</span> <span class="n">tex1</span><span class="p">;</span>
-<span class="n">uniform</span> <span class="nb">float</span> <span class="n">u_renpy_dissolve</span><span class="p">;</span>
-<span class="k">attribute</span> <span class="n">vec2</span> <span class="n">a_tex_coord</span><span class="p">;</span>
-<span class="n">varying</span> <span class="n">vec2</span> <span class="n">v_tex_coord</span><span class="p">;</span>
-</pre></div>
-</div>
-<p>Vertex shader:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">v_tex_coord</span> <span class="o">=</span> <span class="n">a_tex_coord</span><span class="p">;</span>
-</pre></div>
-</div>
-<p>Fragment shader:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">vec4</span> <span class="n">color0</span> <span class="o">=</span> <span class="n">texture2D</span><span class="p">(</span><span class="n">tex0</span><span class="p">,</span> <span class="n">v_tex_coord</span><span class="o">.</span><span class="n">st</span><span class="p">,</span> <span class="n">u_lod_bias</span><span class="p">);</span>
-<span class="n">vec4</span> <span class="n">color1</span> <span class="o">=</span> <span class="n">texture2D</span><span class="p">(</span><span class="n">tex1</span><span class="p">,</span> <span class="n">v_tex_coord</span><span class="o">.</span><span class="n">st</span><span class="p">,</span> <span class="n">u_lod_bias</span><span class="p">);</span>
-
-<span class="n">gl_FragColor</span> <span class="o">=</span> <span class="n">mix</span><span class="p">(</span><span class="n">color0</span><span class="p">,</span> <span class="n">color1</span><span class="p">,</span> <span class="n">u_renpy_dissolve</span><span class="p">);</span>
-</pre></div>
-</div>
-</section>
-<section id="renpy-imagedissolve-priority-200">
-<h3>renpy.imagedissolve (priority 200)<a class="headerlink" href="#renpy-imagedissolve-priority-200" title="Permalink to this heading"> link</a></h3>
-<p>Variables:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">uniform</span> <span class="nb">float</span> <span class="n">u_lod_bias</span><span class="p">;</span>
-<span class="n">uniform</span> <span class="n">sampler2D</span> <span class="n">tex0</span><span class="p">;</span>
-<span class="n">uniform</span> <span class="n">sampler2D</span> <span class="n">tex1</span><span class="p">;</span>
-<span class="n">uniform</span> <span class="n">sampler2D</span> <span class="n">tex2</span><span class="p">;</span>
-<span class="n">uniform</span> <span class="nb">float</span> <span class="n">u_renpy_dissolve_offset</span><span class="p">;</span>
-<span class="n">uniform</span> <span class="nb">float</span> <span class="n">u_renpy_dissolve_multiplier</span><span class="p">;</span>
-<span class="k">attribute</span> <span class="n">vec2</span> <span class="n">a_tex_coord</span><span class="p">;</span>
-<span class="n">varying</span> <span class="n">vec2</span> <span class="n">v_tex_coord</span><span class="p">;</span>
-</pre></div>
-</div>
-<p>Vertex shader:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">v_tex_coord</span> <span class="o">=</span> <span class="n">a_tex_coord</span><span class="p">;</span>
-</pre></div>
-</div>
-<p>Fragment shader:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">vec4</span> <span class="n">color0</span> <span class="o">=</span> <span class="n">texture2D</span><span class="p">(</span><span class="n">tex0</span><span class="p">,</span> <span class="n">v_tex_coord</span><span class="o">.</span><span class="n">st</span><span class="p">,</span> <span class="n">u_lod_bias</span><span class="p">);</span>
-<span class="n">vec4</span> <span class="n">color1</span> <span class="o">=</span> <span class="n">texture2D</span><span class="p">(</span><span class="n">tex1</span><span class="p">,</span> <span class="n">v_tex_coord</span><span class="o">.</span><span class="n">st</span><span class="p">,</span> <span class="n">u_lod_bias</span><span class="p">);</span>
-<span class="n">vec4</span> <span class="n">color2</span> <span class="o">=</span> <span class="n">texture2D</span><span class="p">(</span><span class="n">tex2</span><span class="p">,</span> <span class="n">v_tex_coord</span><span class="o">.</span><span class="n">st</span><span class="p">,</span> <span class="n">u_lod_bias</span><span class="p">);</span>
-
-<span class="nb">float</span> <span class="n">a</span> <span class="o">=</span> <span class="n">clamp</span><span class="p">((</span><span class="n">color0</span><span class="o">.</span><span class="n">a</span> <span class="o">+</span> <span class="n">u_renpy_dissolve_offset</span><span class="p">)</span> <span class="o">*</span> <span class="n">u_renpy_dissolve_multiplier</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">);</span>
-<span class="n">gl_FragColor</span> <span class="o">=</span> <span class="n">mix</span><span class="p">(</span><span class="n">color1</span><span class="p">,</span> <span class="n">color2</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
-</pre></div>
-</div>
-</section>
-<section id="renpy-mask-priority-200">
-<h3>renpy.mask (priority 200)<a class="headerlink" href="#renpy-mask-priority-200" title="Permalink to this heading"> link</a></h3>
-<p>Variables:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">uniform</span> <span class="nb">float</span> <span class="n">u_lod_bias</span><span class="p">;</span>
-<span class="n">uniform</span> <span class="n">sampler2D</span> <span class="n">tex0</span><span class="p">;</span>
-<span class="n">uniform</span> <span class="n">sampler2D</span> <span class="n">tex1</span><span class="p">;</span>
-<span class="n">uniform</span> <span class="nb">float</span> <span class="n">u_renpy_mask_multiplier</span><span class="p">;</span>
-<span class="n">uniform</span> <span class="nb">float</span> <span class="n">u_renpy_mask_offset</span><span class="p">;</span>
-<span class="k">attribute</span> <span class="n">vec2</span> <span class="n">a_tex_coord</span><span class="p">;</span>
-<span class="n">varying</span> <span class="n">vec2</span> <span class="n">v_tex_coord</span><span class="p">;</span>
-</pre></div>
-</div>
-<p>Vertex shader:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">v_tex_coord</span> <span class="o">=</span> <span class="n">a_tex_coord</span><span class="p">;</span>
-</pre></div>
-</div>
-<p>Fragment shader:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">vec4</span> <span class="n">src</span> <span class="o">=</span> <span class="n">texture2D</span><span class="p">(</span><span class="n">tex0</span><span class="p">,</span> <span class="n">v_tex_coord</span><span class="o">.</span><span class="n">st</span><span class="p">,</span> <span class="n">u_lod_bias</span><span class="p">);</span>
-<span class="n">vec4</span> <span class="na">mask</span> <span class="o">=</span> <span class="n">texture2D</span><span class="p">(</span><span class="n">tex1</span><span class="p">,</span> <span class="n">v_tex_coord</span><span class="o">.</span><span class="n">st</span><span class="p">,</span> <span class="n">u_lod_bias</span><span class="p">);</span>
-
-<span class="n">gl_FragColor</span> <span class="o">=</span> <span class="n">src</span> <span class="o">*</span> <span class="p">(</span><span class="na">mask</span><span class="o">.</span><span class="n">a</span> <span class="o">*</span> <span class="n">u_renpy_mask_multiplier</span> <span class="o">+</span> <span class="n">u_renpy_mask_offset</span><span class="p">);</span>
-</pre></div>
-</div>
-</section>
-<section id="renpy-solid-priority-200">
-<h3>renpy.solid (priority 200)<a class="headerlink" href="#renpy-solid-priority-200" title="Permalink to this heading"> link</a></h3>
-<p>Variables:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">uniform</span> <span class="n">vec4</span> <span class="n">u_renpy_solid_color</span><span class="p">;</span>
-</pre></div>
-</div>
-<p>Fragment shader:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">gl_FragColor</span> <span class="o">=</span> <span class="n">u_renpy_solid_color</span><span class="p">;</span>
-</pre></div>
-</div>
-</section>
-<section id="renpy-texture-priority-200">
-<h3>renpy.texture (priority 200)<a class="headerlink" href="#renpy-texture-priority-200" title="Permalink to this heading"> link</a></h3>
-<p>Variables:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">uniform</span> <span class="nb">float</span> <span class="n">u_lod_bias</span><span class="p">;</span>
-<span class="n">uniform</span> <span class="n">sampler2D</span> <span class="n">tex0</span><span class="p">;</span>
-<span class="k">attribute</span> <span class="n">vec2</span> <span class="n">a_tex_coord</span><span class="p">;</span>
-<span class="n">varying</span> <span class="n">vec2</span> <span class="n">v_tex_coord</span><span class="p">;</span>
-</pre></div>
-</div>
-<p>Vertex shader:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">v_tex_coord</span> <span class="o">=</span> <span class="n">a_tex_coord</span><span class="p">;</span>
-</pre></div>
-</div>
-<p>Fragment shader:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">gl_FragColor</span> <span class="o">=</span> <span class="n">texture2D</span><span class="p">(</span><span class="n">tex0</span><span class="p">,</span> <span class="n">v_tex_coord</span><span class="o">.</span><span class="n">xy</span><span class="p">,</span> <span class="n">u_lod_bias</span><span class="p">);</span>
-</pre></div>
-</div>
-</section>
-<section id="renpy-matrixcolor-priority-400">
-<h3>renpy.matrixcolor (priority 400)<a class="headerlink" href="#renpy-matrixcolor-priority-400" title="Permalink to this heading"> link</a></h3>
-<p>Variables:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">uniform</span> <span class="n">mat4</span> <span class="n">u_renpy_matrixcolor</span><span class="p">;</span>
-</pre></div>
-</div>
-<p>Fragment shader:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">gl_FragColor</span> <span class="o">=</span> <span class="n">u_renpy_matrixcolor</span> <span class="o">*</span> <span class="n">gl_FragColor</span><span class="p">;</span>
-</pre></div>
-</div>
-</section>
-<section id="renpy-alpha-priority-500">
-<h3>renpy.alpha (priority 500)<a class="headerlink" href="#renpy-alpha-priority-500" title="Permalink to this heading"> link</a></h3>
-<p>Variables:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">uniform</span> <span class="nb">float</span> <span class="n">u_renpy_alpha</span><span class="p">;</span>
-<span class="n">uniform</span> <span class="nb">float</span> <span class="n">u_renpy_over</span><span class="p">;</span>
-</pre></div>
-</div>
-<p>Fragment shader:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">gl_FragColor</span> <span class="o">=</span> <span class="n">gl_FragColor</span> <span class="o">*</span> <span class="n">vec4</span><span class="p">(</span><span class="n">u_renpy_alpha</span><span class="p">,</span> <span class="n">u_renpy_alpha</span><span class="p">,</span> <span class="n">u_renpy_alpha</span><span class="p">,</span> <span class="n">u_renpy_alpha</span> <span class="o">*</span> <span class="n">u_renpy_over</span><span class="p">);</span>
-</pre></div>
-</div>
-</section>
+<section id="shader-parts">
+<h2>Shader Parts<a class="headerlink" href="#shader-parts" title="Link to this heading"></a></h2>
+<p>For a list of shader parts that Ren'Py uses, see the <a class="reference internal" href="shader_parts.html"><span class="doc">Default Shader Parts</span></a>.</p>
 </section>
 </section>
 

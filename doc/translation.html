@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Translation &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/translation.html" />
@@ -17,14 +17,13 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -66,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -91,10 +91,17 @@
 <li class="toctree-l2"><a class="reference internal" href="#style-translations">Style Translations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#deferred-translation-loading">Deferred Translation Loading</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#default-language">Default Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#translation-info-screen">Translation Info Screen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#translation-actions-functions-and-variables">Translation Actions, Functions, and Variables</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#Language"><code class="docutils literal notranslate"><span class="pre">Language()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.change_language"><code class="docutils literal notranslate"><span class="pre">renpy.change_language()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.get_translation_identifier"><code class="docutils literal notranslate"><span class="pre">renpy.get_translation_identifier()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.get_translation_info"><code class="docutils literal notranslate"><span class="pre">renpy.get_translation_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.language"><code class="docutils literal notranslate"><span class="pre">renpy.language</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#identifier"><code class="docutils literal notranslate"><span class="pre">identifier</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#filename"><code class="docutils literal notranslate"><span class="pre">filename</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#linenumber"><code class="docutils literal notranslate"><span class="pre">linenumber</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#source"><code class="docutils literal notranslate"><span class="pre">source</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.known_languages"><code class="docutils literal notranslate"><span class="pre">renpy.known_languages()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id0"><code class="docutils literal notranslate"><span class="pre">_()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id2"><code class="docutils literal notranslate"><span class="pre">__()</span></code></a></li>
@@ -107,8 +114,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
@@ -126,6 +133,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -154,10 +162,8 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -169,6 +175,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul>
@@ -236,7 +243,7 @@
            <div itemprop="articleBody">
              
   <section id="translation">
-<span id="id1"></span><h1>Translation<a class="headerlink" href="#translation" title="Permalink to this heading"> link</a></h1>
+<span id="id1"></span><h1>Translation<a class="headerlink" href="#translation" title="Link to this heading"></a></h1>
 <p>Ren'Py contains a comprehensive framework for the translation of
 visual novels. There are four main types of things that can be
 translated:</p>
@@ -260,7 +267,7 @@ translations, where the game's creators either release the game
 scripts to the translator or create translation templates
 themselves. Support for unsanctioned translations is more limited.</p>
 <section id="primary-and-alternate-languages">
-<h2>Primary and Alternate Languages<a class="headerlink" href="#primary-and-alternate-languages" title="Permalink to this heading"> link</a></h2>
+<h2>Primary and Alternate Languages<a class="headerlink" href="#primary-and-alternate-languages" title="Link to this heading"></a></h2>
 <p>Ren'Py expects each game to be written in a single primary
 language. This is called the None language, regardless of what
 language it actually is. (For example, if the game was written in
@@ -269,7 +276,7 @@ English, English will be the None language.)</p>
 Python identifiers (starts with a letter or underscore, followed by
 letters, numbers, and underscores).</p>
 <p>When the None language is selected, most of Ren'Py's translation
-functionality is disabled, with the notable exception of Renpy's
+functionality is disabled, with the notable exception of Ren'Py's
 internal built-in strings, from the accessibility menu for example.
 Theses strings are not found in your project's code, yet they will
 still be included in the distributed version of the game. You can
@@ -282,7 +289,7 @@ created will be the language this file will initially translate the
 internal strings to.</p>
 </section>
 <section id="generating-translation-files">
-<h2>Generating Translation Files<a class="headerlink" href="#generating-translation-files" title="Permalink to this heading"> link</a></h2>
+<h2>Generating Translation Files<a class="headerlink" href="#generating-translation-files" title="Link to this heading"></a></h2>
 <p>When the project scripts are available, translation files can be
 generated by opening the project in the Ren'Py Launcher, and choosing
 &quot;Generate Translations&quot;. The launcher will prompt you for the name of
@@ -297,12 +304,12 @@ common.rpy file will also be created to contain translations of
 strings that are common to all games made using Ren'Py.</p>
 </section>
 <section id="translating-dialogue">
-<h2>Translating Dialogue<a class="headerlink" href="#translating-dialogue" title="Permalink to this heading"> link</a></h2>
+<h2>Translating Dialogue<a class="headerlink" href="#translating-dialogue" title="Link to this heading"></a></h2>
 <p>As Ren'Py is a visual novel engine, we expect most translation to
 involve dialogue. Ren'Py includes a flexible framework that allows
 dialogue to be split, combined, reordered, and omitted entirely.</p>
 <section id="translation-units">
-<h3>Translation Units<a class="headerlink" href="#translation-units" title="Permalink to this heading"> link</a></h3>
+<h3>Translation Units<a class="headerlink" href="#translation-units" title="Link to this heading"></a></h3>
 <p>The fundamental unit of translation is a block of zero or more
 translatable statements, optionally followed by a single say
 statement. Translatable statements are the voice and nvl statements. For example,
@@ -339,7 +346,7 @@ start_636ae3f5, and contains the statement:</p>
 is loaded.</p>
 </section>
 <section id="translate-statement">
-<h3>Translate Statement<a class="headerlink" href="#translate-statement" title="Permalink to this heading"> link</a></h3>
+<h3>Translate Statement<a class="headerlink" href="#translate-statement" title="Link to this heading"></a></h3>
 <p>When you generate translations for a language, Ren'Py will generate a
 translate statement corresponding to each translation unit. When
 translating the script above, Ren'Py will generate:</p>
@@ -388,7 +395,7 @@ executes the translate statement instead of the translated block,
 showing the user the translation.</p>
 </section>
 <section id="more-complex-translations">
-<h3>More Complex Translations<a class="headerlink" href="#more-complex-translations" title="Permalink to this heading"> link</a></h3>
+<h3>More Complex Translations<a class="headerlink" href="#more-complex-translations" title="Link to this heading"></a></h3>
 <p>Translate statements do not need to contain 1-to-1 translations of the
 original language. For example, a long line could be split:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="c1"># game/script.rpy:99</span>
@@ -422,7 +429,7 @@ conditionals or Python. For example, we can translate:</p>
 </div>
 </section>
 <section id="tips">
-<span id="translation-tips"></span><h3>Tips<a class="headerlink" href="#tips" title="Permalink to this heading"> link</a></h3>
+<span id="translation-tips"></span><h3>Tips<a class="headerlink" href="#tips" title="Link to this heading"></a></h3>
 <p>Be very careful when changing dialogue that has been translated,
 especially when that dialogue is repeated in more than one place
 inside a label.</p>
@@ -452,7 +459,7 @@ side effects to occur multiple times.</p>
 </section>
 </section>
 <section id="menu-and-string-translations">
-<span id="string-translations"></span><h2>Menu and String Translations<a class="headerlink" href="#menu-and-string-translations" title="Permalink to this heading"> link</a></h2>
+<span id="string-translations"></span><h2>Menu and String Translations<a class="headerlink" href="#menu-and-string-translations" title="Link to this heading"></a></h2>
 <p>In addition to dialogue, Ren'Py is able to translate text found in
 menus and other strings. Interface translations are a 1-to-1
 substitution. Wherever a string is found, it will be replaced by a
@@ -521,7 +528,7 @@ language, to translate the Ren'Py user interface.</p>
 </pre></div>
 </div>
 <section id="translating-substitutions">
-<h3>Translating Substitutions<a class="headerlink" href="#translating-substitutions" title="Permalink to this heading"> link</a></h3>
+<h3>Translating Substitutions<a class="headerlink" href="#translating-substitutions" title="Link to this heading"></a></h3>
 <p>String substitutions can be translated using the <code class="docutils literal notranslate"><span class="pre">!t</span></code> conversion
 flag. So the following will be translatable using a combination of
 the dialogue and string translation systems:</p>
@@ -535,7 +542,7 @@ the dialogue and string translation systems:</p>
 </div>
 </section>
 <section id="extracting-and-merging-string-translations">
-<span id="extract-merge-translations"></span><h3>Extracting and Merging String Translations<a class="headerlink" href="#extracting-and-merging-string-translations" title="Permalink to this heading"> link</a></h3>
+<span id="extract-merge-translations"></span><h3>Extracting and Merging String Translations<a class="headerlink" href="#extracting-and-merging-string-translations" title="Link to this heading"></a></h3>
 <p>String translations can be extracted from one project, and moved to
 another. This is a multiple-step process:</p>
 <ul class="simple">
@@ -559,7 +566,7 @@ Russian -&gt; English translation.</p>
 </section>
 </section>
 <section id="image-and-file-translations">
-<span id="image-file-translation"></span><h2>Image and File Translations<a class="headerlink" href="#image-and-file-translations" title="Permalink to this heading"> link</a></h2>
+<span id="image-file-translation"></span><h2>Image and File Translations<a class="headerlink" href="#image-and-file-translations" title="Link to this heading"></a></h2>
 <p>When translating a game, it may be necessary to replace a file
 with a translated version. For example, if an image contains text, it
 might make sense to replace it with a version of the image where the
@@ -573,7 +580,7 @@ included underneath the language. For example, the file <code class="file docuti
 can be translated by creating the file <code class="file docutils literal notranslate"><span class="pre">game/tl/piglatin/gui/main_menu.png</span></code>.</p>
 </section>
 <section id="style-translations">
-<h2>Style Translations<a class="headerlink" href="#style-translations" title="Permalink to this heading"> link</a></h2>
+<h2>Style Translations<a class="headerlink" href="#style-translations" title="Link to this heading"></a></h2>
 <p>It may be necessary to change styles – especially font-related
 styles – when translating a game. Ren'Py handles this with <code class="docutils literal notranslate"><span class="pre">translate</span>
 <span class="pre">style</span></code> blocks and <code class="docutils literal notranslate"><span class="pre">translate</span> <span class="pre">python</span></code> blocks. These blocks can
@@ -603,7 +610,7 @@ Finally, it rebuilds styles, allowing the changes to take effect.</p>
 <p>Style translations may be added to any .rpy file.</p>
 </section>
 <section id="deferred-translation-loading">
-<span id="deferred-translations"></span><h2>Deferred Translation Loading<a class="headerlink" href="#deferred-translation-loading" title="Permalink to this heading"> link</a></h2>
+<span id="deferred-translations"></span><h2>Deferred Translation Loading<a class="headerlink" href="#deferred-translation-loading" title="Link to this heading"></a></h2>
 <p>For a large game, loading all translations can take a long time. To speed
 up these games, Ren'Py supports deferred translations. To enable deferred
 translations, add:</p>
@@ -623,7 +630,7 @@ and other statements. The files should consist entirely of <code class="docutils
 <code class="docutils literal notranslate"><span class="pre">translate</span> <span class="pre">python</span></code>, and <code class="docutils literal notranslate"><span class="pre">translate</span> <span class="pre">style</span></code> blocks.</p>
 </section>
 <section id="default-language">
-<h2>Default Language<a class="headerlink" href="#default-language" title="Permalink to this heading"> link</a></h2>
+<h2>Default Language<a class="headerlink" href="#default-language" title="Link to this heading"></a></h2>
 <p>The default language is chosen using the following method:</p>
 <ul class="simple">
 <li><p>If the RENPY_LANGUAGE environment variable is set, that language is
@@ -640,12 +647,20 @@ autodetect the language using <a class="reference internal" href="config.html#va
 <li><p>Otherwise, the None language is used.</p></li>
 </ul>
 </section>
+<section id="translation-info-screen">
+<h2>Translation Info Screen<a class="headerlink" href="#translation-info-screen" title="Link to this heading"></a></h2>
+<p>A screen with information about translations can be found by entering the developer menu (shift+D), and
+and selecting &quot;Show Translation Info&quot;. For non-developers, this screen can be shown with:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">show</span> <span class="k">screen</span> <span class="n">_translation_info</span>
+</pre></div>
+</div>
+</section>
 <section id="translation-actions-functions-and-variables">
-<h2>Translation Actions, Functions, and Variables<a class="headerlink" href="#translation-actions-functions-and-variables" title="Permalink to this heading"> link</a></h2>
+<h2>Translation Actions, Functions, and Variables<a class="headerlink" href="#translation-actions-functions-and-variables" title="Link to this heading"></a></h2>
 <p>The main way to switch languages is with the Language action.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="Language">
-<span class="sig-name descname"><span class="pre">Language</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Language" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">Language</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Language" title="Link to this definition"></a></dt>
 <dd><p>Changes the language of the game to <cite>language</cite>.</p>
 <dl class="simple">
 <dt><cite>language</cite></dt><dd><p>A string giving the language to translate to, or None to use
@@ -668,20 +683,73 @@ preferences screen:</p>
 <p>There are two translation-related functions:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.change_language">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">change_language</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.change_language" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">change_language</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.change_language" title="Link to this definition"></a></dt>
 <dd><p>Changes the current language to <cite>language</cite>, which can be a string or
 None to use the default language.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_translation_identifier">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_translation_identifier</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_translation_identifier" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_translation_identifier</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_translation_identifier" title="Link to this definition"></a></dt>
 <dd><p>Returns the translation identifier for the current statement.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="renpy.get_translation_info">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_translation_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_translation_info" title="Link to this definition"></a></dt>
+<dd><p>Returns information about the translation with the given identifier, or about the default
+text if <cite>language</cite> is None.</p>
+<dl class="simple">
+<dt><cite>identifier</cite></dt><dd><p>The translation identifier, or None to get information about currently displayed
+text.</p>
+</dd>
+<dt><cite>language</cite></dt><dd><p>Either a language name, or None to get information about the default text.</p>
+</dd>
+</dl>
+<p>If no information is available, returns None. Else returns an object with the following
+attributes:</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="renpy.language">
+<span class="sig-name descname"><span class="pre">language</span></span><a class="headerlink" href="#renpy.language" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">The</span> <span class="pre">language</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">translation.</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="identifier">
+<span class="sig-name descname"><span class="pre">identifier</span></span><a class="headerlink" href="#identifier" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">The</span> <span class="pre">identifier</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">translation.</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="filename">
+<span class="sig-name descname"><span class="pre">filename</span></span><a class="headerlink" href="#filename" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">The</span> <span class="pre">filename</span> <span class="pre">the</span> <span class="pre">translation</span> <span class="pre">is</span> <span class="pre">found</span> <span class="pre">in.</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="linenumber">
+<span class="sig-name descname"><span class="pre">linenumber</span></span><a class="headerlink" href="#linenumber" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">The</span> <span class="pre">line</span> <span class="pre">number</span> <span class="pre">the</span> <span class="pre">translation</span> <span class="pre">is</span> <span class="pre">found</span> <span class="pre">on.</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="source">
+<span class="sig-name descname"><span class="pre">source</span></span><a class="headerlink" href="#source" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">A</span> <span class="pre">list</span> <span class="pre">of</span> <span class="pre">strings</span> <span class="pre">that</span> <span class="pre">make</span> <span class="pre">up</span> <span class="pre">the</span> <span class="pre">translation.</span> <span class="pre">Only</span> <span class="pre">some</span> <span class="pre">statements</span> <span class="pre">can</span> <span class="pre">be</span> <span class="pre">included</span> <span class="pre">here,</span></span></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">including</span> <span class="pre">the</span> <span class="pre">say</span> <span class="pre">statements</span> <span class="pre">that</span> <span class="pre">make</span> <span class="pre">up</span> <span class="pre">most</span> <span class="pre">translations.</span></span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="renpy.known_languages">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">known_languages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.known_languages" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">known_languages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.known_languages" title="Link to this definition"></a></dt>
 <dd><p>Returns the set of known languages. This does not include the default
 language, None.</p>
 </dd></dl>
@@ -690,7 +758,7 @@ language, None.</p>
 translation:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="id0">
-<span class="sig-name descname"><span class="pre">_</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">_</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
 <dd><p>(Single underscore) Returns <cite>s</cite> unchanged. Ren'Py will scan for
 strings enclosed in this function, and add them to the list of
 translatable strings. The strings will not be translated until
@@ -699,7 +767,7 @@ they are displayed.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="id2">
-<span class="sig-name descname"><span class="pre">__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id2" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id2" title="Link to this definition"></a></dt>
 <dd><p>(Double underscore) Returns <cite>s</cite> immediately translated into the
 current language. Strings enclosed in this function will be added
 to the list of translatable strings. Note that the string may be
@@ -709,7 +777,7 @@ is displayed.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="p">
-<span class="sig-name descname"><span class="pre">_p</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#p" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">_p</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#p" title="Link to this definition"></a></dt>
 <dd><p>Reformats a string and flags it as translatable. The string will be
 translated when displayed by the text displayable. This is intended
 to define multi-line for use in strings, of the form:</p>
@@ -740,7 +808,7 @@ doesn't add a blank one.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.translate_string">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">translate_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language=&lt;renpy.object.Sentinel</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7fa1b6e4eb00&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.translate_string" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">translate_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language=&lt;renpy.object.Sentinel</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x724d75773580&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.translate_string" title="Link to this definition"></a></dt>
 <dd><p>Returns <cite>s</cite> immediately translated into <cite>language</cite>. If <cite>language</cite>
 is Default, uses the language set in the preferences.
 Strings enclosed in this function will <strong>not</strong> be added
@@ -754,7 +822,7 @@ is displayed.</p>
 of the game.</p>
 <dl class="std var">
 <dt class="sig sig-object std" id="var-_preferences.language">
-<span class="sig-name descname"><span class="pre">_preferences.language</span></span><a class="headerlink" href="#var-_preferences.language" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">_preferences.language</span></span><a class="headerlink" href="#var-_preferences.language" title="Link to this definition"></a></dt>
 <dd><p>The name of the current language, or None if the default language is
 being used. This should be treated as a read-only variable. To
 change the language, call <a class="reference internal" href="#renpy.change_language" title="renpy.change_language"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.change_language()</span></code></a>.</p>
@@ -762,7 +830,7 @@ change the language, call <a class="reference internal" href="#renpy.change_lang
 
 </section>
 <section id="unsanctioned-translations">
-<h2>Unsanctioned Translations<a class="headerlink" href="#unsanctioned-translations" title="Permalink to this heading"> link</a></h2>
+<h2>Unsanctioned Translations<a class="headerlink" href="#unsanctioned-translations" title="Link to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>It's best to ask a game's creators for permission before
@@ -789,7 +857,7 @@ appropriate to use an <code class="docutils literal notranslate"><span class="pr
 to the target language.</p>
 <dl class="std var">
 <dt class="sig sig-object std" id="var-config.language">
-<span class="pre">define</span> <span class="sig-name descname"><span class="pre">config.language</span></span> <span class="pre">=</span> <span class="pre">None</span><a class="headerlink" href="#var-config.language" title="Permalink to this definition"> link</a></dt>
+<span class="pre">define</span> <span class="sig-name descname"><span class="pre">config.language</span></span> <span class="pre">=</span> <span class="pre">None</span><a class="headerlink" href="#var-config.language" title="Link to this definition"></a></dt>
 <dd><p>If not None, sets the language to use at game launch, overriding
 any memorized choice made by the user.</p>
 </dd></dl>

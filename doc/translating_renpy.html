@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Translating Ren&#39;Py &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/translating_renpy.html" />
@@ -17,14 +17,13 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -66,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -75,8 +75,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
@@ -94,6 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -122,10 +123,8 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -137,6 +136,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul>
@@ -215,7 +215,7 @@
            <div itemprop="articleBody">
              
   <section id="translating-ren-py">
-<span id="translating-renpy"></span><h1>Translating Ren'Py<a class="headerlink" href="#translating-ren-py" title="Permalink to this heading"> link</a></h1>
+<span id="translating-renpy"></span><h1>Translating Ren'Py<a class="headerlink" href="#translating-ren-py" title="Link to this heading"></a></h1>
 <p>It is possible to translate Ren'Py itself. A complete translation translates
 the GUI, various Ren'Py messages, new projects, and the launcher. This should
 cover most gameplay and development scenarios. Right now, not every error
@@ -235,7 +235,7 @@ the created translation, return to the preferences, then choose the newly
 created language. Note that by default, the translation will be a copy of
 the English translation.</p>
 <section id="translation-files">
-<h2>Translation Files<a class="headerlink" href="#translation-files" title="Permalink to this heading"> link</a></h2>
+<h2>Translation Files<a class="headerlink" href="#translation-files" title="Link to this heading"></a></h2>
 <p>The translation files live in <code class="file docutils literal notranslate"><span class="pre">launcher/game/tl/</span><em><span class="pre">language</span></em><span class="pre">/</span></code>. With the
 exception of <code class="file docutils literal notranslate"><span class="pre">script.rpy</span></code>, all files consist of string translations that
 can be translated using the <a class="reference internal" href="translation.html#string-translations"><span class="std std-ref">string translation</span></a>
@@ -275,7 +275,7 @@ generated game.</p>
 </dl>
 </section>
 <section id="language-specific-translations">
-<h2>Language-Specific Translations<a class="headerlink" href="#language-specific-translations" title="Permalink to this heading"> link</a></h2>
+<h2>Language-Specific Translations<a class="headerlink" href="#language-specific-translations" title="Link to this heading"></a></h2>
 <p>There is one translation that is not a straight-up translation. The
 &quot;{#language name and font}&quot; translation should be replaced with the
 name of the language, optionally wrapped in a launcher font, if
@@ -298,7 +298,7 @@ in the same way. For example:</p>
 </div>
 </section>
 <section id="changing-fonts">
-<h2>Changing Fonts<a class="headerlink" href="#changing-fonts" title="Permalink to this heading"> link</a></h2>
+<h2>Changing Fonts<a class="headerlink" href="#changing-fonts" title="Link to this heading"></a></h2>
 <p>Ren'Py ships with a default font (DejaVuSans) that covers most western
 languages, but other fonts are often needed. A font can be configured by
 editing <code class="file docutils literal notranslate"><span class="pre">launcher/game/tl/language/style.rpy</span></code>, and adding:</p>
@@ -312,32 +312,32 @@ The font file should be placed in the <code class="file docutils literal notrans
 directory, so it can be found by the launcher.</p>
 </section>
 <section id="changing-the-launcher-style">
-<h2>Changing the Launcher Style<a class="headerlink" href="#changing-the-launcher-style" title="Permalink to this heading"> link</a></h2>
+<h2>Changing the Launcher Style<a class="headerlink" href="#changing-the-launcher-style" title="Link to this heading"></a></h2>
 <p>The styles used by the launcher can be configured by setting variables
 in a <code class="docutils literal notranslate"><span class="pre">translate</span> <span class="pre">python</span></code> block. The following variables are available. The
 names are a bit confusing, as they reflect the English-language translation.</p>
 <p>These variables are only available in the launcher.</p>
 <dl class="std var">
 <dt class="sig sig-object std" id="var-gui.LIGHT_FONT">
-<span class="pre">define</span> <span class="sig-name descname"><span class="pre">gui.LIGHT_FONT</span></span> <span class="pre">=</span> <span class="pre">&quot;Roboto-Light.ttf&quot;</span><a class="headerlink" href="#var-gui.LIGHT_FONT" title="Permalink to this definition"> link</a></dt>
+<span class="pre">define</span> <span class="sig-name descname"><span class="pre">gui.LIGHT_FONT</span></span> <span class="pre">=</span> <span class="pre">&quot;Roboto-Light.ttf&quot;</span><a class="headerlink" href="#var-gui.LIGHT_FONT" title="Link to this definition"></a></dt>
 <dd><p>The path to the font used for normal text in the launcher.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-gui.REGULAR_FONT">
-<span class="pre">define</span> <span class="sig-name descname"><span class="pre">gui.REGULAR_FONT</span></span> <span class="pre">=</span> <span class="pre">&quot;Roboto-Regular.ttf&quot;</span><a class="headerlink" href="#var-gui.REGULAR_FONT" title="Permalink to this definition"> link</a></dt>
+<span class="pre">define</span> <span class="sig-name descname"><span class="pre">gui.REGULAR_FONT</span></span> <span class="pre">=</span> <span class="pre">&quot;Roboto-Regular.ttf&quot;</span><a class="headerlink" href="#var-gui.REGULAR_FONT" title="Link to this definition"></a></dt>
 <dd><p>The path to the font used for heavy-weight text in the launcher.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-gui.REGULAR_BOLD">
-<span class="pre">define</span> <span class="sig-name descname"><span class="pre">gui.REGULAR_BOLD</span></span> <span class="pre">=</span> <span class="pre">False</span><a class="headerlink" href="#var-gui.REGULAR_BOLD" title="Permalink to this definition"> link</a></dt>
+<span class="pre">define</span> <span class="sig-name descname"><span class="pre">gui.REGULAR_BOLD</span></span> <span class="pre">=</span> <span class="pre">False</span><a class="headerlink" href="#var-gui.REGULAR_BOLD" title="Link to this definition"></a></dt>
 <dd><p>If True, heavy-weight text is bolded.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-gui.FONT_SCALE">
-<span class="pre">define</span> <span class="sig-name descname"><span class="pre">gui.FONT_SCALE</span></span> <span class="pre">=</span> <span class="pre">1.0</span><a class="headerlink" href="#var-gui.FONT_SCALE" title="Permalink to this definition"> link</a></dt>
+<span class="pre">define</span> <span class="sig-name descname"><span class="pre">gui.FONT_SCALE</span></span> <span class="pre">=</span> <span class="pre">1.0</span><a class="headerlink" href="#var-gui.FONT_SCALE" title="Link to this definition"></a></dt>
 <dd><p>A scaling factor that is applied to all text in the launcher.</p>
 </dd></dl>
 
@@ -353,12 +353,12 @@ Ren'Py:</p>
 </div>
 </section>
 <section id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"> link</a></h2>
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading"></a></h2>
 <p>The following functions are used to configure translation in the launcher.
 They should be called from the <code class="docutils literal notranslate"><span class="pre">init</span> <span class="pre">python</span></code> block.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="translate_font">
-<span class="sig-name descname"><span class="pre">translate_font</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#translate_font" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">translate_font</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#translate_font" title="Link to this definition"></a></dt>
 <dd><p>This is used to set a font for <cite>language</cite>. The font is used in the
 launcher, and also used to in games generated in that language. The
 font file should be placed in game/fonts.</p>
@@ -370,7 +370,7 @@ font file should be placed in game/fonts.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="translate_define">
-<span class="sig-name descname"><span class="pre">translate_define</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">define</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">help</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#translate_define" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">translate_define</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">define</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">help</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#translate_define" title="Link to this definition"></a></dt>
 <dd><p>This is used to set a define when generating a game. For example, it can
 be used to change the size of a font.</p>
 <dl class="simple">

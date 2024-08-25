@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Screens and Python &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/screen_python.html" />
@@ -17,18 +17,17 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Modes" href="modes.html" />
+    <link rel="next" title="Creator-Defined Displayables" href="cdd.html" />
     <link rel="prev" title="Advanced GUI" href="gui_advanced.html" /> 
 </head>
 
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -66,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -75,8 +75,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
@@ -94,6 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -122,7 +123,6 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Screens and Python</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#screen-functions">Screen Functions</a><ul>
@@ -209,7 +209,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -221,6 +220,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul>
@@ -288,13 +288,13 @@
            <div itemprop="articleBody">
              
   <section id="screens-and-python">
-<h1>Screens and Python<a class="headerlink" href="#screens-and-python" title="Permalink to this heading"> link</a></h1>
+<h1>Screens and Python<a class="headerlink" href="#screens-and-python" title="Link to this heading"></a></h1>
 <section id="screen-functions">
-<h2>Screen Functions<a class="headerlink" href="#screen-functions" title="Permalink to this heading"> link</a></h2>
+<h2>Screen Functions<a class="headerlink" href="#screen-functions" title="Link to this heading"></a></h2>
 <p>The following functions support various operations related to screens.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.call_screen">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">call_screen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_screen_name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_with_none</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'screen'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.call_screen" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">call_screen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_screen_name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_with_none</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'screen'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.call_screen" title="Link to this definition"></a></dt>
 <dd><p>The programmatic equivalent of the call screen statement.</p>
 <p>This shows <cite>_screen_name</cite> as a screen, then causes an interaction
 to occur. The screen is hidden at the end of the interaction, and
@@ -309,7 +309,7 @@ otherwise the mode will be &quot;screen&quot;.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.current_screen">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">current_screen</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.current_screen" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">current_screen</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.current_screen" title="Link to this definition"></a></dt>
 <dd><p>Returns information about the screen currently being
 updated, rendered, or processed.</p>
 <p>See <a class="reference internal" href="#renpy.get_screen" title="renpy.get_screen"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_screen()</span></code></a> for documented fields on the returned object.</p>
@@ -317,18 +317,18 @@ updated, rendered, or processed.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_adjustment">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_adjustment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bar_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_adjustment" title="Permalink to this definition"> link</a></dt>
-<dd><p>Given <cite>bar_value</cite>, a  <a class="reference internal" href="#BarValue" title="BarValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">BarValue</span></code></a>, returns the <a class="reference internal" href="#ui.adjustment" title="ui.adjustment"><code class="xref py py-func docutils literal notranslate"><span class="pre">ui.adjustment()</span></code></a>
-if uses. The adjustment has the following to attributes defined:</p>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_adjustment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bar_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_adjustment" title="Link to this definition"></a></dt>
+<dd><p>Given <cite>bar_value</cite>, a <a class="reference internal" href="#BarValue" title="BarValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">BarValue</span></code></a>, returns the <a class="reference internal" href="#ui.adjustment" title="ui.adjustment"><code class="xref py py-func docutils literal notranslate"><span class="pre">ui.adjustment()</span></code></a>
+it uses. The adjustment has the following attributes defined:</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="renpy.value">
-<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#renpy.value" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#renpy.value" title="Link to this definition"></a></dt>
 <dd><p>The current value of the bar.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="range">
-<span class="sig-name descname"><span class="pre">range</span></span><a class="headerlink" href="#range" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">range</span></span><a class="headerlink" href="#range" title="Link to this definition"></a></dt>
 <dd><p>The current range of the bar.</p>
 </dd></dl>
 
@@ -336,7 +336,7 @@ if uses. The adjustment has the following to attributes defined:</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_displayable">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_displayable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_displayable" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_displayable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_displayable" title="Link to this definition"></a></dt>
 <dd><p>From the <cite>screen</cite> on <cite>layer</cite>, returns the displayable with
 <cite>id</cite>. Returns None if the screen doesn't exist, or there is no
 widget with that id on the screen.</p>
@@ -344,7 +344,7 @@ widget with that id on the screen.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_displayable_properties">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_displayable_properties</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_displayable_properties" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_displayable_properties</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_displayable_properties" title="Link to this definition"></a></dt>
 <dd><p>Returns the properties for the displayable with <cite>id</cite> in the <cite>screen</cite>
 on <cite>layer</cite>. If <cite>screen</cite> is None, returns the properties for the
 current screen. This can be used from Python or property code inside
@@ -355,12 +355,16 @@ and so to get an individual property, the dictionary must be accessed.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_screen">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_screen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_screen" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_screen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_screen" title="Link to this definition"></a></dt>
 <dd><p>Returns information about the screen with the given <cite>name</cite> on <cite>layer</cite>.
 <cite>name</cite> is first interpreted as a tag name, and then as a screen name.
 If the screen is not showing, returns None.</p>
 <p>This can also take a list of names, in which case the first screen
 that is showing is returned.</p>
+<dl class="simple">
+<dt><cite>tag_only</cite></dt><dd><p>If true, only the tag is considered.</p>
+</dd>
+</dl>
 <p>This function can be used to check whether a screen is showing:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">renpy</span><span class="o">.</span><span class="n">get_screen</span><span class="p">(</span><span class="s2">&quot;say&quot;</span><span class="p">):</span>
     <span class="k">text</span> <span class="s2">&quot;The say screen is showing.&quot;</span>
@@ -372,19 +376,19 @@ that is showing is returned.</p>
 following documented fields:</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="renpy.layer">
-<span class="sig-name descname"><span class="pre">layer</span></span><a class="headerlink" href="#renpy.layer" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">layer</span></span><a class="headerlink" href="#renpy.layer" title="Link to this definition"></a></dt>
 <dd><p>The layer the screen is being displayed on.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="name">
-<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#name" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#name" title="Link to this definition"></a></dt>
 <dd><p>The name of the screen.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="zorder">
-<span class="sig-name descname"><span class="pre">zorder</span></span><a class="headerlink" href="#zorder" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">zorder</span></span><a class="headerlink" href="#zorder" title="Link to this definition"></a></dt>
 <dd><p>The zorder the screen is being displayed at.</p>
 </dd></dl>
 
@@ -398,7 +402,7 @@ or making it participate in rollback is not advised.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_screen_variable">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_screen_variable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_screen_variable" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_screen_variable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_screen_variable" title="Link to this definition"></a></dt>
 <dd><p>Returns the value of a variable in the scope of a screen.</p>
 <dl class="simple">
 <dt><cite>name</cite></dt><dd><p>The name of the variable to return.</p>
@@ -415,14 +419,15 @@ screen.)</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.hide_screen">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">hide_screen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.hide_screen" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">hide_screen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">immediately</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.hide_screen" title="Link to this definition"></a></dt>
 <dd><p>The programmatic equivalent of the hide screen statement.</p>
 <p>Hides the screen with <cite>tag</cite> on <cite>layer</cite>.</p>
+<p>If <cite>immediately</cite> is true, the screen is hidden immediately, without the 'on hide' event.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.set_focus">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">set_focus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'screens'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.set_focus" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">set_focus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'screens'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.set_focus" title="Link to this definition"></a></dt>
 <dd><p>This attempts to focus the displayable with <cite>id</cite> in the screen <cite>screen</cite>.
 Focusing will fail if the displayable isn't found, the window isn't
 focused, or something else is grabbing focus.</p>
@@ -432,7 +437,7 @@ is processed.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.set_screen_variable">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">set_screen_variable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.set_screen_variable" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">set_screen_variable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.set_screen_variable" title="Link to this definition"></a></dt>
 <dd><p>Sets a variable to a value in the scope of a screen. Note that this
 will not immediately update the variable's value - call
 <a class="reference internal" href="other.html#renpy.restart_interaction" title="renpy.restart_interaction"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.restart_interaction()</span></code></a> to cause the screen to be updated.</p>
@@ -455,7 +460,7 @@ screen.)</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.show_screen">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">show_screen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_screen_name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_zorder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_tag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_widget_properties</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_transient</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.show_screen" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">show_screen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_screen_name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_zorder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_tag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_widget_properties</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_transient</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.show_screen" title="Link to this definition"></a></dt>
 <dd><p>The programmatic equivalent of the show screen statement.</p>
 <p>Shows the named screen. This takes the following keyword arguments:</p>
 <dl>
@@ -488,7 +493,7 @@ an underscore, are passed to the screen.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.start_predict_screen">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">start_predict_screen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_screen_name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.start_predict_screen" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">start_predict_screen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_screen_name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.start_predict_screen" title="Link to this definition"></a></dt>
 <dd><p>Causes Ren'Py to start predicting the screen named <cite>_screen_name</cite>
 with the given arguments. This replaces any previous prediction
 of <cite>_screen_name</cite>. To stop predicting a screen, call <a class="reference internal" href="#renpy.stop_predict_screen" title="renpy.stop_predict_screen"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.stop_predict_screen()</span></code></a>.</p>
@@ -498,13 +503,13 @@ to complete, use the <cite>predict</cite> argument to <a class="reference intern
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.stop_predict_screen">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">stop_predict_screen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.stop_predict_screen" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">stop_predict_screen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.stop_predict_screen" title="Link to this definition"></a></dt>
 <dd><p>Causes Ren'Py to stop predicting the screen named <cite>name</cite>.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.variant">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">variant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.variant" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">variant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.variant" title="Link to this definition"></a></dt>
 <dd><p>Returns true if <cite>name</cite> is a screen variant that corresponds to the
 context in which Ren'Py is currently executing. See <a class="reference internal" href="screens.html#screen-variants"><span class="std std-ref">Screen Variants</span></a>
 for more details. This function can be used as the condition in an
@@ -515,7 +520,7 @@ returns True if any of the variants would.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ui.adjustment">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ui.</span></span><span class="sig-name descname"><span class="pre">adjustment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">changed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adjustable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ranged</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ui.adjustment" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ui.</span></span><span class="sig-name descname"><span class="pre">adjustment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">changed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adjustable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ranged</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raw_changed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ui.adjustment" title="Link to this definition"></a></dt>
 <dd><p>Adjustment objects represent a value that can be adjusted by a bar
 or viewport. They contain information about the value, the range
 of the value, and how to adjust the value in small steps and large
@@ -549,6 +554,11 @@ and not adjustable otherwise.</p>
 <dt><cite>changed</cite></dt><dd><p>This function is called with the new value when the value of
 the adjustment changes.</p>
 </dd>
+<dt><cite>raw_changed</cite></dt><dd><p>This function is called when the value of the adjustment
+changes. Unlike <cite>changed</cite>, this function is called with
+the raw value, which may be out of range. It's called with
+two arguments, the adjustment and the new value.</p>
+</dd>
 <dt><cite>ranged</cite></dt><dd><p>This function is called with the adjustment object when
 the range of the adjustment is set by a viewport.</p>
 <p>This function may be called multiple times, as part of the layout
@@ -566,7 +576,7 @@ the step value.</p>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="ui.adjustment.change">
-<span class="sig-name descname"><span class="pre">change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ui.adjustment.change" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ui.adjustment.change" title="Link to this definition"></a></dt>
 <dd><p>Changes the value of the adjustment to <cite>value</cite>, updating
 any bars and viewports that use the adjustment.</p>
 </dd></dl>
@@ -575,7 +585,7 @@ any bars and viewports that use the adjustment.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ui.interact">
-<span class="sig-prename descclassname"><span class="pre">ui.</span></span><span class="sig-name descname"><span class="pre">interact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">roll_forward</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mouse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ui.interact" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ui.</span></span><span class="sig-name descname"><span class="pre">interact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">roll_forward</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mouse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ui.interact" title="Link to this definition"></a></dt>
 <dd><p>Causes an interaction with the user, and returns the result of that
 interaction. This causes Ren'Py to redraw the screen and begin processing
 input events. When a displayable returns a value in response to an event,
@@ -602,7 +612,7 @@ function.</p>
 
 </section>
 <section id="actions">
-<h2>Actions<a class="headerlink" href="#actions" title="Permalink to this heading"> link</a></h2>
+<h2>Actions<a class="headerlink" href="#actions" title="Link to this heading"></a></h2>
 <p>Many of the displayables created in the screen language take actions
 as arguments. An action is one of three things:</p>
 <ul class="simple">
@@ -616,12 +626,12 @@ you to override the methods that determine when a button should be
 sensitive, and when it is selected.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="Action">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Action</span></span><a class="headerlink" href="#Action" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Action</span></span><a class="headerlink" href="#Action" title="Link to this definition"></a></dt>
 <dd><p>To define a new action, inherit from this class. Override the
 methods in this class to change the behavior of the action.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="Action.__call__">
-<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Action.__call__" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Action.__call__" title="Link to this definition"></a></dt>
 <dd><p>This is the method that is called when the action is
 activated. In many cases, returning a non-None value from the
 action will cause the current interaction to end.</p>
@@ -632,7 +642,7 @@ report an error).</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="Action.get_sensitive">
-<span class="sig-name descname"><span class="pre">get_sensitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Action.get_sensitive" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">get_sensitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Action.get_sensitive" title="Link to this definition"></a></dt>
 <dd><p>This is called to determine if the button with this action
 should be sensitive. It should return true if the button is
 sensitive.</p>
@@ -642,7 +652,7 @@ sensitive.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="Action.get_selected">
-<span class="sig-name descname"><span class="pre">get_selected</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Action.get_selected" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">get_selected</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Action.get_selected" title="Link to this definition"></a></dt>
 <dd><p>This should return true if the button should be rendered as a
 selected button, and false otherwise.</p>
 <p>The default implemention returns False.</p>
@@ -650,7 +660,7 @@ selected button, and false otherwise.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="Action.get_tooltip">
-<span class="sig-name descname"><span class="pre">get_tooltip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Action.get_tooltip" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">get_tooltip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Action.get_tooltip" title="Link to this definition"></a></dt>
 <dd><p>This gets a default tooltip for this button, if a specific
 tooltip is not assigned. It should return the tooltip value,
 or None if a tooltip is not known.</p>
@@ -659,7 +669,7 @@ or None if a tooltip is not known.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="Action.periodic">
-<span class="sig-name descname"><span class="pre">periodic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">st</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Action.periodic" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">periodic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">st</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Action.periodic" title="Link to this definition"></a></dt>
 <dd><p>This method is called once at the start of each interaction,
 and then is called periodically thereafter. If it returns a
 number, it will be called before that many seconds elapse, but
@@ -677,14 +687,14 @@ action is associated with was first shown.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="Action.unhovered">
-<span class="sig-name descname"><span class="pre">unhovered</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Action.unhovered" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">unhovered</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Action.unhovered" title="Link to this definition"></a></dt>
 <dd><p>When the action is used as the <cite>hovered</cite> parameter to a button (or
 similar object), this method is called when the object loses focus.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="Action.alt">
-<span class="sig-name descname"><span class="pre">alt</span></span><a class="headerlink" href="#Action.alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">alt</span></span><a class="headerlink" href="#Action.alt" title="Link to this definition"></a></dt>
 <dd><p>The text-to-speech text used for buttons that use this Action, if
 the button does not have the <a class="reference internal" href="style_properties.html#style-property-alt"><code class="xref std std-propref docutils literal notranslate"><span class="pre">alt</span></code></a> property set. This can
 set to a string in the class, or in the constructor, or it can be
@@ -696,21 +706,21 @@ a Python property that returns a string.</p>
 <p>To run an action from Python, use <a class="reference internal" href="#renpy.run" title="renpy.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.run()</span></code></a>.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.is_selected">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">is_selected</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.is_selected" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">is_selected</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.is_selected" title="Link to this definition"></a></dt>
 <dd><p>Returns a true value if the provided action or list of actions
 indicates it is selected, and false otherwise.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.is_sensitive">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">is_sensitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.is_sensitive" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">is_sensitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.is_sensitive" title="Link to this definition"></a></dt>
 <dd><p>Returns a true value if the provided action or list of actions
 indicates it is sensitive, and false otherwise.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.run">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.run" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.run" title="Link to this definition"></a></dt>
 <dd><p>Run an action or list of actions. A single action is called with no
 arguments, a list of actions is run in order using this function, and
 None is ignored.</p>
@@ -719,18 +729,18 @@ None is ignored.</p>
 
 </section>
 <section id="barvalues">
-<h2>BarValues<a class="headerlink" href="#barvalues" title="Permalink to this heading"> link</a></h2>
+<h2>BarValues<a class="headerlink" href="#barvalues" title="Link to this heading"></a></h2>
 <p>When creating a bar, vbar, or hotbar, a BarValue object can be supplied as
 the <cite>value</cite> property. Methods on the BarValue object are called to get
 the adjustment and styles.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="BarValue">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BarValue</span></span><a class="headerlink" href="#BarValue" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BarValue</span></span><a class="headerlink" href="#BarValue" title="Link to this definition"></a></dt>
 <dd><p>To define a new BarValue, inherit from this class and override
 some of the methods.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="BarValue.get_adjustment">
-<span class="sig-name descname"><span class="pre">get_adjustment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BarValue.get_adjustment" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">get_adjustment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BarValue.get_adjustment" title="Link to this definition"></a></dt>
 <dd><p>This method is called to get an adjustment object for the
 bar. It should create the adjustment with
 <a class="reference internal" href="#ui.adjustment" title="ui.adjustment"><code class="xref py py-func docutils literal notranslate"><span class="pre">ui.adjustment()</span></code></a>, and then return the object created this
@@ -742,7 +752,7 @@ error).</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="BarValue.get_style">
-<span class="sig-name descname"><span class="pre">get_style</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BarValue.get_style" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">get_style</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BarValue.get_style" title="Link to this definition"></a></dt>
 <dd><p>This is used to determine the style of bars that use this
 value. It should return a tuple of two style names or style
 objects. The first is used for a bar, and the
@@ -752,7 +762,7 @@ second for vbar.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="BarValue.get_tooltip">
-<span class="sig-name descname"><span class="pre">get_tooltip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BarValue.get_tooltip" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">get_tooltip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BarValue.get_tooltip" title="Link to this definition"></a></dt>
 <dd><p>This gets a default tooltip for this button, if a specific
 tooltip is not assigned. It should return the tooltip value,
 or None if a tooltip is not known.</p>
@@ -761,7 +771,7 @@ or None if a tooltip is not known.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="BarValue.replaces">
-<span class="sig-name descname"><span class="pre">replaces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BarValue.replaces" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">replaces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BarValue.replaces" title="Link to this definition"></a></dt>
 <dd><p>This is called when a BarValue replaces another BarValue, such
 as when a screen is updated. It can be used to update this
 BarValue from the other. It is called before get_adjustment.</p>
@@ -770,7 +780,7 @@ BarValue from the other. It is called before get_adjustment.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="BarValue.periodic">
-<span class="sig-name descname"><span class="pre">periodic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">st</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BarValue.periodic" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">periodic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">st</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BarValue.periodic" title="Link to this definition"></a></dt>
 <dd><p>This method is called once at the start of each interaction. If
 it returns a number of seconds, it will be called before that
 many seconds elapse, but it might be called sooner. It is
@@ -783,7 +793,7 @@ adjustment's changed method.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="BarValue.alt">
-<span class="sig-name descname"><span class="pre">alt</span></span><a class="headerlink" href="#BarValue.alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">alt</span></span><a class="headerlink" href="#BarValue.alt" title="Link to this definition"></a></dt>
 <dd><p>The text-to-speech text used for bars that use this BarValue, if
 the bar does not have the <a class="reference internal" href="style_properties.html#style-property-alt"><code class="xref std std-propref docutils literal notranslate"><span class="pre">alt</span></code></a> property set. This can
 set to a string in the class, or in the constructor, or it can be
@@ -794,46 +804,46 @@ a Python property that returns a string.</p>
 
 </section>
 <section id="inputvalue">
-<h2>InputValue<a class="headerlink" href="#inputvalue" title="Permalink to this heading"> link</a></h2>
+<h2>InputValue<a class="headerlink" href="#inputvalue" title="Link to this heading"></a></h2>
 <p>When creating an input, an InputValue object can be supplied as the
 <cite>value</cite> property. Methods on the InputValue object are called to
 get and set the text, determine if the input is editable, and handle
 the enter key being pressed.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="InputValue">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InputValue</span></span><a class="headerlink" href="#InputValue" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InputValue</span></span><a class="headerlink" href="#InputValue" title="Link to this definition"></a></dt>
 <dd><p>To define a new InputValue, inherit from this class, override
 some or all of the methods, and set the value of the default
 field.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="InputValue.editable">
-<span class="sig-name descname"><span class="pre">editable</span></span><a class="headerlink" href="#InputValue.editable" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">editable</span></span><a class="headerlink" href="#InputValue.editable" title="Link to this definition"></a></dt>
 <dd><p>If not true, disables the input field from being editable at all.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="InputValue.default">
-<span class="sig-name descname"><span class="pre">default</span></span><a class="headerlink" href="#InputValue.default" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">default</span></span><a class="headerlink" href="#InputValue.default" title="Link to this definition"></a></dt>
 <dd><p>If true, the input is eligible to be editable by default. (That
 is, it may be given the caret when the screen is shown.)</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="InputValue.get_text">
-<span class="sig-name descname"><span class="pre">get_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#InputValue.get_text" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">get_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#InputValue.get_text" title="Link to this definition"></a></dt>
 <dd><p>Returns the default text of the input. This must be implemented.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="InputValue.set_text">
-<span class="sig-name descname"><span class="pre">set_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#InputValue.set_text" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">set_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#InputValue.set_text" title="Link to this definition"></a></dt>
 <dd><p>Called when the text of the input is changed, with the new text.
 This must be implemented.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="InputValue.enter">
-<span class="sig-name descname"><span class="pre">enter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#InputValue.enter" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">enter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#InputValue.enter" title="Link to this definition"></a></dt>
 <dd><p>Called when the user presses enter. If this returns a non-None
 value, that value is returned from the interacton. This may also
 raise <a class="reference internal" href="cdd.html#renpy.IgnoreEvent" title="renpy.IgnoreEvent"><code class="xref py py-exc docutils literal notranslate"><span class="pre">renpy.IgnoreEvent</span></code></a> to ignore the press. Otherwise, the
@@ -843,19 +853,19 @@ enter-press is propagated to other displayables.</p>
 <p>The following actions are available as methods on InputValue:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="InputValue.Enable">
-<span class="sig-name descname"><span class="pre">Enable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#InputValue.Enable" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">Enable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#InputValue.Enable" title="Link to this definition"></a></dt>
 <dd><p>Returns an action that enables text editing on the input.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="InputValue.Disable">
-<span class="sig-name descname"><span class="pre">Disable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#InputValue.Disable" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">Disable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#InputValue.Disable" title="Link to this definition"></a></dt>
 <dd><p>Returns an action that disables text editing on the input.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="InputValue.Toggle">
-<span class="sig-name descname"><span class="pre">Toggle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#InputValue.Toggle" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">Toggle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#InputValue.Toggle" title="Link to this definition"></a></dt>
 <dd><p>Returns an action that toggles text editing on the input.</p>
 </dd></dl>
 
@@ -863,7 +873,7 @@ enter-press is propagated to other displayables.</p>
 
 </section>
 <section id="creator-defined-screen-language-statements">
-<span id="creator-defined-sl"></span><h2>Creator-Defined Screen Language Statements<a class="headerlink" href="#creator-defined-screen-language-statements" title="Permalink to this heading"> link</a></h2>
+<span id="creator-defined-sl"></span><h2>Creator-Defined Screen Language Statements<a class="headerlink" href="#creator-defined-screen-language-statements" title="Link to this heading"></a></h2>
 <p>Ren'Py supports defining custom screen language statements. Creator-defined screen
 language statements are wrappers for the screen language <a class="reference internal" href="screens.html#sl-use"><span class="std std-ref">use statement</span></a>.
 Positional arguments remain positional arguments, properties become keyword
@@ -889,7 +899,7 @@ statement with 01, or some other small number.</p>
 function:</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="renpy.register_sl_displayable">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">register_sl_displayable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">displayable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nchildren</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replaces</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_keywords</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_properties</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unique</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_sl_displayable" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">register_sl_displayable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">displayable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nchildren</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replaces</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_keywords</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_properties</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unique</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_sl_displayable" title="Link to this definition"></a></dt>
 <dd><p>Registers a screen language statement that creates a displayable.</p>
 <dl>
 <dt><cite>name</cite></dt><dd><p>The name of the screen language statement, a string containing a Ren'Py
@@ -940,20 +950,20 @@ returns the object it is called on, allowing methods to be chained
 together.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="renpy.register_sl_displayable.add_positional">
-<span class="sig-name descname"><span class="pre">add_positional</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_sl_displayable.add_positional" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">add_positional</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_sl_displayable.add_positional" title="Link to this definition"></a></dt>
 <dd><p>Adds a positional argument with <cite>name</cite></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="renpy.register_sl_displayable.add_property">
-<span class="sig-name descname"><span class="pre">add_property</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_sl_displayable.add_property" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">add_property</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_sl_displayable.add_property" title="Link to this definition"></a></dt>
 <dd><p>Adds a property with <cite>name</cite>. Properties are passed as keyword
 arguments.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="renpy.register_sl_displayable.add_style_property">
-<span class="sig-name descname"><span class="pre">add_style_property</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_sl_displayable.add_style_property" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">add_style_property</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_sl_displayable.add_style_property" title="Link to this definition"></a></dt>
 <dd><p>Adds a family of properties, ending with <cite>name</cite> and prefixed with
 the various style property prefixes. For example, if called with
 (&quot;size&quot;), this will define size, idle_size, hover_size, etc.</p>
@@ -961,7 +971,7 @@ the various style property prefixes. For example, if called with
 
 <dl class="py method">
 <dt class="sig sig-object py" id="renpy.register_sl_displayable.add_prefix_style_property">
-<span class="sig-name descname"><span class="pre">add_prefix_style_property</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_sl_displayable.add_prefix_style_property" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">add_prefix_style_property</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_sl_displayable.add_prefix_style_property" title="Link to this definition"></a></dt>
 <dd><p>Adds a family of properties with names consisting of <cite>prefix</cite>,
 a style property prefix, and <cite>name</cite>. For example, if called
 with a prefix of <cite>text_</cite> and a name of <cite>size</cite>, this will
@@ -970,7 +980,7 @@ create text_size, text_idle_size, text_hover_size, etc.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="renpy.register_sl_displayable.add_property_group">
-<span class="sig-name descname"><span class="pre">add_property_group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_sl_displayable.add_property_group" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">add_property_group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_sl_displayable.add_property_group" title="Link to this definition"></a></dt>
 <dd><p>Adds a group of properties, prefixed with <cite>prefix</cite>. <cite>Group</cite> may
 be one of the strings:</p>
 <ul class="simple">
@@ -987,7 +997,7 @@ also be &quot;ui&quot;, in which case it adds the <a class="reference internal" 
 
 <dl class="py method">
 <dt class="sig sig-object py" id="renpy.register_sl_displayable.copy_properties">
-<span class="sig-name descname"><span class="pre">copy_properties</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_sl_displayable.copy_properties" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">copy_properties</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_sl_displayable.copy_properties" title="Link to this definition"></a></dt>
 <dd><p>Adds all styles and positional/keyword arguments that can be passed to the <cite>name</cite> screen statement.</p>
 </dd></dl>
 
@@ -995,7 +1005,7 @@ also be &quot;ui&quot;, in which case it adds the <a class="reference internal" 
 
 <dl class="py class">
 <dt class="sig sig-object py" id="renpy.register_sl_statement">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">register_sl_statement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">children</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'many'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_sl_statement" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">register_sl_statement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">children</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'many'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_sl_statement" title="Link to this definition"></a></dt>
 <dd><p>Registers a custom screen language statement with Ren'Py.</p>
 <dl class="simple">
 <dt><cite>name</cite></dt><dd><p>This must be a word. It's the name of the custom screen language
@@ -1073,7 +1083,7 @@ the **properties syntax with a properties keyword in some place. For example:</p
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="gui_advanced.html" class="btn btn-neutral float-left" title="Advanced GUI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="modes.html" class="btn btn-neutral float-right" title="Modes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="cdd.html" class="btn btn-neutral float-right" title="Creator-Defined Displayables" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

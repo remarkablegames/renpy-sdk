@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Styles &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/style.html" />
@@ -17,14 +17,13 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -66,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -75,8 +75,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
@@ -119,6 +119,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -147,10 +148,8 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -162,6 +161,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul>
@@ -229,7 +229,7 @@
            <div itemprop="articleBody">
              
   <section id="styles">
-<h1>Styles<a class="headerlink" href="#styles" title="Permalink to this heading"> link</a></h1>
+<h1>Styles<a class="headerlink" href="#styles" title="Link to this heading"></a></h1>
 <p>Styles allow the look of <a class="reference internal" href="displayables.html"><span class="doc">Displayables</span></a> to be customized, by changing the
 value of style properties. For example, changing the <a class="reference internal" href="style_properties.html#style-property-background"><code class="xref std std-propref docutils literal notranslate"><span class="pre">background</span></code></a>
 property to change the background of a window or button.</p>
@@ -242,7 +242,7 @@ specifying when the property is used. For example, a button's
 <p>While Ren'Py has over 100 style properties, only a few of them are
 used in this section.</p>
 <section id="using-styles-and-style-inheritance">
-<h2>Using Styles and Style Inheritance<a class="headerlink" href="#using-styles-and-style-inheritance" title="Permalink to this heading"> link</a></h2>
+<h2>Using Styles and Style Inheritance<a class="headerlink" href="#using-styles-and-style-inheritance" title="Link to this heading"></a></h2>
 <p>Each displayable has a style built into it. When the displayable is created,
 either directly or using the screen system, style properties can be supplied,
 which are used to update the look of the displayable. In the following example:</p>
@@ -301,7 +301,7 @@ after the <a class="reference internal" href="lifecycle.html#init-phase"><span c
 styles and style properties are being used by a displayable.</p>
 </section>
 <section id="defining-styles-style-statement">
-<h2>Defining Styles: Style Statement<a class="headerlink" href="#defining-styles-style-statement" title="Permalink to this heading"> link</a></h2>
+<h2>Defining Styles: Style Statement<a class="headerlink" href="#defining-styles-style-statement" title="Link to this heading"></a></h2>
 <p>The preferred way to define styles is through the style statement:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">style</span> <span class="n">my_text</span> <span class="k">is</span> <span class="k">text</span><span class="p">:</span>
     <span class="na">size</span> <span class="mi">40</span>
@@ -313,7 +313,7 @@ the existing style is modified by the style statement.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Unlike other statements such as <a class="reference internal" href="screens.html#screen-statement"><span class="std std-ref">screen</span></a>,
-<a class="reference internal" href="atl.html#transform-statement"><span class="std std-ref">transform</span></a> or <a class="reference internal" href="displaying_images.html#image-statement"><span class="std std-ref">image</span></a>,
+<a class="reference internal" href="transforms.html#transform-statement"><span class="std std-ref">transform</span></a> or <a class="reference internal" href="displaying_images.html#image-statement"><span class="std std-ref">image</span></a>,
 the style statement is not unique for a given name: several statements can
 refer to the same style and alter it successively, sometimes in a
 concurrent or contradictory way. In such cases, the init times at which the
@@ -375,7 +375,7 @@ as if they were provided to the style statement.</p>
 <p>Style statements are always run at <a class="reference internal" href="lifecycle.html#init-phase"><span class="std std-ref">init time</span></a>.</p>
 </section>
 <section id="defining-styles-python">
-<h2>Defining Styles: Python<a class="headerlink" href="#defining-styles-python" title="Permalink to this heading"> link</a></h2>
+<h2>Defining Styles: Python<a class="headerlink" href="#defining-styles-python" title="Link to this heading"></a></h2>
 <p>Named styles exists as fields on the global <code class="docutils literal notranslate"><span class="pre">style</span></code> object. To create a new
 style, create an instance of the <a class="reference internal" href="#Style" title="Style"><code class="xref py py-class docutils literal notranslate"><span class="pre">Style</span></code></a> class, and assign it to a field
 on the <code class="docutils literal notranslate"><span class="pre">style</span></code> object:</p>
@@ -394,14 +394,14 @@ objects.</p>
 be written.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="Style">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Style</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Style" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Style</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Style" title="Link to this definition"></a></dt>
 <dd><dl class="simple">
 <dt><cite>parent</cite></dt><dd><p>The styles parent. This can be another Style object, or a string.</p>
 </dd>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="Style.clear">
-<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Style.clear" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Style.clear" title="Link to this definition"></a></dt>
 <dd><p>This removes all style properties from this object. Values will be
 inherited from this object's parent.</p>
 <p>The equivalent of the <code class="docutils literal notranslate"><span class="pre">clear</span></code> clause in a style statement.</p>
@@ -409,7 +409,7 @@ inherited from this object's parent.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="Style.set_parent">
-<span class="sig-name descname"><span class="pre">set_parent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Style.set_parent" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">set_parent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Style.set_parent" title="Link to this definition"></a></dt>
 <dd><p>Sets the parent of this style object to <cite>parent</cite>, which can be another
 Style object or a string.</p>
 <p>The equivalent of the <code class="docutils literal notranslate"><span class="pre">is</span></code> clause in a style statement.</p>
@@ -417,7 +417,7 @@ Style object or a string.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="Style.take">
-<span class="sig-name descname"><span class="pre">take</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Style.take" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">take</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Style.take" title="Link to this definition"></a></dt>
 <dd><p>This takes all style properties from <cite>other</cite>, which can be another
 Style object or a string.</p>
 <p>The equivalent of the <code class="docutils literal notranslate"><span class="pre">take</span></code> clause in a style statement.</p>
@@ -426,7 +426,7 @@ Style object or a string.</p>
 </dd></dl>
 
 <section id="indexed-styles">
-<span id="id1"></span><h3>Indexed Styles<a class="headerlink" href="#indexed-styles" title="Permalink to this heading"> link</a></h3>
+<span id="id1"></span><h3>Indexed Styles<a class="headerlink" href="#indexed-styles" title="Link to this heading"></a></h3>
 <p>Indexed styles are lightweight styles that can be used to customize the look
 of a displayable based on the data supplied to that displayable. An index
 style is created by indexing an existing Style object with a string or integer.
@@ -445,7 +445,7 @@ original Style object.</p>
 </div>
 </section>
 <section id="style-preferences">
-<span id="id2"></span><h3>Style Preferences<a class="headerlink" href="#style-preferences" title="Permalink to this heading"> link</a></h3>
+<span id="id2"></span><h3>Style Preferences<a class="headerlink" href="#style-preferences" title="Link to this heading"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><a class="reference internal" href="gui_advanced.html#gui-preferences"><span class="std std-ref">GUI Preferences</span></a> may often provide a better way of accomplishing
@@ -488,7 +488,7 @@ choose between large, simple text, and smaller outlined text.</p>
 </div>
 <dl class="py function">
 <dt class="sig sig-object py" id="StylePreference">
-<span class="sig-name descname"><span class="pre">StylePreference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">preference</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alternative</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#StylePreference" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">StylePreference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">preference</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alternative</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#StylePreference" title="Link to this definition"></a></dt>
 <dd><p>An action that causes <cite>alternative</cite> to become the selected alternative for the given style preference.</p>
 <p>The <cite>update</cite> event is triggered when this action is called.</p>
 <dl class="simple">
@@ -501,7 +501,7 @@ choose between large, simple text, and smaller outlined text.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_style_preference">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_style_preference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">preference</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_style_preference" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_style_preference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">preference</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_style_preference" title="Link to this definition"></a></dt>
 <dd><p>Returns a string giving the name of the selected alternative for the named style preference.</p>
 <dl class="simple">
 <dt><cite>preference</cite></dt><dd><p>A string giving the name of the style preference.</p>
@@ -511,7 +511,7 @@ choose between large, simple text, and smaller outlined text.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.register_style_preference">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">register_style_preference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">preference</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alternative</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">property</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_style_preference" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">register_style_preference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">preference</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alternative</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">property</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_style_preference" title="Link to this definition"></a></dt>
 <dd><p>Registers information about an alternative for a style preference.</p>
 <dl class="simple">
 <dt><cite>preference</cite></dt><dd><p>A string, the name of the style preference.</p>
@@ -529,7 +529,7 @@ choose between large, simple text, and smaller outlined text.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.set_style_preference">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">set_style_preference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">preference</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alternative</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.set_style_preference" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">set_style_preference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">preference</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alternative</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.set_style_preference" title="Link to this definition"></a></dt>
 <dd><p>Sets the selected alternative for the style preference.</p>
 <p>The <cite>update</cite> event is triggered when this function is called.</p>
 <dl class="simple">
@@ -542,10 +542,10 @@ choose between large, simple text, and smaller outlined text.</p>
 
 </section>
 <section id="other-style-functions">
-<h3>Other Style Functions<a class="headerlink" href="#other-style-functions" title="Permalink to this heading"> link</a></h3>
+<h3>Other Style Functions<a class="headerlink" href="#other-style-functions" title="Link to this heading"></a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="style.rebuild">
-<span class="sig-prename descclassname"><span class="pre">style.</span></span><span class="sig-name descname"><span class="pre">rebuild</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#style.rebuild" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">style.</span></span><span class="sig-name descname"><span class="pre">rebuild</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#style.rebuild" title="Link to this definition"></a></dt>
 <dd><p>This causes named styles to be rebuilt, allowing styles to be
 changed after the init phase has finished.</p>
 <div class="admonition warning">

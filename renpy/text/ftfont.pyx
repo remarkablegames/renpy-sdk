@@ -608,6 +608,7 @@ cdef class FTFont:
             gl.character = c
             gl.variation = vs
             gl.ascent = self.ascent
+            gl.descent = -self.descent
             gl.width = cache.width
             gl.line_spacing = self.lineskip
             gl.draw = True
@@ -714,6 +715,11 @@ cdef class FTFont:
 
             if bmy + <int> cache.bitmap.rows > h:
                 h = bmy + cache.bitmap.rows
+
+            glyph.add_left = <int> max(-(bmx - glyph.x), 0)
+            glyph.add_right = <int> max(bmx + cache.bitmap.width - (glyph.x + glyph.width), 0)
+            glyph.add_top = <int> max(-(bmy - glyph.y), 0)
+            glyph.add_bottom = <int> max(bmy + cache.bitmap.rows - (glyph.y + glyph.line_spacing), 0)
 
         return x, y, w, h
 
@@ -854,9 +860,7 @@ cdef class FTFont:
                                 line[2] = Sb
                                 line[3] = alpha
 
-                            elif alpha:
-
-                                alpha = alpha + line[3] * (255 - alpha) // 255
+                            elif alpha > line[3]:
 
                                 line[0] = Sr * alpha // 255
                                 line[1] = Sg * alpha // 255

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Screen Language Optimization &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/screen_optimization.html" />
@@ -17,14 +17,13 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -66,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -75,8 +75,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
@@ -117,6 +117,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -145,10 +146,8 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -160,6 +159,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul>
@@ -227,7 +227,7 @@
            <div itemprop="articleBody">
              
   <section id="screen-language-optimization">
-<h1>Screen Language Optimization<a class="headerlink" href="#screen-language-optimization" title="Permalink to this heading"> link</a></h1>
+<h1>Screen Language Optimization<a class="headerlink" href="#screen-language-optimization" title="Link to this heading"></a></h1>
 <p>Ren'Py uses a number of techniques to optimize screen language speed. When
 using Ren'Py to create complex interfaces, such as those used by simulation
 games, it may help to understand how screen language works so you can
@@ -242,7 +242,7 @@ a screen that avoids such looping. While understanding the techniques in
 this guide is important, avoiding work entirely is always better than
 letting Ren'Py optimize the work for you.</p>
 <section id="parameter-list">
-<h2>Parameter List<a class="headerlink" href="#parameter-list" title="Permalink to this heading"> link</a></h2>
+<h2>Parameter List<a class="headerlink" href="#parameter-list" title="Link to this heading"></a></h2>
 <p>For best performance, all screens should be defined with a parameter list.
 When a screen doesn't take parameters, it should be defined with an empty
 parameter list. The screen:</p>
@@ -265,7 +265,7 @@ more conservative when analyzing the screen, which can limit the optimization
 it performs.</p>
 </section>
 <section id="prediction">
-<h2>Prediction<a class="headerlink" href="#prediction" title="Permalink to this heading"> link</a></h2>
+<h2>Prediction<a class="headerlink" href="#prediction" title="Link to this heading"></a></h2>
 <p>Screens perform better when they're predicted in advance. That's because
 Ren'Py will execute the screen during prediction time, and load in images
 that are used by the screen.</p>
@@ -282,7 +282,7 @@ the screen before it is shown. To start predicting a screen, use the
 use the <a class="reference internal" href="screen_python.html#renpy.stop_predict_screen" title="renpy.stop_predict_screen"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.stop_predict_screen()</span></code></a> function.</p>
 </section>
 <section id="displayable-reuse">
-<h2>Displayable Reuse<a class="headerlink" href="#displayable-reuse" title="Permalink to this heading"> link</a></h2>
+<h2>Displayable Reuse<a class="headerlink" href="#displayable-reuse" title="Link to this heading"></a></h2>
 <p>When evaluating a screen language statement that creates a displayable, Ren'Py
 will check to see if the positional arguments and properties given to that
 displayable are equal to the positional arguments and properties given the
@@ -323,12 +323,12 @@ compares all fields, and uses equality (==) and identity (is) comparison
 as appropriate.</p>
 </section>
 <section id="const-expressions-and-pure-functions">
-<h2>Const Expressions and Pure Functions<a class="headerlink" href="#const-expressions-and-pure-functions" title="Permalink to this heading"> link</a></h2>
+<h2>Const Expressions and Pure Functions<a class="headerlink" href="#const-expressions-and-pure-functions" title="Link to this heading"></a></h2>
 <p>Ren'Py can exploit the properties of const variables and pure functions
 to improve the speed of screen evaluation, and to entirely avoid the
 evaluation of some parts of screens.</p>
 <section id="definitions">
-<h3>Definitions<a class="headerlink" href="#definitions" title="Permalink to this heading"> link</a></h3>
+<h3>Definitions<a class="headerlink" href="#definitions" title="Link to this heading"></a></h3>
 <p>An expression is <strong>const</strong> (short for constant) if it always represents the
 same value when it is evaluated. For Ren'Py's purposes, an expression is
 const if and only if the following expressions always evaluate to the same
@@ -370,7 +370,7 @@ across the following events:</p>
 </ul>
 </section>
 <section id="how-const-optimizes-screen-language">
-<h3>How Const Optimizes Screen Language<a class="headerlink" href="#how-const-optimizes-screen-language" title="Permalink to this heading"> link</a></h3>
+<h3>How Const Optimizes Screen Language<a class="headerlink" href="#how-const-optimizes-screen-language" title="Link to this heading"></a></h3>
 <p>There are three advantages to ensuring that screen language arguments and
 properties are const.</p>
 <p>The first is that const arguments and properties are evaluated when
@@ -399,7 +399,7 @@ any displayables after the first time it is predicted or shown:</p>
 </div>
 </section>
 <section id="const-text">
-<span id="id1"></span><h3>Const Text<a class="headerlink" href="#const-text" title="Permalink to this heading"> link</a></h3>
+<span id="id1"></span><h3>Const Text<a class="headerlink" href="#const-text" title="Link to this heading"></a></h3>
 <p>When defining text, please note that strings containing new-style text
 substitutions are const:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">$</span> <span class="n">t</span> <span class="o">=</span> <span class="s2">&quot;Hello, world.&quot;</span>
@@ -430,10 +430,10 @@ the <code class="docutils literal notranslate"><span class="pre">!i</span></code
 </div>
 </section>
 <section id="const-functions">
-<h3>Const Functions<a class="headerlink" href="#const-functions" title="Permalink to this heading"> link</a></h3>
+<h3>Const Functions<a class="headerlink" href="#const-functions" title="Link to this heading"></a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.const">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">const</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.const" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">const</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.const" title="Link to this definition"></a></dt>
 <dd><p>Declares a variable in the store to be constant.</p>
 <p>A variable is constant if nothing can change its value, or any value
 reached by indexing it or accessing its attributes. Variables must
@@ -446,7 +446,7 @@ remain constant out of define, init, and translate python blocks.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.not_const">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">not_const</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.not_const" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">not_const</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.not_const" title="Link to this definition"></a></dt>
 <dd><p>Declares a name in the store to be not constant.</p>
 <p>This undoes the effect of calls to <a class="reference internal" href="#renpy.const" title="renpy.const"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.const()</span></code></a> and
 <a class="reference internal" href="#renpy.pure" title="renpy.pure"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.pure()</span></code></a>.</p>
@@ -458,7 +458,7 @@ remain constant out of define, init, and translate python blocks.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.pure">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">pure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.pure" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">pure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.pure" title="Link to this definition"></a></dt>
 <dd><p>Declares a function as pure. A pure function must always return the
 same value when it is called with the same arguments, outside of
 define, init, and translate python blocks.</p>
@@ -475,12 +475,12 @@ this string should contain the module name with the dot.</p>
 </section>
 </section>
 <section id="profiling">
-<h2>Profiling<a class="headerlink" href="#profiling" title="Permalink to this heading"> link</a></h2>
+<h2>Profiling<a class="headerlink" href="#profiling" title="Link to this heading"></a></h2>
 <p>Ren'Py supports profiling screen execution through the <code class="docutils literal notranslate"><span class="pre">renpy.profile_screen</span></code>
 function:</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="renpy.profile_screen">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">profile_screen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">const</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.profile_screen" title="Permalink to this definition"> link</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">profile_screen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">const</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.profile_screen" title="Link to this definition"></a></dt>
 <dd><p>Requests screen profiling for the screen named <cite>name</cite>, which
 must be a string.</p>
 <p>Apart from <cite>name</cite>, all arguments must be supplied as keyword
@@ -527,18 +527,18 @@ directory.</p>
 
 </section>
 <section id="const-names">
-<span id="id2"></span><h2>Const Names<a class="headerlink" href="#const-names" title="Permalink to this heading"> link</a></h2>
+<span id="id2"></span><h2>Const Names<a class="headerlink" href="#const-names" title="Link to this heading"></a></h2>
 <p>The following names are const by default.</p>
 <ul class="simple">
 <li><p>False</p></li>
 <li><p>None</p></li>
 <li><p>True</p></li>
-<li><p>config</p></li>
-<li><p>style</p></li>
+<li><p><code class="xref std std-var docutils literal notranslate"><span class="pre">config</span></code></p></li>
+<li><p><a class="reference internal" href="namespaces.html#var-style"><code class="xref std std-var docutils literal notranslate"><span class="pre">style</span></code></a></p></li>
 </ul>
 </section>
 <section id="pure-names">
-<span id="id3"></span><h2>Pure Names<a class="headerlink" href="#pure-names" title="Permalink to this heading"> link</a></h2>
+<span id="id3"></span><h2>Pure Names<a class="headerlink" href="#pure-names" title="Link to this heading"></a></h2>
 <p>The following names are both pure and const by default.</p>
 <ul class="simple">
 <li><p>ADVCharacter</p></li>
@@ -550,7 +550,7 @@ directory.</p>
 <li><p><a class="reference internal" href="displayables.html#AlphaMask" title="AlphaMask"><code class="xref py py-class docutils literal notranslate"><span class="pre">AlphaMask</span></code></a></p></li>
 <li><p><a class="reference internal" href="screen_actions.html#AnimatedValue" title="AnimatedValue"><code class="xref py py-func docutils literal notranslate"><span class="pre">AnimatedValue()</span></code></a></p></li>
 <li><p>Animation</p></li>
-<li><p><a class="reference internal" href="displayables.html#At" title="At"><code class="xref py py-func docutils literal notranslate"><span class="pre">At()</span></code></a></p></li>
+<li><p><a class="reference internal" href="transforms.html#At" title="At"><code class="xref py py-func docutils literal notranslate"><span class="pre">At()</span></code></a></p></li>
 <li><p><a class="reference internal" href="screen_actions.html#AudioPositionValue" title="AudioPositionValue"><code class="xref py py-func docutils literal notranslate"><span class="pre">AudioPositionValue()</span></code></a></p></li>
 <li><p><a class="reference internal" href="screen_actions.html#Call" title="Call"><code class="xref py py-func docutils literal notranslate"><span class="pre">Call()</span></code></a></p></li>
 <li><p><a class="reference internal" href="screen_actions.html#CaptureFocus" title="CaptureFocus"><code class="xref py py-func docutils literal notranslate"><span class="pre">CaptureFocus()</span></code></a></p></li>
@@ -691,7 +691,7 @@ directory.</p>
 <li><p><a class="reference internal" href="screen_actions.html#ToggleSetMembership" title="ToggleSetMembership"><code class="xref py py-func docutils literal notranslate"><span class="pre">ToggleSetMembership()</span></code></a></p></li>
 <li><p><a class="reference internal" href="screen_actions.html#ToggleVariable" title="ToggleVariable"><code class="xref py py-func docutils literal notranslate"><span class="pre">ToggleVariable()</span></code></a></p></li>
 <li><p><a class="reference internal" href="voice.html#ToggleVoiceMute" title="ToggleVoiceMute"><code class="xref py py-func docutils literal notranslate"><span class="pre">ToggleVoiceMute()</span></code></a></p></li>
-<li><p><a class="reference internal" href="trans_trans_python.html#Transform" title="Transform"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transform</span></code></a></p></li>
+<li><p><a class="reference internal" href="transforms.html#Transform" title="Transform"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transform</span></code></a></p></li>
 <li><p><a class="reference internal" href="displayables.html#VBox" title="VBox"><code class="xref py py-func docutils literal notranslate"><span class="pre">VBox()</span></code></a></p></li>
 <li><p><a class="reference internal" href="screen_actions.html#VariableInputValue" title="VariableInputValue"><code class="xref py py-func docutils literal notranslate"><span class="pre">VariableInputValue()</span></code></a></p></li>
 <li><p><a class="reference internal" href="screen_actions.html#VariableValue" title="VariableValue"><code class="xref py py-func docutils literal notranslate"><span class="pre">VariableValue()</span></code></a></p></li>
@@ -741,7 +741,7 @@ directory.</p>
 <li><p>complex</p></li>
 <li><p>dict</p></li>
 <li><p>dir</p></li>
-<li><p><a class="reference internal" href="transitions.html#var-dissolve"><code class="xref std std-var docutils literal notranslate"><span class="pre">dissolve</span></code></a></p></li>
+<li><p>dissolve</p></li>
 <li><p>divmod</p></li>
 <li><p>enumerate</p></li>
 <li><p><a class="reference internal" href="transitions.html#var-fade"><code class="xref std std-var docutils literal notranslate"><span class="pre">fade</span></code></a></p></li>

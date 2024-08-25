@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Downloader for Large Games on Mobile &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/downloader.html" />
@@ -17,14 +17,13 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -66,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -75,8 +75,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
@@ -94,6 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -122,10 +123,8 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -137,6 +136,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul class="current">
@@ -216,12 +216,12 @@
            <div itemprop="articleBody">
              
   <section id="downloader-for-large-games-on-mobile">
-<h1>Downloader for Large Games on Mobile<a class="headerlink" href="#downloader-for-large-games-on-mobile" title="Permalink to this heading"> link</a></h1>
+<h1>Downloader for Large Games on Mobile<a class="headerlink" href="#downloader-for-large-games-on-mobile" title="Link to this heading"></a></h1>
 <p>Platforms like Android and iOS have a limit on the size of an app that can
 be downloaded from their app stores. To support larger games, Ren'Py supports
 a downloader, which is a small game that downloads the main game.</p>
 <section id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading"> link</a></h2>
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading"></a></h2>
 <p>To make this work, you'll need a web hosting service that is reasonably
 capable. Uploader services like mega or game hosting sites like itch.io won't work.
 The downloader has been tested with a Digital Ocean droplet that
@@ -230,7 +230,7 @@ runs Nginx, and also with Cloudflare's R2, which is free to host 10GB on.</p>
 work better if it supports many HTTP Range requests at once.</p>
 </section>
 <section id="how-it-works">
-<h2>How it Works<a class="headerlink" href="#how-it-works" title="Permalink to this heading"> link</a></h2>
+<h2>How it Works<a class="headerlink" href="#how-it-works" title="Link to this heading"></a></h2>
 <p>To use the downloader, you'll need to build two games. The first is the
 downloader game, which contains the Ren'Py engine and the downloader,
 and is what the user will get delivered to their phone.</p>
@@ -247,22 +247,24 @@ start. Otherwise the downloader will run and prompt the player to
 download the main game.</p>
 </section>
 <section id="building-and-uploading-the-main-game">
-<h2>Building and Uploading the Main Game<a class="headerlink" href="#building-and-uploading-the-main-game" title="Permalink to this heading"> link</a></h2>
+<h2>Building and Uploading the Main Game<a class="headerlink" href="#building-and-uploading-the-main-game" title="Link to this heading"></a></h2>
 <p>The main change you need to make to your main game is to add the line:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">define</span> <span class="n">build</span><span class="o">.</span><span class="n">game_only_update</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
 </div>
 <p>to the top of your options.rpy file. That will add a new option that shows
-up to the launcher's Build Distributions screen,
-&quot;Game-Only Update for Mobile&quot;. Check that, uncheck everything else, and
-run the build process.</p>
+up to the launcher's Build Distributions screen, &quot;Game-Only Update for Mobile&quot;.</p>
+<p>In &quot;Build Distributions&quot;, check &quot;Game-Only Update for Mobile&quot;. Uncheck all other
+build packages. Under &quot;Options&quot;, make sure &quot;Build Updates&quot; is set, and that
+the other options are set as you like. The defaults are fine.</p>
+<p>Then run the build process.</p>
 <p>When the game is finished building, you'll have everything you need. You'll
 want to upload the <code class="docutils literal notranslate"><span class="pre">updates.json</span></code>, <code class="docutils literal notranslate"><span class="pre">updates.ecdsa</span></code>, and everything in the
 <code class="docutils literal notranslate"><span class="pre">rpu</span></code> directory to your web server. (Make sure that the rpu directory is next to
 the two update files, and the .rpu files are inside the <code class="docutils literal notranslate"><span class="pre">rpu</span></code> directory.)</p>
 </section>
 <section id="making-a-downloader-game">
-<h2>Making a Downloader Game<a class="headerlink" href="#making-a-downloader-game" title="Permalink to this heading"> link</a></h2>
+<h2>Making a Downloader Game<a class="headerlink" href="#making-a-downloader-game" title="Link to this heading"></a></h2>
 <p>The downloader game is a Ren'Py game, but it should stay well under 100MB
 in size. You can do anything you can in a small game - have an opening
 scene, play music, etc. You will need to make it separately, and build
@@ -324,7 +326,7 @@ and ATL will keep running.</p>
 fails, the downloader will restart, and the player will be able to try again</p>
 </section>
 <section id="downloader-screen">
-<h2>Downloader Screen<a class="headerlink" href="#downloader-screen" title="Permalink to this heading"> link</a></h2>
+<h2>Downloader Screen<a class="headerlink" href="#downloader-screen" title="Link to this heading"></a></h2>
 <p>The downloader is a screen that shows the progress of the download. A default
 screen is in <code class="file docutils literal notranslate"><span class="pre">renpy/common/00updater.rpy</span></code>, and can be customized by
 creating a copy in your game directory.</p>
@@ -384,17 +386,17 @@ creating a copy in your game directory.</p>
 </div>
 </section>
 <section id="downloader-functions">
-<h2>Downloader Functions<a class="headerlink" href="#downloader-functions" title="Permalink to this heading"> link</a></h2>
+<h2>Downloader Functions<a class="headerlink" href="#downloader-functions" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="updater.continue_game_download">
-<span class="sig-prename descclassname"><span class="pre">updater.</span></span><span class="sig-name descname"><span class="pre">continue_game_download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'downloader'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#updater.continue_game_download" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">updater.</span></span><span class="sig-name descname"><span class="pre">continue_game_download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'downloader'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#updater.continue_game_download" title="Link to this definition"></a></dt>
 <dd><p>Continues downloading the game data. This will loop until the
 download is complete, or the user exits the game.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="updater.start_game_download">
-<span class="sig-prename descclassname"><span class="pre">updater.</span></span><span class="sig-name descname"><span class="pre">start_game_download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#updater.start_game_download" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">updater.</span></span><span class="sig-name descname"><span class="pre">start_game_download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#updater.start_game_download" title="Link to this definition"></a></dt>
 <dd><p>Starts downloading the game data from <cite>url</cite>. This begins the process
 of determining what needs to be downloaded, and returns an Update object.</p>
 </dd></dl>

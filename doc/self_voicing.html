@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Self-Voicing &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/self_voicing.html" />
@@ -17,14 +17,13 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -66,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
 </ul>
@@ -75,8 +75,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
@@ -94,6 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -122,10 +123,8 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -137,6 +136,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul>
@@ -212,7 +212,7 @@
            <div itemprop="articleBody">
              
   <section id="self-voicing">
-<span id="id1"></span><h1>Self-Voicing<a class="headerlink" href="#self-voicing" title="Permalink to this heading"> link</a></h1>
+<span id="id1"></span><h1>Self-Voicing<a class="headerlink" href="#self-voicing" title="Link to this heading"></a></h1>
 <p>Ren'Py supports a self-voicing mode in which a speech synthesizer is used
 to read out text and other interface elements. This is intended to make
 Ren'Py games accessible to the vision impaired.</p>
@@ -225,7 +225,7 @@ displayable out loud. If no displayable is focused, Ren'Py will read on-screen
 text that cannot be focused. This will generally include dialogue and other
 text that comprises the game.</p>
 <section id="speech-synthesis">
-<h2>Speech Synthesis<a class="headerlink" href="#speech-synthesis" title="Permalink to this heading"> link</a></h2>
+<h2>Speech Synthesis<a class="headerlink" href="#speech-synthesis" title="Link to this heading"></a></h2>
 <p>Ren'Py relies on the operating system to provide speech synthesis
 services. To adjust the speed of speech synthesis and the voice used,
 adjust your platform's speech settings.</p>
@@ -260,7 +260,7 @@ work.</p>
 <p>The available voice vary based on the platform.</p>
 </section>
 <section id="creator-concerns">
-<h2>Creator Concerns<a class="headerlink" href="#creator-concerns" title="Permalink to this heading"> link</a></h2>
+<h2>Creator Concerns<a class="headerlink" href="#creator-concerns" title="Link to this heading"></a></h2>
 <p>Ren'Py's self-voicing works by extracting text from displayables and
 reading it to the player. Ren'Py extracts this text from multiple places.</p>
 <dl>
@@ -313,7 +313,7 @@ disabled. Self-voicing text uses the <a class="reference internal" href="#var-al
 be similar to a character.</p>
 <dl class="std var">
 <dt class="sig sig-object std" id="var-alt">
-<span class="sig-name descname"><span class="pre">alt</span></span> <span class="pre">=</span> <span class="pre">...</span><a class="headerlink" href="#var-alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">alt</span></span> <span class="pre">=</span> <span class="pre">...</span><a class="headerlink" href="#var-alt" title="Link to this definition"></a></dt>
 <dd><p>A character-like object that uses the narrator to speak text if
 self-voicing is enabled.</p>
 </dd></dl>
@@ -331,7 +331,7 @@ self-voicing is enabled.</p>
 <p>There is a variable that controls descriptive text:</p>
 <dl class="std var">
 <dt class="sig sig-object std" id="var-config.descriptive_text_character">
-<span class="pre">define</span> <span class="sig-name descname"><span class="pre">config.descriptive_text_character</span></span> <span class="pre">=</span> <span class="pre">None</span><a class="headerlink" href="#var-config.descriptive_text_character" title="Permalink to this definition"> link</a></dt>
+<span class="pre">define</span> <span class="sig-name descname"><span class="pre">config.descriptive_text_character</span></span> <span class="pre">=</span> <span class="pre">None</span><a class="headerlink" href="#var-config.descriptive_text_character" title="Link to this definition"></a></dt>
 <dd><p>If not None, this should be a character object that is used to
 display the descriptive text, instead of the narrator.</p>
 </dd></dl>
@@ -347,15 +347,15 @@ display the text that would be voiced on the screen for development
 purposes.</p>
 </section>
 <section id="python">
-<h2>Python<a class="headerlink" href="#python" title="Permalink to this heading"> link</a></h2>
+<h2>Python<a class="headerlink" href="#python" title="Link to this heading"></a></h2>
 <p>The following functions are provided by the self-voicing system:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.alt">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">alt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.alt" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">alt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.alt" title="Link to this definition"></a></dt>
 <dd><p>This queues <cite>s</cite> to be spoken. If <cite>translate</cite> is true, then the string
 will be translated before it is spoken. If <cite>force</cite> is true, then the
 string will be spoken even if self-voicing is disabled.</p>
-<p>This is intended for accsesibility purposes, and should not be used
+<p>This is intended for accessibility purposes, and should not be used
 for gameplay purposes.</p>
 </dd></dl>
 

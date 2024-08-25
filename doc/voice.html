@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Voice &mdash; Ren&#39;Py Documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css" />
-      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="canonical" href="https://www.renpy.org/doc/html/voice.html" />
@@ -17,14 +17,13 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/dark_mode_js/default_light.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -49,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.2.1 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -66,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Voice</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#voice-tags">Voice Tags</a></li>
@@ -100,8 +100,8 @@
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="atl.html">Animation and Transformation Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
@@ -119,6 +119,7 @@
 <li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
@@ -147,10 +148,8 @@
 <li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trans_trans_python.html">Transforms and Transitions in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
@@ -162,6 +161,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
 <ul>
@@ -229,7 +229,7 @@
            <div itemprop="articleBody">
              
   <section id="voice">
-<h1>Voice<a class="headerlink" href="#voice" title="Permalink to this heading"> link</a></h1>
+<h1>Voice<a class="headerlink" href="#voice" title="Link to this heading"></a></h1>
 <p>Ren'Py includes support for playing back voice in conjunction with
 dialogue. This is done through the <code class="docutils literal notranslate"><span class="pre">voice</span></code> statement, which gives the
 voice filename to play:</p>
@@ -250,7 +250,7 @@ through an interaction.</p>
 <p>The <a class="reference internal" href="config.html#var-config.voice_filename_format"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.voice_filename_format</span></code></a> variable allows you to customize
 the voice filename, making it possible to omit directories and extensions.</p>
 <section id="voice-tags">
-<h2>Voice Tags<a class="headerlink" href="#voice-tags" title="Permalink to this heading"> link</a></h2>
+<h2>Voice Tags<a class="headerlink" href="#voice-tags" title="Link to this heading"></a></h2>
 <p>Ren'Py includes a voice tag system that makes it possible to selectively
 mute or unmute a character's voice. To take advantage of this system,
 supply a <code class="docutils literal notranslate"><span class="pre">voice_tag</span></code> argument to each <a class="reference internal" href="dialogue.html#Character" title="Character"><code class="xref py py-func docutils literal notranslate"><span class="pre">Character()</span></code></a>, and use the
@@ -280,7 +280,7 @@ player to toggle the voice.</p>
 </div>
 </section>
 <section id="automatic-voice">
-<span id="id1"></span><h2>Automatic Voice<a class="headerlink" href="#automatic-voice" title="Permalink to this heading"> link</a></h2>
+<span id="id1"></span><h2>Automatic Voice<a class="headerlink" href="#automatic-voice" title="Link to this heading"></a></h2>
 <p>Ren'Py includes support for automatically determining the voice file to play,
 making it possible to play back voice without having to put voice statements
 before each line of dialogue.</p>
@@ -305,7 +305,7 @@ the corresponding line is shown, Ren'Py will look for the file
 play it.</p>
 </section>
 <section id="multilingual-voice">
-<h2>Multilingual Voice<a class="headerlink" href="#multilingual-voice" title="Permalink to this heading"> link</a></h2>
+<h2>Multilingual Voice<a class="headerlink" href="#multilingual-voice" title="Link to this heading"></a></h2>
 <p>To benefit from Ren'Py's translation system when dubbing a game in several
 languages, it's possible to make use of <a class="reference internal" href="translation.html#image-file-translation"><span class="std std-ref">Image and File Translations</span></a>.
 For a game whose original language is English and dubbed in French, and the
@@ -322,37 +322,37 @@ translation file starting from <code class="file docutils literal notranslate"><
 the original file starting from <code class="file docutils literal notranslate"><span class="pre">game/</span></code>.</p>
 </section>
 <section id="voice-functions">
-<h2>Voice Functions<a class="headerlink" href="#voice-functions" title="Permalink to this heading"> link</a></h2>
+<h2>Voice Functions<a class="headerlink" href="#voice-functions" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="get_voice_info">
-<span class="sig-name descname"><span class="pre">_get_voice_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#get_voice_info" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">_get_voice_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#get_voice_info" title="Link to this definition"></a></dt>
 <dd><p>Returns information about the voice being played by the current
 say statement. This function may only be called while a say statement
 is executing.</p>
 <p>The object returned has the following fields:</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="VoiceInfo.filename">
-<span class="sig-prename descclassname"><span class="pre">VoiceInfo.</span></span><span class="sig-name descname"><span class="pre">filename</span></span><a class="headerlink" href="#VoiceInfo.filename" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">VoiceInfo.</span></span><span class="sig-name descname"><span class="pre">filename</span></span><a class="headerlink" href="#VoiceInfo.filename" title="Link to this definition"></a></dt>
 <dd><p>The filename of the voice to be played, or None if no files
 should be played.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="VoiceInfo.auto_filename">
-<span class="sig-prename descclassname"><span class="pre">VoiceInfo.</span></span><span class="sig-name descname"><span class="pre">auto_filename</span></span><a class="headerlink" href="#VoiceInfo.auto_filename" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">VoiceInfo.</span></span><span class="sig-name descname"><span class="pre">auto_filename</span></span><a class="headerlink" href="#VoiceInfo.auto_filename" title="Link to this definition"></a></dt>
 <dd><p>The filename that Ren'Py looked in for automatic-voicing
 purposes, or None if one could not be found.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="VoiceInfo.tag">
-<span class="sig-prename descclassname"><span class="pre">VoiceInfo.</span></span><span class="sig-name descname"><span class="pre">tag</span></span><a class="headerlink" href="#VoiceInfo.tag" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">VoiceInfo.</span></span><span class="sig-name descname"><span class="pre">tag</span></span><a class="headerlink" href="#VoiceInfo.tag" title="Link to this definition"></a></dt>
 <dd><p>The voice_tag parameter supplied to the speaking Character.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="VoiceInfo.sustain">
-<span class="sig-prename descclassname"><span class="pre">VoiceInfo.</span></span><span class="sig-name descname"><span class="pre">sustain</span></span><a class="headerlink" href="#VoiceInfo.sustain" title="Permalink to this definition"> link</a></dt>
+<span class="sig-prename descclassname"><span class="pre">VoiceInfo.</span></span><span class="sig-name descname"><span class="pre">sustain</span></span><a class="headerlink" href="#VoiceInfo.sustain" title="Link to this definition"></a></dt>
 <dd><p>False if the file was played as part of this interaction. True if
 it was sustained from a previous interaction.</p>
 </dd></dl>
@@ -361,7 +361,7 @@ it was sustained from a previous interaction.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="id0">
-<span class="sig-name descname"><span class="pre">voice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">voice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
 <dd><p>Plays <cite>filename</cite> on the voice channel. The equivalent of the voice
 statement.</p>
 <dl>
@@ -382,28 +382,28 @@ voices of particular characters.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="voice_can_replay">
-<span class="sig-name descname"><span class="pre">voice_can_replay</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#voice_can_replay" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">voice_can_replay</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#voice_can_replay" title="Link to this definition"></a></dt>
 <dd><p>Returns true if it's possible to replay the current voice.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="voice_replay">
-<span class="sig-name descname"><span class="pre">voice_replay</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#voice_replay" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">voice_replay</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#voice_replay" title="Link to this definition"></a></dt>
 <dd><p>Replays the current voice, if possible.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="voice_sustain">
-<span class="sig-name descname"><span class="pre">voice_sustain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ignored</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#voice_sustain" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">voice_sustain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ignored</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#voice_sustain" title="Link to this definition"></a></dt>
 <dd><p>The equivalent of the voice sustain statement.</p>
 </dd></dl>
 
 </section>
 <section id="voice-actions">
-<span id="id2"></span><h2>Voice Actions<a class="headerlink" href="#voice-actions" title="Permalink to this heading"> link</a></h2>
+<span id="id2"></span><h2>Voice Actions<a class="headerlink" href="#voice-actions" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="PlayCharacterVoice">
-<span class="sig-name descname"><span class="pre">PlayCharacterVoice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">voice_tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PlayCharacterVoice" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">PlayCharacterVoice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">voice_tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PlayCharacterVoice" title="Link to this definition"></a></dt>
 <dd><p>This plays <cite>sample</cite> on the voice channel, as if said by a
 character with <cite>voice_tag</cite>.</p>
 <dl class="simple">
@@ -418,7 +418,7 @@ while the sample is playing.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="SetCharacterVolume">
-<span class="sig-name descname"><span class="pre">SetCharacterVolume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">voice_tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volume</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SetCharacterVolume" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">SetCharacterVolume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">voice_tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volume</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SetCharacterVolume" title="Link to this definition"></a></dt>
 <dd><p>This allows the volume of each characters to be adjusted.
 If <cite>volume</cite> is None, this returns a BarValue that
 controls the value of <cite>voice_tag</cite>. Otherwise, this set it to <cite>volume</cite>.</p>
@@ -428,7 +428,7 @@ fraction of the mixer volume for <cite>voice</cite> channel.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="SetVoiceMute">
-<span class="sig-name descname"><span class="pre">SetVoiceMute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">voice_tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mute</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SetVoiceMute" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">SetVoiceMute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">voice_tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mute</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SetVoiceMute" title="Link to this definition"></a></dt>
 <dd><p>If <cite>mute</cite> is true, mutes voices that are played with the given
 <cite>voice_tag</cite>. If <cite>mute</cite> is false, unmutes voices that are played
 with <cite>voice_tag</cite>.</p>
@@ -436,7 +436,7 @@ with <cite>voice_tag</cite>.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ToggleVoiceMute">
-<span class="sig-name descname"><span class="pre">ToggleVoiceMute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">voice_tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">invert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ToggleVoiceMute" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">ToggleVoiceMute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">voice_tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">invert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ToggleVoiceMute" title="Link to this definition"></a></dt>
 <dd><p>Toggles the muting of <cite>voice_tag</cite>. This is selected if
 the given voice tag is muted, unless <cite>invert</cite> is true,
 in which case it's selected if the voice is unmuted.</p>
@@ -444,7 +444,7 @@ in which case it's selected if the voice is unmuted.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="VoiceReplay">
-<span class="sig-name descname"><span class="pre">VoiceReplay</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VoiceReplay" title="Permalink to this definition"> link</a></dt>
+<span class="sig-name descname"><span class="pre">VoiceReplay</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VoiceReplay" title="Link to this definition"></a></dt>
 <dd><p>Replays the most recently played voice.</p>
 </dd></dl>
 

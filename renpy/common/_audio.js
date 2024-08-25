@@ -1,4 +1,4 @@
-﻿/* Copyright 2004-2023 Tom Rothamel <pytom@bishoujo.us>
+﻿/* Copyright 2004-2024 Tom Rothamel <pytom@bishoujo.us>
  *
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation files
@@ -26,6 +26,8 @@ const DEBUG_OUT = false;
 
 const USE_FRAME_CB = 'requestVideoFrameCallback' in HTMLVideoElement.prototype;
 
+renpyAudio = { };
+
 /**
  * A map from channel to channel object.
  */
@@ -33,6 +35,7 @@ let channels = { };
 let next_chan_id = 0;
 
 let context = new AudioContext();
+renpyAudio.context = context;
 
 /**
  * Given a channel number, gets the channel object, creating a new channel
@@ -127,8 +130,13 @@ let start_playing = (c) => {
         return;
     }
 
+    if (p.synchro_start) {
+        return;
+    }
+
     context.resume();
-    p.source.connect(c.destination);
+
+    renpyAudio.connectFilter(c.playing.filter, c.playing.source, c.destination);
 
     if (p.fadeout === null) {
         if (p.fadein > 0) {
@@ -156,7 +164,6 @@ let start_playing = (c) => {
     setValue(c.relative_volume.gain, p.relative_volume);
 
     p.started = context.currentTime;
-    p.started_once = true;
 };
 
 
@@ -209,7 +216,7 @@ let stop_playing = (c) => {
         } catch (e) {
         }
 
-        c.playing.source.disconnect();
+        renpyAudio.disconnectFilter(c.playing.filter, c.playing.source, c.destination);
     }
 
     c.playing = c.queued;
@@ -298,7 +305,6 @@ let video_start = (c) => {
     setValue(c.relative_volume.gain, p.relative_volume);
 
     p.started = c.video_el.currentTime;  // XXX Probably not ready yet
-    p.started_once = true;
 };
 
 let video_pause = (c) => {
@@ -366,10 +372,8 @@ let on_video_end = (c) => {
     video_start(c);
 };
 
-renpyAudio = { };
 
-
-renpyAudio.queue = (channel, file, name,  paused, fadein, tight, start, end, relative_volume) => {
+renpyAudio.queue = (channel, file, name, synchro_start, fadein, tight, start, end, relative_volume, afid) => {
 
     const c = get_channel(channel);
 
@@ -389,7 +393,8 @@ renpyAudio.queue = (channel, file, name,  paused, fadein, tight, start, end, rel
              fadein : fadein,  // TODO?
              fadeout: null,  // TODO?
              tight : tight,  // TODO?
-             started_once: false,
+             filter : renpyAudio.getFilter(afid),
+             synchro_start : synchro_start,
 
              period_stats: [0, 0],  // time sum, count
              fetch_stats: [0, 0],
@@ -402,11 +407,16 @@ renpyAudio.queue = (channel, file, name,  paused, fadein, tight, start, end, rel
         if (c.video_el === null) {
             c.video_el = document.createElement('video');
             c.video_el.style.display = 'none';
+            c.video_el.crossOrigin = 'anonymous';
             c.video_el.playsInline = true;  // For autoplay on Safari
             document.body.appendChild(c.video_el);
 
             c.video_el.addEventListener('loadedmetadata', function() {
                 c.video_size = [c.video_el.videoWidth, c.video_el.videoHeight];
+            });
+
+            c.video_el.addEventListener('error', function(e) {
+
             });
 
             c.media_source = context.createMediaElementSource(c.video_el);
@@ -440,7 +450,7 @@ renpyAudio.queue = (channel, file, name,  paused, fadein, tight, start, end, rel
 
         if (c.playing === null) {
             c.playing = q;
-            c.paused = paused;
+            c.paused = false;
         } else {
             c.queued = q;
         }
@@ -460,8 +470,9 @@ renpyAudio.queue = (channel, file, name,  paused, fadein, tight, start, end, rel
         fadein : fadein,
         fadeout: null,
         tight : tight,
-        started_once : false,
         file: file,
+        filter : renpyAudio.getFilter(afid),
+        synchro_start : synchro_start,
     };
 
     function reuseBuffer(c) {
@@ -476,7 +487,7 @@ renpyAudio.queue = (channel, file, name,  paused, fadein, tight, start, end, rel
 
     if (c.playing === null) {
         c.playing = q;
-        c.paused = paused;
+        c.paused = false;
     } else {
         c.queued = q;
         if (c.playing.file === file) {
@@ -628,21 +639,6 @@ renpyAudio.unpause = (channel) => {
 };
 
 
-renpyAudio.unpauseAllAtStart = () => {
-    for (let i of Object.entries(channels)) {
-        const c = i[1];
-        if (c.playing && ! c.playing.started_once && c.paused) {
-            c.paused = false;
-            if (c.video) {
-                video_start(c);
-            } else {
-                start_playing(c);
-            }
-        }
-    }
-};
-
-
 renpyAudio.get_pos = (channel) => {
 
     let c = get_channel(channel);
@@ -717,9 +713,56 @@ renpyAudio.set_pan = (channel, pan, delay) => {
     linearRampToValue(control, control.value, pan, delay);
 };
 
-renpyAudio.tts = (s, v) => {
-    console.log("tts:", s, "volume:", v);
+renpyAudio.replace_audio_filter = (channel, afid) => {
+    let c = get_channel(channel);
+    let filter = renpyAudio.getFilter(afid);
 
+    if (c.playing) {
+        renpyAudio.disconnectFilter(c.playing.filter, c.playing.source, c.destination);
+        c.playing.filter = filter;
+        renpyAudio.connectFilter(filter, c.playing.source, c.destination);
+    }
+
+    if (c.queued) {
+        c.queued.filter = filter;
+    }
+};
+
+
+renpyAudio.periodic = () => {
+    let ready = true;
+
+    for (let c of Object.values(channels)) {
+
+        if (c.playing) {
+            if (c.playing.synchro_start) {
+                if (c.buffer === null) {
+                    ready = false;
+                }
+
+                if (c.queued) {
+                    c.queued.synchro_start = false;
+                }
+            }
+        }
+
+        if (c.queued && c.queued.synchro_start) {
+            ready = false;
+        }
+    }
+
+    if (ready) {
+        for (let c of Object.values(channels)) {
+            if (c.playing && c.playing.synchro_start) {
+                c.playing.synchro_start = false;
+                start_playing(c);
+            }
+        }
+    }
+};
+
+
+renpyAudio.tts = (s, v) => {
     v = v || 1.0;
 
     let u = new SpeechSynthesisUtterance(s);
