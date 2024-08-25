@@ -7,9 +7,9 @@ update/
 # Compiled source
 *.pyc
 *.rpyb
+*.rpyc
 __pycache__/
 cache/
-renpy/common/**/*.rpyc
 renpy/common/**/*.rpymc
 
 # Log files
