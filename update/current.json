@@ -3556,5 +3556,27 @@
       "renpy.app/Contents/MacOS/zsyncmake",
       "renpy.sh"
     ]
+  },
+  "web": {
+    "directories": [
+      "web"
+    ],
+    "files": [
+      "web/hash.txt",
+      "web/index.html",
+      "web/index.html.symbols",
+      "web/manifest.json",
+      "web/renpy-pre.js",
+      "web/renpy.data",
+      "web/renpy.js",
+      "web/renpy.wasm",
+      "web/service-worker.js",
+      "web/web-icon.png",
+      "web/web-presplash.jpg"
+    ],
+    "xbit": [],
+    "version": "01670b5a30cf743c3cec185a8a10c8eea925213a581dd0522f57b24ae0a681ed",
+    "renpy_version": "8.3.0.24082114",
+    "pretty_version": "Ren'Py 8.3.0.24082114"
   }
 }
