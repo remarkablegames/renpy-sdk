@@ -108,6 +108,30 @@ enabled_events = {
     EVENTNAME,
     }
 
+input_events = {
+    pygame.KEYDOWN,
+    pygame.KEYUP,
+
+    pygame.TEXTEDITING,
+    pygame.TEXTINPUT,
+
+    pygame.MOUSEMOTION,
+    pygame.MOUSEBUTTONDOWN,
+    pygame.MOUSEBUTTONUP,
+    pygame.MOUSEWHEEL,
+
+    pygame.JOYAXISMOTION,
+    pygame.JOYHATMOTION,
+    pygame.JOYBALLMOTION,
+    pygame.JOYBUTTONDOWN,
+    pygame.JOYBUTTONUP,
+
+    pygame.CONTROLLERAXISMOTION,
+    pygame.CONTROLLERBUTTONDOWN,
+    pygame.CONTROLLERBUTTONUP,
+}
+
+
 # The number of msec between periodic events.
 PERIODIC_INTERVAL = 50
 
@@ -741,6 +765,9 @@ class Interface(object):
 
         # The time when the event was dispatched.
         self.event_time = 0
+
+        # The time of the last input event (mouse, keyboard, gamepad).
+        self.input_event_time = 0
 
         # The time we saw the last mouse event.
         self.mouse_event_time = None
@@ -2315,8 +2342,21 @@ class Interface(object):
 
                 if not self.did_autosave:
                     renpy.loadsave.autosave()
-                    renpy.persistent.check_update()
                     self.did_autosave = True
+
+                step += 1
+
+            # Step 6: Persistent data.
+            elif step == 6:
+
+                if not self.did_persistent:
+
+                    if renpy.emscripten:
+                        renpy.persistent.update()
+                    else:
+                        renpy.persistent.check_update()
+
+                    self.did_persistent = True
 
                 step += 1
 
@@ -2745,6 +2785,9 @@ class Interface(object):
 
             # We only want to do autosave once.
             self.did_autosave = False
+
+            # We only want to save persistent once.
+            self.did_persistent = False
 
             old_timeout_time = None
             old_redraw_time = None
@@ -3215,6 +3258,9 @@ class Interface(object):
                 renpy.display.behavior.skipping(ev)
 
                 self.event_time = end_time = get_time()
+
+                if ev.type in input_events:
+                    self.input_event_time = self.event_time
 
                 try:
 

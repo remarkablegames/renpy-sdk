@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=641c35a1"></script>
+        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.0 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -339,13 +339,16 @@ time:</p>
 </div>
 <p>Files placed into the audio namespace may automatically define variables that can
 be used like this.</p>
-<p id="synchro-start">When multiple play statements are run at the same time, the audio in each channel will start synchronized.
-Specifically, the audio will start:</p>
+<p id="synchro-start">Ren'Py supports a feature that can ensure that audio files start playing at the same time. This feature
+is enabled on looping audio channels (like music) by default, but can also be enabled by the
+<cite>synchro_start</cite> option to <a class="reference internal" href="#renpy.music.register_channel" title="renpy.music.register_channel"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.music.register_channel()</span></code></a> or <a class="reference internal" href="#renpy.music.play" title="renpy.music.play"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.music.play()</span></code></a>.</p>
+<p>When synchro start is enabled and multiple play statements are run at the same time, the audio in each channel
+will start synchronized. Specifically, the audio will start:</p>
 <ul class="simple">
 <li><p>When the audio files on every channel have been loaded and audio samples are available.</p></li>
 <li><p>When all all channels have been faded out.</p></li>
 </ul>
-<p>The play statement will delay starting new audio until these conditions have been met.</p>
+<p>New audio will start playing when both conditions are met.</p>
 </section>
 <section id="stop-statement">
 <h2>Stop Statement<a class="headerlink" href="#stop-statement" title="Link to this heading"></a></h2>
@@ -525,16 +528,19 @@ in the audio directory. For example:</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="AudioData">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AudioData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AudioData" title="Link to this definition"></a></dt>
-<dd><p>This class wraps a bytes object containing audio data, so it can be
-passed to the audio playback system. The audio data should be contained
+<dd><p>This class wraps a bytes object containing audio or video data, so it can be
+passed to the audio/video playback system. The audio or video data should be contained
 in some format Ren'Py supports. (For examples RIFF WAV format headers,
 not unadorned samples.)</p>
-<dl class="simple">
+<p>Despite the name, this can be used to represent video data as well as audio data.</p>
+<dl>
 <dt><cite>data</cite></dt><dd><p>A bytes object containing the audio file data.</p>
 </dd>
 <dt><cite>filename</cite></dt><dd><p>A synthetic filename associated with this data. It can be used to
 suggest the format <cite>data</cite> is in, and is reported as part of
 error messages.</p>
+<p>If this starts with angle bracket, it can supply properties to
+the audio, like from and to times.</p>
 </dd>
 </dl>
 <p>Once created, this can be used wherever an audio filename is allowed. For
@@ -636,10 +642,10 @@ it is not, or if the sound system isn't working.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.music.play">
-<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">play</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filenames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fadeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">synchro_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fadein</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">if_changed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_volume</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.play" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.music.</span></span><span class="sig-name descname"><span class="pre">play</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filenames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fadeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">synchro_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fadein</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">if_changed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_volume</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.music.play" title="Link to this definition"></a></dt>
 <dd><p>This stops the music currently playing on the numbered channel, dequeues
 any queued music, and begins playing the specified file or files.</p>
-<dl class="simple">
+<dl>
 <dt><cite>filenames</cite></dt><dd><p>This may be a single file, or a list of files to be played.</p>
 </dd>
 <dt><cite>channel</cite></dt><dd><p>The channel to play the sound on.</p>
@@ -655,6 +661,7 @@ the channel is paused when the music is played.</p>
 playing at exactly the same time. This may lead to a pause before the
 channels start playing. This is useful when playing two audio files that
 are meant to be synchronized with each other.</p>
+<p>If None, this takes its value from the channel.</p>
 </dd>
 <dt><cite>fadein</cite></dt><dd><p>This is the number of seconds to fade the music in for, on the
 first loop only.</p>
@@ -765,6 +772,10 @@ be True for audio, and False for movie playback.</p>
 <dt><cite>framedrop</cite></dt><dd><p>This controls what a video does when lagging. If true, frames will
 be dropped to keep up with realtime and the soundtrack. If false,
 Ren'Py will display frames late rather than dropping them.</p>
+</dd>
+<dt><cite>synchro_start</cite></dt><dd><p>Does this channel particpate in synchro start? Synchro start determines if
+the channel will start playing at the same time as other channels. If None,
+this defaults to <cite>loop</cite>.</p>
 </dd>
 </dl>
 </dd></dl>

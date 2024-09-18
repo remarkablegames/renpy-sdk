@@ -408,10 +408,11 @@ init -1500 python:
                     layout.yesno_screen(layout.OVERWRITE_SAVE, FileSave(self.name, False, False, self.page, cycle=self.cycle, slot=self.slot, action=self.action))
                     return
 
-            if self.cycle:
-                renpy.renpy.loadsave.cycle_saves(__slotname("", self.page, self.slot), config.quicksave_slots)
+            with renpy.savelocation.SyncfsLock():
+                if self.cycle:
+                    renpy.renpy.loadsave.cycle_saves(__slotname("", self.page, self.slot), config.quicksave_slots)
 
-            renpy.save(fn, extra_info=save_name)
+                renpy.save(fn, extra_info=save_name)
 
             renpy.restart_interaction()
 

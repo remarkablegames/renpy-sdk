@@ -91,10 +91,12 @@ class AudioData(str):
     """
     :doc: audio
 
-    This class wraps a bytes object containing audio data, so it can be
-    passed to the audio playback system. The audio data should be contained
+    This class wraps a bytes object containing audio or video data, so it can be
+    passed to the audio/video playback system. The audio or video data should be contained
     in some format Ren'Py supports. (For examples RIFF WAV format headers,
     not unadorned samples.)
+
+    Despite the name, this can be used to represent video data as well as audio data.
 
     `data`
         A bytes object containing the audio file data.
@@ -103,6 +105,9 @@ class AudioData(str):
         A synthetic filename associated with this data. It can be used to
         suggest the format `data` is in, and is reported as part of
         error messages.
+
+        If this starts with angle bracket, it can supply properties to
+        the audio, like from and to times.
 
     Once created, this can be used wherever an audio filename is allowed. For
     example::
@@ -226,7 +231,7 @@ class Channel(object):
     # The audio filter to use.
     audio_filter = None
 
-    def __init__(self, name, default_loop, stop_on_mute, tight, file_prefix, file_suffix, buffer_queue, movie, framedrop):
+    def __init__(self, name, default_loop, stop_on_mute, tight, file_prefix, file_suffix, buffer_queue, movie, framedrop, synchro_start):
 
         # The name assigned to this channel. This is used to look up
         # information about the channel in the MusicContext object.
@@ -262,6 +267,9 @@ class Channel(object):
         # If True, then this channel will participate in a synchro-start
         # once all channels are ready.
         self.synchro_start = False
+
+        # Does this participate in synchro start by default.
+        self.default_synchro_start = synchro_start
 
         # The time the music in this channel was last changed.
         self.last_changed = 0
@@ -392,8 +400,7 @@ class Channel(object):
             except Exception:
                 raise exception("expected channel, got {!r}.".format(v))
 
-        if isinstance(filename, AudioData):
-            return filename, 0, -1
+        original_filename = filename
 
         m = re.match(r'<(.*)>(.*)', filename)
         if not m:
@@ -433,6 +440,9 @@ class Channel(object):
 
         if (loop is not None) and looped:
             start = loop
+
+        if isinstance(original_filename, AudioData):
+            fn = AudioData(original_filename.data, fn)
 
         return fn, start, end
 
@@ -697,7 +707,10 @@ class Channel(object):
 
                 renpysound.replace_audio_filter(self.number, new_audio_filter)
 
-    def enqueue(self, filenames, loop=True, synchro_start=False, fadein=0, tight=None, loop_only=False, relative_volume=1.0):
+    def enqueue(self, filenames, loop=True, synchro_start=None, fadein=0, tight=None, loop_only=False, relative_volume=1.0):
+
+        if synchro_start is None:
+            synchro_start = self.default_synchro_start
 
         with lock:
 
@@ -838,7 +851,8 @@ def register_channel(name,
                      buffer_queue=True,
                      movie=False,
                      framedrop=True,
-                     force=False):
+                     force=False,
+                     synchro_start=None):
     """
     :doc: audio
     :args: (name, mixer, loop=None, stop_on_mute=True, tight=False, file_prefix="", file_suffix="", buffer_queue=True, movie=False, framedrop=True)
@@ -889,7 +903,15 @@ def register_channel(name,
         This controls what a video does when lagging. If true, frames will
         be dropped to keep up with realtime and the soundtrack. If false,
         Ren'Py will display frames late rather than dropping them.
+
+    `synchro_start`
+        Does this channel particpate in synchro start? Synchro start determines if
+        the channel will start playing at the same time as other channels. If None,
+        this defaults to `loop`.
     """
+
+    if synchro_start is None:
+        synchro_start = loop
 
     if name == "movie":
         movie = True
@@ -897,7 +919,7 @@ def register_channel(name,
     if not force and not renpy.game.context().init_phase and (" " not in name):
         raise Exception("Can't register channel outside of init phase.")
 
-    c = Channel(name, loop, stop_on_mute, tight, file_prefix, file_suffix, buffer_queue, movie=movie, framedrop=framedrop)
+    c = Channel(name, loop, stop_on_mute, tight, file_prefix, file_suffix, buffer_queue, movie=movie, framedrop=framedrop, synchro_start=synchro_start)
 
     c.mixer = mixer
 
@@ -1016,7 +1038,7 @@ def init():
             pcm_ok = True
         except Exception:
 
-            renpy.display.log.write("Sound init failed. Proceeding anyway.")
+            renpy.display.log.write("Audio and video init failed. Proceeding anyway.")
             renpy.display.log.exception()
 
             os.environ["SDL_AUDIODRIVER"] = "dummy"

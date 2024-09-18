@@ -15,7 +15,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			B7VbsCctRjgBrW5hsl5aKnry6LA=
+			WZAxbN6Nbb+ryLwaW5/clzOpBc0=
 			</data>
 			<key>requirement</key>
 			<string>identifier librenpython and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = XHTE5H7Z79</string>
@@ -42,7 +42,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			1wC0KbzlO1wvE2HeSDe1p/bsQgA=
+			/WA5/4L0omuuIlBpHbqYwolH3CU=
 			</data>
 			<key>requirement</key>
 			<string>identifier zsync and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = XHTE5H7Z79</string>
@@ -51,7 +51,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			uHgTmaO71btOquBIW4bAYj4T6Vs=
+			KnjkrfTx2GIL0QlZGn9Um1KJrko=
 			</data>
 			<key>requirement</key>
 			<string>identifier zsyncmake and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = XHTE5H7Z79</string>

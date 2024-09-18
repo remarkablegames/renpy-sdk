@@ -1,7 +1,7 @@
 {
   "sdk": {
-    "version": "4209f5f8a6f0433375a19b6e34c706244fd1f15298ef858aeb8f38ee124d6bd7",
-    "base_name": "renpy-8.3.0",
+    "version": "783873c63d409670f8384c64973a279e33420c673d128c31ff34ddce43bf1ff8",
+    "base_name": "renpy-8.3.2",
     "files": [
       "LICENSE.txt",
       "doc/3dstage.html",
@@ -2536,8 +2536,6 @@
       "the_question/android-icon_background.png",
       "the_question/android-icon_foreground.png",
       "the_question/android.json",
-      "the_question/android.keystore",
-      "the_question/bundle.keystore",
       "the_question/game/cache/bytecode-39.rpyb",
       "the_question/game/cache/py3analysis.rpyb",
       "the_question/game/cache/pyanalysis.rpyb",
@@ -3575,8 +3573,8 @@
       "web/web-presplash.jpg"
     ],
     "xbit": [],
-    "version": "01670b5a30cf743c3cec185a8a10c8eea925213a581dd0522f57b24ae0a681ed",
-    "renpy_version": "8.3.0.24082114",
-    "pretty_version": "Ren'Py 8.3.0.24082114"
+    "version": "853b033227693ed3687e362307de1f226fc5e03b471767f386f4b0cd98cbd5a1",
+    "renpy_version": "8.3.2.24090902",
+    "pretty_version": "Ren'Py 8.3.2.24090902"
   }
 }
