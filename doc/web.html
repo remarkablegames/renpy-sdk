@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -154,12 +154,11 @@
 <li class="toctree-l2"><a class="reference internal" href="#progressive-downloading">Progressive Downloading</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#audio-and-video">Audio and Video</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#javascript">Javascript</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#emscripten.run_script"><code class="docutils literal notranslate"><span class="pre">emscripten.run_script()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emscripten.run_script_int"><code class="docutils literal notranslate"><span class="pre">emscripten.run_script_int()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emscripten.run_script_string"><code class="docutils literal notranslate"><span class="pre">emscripten.run_script_string()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.emscripten.run_script"><code class="docutils literal notranslate"><span class="pre">renpy.emscripten.run_script()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.emscripten.run_script_int"><code class="docutils literal notranslate"><span class="pre">renpy.emscripten.run_script_int()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.emscripten.run_script_string"><code class="docutils literal notranslate"><span class="pre">renpy.emscripten.run_script_string()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#bytecode-cache">Bytecode Cache</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#hamburger-menu">Hamburger Menu</a></li>
 </ul>
 </li>
@@ -335,7 +334,7 @@ in the base directory of your project. This image must have a minimum resolution
 If no custom image is given, the default Ren'Py icon is used.</p>
 </section>
 <section id="progressive-downloading">
-<h2>Progressive Downloading<a class="headerlink" href="#progressive-downloading" title="Link to this heading"></a></h2>
+<span id="id1"></span><h2>Progressive Downloading<a class="headerlink" href="#progressive-downloading" title="Link to this heading"></a></h2>
 <p>Ren'Py supports a progressive download feature, which is configured by
 editing the file named <code class="docutils literal notranslate"><span class="pre">progressive_download.txt</span></code> in the base directory
 of your project. If this file doesn't exist, it will be created when you
@@ -399,7 +398,7 @@ to play the movie from. It can include directories in it, so
 <p>This is useful if you want to host the movies on a different server
 than the rest of your game.</p>
 </dd>
-<dt><a class="reference internal" href="config.html#var-config.web_video_prompt"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.web_video_prompt</span></code></a></dt><dd><p>On Mobile Safari on iOS, by default, the player will need to click to play
+<dt><code class="xref std std-var docutils literal notranslate"><span class="pre">config.web_video_prompt</span></code></dt><dd><p>On Mobile Safari on iOS, by default, the player will need to click to play
 a movie with sound. This variable gives the message that's used to prompt
 players to click.</p>
 </dd>
@@ -413,24 +412,24 @@ and then <a class="reference external" href="https://share.renpy.org/oa4_launch.
 <section id="javascript">
 <h2>Javascript<a class="headerlink" href="#javascript" title="Link to this heading"></a></h2>
 <p>Ren'Py can run Javascript, using three functions in the <code class="docutils literal notranslate"><span class="pre">emscripten</span></code>
-module. This module is only present when running inside the web browser,
-which can be tested using <a class="reference internal" href="other.html#var-renpy.emscripten"><code class="xref std std-var docutils literal notranslate"><span class="pre">renpy.emscripten</span></code></a> - though you still need
-to import the module before using it.</p>
+module. This module is available as <a class="reference internal" href="other.html#var-renpy.emscripten"><code class="xref std std-var docutils literal notranslate"><span class="pre">renpy.emscripten</span></code></a> when
+running on the web platform. When not running on the web platform,
+renpy.emscripten is False.</p>
 <dl class="py function">
-<dt class="sig sig-object py" id="emscripten.run_script">
-<span class="sig-prename descclassname"><span class="pre">emscripten.</span></span><span class="sig-name descname"><span class="pre">run_script</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">script</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emscripten.run_script" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="renpy.emscripten.run_script">
+<span class="sig-prename descclassname"><span class="pre">renpy.emscripten.</span></span><span class="sig-name descname"><span class="pre">run_script</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">script</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.emscripten.run_script" title="Link to this definition"></a></dt>
 <dd><p>Runs the given Javascript script. This does not return a result.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="emscripten.run_script_int">
-<span class="sig-prename descclassname"><span class="pre">emscripten.</span></span><span class="sig-name descname"><span class="pre">run_script_int</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">script</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emscripten.run_script_int" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="renpy.emscripten.run_script_int">
+<span class="sig-prename descclassname"><span class="pre">renpy.emscripten.</span></span><span class="sig-name descname"><span class="pre">run_script_int</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">script</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.emscripten.run_script_int" title="Link to this definition"></a></dt>
 <dd><p>Runs the given Javascript script, and returns its result as an integer.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="emscripten.run_script_string">
-<span class="sig-prename descclassname"><span class="pre">emscripten.</span></span><span class="sig-name descname"><span class="pre">run_script_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">script</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emscripten.run_script_string" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="renpy.emscripten.run_script_string">
+<span class="sig-prename descclassname"><span class="pre">renpy.emscripten.</span></span><span class="sig-name descname"><span class="pre">run_script_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">script</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.emscripten.run_script_string" title="Link to this definition"></a></dt>
 <dd><p>Runs the given Javascript script, and returns its result as a string.</p>
 </dd></dl>
 
@@ -440,19 +439,6 @@ may be replaced when Ren'Py is updated.</p>
 <p>Javascript can also call into Ren'Py using the window.renpy_exc, window.renpy_get,
 and window.renpy_set functions. For the documentation of these functions, please
 read <code class="docutils literal notranslate"><span class="pre">web/renpy-pre.js</span></code>.</p>
-</section>
-<section id="bytecode-cache">
-<h2>Bytecode Cache<a class="headerlink" href="#bytecode-cache" title="Link to this heading"></a></h2>
-<p>In Ren'Py 8.1, loading may take longer than required, as Ren'Py may need
-to compile the python into bytecode after downloading it. To avoid this, retrieve
-the bytecode cache by:</p>
-<ul class="simple">
-<li><p>Opening the game in the browser. Hit f12 while the presplash is loading
-to open the javascript console.</p></li>
-<li><p>In the javascript console, type <code class="docutils literal notranslate"><span class="pre">downloadBytecode()</span></code>. This will cause
-your browser to download <code class="docutils literal notranslate"><span class="pre">bytecode-311.rpyb</span></code>.</p></li>
-<li><p>Place this in the <code class="docutils literal notranslate"><span class="pre">game/cache</span></code> directory of your game, and rebuild.</p></li>
-</ul>
 </section>
 <section id="hamburger-menu">
 <h2>Hamburger Menu<a class="headerlink" href="#hamburger-menu" title="Link to this heading"></a></h2>

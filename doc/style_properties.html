@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -792,6 +792,15 @@ font.</p>
 </dd></dl>
 
 <dl class="std style-property">
+<dt class="sig sig-object std" id="style-property-font_features">
+<span class="sig-name descname"><span class="pre">font_features</span></span> <span class="pre">-</span>&#160; <span class="pre">dict</span> <span class="pre">or</span> <span class="pre">None</span><a class="headerlink" href="#style-property-font_features" title="Link to this definition"></a></dt>
+<dd><p>If not None, this should be a dictionary mapping OpenType layout features to values.
+The keys of the dictionary should be the four-character OpenType feature tags, and
+the values should be booleans.</p>
+<p>A list of layout features can be found <a class="reference external" href="https://learn.microsoft.com/en-us/typography/opentype/spec/featuretags">here</a>.</p>
+</dd></dl>
+
+<dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-hinting">
 <span class="sig-name descname"><span class="pre">hinting</span></span> <span class="pre">-</span>&#160; <span class="pre">str</span><a class="headerlink" href="#style-property-hinting" title="Link to this definition"></a></dt>
 <dd><p>Controls how the font will be hinted. This should be one of the following
@@ -1004,9 +1013,37 @@ results depending on the size of the game window.</p>
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-prefer_emoji">
 <span class="sig-name descname"><span class="pre">prefer_emoji</span></span> <span class="pre">-</span>&#160; <span class="pre">boolean</span><a class="headerlink" href="#style-property-prefer_emoji" title="Link to this definition"></a></dt>
-<dd><p>Some unicode characters have both Emoji and non-Emjoji presentations. This
+<dd><p>Some unicode characters have both Emoji and non-Emoji presentations. This
 style property chooses if such characters are given the Emoji presentation
 or not.</p>
+</dd></dl>
+
+<dl class="std style-property">
+<dt class="sig sig-object std" id="style-property-reading_order">
+<span class="sig-name descname"><span class="pre">reading_order</span></span> <span class="pre">-</span>&#160; <span class="pre">string</span><a class="headerlink" href="#style-property-reading_order" title="Link to this definition"></a></dt>
+<dd><p>This controls the how text is presented for reading when RTL support has
+been enabled. The main use of this is to influence directionally neutral
+lines, such as those made up purely of punctuation.</p>
+<p>This has no effect unless <code class="xref std std-var docutils literal notranslate"><span class="pre">config.rtl</span></code> is set to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">None</span></code></dt><dd><p>The default, the reading order will be determined based on the text.
+Most neutral lines will be treated as left-to-right.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">&quot;ltr&quot;</span></code></dt><dd><p>Forces left-to-right presentation, even when a line is predominantly
+made up of runs of RTL characters.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">&quot;rtl&quot;</span></code></dt><dd><p>Forces right-to-left presentation, even when a line is predominantly
+made up of runs of LTR characters.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">&quot;wltr&quot;</span></code></dt><dd><p>Prefers left-to-right presentation, but will switch to right-to-left
+presentation if it makes more sense for the current text. Useful for
+impacting punctuation-only lines such as <code class="docutils literal notranslate"><span class="pre">&quot;..!&quot;</span></code>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">&quot;wrtl&quot;</span></code></dt><dd><p>Prefers right-to-left presentation, but will switch to left-to-right
+presentation if it makes more sense for the current text. Useful for
+impacting punctuation-only lines such as <code class="docutils literal notranslate"><span class="pre">&quot;..!&quot;</span></code>.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="std style-property">
@@ -1405,10 +1442,13 @@ between the sides of the bar.</p>
 
 <dl class="std style-property">
 <dt class="sig sig-object std" id="style-property-thumb_offset">
-<span class="sig-name descname"><span class="pre">thumb_offset</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span><a class="headerlink" href="#style-property-thumb_offset" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">thumb_offset</span></span> <span class="pre">-</span>&#160; <span class="pre">int</span> <span class="pre">or</span> <span class="pre">tuple</span> <span class="pre">of</span> <span class="pre">(int,</span> <span class="pre">int)</span><a class="headerlink" href="#style-property-thumb_offset" title="Link to this definition"></a></dt>
 <dd><p>The amount that by which the thumb overlaps the bars, in
 pixels. To have the left and right bars continue unbroken, set
-this to half the width of the thumb in pixels.</p>
+this to half the width of the thumb in pixels. This may also be
+a tuple, in which case the first number is used for the left/top
+thumb offset, and the second number is used for the right/bottom
+thumb offset.</p>
 </dd></dl>
 
 <dl class="std style-property">

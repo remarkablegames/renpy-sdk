@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -83,9 +83,11 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Live2D Cubism</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#installing-live2d">Installing Live2D</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#defining-animations">Defining Animations</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Live2D"><code class="docutils literal notranslate"><span class="pre">Live2D()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#blend_parameter"><code class="docutils literal notranslate"><span class="pre">blend_parameter()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#blend_opacity"><code class="docutils literal notranslate"><span class="pre">blend_opacity()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Live2D"><code class="docutils literal notranslate"><span class="pre">Live2D()</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#blend_parameter"><code class="docutils literal notranslate"><span class="pre">blend_parameter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#blend_opacity"><code class="docutils literal notranslate"><span class="pre">blend_opacity()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#using-animations">Using Animations</a></li>
@@ -297,13 +299,13 @@ alias.</p>
 should not be enabled, and None to use the value of <a class="reference internal" href="#var-_live2d_fade"><code class="xref std std-var docutils literal notranslate"><span class="pre">_live2d_fade</span></code></a>.</p>
 </dd>
 <dt><cite>nonexclusive</cite></dt><dd><p>If not None, this should be a list of names of nonexclusive expressions.
-Expressions default to being exlcusive, with only one beign shown at
+Expressions default to being exclusive, with only one being shown at
 a time. If listed here, any number of nonexclusive expressions can be
 shown, in addition to one exclusive expression.</p>
 </dd>
 <dt><cite>seamless</cite></dt><dd><p>This determines if seamless looping should be used. Seamless looping
 avoids fading between loops of a single motion. This may be True to
-enable seamless looping all the time, False to dispable it all the
+enable seamless looping all the time, False to disable it all the
 time, or a set of motions to be looped.</p>
 </dd>
 <dt><cite>default_fade</cite></dt><dd><p>The default amount of time that is spending fading into our out of
@@ -319,7 +321,7 @@ that at most one attribute corresponding to an expression is given.</p>
 </dd>
 <dt><cite>attribute_filter</cite></dt><dd><p>If not None, this is a function that takes a tuple of attributes,
 and returns a second tuple of attributes. This is usually used to
-filter out nonexclusice attributes that conflict with each other. The attributes
+filter out nonexclusive attributes that conflict with each other. The attributes
 are ordered such that more recently requested attributes come first,
 meaning that in the case of a conflict, the first attribute should
 win.</p>

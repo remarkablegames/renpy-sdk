@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -143,8 +143,15 @@
 <li class="toctree-l2"><a class="reference internal" href="#shader-part-local-variables">Shader Part Local Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#transforms-and-model-based-rendering">Transforms and Model-Based Rendering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#blend-functions">Blend Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#uniforms-and-attributes">Uniforms and Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#float-sample-and-vector-uniforms">Float, Sample, and Vector Uniforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#matrix-uniforms">Matrix Uniforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#attributes">Attributes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gl-properties">GL Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gltfmodel-displayable">GLTFModel Displayable</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#GLTFModel"><code class="docutils literal notranslate"><span class="pre">GLTFModel</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#limitations">Limitations</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#model-displayable">Model Displayable</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#Model"><code class="docutils literal notranslate"><span class="pre">Model</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#Model.child"><code class="docutils literal notranslate"><span class="pre">Model.child()</span></code></a></li>
@@ -347,7 +354,7 @@ to be removed.)</p>
 <p>Ren'Py then takes the list of shader parts, and retrieves lists of variables,
 functions, vertex shader parts, and fragment shader parts. These are, in turn,
 used to generate the source code for shaders, with the parts of the vertex and
-fragement shaders being included in low-number to high-number priority order.</p>
+fragment shaders being included in low-number to high-number priority order.</p>
 <p>This means that any variable created by one of the shaders will be accessible
 by every other fragment from any other shader in the list of shader parts.
 There is no scope like in Python functions to protect interference between
@@ -403,8 +410,19 @@ with lower priority numbers inserted before higher priority numbers.</p>
 <li><p>vec2 (a tuple of 2 floats)</p></li>
 <li><p>vec3 (a tuple of 3 floats)</p></li>
 <li><p>vec4 (a tuple of 4 floats)</p></li>
+<li><p>int (a Python integer)</p></li>
+<li><p>ivec2 (a tuple of 2 integers)</p></li>
+<li><p>ivec3 (a tuple of 3 integers)</p></li>
+<li><p>ivec4 (a tuple of 4 integers)</p></li>
+<li><p>bool (a Python boolean)</p></li>
+<li><p>bvec2 (a tuple of 2 booleans)</p></li>
+<li><p>bvec3 (a tuple of 3 booleans)</p></li>
+<li><p>bvec4 (a tuple of 4 booleans)</p></li>
+<li><p>type[n] (an array of [n] elements of [type] (any of the types above) (for instance, int[5] would be an array of 5 integers))</p></li>
+<li><p>mat2 (a <a class="reference internal" href="matrix.html#Matrix" title="Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a>)</p></li>
+<li><p>mat3 (a <a class="reference internal" href="matrix.html#Matrix" title="Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a>)</p></li>
 <li><p>mat4 (a <a class="reference internal" href="matrix.html#Matrix" title="Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a>)</p></li>
-<li><p>sampler2D (supplied by Ren'Py)</p></li>
+<li><p>sampler2D (a Displayabe, including strings that give Displayables, or a Render)</p></li>
 </ul>
 <p>Uniform variables should begin with u_, attributes with a_, and varying
 variables with v_. Names starting with u_renpy_, a_renpy, and v_renpy
@@ -443,6 +461,14 @@ each model it is used to render:</p>
 will be accessible by any and all other shaders applied from the same list. This
 can be useful when having optional parts in a given shader system, but it can also
 lead to name collisions when using two independent shaders.</p>
+<p><strong>GLSL Version.</strong>
+The version of GLSL supported depends on platform, but the most restrictive
+are mobile and web platforms, which use GLSL ES 1.00. Ren'Py declares variables
+to have highp precision, which supports floating point numbers in the range
+2<sup>-62</sup> to 2<sup>62</sup>. Non-zero floating point numbers should have a
+magnitude betwee 2<sup>-62</sup> and 2<sup>62</sup>, and integers should be in the range
+range -2<sup>16</sup> to 2<sup>16</sup>.  Actual hardware often supports a larger range,
+but this isn't guaranteed.</p>
 <p>There is a variable that can help in debugging custom shaders:</p>
 <dl class="std var">
 <dt class="sig sig-object std" id="var-config.log_gl_shaders">
@@ -486,6 +512,8 @@ child.</p></li>
 <li><p>The child of this transform will be rendered to a texture.</p></li>
 <li><p>The renpy.texture shader will be added.</p></li>
 </ul>
+<p>By default, the texture used by the mesh will not be mipmapped. If
+mipmaps are desired, <code class="xref std std-tpref docutils literal notranslate"><span class="pre">gl_mipmap</span></code> should be set to True.</p>
 </dd></dl>
 
 <dl class="std transform-property">
@@ -565,7 +593,7 @@ available as gl_color_mask.</p>
 <dt class="sig sig-object std" id="var-config.gl_blend_func">
 <span class="pre">define</span> <span class="sig-name descname"><span class="pre">config.gl_blend_func</span></span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">...</span> <span class="pre">}</span><a class="headerlink" href="#var-config.gl_blend_func" title="Link to this definition"></a></dt>
 <dd><p>A dictionary used to map a blend mode name to a blend function. The
-blend modes are supplied to the <span class="xref std std-ref">gl_blend_func</span> property, given below.</p>
+blend modes are supplied to the <a class="reference internal" href="#gl-blend-func"><span class="std std-ref">gl_blend_func</span></a> property, given below.</p>
 </dd></dl>
 
 <p>The default blend modes are:</p>
@@ -581,11 +609,13 @@ is not opaque. In the GPU, the color (r, g, b, a) is represented as (r * a, g * 
 uses these premultiplied colors. This may be a different result that you get for these blend modes in a paint program,
 when what is drawn is not fully opaque.</p>
 </section>
-<section id="uniforms-and-attributes">
-<span id="model-uniforms"></span><h2>Uniforms and Attributes<a class="headerlink" href="#uniforms-and-attributes" title="Link to this heading"></a></h2>
-<p>The following uniforms are made available to all Models.</p>
+<section id="float-sample-and-vector-uniforms">
+<span id="model-uniforms"></span><h2>Float, Sample, and Vector Uniforms<a class="headerlink" href="#float-sample-and-vector-uniforms" title="Link to this heading"></a></h2>
+<p>The following uniforms are made available to all models.</p>
 <dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">vec2</span> <span class="pre">u_model_size</span></code></dt><dd><p>The width and height of the model.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">vec2</span> <span class="pre">u_model_size</span></code></dt><dd><p>The width and height of the model, as supplied to Ren'Py. This
+is only available for 2D models that supply a size, and is (0, 0)
+for 3d models.</p>
 </dd>
 </dl>
 <dl class="simple" id="u-lod-bias">
@@ -593,8 +623,6 @@ when what is drawn is not fully opaque.</p>
 set in a Transform. The default value, taken from <a class="reference internal" href="config.html#var-config.gl_lod_bias"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.gl_lod_bias</span></code></a>
 and defaulting to -0.5, biases Ren'Py to always pick the next bigger
 level and scale it down.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">mat4</span> <span class="pre">u_transform</span></code></dt><dd><p>The transform used to project virtual pixels to the OpenGL viewport.</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">float</span> <span class="pre">u_time</span></code></dt><dd><p>The time of the frame. The epoch is undefined, so it's best to treat
 this as a number that increases by one second a second. The time is
@@ -631,7 +659,55 @@ image file. After a render to texture, it's the number of drawable pixels
 the rendered texture covered.</p>
 </dd>
 </dl>
-<p>The following attributes are available to all models:</p>
+<p>If a sampler uniform is available, then suffixing it with <code class="docutils literal notranslate"><span class="pre">__res</span></code> will give a vec2
+containing the underlying texture size. For example, <code class="docutils literal notranslate"><span class="pre">u_markup__res</span></code> will give the size of the
+<code class="docutils literal notranslate"><span class="pre">u_markup</span></code> texture.</p>
+<p>If a vec4 uniform is available, then suffixing it with <code class="docutils literal notranslate"><span class="pre">__premul</span></code> will give a vec4
+containing the premultiplied color. For example, <code class="docutils literal notranslate"><span class="pre">u_color__premul</span></code> will give a vec4
+where the red, green, and blue channels are multiplied by the alpha channel.</p>
+</section>
+<section id="matrix-uniforms">
+<h2>Matrix Uniforms<a class="headerlink" href="#matrix-uniforms" title="Link to this heading"></a></h2>
+<p>The following uniforms are made available to all models. This assumes that only one transform with the
+<a class="reference internal" href="3dstage.html#transform-property-perspective"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">perspective</span></code></a> property is used to render a model. When multiple transforms with the <a class="reference internal" href="3dstage.html#transform-property-perspective"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">perspective</span></code></a>
+are used, the innermost transformation with perspective set defines the world and view spaces.</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">mat4</span> <span class="pre">u_projection</span></code></dt><dd><p>This is a matrix that transforms coordinates from view space to the OpenGL viewport.
+This is sent by Ren'Py, and is updated by transforms with the <a class="reference internal" href="3dstage.html#transform-property-perspective"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">perspective</span></code></a> property
+to encapsulate the effects of that property.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">mat4</span> <span class="pre">u_view</span></code></dt><dd><p>This is a matrix that transforms vertex coordinates from the world space to the view space. This
+defaults to the identity matrix, but can be set by transforms with the <a class="reference internal" href="3dstage.html#transform-property-perspective"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">perspective</span></code></a> property,
+in which case the effects of positioning, rotation, and scaling are encapsulated in this matrix.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">mat4</span> <span class="pre">u_model</span></code></dt><dd><p>This is a matrix that transforms vertex coordinates from the model space to the world space.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">mat4</span> <span class="pre">u_projectionview</span></code></dt><dd><p>This matrix contains <code class="docutils literal notranslate"><span class="pre">u_projection</span> <span class="pre">*</span> <span class="pre">u_view</span></code>. It exists to minimize the number of uniforms that need
+to be sent to the GPU, and the amount of work that needs to be done in the shader.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">mat4</span> <span class="pre">u_transform</span></code></dt><dd><p>This is the same as <code class="docutils literal notranslate"><span class="pre">u_projectionview</span> <span class="pre">*</span> <span class="pre">u_model</span></code>. It's the matrix that transforms vertex coordinates
+directly to the OpenGL viewport. It exists to minimize the number of uniforms that need to be sent to the GPU,
+the amount of work that needs to be done in the shader, and for compatibility with older versions of Ren'Py.</p>
+</dd>
+</dl>
+<p>In addition to these methods, Ren'Py can synthesize matrices with certain functions applied when suffixes are
+appended to the matrix</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">__inverse</span></code></dt><dd><p>When appended to a matrix, this returns the inverse of the matrix. For example, <code class="docutils literal notranslate"><span class="pre">u_projection__inverse</span></code>
+is the inverse of the projection matrix.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">__transpose</span></code></dt><dd><p>When appended to a matrix, this returns the transpose of the matrix. For example, <code class="docutils literal notranslate"><span class="pre">u_view__transpose</span></code>
+is the transpose of the view matrix.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">__inverse_transpose</span></code></dt><dd><p>When appended to a matrix, this returns the inverse of the transpose of the matrix. For example,
+<code class="docutils literal notranslate"><span class="pre">u_model__inverse_transpose</span></code> is the inverse of the transpose of the model matrix. This is useful for
+transforming normals.</p>
+</dd>
+</dl>
+</section>
+<section id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Link to this heading"></a></h2>
+<p>The following attribute is available to all models:</p>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">vec4</span> <span class="pre">a_position</span></code></dt><dd><p>The position of the vertex being rendered. This is in virtual pixels, relative to the upper
 left corner of the texture.</p>
@@ -640,6 +716,18 @@ left corner of the texture.</p>
 <p>If textures are available, so is the following attribute:</p>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">vec2</span> <span class="pre">a_tex_coord</span></code></dt><dd><p>The coordinate that this vertex projects to inside the textures.</p>
+</dd>
+</dl>
+<p>If normals are available, so is the following attribute:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">vec3</span> <span class="pre">a_normal</span></code></dt><dd><p>The normal of the vertex being rendered.</p>
+</dd>
+</dl>
+<p>If tangents are available, so are the following attributes:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">vec3</span> <span class="pre">a_tangent</span></code></dt><dd><p>The tangent of the vertex being rendered.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">vec3</span> <span class="pre">a_bitangent</span></code></dt><dd><p>The bitangent of the vertex being rendered.</p>
 </dd>
 </dl>
 </section>
@@ -672,6 +760,12 @@ use this.</p>
 channels of a pixel (red, green, blue, and alpha). If a given channel is
 True, the draw operation will write to that pixel. Otherwise, it will
 not.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">gl_cull_face</span></code></dt><dd><p>If not None, this enables face culling, which is the process of removing
+triangles that are facing away from the camera. To do this, we need to
+know which face is the front face, and which is the back face. The front face
+is determined using the winding order of the vertices, which is one of &quot;cw&quot; (clockwise) or &quot;ccw&quot; (counter-clockwise).
+The values are done in the Ren'Py coordinate system (with +Y down), which is the opposite of the OpenGL coordinate system.</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">gl_depth</span></code></dt><dd><p>If True, this will clear the depth buffer, and then enable depth
 rendering for this displayable and the children of this displayable.</p>
@@ -720,10 +814,121 @@ it's possibe to supply &quot;texture_wrap_tex4&quot; or &quot;texture_wrap_myuni
 </dd>
 </dl>
 </section>
+<section id="gltfmodel-displayable">
+<h2>GLTFModel Displayable<a class="headerlink" href="#gltfmodel-displayable" title="Link to this heading"></a></h2>
+<p>The GLTFModel displayble allow you to load 3D models in the GLTF file format. This is what you should use
+if you have a 3D model you created in another program and want to display in Ren'Py.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="GLTFModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GLTFModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'str'</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shader</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'str</span> <span class="pre">|</span> <span class="pre">tuple[str]'</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tangents</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'bool'</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zoom</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'float'</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">report</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'bool'</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GLTFModel" title="Link to this definition"></a></dt>
+<dd><p>A displayable that loads a 3D Model in the GLTF format. This format is supported by many 3D tools. Ren'Py
+uses the <a class="reference external" href="https://github.com/assimp/assimp">Open Asset Importer (assimp) library</a> to load GLTF models.</p>
+<p>For the purposes of Ren'Py's 2D layout system, a GLTFModel has zero width and height. By default, the model
+is loaded at the size found in the file that contains it. If required, the <cite>zoom</cite> may be used to scale it.</p>
+<p>When multiple models are in use, the <code class="docutils literal notranslate"><span class="pre">gl_depth</span> <span class="pre">True</span></code> property should be supplied to the camera, so that
+depth testing is enabled. Ren'Py does not currently perform any culling of the model, so it's
+important to use models simple enough to be completely rendered.</p>
+<dl class="simple">
+<dt><cite>filename</cite></dt><dd><p>The filename of the model to display.</p>
+</dd>
+<dt><cite>shader</cite></dt><dd><p>Either a string or tuple of strings, giving the name of the shader to use.</p>
+</dd>
+<dt><cite>tangents</cite></dt><dd><p>If True, tangents will be included in the mesh.</p>
+</dd>
+<dt><cite>zoom</cite></dt><dd><p>A zoom factor that will be applied to the model. Many models naturally use the range -1 to 1, and so this
+may need to be quite large to make the model visible.</p>
+</dd>
+<dt><cite>report</cite></dt><dd><p>If true, a report of the model will be printed to the log. This includes the uniforms that are used by
+the model.</p>
+</dd>
+</dl>
+<p>A displayable that loads a 3D Model in the GLTF format. This format is supported by many 3D tools. Ren'Py
+uses the <a class="reference external" href="https://github.com/assimp/assimp">Open Asset Importer (assimp) library</a> to load GLTF models.</p>
+<p>For the purposes of Ren'Py's 2D layout system, a GLTFModel has zero width and height. By default, the model
+is loaded at the size found in the file that contains it. If required, the <cite>zoom</cite> may be used to scale it.</p>
+<p>When multiple models are in use, the <code class="docutils literal notranslate"><span class="pre">gl_depth</span> <span class="pre">True</span></code> property should be supplied to the camera, so that
+depth testing is enabled. Ren'Py does not currently perform any culling of the model, so it's
+important to use models simple enough to be completely rendered.</p>
+<dl class="simple">
+<dt><cite>filename</cite></dt><dd><p>The filename of the model to display.</p>
+</dd>
+<dt><cite>shader</cite></dt><dd><p>Either a string or tuple of strings, giving the name of the shader to use.</p>
+</dd>
+<dt><cite>tangents</cite></dt><dd><p>If True, tangents will be included in the mesh.</p>
+</dd>
+<dt><cite>zoom</cite></dt><dd><p>A zoom factor that will be applied to the model. Many models naturally use the range -1 to 1, and so this
+may need to be quite large to make the model visible.</p>
+</dd>
+<dt><cite>report</cite></dt><dd><p>If true, a report of the model will be printed to the log. This includes the uniforms that are used by
+the model.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Some things we noticed:</p>
+<ul class="simple">
+<li><p>Some models are very small, and need to be zoomed by 100x or 1000x to be useful.</p></li>
+<li><p>The uniforms generating by each model can vary.</p></li>
+</ul>
+<p>We recommend creating GLTF models with report=True, and then looking at log.txt to see
+the size and  what's available. It's then possible to scale the model and to
+create a suitable shader.</p>
+<section id="limitations">
+<h3>Limitations<a class="headerlink" href="#limitations" title="Link to this heading"></a></h3>
+<p>GLTFModel currently does not include a default shader, so you must define and include a shader.
+Here is one possible shader that can be used with GLTFModel:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">init</span> <span class="k">python</span><span class="p">:</span>
+
+    <span class="n">renpy</span><span class="o">.</span><span class="n">register_shader</span><span class="p">(</span><span class="s2">&quot;example.lighting&quot;</span><span class="p">,</span> <span class="n">variables</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        uniform mat4 u_model__inverse_transpose;</span>
+<span class="s2">        uniform vec4 u_color_diffuse;</span>
+<span class="s2">        uniform vec4 u_color_specular;</span>
+<span class="s2">        uniform sampler2D u_tex_diffuse;</span>
+
+<span class="s2">        varying vec3 v_normal;</span>
+<span class="s2">        varying vec2 v_tex_coord;</span>
+
+<span class="s2">        attribute vec3 a_normal;</span>
+<span class="s2">        attribute vec2 a_tex_coord;</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span> <span class="n">vertex_201</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        v_normal = (u_model__inverse_transpose * vec4(a_normal, 1.0)).xyz;</span>
+<span class="s2">        v_tex_coord = a_tex_coord;</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span> <span class="n">fragment_201</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;</span>
+
+<span class="s2">        // The direction of the light.</span>
+<span class="s2">        vec3 lightDir = normalize(vec3(0.0, -1000.0, 1000.0));</span>
+
+<span class="s2">        vec3 normal = normalize(v_normal);</span>
+
+<span class="s2">        float lambertian = max(dot(normal, lightDir), 0.0);</span>
+<span class="s2">        vec4 diffuse_color = texture2D(u_tex_diffuse, v_tex_coord.xy);</span>
+<span class="s2">        diffuse_color *= vec4(lambertian * u_color_diffuse.rgb * u_color_diffuse.a, u_color_diffuse.a);</span>
+
+<span class="s2">        vec3 viewDir = normalize(vec3(0.0, 0.0, -1.0));</span>
+<span class="s2">        vec3 halfDir = normalize(lightDir + viewDir);</span>
+<span class="s2">        float specular = pow(max(dot(normal, halfDir), 0.0), 4.0);</span>
+
+<span class="s2">        vec4 specular_color = vec4(u_color_specular.rgb * u_color_specular.a * specular, u_color_specular.a * specular);</span>
+
+<span class="s2">        gl_FragColor = diffuse_color + specular_color;</span>
+
+<span class="s2">        if (gl_FragColor.a &lt; 0.9) {</span>
+<span class="s2">            discard;</span>
+<span class="s2">        }</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This is a very simple shader that applies diffuse and specular lighting to the model based
+on a single light source, meant for experimentation until better shaders are created.</p>
+<p>GLTFModel does not support transparent surfaces well. While the discard command above emulates
+transparency, the ordering is a bit wrong and can lead to artifacts.</p>
+</section>
+</section>
 <section id="model-displayable">
 <h2>Model Displayable<a class="headerlink" href="#model-displayable" title="Link to this heading"></a></h2>
 <p>The Model displayable acts as a factory to created models for use with the
-model-based renderer.</p>
+model-based renderer. This is an older API you may wish to use when you want to create
+models in Python.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="Model">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Model" title="Link to this definition"></a></dt>

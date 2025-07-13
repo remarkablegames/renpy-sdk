@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -231,7 +231,19 @@ only thing that's possibly visible at that point is the <a class="reference inte
 <section id="script-parsing-phase">
 <span id="early-phase"></span><h3>Script Parsing Phase<a class="headerlink" href="#script-parsing-phase" title="Link to this heading"></a></h3>
 <p>To read the game's code, Ren'Py reads each of the game's <code class="docutils literal notranslate"><span class="pre">.rpy</span></code> (and <code class="docutils literal notranslate"><span class="pre">_ren.py</span></code>) files one by
-one, in the unicode order of their filepaths. That's the &quot;parsing&quot; phase, or &quot;early&quot; phase.</p>
+one. That's the &quot;parsing&quot; phase, or &quot;early&quot; phase. The order that files are read in is:</p>
+<ol class="arabic simple">
+<li><p>Files inside <code class="file docutils literal notranslate"><span class="pre">renpy/common</span></code> are loaded using  using the full path, in unicode order. This is only for use by
+Ren'Py.</p></li>
+<li><p>Only if <code class="file docutils literal notranslate"><span class="pre">game/libs/libs.txt</span></code> exists, files in <code class="file docutils literal notranslate"><span class="pre">game/libs</span></code> have the first directory removed, if any and
+then are loaded in unicode order. In this order, <code class="file docutils literal notranslate"><span class="pre">game/libs/plants/aloe.rpy</span></code> will load before <code class="file docutils literal notranslate"><span class="pre">game/libs/animals/zebra.rpy</span></code>.</p></li>
+</ol>
+<ol class="arabic simple" start="5">
+<li><p>Files in <code class="file docutils literal notranslate"><span class="pre">game</span></code> are loaded using the full path, in unicode order. (In this order,
+<code class="file docutils literal notranslate"><span class="pre">game/animals/zebra.rpy</span></code> will load before <code class="file docutils literal notranslate"><span class="pre">game/plants/aloe.rpy</span></code>.)</p></li>
+<li><p>Only if <code class="file docutils literal notranslate"><span class="pre">game/mods/mods.txt</span></code> exists, <code class="file docutils literal notranslate"><span class="pre">game/mods</span></code> have the first directory removed, if any and
+then are loaded in unicode order. In this order, <code class="file docutils literal notranslate"><span class="pre">game/mods/plants/aloe.rpy</span></code> will load before <code class="file docutils literal notranslate"><span class="pre">game/mods/animals/zebra.rpy</span></code>.</p></li>
+</ol>
 <p>The first creator-written code being executed is what's written in <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">early</span></code> blocks. These
 are executed after the file they're in has been read and parsed, but before the next file gets
 read. This is why statements which modify how parsing works, like <a class="reference internal" href="cds.html"><span class="doc">Creator-Defined Statements</span></a>,
@@ -245,9 +257,12 @@ anything in how the code gets executed compared to <code class="docutils literal
 <p>After parsing/early phase, the &quot;init&quot; phase starts. Several statements are executed at that time,
 including the <a class="reference internal" href="python.html#init-python-statement"><span class="std std-ref">Init Python Statement</span></a>, the <a class="reference internal" href="python.html#define-statement"><span class="std std-ref">Define Statement</span></a>, the
 <a class="reference internal" href="transforms.html#transform-statement"><span class="std std-ref">Transform Statement</span></a>, the <a class="reference internal" href="displaying_images.html#image-statement"><span class="std std-ref">Image Statement</span></a>, the <a class="reference internal" href="screens.html#screen-statement"><span class="std std-ref">Screen Statement</span></a>, and the
-<a class="reference internal" href="style.html"><span class="doc">style</span></a> statement. The init phase is divided in successive epochs, or init priorities,
-from -999 to 999. Contrary to what the term may imply, epochs of lower priority are executed before
-epochs of higher priority.</p>
+<a class="reference internal" href="style.html"><span class="doc">style</span></a> statement.</p>
+<p>The init phase is divided in successive epochs, or init priorities.
+Contrary to what the term may imply, epochs of lower priority are executed before
+epochs of higher priority. It is suggested that games use init priorities of -99 to 99.
+Libraries and mods can use from -999 to -100 and 100 to 999. Init priorities outside of the
+range -999 to 999 are reserved for Ren'Py's internal use.</p>
 <p>By default, these statements are executed at init offset 0. However, they can be offset using
 the <a class="reference internal" href="#init-offset-statement"><span class="std std-ref">Init Offset Statement</span></a> or by other means. The <a class="reference internal" href="displaying_images.html#image-statement"><span class="std std-ref">Image Statement</span></a> is an exception to
 both of these rules, as it executes at an init priority of 500 by default, and the init offset

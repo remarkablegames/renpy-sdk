@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -272,6 +272,9 @@ it for Android or iOS using the usual techniques.</p>
 <p>At the same time, it should ask the player if they want to download, mention
 that this can cost money if they're not on WiFi, and then download the the
 game.</p>
+<p>For the highest security, the <code class="docutils literal notranslate"><span class="pre">public_key.pem</span></code> file produced by building
+the main game should be copied to the base directory of the downloader game.
+This is the public key that will be used to verify the download.</p>
 <p>Here's an example script for a downloader game, using assets from the
 tutorial game:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="c1"># The url to updates.json, on your web server.</span>
@@ -346,7 +349,7 @@ creating a copy in your game directory.</p>
         <span class="k">elif</span> <span class="n">u</span><span class="o">.</span><span class="n">state</span> <span class="o">==</span> <span class="n">u</span><span class="o">.</span><span class="n">FINISHING</span> <span class="k">or</span> <span class="n">u</span><span class="o">.</span><span class="n">state</span> <span class="o">==</span> <span class="n">u</span><span class="o">.</span><span class="n">DONE</span><span class="p">:</span>
             <span class="k">text</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;The game data has been downloaded.&quot;</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span> <span class="c1"># An error or unknown state.</span>
-            <span class="k">text</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;An error occured when trying to download game data:&quot;</span><span class="p">)</span>
+            <span class="k">text</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;An error occurred when trying to download game data:&quot;</span><span class="p">)</span>
 
             <span class="k">if</span> <span class="n">u</span><span class="o">.</span><span class="n">message</span> <span class="k">is</span> <span class="k">not</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="k">text</span> <span class="s2">&quot;[u.message!q]&quot;</span>

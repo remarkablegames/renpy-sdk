@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -128,15 +128,20 @@
 <li class="toctree-l2"><a class="reference internal" href="#screen-functions">Screen Functions</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.call_screen"><code class="docutils literal notranslate"><span class="pre">renpy.call_screen()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.current_screen"><code class="docutils literal notranslate"><span class="pre">renpy.current_screen()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#renpy.get_adjustment"><code class="docutils literal notranslate"><span class="pre">renpy.get_adjustment()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#renpy.value"><code class="docutils literal notranslate"><span class="pre">renpy.value</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#range"><code class="docutils literal notranslate"><span class="pre">range</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.get_adjustment"><code class="docutils literal notranslate"><span class="pre">renpy.get_adjustment()</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#renpy.value"><code class="docutils literal notranslate"><span class="pre">renpy.value</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#range"><code class="docutils literal notranslate"><span class="pre">range</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.get_displayable"><code class="docutils literal notranslate"><span class="pre">renpy.get_displayable()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.get_displayable_properties"><code class="docutils literal notranslate"><span class="pre">renpy.get_displayable_properties()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#renpy.get_screen"><code class="docutils literal notranslate"><span class="pre">renpy.get_screen()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#renpy.layer"><code class="docutils literal notranslate"><span class="pre">renpy.layer</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#name"><code class="docutils literal notranslate"><span class="pre">name</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#zorder"><code class="docutils literal notranslate"><span class="pre">zorder</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.get_screen"><code class="docutils literal notranslate"><span class="pre">renpy.get_screen()</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#renpy.layer"><code class="docutils literal notranslate"><span class="pre">renpy.layer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#name"><code class="docutils literal notranslate"><span class="pre">name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#zorder"><code class="docutils literal notranslate"><span class="pre">zorder</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.get_screen_docstring"><code class="docutils literal notranslate"><span class="pre">renpy.get_screen_docstring()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.get_screen_variable"><code class="docutils literal notranslate"><span class="pre">renpy.get_screen_variable()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.hide_screen"><code class="docutils literal notranslate"><span class="pre">renpy.hide_screen()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.set_focus"><code class="docutils literal notranslate"><span class="pre">renpy.set_focus()</span></code></a></li>
@@ -401,6 +406,18 @@ or making it participate in rollback is not advised.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="renpy.get_screen_docstring">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_screen_docstring</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variant</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_screen_docstring" title="Link to this definition"></a></dt>
+<dd><p>Returns the docstring for the screen with <cite>name</cite> and <cite>variant</cite>.</p>
+<dl class="simple">
+<dt><cite>name</cite></dt><dd><p>The name of the screen.</p>
+</dd>
+<dt><cite>variant</cite></dt><dd><p>The variant of the screen. If None, the default variant is used.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_screen_variable">
 <span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_screen_variable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_screen_variable" title="Link to this definition"></a></dt>
 <dd><p>Returns the value of a variable in the scope of a screen.</p>
@@ -655,7 +672,7 @@ sensitive.</p>
 <span class="sig-name descname"><span class="pre">get_selected</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Action.get_selected" title="Link to this definition"></a></dt>
 <dd><p>This should return true if the button should be rendered as a
 selected button, and false otherwise.</p>
-<p>The default implemention returns False.</p>
+<p>The default implementation returns False.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -845,7 +862,7 @@ This must be implemented.</p>
 <dt class="sig sig-object py" id="InputValue.enter">
 <span class="sig-name descname"><span class="pre">enter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#InputValue.enter" title="Link to this definition"></a></dt>
 <dd><p>Called when the user presses enter. If this returns a non-None
-value, that value is returned from the interacton. This may also
+value, that value is returned from the interaction. This may also
 raise <a class="reference internal" href="cdd.html#renpy.IgnoreEvent" title="renpy.IgnoreEvent"><code class="xref py py-exc docutils literal notranslate"><span class="pre">renpy.IgnoreEvent</span></code></a> to ignore the press. Otherwise, the
 enter-press is propagated to other displayables.</p>
 </dd></dl>
@@ -1075,6 +1092,8 @@ the **properties syntax with a properties keyword in some place. For example:</p
         <span class="k">transclude</span>
 </pre></div>
 </div>
+<p>Custom defined screen language statements support the <code class="docutils literal notranslate"><span class="pre">as</span></code> clause, which takes the name of the variable. If present,
+this variable will be assigned the value of <cite>main</cite> in the scope of the screen.</p>
 </section>
 </section>
 

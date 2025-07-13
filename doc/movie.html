@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -420,6 +420,18 @@ between two movies.</p>
 <dt><cite>keep_last_frame</cite></dt><dd><p>If true, and the movie has ended, the last frame will be displayed,
 rather than the movie being hidden. This only works if <cite>loop</cite> is
 false. (This behavior will also occur if <cite>group</cite> is set.)</p>
+</dd>
+<dt><cite>oversample</cite></dt><dd><p>If this is greater than 1, the movieis considered to be oversampled,
+with more pixels than its logical size would imply. For example, if
+an movie file is 1280x720 and oversample is 2, then the image will
+be treated as a 640x360 movie for the purpose of layout.</p>
+<p>If None, Ren'Py will automatically determine oversamping. If an &#64; followed
+by a number is found in the filename, that number will be used as the the
+oversampling factor. Otherwise, Ren'Py will search for files and use those.</p>
+<p>Specifically, if :file`launch.webm` is used, Ren'Py will search for <code class="file docutils literal notranslate"><span class="pre">launch&#64;2.webm</span></code>
+if the movie is scaled up more than 1x, and <code class="file docutils literal notranslate"><span class="pre">launch&#64;4.webm</span></code> and <code class="file docutils literal notranslate"><span class="pre">launch&#64;3.webm</span></code>
+if the movie is scaled up more than 2x.</p>
+<p>Automatic oversampling of movies only happens when the movie begins playing.</p>
 </dd>
 </dl>
 </dd></dl>

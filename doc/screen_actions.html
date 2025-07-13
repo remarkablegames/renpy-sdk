@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -249,6 +249,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#side-image-functions">Side Image Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#HasSideImage"><code class="docutils literal notranslate"><span class="pre">HasSideImage()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#SideImage"><code class="docutils literal notranslate"><span class="pre">SideImage()</span></code></a></li>
 </ul>
 </li>
@@ -1196,7 +1197,7 @@ when the tooltip is changed.</p>
 <p>These are other actions, not found anywhere else.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="Confirm">
-<span class="sig-name descname"><span class="pre">Confirm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prompt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">no</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confirm_selected</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Confirm" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">Confirm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prompt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">no</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confirm_selected</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Confirm" title="Link to this definition"></a></dt>
 <dd><p>Prompts the user for confirmation of an action. If the user
 clicks yes, the yes action is performed. Otherwise, the <cite>no</cite>
 action is performed.</p>
@@ -1208,6 +1209,8 @@ is already selected. If false (the default), the prompt
 will not be displayed if the <cite>yes</cite> action is selected.</p>
 </dd>
 </dl>
+<p>Additional keyword arguments not beginning with _ are passed to
+the screen.</p>
 <p>The sensitivity and selectedness of this action match those
 of the <cite>yes</cite> action.</p>
 <p>See <a class="reference internal" href="other.html#renpy.confirm" title="renpy.confirm"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.confirm()</span></code></a> for a function version of this action.</p>
@@ -1330,6 +1333,8 @@ proxying over all of the other methods.</p>
 pointer, if it is not possible for Ren'Py to move that pointer,
 or if the <a class="reference internal" href="preferences.html#var-preferences.mouse_move"><code class="xref std std-var docutils literal notranslate"><span class="pre">&quot;automatic</span> <span class="pre">move&quot;</span> <span class="pre">preference</span></code></a>
 is False, this does nothing.</p>
+<p>This is unlikely to work on the Linux with Wayland, Android, iOS, or Web
+platforms.</p>
 <dl class="simple">
 <dt><cite>duration</cite></dt><dd><p>The time it will take to perform the move, in seconds. During
 this time, the mouse may be unresponsive.</p>
@@ -1539,6 +1544,9 @@ the value of the key or index is set to 0.</p>
 <dt><cite>step</cite></dt><dd><p>The amount to change the bar by. If None, defaults to 1/10th of
 the bar.</p>
 </dd>
+<dt><cite>force_step</cite></dt><dd><p>If True, the bar can only take discrete steps, with the steps given
+by <cite>step</cite>. If False, the bar can take any value in the range.</p>
+</dd>
 <dt><cite>action</cite></dt><dd><p>If not None, an action to call when the key or index's value is changed.</p>
 </dd>
 <dt><cite>min</cite></dt><dd><p>The minimum value of the bar. If both <cite>min</cite> and <cite>max</cite> are given,
@@ -1575,6 +1583,9 @@ the value of the field is set to 0.</p>
 </dd>
 <dt><cite>step</cite></dt><dd><p>The amount to change the bar by. If None, defaults to 1/10th of
 the bar.</p>
+</dd>
+<dt><cite>force_step</cite></dt><dd><p>If True, the bar can only take discrete steps, with the steps given
+by <cite>step</cite>. If False, the bar can take any value in the range.</p>
 </dd>
 <dt><cite>action</cite></dt><dd><p>If not None, an action to call when the field's value is changed.</p>
 </dd>
@@ -1616,6 +1627,9 @@ the value of the local variable is set to 0.</p>
 <dt><cite>step</cite></dt><dd><p>The amount to change the bar by. If None, defaults to 1/10th of
 the bar.</p>
 </dd>
+<dt><cite>force_step</cite></dt><dd><p>If True, the bar can only take discrete steps, with the steps given
+by <cite>step</cite>. If False, the bar can take any value in the range.</p>
+</dd>
 <dt><cite>action</cite></dt><dd><p>If not None, an action to call when the local variable's value is changed.</p>
 </dd>
 <dt><cite>min</cite></dt><dd><p>The minimum value of the bar. If both <cite>min</cite> and <cite>max</cite> are given,
@@ -1629,12 +1643,19 @@ the bar.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="MixerValue">
-<span class="sig-name descname"><span class="pre">MixerValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mixer</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#MixerValue" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">MixerValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mixer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#MixerValue" title="Link to this definition"></a></dt>
 <dd><p>The value of an audio mixer.</p>
 <dl class="simple">
 <dt><cite>mixer</cite></dt><dd><p>The name of the mixer to adjust. This is usually one of
 &quot;main&quot;, &quot;music&quot;, &quot;sfx&quot;, or &quot;voice&quot;. See <a class="reference internal" href="audio.html#volume"><span class="std std-ref">Volume</span></a>
 for more information.</p>
+</dd>
+<dt><cite>step</cite></dt><dd><p>The amount to change the bar by. If None, defaults to 1/10th of
+the bar. For MixerValue, this is the amount of decibels to change the
+volume by.</p>
+</dd>
+<dt><cite>force_step</cite></dt><dd><p>If True, the bar can only take discrete steps, with the steps given
+by <cite>step</cite>. If False, the bar can take any value in the range.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1665,6 +1686,9 @@ the value of the screen variable is set to 0.</p>
 </dd>
 <dt><cite>step</cite></dt><dd><p>The amount to change the bar by. If None, defaults to 1/10th of
 the bar.</p>
+</dd>
+<dt><cite>force_step</cite></dt><dd><p>If True, the bar can only take discrete steps, with the steps given
+by <cite>step</cite>. If False, the bar can take any value in the range.</p>
 </dd>
 <dt><cite>action</cite></dt><dd><p>If not None, an action to call when the screen variable's value is changed.</p>
 </dd>
@@ -1714,6 +1738,9 @@ the value of the variable is set to 0.</p>
 </dd>
 <dt><cite>step</cite></dt><dd><p>The amount to change the bar by. If None, defaults to 1/10th of
 the bar.</p>
+</dd>
+<dt><cite>force_step</cite></dt><dd><p>If True, the bar can only take discrete steps, with the steps given
+by <cite>step</cite>. If False, the bar can take any value in the range.</p>
 </dd>
 <dt><cite>action</cite></dt><dd><p>If not None, an action to call when the variable's value is changed.</p>
 </dd>
@@ -1788,7 +1815,7 @@ user presses enter.</p>
 <span class="sig-name descname"><span class="pre">FilePageNameInputValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pattern</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Page</span> <span class="pre">{}'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Automatic</span> <span class="pre">saves'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quick</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Quick</span> <span class="pre">saves'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#FilePageNameInputValue" title="Link to this definition"></a></dt>
 <dd><p>An input value that updates the name of a file page.</p>
 <dl class="simple">
-<dt><cite>pattern</cite></dt><dd><p>This is used for the default name of a page. Python-style substition
+<dt><cite>pattern</cite></dt><dd><p>This is used for the default name of a page. Python-style substitution
 is performed, such that {} is replaced with the number of the page.</p>
 </dd>
 <dt><cite>auto</cite></dt><dd><p>The name of the autosave page.</p>
@@ -1993,6 +2020,9 @@ in the case of buttons.</p>
 <li><p>Preference(&quot;restore window position&quot;, &quot;enable&quot;) - Will cause the window position to be restored when the game is started.</p></li>
 <li><p>Preference(&quot;restore window position&quot;, &quot;disable&quot;) - Will cause the window position to not be restored when the game is started.</p></li>
 <li><p>Preference(&quot;restore window position&quot;, &quot;toggle&quot;) - Will toggle the restore window position state.</p></li>
+<li><p>Preference(&quot;mono audio&quot;, &quot;enable&quot;) - Forces audio to be downmixed to mono.</p></li>
+<li><p>Preference(&quot;mono audio&quot;, &quot;disable&quot;) - Disables forcing audio to be downmixed to mono.</p></li>
+<li><p>Preference(&quot;mono audio&quot;, &quot;toggles&quot;) - Toggles mono audio.</p></li>
 </ul>
 <p>Values that can be used with bars are:</p>
 <ul class="simple">
@@ -2006,6 +2036,7 @@ in the case of buttons.</p>
 <li><p>Preference(&quot;self voicing volume drop&quot;)</p></li>
 <li><p>Preference(&quot;font size&quot;)</p></li>
 <li><p>Preference(&quot;font line spacing&quot;)</p></li>
+<li><p>Preference(&quot;font kerning&quot;)</p></li>
 </ul>
 <p>The <cite>range</cite> parameter can be given to give the range of certain bars.
 For &quot;text speed&quot;, it defaults to 200 cps. For &quot;auto-forward time&quot;, it
@@ -2188,10 +2219,20 @@ Otherwise, the lowest-numbered slot is listed first.</p>
 <h3>Side Image Functions<a class="headerlink" href="#side-image-functions" title="Link to this heading"></a></h3>
 <p>This function returns the side image to use.</p>
 <dl class="py function">
+<dt class="sig sig-object py" id="HasSideImage">
+<span class="sig-name descname"><span class="pre">HasSideImage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#HasSideImage" title="Link to this definition"></a></dt>
+<dd><p>Returns True if a side image will be displayed for the current interaction, and
+false otherwise. This becomes available earlier than SideImage does (which is only valid
+as the start of an interaction), and so can be used in the say screen to make layut conditional
+on the presence of a side image.</p>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="SideImage">
 <span class="sig-name descname"><span class="pre">SideImage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#SideImage" title="Link to this definition"></a></dt>
 <dd><p>Returns the side image associated with the currently speaking character,
-or a Null displayable if no such side image exists.</p>
+or a Null displayable if no such side image exists. This may be a transform
+between two side images if one is set.</p>
 </dd></dl>
 
 </section>

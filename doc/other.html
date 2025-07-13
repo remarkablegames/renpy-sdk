@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -181,6 +181,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#renpy.get_renderer_info"><code class="docutils literal notranslate"><span class="pre">renpy.get_renderer_info()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.get_say_attributes"><code class="docutils literal notranslate"><span class="pre">renpy.get_say_attributes()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.get_skipping"><code class="docutils literal notranslate"><span class="pre">renpy.get_skipping()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.get_statement_name"><code class="docutils literal notranslate"><span class="pre">renpy.get_statement_name()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.get_transition"><code class="docutils literal notranslate"><span class="pre">renpy.get_transition()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.iconify"><code class="docutils literal notranslate"><span class="pre">renpy.iconify()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.include_module"><code class="docutils literal notranslate"><span class="pre">renpy.include_module()</span></code></a></li>
@@ -189,6 +190,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#renpy.is_init_phase"><code class="docutils literal notranslate"><span class="pre">renpy.is_init_phase()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.is_mouse_visible"><code class="docutils literal notranslate"><span class="pre">renpy.is_mouse_visible()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.is_seen"><code class="docutils literal notranslate"><span class="pre">renpy.is_seen()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.is_seen_allowed"><code class="docutils literal notranslate"><span class="pre">renpy.is_seen_allowed()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.is_skipping"><code class="docutils literal notranslate"><span class="pre">renpy.is_skipping()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.is_start_interact"><code class="docutils literal notranslate"><span class="pre">renpy.is_start_interact()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.language_tailor"><code class="docutils literal notranslate"><span class="pre">renpy.language_tailor()</span></code></a></li>
@@ -326,7 +328,7 @@ and <code class="docutils literal notranslate"><span class="pre">commit</span></
 <dl class="std var">
 <dt class="sig sig-object std" id="var-renpy.version_name">
 <span class="sig-name descname"><span class="pre">renpy.version_name</span></span><a class="headerlink" href="#var-renpy.version_name" title="Link to this definition"></a></dt>
-<dd><p>A human readable version name, of the form &quot;Example Version.&quot;</p>
+<dd><p>A human-readable version name, of the form &quot;Example Version.&quot;</p>
 </dd></dl>
 
 <dl class="std var">
@@ -374,7 +376,9 @@ it's running on.</p>
 <dl class="std var">
 <dt class="sig sig-object std" id="var-renpy.emscripten">
 <span class="sig-name descname"><span class="pre">renpy.emscripten</span></span><a class="headerlink" href="#var-renpy.emscripten" title="Link to this definition"></a></dt>
-<dd><p>Has a true value when running in the browser.</p>
+<dd><p>Has a true value when running in the browser. That value is specifically the
+emscripten module that lets you interact with the browser, see <a class="reference internal" href="web.html#renpy.emscripten.run_script" title="renpy.emscripten.run_script"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.emscripten.run_script()</span></code></a>
+and similar functions.</p>
 </dd></dl>
 
 <dl class="std var">
@@ -549,7 +553,7 @@ displayed (or some other problem occurs).</p>
 <h2>Miscellaneous<a class="headerlink" href="#miscellaneous" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.add_python_directory">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">add_python_directory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.add_python_directory" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">add_python_directory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.add_python_directory" title="Link to this definition"></a></dt>
 <dd><p>Adds <cite>path</cite> to the list of paths searched for Python modules and packages.
 The path should be a string relative to the game directory. This must be
 called before an import statement.</p>
@@ -577,7 +581,7 @@ otherwise.</p>
 <dd><p>If a displayable is currently focused, captured the rectangular bounding
 box of that displayable, and stores it with <cite>name</cite>. If not, removes any
 focus stored with <cite>name</cite>.</p>
-<p>Captured focuses are not saved when the game is saveed.</p>
+<p>Captured focuses are not saved when the game is saved.</p>
 <dl class="simple">
 <dt><cite>name</cite></dt><dd><p>Should be a string. The name &quot;tooltip&quot; is special, as it's
 automatically captured when a displayable with a tooltip gains focus.</p>
@@ -618,7 +622,7 @@ If <cite>name</cite> is None, clear all captured focuses.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.confirm">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">confirm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.confirm" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">confirm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.confirm" title="Link to this definition"></a></dt>
 <dd><p>This causes the a yes/no prompt screen with the given message
 to be displayed, and dismissed when the player hits yes or no.</p>
 <p>Returns True if the player hits yes, and False if the player hits no.</p>
@@ -626,6 +630,7 @@ to be displayed, and dismissed when the player hits yes or no.</p>
 <dt><cite>message</cite></dt><dd><p>The message that will be displayed.</p>
 </dd>
 </dl>
+<p>Additional keyword arguments not beginning with _ are passed to the screen.</p>
 <p>See <a class="reference internal" href="screen_actions.html#Confirm" title="Confirm"><code class="xref py py-func docutils literal notranslate"><span class="pre">Confirm()</span></code></a> for a similar Action.</p>
 </dd></dl>
 
@@ -739,7 +744,7 @@ seconds are included.</p>
 <dd><p>Returns the name of the mouse that should be shown.</p>
 <dl class="simple">
 <dt><cite>interaction</cite></dt><dd><p>If true, get a mouse name that is based on the type of interaction
-occuring. (This is rarely useful.)</p>
+occurring. (This is rarely useful.)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -796,10 +801,11 @@ to 1 disables this.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.get_renderer_info">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_renderer_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_renderer_info" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_renderer_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">renpy.display.core.RendererInfo</span></span></span><a class="headerlink" href="#renpy.get_renderer_info" title="Link to this definition"></a></dt>
 <dd><p>Returns a dictionary, giving information about the renderer Ren'Py is
 currently using. Defined keys are:</p>
-<dl class="simple">
+<blockquote>
+<div><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">&quot;renderer&quot;</span></code></dt><dd><p>A string giving the name of the renderer that is in use.</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">&quot;resizable&quot;</span></code></dt><dd><p>True if and only if the window is resizable.</p>
@@ -809,9 +815,22 @@ currently using. Defined keys are:</p>
 <dt><code class="docutils literal notranslate"><span class="pre">&quot;model&quot;</span></code></dt><dd><p>Present and true if model-based rendering is supported.</p>
 </dd>
 </dl>
-<p>Other, renderer-specific, keys may also exist. The dictionary should
-be treated as immutable. This should only be called once the display
-has been started (that is, after the init phase has finished).</p>
+</div></blockquote>
+<dl class="simple">
+<dt>When using the GL2 renderer, the following keys are also defined:</dt><dd><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">&quot;gpu_vendor&quot;</span></code></dt><dd><p>A string giving the GPU vendor.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">&quot;gpu_name&quot;</span></code></dt><dd><p>A string giving the GPU name.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">&quot;gpu_driver_version&quot;</span></code></dt><dd><p>A string giving the driver version.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>Other, renderer-specific, keys may also exist.</p>
+<p>The dictionary should be treated as immutable.</p>
+<p>This should only be called once the display has been started (that is,
+not sooner than first interaction).</p>
 </dd></dl>
 
 <dl class="py function">
@@ -827,6 +846,13 @@ None if no attributes are associated with this statement.</p>
 <span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_skipping</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_skipping" title="Link to this definition"></a></dt>
 <dd><p>Returns &quot;slow&quot; if the Ren'Py is skipping, &quot;fast&quot; if Ren'Py is fast skipping,
 and None if it is not skipping.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.get_statement_name">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_statement_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_statement_name" title="Link to this definition"></a></dt>
+<dd><p>Get the name of the current statement, a string like &quot;say&quot;, &quot;say-nvl&quot;, or &quot;window hide&quot;. This is the
+same statement name used with <a class="reference internal" href="config.html#var-config.statement_callbacks"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.statement_callbacks</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -886,7 +912,7 @@ once the thread returns.</p>
 <p>This function creates a daemon thread, which will be automatically
 stopped when Ren'Py is shutting down.</p>
 <p>This thread is very limited in what it can do with the Ren'Py API.
-Changing store variables is allowed, as are calling calling the following
+Changing store variables is allowed, as are calling the following
 functions:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#renpy.restart_interaction" title="renpy.restart_interaction"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.restart_interaction()</span></code></a></p></li>
@@ -921,6 +947,12 @@ play-through.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="renpy.is_seen_allowed">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">is_seen_allowed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.is_seen_allowed" title="Link to this definition"></a></dt>
+<dd><p>Returns False only if in a replay and no seen events allowed by setting <code class="xref std std-var docutils literal notranslate"><span class="pre">config.no_replay_seen</span></code> to True.</p>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="renpy.is_skipping">
 <span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">is_skipping</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.is_skipping" title="Link to this definition"></a></dt>
 <dd><p>Returns True if Ren'Py is currently skipping (in fast or slow skip mode),
@@ -930,7 +962,7 @@ or False otherwise.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.is_start_interact">
 <span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">is_start_interact</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.is_start_interact" title="Link to this definition"></a></dt>
-<dd><p>Returns true if restart_interaction has not been called during the current
+<dd><p>Returns True if restart_interaction has not been called during the current
 interaction. This can be used to determine if the interaction is just being
 started, or has been restarted.</p>
 </dd></dl>
@@ -1048,7 +1080,7 @@ to be replaced by assigning a new function to that variable.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.predicting">
 <span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">predicting</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.predicting" title="Link to this definition"></a></dt>
-<dd><p>Returns true if Ren'Py is currently in a predicting phase.</p>
+<dd><p>Returns True if Ren'Py is currently in a predicting phase.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -1057,8 +1089,8 @@ to be replaced by assigning a new function to that variable.</p>
 <dd><p>Queues an event with the given name. <cite>Name</cite> should be one of the event
 names in <a class="reference internal" href="config.html#var-config.keymap"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.keymap</span></code></a>, or a list of such names.</p>
 <dl class="simple">
-<dt><cite>up</cite></dt><dd><p>This should be false when the event begins (for example, when a keyboard
-button is pressed.) It should be true when the event ends (when the
+<dt><cite>up</cite></dt><dd><p>This should be False when the event begins (for example, when a keyboard
+button is pressed.) It should be True when the event ends (when the
 button is released.)</p>
 </dd>
 </dl>
@@ -1073,12 +1105,12 @@ not work to replace an event with another - doing so will change event order.
 <span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">quit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relaunch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.quit" title="Link to this definition"></a></dt>
 <dd><p>This causes Ren'Py to exit entirely.</p>
 <dl class="simple">
-<dt><cite>relaunch</cite></dt><dd><p>If true, Ren'Py will run a second copy of itself before quitting.</p>
+<dt><cite>relaunch</cite></dt><dd><p>If True, Ren'Py will run a second copy of itself before quitting.</p>
 </dd>
 <dt><cite>status</cite></dt><dd><p>The status code Ren'Py will return to the operating system.
 Generally, 0 is success, and positive integers are failure.</p>
 </dd>
-<dt><cite>save</cite></dt><dd><p>If true, the game is saved in <a class="reference internal" href="store_variables.html#var-_quit_slot"><code class="xref std std-var docutils literal notranslate"><span class="pre">_quit_slot</span></code></a> before Ren'Py
+<dt><cite>save</cite></dt><dd><p>If True, the game is saved in <a class="reference internal" href="store_variables.html#var-_quit_slot"><code class="xref std std-var docutils literal notranslate"><span class="pre">_quit_slot</span></code></a> before Ren'Py
 terminates.</p>
 </dd>
 </dl>
@@ -1096,8 +1128,8 @@ window chrome.</p>
 <span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">reset_physical_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.reset_physical_size" title="Link to this definition"></a></dt>
 <dd><p>Attempts to set the size of the physical window to the size specified
 using <code class="xref std std-var docutils literal notranslate"><span class="pre">renpy.config.physical_height</span></code> and <code class="xref std std-var docutils literal notranslate"><span class="pre">renpy.config.physical_width</span></code>,
-or the size set using <code class="xref std std-var docutils literal notranslate"><span class="pre">renpy.config.screen_width</span></code> and <code class="xref std std-var docutils literal notranslate"><span class="pre">renpy.config.screen_height</span></code>
-if not set.</p>
+or, if those are not set, the size set using <code class="xref std std-var docutils literal notranslate"><span class="pre">renpy.config.screen_width</span></code>
+and <code class="xref std std-var docutils literal notranslate"><span class="pre">renpy.config.screen_height</span></code>.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -1120,13 +1152,13 @@ there are no statements executing.</p>
 future of the current statement. Right now, the scry object has the
 following fields:</p>
 <dl class="simple">
-<dt><cite>nvl_clear</cite></dt><dd><p>Is true if an <code class="docutils literal notranslate"><span class="pre">nvl</span> <span class="pre">clear</span></code> statement will execute before the
+<dt><cite>nvl_clear</cite></dt><dd><p>Is True if an <code class="docutils literal notranslate"><span class="pre">nvl</span> <span class="pre">clear</span></code> statement will execute before the
 next interaction.</p>
 </dd>
-<dt><cite>say</cite></dt><dd><p>Is true if an <code class="docutils literal notranslate"><span class="pre">say</span></code> statement will execute before the
+<dt><cite>say</cite></dt><dd><p>Is True if an <code class="docutils literal notranslate"><span class="pre">say</span></code> statement will execute before the
 next interaction.</p>
 </dd>
-<dt><cite>menu_with_caption</cite></dt><dd><p>Is true if a <code class="docutils literal notranslate"><span class="pre">menu</span></code> statement with a caption will execute
+<dt><cite>menu_with_caption</cite></dt><dd><p>Is True if a <code class="docutils literal notranslate"><span class="pre">menu</span></code> statement with a caption will execute
 before the next interaction.</p>
 </dd>
 <dt><cite>who</cite></dt><dd><p>If a <code class="docutils literal notranslate"><span class="pre">say</span></code> or <code class="docutils literal notranslate"><span class="pre">menu-with-caption</span></code> statement will execute
@@ -1148,7 +1180,10 @@ or making it participate in rollback is not advised.</p>
 <dt class="sig sig-object py" id="renpy.set_mouse_pos">
 <span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">set_mouse_pos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.set_mouse_pos" title="Link to this definition"></a></dt>
 <dd><p>Jump the mouse pointer to the location given by arguments x and y.
-If the device does not have a mouse pointer, this does nothing.</p>
+If the device does not have a mouse pointer, or if it is not possible for
+Ren'Py to move that pointer, this does nothing.</p>
+<p>This is unlikely to work on the Linux with Wayland, Android, iOS, or Web
+platforms.</p>
 <dl class="simple">
 <dt><cite>duration</cite></dt><dd><p>The time it will take to perform the move, in seconds.
 During this time, the mouse may be unresponsive.</p>

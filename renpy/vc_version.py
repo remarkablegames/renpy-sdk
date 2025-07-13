@@ -1,5 +1,5 @@
-branch = 'fix'
+branch = 'master'
 nightly = False
 official = True
-version = '8.3.2.24090902'
-version_name = 'Second Star to the Right'
+version = '8.4.0.25071206'
+version_name = 'Tomorrowland'

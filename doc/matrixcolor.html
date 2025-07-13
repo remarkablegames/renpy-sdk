@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -242,18 +242,19 @@ green, and blue channels are multiplied by the alpha channel. This means that
 an opaque white pixel will have the value (1.0, 1.0, 1.0, 1.0), a 50% transparent
 red pixel will have the value (0.5, 0.0, 0.0, 0.5), and a transparent pixel
 will have the value (0.0, 0.0, 0.0, 0.0).</p>
-<p>Premultiplied alph allows Ren'Py to scale images
+<p>Premultiplied alpha allows Ren'Py to scale images
 up and down without causing dark artifacts that come from representing
 colors more directly. Scaling images is similar to averaging two pixels
 together. Without premultiplied alpha, we might have a solid white pixel
 and a transparent pixel - (1.0, 1.0, 1.0, 1.0) and (0.0, 0.0, 0.0, 0.0),
-respectively. Average those together gets (0.5, 0.5, 0.5, 0.5).
-But that's not right - averaging solid white and transparent black should
-get 50% opaque white, not 50% opaque gray.</p>
-<p>In the premultiplied alpha system, the starting value is the same, and so is the
-result - except now, (0.5, 0.5, 0.5, 0.5) has been pre-defined to be 50% opaque
-white. By storing colors in this way, Ren'Py can draw them to the screen
-correctly, and not get weird artifacts when scaling.</p>
+respectively. Average those together gets (0.5, 0.5, 0.5, 0.5), representing
+50% opaque gray in the straight alpha system.</p>
+<p>However, since a fully transparent pixel doesn't really have
+any color, it shouldn't affect the resulting color, either - only the resulting
+transparency. In the premultiplied alpha system, the starting values are the same,
+and so is the result - except now, (0.5, 0.5, 0.5, 0.5) has been pre-defined to
+be 50% opaque white. By storing colors in this way, Ren'Py can draw them to the
+screen correctly, and not get weird artifacts when scaling.</p>
 </section>
 <section id="using-a-matrix-to-change-colors">
 <h2>Using a Matrix to Change Colors<a class="headerlink" href="#using-a-matrix-to-change-colors" title="Link to this heading"></a></h2>
@@ -406,7 +407,7 @@ black and white displayables. It uses the color of each pixel
 in the black and white to interpolate between the black color
 and the white color.</p>
 <p>The alpha channel is not touched.</p>
-<p>This is inteded for use with a black and white image (or one that
+<p>This is intended for use with a black and white image (or one that
 has been desaturated with <a class="reference internal" href="#SaturationMatrix" title="SaturationMatrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">SaturationMatrix()</span></code></a>), and will yield
 strange results when used with images that are not black and white.</p>
 <dl class="simple">
@@ -483,7 +484,7 @@ three channels of a fully desaturated image. The default
 is based on the constants used for the luminance channel
 of an NTSC television signal. Since the human eye is
 mostly sensitive to green, more of the green channel is
-kept then the other two channels.</p>
+kept than the other two channels.</p>
 </dd>
 </dl>
 </dd></dl>

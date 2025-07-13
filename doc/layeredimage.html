@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -87,6 +87,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#attribute">Attribute</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#group">Group</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#when">When</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#deprecated-properties">Deprecated Properties</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#pattern-and-format-function">Pattern and format function</a><ul>
@@ -262,6 +266,13 @@ practical sense, is technically correct and outlines the layeredimage syntax:</p
         <span class="k">attribute</span> <span class="n">dress</span> <span class="k">default</span><span class="p">:</span>
             <span class="s2">&quot;augustina_dress&quot;</span>
         <span class="k">attribute</span> <span class="n">uniform</span>
+        <span class="k">attribute</span> <span class="n">psychedelic</span><span class="p">:</span>
+            <span class="k">image</span><span class="p">:</span>
+                <span class="s2">&quot;augustina_dress&quot;</span>
+                <span class="na">matrixcolor</span> <span class="n">TintMatrix</span><span class="p">(</span><span class="s2">&quot;#f00&quot;</span><span class="p">)</span>
+                <span class="n">linear</span> <span class="mi">1</span> <span class="na">matrixcolor</span> <span class="n">TintMatrix</span><span class="p">(</span><span class="s2">&quot;#0f0&quot;</span><span class="p">)</span>
+                <span class="n">linear</span> <span class="mi">1</span> <span class="na">matrixcolor</span> <span class="n">TintMatrix</span><span class="p">(</span><span class="s2">&quot;#00f&quot;</span><span class="p">)</span>
+                <span class="k">repeat</span>
 
     <span class="k">group</span> <span class="n">face</span> <span class="k">auto</span><span class="p">:</span>
         <span class="na">pos</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
@@ -305,7 +316,9 @@ It can be used to express complex dependencies between attributes, or to
 select attributes at random. See <a class="reference internal" href="#attribute-selection-process"><span class="std std-ref">Selecting attributes to display</span></a> for more
 information about when and how this is called.</p>
 </dd>
-<dt><cite>at</cite></dt><dd><p>A transform or list of transforms that are applied to the layered image.</p>
+<dt><cite>at</cite></dt><dd><p>A transform or list of transforms that are applied to the layered image.
+It can also be used in the form of <code class="docutils literal notranslate"><span class="pre">at</span> <span class="pre">transform:</span></code> followed by an ATL block,
+to define an ATL transform which will be applied to the layeredimage.</p>
 </dd>
 <dt><a class="reference internal" href="transform_properties.html#id1"><span class="std std-ref">transform properties</span></a></dt><dd><p>If given, these are used to construct a transform that is applied to the
 displayable.</p>
@@ -326,26 +339,22 @@ which defaults to True.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">always</span></code> statement declares an image that is always shown inside the
 layeredimage, and which will not be attached to an attribute. It
 must be supplied a displayable, and can also take properties. Both can
-be placed on the same line or inside a block.</p>
+be placed on the same line or inside a block. The displayable may be declared
+using the word <code class="docutils literal notranslate"><span class="pre">image:</span></code> followed by an ATL block, which is similar to the
+<a class="reference internal" href="transforms.html#atl-image-statement"><span class="std std-ref">Image Statement with ATL Block</span></a>.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">always</span></code> statement takes the following properties:</p>
 <dl class="simple">
-<dt><cite>if_all</cite></dt><dd><p>A string or list of strings giving the names of attributes. If this is
-given, this layer is only displayed if all of the named attributes
-are present.</p>
-</dd>
-<dt><cite>if_any</cite></dt><dd><p>A string or list of strings giving the names of attributes. If this is
-given, this layer is only displayed if any of the named attributes
-are present.</p>
-</dd>
-<dt><cite>if_not</cite></dt><dd><p>A string or list of strings giving the names of attributes. If this is
-given, this layer is only displayed if none of the named attributes are
-present.</p>
+<dt><cite>when</cite></dt><dd><p>An <a class="reference internal" href="#when"><span class="std std-ref">When</span></a> expression in parentheses. If this is given, this layer is
+only displayed if the set of attributes that are called on the layeredimage
+satisfy the when expression.</p>
 </dd>
 <dt><a class="reference internal" href="transform_properties.html#id1"><span class="std std-ref">transform properties</span></a></dt><dd><p>If given, these are used to construct a transform that is applied
 to the displayable.</p>
 </dd>
 <dt><cite>at</cite></dt><dd><p>A transform or list of transforms that are applied to the provided
-displayable.</p>
+displayable.
+It can also be used in the form of <code class="docutils literal notranslate"><span class="pre">at</span> <span class="pre">transform:</span></code> followed by an ATL block,
+to define an ATL transform which will be applied to the displayable.</p>
 </dd>
 </dl>
 <section id="if">
@@ -366,24 +375,19 @@ is shown if given.</p>
     <span class="s2">&quot;augustina_nose_mark&quot;</span>
 </pre></div>
 </div>
-<p>Each clause must be given a displayable. It can also be given these properties:</p>
+<p>Each clause must be given a displayable, which can be done with the <code class="docutils literal notranslate"><span class="pre">image:</span></code>
+syntax described earlier. It can also be given these properties:</p>
 <dl class="simple">
-<dt><cite>if_all</cite></dt><dd><p>A string or list of strings giving the names of attributes. If this is
-given, this condition is only considered if all of the named attributes
-are present.</p>
-</dd>
-<dt><cite>if_any</cite></dt><dd><p>A string or list of strings giving the names of attributes. If this is
-given, this condition is only considered if any of the named attributes
-are present.</p>
-</dd>
-<dt><cite>if_not</cite></dt><dd><p>A string or list of strings giving the names of attributes. If this is
-given, this condition is only considered if none of the named attributes are
-present.</p>
+<dt><cite>when</cite></dt><dd><p>An <a class="reference internal" href="#when"><span class="std std-ref">When</span></a> expression in parentheses. If this is given, this condition is
+only displayed if the set of attributes that are called on the layeredimage
+satisfy the when expression.</p>
 </dd>
 <dt><a class="reference internal" href="transform_properties.html#id1"><span class="std std-ref">transform properties</span></a></dt><dd><p>If present, these are used to construct a transform that is applied
 to the displayable.</p>
 </dd>
-<dt><cite>at</cite></dt><dd><p>A transform or list of transforms that are applied to the displayable.</p>
+<dt><cite>at</cite></dt><dd><p>A transform or list of transforms that are applied to the displayable.
+It can also be used in the form of <code class="docutils literal notranslate"><span class="pre">at</span> <span class="pre">transform:</span></code> followed by an ATL block,
+to define an ATL transform which will be applied to the displayable.</p>
 </dd>
 </dl>
 <p>The <code class="docutils literal notranslate"><span class="pre">if</span></code> statement is transformed to a <a class="reference internal" href="displayables.html#ConditionSwitch" title="ConditionSwitch"><code class="xref py py-func docutils literal notranslate"><span class="pre">ConditionSwitch()</span></code></a> when the
@@ -407,102 +411,104 @@ character customization options that don't change often.</p>
 image when the given attribute is used to display it. For example, using the
 previous example, calling <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">augustina</span> <span class="pre">dress</span></code> will cause the
 &quot;augustina_dress&quot; to be shown as part of the &quot;augustina&quot; image.</p>
-<p>An <code class="docutils literal notranslate"><span class="pre">attribute</span></code> clause takes an attribute name, which is one word. It can also
+<p>An <code class="docutils literal notranslate"><span class="pre">attribute</span></code> clause takes an attribute name, which is one word (more precisely,
+one image name component, see <a class="reference internal" href="language_basics.html#elements-of-statements"><span class="std std-ref">Elements of Statements</span></a>). It can also
 take two keywords. The <code class="docutils literal notranslate"><span class="pre">default</span></code> keyword indicates that the attribute should
 be present by default unless an attribute in the same group is called. The
 <code class="docutils literal notranslate"><span class="pre">null</span></code> keyword prevents this clause from getting attached a displayable, which
 can be useful for bookkeeping and to build conditional display conditions using
-<cite>if_all</cite>, <cite>if_any</cite>, <cite>if_not</cite>, <cite>attribute_function</cite>,
-<a class="reference internal" href="config.html#var-config.adjust_attributes"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.adjust_attributes</span></code></a> or <code class="xref std std-var docutils literal notranslate"><span class="pre">config.default_attributes</span></code>.</p>
+<cite>when</cite>, <cite>attribute_function</cite>,
+<a class="reference internal" href="config.html#var-config.adjust_attributes"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.adjust_attributes</span></code></a> or <a class="reference internal" href="config.html#var-config.default_attribute_callbacks"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.default_attribute_callbacks</span></code></a>.</p>
 <p>The same attribute name
 can be used in multiple <code class="docutils literal notranslate"><span class="pre">attribute</span></code> clauses (and in auto-defined attributes as
 part of <code class="docutils literal notranslate"><span class="pre">auto</span></code> groups, more about that later), with all the corresponding
-displayables being shown at the same time (the <cite>if_all</cite>, <cite>if_any</cite>, and <cite>if_not</cite>
-properties can tweak this).</p>
-<p>If the displayable is not explicitly given, it will be computed from the name
-of the layeredimage, the group (if any), the group's variant (if any), and the
-attribute. See the <a class="reference internal" href="#layeredimage-pattern"><span class="std std-ref">pattern</span></a> section for more
-details.</p>
+displayables being shown at the same time (the <cite>when</cite> property can tweak this).</p>
+<p>A displayable can be given, optionally using the <code class="docutils literal notranslate"><span class="pre">image:</span></code> syntax described
+earlier. If no displayable is explicitly given, it will be computed from the
+name of the layeredimage, the group (if any), the group's or the attribute's
+variant (if any), and the attribute. See the
+<a class="reference internal" href="#layeredimage-pattern"><span class="std std-ref">pattern</span></a> section for more details.</p>
 <p>The attribute statement takes the following properties:</p>
 <dl class="simple">
-<dt><cite>if_all</cite></dt><dd><p>A string or list of strings giving the names of attributes. If this is
-present, this layer is only displayed if all of the named attributes
-are present.</p>
-</dd>
-<dt><cite>if_any</cite></dt><dd><p>A string or list of strings giving the names of attributes. If this is
-present, this layer is only displayed if any of the named attributes
-are present.</p>
-</dd>
-<dt><cite>if_not</cite></dt><dd><p>A string or list of strings giving the names of attributes. If this is
-present, this layer is only displayed if none of the named attributes are
-present.</p>
+<dt><cite>when</cite></dt><dd><p>An <a class="reference internal" href="#when"><span class="std std-ref">When</span></a> expression in parentheses. If this is given, this layer is
+only displayed if the set of attributes that are called on the layeredimage
+satisfy the when expression.</p>
 </dd>
 <dt><a class="reference internal" href="transform_properties.html#id1"><span class="std std-ref">transform properties</span></a></dt><dd><p>If present, these are used to construct a transform that is applied
 to the layer.</p>
 </dd>
-<dt><cite>at</cite></dt><dd><p>A transform or list of transforms that are applied to the layer.</p>
+<dt><cite>at</cite></dt><dd><p>A transform or list of transforms that are applied to the layer.
+It can also be used in the form of <code class="docutils literal notranslate"><span class="pre">at</span> <span class="pre">transform:</span></code> followed by an ATL block,
+to define an ATL transform which will be applied to the layer.</p>
+</dd>
+<dt><cite>variant</cite></dt><dd><p>A word that is prepended to the attribute name (with an underscore) when looking
+for a displayable for that attribute. This property is only valid for attributes
+with no given displayable, and which are not already in a group with a variant.</p>
 </dd>
 </dl>
-<p>The <cite>if_*</cite> clauses' test is based upon the list of attributes of the resulting
+<p>The <cite>when</cite> clause's test is based upon the list of attributes of the resulting
 image, as explained <a class="reference internal" href="displaying_images.html#concept-image"><span class="std std-ref">here</span></a>, but it <strong>does not change</strong> that
 list.</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">layeredimage</span> <span class="n">eileen</span><span class="p">:</span>
     <span class="k">attribute</span> <span class="n">a</span>
-    <span class="k">attribute</span> <span class="n">b</span> <span class="k">default</span> <span class="n">if_not</span> <span class="s2">&quot;a&quot;</span>
-    <span class="k">attribute</span> <span class="n">c</span> <span class="k">default</span> <span class="n">if_not</span> <span class="s2">&quot;b&quot;</span>
+    <span class="k">attribute</span> <span class="n">b</span> <span class="k">default</span> <span class="n">when</span> <span class="k">not</span> <span class="n">a</span>
+    <span class="k">attribute</span> <span class="n">c</span> <span class="k">default</span> <span class="n">when</span> <span class="k">not</span> <span class="n">b</span>
 </pre></div>
 </div>
 <p>In this example, the <code class="docutils literal notranslate"><span class="pre">b</span></code> and <code class="docutils literal notranslate"><span class="pre">c</span></code> attributes are <em>always</em> part of the attributes
 list (because of their <code class="docutils literal notranslate"><span class="pre">default</span></code> clause). When calling <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">eileen</span> <span class="pre">a</span></code>, the
 <code class="docutils literal notranslate"><span class="pre">a</span></code> attribute will be displayed as requested, and the <code class="docutils literal notranslate"><span class="pre">b</span></code> attribute will not,
-due to its <code class="docutils literal notranslate"><span class="pre">if_not</span></code> property. But even if not displayed, the <code class="docutils literal notranslate"><span class="pre">b</span></code> attribute will
+due to its <code class="docutils literal notranslate"><span class="pre">when</span></code> property. But even if not displayed, the <code class="docutils literal notranslate"><span class="pre">b</span></code> attribute will
 still be part of the attributes list, which means the <code class="docutils literal notranslate"><span class="pre">c</span></code> attribute will still not
 display.</p>
 </section>
 <section id="group">
 <h3>Group<a class="headerlink" href="#group" title="Link to this heading"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">group</span></code> statement groups attributes together, making them mutually
-exclusive. Unless the group is <code class="docutils literal notranslate"><span class="pre">multiple</span></code>, when attributes <cite>a</cite> and <cite>b</cite> are in
-the same group, it is an error to include both of the attributes at the same
-time, with <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">eileen</span> <span class="pre">a</span> <span class="pre">b</span></code> for example. In the same example, calling
+exclusive. When attributes <cite>a</cite> and <cite>b</cite> are in the same group, it is an error to
+include both of the attributes at the same time, with <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">eileen</span> <span class="pre">a</span> <span class="pre">b</span></code> for
+example, except when the group is <code class="docutils literal notranslate"><span class="pre">multiple</span></code>. In the same example, calling
 attribute <cite>a</cite> will hide attribute <cite>b</cite>, and vice versa. However, note that it's
 fine for several <code class="docutils literal notranslate"><span class="pre">attribute</span></code> clauses to be passed the same name, <em>even within
 the same group</em>. In that case, they will be considered as one attribute
 containing several sprites - more about that at the end of this section.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">group</span></code> statement takes a name. The name isn't used for very much, except
-to generate the default names of attributes inside the group. That is not the
-case for <code class="docutils literal notranslate"><span class="pre">multiple</span></code> groups in which the name doesn't have any use or impact.</p>
+to generate the default names of attributes inside the group.</p>
+<p>The group name <code class="docutils literal notranslate"><span class="pre">multiple</span></code> is reserved, it has the specific behavior of making that
+group <code class="docutils literal notranslate"><span class="pre">multiple</span></code>. In that case, no incompatibility is applied to the attributes
+declared inside the block. This is useful to have a group auto-define multiple
+attributes that are not exclusive, or to apply the same properties to a set of
+attributes at once. This conflicts with the <code class="docutils literal notranslate"><span class="pre">default</span></code> keyword being given to one
+of the attributes. Note that <code class="docutils literal notranslate"><span class="pre">multiple</span></code> groups are very different from other,
+normal groups, and that most of what's true about groups doesn't apply to them.
+Notably, they are considered as not having a name at all.</p>
 <p>The name may be followed by the <code class="docutils literal notranslate"><span class="pre">auto</span></code> keyword. If it's present, after any
 attributes in the group have been declared, Ren'Py will scan its list of images
 for those that match the group's pattern (see <a class="reference internal" href="#layeredimage-pattern"><span class="std std-ref">below</span></a>),
-with the specificity that in that case, a multiple group's name <em>is</em> part if the
-pattern, and that the <code class="docutils literal notranslate"><span class="pre">format_function</span></code> passed to the layeredimage is ignored.
+with the specificity that in that case,
+the <code class="docutils literal notranslate"><span class="pre">format_function</span></code> passed to the layeredimage is ignored.
 Any images that are found, except those corresponding to explicitly declared
 attributes, are then added to the group as if declared using the <code class="docutils literal notranslate"><span class="pre">attribute</span></code>
 statement inside the group's block. See the <a class="reference internal" href="#layeredimage-examples"><span class="std std-ref">Examples</span></a> section
 for a practical demo.</p>
-<p>This can be followed by the <code class="docutils literal notranslate"><span class="pre">multiple</span></code> keyword. If present, no incompatibility
-is applied to the attributes declared inside the block. This is useful to have a
-group auto-define multiple attributes that are not exclusive, or to apply the
-same properties to a set of attributes at once. This conflicts with the
-<code class="docutils literal notranslate"><span class="pre">default</span></code> keyword being given to one of the attributes. Note that <code class="docutils literal notranslate"><span class="pre">multiple</span></code>
-groups are very different from other, normal groups, and that most of what's
-true about groups doesn't apply to them.</p>
-<p>After these optional keywords, properties can then be declared on the first line
+<p>After this optional keyword, properties can then be declared on the first line
 of the group, and it can take a block containing properties and attributes.</p>
 <p>The group statement takes the properties <code class="docutils literal notranslate"><span class="pre">attribute</span></code> does - such as
-<code class="docutils literal notranslate"><span class="pre">if_any</span></code>, <code class="docutils literal notranslate"><span class="pre">at</span></code> and so on. Properties supplied to the group are passed to
+<code class="docutils literal notranslate"><span class="pre">when</span></code>, <code class="docutils literal notranslate"><span class="pre">at</span></code> and so on. Properties supplied to the group are passed to
 the attributes inside the group, unless overridden by the same property of the
-attribute itself. In addition, there are two properties which are specific to
-groups:</p>
+attribute itself. Two properties are more specific to groups:</p>
 <dl class="simple">
-<dt><cite>variant</cite></dt><dd><p>If given, this should be a string. If present, it adds an element that becomes
-part of automatically-generated image names, and of the pattern used to search
-for images when automatically defining attributes in <code class="docutils literal notranslate"><span class="pre">auto</span></code> groups.</p>
+<dt><cite>variant</cite></dt><dd><p>This is similar to the property <code class="docutils literal notranslate"><span class="pre">attribute</span></code> takes, except that it cannot
+be passed to both the group _and_ to attributes within it.
+If given, this should be a word. If present, it is used as the variant for
+automatically generating image names for attributes with no explicitly
+passed displayables (see the <a class="reference internal" href="#layeredimage-pattern"><span class="std std-ref">pattern</span></a> section
+for more details), and it is used in the pattern used to search for images
+when automatically defining attributes in <code class="docutils literal notranslate"><span class="pre">auto</span></code> groups (see above).</p>
 </dd>
 <dt><cite>prefix</cite></dt><dd><p>If given, this is a prefix that is concatenated using an underscore with the
-manually or automatically defined attribute names. So if prefix is &quot;leftarm&quot;,
-and the attribute name &quot;hip&quot; is encountered, <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">eileen</span> <span class="pre">leftarm_hip</span></code>
+manually or automatically defined attribute names. So if prefix is
+<code class="docutils literal notranslate"><span class="pre">leftarm</span></code>, and <code class="docutils literal notranslate"><span class="pre">attribute</span> <span class="pre">hip</span></code> is encountered, <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">eileen</span> <span class="pre">leftarm_hip</span></code>
 will display it.</p>
 </dd>
 </dl>
@@ -525,12 +531,12 @@ layeredimage, they are considered to be different parts of a single group. For
 example:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">layeredimage</span> <span class="n">eileen</span> <span class="n">sitting</span><span class="p">:</span>
     <span class="k">attribute</span> <span class="n">base</span> <span class="k">default</span>
-    <span class="k">group</span> <span class="n">arms</span> <span class="na">variant</span> <span class="s2">&quot;behind&quot;</span><span class="p">:</span>
+    <span class="k">group</span> <span class="n">arms</span> <span class="na">variant</span> <span class="k">behind</span><span class="p">:</span>
         <span class="k">attribute</span> <span class="n">on_hips</span>
         <span class="k">attribute</span> <span class="n">on_knees</span>
         <span class="k">attribute</span> <span class="n">mixed</span>
     <span class="k">attribute</span> <span class="n">table</span> <span class="k">default</span>
-    <span class="k">group</span> <span class="n">arms</span> <span class="na">variant</span> <span class="s2">&quot;infront&quot;</span><span class="p">:</span>
+    <span class="k">group</span> <span class="n">arms</span> <span class="na">variant</span> <span class="n">infront</span><span class="p">:</span>
         <span class="k">attribute</span> <span class="n">on_table</span> <span class="k">default</span>
         <span class="k">attribute</span> <span class="n">holding_margarita</span>
         <span class="k">attribute</span> <span class="n">mixed</span>
@@ -545,13 +551,70 @@ of the table. In this example, the <cite>on_hips</cite> attribute is incompatibl
 block, they are both in the same group.</p>
 </section>
 </section>
+<section id="when">
+<span id="id1"></span><h2>When<a class="headerlink" href="#when" title="Link to this heading"></a></h2>
+<p>A when expression expresses a boolean condition depending on the set of
+attributes currently active on the layeredimage.</p>
+<p>It consists of one or more attribute names separated by the &quot;and&quot; and &quot;or&quot;
+keywords, and possibly negated with &quot;not&quot;. You can also use parentheses to
+express priority.</p>
+<p>Example:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">always</span><span class="p">:</span>
+    <span class="s2">&quot;eileen_red_dress&quot;</span>
+    <span class="n">when</span> <span class="n">b</span> <span class="k">and</span> <span class="k">not</span> <span class="n">c</span>
+    <span class="c1"># the image will be shown when attribute b is active and attribute c is not</span>
+
+<span class="k">if</span> <span class="n">var</span><span class="p">:</span>
+    <span class="s2">&quot;eileen_blue_ribbon&quot;</span>
+    <span class="n">when</span> <span class="k">not</span> <span class="p">(</span><span class="n">a</span> <span class="k">or</span> <span class="n">b</span><span class="p">)</span>
+    <span class="c1"># the image will be shown when the var variable is true</span>
+    <span class="c1"># and neither attributes a nor b are active</span>
+
+<span class="k">attribute</span> <span class="n">a</span><span class="p">:</span>
+    <span class="s2">&quot;eileen_a&quot;</span>
+    <span class="n">when</span> <span class="n">b</span> <span class="k">or</span> <span class="n">e</span>
+    <span class="c1"># the image will be shown when attribute &quot;a&quot; is active</span>
+    <span class="c1"># and either attribute &quot;b&quot; or &quot;e&quot; are active</span>
+</pre></div>
+</div>
+<section id="deprecated-properties">
+<h3>Deprecated Properties<a class="headerlink" href="#deprecated-properties" title="Link to this heading"></a></h3>
+<p>The following properties of the <code class="docutils literal notranslate"><span class="pre">always</span></code>, <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">attribute</span></code>
+statements are deprecated, but may be present in games written before
+the <code class="docutils literal notranslate"><span class="pre">when</span></code> clause was added. These still work, but <code class="docutils literal notranslate"><span class="pre">when</span></code> is preferred.</p>
+<dl class="simple">
+<dt><cite>if_all</cite></dt><dd><p>A string or list of strings giving the names of attributes. If this is
+given, this layer is only displayed if all of the named attributes
+are present.</p>
+</dd>
+<dt><cite>if_any</cite></dt><dd><p>A string or list of strings giving the names of attributes. If this is
+given, this layer is only displayed if any of the named attributes
+are present.</p>
+</dd>
+<dt><cite>if_not</cite></dt><dd><p>A string or list of strings giving the names of attributes. If this is
+given, this layer is only displayed if none of the named attributes are
+present.</p>
+</dd>
+</dl>
+<p>To convert to the <code class="docutils literal notranslate"><span class="pre">when</span></code> syntax, you can replace:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">if_any</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">]</span>
+<span class="n">if_all</span> <span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">]</span>
+<span class="n">if_not</span> <span class="p">[</span><span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>with the more concise:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">when</span> <span class="p">(</span><span class="n">a</span> <span class="k">or</span> <span class="n">b</span><span class="p">)</span> <span class="k">and</span> <span class="n">c</span> <span class="k">and</span> <span class="n">d</span> <span class="k">and</span> <span class="k">not</span> <span class="p">(</span><span class="n">e</span> <span class="k">or</span> <span class="n">f</span><span class="p">)</span><span class="o">.</span>
+</pre></div>
+</div>
+</section>
+</section>
 <section id="pattern-and-format-function">
 <span id="layeredimage-pattern"></span><h2>Pattern and format function<a class="headerlink" href="#pattern-and-format-function" title="Link to this heading"></a></h2>
 <p>The pattern, used to find images for attributes when they are not explicitly
 given one, consists of:</p>
 <ul class="simple">
 <li><p>The name of the layeredimage, with spaces replaced with underscores.</p></li>
-<li><p>The name of the group, if any and if the group is not <code class="docutils literal notranslate"><span class="pre">multiple</span></code>.</p></li>
+<li><p>The name of the group, if we are in a non-<code class="docutils literal notranslate"><span class="pre">multiple</span></code> group.</p></li>
 <li><p>The name of the variant, if there is one.</p></li>
 <li><p>The name of the attribute.</p></li>
 </ul>
@@ -561,18 +624,13 @@ the pattern augustina_work_eyes_<cite>attribute</cite>. With a <cite>variant</ci
 would match the pattern augustina_work_eyes_blue_<cite>attribute</cite>. In the
 following example:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">layeredimage</span> <span class="n">augustina</span> <span class="n">work</span><span class="p">:</span>
-    <span class="k">group</span> <span class="n">eyes</span> <span class="na">variant</span> <span class="s2">&quot;blue&quot;</span><span class="p">:</span>
+    <span class="k">group</span> <span class="n">eyes</span> <span class="na">variant</span> <span class="n">blue</span><span class="p">:</span>
         <span class="k">attribute</span> <span class="n">closed</span>
 </pre></div>
 </div>
-<p>The attribute is linked to the image &quot;augustina_work_eyes_blue_closed&quot;. That
+<p>The attribute is linked to the image <code class="docutils literal notranslate"><span class="pre">&quot;augustina_work_eyes_blue_closed&quot;</span></code>. That
 can resolve to an image file named <code class="file docutils literal notranslate"><span class="pre">augustina_work_eyes_blue_closed.png</span></code>, but it
 can also be defined explicitly using the <a class="reference internal" href="displaying_images.html#image-statement"><span class="std std-ref">Image Statement</span></a> for example.</p>
-<p>If you want a <code class="docutils literal notranslate"><span class="pre">multiple</span></code> group's name to be included in the pattern, you can
-use the following syntax:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">group</span> <span class="n">addons</span> <span class="n">multiple</span> <span class="na">variant</span> <span class="s2">&quot;addons&quot;</span>
-</pre></div>
-</div>
 <p>All of the pattern behavior can be changed using a <cite>format_function</cite>:
 <a class="reference internal" href="#layeredimage.format_function" title="layeredimage.format_function"><code class="xref py py-func docutils literal notranslate"><span class="pre">layeredimage.format_function()</span></code></a> is the function used under the hood to
 implement the behavior described above. You can see what arguments it takes, in
@@ -615,6 +673,8 @@ But note that it would have found the same image without the format
 argument.</p>
 </dd></dl>
 
+<p>But note that the passed <cite>format_function</cite> does _not_ change how <code class="docutils literal notranslate"><span class="pre">auto</span></code> groups
+will find their images : they will always use the exact pattern described above.</p>
 </section>
 <section id="proxying-layered-images">
 <h2>Proxying Layered Images<a class="headerlink" href="#proxying-layered-images" title="Link to this heading"></a></h2>
@@ -699,7 +759,7 @@ along with those which were not discarded, will be recognized by renpy as the
 set of attributes associated with that image tag. This computing takes some
 of the incompatibility constraints into account, but not all. For instance
 incompatibilities due to attributes being in the same non-multiple group will
-trigger at this point in time, but the if_any/if_all/if_not clauses will not.
+trigger at this point in time, but the <code class="docutils literal notranslate"><span class="pre">when</span></code> clauses will not.
 That's why an attribute called but negated by such a clause will be considered
 active by renpy, and will for example become visible without having to be
 called again, if at some point the condition of the if_x clause is no longer
@@ -734,7 +794,7 @@ performance or image size much to crop the images yourself.</p>
 expressions written in a <code class="docutils literal notranslate"><span class="pre">layeredimage</span></code> block are evaluated at init time, when
 the layered image is first defined. This is not the case for ATL transforms for
 example, or for anything occurring in <a class="reference internal" href="config.html#var-config.adjust_attributes"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.adjust_attributes</span></code></a>,
-<code class="xref std std-var docutils literal notranslate"><span class="pre">config.default_attributes</span></code> or <code class="docutils literal notranslate"><span class="pre">attribute_function</span></code>, but it is the case
+<a class="reference internal" href="config.html#var-config.default_attribute_callbacks"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.default_attribute_callbacks</span></code></a> or <code class="docutils literal notranslate"><span class="pre">attribute_function</span></code>, but it is the case
 for <code class="docutils literal notranslate"><span class="pre">format_function</span></code> which is also only called at layeredimage definition.</p>
 <p><strong>Choosing what syntax to use</strong></p>
 <p>If you want a sprite to be always visible, use either the <code class="docutils literal notranslate"><span class="pre">always</span></code> clause or
@@ -773,8 +833,9 @@ francis_supersad.png
     <span class="k">attribute</span> <span class="n">base</span> <span class="k">default</span>
     <span class="k">group</span> <span class="n">face</span> <span class="k">auto</span>
         <span class="k">attribute</span> <span class="n">neutral</span> <span class="k">default</span>
-    <span class="k">attribute</span> <span class="n">supersad</span><span class="p">:</span>
-        <span class="n">Solid</span><span class="p">(</span><span class="s2">&quot;#00c3&quot;</span><span class="p">,</span> <span class="na">xysize</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+    <span class="k">attribute</span> <span class="n">supersad</span> <span class="k">image</span><span class="p">:</span>
+        <span class="s2">&quot;#00c3&quot;</span>
+        <span class="na">xysize</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">francis</span></code> layeredimage will declare the (defaulted) <code class="docutils literal notranslate"><span class="pre">base</span></code> attribute,
@@ -809,7 +870,7 @@ in the Advice section):</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">layeredimage</span> <span class="n">eileen</span><span class="p">:</span>
     <span class="k">attribute</span> <span class="n">base</span> <span class="k">default</span>
     <span class="k">group</span> <span class="n">outfit</span> <span class="k">auto</span>
-    <span class="k">group</span> <span class="n">ribbon</span> <span class="na">prefix</span> <span class="s2">&quot;ribbon&quot;</span><span class="p">:</span>
+    <span class="k">group</span> <span class="n">ribbon</span> <span class="na">prefix</span> <span class="n">ribbon</span><span class="p">:</span>
         <span class="k">attribute</span> <span class="n">red</span>
         <span class="k">attribute</span> <span class="n">blue</span>
 
@@ -826,6 +887,20 @@ in the Advice section):</p>
 <span class="k">define</span> <span class="n">config</span><span class="o">.</span><span class="n">adjust_attributes</span><span class="p">[</span><span class="s2">&quot;eileen&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">eileen_adjuster</span>
 </pre></div>
 </div>
+<p><strong>Including groups in when</strong></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">when</span></code> property does not allow a group name to be specified, so that a given layer be shown only when any or none of the attributes in a given group are shown. However, there is still a way to do that using the various other parts of the layeredimage syntax.</p>
+<p>Supposing that the group has no default attribute, you can add a default <code class="docutils literal notranslate"><span class="pre">null</span></code> attribute, with a name of your choice. That way, if no attribute from the group is shown, that attribute is activated (although nothing gets displayed), and it gets reactivated if an attribute of the group gets hidden.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">layeredimage</span> <span class="n">eliza</span><span class="p">:</span>
+    <span class="k">attribute</span> <span class="n">head_and_hair</span> <span class="k">default</span>
+    <span class="k">group</span> <span class="n">top</span> <span class="k">auto</span>
+    <span class="k">group</span> <span class="n">headtop</span> <span class="na">prefix</span> <span class="n">headtop</span><span class="p">:</span>
+        <span class="k">attribute</span> <span class="n">notop</span> <span class="k">null</span> <span class="k">default</span>
+        <span class="k">attribute</span> <span class="n">hat</span>
+        <span class="k">attribute</span> <span class="n">cap</span>
+    <span class="k">attribute</span> <span class="n">hair_patch</span> <span class="n">when</span> <span class="n">notop</span>
+</pre></div>
+</div>
+<p>Here, the hair_patch attribute will only show more of Eliza's hair over her top layer (on her shoulders for example) if there is no hat to hide it.</p>
 </section>
 </section>
 

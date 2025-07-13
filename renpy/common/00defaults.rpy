@@ -1,4 +1,4 @@
-﻿# Copyright 2004-2024 Tom Rothamel <pytom@bishoujo.us>
+﻿# Copyright 2004-2025 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -134,15 +134,6 @@ init -1500 python:
 init 1500 python hide:
 
     config.emphasize_audio_volume = _vol(config.emphasize_audio_volume)
-
-    if not persistent._linearized_volumes:
-        for k, v in _preferences.volumes.items():
-            _preferences.volumes[k] = v ** 2
-
-        for k, v in persistent._character_volume.items():
-            persistent._character_volume[k] = v ** 2
-
-        persistent._linearized_volumes = True
 
     _apply_default_preferences()
 

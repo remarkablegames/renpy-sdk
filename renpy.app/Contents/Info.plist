@@ -32,9 +32,9 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>Ren'Py 8.3.2.24090902</string>
+	<string>Ren'Py 8.4.0.25071206</string>
 	<key>CFBundleVersion</key>
-	<string>2024.0909.230241</string>
+	<string>2025.0712.123416</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.simulation-games</string>
 	<key>NSHighResolutionCapable</key>

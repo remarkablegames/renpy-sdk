@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -266,7 +266,7 @@ displayables can be used in many ways.</p>
 <li><p>Assignment to certain style properties.</p></li>
 </ul>
 <p>When a Ren'Py function or variable expects a displayable, there are
-five things that can be provided:</p>
+several things that can be provided:</p>
 <ul class="simple">
 <li><p>An object of type Displayable, created by calling one of the
 functions given below.</p></li>
@@ -304,7 +304,7 @@ Image directly is when you want to create an image with style
 properties.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="Image">
-<span class="sig-name descname"><span class="pre">Image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimize_bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">oversample</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">96</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Image" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">Image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimize_bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">oversample</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">96</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mipmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Image" title="Link to this definition"></a></dt>
 <dd><p>Loads an image from a file. <cite>filename</cite> is a
 string giving the name of the file.</p>
 <dl class="simple">
@@ -323,6 +323,10 @@ be treated as a 1024x1024 image for the purpose of layout.</p>
 <dt><cite>dpi</cite></dt><dd><p>The DPI of an SVG image. This defaults to 96, but that can be
 increased to render the SVG larger, and decreased to render
 it smaller.</p>
+</dd>
+<dt><cite>mipmap</cite></dt><dd><p>If this is &quot;auto&quot;, then mipmaps are generated for the image only if the game is scaled down to less than
+75% of its default size. If this is True, mipmaps are always generated. If this is False, mipmaps are never
+generated. If this is None, then the default is taken from config.mipmap.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -391,7 +395,7 @@ render properly into paths.</p>
 <p>Ren'Py will render SVG images as if the virtual screen was 96dpi.
 If the window is enlarged or shrunk, the SVG image will be scaled
 up or down, respectively, and <a class="reference internal" href="displaying_images.html#oversampling"><span class="std std-ref">oversampling</span></a> will
-be used to ensture the image is rendered at the correct virtual
+be used to ensure the image is rendered at the correct virtual
 size.</p>
 <p>This ensures the SVG will be rendered sharp if it is not scaled.</p>
 </section>

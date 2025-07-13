@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -46,7 +46,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -216,6 +216,7 @@ names can lead to obscure problems.</p>
 <li><p>AssertionError</p></li>
 <li><p>AttributeError</p></li>
 <li><p>BaseException</p></li>
+<li><p>BaseExceptionGroup</p></li>
 <li><p>BlockingIOError</p></li>
 <li><p>BrokenPipeError</p></li>
 <li><p>BufferError</p></li>
@@ -231,6 +232,7 @@ names can lead to obscure problems.</p>
 <li><p>EncodingWarning</p></li>
 <li><p>EnvironmentError</p></li>
 <li><p>Exception</p></li>
+<li><p>ExceptionGroup</p></li>
 <li><p>False</p></li>
 <li><p>FileExistsError</p></li>
 <li><p>FileNotFoundError</p></li>
@@ -362,6 +364,18 @@ names can lead to obscure problems.</p>
 <li><p>vars</p></li>
 <li><p>zip</p></li>
 </ul>
+<p>The following are reserved names imported from the Python
+<a class="reference external" href="https://docs.python.org/3/library/typing.html">typing</a>  module into all Ren'Py stores.</p>
+<ul class="simple">
+<li><p>Any</p></li>
+<li><p>Callable</p></li>
+<li><p>Literal</p></li>
+<li><p>Self</p></li>
+<li><p>cast</p></li>
+<li><p>final</p></li>
+<li><p>overload</p></li>
+<li><p>override</p></li>
+</ul>
 <p>The following is a list of names that are used by Ren'Py. While in some
 cases it makes sense to redefine these names, one should be aware that doing
 so can cause obscure problems.</p>
@@ -376,6 +390,7 @@ so can cause obscure problems.</p>
 <li><p><a class="reference internal" href="displayables.html#AlphaMask" title="AlphaMask"><code class="xref py py-class docutils literal notranslate"><span class="pre">AlphaMask</span></code></a></p></li>
 <li><p><a class="reference internal" href="screen_actions.html#AnimatedValue" title="AnimatedValue"><code class="xref py py-func docutils literal notranslate"><span class="pre">AnimatedValue()</span></code></a></p></li>
 <li><p>Animation</p></li>
+<li><p>Any</p></li>
 <li><p><a class="reference internal" href="transforms.html#At" title="At"><code class="xref py py-func docutils literal notranslate"><span class="pre">At()</span></code></a></p></li>
 <li><p><a class="reference internal" href="statement_equivalents.html#Attribute" title="Attribute"><code class="xref py py-class docutils literal notranslate"><span class="pre">Attribute</span></code></a></p></li>
 <li><p><a class="reference internal" href="audio.html#AudioData" title="AudioData"><code class="xref py py-class docutils literal notranslate"><span class="pre">AudioData</span></code></a></p></li>
@@ -386,6 +401,7 @@ so can cause obscure problems.</p>
 <li><p><a class="reference internal" href="matrixcolor.html#BrightnessMatrix" title="BrightnessMatrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">BrightnessMatrix</span></code></a></p></li>
 <li><p>Button</p></li>
 <li><p><a class="reference internal" href="screen_actions.html#Call" title="Call"><code class="xref py py-func docutils literal notranslate"><span class="pre">Call()</span></code></a></p></li>
+<li><p>Callable</p></li>
 <li><p><a class="reference internal" href="3dstage.html#Camera" title="Camera"><code class="xref py py-class docutils literal notranslate"><span class="pre">Camera</span></code></a></p></li>
 <li><p><a class="reference internal" href="screen_actions.html#CaptureFocus" title="CaptureFocus"><code class="xref py py-func docutils literal notranslate"><span class="pre">CaptureFocus()</span></code></a></p></li>
 <li><p><a class="reference internal" href="dialogue.html#Character" title="Character"><code class="xref py py-func docutils literal notranslate"><span class="pre">Character()</span></code></a></p></li>
@@ -454,6 +470,7 @@ so can cause obscure problems.</p>
 <li><p><a class="reference internal" href="text.html#FontGroup" title="FontGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">FontGroup</span></code></a></p></li>
 <li><p><a class="reference internal" href="displayables.html#Frame" title="Frame"><code class="xref py py-class docutils literal notranslate"><span class="pre">Frame</span></code></a></p></li>
 <li><p><a class="reference internal" href="screen_actions.html#Function" title="Function"><code class="xref py py-func docutils literal notranslate"><span class="pre">Function()</span></code></a></p></li>
+<li><p><a class="reference internal" href="model.html#GLTFModel" title="GLTFModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">GLTFModel</span></code></a></p></li>
 <li><p><a class="reference internal" href="rooms.html#Gallery" title="Gallery"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gallery</span></code></a></p></li>
 <li><p><a class="reference internal" href="screen_actions.html#GamepadCalibrate" title="GamepadCalibrate"><code class="xref py py-func docutils literal notranslate"><span class="pre">GamepadCalibrate()</span></code></a></p></li>
 <li><p><a class="reference internal" href="screen_actions.html#GamepadExists" title="GamepadExists"><code class="xref py py-func docutils literal notranslate"><span class="pre">GamepadExists()</span></code></a></p></li>
@@ -463,6 +480,7 @@ so can cause obscure problems.</p>
 <li><p><a class="reference internal" href="screen_actions.html#GetTooltip" title="GetTooltip"><code class="xref py py-func docutils literal notranslate"><span class="pre">GetTooltip()</span></code></a></p></li>
 <li><p><a class="reference internal" href="displayables.html#Grid" title="Grid"><code class="xref py py-func docutils literal notranslate"><span class="pre">Grid()</span></code></a></p></li>
 <li><p><a class="reference internal" href="displayables.html#HBox" title="HBox"><code class="xref py py-func docutils literal notranslate"><span class="pre">HBox()</span></code></a></p></li>
+<li><p><a class="reference internal" href="screen_actions.html#HasSideImage" title="HasSideImage"><code class="xref py py-func docutils literal notranslate"><span class="pre">HasSideImage()</span></code></a></p></li>
 <li><p><a class="reference internal" href="screen_actions.html#Help" title="Help"><code class="xref py py-func docutils literal notranslate"><span class="pre">Help()</span></code></a></p></li>
 <li><p><a class="reference internal" href="screen_actions.html#Hide" title="Hide"><code class="xref py py-func docutils literal notranslate"><span class="pre">Hide()</span></code></a></p></li>
 <li><p><a class="reference internal" href="screen_actions.html#HideInterface" title="HideInterface"><code class="xref py py-func docutils literal notranslate"><span class="pre">HideInterface()</span></code></a></p></li>
@@ -488,6 +506,7 @@ so can cause obscure problems.</p>
 <li><p><a class="reference internal" href="displayables.html#Layer" title="Layer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Layer</span></code></a></p></li>
 <li><p><a class="reference internal" href="statement_equivalents.html#LayeredImage" title="LayeredImage"><code class="xref py py-class docutils literal notranslate"><span class="pre">LayeredImage</span></code></a></p></li>
 <li><p><a class="reference internal" href="layeredimage.html#LayeredImageProxy" title="LayeredImageProxy"><code class="xref py py-class docutils literal notranslate"><span class="pre">LayeredImageProxy</span></code></a></p></li>
+<li><p>Literal</p></li>
 <li><p><a class="reference internal" href="live2d.html#Live2D" title="Live2D"><code class="xref py py-func docutils literal notranslate"><span class="pre">Live2D()</span></code></a></p></li>
 <li><p>LiveComposite</p></li>
 <li><p>LiveCrop</p></li>
@@ -559,6 +578,7 @@ so can cause obscure problems.</p>
 <li><p><a class="reference internal" href="screen_actions.html#Screenshot" title="Screenshot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Screenshot()</span></code></a></p></li>
 <li><p><a class="reference internal" href="screen_actions.html#Scroll" title="Scroll"><code class="xref py py-func docutils literal notranslate"><span class="pre">Scroll()</span></code></a></p></li>
 <li><p><a class="reference internal" href="screen_actions.html#SelectedIf" title="SelectedIf"><code class="xref py py-func docutils literal notranslate"><span class="pre">SelectedIf()</span></code></a></p></li>
+<li><p>Self</p></li>
 <li><p><a class="reference internal" href="screen_actions.html#SensitiveIf" title="SensitiveIf"><code class="xref py py-func docutils literal notranslate"><span class="pre">SensitiveIf()</span></code></a></p></li>
 <li><p><a class="reference internal" href="matrixcolor.html#SepiaMatrix" title="SepiaMatrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">SepiaMatrix()</span></code></a></p></li>
 <li><p>Set</p></li>
@@ -637,6 +657,7 @@ so can cause obscure problems.</p>
 <li><p>bord</p></li>
 <li><p><code class="xref std std-var docutils literal notranslate"><span class="pre">bubble</span></code></p></li>
 <li><p><code class="xref std std-var docutils literal notranslate"><span class="pre">build</span></code></p></li>
+<li><p>cast</p></li>
 <li><p><a class="reference internal" href="transforms.html#var-center"><code class="xref std std-var docutils literal notranslate"><span class="pre">center</span></code></a></p></li>
 <li><p>centered</p></li>
 <li><p>color</p></li>
@@ -659,6 +680,7 @@ so can cause obscure problems.</p>
 <li><p>easeouttop</p></li>
 <li><p>extend</p></li>
 <li><p><a class="reference internal" href="transitions.html#var-fade"><code class="xref std std-var docutils literal notranslate"><span class="pre">fade</span></code></a></p></li>
+<li><p>final</p></li>
 <li><p><a class="reference internal" href="namespaces.html#var-gui"><code class="xref std std-var docutils literal notranslate"><span class="pre">gui</span></code></a></p></li>
 <li><p><a class="reference internal" href="transitions.html#var-hpunch"><code class="xref std std-var docutils literal notranslate"><span class="pre">hpunch</span></code></a></p></li>
 <li><p>hyperlink_function</p></li>
@@ -703,6 +725,8 @@ so can cause obscure problems.</p>
 <li><p><a class="reference internal" href="transforms.html#var-offscreenleft"><code class="xref std std-var docutils literal notranslate"><span class="pre">offscreenleft</span></code></a></p></li>
 <li><p><a class="reference internal" href="transforms.html#var-offscreenright"><code class="xref std std-var docutils literal notranslate"><span class="pre">offscreenright</span></code></a></p></li>
 <li><p>os</p></li>
+<li><p>overload</p></li>
+<li><p>override</p></li>
 <li><p><a class="reference internal" href="namespaces.html#var-persistent"><code class="xref std std-var docutils literal notranslate"><span class="pre">persistent</span></code></a></p></li>
 <li><p><a class="reference internal" href="transitions.html#var-pixellate"><code class="xref std std-var docutils literal notranslate"><span class="pre">pixellate</span></code></a></p></li>
 <li><p><a class="reference internal" href="style_properties.html#position" title="position"><code class="xref py py-func docutils literal notranslate"><span class="pre">position()</span></code></a></p></li>

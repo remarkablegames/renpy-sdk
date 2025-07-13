@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -286,12 +286,12 @@ statement, and removes the space key from that list.</p>
 </pre></div>
 </div>
 <p>The default keymap is contained inside renpy/common/00keymap.rpy, and
-as of version 8.1.0 is as follows:</p>
+as of version 8.4.0 is as follows:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">config</span><span class="o">.</span><span class="n">keymap</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
 
     <span class="c1"># Bindings present almost everywhere, unless explicitly</span>
     <span class="c1"># disabled.</span>
-    <span class="n">rollback</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;any_K_PAGEUP&#39;</span><span class="p">,</span> <span class="s1">&#39;any_KP_PAGEUP&#39;</span><span class="p">,</span> <span class="s1">&#39;K_AC_BACK&#39;</span><span class="p">,</span> <span class="s1">&#39;mousedown_4&#39;</span> <span class="p">],</span>
+    <span class="n">rollback</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;anyrepeat_K_PAGEUP&#39;</span><span class="p">,</span> <span class="s1">&#39;anyrepeat_KP_PAGEUP&#39;</span><span class="p">,</span> <span class="s1">&#39;K_AC_BACK&#39;</span><span class="p">,</span> <span class="s1">&#39;mousedown_4&#39;</span> <span class="p">],</span>
     <span class="n">screenshot</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;alt_K_s&#39;</span><span class="p">,</span> <span class="s1">&#39;alt_shift_K_s&#39;</span><span class="p">,</span> <span class="s1">&#39;noshift_K_s&#39;</span> <span class="p">],</span>
     <span class="n">toggle_afm</span> <span class="o">=</span> <span class="p">[</span> <span class="p">],</span>
     <span class="n">toggle_fullscreen</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;alt_K_RETURN&#39;</span><span class="p">,</span> <span class="s1">&#39;alt_K_KP_ENTER&#39;</span><span class="p">,</span> <span class="s1">&#39;K_F11&#39;</span><span class="p">,</span> <span class="s1">&#39;noshift_K_f&#39;</span> <span class="p">],</span>
@@ -300,7 +300,7 @@ as of version 8.1.0 is as follows:</p>
     <span class="n">launch_editor</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;shift_K_e&#39;</span> <span class="p">],</span>
     <span class="n">dump_styles</span> <span class="o">=</span> <span class="p">[</span> <span class="p">],</span>
     <span class="n">reload_game</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;alt_K_r&#39;</span><span class="p">,</span> <span class="s1">&#39;shift_K_r&#39;</span> <span class="p">],</span>
-    <span class="n">inspector</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;alt_K_i&#39;</span><span class="p">,</span> <span class="s1">&#39;shift_K_i&#39;</span> <span class="p">],</span>
+    <span class="n">inspector</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;alt_noshift_K_i&#39;</span><span class="p">,</span> <span class="s1">&#39;shift_K_i&#39;</span> <span class="p">],</span>
     <span class="n">full_inspector</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;alt_shift_K_i&#39;</span> <span class="p">],</span>
     <span class="n">developer</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;alt_K_d&#39;</span><span class="p">,</span> <span class="s1">&#39;shift_K_d&#39;</span><span class="p">,</span> <span class="p">],</span>
     <span class="n">quit</span> <span class="o">=</span> <span class="p">[</span> <span class="p">],</span>
@@ -308,15 +308,17 @@ as of version 8.1.0 is as follows:</p>
     <span class="n">help</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;K_F1&#39;</span><span class="p">,</span> <span class="s1">&#39;meta_shift_/&#39;</span> <span class="p">],</span>
     <span class="n">choose_renderer</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;alt_K_g&#39;</span><span class="p">,</span> <span class="s1">&#39;shift_K_g&#39;</span> <span class="p">],</span>
     <span class="n">progress_screen</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;alt_shift_K_p&#39;</span><span class="p">,</span> <span class="s1">&#39;meta_shift_K_p&#39;</span><span class="p">,</span> <span class="s1">&#39;K_F2&#39;</span> <span class="p">],</span>
-    <span class="n">accessibility</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;K_a&#39;</span> <span class="p">],</span>
+    <span class="n">bubble_editor</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;alt_K_b&#39;</span><span class="p">,</span> <span class="s1">&#39;shift_K_b&#39;</span> <span class="p">],</span>
 
     <span class="c1"># Accessibility.</span>
+    <span class="n">accessibility</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;shift_K_a&#39;</span> <span class="p">],</span>
     <span class="n">self_voicing</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;alt_K_v&#39;</span><span class="p">,</span> <span class="s1">&#39;K_v&#39;</span> <span class="p">],</span>
     <span class="n">clipboard_voicing</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;alt_shift_K_c&#39;</span><span class="p">,</span> <span class="s1">&#39;shift_K_c&#39;</span> <span class="p">],</span>
     <span class="n">debug_voicing</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;alt_shift_K_v&#39;</span><span class="p">,</span> <span class="s1">&#39;meta_shift_K_v&#39;</span> <span class="p">],</span>
+    <span class="n">extra_voicing</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;?&#39;</span> <span class="p">],</span>
 
     <span class="c1"># Say.</span>
-    <span class="n">rollforward</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;any_K_PAGEDOWN&#39;</span><span class="p">,</span> <span class="s1">&#39;any_KP_PAGEDOWN&#39;</span><span class="p">,</span> <span class="s1">&#39;mousedown_5&#39;</span><span class="p">,</span> <span class="p">],</span>
+    <span class="n">rollforward</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;anyrepeat_K_PAGEDOWN&#39;</span><span class="p">,</span> <span class="s1">&#39;anyrepeat_KP_PAGEDOWN&#39;</span><span class="p">,</span> <span class="s1">&#39;mousedown_5&#39;</span><span class="p">,</span> <span class="p">],</span>
     <span class="k">dismiss</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;K_RETURN&#39;</span><span class="p">,</span> <span class="s1">&#39;K_SPACE&#39;</span><span class="p">,</span> <span class="s1">&#39;K_KP_ENTER&#39;</span><span class="p">,</span> <span class="s1">&#39;K_SELECT&#39;</span><span class="p">,</span> <span class="s1">&#39;mouseup_1&#39;</span> <span class="p">],</span>
     <span class="n">dismiss_unfocused</span> <span class="o">=</span> <span class="p">[</span> <span class="p">],</span>
 
@@ -324,10 +326,10 @@ as of version 8.1.0 is as follows:</p>
     <span class="n">dismiss_hard_pause</span> <span class="o">=</span> <span class="p">[</span> <span class="p">],</span>
 
     <span class="c1"># Focus.</span>
-    <span class="n">focus_left</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;any_K_LEFT&#39;</span><span class="p">,</span> <span class="s1">&#39;any_KP_LEFT&#39;</span> <span class="p">],</span>
-    <span class="n">focus_right</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;any_K_RIGHT&#39;</span><span class="p">,</span> <span class="s1">&#39;any_KP_RIGHT&#39;</span> <span class="p">],</span>
-    <span class="n">focus_up</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;any_K_UP&#39;</span><span class="p">,</span> <span class="s1">&#39;any_KP_UP&#39;</span> <span class="p">],</span>
-    <span class="n">focus_down</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;any_K_DOWN&#39;</span><span class="p">,</span> <span class="s1">&#39;any_KP_DOWN&#39;</span> <span class="p">],</span>
+    <span class="n">focus_left</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;anyrepeat_K_LEFT&#39;</span><span class="p">,</span> <span class="s1">&#39;anyrepeat_KP_LEFT&#39;</span> <span class="p">],</span>
+    <span class="n">focus_right</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;anyrepeat_K_RIGHT&#39;</span><span class="p">,</span> <span class="s1">&#39;anyrepeat_KP_RIGHT&#39;</span> <span class="p">],</span>
+    <span class="n">focus_up</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;anyrepeat_K_UP&#39;</span><span class="p">,</span> <span class="s1">&#39;anyrepeat_KP_UP&#39;</span> <span class="p">],</span>
+    <span class="n">focus_down</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;anyrepeat_K_DOWN&#39;</span><span class="p">,</span> <span class="s1">&#39;anyrepeat_KP_DOWN&#39;</span> <span class="p">],</span>
 
     <span class="c1"># Button.</span>
     <span class="n">button_ignore</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;mousedown_1&#39;</span> <span class="p">],</span>
@@ -336,14 +338,14 @@ as of version 8.1.0 is as follows:</p>
     <span class="n">button_alternate_ignore</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;mousedown_3&#39;</span> <span class="p">],</span>
 
     <span class="c1"># Input.</span>
-    <span class="n">input_backspace</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;any_K_BACKSPACE&#39;</span> <span class="p">],</span>
+    <span class="n">input_backspace</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;anyrepeat_K_BACKSPACE&#39;</span> <span class="p">],</span>
     <span class="n">input_enter</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;K_RETURN&#39;</span><span class="p">,</span> <span class="s1">&#39;K_KP_ENTER&#39;</span> <span class="p">],</span>
     <span class="n">input_next_line</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;shift_K_RETURN&#39;</span><span class="p">,</span> <span class="s1">&#39;shift_K_KP_ENTER&#39;</span> <span class="p">],</span>
-    <span class="n">input_left</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;any_K_LEFT&#39;</span><span class="p">,</span> <span class="s1">&#39;any_KP_LEFT&#39;</span> <span class="p">],</span>
-    <span class="n">input_right</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;any_K_RIGHT&#39;</span><span class="p">,</span> <span class="s1">&#39;any_KP_RIGHT&#39;</span> <span class="p">],</span>
-    <span class="n">input_up</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;any_K_UP&#39;</span><span class="p">,</span> <span class="s1">&#39;any_KP_UP&#39;</span> <span class="p">],</span>
-    <span class="n">input_down</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;any_K_DOWN&#39;</span><span class="p">,</span> <span class="s1">&#39;any_KP_DOWN&#39;</span> <span class="p">],</span>
-    <span class="n">input_delete</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;any_K_DELETE&#39;</span><span class="p">,</span> <span class="s1">&#39;any_KP_DELETE&#39;</span> <span class="p">],</span>
+    <span class="n">input_left</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;anyrepeat_K_LEFT&#39;</span><span class="p">,</span> <span class="s1">&#39;anyrepeat_KP_LEFT&#39;</span> <span class="p">],</span>
+    <span class="n">input_right</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;anyrepeat_K_RIGHT&#39;</span><span class="p">,</span> <span class="s1">&#39;anyrepeat_KP_RIGHT&#39;</span> <span class="p">],</span>
+    <span class="n">input_up</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;anyrepeat_K_UP&#39;</span><span class="p">,</span> <span class="s1">&#39;anyrepeat_KP_UP&#39;</span> <span class="p">],</span>
+    <span class="n">input_down</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;anyrepeat_K_DOWN&#39;</span><span class="p">,</span> <span class="s1">&#39;anyrepeat_KP_DOWN&#39;</span> <span class="p">],</span>
+    <span class="n">input_delete</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;anyrepeat_K_DELETE&#39;</span><span class="p">,</span> <span class="s1">&#39;anyrepeat_KP_DELETE&#39;</span> <span class="p">],</span>
     <span class="n">input_home</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;K_HOME&#39;</span><span class="p">,</span> <span class="s1">&#39;KP_HOME&#39;</span><span class="p">,</span> <span class="s1">&#39;meta_K_LEFT&#39;</span> <span class="p">],</span>
     <span class="n">input_end</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;K_END&#39;</span><span class="p">,</span> <span class="s1">&#39;KP_END&#39;</span><span class="p">,</span> <span class="s1">&#39;meta_K_RIGHT&#39;</span> <span class="p">],</span>
     <span class="n">input_copy</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;ctrl_noshift_K_INSERT&#39;</span><span class="p">,</span> <span class="s1">&#39;ctrl_noshift_K_c&#39;</span><span class="p">,</span> <span class="s1">&#39;meta_noshift_K_c&#39;</span> <span class="p">],</span>
@@ -354,19 +356,19 @@ as of version 8.1.0 is as follows:</p>
     <span class="n">input_delete_full</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;meta_K_BACKSPACE&#39;</span> <span class="p">],</span>
 
     <span class="c1"># Viewport.</span>
-    <span class="n">viewport_leftarrow</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;any_K_LEFT&#39;</span><span class="p">,</span> <span class="s1">&#39;any_KP_LEFT&#39;</span> <span class="p">],</span>
-    <span class="n">viewport_rightarrow</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;any_K_RIGHT&#39;</span><span class="p">,</span> <span class="s1">&#39;any_KP_RIGHT&#39;</span> <span class="p">],</span>
-    <span class="n">viewport_uparrow</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;any_K_UP&#39;</span><span class="p">,</span> <span class="s1">&#39;any_KP_UP&#39;</span> <span class="p">],</span>
-    <span class="n">viewport_downarrow</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;any_K_DOWN&#39;</span><span class="p">,</span> <span class="s1">&#39;any_KP_DOWN&#39;</span> <span class="p">],</span>
+    <span class="n">viewport_leftarrow</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;anyrepeat_K_LEFT&#39;</span><span class="p">,</span> <span class="s1">&#39;anyrepeat_KP_LEFT&#39;</span> <span class="p">],</span>
+    <span class="n">viewport_rightarrow</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;anyrepeat_K_RIGHT&#39;</span><span class="p">,</span> <span class="s1">&#39;anyrepeat_KP_RIGHT&#39;</span> <span class="p">],</span>
+    <span class="n">viewport_uparrow</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;anyrepeat_K_UP&#39;</span><span class="p">,</span> <span class="s1">&#39;anyrepeat_KP_UP&#39;</span> <span class="p">],</span>
+    <span class="n">viewport_downarrow</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;anyrepeat_K_DOWN&#39;</span><span class="p">,</span> <span class="s1">&#39;anyrepeat_KP_DOWN&#39;</span> <span class="p">],</span>
     <span class="n">viewport_wheelup</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;mousedown_4&#39;</span> <span class="p">],</span>
     <span class="n">viewport_wheeldown</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;mousedown_5&#39;</span> <span class="p">],</span>
     <span class="n">viewport_drag_start</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;mousedown_1&#39;</span> <span class="p">],</span>
     <span class="n">viewport_drag_end</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;mouseup_1&#39;</span> <span class="p">],</span>
-    <span class="n">viewport_pageup</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;any_K_PAGEUP&#39;</span><span class="p">,</span> <span class="s1">&#39;any_KP_PAGEUP&#39;</span><span class="p">],</span>
-    <span class="n">viewport_pagedown</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;any_K_PAGEDOWN&#39;</span><span class="p">,</span> <span class="s1">&#39;any_KP_PAGEDOWN&#39;</span> <span class="p">],</span>
+    <span class="n">viewport_pageup</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;anyrepeat_K_PAGEUP&#39;</span><span class="p">,</span> <span class="s1">&#39;anyrepeat_KP_PAGEUP&#39;</span><span class="p">],</span>
+    <span class="n">viewport_pagedown</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;anyrepeat_K_PAGEDOWN&#39;</span><span class="p">,</span> <span class="s1">&#39;anyrepeat_KP_PAGEDOWN&#39;</span> <span class="p">],</span>
 
     <span class="c1"># These keys control skipping.</span>
-    <span class="n">skip</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;K_LCTRL&#39;</span><span class="p">,</span> <span class="s1">&#39;K_RCTRL&#39;</span> <span class="p">],</span>
+    <span class="n">skip</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;anymod_K_LCTRL&#39;</span><span class="p">,</span> <span class="s1">&#39;anymod_K_RCTRL&#39;</span> <span class="p">],</span>
     <span class="n">stop_skipping</span> <span class="o">=</span> <span class="p">[</span> <span class="p">],</span>
     <span class="n">toggle_skip</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;K_TAB&#39;</span> <span class="p">],</span>
     <span class="n">fast_skip</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;shift_K_PERIOD&#39;</span> <span class="p">],</span>
@@ -374,13 +376,17 @@ as of version 8.1.0 is as follows:</p>
     <span class="c1"># Bar.</span>
     <span class="n">bar_activate</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;mousedown_1&#39;</span><span class="p">,</span> <span class="s1">&#39;K_RETURN&#39;</span><span class="p">,</span> <span class="s1">&#39;K_KP_ENTER&#39;</span><span class="p">,</span> <span class="s1">&#39;K_SELECT&#39;</span> <span class="p">],</span>
     <span class="n">bar_deactivate</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;mouseup_1&#39;</span><span class="p">,</span> <span class="s1">&#39;K_RETURN&#39;</span><span class="p">,</span> <span class="s1">&#39;K_KP_ENTER&#39;</span><span class="p">,</span> <span class="s1">&#39;K_SELECT&#39;</span> <span class="p">],</span>
-    <span class="n">bar_left</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;any_K_LEFT&#39;</span><span class="p">,</span> <span class="s1">&#39;any_KP_LEFT&#39;</span> <span class="p">],</span>
-    <span class="n">bar_right</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;any_K_RIGHT&#39;</span><span class="p">,</span> <span class="s1">&#39;any_KP_RIGHT&#39;</span> <span class="p">],</span>
-    <span class="n">bar_up</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;any_K_UP&#39;</span><span class="p">,</span> <span class="s1">&#39;any_KP_UP&#39;</span> <span class="p">],</span>
-    <span class="n">bar_down</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;any_K_DOWN&#39;</span><span class="p">,</span> <span class="s1">&#39;any_KP_DOWN&#39;</span> <span class="p">],</span>
+    <span class="n">bar_left</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;anyrepeat_K_LEFT&#39;</span><span class="p">,</span> <span class="s1">&#39;anyrepeat_KP_LEFT&#39;</span> <span class="p">],</span>
+    <span class="n">bar_right</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;anyrepeat_K_RIGHT&#39;</span><span class="p">,</span> <span class="s1">&#39;anyrepeat_KP_RIGHT&#39;</span> <span class="p">],</span>
+    <span class="n">bar_up</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;anyrepeat_K_UP&#39;</span><span class="p">,</span> <span class="s1">&#39;anyrepeat_KP_UP&#39;</span> <span class="p">],</span>
+    <span class="n">bar_down</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;anyrepeat_K_DOWN&#39;</span><span class="p">,</span> <span class="s1">&#39;anyrepeat_KP_DOWN&#39;</span> <span class="p">],</span>
 
     <span class="c1"># Delete a save.</span>
     <span class="n">save_delete</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;K_DELETE&#39;</span><span class="p">,</span> <span class="s1">&#39;KP_DELETE&#39;</span> <span class="p">],</span>
+
+    <span class="c1"># Save/load screen pagination.</span>
+    <span class="n">save_page_prev</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;mousedown_4&#39;</span><span class="p">],</span>
+    <span class="n">save_page_next</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;mousedown_5&#39;</span><span class="p">],</span>
 
     <span class="c1"># Draggable.</span>
     <span class="n">drag_activate</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;mousedown_1&#39;</span> <span class="p">],</span>
@@ -388,8 +394,9 @@ as of version 8.1.0 is as follows:</p>
 
     <span class="c1"># Debug console.</span>
     <span class="n">console</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;shift_K_o&#39;</span><span class="p">,</span> <span class="s1">&#39;alt_shift_K_o&#39;</span> <span class="p">],</span>
-    <span class="n">console_older</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;any_K_UP&#39;</span><span class="p">,</span> <span class="s1">&#39;any_KP_UP&#39;</span> <span class="p">],</span>
-    <span class="n">console_newer</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;any_K_DOWN&#39;</span><span class="p">,</span> <span class="s1">&#39;any_KP_DOWN&#39;</span> <span class="p">],</span>
+    <span class="n">console_exit</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;K_ESCAPE&#39;</span><span class="p">,</span> <span class="s1">&#39;K_MENU&#39;</span><span class="p">,</span> <span class="s1">&#39;K_PAUSE&#39;</span><span class="p">,</span> <span class="s1">&#39;mouseup_3&#39;</span> <span class="p">],</span>
+    <span class="n">console_older</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;anyrepeat_K_UP&#39;</span><span class="p">,</span> <span class="s1">&#39;anyrepeat_KP_UP&#39;</span> <span class="p">],</span>
+    <span class="n">console_newer</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;anyrepeat_K_DOWN&#39;</span><span class="p">,</span> <span class="s1">&#39;anyrepeat_KP_DOWN&#39;</span> <span class="p">],</span>
 
     <span class="c1"># Director</span>
     <span class="n">director</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;noshift_K_d&#39;</span> <span class="p">],</span>
@@ -404,7 +411,6 @@ as of version 8.1.0 is as follows:</p>
     <span class="n">image_load_log</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;K_F4&#39;</span> <span class="p">],</span>
     <span class="n">profile_once</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;K_F8&#39;</span> <span class="p">],</span>
     <span class="n">memory_profile</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;K_F7&#39;</span> <span class="p">],</span>
-
 <span class="p">)</span>
 </pre></div>
 </div>

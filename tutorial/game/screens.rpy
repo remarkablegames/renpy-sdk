@@ -105,7 +105,6 @@ example say_screen:
             text what id "what"
 
 screen say(who, what):
-    style_prefix "say"
 
     window:
         id "window"
@@ -1494,6 +1493,10 @@ style game_menu_navigation_frame:
 style game_menu_content_frame:
     variant "small"
     top_margin 0
+
+style game_menu_viewport:
+    variant "small"
+    xsize 870
 
 style pref_vbox:
     variant "small"

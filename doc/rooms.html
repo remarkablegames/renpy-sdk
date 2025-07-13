@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -111,6 +111,9 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Image Gallery, Music Room, and Replay Actions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#image-gallery">Image Gallery</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#Gallery"><code class="docutils literal notranslate"><span class="pre">Gallery</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.enter_transition"><code class="docutils literal notranslate"><span class="pre">Gallery.enter_transition</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.intra_transition"><code class="docutils literal notranslate"><span class="pre">Gallery.intra_transition</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.exit_transition"><code class="docutils literal notranslate"><span class="pre">Gallery.exit_transition</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Gallery.transition"><code class="docutils literal notranslate"><span class="pre">Gallery.transition</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Gallery.locked_button"><code class="docutils literal notranslate"><span class="pre">Gallery.locked_button</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Gallery.hover_border"><code class="docutils literal notranslate"><span class="pre">Gallery.hover_border</span></code></a></li>
@@ -323,7 +326,7 @@ image galleries, or to return to the main or extras menu.</p></li>
     <span class="n">g</span><span class="o">.</span><span class="k">image</span><span class="p">(</span><span class="s2">&quot;dawn1&quot;</span><span class="p">)</span>
     <span class="n">g</span><span class="o">.</span><span class="n">unlock</span><span class="p">(</span><span class="s2">&quot;dawn1&quot;</span><span class="p">)</span>
 
-    <span class="c1"># This button has multiple images assocated with it. We use unlock_image</span>
+    <span class="c1"># This button has multiple images associated with it. We use unlock_image</span>
     <span class="c1"># so we don&#39;t have to call both .image and .unlock. We also apply a</span>
     <span class="c1"># transform to the first image.</span>
     <span class="n">g</span><span class="o">.</span><span class="k">button</span><span class="p">(</span><span class="s2">&quot;dark&quot;</span><span class="p">)</span>
@@ -431,9 +434,31 @@ accomplishing it is to add the following line:</p>
 locking of images, providing an action that can show one or more images,
 and a providing method that creates buttons that use that action.</p>
 <dl class="py attribute">
+<dt class="sig sig-object py" id="Gallery.enter_transition">
+<span class="sig-name descname"><span class="pre">enter_transition</span></span><a class="headerlink" href="#Gallery.enter_transition" title="Link to this definition"></a></dt>
+<dd><p>The transition that is used when displaying the first image associated
+with a gallery button.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Gallery.intra_transition">
+<span class="sig-name descname"><span class="pre">intra_transition</span></span><a class="headerlink" href="#Gallery.intra_transition" title="Link to this definition"></a></dt>
+<dd><p>The transition that is used when displaying images associated with
+gallery buttons, apart from the first.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Gallery.exit_transition">
+<span class="sig-name descname"><span class="pre">exit_transition</span></span><a class="headerlink" href="#Gallery.exit_transition" title="Link to this definition"></a></dt>
+<dd><p>The transition that is used when returning from the last image associated
+with a gallery button to the gallery screen.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="Gallery.transition">
 <span class="sig-name descname"><span class="pre">transition</span></span><a class="headerlink" href="#Gallery.transition" title="Link to this definition"></a></dt>
-<dd><p>The transition that is used when changing images.</p>
+<dd><p>This is used in place of enter_transition, intra_transition, or exit_transition
+if one or more of them has not been set.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -575,7 +600,7 @@ current button have been unlocked.</p>
 <dt class="sig sig-object py" id="Gallery.get_fraction">
 <span class="sig-name descname"><span class="pre">get_fraction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'{seen}/{total}'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gallery.get_fraction" title="Link to this definition"></a></dt>
 <dd><p>Returns a text string giving the number of unlocked images and total number of images in the button
-named <cite>name</cite>.</p>
+named <cite>name</cite>. If <cite>name</cite> is None, returns the same information for all buttons.</p>
 <dl>
 <dt><cite>format</cite></dt><dd><p>A Python format string that's used to format the numbers. This has three values that
 can be substituted in:</p>

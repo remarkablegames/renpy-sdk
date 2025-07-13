@@ -1,4 +1,4 @@
-﻿# Copyright 2004-2024 Tom Rothamel <pytom@bishoujo.us>
+﻿# Copyright 2004-2025 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -518,6 +518,9 @@ label _save_reload_game:
 
         renpy.take_screenshot((config.thumbnail_width, config.thumbnail_height))
 
+        for i in config.bottom_layers + config.layers + config.top_layers:
+            renpy.scene(layer=i)
+
         ui.add(Solid((0, 0, 0, 255)))
         ui.text("Saving game...",
                 size=32, xalign=0.5, yalign=0.5, color="#fff", style="_text")
@@ -548,6 +551,9 @@ label _load_reload_game:
     python hide:
 
         try:
+
+            for i in config.bottom_layers + config.layers + config.top_layers:
+                renpy.scene(layer=i)
 
             ui.add(Solid((0, 0, 0, 255)))
             ui.text("Reloading game...",

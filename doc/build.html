@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -289,8 +289,9 @@ build.directory_name to mygame-1.0, the archive files will
 be placed in mygame-1.0-dists in the directory above the base
 directory.</p>
 <p>This variable should not contain special characters like spaces,
-colons, and semicolons. If not set, it defaults to <a class="reference internal" href="#var-build.name"><code class="xref std std-var docutils literal notranslate"><span class="pre">build.name</span></code></a>
-a dash, and <a class="reference internal" href="config.html#var-config.version"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.version</span></code></a>.</p>
+colons, and semicolons. If not set, it defaults to <a class="reference internal" href="#var-build.name"><code class="xref std std-var docutils literal notranslate"><span class="pre">build.name</span></code></a>,
+a dash, and the version. The version is taken from <a class="reference internal" href="#var-build.version"><code class="xref std std-var docutils literal notranslate"><span class="pre">build.version</span></code></a>,
+if set, or <a class="reference internal" href="config.html#var-config.version"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.version</span></code></a>.</p>
 </dd></dl>
 
 <dl class="std var">
@@ -460,25 +461,32 @@ exist until after you're gone.</p>
 </section>
 <section id="the-old-game-directory">
 <span id="old-game"></span><h2>The Old-game Directory<a class="headerlink" href="#the-old-game-directory" title="Link to this heading"></a></h2>
-<p>When making multiple releases, like when a game is distributed through
-early access or platforms like Patreon, it's necessary to keep the
-old .rpyc files around. The .rpyc files contain information that is
-necessary to ensure that saves can be loaded, and omitting these
-files can cause problems.</p>
-<p>At the same time, Ren'Py will update the .rpyc files in the game
-directory when these files are changed, making the files unsuitable
-for inclusion in version control.</p>
-<p>To solve this problem, Ren'Py allows you to place the .rpyc files from
-a previous distribution into the old-game directory, which is alongside
-the game directory. The directory structure of <code class="file docutils literal notranslate"><span class="pre">old-game/</span></code> should match
-the directory structure of <code class="file docutils literal notranslate"><span class="pre">game/</span></code>. For example, <code class="file docutils literal notranslate"><span class="pre">game/scripts/day1.rpyc</span></code>
-should be moved to <code class="file docutils literal notranslate"><span class="pre">old-game/scripts/day1.rpyc</span></code>. Files in old-game that are
-not .rpyc files are ignored.</p>
-<p>The advantage of using old-game is that the old-game .rpyc files can be
-checked in, and that Ren'Py will always start from a known source when
-generating .rpyc files. While this might not be necessary for a
-single-developer game with minor changes, old-game is useful for large
-multiple developer games.</p>
+<p>Ren'Py uses compiled script files (called <cite>.rpyc</cite> files) to run your game quickly.
+These files also store important details, like unique IDs for each line of dialogue
+or scene, that save files rely on. When a game is updated and <cite>.rpy</cite> scripts change,
+Ren'Py updates or creates accompanying <cite>.rpyc</cite> files when the game is launched.</p>
+<p>This updating nature of <cite>.rpyc</cite> files can create a challenge for developers who
+are making multiple releases, like when a game is distributed through early access
+or platforms like Patreon, or are working on large, multi-developer games. During
+development, it's easy to make a series of changes to an <cite>.rpy</cite> file that causes the
+resulting <cite>.rpyc</cite> file to have different IDs than the ones used in your current stable
+release. For teams, this is an even larger challenge because multiple developers might
+edit the same <cite>.rpy</cite>.
+Without a single <cite>.rpyc</cite> file as the definite source, how can Ren'Py preserve its IDs?</p>
+<p>To keep these changes from breaking save game compatibility, developers can use the
+<cite>old-game</cite>-directory. This special folder, which sits next to the <cite>game</cite>-directory in
+your project folder, lets you save a copy of the <cite>.rpyc</cite> files from your previous release.
+Its structure should match the <cite>game</cite>-directory. For example, move <cite>game/scripts/day1.rpyc</cite>
+to <cite>old-game/scripts/day1.rpyc</cite>. Files in <cite>old-game</cite> that aren't <cite>.rpyc</cite> files are ignored.</p>
+<p>When you have an <cite>old-game</cite>-directory with <cite>.rpyc</cite> files from your last release, Ren'Py
+uses them to help create new <cite>.rpyc</cite> files for changed <cite>.rpy</cite> scripts. It keeps the same
+IDs for parts of your script that haven't changed, so older save files can still load properly.</p>
+<p><strong>How to make the most of the `old-game`-directory:</strong></p>
+<ul class="simple">
+<li><p>When launching the game, if an <cite>.rpy</cite> file has changed and there's a matching <cite>.rpyc</cite> file in <cite>old-game</cite>, Ren'Py uses that <cite>.rpyc</cite> file to update the one in <cite>game</cite>. This keeps its IDs consistent with your last release for maximum save compatibility.</p></li>
+<li><p>Before building a new release, enable &quot;Force Recompile&quot; on the build-page of the Ren'Py SDK, and click &quot;Update old-game&quot; before pressing &quot;Build&quot;. This recompiles all <cite>.rpyc</cite> files using the ones in <cite>old-game</cite> as a starting point, then updates <cite>old-game</cite> with these new, stable <cite>.rpyc</cite> files for your next release.</p></li>
+<li><p>If you've already released your game, you can still benefit from <cite>old-game</cite> by copying the <cite>.rpyc</cite> files from your latest release's game directory into your project's <cite>old-game</cite> directory, matching the same folder structure.</p></li>
+</ul>
 <p>More information about how .rpyc files help with loading saves into changed
 games can be found at:</p>
 <ul class="simple">
@@ -707,6 +715,13 @@ empty directories will be included.</p>
 </dd></dl>
 
 <dl class="std var">
+<dt class="sig sig-object std" id="var-build.game_only_update">
+<span class="sig-name descname"><span class="pre">build.game_only_update</span></span> <span class="pre">=</span> <span class="pre">False</span><a class="headerlink" href="#var-build.game_only_update" title="Link to this definition"></a></dt>
+<dd><p>If true, <a class="reference internal" href="#var-build.include_update"><code class="xref std std-var docutils literal notranslate"><span class="pre">build.include_update</span></code></a> is enabled, and
+the &quot;Game-Only Update for Mobile&quot; package becomes available.</p>
+</dd></dl>
+
+<dl class="std var">
 <dt class="sig sig-object std" id="var-build.include_i686">
 <span class="sig-name descname"><span class="pre">build.include_i686</span></span> <span class="pre">=</span> <span class="pre">True</span><a class="headerlink" href="#var-build.include_i686" title="Link to this definition"></a></dt>
 <dd><p>If true, files necessary to run on 32-bit x86 processors will be included
@@ -774,10 +789,10 @@ list.</p>
 </dd></dl>
 
 <dl class="std var">
-<dt class="sig sig-object std" id="var-build.game_only_update">
-<span class="sig-name descname"><span class="pre">build.game_only_update</span></span> <span class="pre">=</span> <span class="pre">False</span><a class="headerlink" href="#var-build.game_only_update" title="Link to this definition"></a></dt>
-<dd><p>If true, <a class="reference internal" href="#var-build.include_update"><code class="xref std std-var docutils literal notranslate"><span class="pre">build.include_update</span></code></a> is enabled, and
-the &quot;Game-Only Update for Mobile&quot; package becomes available.</p>
+<dt class="sig sig-object std" id="var-build.version">
+<span class="sig-name descname"><span class="pre">build.version</span></span> <span class="pre">=</span> <span class="pre">None</span><a class="headerlink" href="#var-build.version" title="Link to this definition"></a></dt>
+<dd><p>Gives a version of the build used by the build process. If None, this defaults to config.version. The main use
+of this is to allow config.version to have characters that are not valid in file or directory names.</p>
 </dd></dl>
 
 </section>

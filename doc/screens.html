@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -482,7 +482,13 @@ and <a class="reference internal" href="screen_actions.html#Return" title="Retur
 actions may have side-effects that will not occur during the roll_forward.</p>
 </dd></dl>
 
+<p>If the first line of a screen is a Python string, it is used as the docstring for
+the screen. The docstring can be retrieved with <a class="reference internal" href="screen_python.html#renpy.get_screen_docstring" title="renpy.get_screen_docstring"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.get_screen_docstring()</span></code></a>.</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">screen</span> <span class="n">hello_world</span><span class="p">():</span>
+<span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">     Displays a hello world message.</span>
+<span class="sd">     &quot;&quot;&quot;</span>
+
      <span class="k">tag</span> <span class="n">example</span>
      <span class="k">zorder</span> <span class="mi">1</span>
      <span class="na">modal</span> <span class="kc">False</span>
@@ -611,7 +617,7 @@ string ion a attribute named id on the Displayable object.</p>
 <dt class="sig sig-object std" id="screen-property-prefer_screen_to_id">
 <span class="sig-name descname"><span class="pre">prefer_screen_to_id</span></span><a class="headerlink" href="#screen-property-prefer_screen_to_id" title="Link to this definition"></a></dt>
 <dd><p>If true, when a property is provided by both the screen and a
-displayble identifier, the screen property is used. If false, the
+displayable identifier, the screen property is used. If false, the
 default, the displayable property is used. (This can be used to
 decide if the screen overrides properties set by a Character.)</p>
 </dd></dl>
@@ -741,6 +747,15 @@ with the value of the adjustment when the adjustment is changed.</p>
 <span class="sig-name descname"><span class="pre">released</span></span><a class="headerlink" href="#screen-property-released" title="Link to this definition"></a></dt>
 <dd><p>An action to run when the bar button is released. This will be invoked
 even if the bar has not changed its value.</p>
+</dd></dl>
+
+<dl class="std screen-property">
+<dt class="sig sig-object std" id="screen-property-thumb_align">
+<span class="sig-name descname"><span class="pre">thumb_align</span></span><a class="headerlink" href="#screen-property-thumb_align" title="Link to this definition"></a></dt>
+<dd><p>The alignment of the bar thumb, relative to the bar. If the bar and
+thumb are different sizes - for example, the thumb is taller than the
+height of a horizontal bar - thumb_align can be set to 0.5 so the centers
+of the bar and thumb are aligned.</p>
 </dd></dl>
 
 <p>One of <cite>value</cite> or <cite>adjustment</cite> must be given. In addition, this
@@ -959,12 +974,26 @@ the same size, the size of the largest child.</p>
 <p>It takes two parameters. The first is the number of columns in the
 grid, and the second is the number of rows in the grid. If the grid
 is not full, the remaining cells are filled with the <code class="docutils literal notranslate"><span class="pre">null</span></code> displayable.</p>
-<p>Grid takes one property:</p>
+<p>Grid takes several properties related to the way its children are placed:</p>
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-transpose">
 <span class="sig-name descname"><span class="pre">transpose</span></span><a class="headerlink" href="#screen-property-transpose" title="Link to this definition"></a></dt>
 <dd><p>If False (the default), rows are filled before columns. If True,
 then columns are filled before rows.</p>
+</dd></dl>
+
+<dl class="std screen-property">
+<dt class="sig sig-object std" id="screen-property-right_to_left">
+<span class="sig-name descname"><span class="pre">right_to_left</span></span><a class="headerlink" href="#screen-property-right_to_left" title="Link to this definition"></a></dt>
+<dd><p>If True, cells are filled from right to left, instead of the default
+left to right.</p>
+</dd></dl>
+
+<dl class="std screen-property">
+<dt class="sig sig-object std" id="screen-property-bottom_to_top">
+<span class="sig-name descname"><span class="pre">bottom_to_top</span></span><a class="headerlink" href="#screen-property-bottom_to_top" title="Link to this definition"></a></dt>
+<dd><p>If True, cells are filled from bottom to top, instead of the default
+top to bottom.</p>
 </dd></dl>
 
 <p>It also takes:</p>
@@ -1241,6 +1270,14 @@ the input value.</p>
 a variable, so the action can access it.</p>
 </dd></dl>
 
+<dl class="std screen-property">
+<dt class="sig sig-object std" id="screen-property-arrowkeys">
+<span class="sig-name descname"><span class="pre">arrowkeys</span></span><a class="headerlink" href="#screen-property-arrowkeys" title="Link to this definition"></a></dt>
+<dd><p>If True (the default), the arrow keys can be used to move the caret left and right
+within the input. If False, arrow keys are ignored, making them available for other uses,
+like changing focus.</p>
+</dd></dl>
+
 <p>It also takes:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#common-properties"><span class="std std-ref">Common Properties</span></a></p></li>
@@ -1411,12 +1448,29 @@ positioned relative to, as described below.</p>
 name is found, the child is rendered.</p>
 <p>Passing &quot;tooltip&quot; to this uses the location of the last displayable that
 was focused while displaying a tooltip.</p>
+<p>If present, overrides <cite>rect</cite></p>
+</dd></dl>
+
+<dl class="std screen-property">
+<dt class="sig sig-object std" id="screen-property-preferred_side">
+<span class="sig-name descname"><span class="pre">preferred_side</span></span><a class="headerlink" href="#screen-property-preferred_side" title="Link to this definition"></a></dt>
+<dd><p>One of <code class="docutils literal notranslate"><span class="pre">&quot;left&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;top&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;right&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;bottom&quot;</span></code> to prefer that
+position for the nearrect. If there is not room on one side, the opposite
+side is used. By default, the preferred side is &quot;bottom&quot;.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-prefer_top">
 <span class="sig-name descname"><span class="pre">prefer_top</span></span><a class="headerlink" href="#screen-property-prefer_top" title="Link to this definition"></a></dt>
-<dd><p>If given, positioning the child above the focus rect is preferred.</p>
+<dd><p>Deprecated. Equivalent to <code class="docutils literal notranslate"><span class="pre">preferred_side</span> <span class="pre">&quot;top&quot;</span></code></p>
+</dd></dl>
+
+<dl class="std screen-property">
+<dt class="sig sig-object std" id="screen-property-invert_offsets">
+<span class="sig-name descname"><span class="pre">invert_offsets</span></span><a class="headerlink" href="#screen-property-invert_offsets" title="Link to this definition"></a></dt>
+<dd><p>If True and there isn't enough space on the preferred side, multiply
+xoffset and yoffset by -1 since the child will be on the opposite side of
+the rectangle. False by default.</p>
 </dd></dl>
 
 <p>It also takes:</p>
@@ -1424,21 +1478,26 @@ was focused while displaying a tooltip.</p>
 <li><p><a class="reference internal" href="#common-properties"><span class="std std-ref">Common Properties</span></a></p></li>
 <li><p><a class="reference internal" href="style_properties.html#position-style-properties"><span class="std std-ref">Position Style Properties</span></a></p></li>
 </ul>
-<p>Nearrect differs from the other layouts in that it positions its child near
-the given rectangle, rather than inside it. The child is first rendered with
-the full width available, and the maximum of the height above and height below
-the rectangle. The y position is then computed as followed.</p>
+<p>Nearrect differs from the other layouts in that it positions its child near the
+given rectangle, rather than inside it. For a <cite>preferred_side</cite> of <code class="docutils literal notranslate"><span class="pre">&quot;top&quot;</span></code> or
+<code class="docutils literal notranslate"><span class="pre">&quot;bottom&quot;</span></code> (resp. <code class="docutils literal notranslate"><span class="pre">&quot;left&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;right&quot;</span></code>), the child is first rendered with
+the full width (resp. height) available, and the maximum of the height
+(resp. width) above and below the rectangle. The y position (resp. x position)
+is then computed as followed.</p>
 <ul class="simple">
-<li><p>If the child will fit above the rectangle and <cite>prefer_top</cite> is given, the child
-is positioned directly above the rectangle.</p></li>
-<li><p>Otherwise, if the child can fit below the rectangle, it's positioned directly
-below the rectangle.</p></li>
-<li><p>Otherwise, the child is positioned directly above the rectangle.</p></li>
+<li><p>If the child will fit on the <cite>preferred_side</cite> of the rectangle, the child is
+positioned directly adjacent to the rectangle.</p></li>
+<li><p>Otherwise, if the child can fit opposite the <cite>preferred_side</cite> of the
+rectangle, it's positioned there.</p></li>
+<li><p>Otherwise, the child is positioned directly adjacent to the rectangles's
+<cite>preferred_side</cite>.</p></li>
 </ul>
-<p>The x positioning is computed using the normal rules, using the <a class="reference internal" href="style_properties.html#style-property-xpos"><code class="xref std std-propref docutils literal notranslate"><span class="pre">xpos</span></code></a>
-and <a class="reference internal" href="style_properties.html#style-property-xanchor"><code class="xref std std-propref docutils literal notranslate"><span class="pre">xanchor</span></code></a> properties of the child, and properties that set them,
-such as <a class="reference internal" href="style_properties.html#style-property-xalign"><code class="xref std std-propref docutils literal notranslate"><span class="pre">xalign</span></code></a>. The pos properties are relative to the x coordinate
-of the rectangle, and in the case of a floating point number, the width.</p>
+<p>The x positioning (resp. y position) is computed using the normal rules, using
+the <a class="reference internal" href="style_properties.html#style-property-xpos"><code class="xref std std-propref docutils literal notranslate"><span class="pre">xpos</span></code></a> and <a class="reference internal" href="style_properties.html#style-property-xanchor"><code class="xref std std-propref docutils literal notranslate"><span class="pre">xanchor</span></code></a> properties (resp. <a class="reference internal" href="style_properties.html#style-property-ypos"><code class="xref std std-propref docutils literal notranslate"><span class="pre">ypos</span></code></a>,
+<a class="reference internal" href="style_properties.html#style-property-yanchor"><code class="xref std std-propref docutils literal notranslate"><span class="pre">yanchor</span></code></a>) of the child, and properties that set them, such as
+<a class="reference internal" href="style_properties.html#style-property-xalign"><code class="xref std std-propref docutils literal notranslate"><span class="pre">xalign</span></code></a>. The pos properties are relative to the x coordinate
+(resp. y coordinate) of the rectangle, and in the case of a floating point
+number, the width (resp. height).</p>
 <p>At the end of positioning, the <a class="reference internal" href="style_properties.html#style-property-xoffset"><code class="xref std std-propref docutils literal notranslate"><span class="pre">xoffset</span></code></a> and <a class="reference internal" href="style_properties.html#style-property-yoffset"><code class="xref std std-propref docutils literal notranslate"><span class="pre">yoffset</span></code></a>
 properties are applied as normal.</p>
 <p>If the child of the nearrect is a transform, the transform is given <code class="docutils literal notranslate"><span class="pre">show</span></code>
@@ -1878,8 +1937,8 @@ viewport.</p>
 </dd></dl>
 
 <dl class="std screen-property">
-<dt class="sig sig-object std" id="screen-property-arrowkeys">
-<span class="sig-name descname"><span class="pre">arrowkeys</span></span><a class="headerlink" href="#screen-property-arrowkeys" title="Link to this definition"></a></dt>
+<dt class="sig sig-object std" id="screen-property-arrowkeys_alt">
+<span class="sig-name descname"><span class="pre">arrowkeys</span></span><a class="headerlink" href="#screen-property-arrowkeys_alt" title="Link to this definition"></a></dt>
 <dd><p>If true, the viewport can be scrolled with the left, right, up, and down
 arrow keys. This takes precedence over the usual function of these keys,
 which is changing focus. However, the arrow keys will change focus when the
@@ -2233,7 +2292,7 @@ self-voicing feature to work.</p>
 </section>
 <section id="add-statement">
 <h2>Add Statement<a class="headerlink" href="#add-statement" title="Link to this heading"></a></h2>
-<p>The add statement is a bit special, as it adds an already-exising displayble
+<p>The add statement is a bit special, as it adds an already-existing displayble
 to the screen. As a result, it doesn't take the properties common to the
 user interface statements.</p>
 <section id="add">
@@ -2266,14 +2325,14 @@ rectangular area on the screen. It takes the following properties:</p>
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-cols_alt">
 <span class="sig-name descname"><span class="pre">cols</span></span><a class="headerlink" href="#screen-property-cols_alt" title="Link to this definition"></a></dt>
-<dd><p>If not None, the defaut, this divides the screen up into a grid
+<dd><p>If not None, the default, this divides the screen up into a grid
 with this many columns.</p>
 </dd></dl>
 
 <dl class="std screen-property">
 <dt class="sig sig-object std" id="screen-property-rows_alt">
 <span class="sig-name descname"><span class="pre">rows</span></span><a class="headerlink" href="#screen-property-rows_alt" title="Link to this definition"></a></dt>
-<dd><p>If not None, the defaut, this divides the screen up into a grid
+<dd><p>If not None, the default, this divides the screen up into a grid
 with this many rows.</p>
 </dd></dl>
 
@@ -2494,8 +2553,10 @@ to the result of assigning the arguments to those parameters.</p>
               <span class="k">use</span> <span class="n">file_slot</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The use statement may take one property, <code class="docutils literal notranslate"><span class="pre">id</span></code>, which must be placed
-after the parameter list if present. This screen is only useful when
+<p>The use statement may take clauses properties, <code class="docutils literal notranslate"><span class="pre">id</span></code> and <code class="docutils literal notranslate"><span class="pre">as</span></code>. These properties must be placed
+after the parameter list, if present, and must be on the first line of the statement, not in
+th block.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">id</span></code> clause is only useful when
 two screens with the same tag use the same screen. In this case,
 when one screen replaces the other, the state of the used screen
 is transfered from old to new.</p>
@@ -2522,6 +2583,17 @@ is transfered from old to new.</p>
     <span class="k">show</span> <span class="k">screen</span> <span class="n">s2</span>
     <span class="k">pause</span>
     <span class="k">return</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">as</span></code> clause should be followed by a variable name. When the used screen finishes, the binding of the <cite>main</cite>
+variable in the screen is assigned to the given variable. For example:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">screen</span> <span class="na">child</span><span class="p">():</span>
+    <span class="k">add</span> <span class="n">MyCreatorDefinedDisplayable</span><span class="p">()</span> <span class="k">as</span> <span class="n">main</span>
+
+<span class="k">screen</span> <span class="n">parent</span><span class="p">():</span>
+    <span class="k">use</span> <span class="na">child</span> <span class="k">as</span> <span class="n">mycdd</span>
+
+    <span class="c1"># Here, the MyCreatorDefinedDisplaybale instance is assigned to cdd.</span>
 </pre></div>
 </div>
 <p>Instead of the name of the screen, the keyword <code class="docutils literal notranslate"><span class="pre">expression</span></code> can be
@@ -2615,7 +2687,7 @@ the show and hide process.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">showif</span></code> statement wraps its children in a displayable that manages
 the show and hide process.</p>
 <p>Multiple showif statements can be grouped together into a single
-<code class="docutils literal notranslate"><span class="pre">showif</span></code>/<code class="docutils literal notranslate"><span class="pre">elif</span></code>/<code class="docutils literal notranslate"><span class="pre">else</span></code> construct, similiar to an if statement.
+<code class="docutils literal notranslate"><span class="pre">showif</span></code>/<code class="docutils literal notranslate"><span class="pre">elif</span></code>/<code class="docutils literal notranslate"><span class="pre">else</span></code> construct, similar to an if statement.
 <strong>Unlike the if statement, showif executes all of its blocks, including Python, even if the condition is false.</strong>
 This is because the showif statement needs to create the children that it is
 hiding.</p>
@@ -2802,6 +2874,8 @@ passed to the screen.</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">with</span></code></dt><dd><p>In a call screen statement, the <code class="docutils literal notranslate"><span class="pre">with</span></code> clause causes a transition
 to occur when the screen is shown.</p>
+<p>This does <strong>not</strong> cause a <code class="docutils literal notranslate"><span class="pre">with</span> <span class="pre">None</span></code> occur before the screen is shown, so all show and hide statements before
+the screen will run. If you need a <code class="docutils literal notranslate"><span class="pre">with</span> <span class="pre">None</span></code>, add one.</p>
 </dd>
 </dl>
 <p>Since calling a screen is an interaction, and interactions trigger

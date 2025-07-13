@@ -18,7 +18,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -45,7 +45,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -310,6 +310,13 @@
         <li><a href="translation.html#id2">built-in function</a>
 </li>
       </ul></li>
+      <li>
+    ___()
+
+      <ul>
+        <li><a href="translation.html#id3">built-in function</a>
+</li>
+      </ul></li>
       <li><a href="screen_python.html#Action.__call__">__call__() (Action method)</a>
 </li>
       <li><a href="cdd.html#renpy.Displayable.__init__">__init__() (renpy.Displayable method)</a>
@@ -341,10 +348,10 @@
 </li>
       <li><a href="rooms.html#var-_in_replay">_in_replay (variable)</a>
 </li>
-      <li><a href="live2d.html#var-_live2d_fade">_live2d_fade (variable)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="live2d.html#var-_live2d_fade">_live2d_fade (variable)</a>
+</li>
       <li><a href="store_variables.html#var-_menu">_menu (variable)</a>
 </li>
       <li>
@@ -917,6 +924,8 @@
 </li>
       <li><a href="screens.html#screen-property-arrowkeys">arrowkeys (screen property)</a>
 </li>
+      <li><a href="screens.html#screen-property-arrowkeys_alt">arrowkeys_alt (screen property)</a>
+</li>
       <li><a href="text.html#text-tag-art">art (text tag)</a>
 </li>
       <li><a href="screens.html#screen-property-at">at (screen property)</a>
@@ -1000,6 +1009,8 @@
       <li><a href="style_properties.html#style-property-bottom_margin">bottom_margin (style property)</a>
 </li>
       <li><a href="style_properties.html#style-property-bottom_padding">bottom_padding (style property)</a>
+</li>
+      <li><a href="screens.html#screen-property-bottom_to_top">bottom_to_top (screen property)</a>
 </li>
       <li><a href="style_properties.html#style-property-box_align">box_align (style property)</a>
 </li>
@@ -1115,6 +1126,8 @@
 </li>
       <li><a href="build.html#var-build.update_formats">build.update_formats (variable)</a>
 </li>
+      <li><a href="build.html#var-build.version">build.version (variable)</a>
+</li>
       <li><a href="namespaces.html#var-build">build: (variable)</a>
 </li>
       <li>
@@ -1124,6 +1137,8 @@
         <li><a href="translation.html#id0">_()</a>
 </li>
         <li><a href="translation.html#id2">__()</a>
+</li>
+        <li><a href="translation.html#id3">___()</a>
 </li>
         <li><a href="voice.html#get_voice_info">_get_voice_info()</a>
 </li>
@@ -1301,12 +1316,6 @@
 </li>
         <li><a href="screen_actions.html#EditFile">EditFile()</a>
 </li>
-        <li><a href="web.html#emscripten.run_script">emscripten.run_script()</a>
-</li>
-        <li><a href="web.html#emscripten.run_script_int">emscripten.run_script_int()</a>
-</li>
-        <li><a href="web.html#emscripten.run_script_string">emscripten.run_script_string()</a>
-</li>
         <li><a href="rooms.html#EndReplay">EndReplay()</a>
 </li>
         <li><a href="screen_actions.html#ExecJS">ExecJS()</a>
@@ -1388,6 +1397,8 @@
         <li><a href="gui_advanced.html#gui.TogglePreference">gui.TogglePreference()</a>
 </li>
         <li><a href="gui_advanced.html#gui.variant">gui.variant()</a>
+</li>
+        <li><a href="screen_actions.html#HasSideImage">HasSideImage()</a>
 </li>
         <li><a href="displayables.html#HBox">HBox()</a>
 </li>
@@ -1655,6 +1666,12 @@
 </li>
         <li><a href="label.html#renpy.dynamic">renpy.dynamic()</a>
 </li>
+        <li><a href="web.html#renpy.emscripten.run_script">renpy.emscripten.run_script()</a>
+</li>
+        <li><a href="web.html#renpy.emscripten.run_script_int">renpy.emscripten.run_script_int()</a>
+</li>
+        <li><a href="web.html#renpy.emscripten.run_script_string">renpy.emscripten.run_script_string()</a>
+</li>
         <li><a href="cdd.html#renpy.end_interaction">renpy.end_interaction()</a>
 </li>
         <li><a href="rooms.html#renpy.end_replay">renpy.end_replay()</a>
@@ -1737,11 +1754,15 @@
 </li>
         <li><a href="label.html#renpy.get_return_stack">renpy.get_return_stack()</a>
 </li>
+        <li><a href="save_load_rollback.html#renpy.get_save_data">renpy.get_save_data()</a>
+</li>
         <li><a href="other.html#renpy.get_say_attributes">renpy.get_say_attributes()</a>
 </li>
         <li><a href="displaying_images.html#renpy.get_say_image_tag">renpy.get_say_image_tag()</a>
 </li>
         <li><a href="screen_python.html#renpy.get_screen">renpy.get_screen()</a>
+</li>
+        <li><a href="screen_python.html#renpy.get_screen_docstring">renpy.get_screen_docstring()</a>
 </li>
         <li><a href="screen_python.html#renpy.get_screen_variable">renpy.get_screen_variable()</a>
 </li>
@@ -1754,6 +1775,8 @@
         <li><a href="side_image.html#renpy.get_side_image">renpy.get_side_image()</a>
 </li>
         <li><a href="other.html#renpy.get_skipping">renpy.get_skipping()</a>
+</li>
+        <li><a href="other.html#renpy.get_statement_name">renpy.get_statement_name()</a>
 </li>
         <li><a href="style.html#renpy.get_style_preference">renpy.get_style_preference()</a>
 </li>
@@ -1803,6 +1826,8 @@
 </li>
         <li><a href="other.html#renpy.is_seen">renpy.is_seen()</a>
 </li>
+        <li><a href="other.html#renpy.is_seen_allowed">renpy.is_seen_allowed()</a>
+</li>
         <li><a href="screen_python.html#renpy.is_selected">renpy.is_selected()</a>
 </li>
         <li><a href="screen_python.html#renpy.is_sensitive">renpy.is_sensitive()</a>
@@ -1821,11 +1846,11 @@
 </li>
         <li><a href="other.html#renpy.last_say">renpy.last_say()</a>
 </li>
+        <li><a href="cds.html#renpy.lex_string">renpy.lex_string()</a>
+</li>
         <li><a href="file_python.html#renpy.list_files">renpy.list_files()</a>
 </li>
         <li><a href="displaying_images.html#renpy.list_images">renpy.list_images()</a>
-</li>
-        <li><a href="save_load_rollback.html#renpy.list_saved_games">renpy.list_saved_games()</a>
 </li>
         <li><a href="save_load_rollback.html#renpy.list_slots">renpy.list_slots()</a>
 </li>
@@ -2418,6 +2443,8 @@
 </li>
       <li><a href="config.html#var-config.auto_voice">config.auto_voice (variable)</a>
 </li>
+      <li><a href="config.html#var-config.automatic_oversampling">config.automatic_oversampling (variable)</a>
+</li>
       <li><a href="achievement.html#var-config.automatic_steam_timeline">config.automatic_steam_timeline (variable)</a>
 </li>
       <li><a href="config.html#var-config.autoreload">config.autoreload (variable)</a>
@@ -2449,6 +2476,8 @@
       <li><a href="config.html#var-config.choice_empty_window">config.choice_empty_window (variable)</a>
 </li>
       <li><a href="config.html#var-config.choice_layer">config.choice_layer (variable)</a>
+</li>
+      <li><a href="config.html#var-config.clear_history_on_language_change">config.clear_history_on_language_change (variable)</a>
 </li>
       <li><a href="config.html#var-config.clear_layers">config.clear_layers (variable)</a>
 </li>
@@ -2586,6 +2615,12 @@
 </li>
       <li><a href="config.html#var-config.has_autosave">config.has_autosave (variable)</a>
 </li>
+      <li><a href="config.html#var-config.has_music">config.has_music (variable)</a>
+</li>
+      <li><a href="config.html#var-config.has_sound">config.has_sound (variable)</a>
+</li>
+      <li><a href="config.html#var-config.has_voice">config.has_voice (variable)</a>
+</li>
       <li><a href="config.html#var-config.help">config.help (variable)</a>
 </li>
       <li><a href="config.html#var-config.help_screen">config.help_screen (variable)</a>
@@ -2622,6 +2657,8 @@
 </li>
       <li><a href="config.html#var-config.keep_running_transform">config.keep_running_transform (variable)</a>
 </li>
+      <li><a href="config.html#var-config.keep_screenshot_entering_menu">config.keep_screenshot_entering_menu (variable)</a>
+</li>
       <li><a href="config.html#var-config.keep_side_render_order">config.keep_side_render_order (variable)</a>
 </li>
       <li><a href="config.html#var-config.keymap">config.keymap (variable)</a>
@@ -2642,10 +2679,12 @@
 </li>
       <li><a href="config.html#var-config.lint_character_statistics">config.lint_character_statistics (variable)</a>
 </li>
-      <li><a href="config.html#var-config.lint_hooks">config.lint_hooks (variable)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="config.html#var-config.lint_hooks">config.lint_hooks (variable)</a>
+</li>
+      <li><a href="config.html#var-config.lint_show_names">config.lint_show_names (variable)</a>
+</li>
       <li><a href="config.html#var-config.load_before_transition">config.load_before_transition (variable)</a>
 </li>
       <li><a href="config.html#var-config.load_failed_label">config.load_failed_label (variable)</a>
@@ -2689,6 +2728,8 @@
       <li><a href="config.html#var-config.menu_window_subtitle">config.menu_window_subtitle (variable)</a>
 </li>
       <li><a href="config.html#var-config.minimum_presplash_time">config.minimum_presplash_time (variable)</a>
+</li>
+      <li><a href="config.html#var-config.mipmap">config.mipmap (variable)</a>
 </li>
       <li><a href="config.html#var-config.mipmap_dissolves">config.mipmap_dissolves (variable)</a>
 </li>
@@ -2759,6 +2800,8 @@
       <li><a href="config.html#var-config.per_frame_screens">config.per_frame_screens (variable)</a>
 </li>
       <li><a href="config.html#var-config.periodic_callbacks">config.periodic_callbacks (variable)</a>
+</li>
+      <li><a href="config.html#var-config.persistent_callback">config.persistent_callback (variable)</a>
 </li>
       <li><a href="3dstage.html#var-config.perspective">config.perspective (variable)</a>
 </li>
@@ -2926,6 +2969,8 @@
 </li>
       <li><a href="config.html#var-config.transition_screens">config.transition_screens (variable)</a>
 </li>
+      <li><a href="config.html#var-config.translate_additional_strings_callbacks">config.translate_additional_strings_callbacks (variable)</a>
+</li>
       <li><a href="config.html#var-config.translate_clean_stores">config.translate_clean_stores (variable)</a>
 </li>
       <li><a href="config.html#var-config.translate_ignore_who">config.translate_ignore_who (variable)</a>
@@ -2938,13 +2983,15 @@
 </li>
       <li><a href="config.html#var-config.version">config.version (variable)</a>
 </li>
+      <li><a href="config.html#var-config.voice_callbacks">config.voice_callbacks (variable)</a>
+</li>
       <li><a href="config.html#var-config.voice_filename_format">config.voice_filename_format (variable)</a>
 </li>
       <li><a href="config.html#var-config.web_input">config.web_input (variable)</a>
 </li>
-      <li><a href="config.html#var-config.web_video_base">config.web_video_base (variable)</a>
+      <li><a href="config.html#var-config.web_unload_music">config.web_unload_music (variable)</a>
 </li>
-      <li><a href="config.html#var-config.web_video_prompt">config.web_video_prompt (variable)</a>
+      <li><a href="config.html#var-config.web_video_base">config.web_video_base (variable)</a>
 </li>
       <li><a href="config.html#var-config.webaudio_required_types">config.webaudio_required_types (variable)</a>
 </li>
@@ -3217,31 +3264,8 @@
 </li>
       <li><a href="style_properties.html#style-property-emoji_font">emoji_font (style property)</a>
 </li>
-      <li>
-    emscripten.run_script()
-
-      <ul>
-        <li><a href="web.html#emscripten.run_script">built-in function</a>
-</li>
-      </ul></li>
-      <li>
-    emscripten.run_script_int()
-
-      <ul>
-        <li><a href="web.html#emscripten.run_script_int">built-in function</a>
-</li>
-      </ul></li>
-      <li>
-    emscripten.run_script_string()
-
-      <ul>
-        <li><a href="web.html#emscripten.run_script_string">built-in function</a>
-</li>
-      </ul></li>
       <li><a href="screen_python.html#InputValue.Enable">Enable() (InputValue method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="editor.html#Editor.end">end() (Editor method)</a>
 </li>
       <li>
@@ -3252,6 +3276,10 @@
 </li>
       </ul></li>
       <li><a href="screen_python.html#InputValue.enter">enter() (InputValue method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rooms.html#Gallery.enter_transition">enter_transition (Gallery attribute)</a>
 </li>
       <li><a href="cds.html#Lexer.eol">eol() (Lexer method)</a>
 </li>
@@ -3270,6 +3298,8 @@
         <li><a href="screen_actions.html#ExecJS">built-in function</a>
 </li>
       </ul></li>
+      <li><a href="rooms.html#Gallery.exit_transition">exit_transition (Gallery attribute)</a>
+</li>
       <li><a href="cds.html#Lexer.expect_block">expect_block() (Lexer method)</a>
 </li>
       <li><a href="cds.html#Lexer.expect_eol">expect_eol() (Lexer method)</a>
@@ -3294,6 +3324,8 @@
 </li>
       </ul></li>
       <li><a href="text.html#text-tag-fast">fast (text tag)</a>
+</li>
+      <li><a href="text.html#text-tag-feature">feature (text tag)</a>
 </li>
       <li>
     FieldInputValue()
@@ -3491,6 +3523,8 @@
         <li><a href="text.html#text-tag-font">(text tag)</a>
 </li>
       </ul></li>
+      <li><a href="style_properties.html#style-property-font_features">font_features (style property)</a>
+</li>
       <li><a href="text.html#FontGroup">FontGroup (built-in class)</a>
 </li>
       <li><a href="style_properties.html#style-property-foreground">foreground (style property)</a>
@@ -3578,6 +3612,8 @@
         <li><a href="screen_actions.html#GetTooltip">built-in function</a>
 </li>
       </ul></li>
+      <li><a href="model.html#GLTFModel">GLTFModel (built-in class)</a>
+</li>
       <li>
     Grid()
 
@@ -3878,6 +3914,13 @@
       <li><a href="cds.html#Lexer.has_block">has_block() (Lexer method)</a>
 </li>
       <li>
+    HasSideImage()
+
+      <ul>
+        <li><a href="screen_actions.html#HasSideImage">built-in function</a>
+</li>
+      </ul></li>
+      <li>
     HBox()
 
       <ul>
@@ -3915,10 +3958,10 @@
       </ul></li>
       <li><a href="style_properties.html#style-property-hinting">hinting (style property)</a>
 </li>
-      <li><a href="history.html#HistoryEntry">HistoryEntry (built-in class)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="history.html#HistoryEntry">HistoryEntry (built-in class)</a>
+</li>
       <li><a href="color_class.html#Color.hls">hls (Color attribute)</a>
 </li>
       <li><a href="text.html#text-tag-horiz">horiz (text tag)</a>
@@ -4239,6 +4282,10 @@
       <li><a href="color_class.html#Color.interpolate_hls">interpolate_hls() (Color method)</a>
 </li>
       <li><a href="color_class.html#Color.interpolate_hsv">interpolate_hsv() (Color method)</a>
+</li>
+      <li><a href="rooms.html#Gallery.intra_transition">intra_transition (Gallery attribute)</a>
+</li>
+      <li><a href="screens.html#screen-property-invert_offsets">invert_offsets (screen property)</a>
 </li>
       <li><a href="matrixcolor.html#InvertMatrix">InvertMatrix (built-in class)</a>
 </li>
@@ -4695,6 +4742,8 @@
 </li>
       <li><a href="3dstage.html#transform-property-orientation">orientation (transform property)</a>
 </li>
+      <li><a href="transforms.html#Transform.original_child">original_child (Transform attribute)</a>
+</li>
       <li><a href="style_properties.html#style-property-outline_scaling">outline_scaling (style property)</a>
 </li>
       <li><a href="text.html#text-tag-outlinecolor">outlinecolor (text tag)</a>
@@ -4844,11 +4893,13 @@
 </li>
       <li><a href="preferences.html#var-preferences.audio_when_unfocused">preferences.audio_when_unfocused (variable)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="preferences.html#var-preferences.desktop_rollback_side">preferences.desktop_rollback_side (variable)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="preferences.html#var-preferences.emphasize_audio">preferences.emphasize_audio (variable)</a>
+</li>
+      <li><a href="preferences.html#var-preferences.force_mono">preferences.force_mono (variable)</a>
 </li>
       <li><a href="preferences.html#var-preferences.fullscreen">preferences.fullscreen (variable)</a>
 </li>
@@ -4925,6 +4976,8 @@
       <li><a href="preferences.html#var-preferences.wait_voice">preferences.wait_voice (variable)</a>
 </li>
       <li><a href="preferences.html#var-preferences.web_cache_preload">preferences.web_cache_preload (variable)</a>
+</li>
+      <li><a href="screens.html#screen-property-preferred_side">preferred_side (screen property)</a>
 </li>
       <li><a href="screens.html#screen-property-prefix">prefix (screen property)</a>
 </li>
@@ -5028,6 +5081,8 @@
       <li><a href="screens.html#screen-property-range_alt">range_alt (screen property)</a>
 </li>
       <li><a href="text.html#text-tag-rb">rb (text tag)</a>
+</li>
+      <li><a href="style_properties.html#style-property-reading_order">reading_order (style property)</a>
 </li>
       <li><a href="screens.html#screen-property-rect">rect (screen property)</a>
 </li>
@@ -5446,6 +5501,27 @@
       <li><a href="other.html#var-renpy.emscripten">renpy.emscripten (variable)</a>
 </li>
       <li>
+    renpy.emscripten.run_script()
+
+      <ul>
+        <li><a href="web.html#renpy.emscripten.run_script">built-in function</a>
+</li>
+      </ul></li>
+      <li>
+    renpy.emscripten.run_script_int()
+
+      <ul>
+        <li><a href="web.html#renpy.emscripten.run_script_int">built-in function</a>
+</li>
+      </ul></li>
+      <li>
+    renpy.emscripten.run_script_string()
+
+      <ul>
+        <li><a href="web.html#renpy.emscripten.run_script_string">built-in function</a>
+</li>
+      </ul></li>
+      <li>
     renpy.end_interaction()
 
       <ul>
@@ -5733,6 +5809,13 @@
 </li>
       </ul></li>
       <li>
+    renpy.get_save_data()
+
+      <ul>
+        <li><a href="save_load_rollback.html#renpy.get_save_data">built-in function</a>
+</li>
+      </ul></li>
+      <li>
     renpy.get_say_attributes()
 
       <ul>
@@ -5751,6 +5834,13 @@
 
       <ul>
         <li><a href="screen_python.html#renpy.get_screen">built-in function</a>
+</li>
+      </ul></li>
+      <li>
+    renpy.get_screen_docstring()
+
+      <ul>
+        <li><a href="screen_python.html#renpy.get_screen_docstring">built-in function</a>
 </li>
       </ul></li>
       <li>
@@ -5793,6 +5883,13 @@
 
       <ul>
         <li><a href="other.html#renpy.get_skipping">built-in function</a>
+</li>
+      </ul></li>
+      <li>
+    renpy.get_statement_name()
+
+      <ul>
+        <li><a href="other.html#renpy.get_statement_name">built-in function</a>
 </li>
       </ul></li>
       <li>
@@ -5968,6 +6065,13 @@
 </li>
       </ul></li>
       <li>
+    renpy.is_seen_allowed()
+
+      <ul>
+        <li><a href="other.html#renpy.is_seen_allowed">built-in function</a>
+</li>
+      </ul></li>
+      <li>
     renpy.is_selected()
 
       <ul>
@@ -6030,8 +6134,17 @@
         <li><a href="other.html#renpy.last_say">built-in function</a>
 </li>
       </ul></li>
+      <li>
+    renpy.lex_string()
+
+      <ul>
+        <li><a href="cds.html#renpy.lex_string">built-in function</a>
+</li>
+      </ul></li>
       <li><a href="other.html#var-renpy.license">renpy.license (variable)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="other.html#var-renpy.linux">renpy.linux (variable)</a>
 </li>
       <li>
@@ -6049,21 +6162,12 @@
 </li>
       </ul></li>
       <li>
-    renpy.list_saved_games()
-
-      <ul>
-        <li><a href="save_load_rollback.html#renpy.list_saved_games">built-in function</a>
-</li>
-      </ul></li>
-      <li>
     renpy.list_slots()
 
       <ul>
         <li><a href="save_load_rollback.html#renpy.list_slots">built-in function</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     renpy.load()
 
@@ -7039,6 +7143,8 @@
 </li>
       <li><a href="style_properties.html#style-property-right_padding">right_padding (style property)</a>
 </li>
+      <li><a href="screens.html#screen-property-right_to_left">right_to_left (screen property)</a>
+</li>
       <li><a href="screens.html#screen-property-roll_forward">roll_forward (screen property)</a>
 </li>
       <li>
@@ -7488,6 +7594,8 @@
 </li>
       <li><a href="style_properties.html#style-property-thumb">thumb (style property)</a>
 </li>
+      <li><a href="screens.html#screen-property-thumb_align">thumb_align (screen property)</a>
+</li>
       <li><a href="style_properties.html#style-property-thumb_offset">thumb_offset (style property)</a>
 </li>
       <li><a href="style_properties.html#style-property-thumb_shadow">thumb_shadow (style property)</a>
@@ -7548,6 +7656,8 @@
         <li><a href="screen_actions.html#ToggleScreen">built-in function</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     ToggleScreenVariable()
 
@@ -7555,8 +7665,6 @@
         <li><a href="screen_actions.html#ToggleScreenVariable">built-in function</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     ToggleSetMembership()
 

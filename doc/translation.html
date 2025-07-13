@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -96,15 +96,18 @@
 <li class="toctree-l3"><a class="reference internal" href="#Language"><code class="docutils literal notranslate"><span class="pre">Language()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.change_language"><code class="docutils literal notranslate"><span class="pre">renpy.change_language()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.get_translation_identifier"><code class="docutils literal notranslate"><span class="pre">renpy.get_translation_identifier()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#renpy.get_translation_info"><code class="docutils literal notranslate"><span class="pre">renpy.get_translation_info()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#renpy.language"><code class="docutils literal notranslate"><span class="pre">renpy.language</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#identifier"><code class="docutils literal notranslate"><span class="pre">identifier</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#filename"><code class="docutils literal notranslate"><span class="pre">filename</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#linenumber"><code class="docutils literal notranslate"><span class="pre">linenumber</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#source"><code class="docutils literal notranslate"><span class="pre">source</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.get_translation_info"><code class="docutils literal notranslate"><span class="pre">renpy.get_translation_info()</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#renpy.language"><code class="docutils literal notranslate"><span class="pre">renpy.language</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#identifier"><code class="docutils literal notranslate"><span class="pre">identifier</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filename"><code class="docutils literal notranslate"><span class="pre">filename</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#linenumber"><code class="docutils literal notranslate"><span class="pre">linenumber</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#source"><code class="docutils literal notranslate"><span class="pre">source</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.known_languages"><code class="docutils literal notranslate"><span class="pre">renpy.known_languages()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id0"><code class="docutils literal notranslate"><span class="pre">_()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id2"><code class="docutils literal notranslate"><span class="pre">__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3"><code class="docutils literal notranslate"><span class="pre">___()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#p"><code class="docutils literal notranslate"><span class="pre">_p()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.translate_string"><code class="docutils literal notranslate"><span class="pre">renpy.translate_string()</span></code></a></li>
 </ul>
@@ -593,14 +596,12 @@ change language-related variables and styles. For example:</p>
 The font used for system text, like the exception screen, the accessibility menu,
 and the gui menu, can be customized with <a class="reference internal" href="gui.html#var-gui.system_font"><code class="xref std std-var docutils literal notranslate"><span class="pre">gui.system_font</span></code></a>. The system font
 should be able to express both ASCII and the translated language. Together, these
-can be customized with.</p>
-<blockquote>
-<div><dl class="simple">
-<dt>translate piglatin python:</dt><dd><p>gui.text_font = &quot;stonecutter.ttf&quot;
-gui.system_font = &quot;Noto Sans.ttf&quot;</p>
-</dd>
-</dl>
-</div></blockquote>
+can be customized with:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">translate</span> <span class="n">piglatin</span> <span class="k">python</span><span class="p">:</span>
+    <span class="n">gui</span><span class="o">.</span><span class="na">text_font</span> <span class="o">=</span> <span class="s2">&quot;stonecutter.ttf&quot;</span>
+    <span class="n">gui</span><span class="o">.</span><span class="n">system_font</span> <span class="o">=</span> <span class="s2">&quot;Noto Sans.ttf&quot;</span>
+</pre></div>
+</div>
 <p>When a language is activated – either at the start of the game, or
 after a language change – Ren'Py resets the styles to their contents
 at the end of the init phase. It then runs all <code class="docutils literal notranslate"><span class="pre">translate</span> <span class="pre">python</span></code> blocks,
@@ -776,6 +777,17 @@ is displayed.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">___</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id3" title="Link to this definition"></a></dt>
+<dd><p>(Triple underscore) Immediately translates <cite>s</cite> into the current
+language. If a <a class="reference internal" href="text.html#text-interpolation"><span class="std std-ref">text interpolation</span></a> is
+found, the interpolation will be performed using the local
+variables in the scope that called this function. Note that
+the string may be double-translated, if it matches a string
+translation when it is displayed.</p>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="p">
 <span class="sig-name descname"><span class="pre">_p</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#p" title="Link to this definition"></a></dt>
 <dd><p>Reformats a string and flags it as translatable. The string will be
@@ -808,7 +820,7 @@ doesn't add a blank one.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.translate_string">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">translate_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language=&lt;renpy.object.Sentinel</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7faa430777c0&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.translate_string" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">translate_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language=&lt;renpy.object.Sentinel</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x725d1cdc2000&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.translate_string" title="Link to this definition"></a></dt>
 <dd><p>Returns <cite>s</cite> immediately translated into <cite>language</cite>. If <cite>language</cite>
 is Default, uses the language set in the preferences.
 Strings enclosed in this function will <strong>not</strong> be added

@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -886,7 +886,7 @@ placed in parenthesis after the text to be spoken. For example:</p>
 </pre></div>
 </div>
 <p>These arguments are first passed to config.say_argument_callback, and then
-are passed to the character. The default implemention (in <a class="reference internal" href="dialogue.html#Character" title="Character"><code class="xref py py-func docutils literal notranslate"><span class="pre">Character()</span></code></a>)
+are passed to the character. The default implementation (in <a class="reference internal" href="dialogue.html#Character" title="Character"><code class="xref py py-func docutils literal notranslate"><span class="pre">Character()</span></code></a>)
 creates a new character with the passed arguments, and uses that to display
 the text.</p>
 <p>One place this is handy is with jump hyperlinks and the new advance
@@ -1062,7 +1062,7 @@ and Project Gardares.</p>
 <p>A crash on video playback on Android and iOS has been fixed.</p>
 <p>The default encoding for non-Unicode strings in Ren'Py has been changed to
 the filesystem encoding. This should address a series of encoding issues
-that have occured on non-ascii systems since 6.99.12.</p>
+that have occurred on non-ascii systems since 6.99.12.</p>
 <p>Ren'Py will no longer search for system-installed fonts when in developer
 mode.</p>
 <p>In some cases, Ren'Py duplicates displayables to ensure that displayable
@@ -2910,27 +2910,27 @@ transitions that are used upon entering and exiting yes/no prompts.</p></li>
 <h3>Bugfixes<a class="headerlink" href="#id35" title="Link to this heading"></a></h3>
 <p>Among others, the following bugs were fixed:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/renpy/renpy/issues/37">github bug 37</a>: A crash with LiveTile when sizes were not integers.</p></li>
-<li><p><a class="reference external" href="https://github.com/renpy/renpy/issues/41">github bug 41</a>: <a class="reference internal" href="file_python.html#renpy.loadable" title="renpy.loadable"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.loadable()</span></code></a> failed to search for files inside
+<li><p><a class="extlink-ghbug reference external" href="https://github.com/renpy/renpy/issues/37">github bug 37</a>: A crash with LiveTile when sizes were not integers.</p></li>
+<li><p><a class="extlink-ghbug reference external" href="https://github.com/renpy/renpy/issues/41">github bug 41</a>: <a class="reference internal" href="file_python.html#renpy.loadable" title="renpy.loadable"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.loadable()</span></code></a> failed to search for files inside
 android packages.</p></li>
-<li><p><a class="reference external" href="https://github.com/renpy/renpy/issues/42">github bug 42</a>: The launcher can now run a game that's in a read-only
+<li><p><a class="extlink-ghbug reference external" href="https://github.com/renpy/renpy/issues/42">github bug 42</a>: The launcher can now run a game that's in a read-only
 directory.</p></li>
-<li><p><a class="reference external" href="https://github.com/renpy/renpy/issues/45">github bug 45</a>: Ren'Py would fail when the hiding of a screen caused a screen
+<li><p><a class="extlink-ghbug reference external" href="https://github.com/renpy/renpy/issues/45">github bug 45</a>: Ren'Py would fail when the hiding of a screen caused a screen
 beneath it to be hidden.</p></li>
-<li><p><a class="reference external" href="https://github.com/renpy/renpy/issues/46">github bug 46</a>: A bug that prevented Ren'Py from evicting images from an
+<li><p><a class="extlink-ghbug reference external" href="https://github.com/renpy/renpy/issues/46">github bug 46</a>: A bug that prevented Ren'Py from evicting images from an
 over-full image cache, that manifested as a runaway memory leak.</p></li>
-<li><p><a class="reference external" href="https://github.com/renpy/renpy/issues/50">github bug 50</a>: Vertical bars would scroll with the left and right arrow
+<li><p><a class="extlink-ghbug reference external" href="https://github.com/renpy/renpy/issues/50">github bug 50</a>: Vertical bars would scroll with the left and right arrow
 keys; and bars would remain grabbed even if they were grabbed while leaving
 the screen, preventing further input.</p></li>
-<li><p><a class="reference external" href="https://github.com/renpy/renpy/issues/51">github bug 51</a>: The slow_done callback was not called after a rollback.</p></li>
-<li><p><a class="reference external" href="https://github.com/renpy/renpy/issues/56">github bug 56</a>, <a class="reference external" href="https://github.com/renpy/renpy/issues/57">github bug 57</a>: <a class="reference internal" href="file_python.html#renpy.loadable" title="renpy.loadable"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.loadable()</span></code></a> now works with Android
+<li><p><a class="extlink-ghbug reference external" href="https://github.com/renpy/renpy/issues/51">github bug 51</a>: The slow_done callback was not called after a rollback.</p></li>
+<li><p><a class="extlink-ghbug reference external" href="https://github.com/renpy/renpy/issues/56">github bug 56</a>, <a class="extlink-ghbug reference external" href="https://github.com/renpy/renpy/issues/57">github bug 57</a>: <a class="reference internal" href="file_python.html#renpy.loadable" title="renpy.loadable"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.loadable()</span></code></a> now works with Android
 assets.</p></li>
-<li><p><a class="reference external" href="https://github.com/renpy/renpy/issues/60">github bug 60</a>: Fixed a bug that prevented {p} and {w} from working properly
+<li><p><a class="extlink-ghbug reference external" href="https://github.com/renpy/renpy/issues/60">github bug 60</a>: Fixed a bug that prevented {p} and {w} from working properly
 when followed immediately by a text tag.</p></li>
-<li><p><a class="reference external" href="https://github.com/renpy/renpy/issues/61">github bug 61</a>: Ren'Py no longer crashes when an end_game_transition is set
+<li><p><a class="extlink-ghbug reference external" href="https://github.com/renpy/renpy/issues/61">github bug 61</a>: Ren'Py no longer crashes when an end_game_transition is set
 and a screen uses a variable that is no longer defined when the game
 restarts.</p></li>
-<li><p><a class="reference external" href="https://github.com/renpy/renpy/issues/65">github bug 65</a>: Multiplying a rollback list by a number now always produces a
+<li><p><a class="extlink-ghbug reference external" href="https://github.com/renpy/renpy/issues/65">github bug 65</a>: Multiplying a rollback list by a number now always produces a
 rollback list.</p></li>
 <li><p>Editra should work better on Windows.</p></li>
 <li><p>It's now possible to <a class="reference internal" href="statement_equivalents.html#renpy.call" title="renpy.call"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.call()</span></code></a> a label that doesn't take
@@ -3469,8 +3469,8 @@ manual.</p>
 documentation for <a class="reference internal" href="config.html#var-config.archives"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.archives</span></code></a> for more details.</p>
 <p>Bug fixes:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://bugs.launchpad.net/renpy/+bug/734137">launchpad bug 734137</a> - Timers do not participate in rollback.</p></li>
-<li><p><a class="reference external" href="https://bugs.launchpad.net/renpy/+bug/735187">launchpad bug 735187</a> - Ren'Py get stuck when using {nw}. (Thanks to Franck_v
+<li><p><a class="extlink-lpbug reference external" href="https://bugs.launchpad.net/renpy/+bug/734137">launchpad bug 734137</a> - Timers do not participate in rollback.</p></li>
+<li><p><a class="extlink-lpbug reference external" href="https://bugs.launchpad.net/renpy/+bug/735187">launchpad bug 735187</a> - Ren'Py get stuck when using {nw}. (Thanks to Franck_v
 for tracking this down.)</p></li>
 </ul>
 </section>
@@ -3591,9 +3591,9 @@ that filename mismatches on Linux should no longer be a problem.</p></li>
 <section id="id42">
 <h3>Bug Fixes<a class="headerlink" href="#id42" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p><a class="reference external" href="https://bugs.launchpad.net/renpy/+bug/680266">launchpad bug 680266</a> - Ensures that dynamic displayables update before
+<li><p><a class="extlink-lpbug reference external" href="https://bugs.launchpad.net/renpy/+bug/680266">launchpad bug 680266</a> - Ensures that dynamic displayables update before
 Transforms that use them.</p></li>
-<li><p><a class="reference external" href="https://bugs.launchpad.net/renpy/+bug/683412">launchpad bug 683412</a> - Do not crash if a shader fails to compile.</p></li>
+<li><p><a class="extlink-lpbug reference external" href="https://bugs.launchpad.net/renpy/+bug/683412">launchpad bug 683412</a> - Do not crash if a shader fails to compile.</p></li>
 <li><p>Fixed a bug that caused Ren'Py to crash when the system volume was lowered
 to 0, but not muted.</p></li>
 <li><p>Fixed a bug that prevented <code class="xref py py-func docutils literal notranslate"><span class="pre">Render.canvas()</span></code> from working with the
@@ -3629,11 +3629,11 @@ version, where the ordering was undefined.</p>
 </section>
 <section id="id43">
 <h3>Bug fixes<a class="headerlink" href="#id43" title="Link to this heading"></a></h3>
-<p>Fixed <a class="reference external" href="https://bugs.launchpad.net/renpy/+bug/647686">launchpad bug 647686</a>, a regression that prevented sounds from looping
+<p>Fixed <a class="extlink-lpbug reference external" href="https://bugs.launchpad.net/renpy/+bug/647686">launchpad bug 647686</a>, a regression that prevented sounds from looping
 properly.</p>
-<p>Fixed <a class="reference external" href="https://bugs.launchpad.net/renpy/+bug/661983">launchpad bug 661983</a>, which caused insensitive hotspots to default to the
+<p>Fixed <a class="extlink-lpbug reference external" href="https://bugs.launchpad.net/renpy/+bug/661983">launchpad bug 661983</a>, which caused insensitive hotspots to default to the
 idle, rather than ground, image when no insensitive image was supplied.</p>
-<p>Fixed <a class="reference external" href="https://bugs.launchpad.net/renpy/+bug/647324">launchpad bug 647324</a>, where ImageDissolves are rendered as if specified with
+<p>Fixed <a class="extlink-lpbug reference external" href="https://bugs.launchpad.net/renpy/+bug/647324">launchpad bug 647324</a>, where ImageDissolves are rendered as if specified with
 alpha=True whether or not alpha=True was set.</p>
 <p>Fixed a problem that caused the game to start when picking &quot;No&quot; after clicking
 the (window-level) quit button.</p>

@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -172,13 +172,57 @@
 <p class="caption" role="heading"><span class="caption-text">Changes, License, and Credits</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog (Ren'Py 7.x-)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#renpy-7-8-2">8.3.2 / 7.8.2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#renpy-8-4-0">8.4.0</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requirement-and-dependency-changes">Requirement and Dependency Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python-3-12">Python 3.12</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#performance-improvements">Performance Improvements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shaders">Shaders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gltf-model-loading">GLTF Model Loading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#optional-mipmaps">Optional Mipmaps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#libs-and-mods">Libs and Mods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#layered-images">Layered Images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#automatic-oversampling">Automatic Oversampling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#accessibility">Accessibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#launcher">Launcher</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#text">Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#traceback-saves">Traceback Saves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#features">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changes">Changes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#renpy-7-8-7">8.3.7 / 7.8.7</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#live2d">Live2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#arabic-text-shaping">Arabic Text Shaping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Changes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#fixes">Fixes</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#renpy-7-8-1">8.3.1 / 7.8.1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id3">Fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#renpy-7-8-6">8.3.6 / 7.8.6</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Fixes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#renpy-7-8-5">8.3.5 / 7.8.5</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">Fixes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#renpy-7-8-4">8.3.4 / 7.8.4</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Fixes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#other-changes">Other Changes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#renpy-7-8-3">8.3.3 / 7.8.3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id12">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">Other Changes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#renpy-7-8-2">8.3.2 / 7.8.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id15">Fixes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#renpy-7-8-1">8.3.1 / 7.8.1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id17">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id18">Other Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-8-0">8.3.0 / 7.8.0</a><ul>
@@ -191,24 +235,24 @@
 <li class="toctree-l3"><a class="reference internal" href="#screenshots-and-paper-dolls">Screenshots and Paper Dolls</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#steam">Steam</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#android">Android</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#features">Features</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">Other Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id20">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id21">Other Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-7-3">8.2.3 / 7.7.3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-7-2">8.2.2 / 7.7.2</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#accessibility">Accessibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id24">Accessibility</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#nvl-mode-and-window">NVL-Mode and Window</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id8">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id25">Fixes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#other">Other</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-7-1">8.2.1 / 7.7.1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#text">Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id27">Text</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#updater">Updater</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#live2d">Live2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id28">Live2D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#fetch">Fetch</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id10">Other Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id29">Other Changes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#other-fixes">Other Fixes</a></li>
 </ul>
 </li>
@@ -223,33 +267,33 @@
 <li class="toctree-l3"><a class="reference internal" href="#developer-tools">Developer Tools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#data-actions">Data Actions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#https-http-fetch">HTTPS/HTTP Fetch</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id12">Accessibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id31">Accessibility</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#future-in-python">__future__ in python</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#translation-improvements">Translation Improvements</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#scene-show-and-hide-transition">Scene, Show, and Hide Transition</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id13">Android</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id32">Android</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#web">Web</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id14">Updater</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id33">Updater</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#translations">Translations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id15">Features</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id16">Launcher Changes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id17">Other Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id34">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id35">Launcher Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id36">Other Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-6-3">8.1.3 / 7.6.3</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#changes">Changes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id19">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id38">Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id39">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-6-2">8.1.2 / 7.6.2</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id21">Changes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id22">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id41">Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id42">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-6-1">8.1.1 / 7.6.1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id24">Android</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id25">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id26">Other Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id44">Android</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id45">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id46">Other Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-6-0">8.1 / 7.6</a><ul>
@@ -257,9 +301,9 @@
 <li class="toctree-l3"><a class="reference internal" href="#ren-py-sync">Ren'Py Sync</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#speech-bubble-dialogue">Speech Bubble Dialogue</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#platform-improvements">Platform Improvements</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id28">Web</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id48">Web</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#macintosh">Macintosh</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id29">Android</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id49">Android</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#sticky-layers">Sticky Layers</a></li>
@@ -271,15 +315,15 @@
 <li class="toctree-l3"><a class="reference internal" href="#ren-py-files-ren-py-in-python">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#constant-stores">Constant Stores</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lenticular-bracket-ruby-text">Lenticular Bracket Ruby Text</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id30">Accessibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id50">Accessibility</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#save-token-security">Save Token Security</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#new-search-paths">New Search Paths</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#new-3d-stage-properties">New 3D Stage Properties</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id31">Live2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id51">Live2D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#launcher-and-engine-translations">Launcher and Engine Translations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#conflicting-properties">Conflicting properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#more-new-features">More New Features</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id33">Other Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id53">Other Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-8-0-3">8.0.3 / 7.5.3</a><ul>
@@ -289,14 +333,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-8-0-2">8.0.2 / 7.5.2</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id36">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id56">Fixes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#default-focus-changes">Default Focus Changes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#other-improvements">Other Improvements</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-8-0-1">8.0.1 / 7.5.1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#improvements">Improvements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id38">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id58">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-8-0-0">8.0 / 7.5</a><ul>
@@ -306,137 +350,137 @@
 <li class="toctree-l3"><a class="reference internal" href="#web-and-chromeos">Web and ChromeOS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#android-and-ios">Android and iOS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#steam-steam-deck-and-epic-games-store">Steam, Steam Deck, and Epic Games Store</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id40">Visual Studio Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id60">Visual Studio Code</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#dismiss-nearrect-and-focus-rectangles">Dismiss, Nearrect, and Focus Rectangles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#atl-and-transforms">ATL and Transforms</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#image-gallery">Image Gallery</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#boxes-grids-and-vpgrids">Boxes, Grids and Vpgrids</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#call-screen-and-roll-forward">Call Screen and Roll Forward</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#new-features">New Features</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id41">Other Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id61">Other Changes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#versioning">Versioning</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-4-11">7.4.11</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#the-gui-variant-decorator">The gui.variant Decorator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id43">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id44">Translations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id63">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id64">Translations</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-4-10">7.4.10</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id46">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id47">Translations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id66">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id67">Translations</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-4-9">7.4.9</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id49">Android</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id69">Android</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ios">iOS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id50">Updater</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id70">Updater</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#camera-perspective-improvements">Camera/Perspective Improvements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id51">Accessibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id71">Accessibility</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#transform-properties">Transform Properties</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id52">Other</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id72">Other</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-4-8">7.4.8</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id54">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id55">Features</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id56">Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id74">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id75">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id76">Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-4-7">7.4.7</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#web-and-web-audio">Web and Web Audio</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id58">iOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id78">iOS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#input">Input</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id59">Other</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id79">Other</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-4-6">7.4.6</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#camera-statement">Camera Statement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#model-displayable">Model Displayable</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id61">Other Improvements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id62">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id81">Other Improvements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id82">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-4-5">7.4.5</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#model-based-renderer">Model-Based Renderer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#mouse">Mouse</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id64">Features</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id65">Android</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id84">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id85">Android</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#other-platforms">Other Platforms</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id66">Other Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id86">Other Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-4-4">7.4.4</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#the-old-game-directory">The old-game directory</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id68">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id69">Other</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id88">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id89">Other</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-4-3">7.4.3</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id71">Android</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id72">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id91">Android</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id92">Features</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#old-features">Old Features</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id73">Other Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id74">Translations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id93">Other Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id94">Translations</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-4-2">7.4.2</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#fixes-and-changes">Fixes and Changes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id76">Android</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id96">Android</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-4-1">7.4.1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#pause-statement-changes">Pause Statement Changes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#say-statement-id-clause">Say Statement Id Clause</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id78">Live2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id98">Live2D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#controller-blocklist">Controller Blocklist</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#macos">macOS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id79">Android</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id80">Translations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id81">Other Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id99">Android</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id100">Translations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id101">Other Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-4">7.4.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id83">Model-Based Renderer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id84">Live2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id103">Model-Based Renderer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id104">Live2D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#matrixcolor-and-blur">Matrixcolor and Blur</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#python-2-python-3-compatibility-mode">Python 2/Python 3 Compatibility Mode</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#upgraded-libraries-and-platform-support">Upgraded Libraries and Platform Support</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id85">Web</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id86">Steam</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id87">Translations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id105">Web</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id106">Steam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id107">Translations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#depreciations-and-removals">Depreciations and Removals</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#miscellaneous">Miscellaneous</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-3-5">7.3.5</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id89">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id90">Other Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id109">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id110">Other Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-3-4">7.3.4</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id92">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id93">Other Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id112">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id113">Other Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-3-3">7.3.3</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id95">Audio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id115">Audio</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#platforms">Platforms</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id96">Other Changes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id97">Translations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id116">Other Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id117">Translations</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-3-2">7.3.2</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id99">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id100">Translations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id119">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id120">Translations</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-3-1">7.3.1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id102">Changes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id103">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id104">Translations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id122">Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id123">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id124">Translations</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-3-0">7.3.0</a><ul>
@@ -445,58 +489,58 @@
 <li class="toctree-l3"><a class="reference internal" href="#screen-language-improvements">Screen Language Improvements</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#text-improvements">Text Improvements</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#android-and-ios-improvements">Android and iOS Improvements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id106">Translations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id107">Other Improvements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id108">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id126">Translations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id127">Other Improvements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id128">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-2-2">7.2.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-2-1">7.2.1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#ios-improvements">iOS Improvements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id111">Other Improvements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id112">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id131">Other Improvements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id132">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-1-4">7.2.0</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#menu-arguments">Menu Arguments</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#temporary-say-attributes">Temporary Say Attributes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id114">Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id134">Text</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#statements">Statements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id115">Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id135">Changes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#android-changes">Android Changes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id116">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id136">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-1-3">7.1.3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-1-2">7.1.2</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id119">Improvements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id120">Translations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id121">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id139">Improvements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id140">Translations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id141">Fixes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#android-fixes">Android Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-1-1">7.1.1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#history-fix">History Fix</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#android-improvements">Android Improvements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id123">Other Improvements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id124">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id143">Other Improvements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id144">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-1">7.1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id126">Android</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id146">Android</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#monologue-mode">Monologue Mode</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#say-with-attribute-change">Say-With-Attribute Change</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#updater-changes">Updater Changes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id127">Translations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id128">Other</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id147">Translations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id148">Other</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#renpy-7-0">7.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#layered-images">Layered Images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id150">Layered Images</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#dict-transitions">Dict Transitions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id130">Changes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id131">Translations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id132">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id151">Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id152">Translations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id153">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#older-changelogs">Older Changelogs</a></li>
@@ -536,18 +580,485 @@
   <section id="changelog-ren-py-7-x">
 <h1>Changelog (Ren'Py 7.x-)<a class="headerlink" href="#changelog-ren-py-7-x" title="Link to this heading"></a></h1>
 <p><em>There is also a list of</em> <a class="reference internal" href="incompatible.html"><span class="doc">incompatible changes</span></a></p>
-<section id="renpy-7-8-2">
-<span id="renpy-8-3-2"></span><span id="id1"></span><h2>8.3.2 / 7.8.2<a class="headerlink" href="#renpy-7-8-2" title="Link to this heading"></a></h2>
+<section id="renpy-8-4-0">
+<span id="id1"></span><h2>8.4.0<a class="headerlink" href="#renpy-8-4-0" title="Link to this heading"></a></h2>
+<section id="requirement-and-dependency-changes">
+<h3>Requirement and Dependency Changes<a class="headerlink" href="#requirement-and-dependency-changes" title="Link to this heading"></a></h3>
+<p>Ren'Py now requires Windows 10 or later to run. This means that it will no longer run on Windows 7, 8, or 8.1.</p>
+<p>Ren'Py now targets Ubuntu 20.04. This also means it targets the &quot;soldier&quot; version of the Steam Linux Runtime.</p>
+<p>Ren'Py is no longer built for 32-bit ARM Linux. This drops support for the Raspberry Pi 3, and very old Chromebooks.
+Ren'Py is still being built for 32-bit ARM Android. Ren'Py will now prefer the gles2 renderer on ARM Linux devices,
+such as the Raspberry Pi.</p>
+<p>The Android version of Ren'Py is now being built with 16KB pages, for future Android devices that will
+require 16 KB page support.</p>
+</section>
+<section id="python-3-12">
+<h3>Python 3.12<a class="headerlink" href="#python-3-12" title="Link to this heading"></a></h3>
+<p>Ren'Py now uses Python 3.12 on all platforms. This makes avilable several years of Python improvements. To
+finds all of them, please see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/whatsnew/3.10.html">What's New in Python 3.10</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/whatsnew/3.11.html">What's New in Python 3.11</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/whatsnew/3.12.html">What's New in Python 3.12</a></p></li>
+</ul>
+<p>One of the most visible changes caused by this is that Ren'Py will now report the location of Python errors
+at sub-line granularity, rather than at line granularity. In tracebacks, the portions of a line that contribute
+to an error will be colored or underlined.</p>
+</section>
+<section id="performance-improvements">
+<h3>Performance Improvements<a class="headerlink" href="#performance-improvements" title="Link to this heading"></a></h3>
+<p><strong>Script Loading</strong> The internal respresentation of the game script has been changed to reduce the amount of
+memory used and to improve loading time, by only representing data that varies from the default. For a large
+game where initial startup is dominated by script loading, this improved the time it takes to load the script by
+50%.</p>
+<p><strong>Persistent Data</strong> The persistent data format has been changed to use numeric hashes of visited script locations,
+rather than the full script location. These hashes can be saved and loaded much more quickly, which improves game
+performance when the persistent data is large.</p>
+<p><strong>OpenGL Drawing</strong> Ren'Py's OpenGL drawing code has been changed to remove allocations of matrix objects, and to
+reduce the amount of math that needs to be done in many cases. This can improve performance when drawing scenes
+with large numbers of drawing operations, as those scenes can be CPU-bound.</p>
+<p>Similarly, the OpenGL drawing code has been changed to avoid the repeated allocation of dictionaries
+that contain shader variables.</p>
+<p><strong>Live2D</strong> When rendering Live2D models, Ren'Py will avoid doing unproductive work to create Renders for layers
+that are not visible, and masks that are not used. This can improve performance when using Live2D models with
+many layers.</p>
+</section>
+<section id="shaders">
+<h3>Shaders<a class="headerlink" href="#shaders" title="Link to this heading"></a></h3>
+<p>Ren'Py's GLSL shader support now allows uniforms of types int, bool, ivec2, ivec3, ivec4, and bvec2, bvec3, bvec4,
+in addition to the support for float, vec2, vec3, vec4, mat2, mat3, mat4 and sampler2D that Ren'Py has
+always had.</p>
+<p>Ren'Py's GLSL shader support now allows one-dimensions arrays of uniforms of scalar and vector types, but not
+arrays of  matrices or samplers.</p>
+<p>Ren'Py now can supply separate model to world (u_model), world to camera view (u_view), and camera view to viewport
+(u_projection) matrices to shaders. These matrices are supplied as uniforms. There are also a u_projectionview matrix
+that combines u_projection and u_view, and the existing u_transform matrix is all three. Breaking these out allows
+OpenGL shaders to support lighting.</p>
+<p>Ren'Py's GLSL shader support now supports performing operations on the underlying data before passing it to
+a uniform. For example, if <code class="docutils literal notranslate"><span class="pre">u_color</span></code> is an RGBA uniform, <code class="docutils literal notranslate"><span class="pre">u_color__premul</span></code> is that color, premultiplied
+by its alpha channel. Other suffixes get the resolution of a texture, and can perform inverse, transpose,
+and inverse transpose operations on matrices.</p>
+<p>Inside Transforms, Ren'Py now supports uniforms of type sampler2D. These are textures that are set up
+to sample textures. These transforms can be supplied a displayable or a string that becomes a displayable.</p>
+</section>
+<section id="gltf-model-loading">
+<h3>GLTF Model Loading<a class="headerlink" href="#gltf-model-loading" title="Link to this heading"></a></h3>
+<p>Ren'Py now has a minimal ability to load 3D models defined in the GLTF format, using the Open Asset Importer library.
+Models can be loaded using the <a class="reference internal" href="model.html#GLTFModel" title="GLTFModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">GLTFModel</span></code></a> displayable.</p>
+<p>Right now, the GLTFModel loading only supports loading the mesh and textures of a model. There's no support for
+animation or other features of GLTF. What's more, the default Ren'Py shaders only show the base colors, and a custom
+shader is required to handle the other portions of physical-based rendering (PBR) that GLTF supports.</p>
+<p>The current GLTFModel support is is likely useful for people who want to use 3D backgrounds in their games, but
+may require a skilled developer to position the model in 3D space. It's also intended for developers that want to
+experiment and contribute insights and development back to Ren'Py. A future release will include more tools for
+working with objects in three dimensions.</p>
+</section>
+<section id="optional-mipmaps">
+<h3>Optional Mipmaps<a class="headerlink" href="#optional-mipmaps" title="Link to this heading"></a></h3>
+<p>Mipmaps are smaller versions of an image that are used when Ren'Py scales an image down. Using mipmaps
+prevents the image from becoming jagged when scaled down, but generating mipmaps takes time and can cause the game
+to use more memory.</p>
+<p>Ren'Py now leaves the decision of if to create mipmaps to the developer, who knows if the game will scale down an
+image. By default, Ren'Py will create mipmaps for all images it loas. A new mode will only only create mipmaps
+when the display is scaled down to less than 75% of the virtual window size. This is suitable for games
+that do not scale down images, but for which the window size may be smaller than the virtual window size.</p>
+<p>To enable this new mode, set <a class="reference internal" href="config.html#var-config.mipmap"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.mipmap</span></code></a> to &quot;auto&quot;.</p>
+<p>Mipmaps will automatically be created for images loaded for the purpose of Live2D or GLTFModel, as these are
+likely to be scaled down.  Mipmaps can be created for specific images by providing True to the mipmap parameter
+of <a class="reference internal" href="displayables.html#Image" title="Image"><code class="xref py py-func docutils literal notranslate"><span class="pre">Image()</span></code></a>.</p>
+</section>
+<section id="libs-and-mods">
+<h3>Libs and Mods<a class="headerlink" href="#libs-and-mods" title="Link to this heading"></a></h3>
+<p>Ren'Py now includes support for two more special directories, <code class="file docutils literal notranslate"><span class="pre">game/libs</span></code> and <code class="file docutils literal notranslate"><span class="pre">game/mods</span></code>. These
+directories are intended to receive third-party libraries and mods, respectively.</p>
+<p>When the file <code class="file docutils literal notranslate"><span class="pre">game/libs/libs.txt</span></code>
+exists, script files inside <code class="file docutils literal notranslate"><span class="pre">game/libs</span></code> have the first directory removed, if any, and are loaded in unicode order by the path
+not including that directory. Similarly, when the file <code class="file docutils literal notranslate"><span class="pre">game/mods/mods.txt</span></code> exists, script files inside it are loaded in
+unicode order by the path, not including that directory.</p>
+<p>Note that load order is relatively unimportant in Ren'Py - it's mostly used with <a class="reference internal" href="cds.html"><span class="doc">Creator-Defined Statements</span></a>. Init priorities levels
+have been changed to recommend that games use init priorities of -99 to 99, and libraries and mods use from -999 to -100
+and 100 to 999.</p>
+<p>When present, the libs and mods directories are showing in the launcher. The libs directory is created automatically
+when the game is created. The mods directory can be created manually if a creator wants to support mods.</p>
+<p>The goal of this change is to make it easier to distribute third-party libraries and mods. Instead of needing to be
+merged with the player's script, a library can be placed under game/libs, and will provide full functionality there.</p>
+<p><cite>.rpe</cite> and <cite>.rpe.py</cite> files are also searched in the libs directory.</p>
+</section>
+<section id="layered-images">
+<h3>Layered Images<a class="headerlink" href="#layered-images" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">variant</span></code> and <code class="docutils literal notranslate"><span class="pre">prefix</span></code> properties, which accepted any value but evaluated it (as a string) only at init time,
+now accept an unquoted <cite>image name component</cite> (digits, letters and underscores, no space or dash, may start with a
+digit).</p>
+<p>In places where the syntax allowed the <code class="docutils literal notranslate"><span class="pre">at</span></code> keyword, it now allows an <code class="docutils literal notranslate"><span class="pre">at</span> <span class="pre">transform:</span></code> block.</p>
+<p>In places where a displayable is expected, it is now possible to use an <code class="docutils literal notranslate"><span class="pre">image:</span></code> block, and to define an ATL image,
+like an anonymous <a class="reference internal" href="transforms.html#atl-image-statement"><span class="std std-ref">Image Statement with ATL Block</span></a>.</p>
+<p>The new <code class="docutils literal notranslate"><span class="pre">when</span></code> property introduces a more straightforward boolean condition syntax, replacing the <code class="docutils literal notranslate"><span class="pre">if_any</span></code>,
+<code class="docutils literal notranslate"><span class="pre">if_all</span></code> and <code class="docutils literal notranslate"><span class="pre">if_not</span></code> properties which remain supported for backwards compatibility. The new syntax removes
+the need for lists and quoting.
+To convert to the new syntax, you can replace:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">if_any</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">]</span>
+<span class="n">if_all</span> <span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">]</span>
+<span class="n">if_not</span> <span class="p">[</span><span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>with the more concise:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">when</span> <span class="p">(</span><span class="n">a</span> <span class="k">or</span> <span class="n">b</span><span class="p">)</span> <span class="k">and</span> <span class="n">c</span> <span class="k">and</span> <span class="n">d</span> <span class="k">and</span> <span class="k">not</span> <span class="p">(</span><span class="n">e</span> <span class="k">or</span> <span class="n">f</span><span class="p">)</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">multiple</span></code> groups may now be anonymous, and should from now on be defined with the <code class="docutils literal notranslate"><span class="pre">multiple</span></code> keyword placed in
+lieu of the group name. This makes their behavior more consistent and easier to understand. The behavior of named
+multiple groups is unchanged, but they should not be used going forward.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">attribute</span></code> statement now takes the <code class="docutils literal notranslate"><span class="pre">variant</span></code> property, unless it is inside a group with a <code class="docutils literal notranslate"><span class="pre">variant</span></code>, or it is
+directly assigned a displayable. This allows native support for cases which previously required a multiple group with a
+variant, or an attribute_function manipulation.</p>
+</section>
+<section id="automatic-oversampling">
+<h3>Automatic Oversampling<a class="headerlink" href="#automatic-oversampling" title="Link to this heading"></a></h3>
+<p>Ren'Py will now automatically look for oversampled version of images, and use those if the game is scaled up.</p>
+<p>As an example, take loading &quot;eileen happy.png&quot;. When the game is scaled to more than 100% of it's virtual size,
+when loading &quot;eileen happy.png&quot;, Ren'Py will also look for &quot;eileen <a class="reference external" href="mailto:happy&#37;&#52;&#48;2&#46;png">happy<span>&#64;</span>2<span>&#46;</span>png</a>&quot;, and load that if it exists.
+When scaled to more than 200%, it will look for &quot;eileen <a class="reference external" href="mailto:happy&#37;&#52;&#48;4&#46;png">happy<span>&#64;</span>4<span>&#46;</span>png</a>&quot;, &quot;eileen <a class="reference external" href="mailto:happy&#37;&#52;&#48;3&#46;png">happy<span>&#64;</span>3<span>&#46;</span>png</a>&quot;, and
+&quot;eileen <a class="reference external" href="mailto:happy&#37;&#52;&#48;2&#46;png">happy<span>&#64;</span>2<span>&#46;</span>png</a>&quot;. If none of these exist, it will use &quot;eileen happy.png&quot;.</p>
+<p>Ren'Py also supports oversampling and automatic oversampling for movies played using <a class="reference internal" href="movie.html#Movie" title="Movie"><code class="xref py py-class docutils literal notranslate"><span class="pre">Movie</span></code></a> and
+<a class="reference internal" href="movie.html#renpy.movie_cutscene" title="renpy.movie_cutscene"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.movie_cutscene()</span></code></a>. This works similarly to images, with respect to filenames.</p>
+</section>
+<section id="accessibility">
+<h3>Accessibility<a class="headerlink" href="#accessibility" title="Link to this heading"></a></h3>
+<p>The shift+A accessibility menu has been redesigned. It's now smaller, so that the bottom of the game
+(usually including dialogue) is visible, allowing the effects of the menu to be seen more immediately.
+It also has been broken up into multiple pages, to allow for new options to be added.</p>
+<p>Ren'Py can now force audio to mono, allowing sounds contain information on only the left or right channel
+to become audible on both. This can be enabled through the shift+A accessibility menu, the &quot;force mono&quot; <a class="reference internal" href="screen_actions.html#Preference" title="Preference"><code class="xref py py-func docutils literal notranslate"><span class="pre">Preference()</span></code></a>,
+or the <a class="reference internal" href="preferences.html#var-preferences.force_mono"><code class="xref std std-var docutils literal notranslate"><span class="pre">preferences.force_mono</span></code></a> variable.</p>
+<p>Ren'Py now includes a preference to allow the user to adjust font kerning. This is exposed through the
+accessibility menu, the &quot;font kerning&quot; <a class="reference internal" href="screen_actions.html#Preference" title="Preference"><code class="xref py py-func docutils literal notranslate"><span class="pre">Preference()</span></code></a>, and the <code class="xref std std-var docutils literal notranslate"><span class="pre">preferences.font_kerning</span></code> variable.</p>
+</section>
+<section id="launcher">
+<h3>Launcher<a class="headerlink" href="#launcher" title="Link to this heading"></a></h3>
+<p>The launcher now supports games being placed into folders, which can be collapsed and expanded. To put a
+game in a folder, create a directory underneath the projects directory, and move the game into that directory.</p>
+<p>The launcher's &quot;Console output&quot; option now works on the Macintosh platform.</p>
+<p>Building an update will now produce a <code class="docutils literal notranslate"><span class="pre">public_key.pem</span></code> file, containing key material that can be shared with
+the world. When building a <a class="reference internal" href="downloader.html"><span class="doc">downloader game</span></a>, this file should be copied to the base directory of
+the downloader game. This is the public key that will be used to verify the download.</p>
+<p>When creating a new game, Ren'Py will now include a .gitignore file that contains a default set of files to ignore.</p>
+<p>It's possible to <a class="reference internal" href="developer_tools.html#launcher-customization"><span class="std std-ref">customize the Ren'Py launcher</span></a> to select the files and directories
+that are available to click on.</p>
+</section>
+<section id="text">
+<h3>Text<a class="headerlink" href="#text" title="Link to this heading"></a></h3>
+<p>Ren'Py now supports OpenType font layout features, which can control things like ligaturization and other
+settings. These features are controlled by the <a class="reference internal" href="style_properties.html#style-property-font_features"><code class="xref std std-propref docutils literal notranslate"><span class="pre">font_features</span></code></a> style property, and the <code class="xref std std-tt docutils literal notranslate"><span class="pre">features</span></code> text tag.</p>
+<p>A problem with mark positions on ligatures has been fixed. This mainly affected
+Arabic, but applies to all text. Note that this fix is only available when using
+the Harfbuzz shaper.</p>
+<p>The <a class="reference internal" href="style_properties.html#style-property-reading_order"><code class="xref std std-propref docutils literal notranslate"><span class="pre">reading_order</span></code></a> style property has been added so that a preference
+for the directionality of text may be expressed when <code class="docutils literal notranslate"><span class="pre">config.rtl</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>.
+Setting it to <code class="docutils literal notranslate"><span class="pre">&quot;wrtl&quot;</span></code> (weak right-to-left) will cause directionally neutral
+lines to be displayed right-to-left (previously they would always be displayed
+left-to-right). This is mostly to support punctuation-only dialogue lines in RTL
+language games and translations.</p>
+<p>Finally, a regression in how bidirectional text embedding was handled when using
+the Harfbuzz text shaper introduced in <code class="docutils literal notranslate"><span class="pre">8.3.7</span></code> has been fixed. Text containing
+runs of both LTR and RTL characters will now render with the correct
+directionality for the individual runs again.</p>
+</section>
+<section id="traceback-saves">
+<h3>Traceback Saves<a class="headerlink" href="#traceback-saves" title="Link to this heading"></a></h3>
+<p>If possible, Ren'Py now creates saves when an uncaught exception occurs, containing both the game
+state and the traceback. These saves are stored in slots with the name <code class="file docutils literal notranslate"><span class="pre">_tracesave-1</span></code> to <code class="file docutils literal notranslate"><span class="pre">_tracesave-10</span></code>.
+and have the traceback accessible through the json metadata.</p>
+<p>The new <a class="reference internal" href="save_load_rollback.html#renpy.get_save_data" title="renpy.get_save_data"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.get_save_data()</span></code></a> function allows you to retrieve the data for a particular save slot,
+without loading the save. This can be used with a traceback save to retrieve the game data without loading
+into an error state.</p>
+</section>
+<section id="features">
+<h3>Features<a class="headerlink" href="#features" title="Link to this heading"></a></h3>
+<p>The <a class="reference internal" href="transform_properties.html#transform-property-nearest"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">nearest</span></code></a> transform property now works as documented, allowing nearest neighbor texture interpolation
+to be disabled when set to False.</p>
+<p>The new <a class="reference internal" href="screen_actions.html#HasSideImage" title="HasSideImage"><code class="xref py py-func docutils literal notranslate"><span class="pre">HasSideImage()</span></code></a> function returns the presence or absence of a side image before the side image
+itself is determined, making it useable in the say screen for layout.</p>
+<p>The new <a class="reference internal" href="config.html#var-config.web_unload_music"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.web_unload_music</span></code></a> variable controls whether music is unloaded when downloaded as part
+of <a class="reference internal" href="web.html#progressive-downloading"><span class="std std-ref">progressive downloading</span></a>.</p>
+<p>The new <a class="reference internal" href="config.html#var-config.clear_history_on_language_change"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.clear_history_on_language_change</span></code></a> variable controls whether history is cleared when the
+language is changed.</p>
+<p><a class="reference internal" href="screen_actions.html#MixerValue" title="MixerValue"><code class="xref py py-func docutils literal notranslate"><span class="pre">MixerValue()</span></code></a> now suports the <cite>step</cite> and <cite>force_step</cite> parameters.</p>
+<p>The lint report can be configured to expand character aliases to names by setting <a class="reference internal" href="config.html#var-config.lint_show_names"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.lint_show_names</span></code></a> to True.</p>
+<p><a class="reference internal" href="config.html#var-config.voice_callbacks"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.voice_callbacks</span></code></a> allows you to define callbacks that are called when voice lines are played
+or stop.</p>
+<p><a class="reference internal" href="screens.html#sl-grid"><span class="std std-ref">Grids</span></a> now support <cite>right_to_left</cite> and <cite>bottom_to_top</cite> properties, which control the order in which
+the grid is filled.</p>
+<p>Character's <cite>ctc_position</cite> argument now takes a new value <cite>screen-variable</cite>. This places the click-to-continue
+indicator in a screen variable, which allows it to be positioned inside the screen. This is intended for use
+with speech bubbles, to allow the click-to-continue indicator to be <a class="reference internal" href="bubble.html#bubble-ctc"><span class="std std-ref">positioned inside the speech bubble</span></a>.</p>
+<p>The new <a class="reference internal" href="cds.html#renpy.lex_string" title="renpy.lex_string"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.lex_string()</span></code></a> function makes it possible to create a Lexer for an arbitrary string.</p>
+<p>The <a class="reference internal" href="sprites.html#SpriteManager" title="SpriteManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpriteManager</span></code></a> and <a class="reference internal" href="sprites.html#SnowBlossom" title="SnowBlossom"><code class="xref py py-func docutils literal notranslate"><span class="pre">SnowBlossom()</span></code></a> displayables now support the <cite>animation</cite> parameter,
+which can be used to prevent resetting when the displayable is reshown.</p>
+<p>The <a class="reference internal" href="sprites.html#SnowBlossom" title="SnowBlossom"><code class="xref py py-func docutils literal notranslate"><span class="pre">SnowBlossom()</span></code></a> displayable now supports the <cite>distribution</cite> parameter, which controls the distribution of how
+the particles are created, allowing the particles to be created in the center or sides of the screen.</p>
+<p>The <a class="reference internal" href="rooms.html#Gallery" title="Gallery"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gallery</span></code></a> class now supports separate transitions when entering a sequence of images, going
+between images, and exiting the sequence of images.</p>
+<p>Screens now support python-style docstrings, which are used when a string is included as the first line
+of the block. Ren'Py does not do anything directly with dosctrings, but the raw string can be accessed
+using <a class="reference internal" href="screen_python.html#renpy.get_screen_docstring" title="renpy.get_screen_docstring"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.get_screen_docstring()</span></code></a>.</p>
+<p>The <a class="reference internal" href="screen_actions.html#Confirm" title="Confirm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Confirm</span></code></a> action and <a class="reference internal" href="other.html#renpy.confirm" title="renpy.confirm"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.confirm()</span></code></a> function now pass additional keyword arguments (not beginning
+with _) to the confirm screen.</p>
+<p>The screen language <a class="reference internal" href="screens.html#sl-use"><span class="std std-ref">use</span></a> statement now takes an <code class="docutils literal notranslate"><span class="pre">as</span></code> clause, which can be used to capture a
+variable named <cite>main</cite> from the screen. This is intended to be used like the <code class="docutils literal notranslate"><span class="pre">as</span></code> clause of screen language
+displayables, which captures the displayable into a variable.</p>
+<p>Custom screen language statement also support the <code class="docutils literal notranslate"><span class="pre">as</span></code> clause.</p>
+<p>The <a class="reference internal" href="transforms.html#var-reset"><code class="xref std std-var docutils literal notranslate"><span class="pre">reset</span></code></a> transform now resets all properties of a Transform.</p>
+<p><a class="reference internal" href="transforms.html#Transform" title="Transform"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transform</span></code></a> now takes a <cite>reset</cite> property, which controls whether the transform is reset when it is
+used, as opposed to being given properties by other transforms that share a tag.</p>
+<p>The new <code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.seen_translation()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.mark_translation_seen()</span></code>, and <code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.mark_translation_unseen()</span></code>
+functions make it possible to determine if a translation has been seen.</p>
+<p>Audio filesname can now include a volume clase, like &quot;&lt;volume 0.5&gt;sunflower-slow-drag.ogg&quot;. This sets the relative
+amplitude of the track, similar to the <code class="docutils literal notranslate"><span class="pre">volume</span></code> clause of the <code class="docutils literal notranslate"><span class="pre">play</span></code> and <code class="docutils literal notranslate"><span class="pre">queue</span></code> statements.</p>
+<p>The new <a class="reference internal" href="config.html#var-config.keep_screenshot_entering_menu"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.keep_screenshot_entering_menu</span></code></a> variable determines if a screenshot taken with <a class="reference internal" href="screen_actions.html#FileTakeScreenshot" title="FileTakeScreenshot"><code class="xref py py-class docutils literal notranslate"><span class="pre">FileTakeScreenshot</span></code></a>
+is kept when entering a menu context.</p>
+<p>The <a class="reference internal" href="style_properties.html#style-property-thumb_offset"><code class="xref std std-propref docutils literal notranslate"><span class="pre">thumb_offset</span></code></a> style property now can take a tuple giving different offsets for the two sides
+of a bar. The new <code class="xref std std-propref docutils literal notranslate"><span class="pre">thumb_align</span></code> style property controls how a thumb is aligned with the bar.</p>
+<p>The <a class="reference internal" href="screens.html#sl-input"><span class="std std-ref">input</span></a> displayable now takes an <cite>arrowkeys</cite> property, which controls whether the arrow keys
+can be used to move the cursor in the input, or are used to move the focus between displayables.</p>
+<p>The <a class="reference internal" href="config.html#var-config.translate_additional_strings_callbacks"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.translate_additional_strings_callbacks</span></code></a> callbacks make it possible for a game to offer
+additional to be added to translation files. (For example, strings from third-party libraries or data files.)</p>
+<p>The <a class="reference internal" href="translation.html#id3" title="___"><code class="xref py py-func docutils literal notranslate"><span class="pre">___()</span></code></a> (triple underscore) function makes it possible translate a string, and then
+apply <a class="reference internal" href="text.html#text-interpolation"><span class="std std-ref">text interpolation</span></a> to the result. Interpolations occur in the scope of
+that the function is called from. The triple underscore function also marks the string contained
+inside for translation.</p>
+<p>The <a class="reference internal" href="config.html#var-config.persistent_callback"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.persistent_callback</span></code></a> callback makes it possible to update persistent data when it is loaded.
+Starting from this release <code class="xref std std-var docutils literal notranslate"><span class="pre">persistent._version</span></code> will also be set to the current version of the game in
+any newly created persistent data. This can be used with the callback to migrate persistent save data.</p>
+</section>
+<section id="changes">
+<h3>Changes<a class="headerlink" href="#changes" title="Link to this heading"></a></h3>
+<p>The <a class="reference internal" href="other.html#renpy.get_renderer_info" title="renpy.get_renderer_info"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.get_renderer_info()</span></code></a> function now returns a dictionary containing information about user's
+GPU and graphics driver, when available.</p>
+<p>Lint now reports when the translation functuions (<a class="reference internal" href="translation.html#id0" title="_"><code class="xref py py-func docutils literal notranslate"><span class="pre">_()</span></code></a>, <a class="reference internal" href="translation.html#id2" title="__"><code class="xref py py-func docutils literal notranslate"><span class="pre">__()</span></code></a>, <a class="reference internal" href="translation.html#id3" title="___"><code class="xref py py-func docutils literal notranslate"><span class="pre">___()</span></code></a>, and <a class="reference internal" href="translation.html#p" title="_p"><code class="xref py py-func docutils literal notranslate"><span class="pre">_p()</span></code></a>) are called
+with the wrong number of arguments.</p>
+<p>When Ren'Py loads a Python module from the game/ directory, <code class="docutils literal notranslate"><span class="pre">__file__</span></code> is set to the relative path of the module.</p>
+<p>Ren'Py now support showing the same <a class="reference internal" href="live2d.html#Live2D" title="Live2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">Live2D</span></code></a> displayable on multiple layers, with multiple tags,
+or both.</p>
+<p><a class="reference internal" href="transforms.html#Transform" title="Transform"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transform</span></code></a> now has an attribute, original_child, that gives the child of the transform before the
+function was called.</p>
+<p>The behavior of <a class="reference internal" href="model.html#transform-property-mesh_pad"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">mesh_pad</span></code></a> has been changed when left or top padding is present. Previously, this would
+offset the child by the padding amount. Now, the child remains in the same place, with the padding added to the
+left and top of the child.</p>
+<p>From the Python typing module, the names Callable, Any, Self, Literal, cast, overload, final, and override are imported
+into namespaces. These become reserved names in Ren'Py, and should not be used as names in newly-developed projects.</p>
+<p>A regression that kept &quot;Add From to Calls&quot; from working has been fixed.</p>
+<p>On the web platform, Ren'Py will now preload automatic voice lines, ensuring the files can play immediately,
+even if not fully cached on the player's device.</p>
+<p>Text inputs (<a class="reference internal" href="input.html#renpy.input" title="renpy.input"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.input()</span></code></a> and the <a class="reference internal" href="screens.html#sl-input"><span class="std std-ref">input</span></a> displayable) disable non-required text
+ligatures, so that ligaturization doesn't change when the caret moves.</p>
+<p>Ren'Py will disable the screensaver (and hence, the system going to sleep) when auto-forward mode is active.</p>
+<p>A creator-defined statement that defines a label will now call <a class="reference internal" href="config.html#var-config.label_callbacks"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.label_callbacks</span></code></a> when run.</p>
+<p>The &quot;Click to play the video.&quot; screen used on some web platforms is now translatable.</p>
+<p>CTC indicators inside retained speech bubbles will now be cleared when the player clicks past the dialogue.</p>
+<p>In some circumstances, Ren'Py will reuse tuples containing immutable values (float, int, bool,
+complex, str, bytes, and other immutable tuples), which can reduce memory usage and improve performance. This
+may lead to these immutable tuples having the same object identity when previously they would not have.</p>
+<p>By default, Ren'Py now only creates mipmaps for textures if the display is scaled down to less than .75 of virtual
+window size. This is suitable for games that do not scale down images. To enable mipmapping again, set
+<a class="reference internal" href="config.html#var-config.mipmap"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.mipmap</span></code></a> to True.</p>
+<p>Ren'Py no longer triggers and autoreload when a file that had not existed comes into existence. This behavior
+had been inconsistent, working in some places but not others, required Ren'Py to spent time scanning for files
+that do not exist.</p>
+<p>Ren'Py now considers a dialogue statement to have been seen if a statement with the same translation identifier
+has been seen.</p>
+<p>For size reasons, the lists of seen dialogue and translations now store a 64-bit integer hash of the statement
+name or translation id.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">expression</span></code> statement has changed so that <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">expression</span> <span class="pre">&quot;bg</span> <span class="pre">washington&quot;</span></code> is equivalent
+to <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">bg</span> <span class="pre">washington</span></code>. Previously, the expression would be used as a tag, which would rarely be correct.
+If a displayable is given instead of a string, a tag will be generated.</p>
+<p>One the web platform, <a class="reference internal" href="other.html#var-renpy.emscripten"><code class="xref std std-var docutils literal notranslate"><span class="pre">renpy.emscripten</span></code></a> is the emscripten module, making it available
+without needing to import it. You should still check that <a class="reference internal" href="other.html#var-renpy.emscripten"><code class="xref std std-var docutils literal notranslate"><span class="pre">renpy.emscripten</span></code></a> is true before using it.</p>
+<p>When <a class="reference internal" href="config.html#var-config.nearest_neighbor"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.nearest_neighbor</span></code></a> is true, image fonts are scaled using nearest neighbor scaling,
+rather than the default bilinear scaling.</p>
+<p>The &quot;Image Attributes&quot; screen also indicates if transforms are applied to a layer, as it can be hard
+to determine otherwise.</p>
+<p>Ren'Py now also searches for <cite>.rpe</cite> and <cite>.rpe.py</cite> files in the new libs directory.</p>
+<p><a class="reference internal" href="other.html#renpy.get_renderer_info" title="renpy.get_renderer_info"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.get_renderer_info()</span></code></a> now also include GPU vendor and device name as well as driver version.</p>
+</section>
+</section>
+<section id="renpy-7-8-7">
+<span id="renpy-8-3-7"></span><span id="id2"></span><h2>8.3.7 / 7.8.7<a class="headerlink" href="#renpy-7-8-7" title="Link to this heading"></a></h2>
+<section id="live2d">
+<h3>Live2D<a class="headerlink" href="#live2d" title="Link to this heading"></a></h3>
+<p>Fixed an issue where Expressions with a fadeout time of 0 would not hide properly.</p>
+<p>Fixed an issue where Ren'Py would incorrectly size Live2D clipping masks. As this problem only affected layers that
+used clipping, this would often manifest as eyes being missing.</p>
+<p>Live2D fading now uses cosine easing, as the Cubism Native SDK does.</p>
+</section>
+<section id="arabic-text-shaping">
+<h3>Arabic Text Shaping<a class="headerlink" href="#arabic-text-shaping" title="Link to this heading"></a></h3>
+<p>(As these changes require the Harfbuzz text shaper, the changes are only available in Ren'Py 8.)</p>
+<p>When <code class="xref std std-var docutils literal notranslate"><span class="pre">config.rtl</span></code> is set to True and Harfbuzz is enabled, Ren'Py will unmap Arabic presentation forms and allow
+harfbuzz to fully shape Arabic text. This allows Ren'Py to work with fonts that do not contain Arabic presentation
+forms directly, but instead use ligaturization.</p>
+<p>An issue with Harbuzz's adjustments of vertical positions has been fixed. This improves the positioning of text
+where ligatures control the vertical positioning of the text. While this affects some Arabic fonts, it also may
+improve the location of marks in other fonts.</p>
+</section>
+<section id="id3">
+<h3>Changes<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<p>Vertex and fragment functions created with <a class="reference internal" href="model.html#renpy.register_shader" title="renpy.register_shader"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.register_shader()</span></code></a> are now placed after the
+variables defined by the shaders, making it possible to use uniforms in the functions.</p>
+<p>Displayables embedded in slow text (most notably, nestled click-to-continue indicators) are now timed from
+when the displayable is revealed, rather than when the text block itself is show. This means that the first
+frame of CTC animations will always be seen.</p>
+</section>
 <section id="fixes">
 <h3>Fixes<a class="headerlink" href="#fixes" title="Link to this heading"></a></h3>
+<p>Ren'Py will no longer change the position of newly-created maximized windows.</p>
+<p>Problems caused by registering an audio channel more than once have been fixed.</p>
+<p>Multiple say statements can now contain image attributes, like other say statements. Temporary image attributes
+are only supported in the last say statement in a multiple group.</p>
+<p>Games made with Ren'Py 8.0 and 8.1 will have Python compiled with <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">__future__</span> <span class="pre">import</span> <span class="pre">annotations</span></code>, matching
+how Python in those versions was originally compiled.</p>
+<p><a class="reference internal" href="sprites.html#SpriteManager" title="SpriteManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpriteManager</span></code></a> will no longer merge instances of a displayable that maintains internal state, like
+transforms. This is more correct, but slightly less efficient.</p>
+<p>The language is now set when the game starts or is loaded, ensuring that <code class="docutils literal notranslate"><span class="pre">translate</span> <span class="pre">python</span></code> blocs are always
+run in the game context.</p>
+<p>Text shaders now respect <a class="reference internal" href="style_properties.html#style-property-slow_cps_multiplier"><code class="xref std std-propref docutils literal notranslate"><span class="pre">slow_cps_multiplier</span></code></a>.</p>
+</section>
+</section>
+<section id="renpy-7-8-6">
+<span id="renpy-8-3-6"></span><span id="id4"></span><h2>8.3.6 / 7.8.6<a class="headerlink" href="#renpy-7-8-6" title="Link to this heading"></a></h2>
+<section id="id5">
+<h3>Fixes<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<p>Revert a change that prevented certain saves from loading.</p>
+</section>
+</section>
+<section id="renpy-7-8-5">
+<span id="renpy-8-3-5"></span><span id="id6"></span><h2>8.3.5 / 7.8.5<a class="headerlink" href="#renpy-7-8-5" title="Link to this heading"></a></h2>
+<section id="id7">
+<h3>Changes<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+<p>Cyrillic characters are no longer used by the OpenDyslexic font in accessibility mode, as some of the characters
+are wrong in the version of OpenDyslexic that Ren'Py uses.</p>
+<p>When laying out text, nestled CTC (click-to-continue) indicators that are not at the end of the text are considered
+to be of 0 size. This prevents the text from jumping around.</p>
+<p>When laying out text with nestled CTC indicators, <code class="docutils literal notranslate"><span class="pre">extend</span></code> is taken into account.</p>
+<p>A modal screen stops being modal as it begins hiding.</p>
+<p>Ren'Py will now create pseudo-glyphs for the all textshaders, not just textshaders applied to text with outlines.</p>
+<p>Ren'Py will now consider multiple dialogue when displaying empty windows.</p>
+<p>Gles2 is now the default renderer on arm-linux, even if OpenGL is available.</p>
+<p>When a file no_launcher_links.txt exist in the Ren'Py base directory, the launcher will disable all links to renpy.org,
+for environments where direct links to external sites are not suitable.</p>
+<p>Displayables given to imagemaps are offered a full screen's worth of space when being rendered. Previously, the
+amount of space given to these displayables was undefined.</p>
+<p>The itch butler tool is now downloaded from itch's new CDN.</p>
+</section>
+<section id="id8">
+<h3>Fixes<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
+<p>Non-moving children of a MoveTransform are now wrapped to ensure the child's timeline remains consistent.</p>
+<p>A crash during reload when the speech bubble editor is displayed has been fixed.</p>
+<p>Ren'Py now displays all outline offsets when using textshaders.</p>
+<p>A crash caused by changing audio filters on the web platform has been fixed.</p>
+<p>A font in a translation directory can now override a font in the game directory.</p>
+<p>A crash during video playback on the web platform has been fixed.</p>
+<p>Mouse coordinates passed to displayables embedded in text are now correct.</p>
+</section>
+</section>
+<section id="renpy-7-8-4">
+<span id="renpy-8-3-4"></span><span id="id9"></span><h2>8.3.4 / 7.8.4<a class="headerlink" href="#renpy-7-8-4" title="Link to this heading"></a></h2>
+<section id="id10">
+<h3>Fixes<a class="headerlink" href="#id10" title="Link to this heading"></a></h3>
+<p>Python Builtins (like len) are now always available during string interpolation.</p>
+<p>Animated presplash images now take precedence over static presplash images, matching
+the documentation.</p>
+<p>There have been a number of fixes related to dragging of viewports and drag displayables.</p>
+<p>Movies are stopped when returning to a channel from a context.</p>
+<p>An issue where autosave could hurt performance by causing interaction restarts has
+been fixed.</p>
+<p>Ren'Py now uses the previous window type when running the <code class="docutils literal notranslate"><span class="pre">nvl</span> <span class="pre">hide</span></code> statement.</p>
+<p>A displayable that does not support keyboard focus will now be ignored during
+keyboard focus computations.</p>
+<p>An issue that could cause <a class="reference internal" href="screens.html#sl-input"><span class="std std-ref">Input</span></a> to not be masked properly when the contents
+of the input was a space was fixed.</p>
+<p>An issue preventing Android and iOS keyboards from being shown when the
+window was empty has been fixed.</p>
+<p>An issue that could cause the image cache to be managed incorrectly has been fixed.</p>
+<p>An incorrect build prevented the web version of Ren'Py from working properly, on Ren'Py
+7.8.3. This has been fixed.</p>
+</section>
+<section id="other-changes">
+<h3>Other Changes<a class="headerlink" href="#other-changes" title="Link to this heading"></a></h3>
+<p>Displayables rendered for imagemaps are offered (<a class="reference internal" href="config.html#var-config.screen_width"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.screen_width</span></code></a>,
+<a class="reference internal" href="config.html#var-config.screen_height"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.screen_height</span></code></a>) pixels of space, rather than an arbitrary size. This
+shouldn't matter for images, but makes non-image displayables behave more consistently.</p>
+<p>The ATL &quot;update&quot; event, which was issued in rare circumstances, has been removed.</p>
+<p>The new <a class="reference internal" href="other.html#renpy.get_statement_name" title="renpy.get_statement_name"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.get_statement_name()</span></code></a> function returns the name of the currently
+executing Ren'Py statement, the same name given to <a class="reference internal" href="config.html#var-config.statement_callbacks"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.statement_callbacks</span></code></a>.</p>
+<p><a class="reference internal" href="sprites.html#SpriteManager" title="SpriteManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpriteManager</span></code></a> has been modernized, and now can be saved.</p>
+</section>
+</section>
+<section id="renpy-7-8-3">
+<span id="renpy-8-3-3"></span><span id="id11"></span><h2>8.3.3 / 7.8.3<a class="headerlink" href="#renpy-7-8-3" title="Link to this heading"></a></h2>
+<section id="id12">
+<h3>Fixes<a class="headerlink" href="#id12" title="Link to this heading"></a></h3>
+<p>Empty masked inputs no longer show a single mask glyph.</p>
+<p>If a <a class="reference internal" href="movie.html#Movie" title="Movie"><code class="xref py py-class docutils literal notranslate"><span class="pre">Movie</span></code></a> has a transform as its <cite>image</cite> or <cite>show_image</cite>, that transform
+is reset each time the movie is shown.</p>
+<p>The <a class="reference internal" href="config.html#var-config.nvl_adv_transition"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.nvl_adv_transition</span></code></a> no longer forces the dialogue window to be hidden.</p>
+<p>Screens that are used by another screen are now updated properly if the interaction restarts
+before the screen is first rendered.</p>
+<p>The <a class="reference internal" href="achievement.html#achievement.steam.get_session_ticket" title="achievement.steam.get_session_ticket"><code class="xref py py-func docutils literal notranslate"><span class="pre">achievement.steam.get_session_ticket()</span></code></a> function now works as documented.</p>
+<p>Changes to audio filters take place immediately after reload.</p>
+<p><a class="reference internal" href="config.html#var-config.skip_sounds"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.skip_sounds</span></code></a> now works as documented.</p>
+<p><a class="reference internal" href="model.html#Model" title="Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a> now creates meshes as described in the documentation when no textures are supplied.</p>
+<p>The image attributes screen now quotes image and displayable names.</p>
+<p>An issue with rollback not restarting music has been fixed.</p>
+<p>Underlines and strikethroughs will not be broken when drawn using harfbuzz-based text shaping.</p>
+<p>Ren'Py now ensures that IMEs are activated on the primary window when the game starts, rather than on
+a presplash window.</p>
+<p>Bars no longer lose the <code class="docutils literal notranslate"><span class="pre">selected_hover</span></code> prefix when adjusted using keyboard or game controller.</p>
+<p>Rounding errors during pixel perfect text positioning have been fixed. These errors could cause text to
+jump 1 pixel during dissolves.</p>
+<p>The rarely-used <code class="docutils literal notranslate"><span class="pre">gl_anisotropic</span></code> transform property now works.</p>
+<p>The <a class="reference internal" href="style_properties.html#style-property-keyboard_focus_insets"><code class="xref std std-propref docutils literal notranslate"><span class="pre">keyboard_focus_insets</span></code></a> property now works as documented.</p>
+<p>A rounding issue that could cause <a class="reference internal" href="style_properties.html#style-property-bar_invert"><code class="xref std std-propref docutils literal notranslate"><span class="pre">bar_invert</span></code></a> to stop working has been fixed.</p>
+<p>Ren'Py will render a displayable a second time if <a class="reference internal" href="style_properties.html#style-property-box_wrap"><code class="xref std std-propref docutils literal notranslate"><span class="pre">box_wrap</span></code></a> is True, to ensure that the displayable
+is offered the correct amount of space when wrapped to a second line. In rare cases, this could change layout.</p>
+<p>Controller events can now cause Ren'Py to focus a displayable with <cite>default_focus</cite> set. Previously, these
+events weren't considered inputs by the focus system.</p>
+<p>There have been a number of fixes to the way Ren'Py handles dragging a viewport filled with buttons.</p>
+<p>A drag may now contain a draggable viewport, allowing a window to be more directly emulated.</p>
+</section>
+<section id="id13">
+<h3>Other Changes<a class="headerlink" href="#id13" title="Link to this heading"></a></h3>
+<p>Android bundles now use install-time assets packs, rather than fast-follow packs, to ensure that all assets
+are available when the game is run.</p>
+<p>An <a class="reference internal" href="displayables.html#AlphaMask" title="AlphaMask"><code class="xref py py-class docutils literal notranslate"><span class="pre">AlphaMask</span></code></a> will now cause mask transformations to restart each time it is shown.</p>
+<p>Displayables zoomed down to 0 pixels big will no longer get focus.</p>
+<p>The &quot;always&quot; option to _renpysteam.keyboard_mode is no longer supported. If given, the &quot;once&quot; mode is
+used, requiring the player to explicitly request the Steam Deck keyboard when required.</p>
+<p>The number of frames that Ren'Py passes through the rendering pipeline before switching to powersave
+mode has been increased to 12, to ensure that frames make it through compositors in a timely manner.</p>
+<p>Ren'Py locks the image cache less, which should prevent some frame drops when loading images.</p>
+<p>Synchronized start of audio/video no longer occurs on movie channels unless explicitly requested.</p>
+<p>When rolling back to a point where a looping <a class="reference internal" href="movie.html#Movie" title="Movie"><code class="xref py py-class docutils literal notranslate"><span class="pre">Movie</span></code></a> was showing, the looping movie will be played again
+if it had been stopped.</p>
+<p>A <a class="reference internal" href="movie.html#Movie" title="Movie"><code class="xref py py-class docutils literal notranslate"><span class="pre">Movie</span></code></a> will only stop movies that it has played, rather than any movie on the associated channel.</p>
+<p>When <code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.set_audio_filter()</span></code> is called with <cite>immediate</cite> false, the filter will be applied when
+the queued file is played, rather than at some indeterminate time in the future.</p>
+<p>The <a class="reference internal" href="displayables.html#Frame" title="Frame"><code class="xref py py-class docutils literal notranslate"><span class="pre">Frame</span></code></a> displayable is no longer adjusted to be pixel perfect, preventing visual glitches.</p>
+<p>When using text shaders to display text with outlines, Ren'Py will create pseudo-glyphs. These pseudo-glyphs
+cover the start and end of each line, and are used to ensure the outlines will be shown.</p>
+</section>
+</section>
+<section id="renpy-7-8-2">
+<span id="renpy-8-3-2"></span><span id="id14"></span><h2>8.3.2 / 7.8.2<a class="headerlink" href="#renpy-7-8-2" title="Link to this heading"></a></h2>
+<section id="id15">
+<h3>Fixes<a class="headerlink" href="#id15" title="Link to this heading"></a></h3>
 <p>Fixed a build issue with 8.3.1 and 7.8.1 that prevented the Android version of Ren'Py from starting properly,
 making games unplayable.</p>
 </section>
 </section>
 <section id="renpy-7-8-1">
-<span id="renpy-8-3-1"></span><span id="id2"></span><h2>8.3.1 / 7.8.1<a class="headerlink" href="#renpy-7-8-1" title="Link to this heading"></a></h2>
-<section id="id3">
-<h3>Fixes<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<span id="renpy-8-3-1"></span><span id="id16"></span><h2>8.3.1 / 7.8.1<a class="headerlink" href="#renpy-7-8-1" title="Link to this heading"></a></h2>
+<section id="id17">
+<h3>Fixes<a class="headerlink" href="#id17" title="Link to this heading"></a></h3>
 <p>Image keywords (<code class="docutils literal notranslate"><span class="pre">zorder</span></code>, <code class="docutils literal notranslate"><span class="pre">behind</span></code>, <code class="docutils literal notranslate"><span class="pre">at</span></code>, <code class="docutils literal notranslate"><span class="pre">onlayer</span></code>, and <code class="docutils literal notranslate"><span class="pre">transform</span></code>) may not occur in an expression,
 like a list after <code class="docutils literal notranslate"><span class="pre">at</span></code>.</p>
 <p>Using local shader variables by name in {shader} tags now works.</p>
@@ -561,8 +1072,8 @@ being rapidly renamed.</p>
 <p>By default, synchronized start of audio now only occurs on looping channels, like music channels. The default
 can be changed on a channel-by-channel basis by supplying <cite>synchro_start</cite> to <a class="reference internal" href="audio.html#renpy.music.register_channel" title="renpy.music.register_channel"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.music.register_channel()</span></code></a>.</p>
 </section>
-<section id="other-changes">
-<h3>Other Changes<a class="headerlink" href="#other-changes" title="Link to this heading"></a></h3>
+<section id="id18">
+<h3>Other Changes<a class="headerlink" href="#id18" title="Link to this heading"></a></h3>
 <p>The new <a class="reference internal" href="other.html#renpy.stop_skipping" title="renpy.stop_skipping"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.stop_skipping()</span></code></a> cancels slow and fast skip.</p>
 <p>Fast-skipping when slow-skipping (or vice versa) now cancels skipping.</p>
 <p>On PC, Ren'Py will disable fullscreen when opening a URL.</p>
@@ -575,10 +1086,10 @@ purposes.</p>
 </section>
 </section>
 <section id="renpy-7-8-0">
-<span id="renpy-8-3-0"></span><span id="id4"></span><h2>8.3.0 / 7.8.0<a class="headerlink" href="#renpy-7-8-0" title="Link to this heading"></a></h2>
+<span id="renpy-8-3-0"></span><span id="id19"></span><h2>8.3.0 / 7.8.0<a class="headerlink" href="#renpy-7-8-0" title="Link to this heading"></a></h2>
 <section id="audio-filters">
 <h3>Audio Filters<a class="headerlink" href="#audio-filters" title="Link to this heading"></a></h3>
-<p>This release adds an <span class="xref std std-doc">audio filter system</span> to Ren'Py, providing a way of processing the sound coming out of
+<p>This release adds an <a class="reference internal" href="audio_filters.html"><span class="doc">audio filter system</span></a> to Ren'Py, providing a way of processing the sound coming out of
 audio channels. The audio filter system is based on webaudio, and includes the following filters:</p>
 <ul class="simple">
 <li><p>Biquad, a way of implementing Lowpass, Highpass, Notch, Peaking, Lowshelf, Highshelf, and Allpass filters.</p></li>
@@ -667,8 +1178,8 @@ calling this function.)</p>
 <h3>Android<a class="headerlink" href="#android" title="Link to this heading"></a></h3>
 <p>Ren'Py now targets Android 15 (API level 35), though versions down to Android 5 may still work.</p>
 </section>
-<section id="features">
-<h3>Features<a class="headerlink" href="#features" title="Link to this heading"></a></h3>
+<section id="id20">
+<h3>Features<a class="headerlink" href="#id20" title="Link to this heading"></a></h3>
 <p>The new anymod keysym prefix makes it possible to bind to a key while ignoring the meta, alt, and ctrl key
 modifiers.</p>
 <p>The translation identifier screen (accessed through shift+D) is now the translation info screen, and now includes
@@ -711,8 +1222,8 @@ the transform to a particular number of frames per second.</p>
 <p>Where appropriate, Bar Values now take <cite>min</cite> and <cite>max</cite> parameters, which can be used to define a range that
 is not zero-based.</p>
 </section>
-<section id="id5">
-<h3>Other Changes<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<section id="id21">
+<h3>Other Changes<a class="headerlink" href="#id21" title="Link to this heading"></a></h3>
 <p>The notification screen is now hidden before a screenshot is taken.</p>
 <p>The <a class="reference internal" href="transform_properties.html#transform-property-crop"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">crop</span></code></a> transform property now always takes the size of the crop box,
 even if bigger than what is being cropped.</p>
@@ -752,13 +1263,13 @@ the game, if the video origin allows for it.</p>
 </section>
 </section>
 <section id="renpy-7-7-3">
-<span id="renpy-8-2-3"></span><span id="id6"></span><h2>8.2.3 / 7.7.3<a class="headerlink" href="#renpy-7-7-3" title="Link to this heading"></a></h2>
+<span id="renpy-8-2-3"></span><span id="id22"></span><h2>8.2.3 / 7.7.3<a class="headerlink" href="#renpy-7-7-3" title="Link to this heading"></a></h2>
 <p>This release fixes an issue that prevented 8.2.2 and 7.7.2 from being built properly.</p>
 </section>
 <section id="renpy-7-7-2">
-<span id="renpy-8-2-2"></span><span id="id7"></span><h2>8.2.2 / 7.7.2<a class="headerlink" href="#renpy-7-7-2" title="Link to this heading"></a></h2>
-<section id="accessibility">
-<h3>Accessibility<a class="headerlink" href="#accessibility" title="Link to this heading"></a></h3>
+<span id="renpy-8-2-2"></span><span id="id23"></span><h2>8.2.2 / 7.7.2<a class="headerlink" href="#renpy-7-7-2" title="Link to this heading"></a></h2>
+<section id="id24">
+<h3>Accessibility<a class="headerlink" href="#id24" title="Link to this heading"></a></h3>
 <p>The accessibility menu can be accessed on touch screens by making a large ⋀ gesture. That is, press, move a large
 distance up and right, move a large distance down and right, and then release.</p>
 <p>There is a limited amount of self-voicing support for Android and iOS, largely limited by the nature of
@@ -771,13 +1282,13 @@ it's hard to focus an element without activating it.</p>
 <a class="reference internal" href="config.html#var-config.nvl_adv_transition"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.nvl_adv_transition</span></code></a> and <code class="xref std std-var docutils literal notranslate"><span class="pre">config.adl_nvl_transition</span></code>,
 has been improved. The major change is that the latter transitions will
 now only occur if the window has not been shown or hidden, preventing
-double interactions from occuring.</p>
+double interactions from occurring.</p>
 <p>The (rarely used) <code class="docutils literal notranslate"><span class="pre">nvl</span> <span class="pre">hide</span></code> and <code class="docutils literal notranslate"><span class="pre">nvl</span> <span class="pre">show</span></code> statements now set the
 flag used by <code class="docutils literal notranslate"><span class="pre">window</span> <span class="pre">auto</span></code>, preventing the window from being shown
 wince in a row by these statements.</p>
 </section>
-<section id="id8">
-<h3>Fixes<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
+<section id="id25">
+<h3>Fixes<a class="headerlink" href="#id25" title="Link to this heading"></a></h3>
 <p>Two issues that could cause the Android version of Ren'Py to lock up
 if the window lost focus have been fixed.</p>
 <p>The <cite>force</cite> parameter to <a class="reference internal" href="self_voicing.html#renpy.alt" title="renpy.alt"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.alt()</span></code></a> now works as documented.</p>
@@ -831,9 +1342,9 @@ shouldn't be used by new games.</p>
 </section>
 </section>
 <section id="renpy-7-7-1">
-<span id="renpy-8-2-1"></span><span id="id9"></span><h2>8.2.1 / 7.7.1<a class="headerlink" href="#renpy-7-7-1" title="Link to this heading"></a></h2>
-<section id="text">
-<h3>Text<a class="headerlink" href="#text" title="Link to this heading"></a></h3>
+<span id="renpy-8-2-1"></span><span id="id26"></span><h2>8.2.1 / 7.7.1<a class="headerlink" href="#renpy-7-7-1" title="Link to this heading"></a></h2>
+<section id="id27">
+<h3>Text<a class="headerlink" href="#id27" title="Link to this heading"></a></h3>
 <p>The Harfbuzz text shaper now reads more information using Harfbuzz. This
 will generally yield the same results, with small exceptions, such as
 the underline being in a slightly different place.</p>
@@ -850,8 +1361,8 @@ run on a Windows system has been fixed.</p>
 improves compatibility with some web servers. The updater also times out
 if the server does not respond to a request within 10 seconds.</p>
 </section>
-<section id="live2d">
-<h3>Live2D<a class="headerlink" href="#live2d" title="Link to this heading"></a></h3>
+<section id="id28">
+<h3>Live2D<a class="headerlink" href="#id28" title="Link to this heading"></a></h3>
 <p>Ren'Py will now automatically guess the size of the live2d textures,
 and adjust the maximum texture size the live2d library uses to match
 it.</p>
@@ -865,8 +1376,8 @@ during an interaction, as well as outside an interaction.</p>
 <p>The <a class="reference internal" href="fetch.html#renpy.fetch" title="renpy.fetch"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.fetch()</span></code></a> function now takes a <cite>params</cite> argument, which
 specifies parameters that will be added to the URL.</p>
 </section>
-<section id="id10">
-<h3>Other Changes<a class="headerlink" href="#id10" title="Link to this heading"></a></h3>
+<section id="id29">
+<h3>Other Changes<a class="headerlink" href="#id29" title="Link to this heading"></a></h3>
 <p>When a textbox is replaced (using {w}), a <code class="docutils literal notranslate"><span class="pre">replaced</span></code> event is generated,
 rather than hide.</p>
 <p>Adding a new displayable with <cite>default_focus</cite> set will cause the
@@ -895,7 +1406,7 @@ the blur value.</p>
 </section>
 </section>
 <section id="renpy-7-7-0">
-<span id="renpy-8-2-0"></span><span id="id11"></span><h2>8.2.0 / 7.7.0<a class="headerlink" href="#renpy-7-7-0" title="Link to this heading"></a></h2>
+<span id="renpy-8-2-0"></span><span id="id30"></span><h2>8.2.0 / 7.7.0<a class="headerlink" href="#renpy-7-7-0" title="Link to this heading"></a></h2>
 <section id="harfbuzz-integration">
 <h3>Harfbuzz Integration<a class="headerlink" href="#harfbuzz-integration" title="Link to this heading"></a></h3>
 <p>Ren'Py now uses the Harfbuzz library to perform text shaping. On all
@@ -1060,8 +1571,8 @@ function. While the Requests library still remains supported on Desktop and Mobi
 <li><p>Can return data as bytes, as string, or objects decoded from JSON.</p></li>
 </ul>
 </section>
-<section id="id12">
-<h3>Accessibility<a class="headerlink" href="#id12" title="Link to this heading"></a></h3>
+<section id="id31">
+<h3>Accessibility<a class="headerlink" href="#id31" title="Link to this heading"></a></h3>
 <p>The new <a class="reference internal" href="screens.html#screen-property-group_alt"><code class="xref std std-scpref docutils literal notranslate"><span class="pre">group_alt</span></code></a> property available on screen language
 displayables allows the creator to specify text that is spoken the first
 time one of a group of related displayables is spoken.</p>
@@ -1104,8 +1615,8 @@ a window show transition.</p>
 <p>This is controlled by the new <a class="reference internal" href="store_variables.html#var-_scene_show_hide_transition"><code class="xref std std-var docutils literal notranslate"><span class="pre">_scene_show_hide_transition</span></code></a> variable,
 and documented at <a class="reference internal" href="transitions.html#scene-show-hide-transition"><span class="std std-ref">Automatic Transitions after Scene, Show, and Hide</span></a>.</p>
 </section>
-<section id="id13">
-<h3>Android<a class="headerlink" href="#id13" title="Link to this heading"></a></h3>
+<section id="id32">
+<h3>Android<a class="headerlink" href="#id32" title="Link to this heading"></a></h3>
 <p>The Android build system has been updated to use recent versions of Gradle
 and the Android Gradle Plugin. This means that Ren'Py now supports and
 requires Java 21, the most recent long-term support version of Java.</p>
@@ -1114,7 +1625,7 @@ requires Java 21, the most recent long-term support version of Java.</p>
 documented at <a class="reference internal" href="downloader.html"><span class="doc">Downloader for Large Games on Mobile</span></a>. It fundamentally involves creating two
 games - a very short one that is downloaded to the device, and a larger
 game that is downloaded to the device when the short game is run.</p>
-<p>The user-visible version on android is now taken from <code class="xref std std-var docutils literal notranslate"><span class="pre">build.version</span></code>, which
+<p>The user-visible version on android is now taken from <a class="reference internal" href="build.html#var-build.version"><code class="xref std std-var docutils literal notranslate"><span class="pre">build.version</span></code></a>, which
 defaults to <a class="reference internal" href="config.html#var-config.version"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.version</span></code></a>.</p>
 <p>Assets you place in the <code class="file docutils literal notranslate"><span class="pre">rapt/prototype</span></code> project will be placed into
 the built project.</p>
@@ -1132,8 +1643,8 @@ click to the game and hide the div once this detection is finished.</p>
 web pages to make HTTPS and HTTP requests, subject to the same rules (CORS)
 as other web pages.</p>
 </section>
-<section id="id14">
-<h3>Updater<a class="headerlink" href="#id14" title="Link to this heading"></a></h3>
+<section id="id33">
+<h3>Updater<a class="headerlink" href="#id33" title="Link to this heading"></a></h3>
 <p>The <a class="reference internal" href="updater.html"><span class="doc">Ren'Py Updater</span></a> has been rewritten to use a new
 format, and is implemented entirely in Ren'Py. That makes it compatible
 with more web hosts, and for the first time it support https.</p>
@@ -1147,8 +1658,8 @@ work to produce a secure update.</p>
 <p>There is a new Danish translation of the launcher and The Question.</p>
 <p>Many other translations have been updated.</p>
 </section>
-<section id="id15">
-<h3>Features<a class="headerlink" href="#id15" title="Link to this heading"></a></h3>
+<section id="id34">
+<h3>Features<a class="headerlink" href="#id34" title="Link to this heading"></a></h3>
 <p>The new <a class="reference internal" href="config.html#var-config.layer_transforms"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.layer_transforms</span></code></a> variable allows you to supply
 a list of transforms that will be applied to each layer, or to the
 combination of all layers in <a class="reference internal" href="config.html#var-config.layers"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.layers</span></code></a>.</p>
@@ -1210,8 +1721,8 @@ language statements.</p>
 thread to invoke a function in the main Ren'Py thread. (Most Ren'Py functions
 can only be called from the main thread.)</p>
 </section>
-<section id="id16">
-<h3>Launcher Changes<a class="headerlink" href="#id16" title="Link to this heading"></a></h3>
+<section id="id35">
+<h3>Launcher Changes<a class="headerlink" href="#id35" title="Link to this heading"></a></h3>
 <p>The launcher now supports <a class="reference internal" href="template_projects.html"><span class="doc">Template Projects</span></a>. These are
 indended for use by projects that replace the default GUI.
 If a template project is selected when creating a new project,
@@ -1223,8 +1734,8 @@ still providing room for translations.</p>
 <p>A <a class="reference internal" href="cli.html"><span class="doc">Command Line Interface</span></a> has been documented, making it possible to build Ren'Py
 projects from the command line.</p>
 </section>
-<section id="id17">
-<h3>Other Changes<a class="headerlink" href="#id17" title="Link to this heading"></a></h3>
+<section id="id36">
+<h3>Other Changes<a class="headerlink" href="#id36" title="Link to this heading"></a></h3>
 <p>Hide and replace transform events that are applied to screens are now always
 allowed to run to completion, even if the same screen is shown again. This
 makes it possible to use transform events with screens that may be shown
@@ -1290,9 +1801,9 @@ Ren'Py. As the package depends on Python 3, it's not included in Ren'Py 7.</p>
 </section>
 </section>
 <section id="renpy-7-6-3">
-<span id="renpy-8-1-3"></span><span id="id18"></span><h2>8.1.3 / 7.6.3<a class="headerlink" href="#renpy-7-6-3" title="Link to this heading"></a></h2>
-<section id="changes">
-<h3>Changes<a class="headerlink" href="#changes" title="Link to this heading"></a></h3>
+<span id="renpy-8-1-3"></span><span id="id37"></span><h2>8.1.3 / 7.6.3<a class="headerlink" href="#renpy-7-6-3" title="Link to this heading"></a></h2>
+<section id="id38">
+<h3>Changes<a class="headerlink" href="#id38" title="Link to this heading"></a></h3>
 <p>Ren'Py now considers <code class="xref std std-var docutils literal notranslate"><span class="pre">config.gl2</span></code> to be true on macOS. This is because
 there are several fixes for window resizing on newer versions of macOS
 in the gl2 renderer that are not present in the gl renderer.</p>
@@ -1307,8 +1818,8 @@ around issues with the Steam Deck.</p>
 <p>The 32-bit windows Live2D library will be installed into Ren'Py 7.
 You may need to reinstall Live2D to get this library.</p>
 </section>
-<section id="id19">
-<h3>Fixes<a class="headerlink" href="#id19" title="Link to this heading"></a></h3>
+<section id="id39">
+<h3>Fixes<a class="headerlink" href="#id39" title="Link to this heading"></a></h3>
 <p>An issue that prevented keys from being bound to text (for example,
 keysyms like &quot;r&quot; rather than &quot;K_r&quot;) has been fixed.</p>
 <p>There have been several documentation fixes.</p>
@@ -1317,9 +1828,9 @@ fixed.</p>
 </section>
 </section>
 <section id="renpy-7-6-2">
-<span id="renpy-8-1-2"></span><span id="id20"></span><h2>8.1.2 / 7.6.2<a class="headerlink" href="#renpy-7-6-2" title="Link to this heading"></a></h2>
-<section id="id21">
-<h3>Changes<a class="headerlink" href="#id21" title="Link to this heading"></a></h3>
+<span id="renpy-8-1-2"></span><span id="id40"></span><h2>8.1.2 / 7.6.2<a class="headerlink" href="#renpy-7-6-2" title="Link to this heading"></a></h2>
+<section id="id41">
+<h3>Changes<a class="headerlink" href="#id41" title="Link to this heading"></a></h3>
 <p>There have been many documentation improvements.</p>
 <p>When using <code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.classify()</span></code>, a directory will now match patterns
 that do not end with /. (For example, &quot;renpy.app&quot; will match the renpy.app
@@ -1349,8 +1860,8 @@ pixel in size in both dimensions.</p>
 fullscreen mode.</p>
 <p>It is now possible to bind mouse buttons to skipping.</p>
 </section>
-<section id="id22">
-<h3>Fixes<a class="headerlink" href="#id22" title="Link to this heading"></a></h3>
+<section id="id42">
+<h3>Fixes<a class="headerlink" href="#id42" title="Link to this heading"></a></h3>
 <p>Problems with the web port entering fullscreen mode have been fixed.</p>
 <p>The Ren'Py 8 launcher can now launch games on Windows systems where the
 path to Ren'Py is not representable in the system encoding.</p>
@@ -1372,9 +1883,9 @@ can fix issue caused by loading a Movie from a save file.</p>
 </section>
 </section>
 <section id="renpy-7-6-1">
-<span id="renpy-8-1-1"></span><span id="id23"></span><h2>8.1.1 / 7.6.1<a class="headerlink" href="#renpy-7-6-1" title="Link to this heading"></a></h2>
-<section id="id24">
-<h3>Android<a class="headerlink" href="#id24" title="Link to this heading"></a></h3>
+<span id="renpy-8-1-1"></span><span id="id43"></span><h2>8.1.1 / 7.6.1<a class="headerlink" href="#renpy-7-6-1" title="Link to this heading"></a></h2>
+<section id="id44">
+<h3>Android<a class="headerlink" href="#id44" title="Link to this heading"></a></h3>
 <p>When creating keys for Android, Ren'Py will now use the same key for APKs
 and Play Bundles, as for new games it's not necessary to use different keys.
 (For existing games, Ren'Py will continue to use the existing separate
@@ -1384,8 +1895,8 @@ having their APKs rejected for having different keys. This was caused by
 an old release of Ren'Py that used the APK key for bundles. A solution to
 this problem is documented in <a class="reference internal" href="incompatible.html#android-key-migration"><span class="std std-ref">incompatible changes</span></a>.</p>
 </section>
-<section id="id25">
-<h3>Fixes<a class="headerlink" href="#id25" title="Link to this heading"></a></h3>
+<section id="id45">
+<h3>Fixes<a class="headerlink" href="#id45" title="Link to this heading"></a></h3>
 <p>The &quot;system cursor&quot; <a class="reference internal" href="screen_actions.html#Preference" title="Preference"><code class="xref py py-func docutils literal notranslate"><span class="pre">Preference()</span></code></a> now applies to <a class="reference internal" href="config.html#var-config.mouse_displayable"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.mouse_displayable</span></code></a>,
 when it used to only disable <a class="reference internal" href="config.html#var-config.mouse"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.mouse</span></code></a>.</p>
 <p>Web audio now treats the end time as a time, not a duration.</p>
@@ -1405,8 +1916,8 @@ now diagnoses this error, and <a class="reference internal" href="config.html#va
 suppress the error. The error is only shown to developers, and is otherwise
 silently ignored.</p>
 </section>
-<section id="id26">
-<h3>Other Changes<a class="headerlink" href="#id26" title="Link to this heading"></a></h3>
+<section id="id46">
+<h3>Other Changes<a class="headerlink" href="#id46" title="Link to this heading"></a></h3>
 <p>The Ren'Py sync screens now use styles prefixed with <code class="docutils literal notranslate"><span class="pre">sync</span></code>, allowing
 basic customization without having to edit the screens.</p>
 <p>Ren'Py will disable text input methods when text editing is not possible, which
@@ -1427,7 +1938,7 @@ and does not sustain the previous motions if a new motion is present.</p>
 </section>
 </section>
 <section id="renpy-7-6-0">
-<span id="renpy-8-1-0"></span><span id="id27"></span><h2>8.1 / 7.6<a class="headerlink" href="#renpy-7-6-0" title="Link to this heading"></a></h2>
+<span id="renpy-8-1-0"></span><span id="id47"></span><h2>8.1 / 7.6<a class="headerlink" href="#renpy-7-6-0" title="Link to this heading"></a></h2>
 <section id="documentation-improvements-and-fixes">
 <h3>Documentation Improvements and Fixes<a class="headerlink" href="#documentation-improvements-and-fixes" title="Link to this heading"></a></h3>
 <p>There have been many documentation improvements and fixes, many of which
@@ -1458,8 +1969,8 @@ to the game. The bubble documentation includes the required changes.</p>
 </section>
 <section id="platform-improvements">
 <h3>Platform Improvements<a class="headerlink" href="#platform-improvements" title="Link to this heading"></a></h3>
-<section id="id28">
-<h4>Web<a class="headerlink" href="#id28" title="Link to this heading"></a></h4>
+<section id="id48">
+<h4>Web<a class="headerlink" href="#id48" title="Link to this heading"></a></h4>
 <p>Ren'Py 8.1 can now be used to create games that run inside the web
 browser. When running inside the web browser, Ren'Py used Python 3.11
 (3.9 is used on all other platforms).</p>
@@ -1480,8 +1991,8 @@ the browser supports can be played.</p>
 <p>On the Macintosh, Ren'Py now uses a universal binary that can run natively
 on both Intel and Apple Silicon processors.</p>
 </section>
-<section id="id29">
-<h4>Android<a class="headerlink" href="#id29" title="Link to this heading"></a></h4>
+<section id="id49">
+<h4>Android<a class="headerlink" href="#id49" title="Link to this heading"></a></h4>
 <p>Android has been changed so that the <code class="docutils literal notranslate"><span class="pre">android.keystore</span></code> file and
 <code class="docutils literal notranslate"><span class="pre">bundle.keystore</span></code> file are expected to be found in the project's base
 directory, and not in the rapt directory. This allows projects to be
@@ -1588,7 +2099,7 @@ if the fade time was too short.</p>
 <p>The <a class="reference internal" href="config.html#var-config.fadeout_audio"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.fadeout_audio</span></code></a> variable (renamed from config.fade_music) controls
 the default fadeout used when stopping audio, or changing audio using <code class="docutils literal notranslate"><span class="pre">play</span></code>. (It
 is not used by <code class="docutils literal notranslate"><span class="pre">queue</span></code>). The default value is now 0.016 seconds, which eliminates
-popping sounds that occured when audio was stopped abruptly.</p>
+popping sounds that occurred when audio was stopped abruptly.</p>
 <p>Audio panning (<a class="reference internal" href="audio.html#renpy.music.set_pan" title="renpy.music.set_pan"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.music.set_pan()</span></code></a>) is now constant-power, so that
 panning audio should not change the volume.</p>
 </section>
@@ -1667,8 +2178,8 @@ ruby text. For example:</p>
 </pre></div>
 </div>
 </section>
-<section id="id30">
-<h3>Accessibility<a class="headerlink" href="#id30" title="Link to this heading"></a></h3>
+<section id="id50">
+<h3>Accessibility<a class="headerlink" href="#id50" title="Link to this heading"></a></h3>
 <p>The new <a class="reference internal" href="config.html#var-config.tts_substitutions"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.tts_substitutions</span></code></a> variable allows the game to
 provide substitution rules for self-voicing. That is meant to allow
 the creator to control pronunciation of words that might be mispronounced
@@ -1723,8 +2234,8 @@ using the shortest path on a sphere.</p>
 </dd>
 </dl>
 </section>
-<section id="id31">
-<h3>Live2D<a class="headerlink" href="#id31" title="Link to this heading"></a></h3>
+<section id="id51">
+<h3>Live2D<a class="headerlink" href="#id51" title="Link to this heading"></a></h3>
 <p>Ren'Py now supports the new features found in Live2D Cubism Editor
 4.2. To support these features, it should be run with Cubism 4 Sdk
 for Native R6_2 or later.</p>
@@ -1768,7 +2279,7 @@ updated:</p>
 </ul>
 </section>
 <section id="conflicting-properties">
-<span id="id32"></span><h3>Conflicting properties<a class="headerlink" href="#conflicting-properties" title="Link to this heading"></a></h3>
+<span id="id52"></span><h3>Conflicting properties<a class="headerlink" href="#conflicting-properties" title="Link to this heading"></a></h3>
 <p>Setting two conflicting style or transform properties at the same time, for
 example <a class="reference internal" href="style_properties.html#style-property-xalign"><code class="xref std std-propref docutils literal notranslate"><span class="pre">xalign</span></code></a> and <a class="reference internal" href="style_properties.html#style-property-pos"><code class="xref std std-propref docutils literal notranslate"><span class="pre">pos</span></code></a>, or <a class="reference internal" href="transform_properties.html#transform-property-ycenter"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">ycenter</span></code></a> and
 <a class="reference internal" href="transform_properties.html#transform-property-yanchor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">yanchor</span></code></a>, has always been undefined. The actual behavior has always been
@@ -1882,8 +2393,8 @@ of the game to be paused when the player switches to another window.</p>
 <p>Disabling Dialogue's <a class="reference internal" href="dialogue.html#monologue-mode"><span class="std std-ref">Monologue Mode</span></a> is now possible using the
 <code class="docutils literal notranslate"><span class="pre">rpy</span> <span class="pre">monologue</span> <span class="pre">none</span></code> statement at the beginning of the file it should apply to.</p>
 </section>
-<section id="id33">
-<h3>Other Changes<a class="headerlink" href="#id33" title="Link to this heading"></a></h3>
+<section id="id53">
+<h3>Other Changes<a class="headerlink" href="#id53" title="Link to this heading"></a></h3>
 <p>The polar motion properties (<a class="reference internal" href="transform_properties.html#transform-property-around"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">around</span></code></a>, <a class="reference internal" href="transform_properties.html#transform-property-radius"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">radius</span></code></a>, and <a class="reference internal" href="transform_properties.html#transform-property-angle"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">angle</span></code></a>)
 will now produce circular, rather than oval motion, with radius using the
 minimum of the available wdith and height to scale distances expressed as
@@ -1964,7 +2475,7 @@ supports non-standard spaces such as \u3000, the full-width ideographic space.</
 </section>
 </section>
 <section id="renpy-8-0-3">
-<span id="renpy-7-5-3"></span><span id="id34"></span><h2>8.0.3 / 7.5.3<a class="headerlink" href="#renpy-8-0-3" title="Link to this heading"></a></h2>
+<span id="renpy-7-5-3"></span><span id="id54"></span><h2>8.0.3 / 7.5.3<a class="headerlink" href="#renpy-8-0-3" title="Link to this heading"></a></h2>
 <section id="security">
 <h3>Security<a class="headerlink" href="#security" title="Link to this heading"></a></h3>
 <p>There is now a new <a class="reference internal" href="security.html"><span class="doc">Security</span></a> page in the documentation, intended to help
@@ -2008,9 +2519,9 @@ Ukrainian translation of the launcher has been updated.</p>
 </section>
 </section>
 <section id="renpy-8-0-2">
-<span id="renpy-7-5-2"></span><span id="id35"></span><h2>8.0.2 / 7.5.2<a class="headerlink" href="#renpy-8-0-2" title="Link to this heading"></a></h2>
-<section id="id36">
-<h3>Fixes<a class="headerlink" href="#id36" title="Link to this heading"></a></h3>
+<span id="renpy-7-5-2"></span><span id="id55"></span><h2>8.0.2 / 7.5.2<a class="headerlink" href="#renpy-8-0-2" title="Link to this heading"></a></h2>
+<section id="id56">
+<h3>Fixes<a class="headerlink" href="#id56" title="Link to this heading"></a></h3>
 <p>There have been a number of changes to the way autoreload (shift+R) works, to
 try to prevent Ren'Py from creating an invalid save file when an autoreload after
 an error happens, and Ren'Py is in an invalid state. The goal of these changes
@@ -2078,7 +2589,7 @@ Errors with audio hardware are now written to log.txt.</p>
 </section>
 </section>
 <section id="renpy-8-0-1">
-<span id="renpy-7-5-1"></span><span id="id37"></span><h2>8.0.1 / 7.5.1<a class="headerlink" href="#renpy-8-0-1" title="Link to this heading"></a></h2>
+<span id="renpy-7-5-1"></span><span id="id57"></span><h2>8.0.1 / 7.5.1<a class="headerlink" href="#renpy-8-0-1" title="Link to this heading"></a></h2>
 <section id="improvements">
 <h3>Improvements<a class="headerlink" href="#improvements" title="Link to this heading"></a></h3>
 <p>The launcher now has a Ukrainian translation, courtesy of Matias B.</p>
@@ -2089,8 +2600,8 @@ time the mouse is changed. Previously, this behavior was undefined.</p>
 <p>The trace screen used by the console is now updated once per frame.</p>
 <p>There have been a large number of documentation improvements.</p>
 </section>
-<section id="id38">
-<h3>Fixes<a class="headerlink" href="#id38" title="Link to this heading"></a></h3>
+<section id="id58">
+<h3>Fixes<a class="headerlink" href="#id58" title="Link to this heading"></a></h3>
 <p>Alt text is now played in first-to-last order. A change to 8.0 caused
 the order alt text was played in to be reversed.</p>
 <p>A rounding error that would cause the CropMove transitions to work
@@ -2109,7 +2620,7 @@ example, two empty lists).</p>
 </section>
 </section>
 <section id="renpy-8-0-0">
-<span id="renpy-7-5-0"></span><span id="id39"></span><h2>8.0 / 7.5<a class="headerlink" href="#renpy-8-0-0" title="Link to this heading"></a></h2>
+<span id="renpy-7-5-0"></span><span id="id59"></span><h2>8.0 / 7.5<a class="headerlink" href="#renpy-8-0-0" title="Link to this heading"></a></h2>
 <section id="python-3-support-ren-py-8-0">
 <h3>Python 3 Support (Ren'Py 8.0)<a class="headerlink" href="#python-3-support-ren-py-8-0" title="Link to this heading"></a></h3>
 <p>Ren'Py 8.0 runs under Python 3, the latest major version of the Python
@@ -2274,8 +2785,8 @@ update to the launch configuration.</p>
 <p>Ren'Py now includes support for being launched by the Epic Games Store,
 by ignoring various command line arguments supplied by EGS.</p>
 </section>
-<section id="id40">
-<h3>Visual Studio Code<a class="headerlink" href="#id40" title="Link to this heading"></a></h3>
+<section id="id60">
+<h3>Visual Studio Code<a class="headerlink" href="#id60" title="Link to this heading"></a></h3>
 <p>Ren'Py now includes support for downloading and using Visual Studio Code,
 including downloading the <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=LuqueDaniel.languague-renpy">Ren'Py Language</a>
 extension.</p>
@@ -2433,8 +2944,8 @@ by the developer.</p>
 specify default attributes for a tag that are used when other attributes
 do not conflict.</p>
 </section>
-<section id="id41">
-<h3>Other Changes<a class="headerlink" href="#id41" title="Link to this heading"></a></h3>
+<section id="id61">
+<h3>Other Changes<a class="headerlink" href="#id61" title="Link to this heading"></a></h3>
 <p>It is now possible to copy from <a class="reference internal" href="input.html#renpy.input" title="renpy.input"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.input()</span></code></a> with ctrl-C, and paste
 with ctrl-V. When text input is displayed, ctrl will no longer cause skipping
 to happen.</p>
@@ -2505,7 +3016,7 @@ where:</p>
 </section>
 </section>
 <section id="renpy-7-4-11">
-<span id="id42"></span><h2>7.4.11<a class="headerlink" href="#renpy-7-4-11" title="Link to this heading"></a></h2>
+<span id="id62"></span><h2>7.4.11<a class="headerlink" href="#renpy-7-4-11" title="Link to this heading"></a></h2>
 <section id="the-gui-variant-decorator">
 <h3>The gui.variant Decorator<a class="headerlink" href="#the-gui-variant-decorator" title="Link to this heading"></a></h3>
 <p>A new gui.variant decorator has been added to Ren'Py. This should be used
@@ -2537,8 +3048,8 @@ when a gui preference is changed, or when the translation changes.)</p>
 </div>
 <p>Which only runs once, and lost the changes if the gui was ever rebuilt.</p>
 </section>
-<section id="id43">
-<h3>Fixes<a class="headerlink" href="#id43" title="Link to this heading"></a></h3>
+<section id="id63">
+<h3>Fixes<a class="headerlink" href="#id63" title="Link to this heading"></a></h3>
 <p>The new <a class="reference internal" href="config.html#var-config.mouse_focus_clickthrough"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.mouse_focus_clickthrough</span></code></a> variable determines if clicks that
 cause the game window to be focused will be processed normally.</p>
 <p>The launcher now runs with <a class="reference internal" href="config.html#var-config.mouse_focus_clickthrough"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.mouse_focus_clickthrough</span></code></a> true, which
@@ -2602,15 +3113,15 @@ children accessed through ImageReferences.</p>
 prediction errors to the console and log.txt, making the latter
 variable act as documented.</p>
 </section>
-<section id="id44">
-<h3>Translations<a class="headerlink" href="#id44" title="Link to this heading"></a></h3>
+<section id="id64">
+<h3>Translations<a class="headerlink" href="#id64" title="Link to this heading"></a></h3>
 <p>The German, Indonesian, Polish, and Russian translations have been updated.</p>
 </section>
 </section>
 <section id="renpy-7-4-10">
-<span id="id45"></span><h2>7.4.10<a class="headerlink" href="#renpy-7-4-10" title="Link to this heading"></a></h2>
-<section id="id46">
-<h3>Fixes<a class="headerlink" href="#id46" title="Link to this heading"></a></h3>
+<span id="id65"></span><h2>7.4.10<a class="headerlink" href="#renpy-7-4-10" title="Link to this heading"></a></h2>
+<section id="id66">
+<h3>Fixes<a class="headerlink" href="#id66" title="Link to this heading"></a></h3>
 <p>This released fixes an issue that prevented large images (larger than
 maximum texture size, 4096x4069 on most platforms) from being displayed
 by the gl2 renderer.</p>
@@ -2631,15 +3142,15 @@ True.</p>
 restored with <a class="reference internal" href="live2d.html#var-config.log_live2d_loading"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.log_live2d_loading</span></code></a>.</p>
 <p>A problem with automatically determining the Android store has been fixed.</p>
 </section>
-<section id="id47">
-<h3>Translations<a class="headerlink" href="#id47" title="Link to this heading"></a></h3>
+<section id="id67">
+<h3>Translations<a class="headerlink" href="#id67" title="Link to this heading"></a></h3>
 <p>The Indonesian and Polish translations were updated.</p>
 </section>
 </section>
 <section id="renpy-7-4-9">
-<span id="id48"></span><h2>7.4.9<a class="headerlink" href="#renpy-7-4-9" title="Link to this heading"></a></h2>
-<section id="id49">
-<h3>Android<a class="headerlink" href="#id49" title="Link to this heading"></a></h3>
+<span id="id68"></span><h2>7.4.9<a class="headerlink" href="#renpy-7-4-9" title="Link to this heading"></a></h2>
+<section id="id69">
+<h3>Android<a class="headerlink" href="#id69" title="Link to this heading"></a></h3>
 <p>This release features major changes to Ren'Py's Android support, starting
 with support for the Android App Bundle format, now required for your game
 to be uploaded to Google Play.</p>
@@ -2689,8 +3200,8 @@ updated.</p>
 <p>The inclusion of <a class="reference internal" href="ios.html#pyobjus"><span class="std std-ref">Pyobjus</span></a> with Ren'Py is now documented. The
 Pyobjus library allows games to call APIs on iOS and macOS.</p>
 </section>
-<section id="id50">
-<h3>Updater<a class="headerlink" href="#id50" title="Link to this heading"></a></h3>
+<section id="id70">
+<h3>Updater<a class="headerlink" href="#id70" title="Link to this heading"></a></h3>
 <p>The Ren'Py updater has been improved. It is now possible to download
 updates over https, though doing so is less efficient, as the entire
 update file will need to be download rather than just the required
@@ -2711,8 +3222,8 @@ work when applied to a perspective transform. This has been fixed, but
 it does require a render to texture operation to work, leaving it up
 to the creator to decide if the performance penalty is desirable.</p>
 </section>
-<section id="id51">
-<h3>Accessibility<a class="headerlink" href="#id51" title="Link to this heading"></a></h3>
+<section id="id71">
+<h3>Accessibility<a class="headerlink" href="#id71" title="Link to this heading"></a></h3>
 <p>The shift+A Accessibility menu now supports enabling high contrast text, which
 converts all text to light-on-black. This is intended to assist player who
 need higher contrast to experience a game.</p>
@@ -2735,8 +3246,8 @@ either a number of pixels expressed as an <code class="docutils literal notransl
 of the available room expressed as a <code class="docutils literal notranslate"><span class="pre">float</span></code>. The old wrapper, <a class="reference internal" href="transform_properties.html#transform-property-size"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">size</span></code></a>,
 is deprecated, and the new wrapper, <a class="reference internal" href="transform_properties.html#transform-property-xysize"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">xysize</span></code></a>, should be used instead.</p>
 </section>
-<section id="id52">
-<h3>Other<a class="headerlink" href="#id52" title="Link to this heading"></a></h3>
+<section id="id72">
+<h3>Other<a class="headerlink" href="#id72" title="Link to this heading"></a></h3>
 <p>The <a class="reference internal" href="screens.html#sl-bar"><span class="std std-ref">bar</span></a> screen language statement now has a new property,
 <cite>released</cite>, that gives an action to perform when the bar is released.</p>
 <p>It's now documented that the <a class="reference internal" href="screens.html#sl-key"><span class="std std-ref">key</span></a> screen language statement
@@ -2766,9 +3277,9 @@ unofficial builds.</p>
 </section>
 </section>
 <section id="renpy-7-4-8">
-<span id="id53"></span><h2>7.4.8<a class="headerlink" href="#renpy-7-4-8" title="Link to this heading"></a></h2>
-<section id="id54">
-<h3>Fixes<a class="headerlink" href="#id54" title="Link to this heading"></a></h3>
+<span id="id73"></span><h2>7.4.8<a class="headerlink" href="#renpy-7-4-8" title="Link to this heading"></a></h2>
+<section id="id74">
+<h3>Fixes<a class="headerlink" href="#id74" title="Link to this heading"></a></h3>
 <p>This fixes a major problem that could cause rollback to corrupt lists,
 dictionaries, sets, and objects. Everyone that uses 7.4.7 is recommended
 to upgrade.</p>
@@ -2776,14 +3287,14 @@ to upgrade.</p>
 <p>The correct size of a viewport is used for edge and mouse wheel scrolling.</p>
 <p>Game controller detection has been fixed.</p>
 </section>
-<section id="id55">
-<h3>Features<a class="headerlink" href="#id55" title="Link to this heading"></a></h3>
+<section id="id75">
+<h3>Features<a class="headerlink" href="#id75" title="Link to this heading"></a></h3>
 <p>It is now possible, using <code class="xref py py-func docutils literal notranslate"><span class="pre">PauseAction()</span></code> or <a class="reference internal" href="audio.html#renpy.music.set_pause" title="renpy.music.set_pause"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.music.set_pause()</span></code></a>,
 to pause a channel that's playing video.</p>
 <p>The default channel for movies can now be set with <a class="reference internal" href="config.html#var-config.single_movie_channel"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.single_movie_channel</span></code></a>.</p>
 </section>
-<section id="id56">
-<h3>Changes<a class="headerlink" href="#id56" title="Link to this heading"></a></h3>
+<section id="id76">
+<h3>Changes<a class="headerlink" href="#id76" title="Link to this heading"></a></h3>
 <p>When in developer mode, errors parameterizing an image will be reported to
 the developer, rather than causing a placeholder (the gray ghost girl) to
 appear.</p>
@@ -2795,7 +3306,7 @@ Rolling back one step further will.</p>
 </section>
 </section>
 <section id="renpy-7-4-7">
-<span id="id57"></span><h2>7.4.7<a class="headerlink" href="#renpy-7-4-7" title="Link to this heading"></a></h2>
+<span id="id77"></span><h2>7.4.7<a class="headerlink" href="#renpy-7-4-7" title="Link to this heading"></a></h2>
 <section id="web-and-web-audio">
 <h3>Web and Web Audio<a class="headerlink" href="#web-and-web-audio" title="Link to this heading"></a></h3>
 <p>The way that the web platform plays audio has been rewritten. Instead of
@@ -2817,8 +3328,8 @@ Safari on macOS, especially the M1, as well all web browsers on iOS. As there
 is no way to fix this issue in Ren'Py, the web shell has been modified to
 report the issue.</p>
 </section>
-<section id="id58">
-<h3>iOS<a class="headerlink" href="#id58" title="Link to this heading"></a></h3>
+<section id="id78">
+<h3>iOS<a class="headerlink" href="#id78" title="Link to this heading"></a></h3>
 <p>The iOS build is now compiled with a more modern version of Clang, allowing
 it to run on the 12th generation iPhone and 2nd generation iPhone SE without
 the pillarboxing (or worse, both pillarboxing and letterboxing) that
@@ -2841,8 +3352,8 @@ the start and end of the line, in addition to the usual Home and End keys.</p>
 <p>The input caret now blinks to draw attention. The blink rate is
 controlled by the <a class="reference internal" href="config.html#var-config.input_caret_blink"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.input_caret_blink</span></code></a> variable.</p>
 </section>
-<section id="id59">
-<h3>Other<a class="headerlink" href="#id59" title="Link to this heading"></a></h3>
+<section id="id79">
+<h3>Other<a class="headerlink" href="#id79" title="Link to this heading"></a></h3>
 <p>The <code class="xref py py-func docutils literal notranslate"><span class="pre">Preferences()</span></code> function can now return actions that allow
 access to the renderer and accessibility menus.</p>
 <p>The new <a class="reference internal" href="screen_python.html#renpy.set_focus" title="renpy.set_focus"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.set_focus()</span></code></a> function makes it possible to set
@@ -2877,7 +3388,7 @@ documented.</p>
 </section>
 </section>
 <section id="renpy-7-4-6">
-<span id="id60"></span><h2>7.4.6<a class="headerlink" href="#renpy-7-4-6" title="Link to this heading"></a></h2>
+<span id="id80"></span><h2>7.4.6<a class="headerlink" href="#renpy-7-4-6" title="Link to this heading"></a></h2>
 <section id="camera-statement">
 <h3>Camera Statement<a class="headerlink" href="#camera-statement" title="Link to this heading"></a></h3>
 <p>There is a new <code class="docutils literal notranslate"><span class="pre">camera</span></code> statement, intended for use with the 3D Stage system.
@@ -2901,15 +3412,15 @@ create 2D models with multiple textures, making it possible to create
 custom transforms that work like some of the built-in transforms do.</p>
 <p>This displayable doesn't support 3D, yet, but that's expected in the future.</p>
 </section>
-<section id="id61">
-<h3>Other Improvements<a class="headerlink" href="#id61" title="Link to this heading"></a></h3>
+<section id="id81">
+<h3>Other Improvements<a class="headerlink" href="#id81" title="Link to this heading"></a></h3>
 <p>The Atom text editor has been updated, and the language-renpy plugin associated
 with it has been updated to support the new keywords introduced in recent
 versions of Ren'Py.</p>
 <p>Using a controller immediately hides the mouse cursor.</p>
 </section>
-<section id="id62">
-<h3>Fixes<a class="headerlink" href="#id62" title="Link to this heading"></a></h3>
+<section id="id82">
+<h3>Fixes<a class="headerlink" href="#id82" title="Link to this heading"></a></h3>
 <p>A mistake in the build process meant that a change to fix compilation
 on iOS that had been in the nightly didn't make it into the Ren'Py
 release.</p>
@@ -2927,7 +3438,7 @@ timebase.</p>
 </section>
 </section>
 <section id="renpy-7-4-5">
-<span id="id63"></span><h2>7.4.5<a class="headerlink" href="#renpy-7-4-5" title="Link to this heading"></a></h2>
+<span id="id83"></span><h2>7.4.5<a class="headerlink" href="#renpy-7-4-5" title="Link to this heading"></a></h2>
 <section id="model-based-renderer">
 <h3>Model-Based Renderer<a class="headerlink" href="#model-based-renderer" title="Link to this heading"></a></h3>
 <p>The model-based renderer is now the default for games that are released
@@ -2960,8 +3471,8 @@ hardware mouse that can be supported.</p>
 with a software one, similar to the way it was done in Ren'Py 7.3 and
 earlier.</p>
 </section>
-<section id="id64">
-<h3>Features<a class="headerlink" href="#id64" title="Link to this heading"></a></h3>
+<section id="id84">
+<h3>Features<a class="headerlink" href="#id84" title="Link to this heading"></a></h3>
 <p>A new function, <a class="reference internal" href="screenshot.html#renpy.screenshot_to_bytes" title="renpy.screenshot_to_bytes"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.screenshot_to_bytes()</span></code></a>, takes a screenshot
 and stores it in a bytes object that can be passed to <a class="reference internal" href="im.html#im.Data" title="im.Data"><code class="xref py py-func docutils literal notranslate"><span class="pre">im.Data()</span></code></a>.
 While these objects are large, it is possible to store them in regular
@@ -2987,8 +3498,8 @@ to finish at a more interactive statement.</p>
 <p>When playing a sound, it is possible to sync the start time of an audio
 file in one channel with the time of the audio file in another channel.</p>
 </section>
-<section id="id65">
-<h3>Android<a class="headerlink" href="#id65" title="Link to this heading"></a></h3>
+<section id="id85">
+<h3>Android<a class="headerlink" href="#id85" title="Link to this heading"></a></h3>
 <p>Several packages that are required to build on Android are now included
 as part of Ren'Py. This fixes errors that are related to Bintray being
 shut down, that prevented new installs of Ren'Py 7.4.4 from being able
@@ -3022,8 +3533,8 @@ Safari, like Chrome and Firefox.</p>
 <p>Support for Steam on macOS has been fixed.</p>
 <p>Signing and Notarizing macOS applications has been fixed.</p>
 </section>
-<section id="id66">
-<h3>Other Fixes<a class="headerlink" href="#id66" title="Link to this heading"></a></h3>
+<section id="id86">
+<h3>Other Fixes<a class="headerlink" href="#id86" title="Link to this heading"></a></h3>
 <p>The default level-of-detail bias has been set to -0.5, and can be changed
 with <a class="reference internal" href="config.html#var-config.gl_lod_bias"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.gl_lod_bias</span></code></a>. This is used to bias Ren'Py into scaling
 down, rather than scaling up, but the previous bias would cause Ren'Py
@@ -3033,7 +3544,7 @@ modal screens.</p>
 </section>
 </section>
 <section id="renpy-7-4-4">
-<span id="id67"></span><h2>7.4.4<a class="headerlink" href="#renpy-7-4-4" title="Link to this heading"></a></h2>
+<span id="id87"></span><h2>7.4.4<a class="headerlink" href="#renpy-7-4-4" title="Link to this heading"></a></h2>
 <section id="the-old-game-directory">
 <h3>The old-game directory<a class="headerlink" href="#the-old-game-directory" title="Link to this heading"></a></h3>
 <p>To help creators that make multiple releases of their games (as with
@@ -3045,8 +3556,8 @@ this will tend to help Ren'Py load games created by multiple
 developers.</p>
 <p>For more information, see the <a class="reference internal" href="build.html#old-game"><span class="std std-ref">documentation</span></a>.</p>
 </section>
-<section id="id68">
-<h3>Fixes<a class="headerlink" href="#id68" title="Link to this heading"></a></h3>
+<section id="id88">
+<h3>Fixes<a class="headerlink" href="#id88" title="Link to this heading"></a></h3>
 <p>A crash that could occur with gestures or controllers has been fixed.</p>
 <p>A crash that occurred when generating web distributions on windows has
 been fixed.</p>
@@ -3055,8 +3566,8 @@ progress.</p>
 <p>Live2D now resets opacities with other parameters.</p>
 <p>Ren'Py does not change the size of a maximized window when reloading.</p>
 </section>
-<section id="id69">
-<h3>Other<a class="headerlink" href="#id69" title="Link to this heading"></a></h3>
+<section id="id89">
+<h3>Other<a class="headerlink" href="#id89" title="Link to this heading"></a></h3>
 <p>There is a new GL property, <code class="docutils literal notranslate"><span class="pre">blend_func</span></code> that is supported by the
 model-based renderer. This allows the customization of the GL blend
 function, allowing Ren'Py to start to support new blend modes.</p>
@@ -3069,7 +3580,7 @@ of the volume and the current value of mute.</p>
 </section>
 </section>
 <section id="renpy-7-4-3">
-<span id="id70"></span><h2>7.4.3<a class="headerlink" href="#renpy-7-4-3" title="Link to this heading"></a></h2>
+<span id="id90"></span><h2>7.4.3<a class="headerlink" href="#renpy-7-4-3" title="Link to this heading"></a></h2>
 <section id="windows">
 <h3>Windows<a class="headerlink" href="#windows" title="Link to this heading"></a></h3>
 <p>The code for changing icons has been rewritten, to produce executables that
@@ -3089,8 +3600,8 @@ DirectX, if DirectX is available and OpenGL is not. This had not worked
 properly in Ren'Py 7.4. The window may appear and disappear multiple times
 as Ren'Py tries different video systems, this is expected.</p>
 </section>
-<section id="id71">
-<h3>Android<a class="headerlink" href="#id71" title="Link to this heading"></a></h3>
+<section id="id91">
+<h3>Android<a class="headerlink" href="#id91" title="Link to this heading"></a></h3>
 <p>The non-model-based renderer now properly deallocates textures when Android
 causes a render context to change. This prevents visual glitches that would
 randomly occur, often during Dissolves.</p>
@@ -3100,8 +3611,8 @@ the game could fully start. Now, if Ren'Py has lost focus at game start,
 it will save and quit, then re-launch when the player returns to the game.</p>
 <p>In general, compatibility with Android devices has been improved.</p>
 </section>
-<section id="id72">
-<h3>Features<a class="headerlink" href="#id72" title="Link to this heading"></a></h3>
+<section id="id92">
+<h3>Features<a class="headerlink" href="#id92" title="Link to this heading"></a></h3>
 <p>Added <a class="reference internal" href="config.html#var-config.main_menu_music_fadein"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.main_menu_music_fadein</span></code></a>, a way of fading in the main
 menu music.</p>
 <p>The new <a class="reference internal" href="displaying_images.html#renpy.get_zorder_list" title="renpy.get_zorder_list"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.get_zorder_list()</span></code></a> and <a class="reference internal" href="displaying_images.html#renpy.change_zorder" title="renpy.change_zorder"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.change_zorder()</span></code></a> allow
@@ -3147,8 +3658,8 @@ rgba tuple.</p>
 to allow the mouse cursor to be changed without changing <a class="reference internal" href="config.html#var-config.mouse"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.mouse</span></code></a>
 at runtime, as changing config variables at runtime isn't supported.</p>
 </section>
-<section id="id73">
-<h3>Other Fixes<a class="headerlink" href="#id73" title="Link to this heading"></a></h3>
+<section id="id93">
+<h3>Other Fixes<a class="headerlink" href="#id93" title="Link to this heading"></a></h3>
 <p>An issue that prevented multiple modal screens from being processed correctly
 has been fixed. This would manifest as focus problems.</p>
 <p>Lint now produces files with Windows-style newlines, on Windows.</p>
@@ -3161,15 +3672,15 @@ them more readable.</p>
 libraries.</p>
 <p>Apps built for macOS should enable HighDPI mode.</p>
 </section>
-<section id="id74">
-<h3>Translations<a class="headerlink" href="#id74" title="Link to this heading"></a></h3>
+<section id="id94">
+<h3>Translations<a class="headerlink" href="#id94" title="Link to this heading"></a></h3>
 <p>The Ren'Py documentation has been translated into both Simplified and
 Traditional Chinese, courtesy of 被诅咒的章鱼 and 逆转咸鱼.</p>
 <p>The French translations have been updated.</p>
 </section>
 </section>
 <section id="renpy-7-4-2">
-<span id="id75"></span><h2>7.4.2<a class="headerlink" href="#renpy-7-4-2" title="Link to this heading"></a></h2>
+<span id="id95"></span><h2>7.4.2<a class="headerlink" href="#renpy-7-4-2" title="Link to this heading"></a></h2>
 <section id="fixes-and-changes">
 <h3>Fixes and Changes<a class="headerlink" href="#fixes-and-changes" title="Link to this heading"></a></h3>
 <p>The new <a class="reference internal" href="config.html#var-config.context_fadeout_music"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.context_fadeout_music</span></code></a> and <a class="reference internal" href="config.html#var-config.context_fadein_music"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.context_fadein_music</span></code></a>
@@ -3199,8 +3710,8 @@ Windows.</p></li>
 DirectX rendering from working.</p></li>
 </ul>
 </section>
-<section id="id76">
-<h3>Android<a class="headerlink" href="#id76" title="Link to this heading"></a></h3>
+<section id="id96">
+<h3>Android<a class="headerlink" href="#id96" title="Link to this heading"></a></h3>
 <p>There is a known issue with Samsung devices with the magnification shortcut
 enabled, where the game may become unresponsive. I'm working on a fix, but
 didn't want to delay the release for this.</p>
@@ -3211,7 +3722,7 @@ JVM.</p>
 </section>
 </section>
 <section id="renpy-7-4-1">
-<span id="id77"></span><h2>7.4.1<a class="headerlink" href="#renpy-7-4-1" title="Link to this heading"></a></h2>
+<span id="id97"></span><h2>7.4.1<a class="headerlink" href="#renpy-7-4-1" title="Link to this heading"></a></h2>
 <section id="pause-statement-changes">
 <h3>Pause Statement Changes<a class="headerlink" href="#pause-statement-changes" title="Link to this heading"></a></h3>
 <p>The behavior of the <code class="docutils literal notranslate"><span class="pre">pause</span></code> statement with a time has changed, so that:</p>
@@ -3243,8 +3754,8 @@ statement id:</p>
 </pre></div>
 </div>
 </section>
-<section id="id78">
-<h3>Live2D<a class="headerlink" href="#id78" title="Link to this heading"></a></h3>
+<section id="id98">
+<h3>Live2D<a class="headerlink" href="#id98" title="Link to this heading"></a></h3>
 <p>Live2D support has a <cite>default_fade</cite> argument added, which can change the
 default duration of fades at the start and end of motions and expressions.</p>
 <p>An issue with Live2D that manifested as a tuple error has been fixed.</p>
@@ -3271,19 +3782,19 @@ This has been fixed.</p>
 <p>Pyobjus is now part of the macOS build of Ren'Py, in addition to
 the iOS build. This library makes it possible to access Cocoa APIs.</p>
 </section>
-<section id="id79">
-<h3>Android<a class="headerlink" href="#id79" title="Link to this heading"></a></h3>
+<section id="id99">
+<h3>Android<a class="headerlink" href="#id99" title="Link to this heading"></a></h3>
 <p>There have been reports that prereleases of Ren'Py 7.4.1 will not run
 properly on older Android devices, like the Samsung Galaxy S5. We
 are attempting to acquire an example of a device exhibiting the
 problem, and will make a new release as required.</p>
 </section>
-<section id="id80">
-<h3>Translations<a class="headerlink" href="#id80" title="Link to this heading"></a></h3>
+<section id="id100">
+<h3>Translations<a class="headerlink" href="#id100" title="Link to this heading"></a></h3>
 <p>The Spanish translation has been updated.</p>
 </section>
-<section id="id81">
-<h3>Other Fixes<a class="headerlink" href="#id81" title="Link to this heading"></a></h3>
+<section id="id101">
+<h3>Other Fixes<a class="headerlink" href="#id101" title="Link to this heading"></a></h3>
 <p>An issue that could cause crashes on movies of certain sizes when
 Ren'Py was run on a computer that supports SSE3 has been fixed.</p>
 <p>Movie playback now uses multiple cores for video decoding, as it
@@ -3328,9 +3839,9 @@ provide a better selected state.</p>
 </section>
 </section>
 <section id="renpy-7-4">
-<span id="id82"></span><h2>7.4.0<a class="headerlink" href="#renpy-7-4" title="Link to this heading"></a></h2>
-<section id="id83">
-<h3>Model-Based Renderer<a class="headerlink" href="#id83" title="Link to this heading"></a></h3>
+<span id="id102"></span><h2>7.4.0<a class="headerlink" href="#renpy-7-4" title="Link to this heading"></a></h2>
+<section id="id103">
+<h3>Model-Based Renderer<a class="headerlink" href="#id103" title="Link to this heading"></a></h3>
 <p>This release includes a new model-based renderer, the component of Ren'Py that
 is responsible for drawing text and images to the user's display, supplementing
 (with the intent of eventually replacing) the original OpenGL renderer added
@@ -3363,8 +3874,8 @@ for 4K monitors are used on 1080P and smaller displays.</p>
 controlled by the <code class="xref std std-var docutils literal notranslate"><span class="pre">config.gl2</span></code> variable. As we gain more experience
 with it, it is intended to be come the default Ren'Py renderer.</p>
 </section>
-<section id="id84">
-<h3>Live2D<a class="headerlink" href="#id84" title="Link to this heading"></a></h3>
+<section id="id104">
+<h3>Live2D<a class="headerlink" href="#id104" title="Link to this heading"></a></h3>
 <p>One of the features enabled by the model-based renderer is support for
 displaying sprites made in Live2D. Ren'Py requires you to download Live2D
 Cubism separately, as you'll need to execute a contract with Live2D, Inc.
@@ -3406,7 +3917,7 @@ includes several features to allow you to begin writing scripts that will
 work on both Python 2 and Python 3.</p>
 <p>First, Ren'Py now uses <a class="reference external" href="https://python-future.org/">future</a> to provide
 standard library compatibility. It's now possible to import modules using
-their Python 3 names, when a renaming has occured.</p>
+their Python 3 names, when a renaming has occurred.</p>
 <p>When a .rpy file begins with the new <code class="docutils literal notranslate"><span class="pre">rpy</span> <span class="pre">python</span> <span class="pre">3</span></code> statement, the file is
 compiled in a Python 3 compatibility mode. The two changes this causes are:</p>
 <ul class="simple">
@@ -3501,8 +4012,8 @@ if necessary. (For example, to set <a class="reference internal" href="config.ht
 devices. These devices are no longer supported by Apple, and do not support
 the level of OpenGL ES that Ren'Py requires.</p>
 </section>
-<section id="id85">
-<h3>Web<a class="headerlink" href="#id85" title="Link to this heading"></a></h3>
+<section id="id105">
+<h3>Web<a class="headerlink" href="#id105" title="Link to this heading"></a></h3>
 <p>Ren'Py now runs significantly faster in the browser, thanks to new
 compilation techniques.</p>
 <p>A game built for the web platform can now download image and audio
@@ -3518,16 +4029,16 @@ including animated WebP.</p>
 to native Ren'Py ports.</p>
 <p>Support for iOS browsers was improved.</p>
 </section>
-<section id="id86">
-<h3>Steam<a class="headerlink" href="#id86" title="Link to this heading"></a></h3>
+<section id="id106">
+<h3>Steam<a class="headerlink" href="#id106" title="Link to this heading"></a></h3>
 <p>It is now possible to install Steam support from the Ren'Py launcher, by
 choosing &quot;preferences&quot;, &quot;Install libraries&quot;, &quot;Install Steam Support&quot;.</p>
 <p>The new <a class="reference internal" href="achievement.html#var-config.steam_appid"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.steam_appid</span></code></a> variable automatically creates the
 steam_appid.txt file for you. This needs to be set by a <code class="docutils literal notranslate"><span class="pre">define</span></code> statement,
 or in a python early block.</p>
 </section>
-<section id="id87">
-<h3>Translations<a class="headerlink" href="#id87" title="Link to this heading"></a></h3>
+<section id="id107">
+<h3>Translations<a class="headerlink" href="#id107" title="Link to this heading"></a></h3>
 <p>The Simplified Chinese, Japanese, and Korean translations have been updated, and now
 use a unified font.</p>
 <p>There is a new Simplified Chinese translation of the tutorial game, courtesy of
@@ -3597,16 +4108,16 @@ giving that key a function.</p>
 </section>
 </section>
 <section id="renpy-7-3-5">
-<span id="id88"></span><h2>7.3.5<a class="headerlink" href="#renpy-7-3-5" title="Link to this heading"></a></h2>
-<section id="id89">
-<h3>Fixes<a class="headerlink" href="#id89" title="Link to this heading"></a></h3>
+<span id="id108"></span><h2>7.3.5<a class="headerlink" href="#renpy-7-3-5" title="Link to this heading"></a></h2>
+<section id="id109">
+<h3>Fixes<a class="headerlink" href="#id109" title="Link to this heading"></a></h3>
 <p>On desktop platforms, the presplash screen has been reworked so that it
 will not cause the window to become nonresponsive if clicked.</p>
 <p>The iOS port has been updated to include modules that have been newly
 added to Ren'Py, allowing the compilation of iOS apps.</p>
 </section>
-<section id="id90">
-<h3>Other Changes<a class="headerlink" href="#id90" title="Link to this heading"></a></h3>
+<section id="id110">
+<h3>Other Changes<a class="headerlink" href="#id110" title="Link to this heading"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">audio</span></code> directory, which automatically defines
 names in the <a class="reference internal" href="audio.html#audio-namespace"><span class="std std-ref">audio namespace</span></a>, has been made
 visible in the launcher, and is added to newly-created projects.</p>
@@ -3615,9 +4126,9 @@ replace Ren'Py's exception handling system in its entirety.</p>
 </section>
 </section>
 <section id="renpy-7-3-4">
-<span id="id91"></span><h2>7.3.4<a class="headerlink" href="#renpy-7-3-4" title="Link to this heading"></a></h2>
-<section id="id92">
-<h3>Fixes<a class="headerlink" href="#id92" title="Link to this heading"></a></h3>
+<span id="id111"></span><h2>7.3.4<a class="headerlink" href="#renpy-7-3-4" title="Link to this heading"></a></h2>
+<section id="id112">
+<h3>Fixes<a class="headerlink" href="#id112" title="Link to this heading"></a></h3>
 <p>This release fixes major graphics glitches that were introduced in 7.3.3.</p>
 <ul class="simple">
 <li><p>On Windows, textures would fail to be reloaded when switching from fullscreen
@@ -3627,8 +4138,8 @@ displayed.</p></li>
 was used.</p></li>
 </ul>
 </section>
-<section id="id93">
-<h3>Other Changes<a class="headerlink" href="#id93" title="Link to this heading"></a></h3>
+<section id="id113">
+<h3>Other Changes<a class="headerlink" href="#id113" title="Link to this heading"></a></h3>
 <p>Dynamic images can now include &quot;[prefix_]&quot; everywhere, and especially when
 <code class="docutils literal notranslate"><span class="pre">add</span></code> has been used to add a dynamic image to buttons, drags, and similar
 focusable objects.</p>
@@ -3639,9 +4150,9 @@ screens.</p>
 </section>
 </section>
 <section id="renpy-7-3-3">
-<span id="id94"></span><h2>7.3.3<a class="headerlink" href="#renpy-7-3-3" title="Link to this heading"></a></h2>
-<section id="id95">
-<h3>Audio<a class="headerlink" href="#id95" title="Link to this heading"></a></h3>
+<span id="id114"></span><h2>7.3.3<a class="headerlink" href="#renpy-7-3-3" title="Link to this heading"></a></h2>
+<section id="id115">
+<h3>Audio<a class="headerlink" href="#id115" title="Link to this heading"></a></h3>
 <p>Ren'Py now supports an <code class="docutils literal notranslate"><span class="pre">audio</span></code> directory, which automatically defines
 names in the <a class="reference internal" href="audio.html#audio-namespace"><span class="std std-ref">audio namespace</span></a>. This makes it
 possible to have a file named <code class="docutils literal notranslate"><span class="pre">game/audio/overture.ogg</span></code>, and play
@@ -3679,8 +4190,8 @@ to Android 19 (Android 4.4 KitKat).</p>
 <li><p>WebGL compatibility has been improved.</p></li>
 </ul>
 </section>
-<section id="id96">
-<h3>Other Changes<a class="headerlink" href="#id96" title="Link to this heading"></a></h3>
+<section id="id116">
+<h3>Other Changes<a class="headerlink" href="#id116" title="Link to this heading"></a></h3>
 <p>During profiling conducted for the GL Rewrite project, it became
 clear that the switch to framebuffer objects in 7.3.0 was the
 cause of certain performance regressions. By changing how FBOs
@@ -3711,27 +4222,27 @@ which tiles the contents of the frame an integer number of times.</p>
 <p><a class="reference internal" href="dialogue.html#Character" title="Character"><code class="xref py py-func docutils literal notranslate"><span class="pre">Character()</span></code></a> now allows the <cite>name</cite> argument to be a function or
 callable object when <cite>dynamic</cite> is true.</p>
 </section>
-<section id="id97">
-<h3>Translations<a class="headerlink" href="#id97" title="Link to this heading"></a></h3>
+<section id="id117">
+<h3>Translations<a class="headerlink" href="#id117" title="Link to this heading"></a></h3>
 <p>The Korean and Spanish translations have been updated.</p>
 </section>
 </section>
 <section id="renpy-7-3-2">
-<span id="id98"></span><h2>7.3.2<a class="headerlink" href="#renpy-7-3-2" title="Link to this heading"></a></h2>
-<section id="id99">
-<h3>Fixes<a class="headerlink" href="#id99" title="Link to this heading"></a></h3>
+<span id="id118"></span><h2>7.3.2<a class="headerlink" href="#renpy-7-3-2" title="Link to this heading"></a></h2>
+<section id="id119">
+<h3>Fixes<a class="headerlink" href="#id119" title="Link to this heading"></a></h3>
 <p>Fix a regression in the platform variables, caused by the previous
 release.</p>
 </section>
-<section id="id100">
-<h3>Translations<a class="headerlink" href="#id100" title="Link to this heading"></a></h3>
+<section id="id120">
+<h3>Translations<a class="headerlink" href="#id120" title="Link to this heading"></a></h3>
 <p>Update the Spanish translation.</p>
 </section>
 </section>
 <section id="renpy-7-3-1">
-<span id="id101"></span><h2>7.3.1<a class="headerlink" href="#renpy-7-3-1" title="Link to this heading"></a></h2>
-<section id="id102">
-<h3>Changes<a class="headerlink" href="#id102" title="Link to this heading"></a></h3>
+<span id="id121"></span><h2>7.3.1<a class="headerlink" href="#renpy-7-3-1" title="Link to this heading"></a></h2>
+<section id="id122">
+<h3>Changes<a class="headerlink" href="#id122" title="Link to this heading"></a></h3>
 <p>Descriptive text (text that is intended to be show when self-voicing is
 enabled, so that scenes can be described to the vision impaired) has been
 updated. Descriptive text is now accessed using the <code class="docutils literal notranslate"><span class="pre">alt</span></code> character
@@ -3752,8 +4263,8 @@ support rollback.</p>
 renpy.ios, renpy.windows, and renpy.mobile) are set properly.</p>
 <p>Renpyweb now stores the date and time that a save file was created.</p>
 </section>
-<section id="id103">
-<h3>Fixes<a class="headerlink" href="#id103" title="Link to this heading"></a></h3>
+<section id="id123">
+<h3>Fixes<a class="headerlink" href="#id123" title="Link to this heading"></a></h3>
 <p>This release fixes a fairly major issue that could cause screens that
 interpolate text to not update, or update improperly.</p>
 <p>This release properly runs the image prediction routine from the
@@ -3762,13 +4273,13 @@ image prediction thread.</p>
 <p>The <a class="reference internal" href="config.html#var-config.end_game_transition"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.end_game_transition</span></code></a>, which was not working properly
 in most circumstances, has been fixed.</p>
 </section>
-<section id="id104">
-<h3>Translations<a class="headerlink" href="#id104" title="Link to this heading"></a></h3>
+<section id="id124">
+<h3>Translations<a class="headerlink" href="#id124" title="Link to this heading"></a></h3>
 <p>The Russian, Korean, and Spanish translations were updated.</p>
 </section>
 </section>
 <section id="renpy-7-3-0">
-<span id="id105"></span><h2>7.3.0<a class="headerlink" href="#renpy-7-3-0" title="Link to this heading"></a></h2>
+<span id="id125"></span><h2>7.3.0<a class="headerlink" href="#renpy-7-3-0" title="Link to this heading"></a></h2>
 <section id="renpyweb">
 <h3>Renpyweb<a class="headerlink" href="#renpyweb" title="Link to this heading"></a></h3>
 <p>Courtesy of Sylvain Beucler, Ren'Py now can generate distributions for
@@ -3859,16 +4370,16 @@ of the problems. While languages that require input methods will need
 a larger rewrite to function, Ren'Py should now properly handle all direct
 input keyboards.</p>
 </section>
-<section id="id106">
-<h3>Translations<a class="headerlink" href="#id106" title="Link to this heading"></a></h3>
+<section id="id126">
+<h3>Translations<a class="headerlink" href="#id126" title="Link to this heading"></a></h3>
 <p>The Ren'Py launcher and sample project have been translated into Turkish
 by Arda Güler.</p>
 <p>The Ren'Py tutorial game has been translated into Spanish by Moshibit.</p>
 <p>French, Japanese, Korean, Russian and Spanish translations have been updated for
 this release.</p>
 </section>
-<section id="id107">
-<h3>Other Improvements<a class="headerlink" href="#id107" title="Link to this heading"></a></h3>
+<section id="id127">
+<h3>Other Improvements<a class="headerlink" href="#id127" title="Link to this heading"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">side</span></code> displayable now renders its children in the order
 they are provided in the control string.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">say</span></code> statement, <code class="docutils literal notranslate"><span class="pre">menu</span></code> statement, and <code class="docutils literal notranslate"><span class="pre">renpy.call_screen</span></code>
@@ -3889,8 +4400,8 @@ given.</p>
 <p><a class="reference internal" href="screen_python.html#Action" title="Action"><code class="xref py py-class docutils literal notranslate"><span class="pre">Action</span></code></a> and <a class="reference internal" href="screen_python.html#BarValue" title="BarValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">BarValue</span></code></a> now support a get_tooltip method,
 which allows the object to supply a default tooltip.</p>
 </section>
-<section id="id108">
-<h3>Fixes<a class="headerlink" href="#id108" title="Link to this heading"></a></h3>
+<section id="id128">
+<h3>Fixes<a class="headerlink" href="#id128" title="Link to this heading"></a></h3>
 <p>A problem that could cause Ren'Py to drop certain characters, especially
 accent markers in Arabic, has been fixed.</p>
 <p>The filename of the internal copy of OpenDyslexic has been changed so as
@@ -3898,7 +4409,7 @@ not to cause problems with copies distributed with games.</p>
 </section>
 </section>
 <section id="renpy-7-2-2">
-<span id="id109"></span><h2>7.2.2<a class="headerlink" href="#renpy-7-2-2" title="Link to this heading"></a></h2>
+<span id="id129"></span><h2>7.2.2<a class="headerlink" href="#renpy-7-2-2" title="Link to this heading"></a></h2>
 <p>Ren'Py now supports a new Accessibility menu, which can be accessed
 by pressing the &quot;a&quot; key. This menu, which is intended to be used by
 players, let's the player override the game font, change the scaling
@@ -3919,7 +4430,7 @@ gives an action that is performed each time the value changes.</p>
 that needs to be collected.</p>
 </section>
 <section id="renpy-7-2-1">
-<span id="id110"></span><h2>7.2.1<a class="headerlink" href="#renpy-7-2-1" title="Link to this heading"></a></h2>
+<span id="id130"></span><h2>7.2.1<a class="headerlink" href="#renpy-7-2-1" title="Link to this heading"></a></h2>
 <section id="ios-improvements">
 <h3>iOS Improvements<a class="headerlink" href="#ios-improvements" title="Link to this heading"></a></h3>
 <p>Ren'Py will now set the version field for the iOS application when generating
@@ -3928,8 +4439,8 @@ a project.</p>
 and use them to generate the icon and launch image in the sizes required
 for iOS.</p>
 </section>
-<section id="id111">
-<h3>Other Improvements<a class="headerlink" href="#id111" title="Link to this heading"></a></h3>
+<section id="id131">
+<h3>Other Improvements<a class="headerlink" href="#id131" title="Link to this heading"></a></h3>
 <p>The <a class="reference internal" href="save_load_rollback.html#renpy.in_rollback" title="renpy.in_rollback"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.in_rollback()</span></code></a> function returns True when in the rollback that
 occurs immediately after a load. This makes it possible to use:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">python</span><span class="p">:</span>
@@ -3944,8 +4455,8 @@ to select the transition to use on a per-say-statement basis.</p>
 <p>The new <code class="docutils literal notranslate"><span class="pre">RENPY_SEARCHPATH</span></code> environment variable makes it possible to
 override <a class="reference internal" href="config.html#var-config.searchpath"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.searchpath</span></code></a> on launch.</p>
 </section>
-<section id="id112">
-<h3>Fixes<a class="headerlink" href="#id112" title="Link to this heading"></a></h3>
+<section id="id132">
+<h3>Fixes<a class="headerlink" href="#id132" title="Link to this heading"></a></h3>
 <p>Ren'Py has been audited to make sure that the semantics of == and != match,
 whenever == was redefined.</p>
 <p>There was a fix to problems that might occur when a transform is added
@@ -3966,7 +4477,7 @@ menu statement.</p>
 </section>
 </section>
 <section id="renpy-7-1-4">
-<span id="renpy-7-2"></span><span id="renpy-7-2-0"></span><span id="id113"></span><h2>7.2.0<a class="headerlink" href="#renpy-7-1-4" title="Link to this heading"></a></h2>
+<span id="renpy-7-2"></span><span id="renpy-7-2-0"></span><span id="id133"></span><h2>7.2.0<a class="headerlink" href="#renpy-7-1-4" title="Link to this heading"></a></h2>
 <section id="menu-arguments">
 <h3>Menu Arguments<a class="headerlink" href="#menu-arguments" title="Link to this heading"></a></h3>
 <p>Ren'Py now has support for <a class="reference internal" href="menus.html#menu-arguments"><span class="std std-ref">menu arguments</span></a>. Arguments
@@ -4008,8 +4519,8 @@ finished. For example, in the script:</p>
 emotion. The vhappy emotion is shown before the second line of dialogue,
 and replaced with the previous emotion (happy in this case), before it.</p>
 </section>
-<section id="id114">
-<h3>Text<a class="headerlink" href="#id114" title="Link to this heading"></a></h3>
+<section id="id134">
+<h3>Text<a class="headerlink" href="#id134" title="Link to this heading"></a></h3>
 <p>There have been a number of text changes that affect text when a window
 is scaled to a non-default size:</p>
 <ul class="simple">
@@ -4036,8 +4547,8 @@ clause, that makes it take an expression rather than a literal screen
 name. This allows a variable to be used when selecting the screen that
 is included. See <a class="reference internal" href="screens.html#sl-use"><span class="std std-ref">Use</span></a> for more details.</p>
 </section>
-<section id="id115">
-<h3>Changes<a class="headerlink" href="#id115" title="Link to this heading"></a></h3>
+<section id="id135">
+<h3>Changes<a class="headerlink" href="#id135" title="Link to this heading"></a></h3>
 <p>The new <a class="reference internal" href="other.html#renpy.is_skipping" title="renpy.is_skipping"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.is_skipping()</span></code></a> function reports if Ren'Py is currently
 skipping.</p>
 <p>The <a class="reference internal" href="screens.html#sl-input"><span class="std std-ref">input</span></a> displayable now takes a new <cite>copypaste</cite>
@@ -4080,8 +4591,8 @@ APK.</p>
 <p>Ren'Py will now allow files in the public game directory (/mnt/sdcard/Android/<cite>package</cite>/files/game)
 to override those included with the game proper.</p>
 </section>
-<section id="id116">
-<h3>Fixes<a class="headerlink" href="#id116" title="Link to this heading"></a></h3>
+<section id="id136">
+<h3>Fixes<a class="headerlink" href="#id136" title="Link to this heading"></a></h3>
 <p>A bug preventing Ren'Py from displaying zero or negative-width
 characters (such as certain diacritics) has been fixed.</p>
 <p>An issue that prevented Ren'Py from updating a displayable that was
@@ -4102,15 +4613,15 @@ and other actions.</p>
 </section>
 </section>
 <section id="renpy-7-1-3">
-<span id="id117"></span><h2>7.1.3<a class="headerlink" href="#renpy-7-1-3" title="Link to this heading"></a></h2>
+<span id="id137"></span><h2>7.1.3<a class="headerlink" href="#renpy-7-1-3" title="Link to this heading"></a></h2>
 <p>This was a quick re-release of 7.1.2 in order to fix a single bug, which
 was that a test change had been left in causing <a class="reference internal" href="config.html#var-config.default_language"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.default_language</span></code></a>
 to be set on initial startup.</p>
 </section>
 <section id="renpy-7-1-2">
-<span id="id118"></span><h2>7.1.2<a class="headerlink" href="#renpy-7-1-2" title="Link to this heading"></a></h2>
-<section id="id119">
-<h3>Improvements<a class="headerlink" href="#id119" title="Link to this heading"></a></h3>
+<span id="id138"></span><h2>7.1.2<a class="headerlink" href="#renpy-7-1-2" title="Link to this heading"></a></h2>
+<section id="id139">
+<h3>Improvements<a class="headerlink" href="#id139" title="Link to this heading"></a></h3>
 <p>Ren'Py's screen language now support the inclusion of anonymous ATL
 transforms. It's now possible to write:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">screen</span> <span class="n">hello_title</span><span class="p">():</span>
@@ -4140,8 +4651,8 @@ quick save pages.</p>
 <p>The new <a class="reference internal" href="config.html#var-config.skip_sounds"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.skip_sounds</span></code></a> variables determines if Ren'Py will skip
 non-looping audio files that are played while Ren'Py is skipping.</p>
 </section>
-<section id="id120">
-<h3>Translations<a class="headerlink" href="#id120" title="Link to this heading"></a></h3>
+<section id="id140">
+<h3>Translations<a class="headerlink" href="#id140" title="Link to this heading"></a></h3>
 <p>Ren'Py now has the ability to automatically detect the locale of the user's
 system, and use it to set the language. Please see
 <a class="reference internal" href="config.html#var-config.enable_language_autodetect"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.enable_language_autodetect</span></code></a> and the <a class="reference internal" href="translation.html#translation"><span class="std std-ref">Translation</span></a>
@@ -4149,8 +4660,8 @@ documentation for how this works.</p>
 <p>The French, German, Korean, Russian, and Simplified Chinese translations
 have been updated.</p>
 </section>
-<section id="id121">
-<h3>Fixes<a class="headerlink" href="#id121" title="Link to this heading"></a></h3>
+<section id="id141">
+<h3>Fixes<a class="headerlink" href="#id141" title="Link to this heading"></a></h3>
 <p>A Windows-specific bug that caused RTL (the support for languages like
 Arabic and Hebrew) to corrupt the second half of text strings has been
 fixed. This should prevent garbage characters from being displayed when
@@ -4170,7 +4681,7 @@ Java 8, we make that 64-bit requirement explicit.</p>
 </section>
 </section>
 <section id="renpy-7-1-1">
-<span id="id122"></span><h2>7.1.1<a class="headerlink" href="#renpy-7-1-1" title="Link to this heading"></a></h2>
+<span id="id142"></span><h2>7.1.1<a class="headerlink" href="#renpy-7-1-1" title="Link to this heading"></a></h2>
 <section id="history-fix">
 <span id="history-7-1-1"></span><h3>History Fix<a class="headerlink" href="#history-fix" title="Link to this heading"></a></h3>
 <p>This release fixes an issue with Ren'Py's history screen. The problem occurred
@@ -4237,8 +4748,8 @@ allow both x86_64 and armeabi-v7a builds to be uploaded to Google Play and
 other stores, rather than having to first created one build and then the other,
 manually changing the version numbers between.</p>
 </section>
-<section id="id123">
-<h3>Other Improvements<a class="headerlink" href="#id123" title="Link to this heading"></a></h3>
+<section id="id143">
+<h3>Other Improvements<a class="headerlink" href="#id143" title="Link to this heading"></a></h3>
 <p>Ren'Py now handles the (lack of) drawing of zero width characters itself, preventing
 such characters from appearing as squares in text if the font does not support
 the zero width character.</p>
@@ -4250,8 +4761,8 @@ click-to-continue indicator and the other lines.</p>
 <p>Drags (in drag-and-drop) now support alternate clicks. (Right clicks on desktop
 and long-clicks on touch platforms.)</p>
 </section>
-<section id="id124">
-<h3>Fixes<a class="headerlink" href="#id124" title="Link to this heading"></a></h3>
+<section id="id144">
+<h3>Fixes<a class="headerlink" href="#id144" title="Link to this heading"></a></h3>
 <p>The <a class="reference internal" href="screen_actions.html#SetVariable" title="SetVariable"><code class="xref py py-func docutils literal notranslate"><span class="pre">SetVariable()</span></code></a> and <a class="reference internal" href="screen_actions.html#ToggleVariable" title="ToggleVariable"><code class="xref py py-func docutils literal notranslate"><span class="pre">ToggleVariable()</span></code></a> functions have been extended
 to accept namespaces and fields. So it's now possible to have actions like
 <code class="docutils literal notranslate"><span class="pre">SetVariable(&quot;hero.strength&quot;,</span> <span class="pre">hero.strength</span> <span class="pre">+</span> <span class="pre">1)</span></code> or
@@ -4266,9 +4777,9 @@ it work better with history and the voice replay action.</p>
 </section>
 </section>
 <section id="renpy-7-1">
-<span id="id125"></span><h2>7.1<a class="headerlink" href="#renpy-7-1" title="Link to this heading"></a></h2>
-<section id="id126">
-<h3>Android<a class="headerlink" href="#id126" title="Link to this heading"></a></h3>
+<span id="id145"></span><h2>7.1<a class="headerlink" href="#renpy-7-1" title="Link to this heading"></a></h2>
+<section id="id146">
+<h3>Android<a class="headerlink" href="#id146" title="Link to this heading"></a></h3>
 <p>This release sees a major rewrite of Ren'Py's support for Android to
 modernize it. This is required so Ren'Py games can be uploaded to the
 Google Play store. Some of these changes may require you to update
@@ -4324,16 +4835,16 @@ release comes out.</p>
 updates. That's normal – unlike in previous versions, the channel only
 appears when there are prereleases available.</p>
 </section>
-<section id="id127">
-<h3>Translations<a class="headerlink" href="#id127" title="Link to this heading"></a></h3>
+<section id="id147">
+<h3>Translations<a class="headerlink" href="#id147" title="Link to this heading"></a></h3>
 <p>The Ren'Py launcher, template game, and The Question have been translated
 into the Latin script of Malay by Muhammad Nur Hidayat Yasuyoshi.</p>
 <p>The Korean translation has been significantly updated.</p>
 <p>It is now possible to translate the strings used by RAPT into non-English
 languages.</p>
 </section>
-<section id="id128">
-<h3>Other<a class="headerlink" href="#id128" title="Link to this heading"></a></h3>
+<section id="id148">
+<h3>Other<a class="headerlink" href="#id148" title="Link to this heading"></a></h3>
 <p>Ren'Py can now automatically save the game upon quit, in a reliable
 fashion. (As compared to the previous autosave, which could fail or
 be cycled out.) This is controlled by the <a class="reference internal" href="store_variables.html#var-_quit_slot"><code class="xref std std-var docutils literal notranslate"><span class="pre">_quit_slot</span></code></a> variable.</p>
@@ -4377,7 +4888,7 @@ the user first clicks the mouse on a drag. (Before it starts moving.)</p>
 </section>
 </section>
 <section id="renpy-7-0">
-<span id="id129"></span><h2>7.0<a class="headerlink" href="#renpy-7-0" title="Link to this heading"></a></h2>
+<span id="id149"></span><h2>7.0<a class="headerlink" href="#renpy-7-0" title="Link to this heading"></a></h2>
 <p>Ren'Py 7.0 marks the completion of over a decade of development since
 Ren'Py 6 that brought features like ATL, Screen Language, OpenGL and DirectX
 acceleration, support for the Android and iOS platforms, Translation,
@@ -4385,8 +4896,8 @@ Accessibility, and so much more.</p>
 <p>For releases between 6.0 and 7.0, see the other entries in this changelog,
 and the older changelog on the Ren'Py website. The rest of this entry
 contains the differences between 7.0 and 6.99.14.3.</p>
-<section id="layered-images">
-<h3>Layered Images<a class="headerlink" href="#layered-images" title="Link to this heading"></a></h3>
+<section id="id150">
+<h3>Layered Images<a class="headerlink" href="#id150" title="Link to this heading"></a></h3>
 <p>A <a class="reference internal" href="layeredimage.html"><span class="doc">layered image</span></a> is a new way of defining images
 for use in Ren'Py. It's intended to be used with a sprite that has been
 created in Photoshop or some other program as a series of layers.
@@ -4408,8 +4919,8 @@ transitions to occur. Dict transitions make it possible – and even
 convenient – to have a transition apply to the sprites alone while dialogue is
 being displayed.</p>
 </section>
-<section id="id130">
-<h3>Changes<a class="headerlink" href="#id130" title="Link to this heading"></a></h3>
+<section id="id151">
+<h3>Changes<a class="headerlink" href="#id151" title="Link to this heading"></a></h3>
 <p>The old tutorial and old templates are no longer included with Ren'Py.
 They can still be used with new version of Ren'Py if copied into
 this or later versions.</p>
@@ -4448,14 +4959,14 @@ function can return a list of tags in sorted order.</p>
 for consistency with ATL and other animations.</p>
 <p>The documentation has received an editing pass, courtesy of Craig P. Donson.</p>
 </section>
-<section id="id131">
-<h3>Translations<a class="headerlink" href="#id131" title="Link to this heading"></a></h3>
+<section id="id152">
+<h3>Translations<a class="headerlink" href="#id152" title="Link to this heading"></a></h3>
 <p>The Ren'Py tutorial and The Question now have French translations, thanks
 to Alexandre Tranchant.</p>
 <p>The Japanese and Russian translations have been updated.</p>
 </section>
-<section id="id132">
-<h3>Fixes<a class="headerlink" href="#id132" title="Link to this heading"></a></h3>
+<section id="id153">
+<h3>Fixes<a class="headerlink" href="#id153" title="Link to this heading"></a></h3>
 <p>This fixes a regression that prevented screens from handling the hide or
 replaced events when the screen was not being shown. (This might be the
 case when the player is skipping through the game.)</p>

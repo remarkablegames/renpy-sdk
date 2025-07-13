@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -386,7 +386,7 @@ no transition is used. Otherwise, the specified transition is
 used.</p>
 </dd>
 <dt><cite>auto</cite></dt><dd><p>If True, this becomes the equivalent of the <code class="docutils literal notranslate"><span class="pre">window</span> <span class="pre">auto</span> <span class="pre">hide</span></code>
-statment.</p>
+statement.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -705,7 +705,7 @@ statement does not: the name of the group is supplied to <a class="reference int
 and the <code class="docutils literal notranslate"><span class="pre">auto</span></code> feature can be implemented using <a class="reference internal" href="displaying_images.html#renpy.list_images" title="renpy.list_images"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.list_images()</span></code></a>.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="Attribute">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Attribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Attribute" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Attribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variant</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Attribute" title="Link to this definition"></a></dt>
 <dd><p>This is used to represent a layer of an LayeredImage that is
 controlled by an attribute. A single attribute can control
 multiple layers, in which case all layers corresponding to
@@ -729,14 +729,12 @@ this attribute is.</p>
 <dt><cite>at</cite></dt><dd><p>A transform or list of transforms that are applied to the
 image.</p>
 </dd>
-<dt><cite>if_all</cite></dt><dd><p>An attribute or list of attributes. The displayable is only shown
-if all of these are showing.</p>
+<dt><cite>when</cite></dt><dd><p>A string containing a <code class="docutils literal notranslate"><span class="pre">when</span></code> expression, described in the <a class="reference internal" href="layeredimage.html#when"><span class="std std-ref">When</span></a> section.
+The displayable is only shown when the expression is satisfied by
+the pool of attributes currently applied to the layeredimage.</p>
 </dd>
-<dt><cite>if_any</cite></dt><dd><p>An attribute or list of attributes. if not empty, the displayable is only shown
-if any of these are showing.</p>
-</dd>
-<dt><cite>if_not</cite></dt><dd><p>An attribute or list of attributes. The displayable is only shown
-if none of these are showing.</p>
+<dt><cite>variant</cite></dt><dd><p>A string giving the variant of the attribute. This is used
+as part of finding the displayable when <cite>image</cite> is None.</p>
 </dd>
 </dl>
 <p>Other keyword arguments are interpreted as transform properties. If
@@ -764,14 +762,9 @@ if the layer is displayed.</p>
 <dt><cite>image</cite></dt><dd><p>If not None, this should be a displayable that is displayed when
 the condition is true.</p>
 </dd>
-<dt><cite>if_all</cite></dt><dd><p>An attribute or list of attributes. The condition is only evaluated
-if all of these are showing.</p>
-</dd>
-<dt><cite>if_any</cite></dt><dd><p>An attribute or list of attributes. If not empty, the condition is
-only evaluated if any of these are showing.</p>
-</dd>
-<dt><cite>if_not</cite></dt><dd><p>An attribute or list of attributes. The condition is only evaluated
-if none of these are showing.</p>
+<dt><cite>when</cite></dt><dd><p>A string containing a <code class="docutils literal notranslate"><span class="pre">when</span></code> expression, described in the <a class="reference internal" href="layeredimage.html#when"><span class="std std-ref">When</span></a> section.
+The condition is only evaluated when the expression is satisfied by
+the pool of attributes currently applied to the layeredimage.</p>
 </dd>
 <dt><cite>at</cite></dt><dd><p>A transform or list of transforms that are applied to the image.</p>
 </dd>
@@ -792,7 +785,7 @@ horizontally and 200 vertically.)</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="LayeredImage">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LayeredImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attributes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">at</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format_function</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute_function</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offer_screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#LayeredImage" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LayeredImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attributes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">at=[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_format=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format_function=&lt;function</span> <span class="pre">format_function</span> <span class="pre">at</span> <span class="pre">0x725d0bd51d00&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute_function=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offer_screen=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#LayeredImage" title="Link to this definition"></a></dt>
 <dd><p>This is an image-like object that, when shown with the proper set of
 attributes, shows a displayable created by compositing together the
 displayables associated with those attribute.</p>

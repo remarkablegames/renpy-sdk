@@ -1,4 +1,4 @@
-# Copyright 2004-2024 Tom Rothamel <pytom@bishoujo.us>
+# Copyright 2004-2025 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -54,7 +54,7 @@ def expand_focus_mask(v):
 
 
 def expand_outlines(l):
-    rv = [ ]
+    rv = []
 
     for i in l:
         if len(i) == 2:
@@ -72,7 +72,7 @@ ANCHORS = dict(
     center=0.5,
     top=0.0,
     bottom=1.0,
-    )
+)
 
 
 def expand_anchor(v):

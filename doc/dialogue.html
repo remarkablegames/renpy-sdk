@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -322,7 +322,7 @@ character.</p>
 </dd>
 </dl>
 <p><strong>Voice Tag.</strong>
-If a voice tag is assign to a Character, the voice files that are
+If a voice tag is assigned to a Character, the voice files that are
 associated with it, can be muted or played in the preference
 screen.</p>
 <dl class="simple">
@@ -386,7 +386,7 @@ character is speaking. See the section on
 <p><strong>Click-to-continue.</strong>
 A click-to-continue indicator is displayed once all the text has
 finished displaying, to prompt the user to advance.</p>
-<dl class="simple">
+<dl>
 <dt><cite>ctc</cite></dt><dd><p>A displayable to use as the click-to-continue indicator, unless
 a more specific indicator is used.</p>
 </dd>
@@ -398,13 +398,29 @@ display of text is paused by the {p=} or {w=} text tags. When
 None, this takes its default from <cite>ctc_pause</cite>, use <code class="docutils literal notranslate"><span class="pre">Null()</span></code>
 when you want a <cite>ctc_pause</cite> but no <cite>ctc_timedpause</cite>.</p>
 </dd>
-<dt><cite>ctc_position</cite></dt><dd><p>Controls the location of the click-to-continue indicator. If
-<code class="docutils literal notranslate"><span class="pre">&quot;nestled&quot;</span></code>, the indicator is displayed as part of the text
-being shown, immediately after the last character. <code class="docutils literal notranslate"><span class="pre">&quot;nestled-close&quot;</span></code> is
-similar, except a break is not allowed between the text and the CTC
-indicator. If <code class="docutils literal notranslate"><span class="pre">&quot;fixed&quot;</span></code>, a new screen containing the CTC indicator is shown,
-and the position style properties of the CTC displayable are used
-to position the CTC indicator.</p>
+<dt><cite>ctc_position</cite></dt><dd><p>Controls the location of the click-to-continue indicator.
+This can be:</p>
+<dl>
+<dt>&quot;nestled&quot;</dt><dd><p>The indicator is displayed as part of the text
+being shown, immediately after the last character.</p>
+</dd>
+<dt>&quot;nestled-close&quot;</dt><dd><p>Similar to <code class="docutils literal notranslate"><span class="pre">&quot;nestled&quot;</span></code>, but a break is not allowed between
+the text and the CTC indicator.</p>
+</dd>
+<dt>&quot;fixed&quot;</dt><dd><p>If a screen named &quot;ctc&quot; exists, it is shown. Otherwise, the CTC
+displayable is show, and the position style properties of the CTC
+displayable are used to position the CTC indicator.</p>
+</dd>
+<dt>&quot;screen-variable&quot;</dt><dd><p>When given, the variable named &quot;ctc&quot; is set to the CTC displayable
+when the CTC indicator should be show. This can be used with the
+following screen language:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">default</span> <span class="n">ctc</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="k">showif</span> <span class="n">ctc</span><span class="p">:</span>
+    <span class="k">add</span> <span class="n">ctc</span>
+</pre></div>
+</div>
+</dd>
+</dl>
 </dd>
 </dl>
 <p><strong>Screens.</strong>
@@ -415,7 +431,7 @@ allow you to select that screen, and to provide arguments to it.</p>
 </dd>
 <dt><cite>retain</cite></dt><dd><p>If not true, an unused tag is generated for each line of dialogue,
 and the screens are shown non-transiently. Call <a class="reference internal" href="other.html#renpy.clear_retain" title="renpy.clear_retain"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.clear_retain()</span></code></a>
-to remove all retaint screens. This is almost always used with
+to remove all retained screens. This is almost always used with
 <a class="reference internal" href="bubble.html"><span class="doc">Speech Bubbles</span></a>.</p>
 </dd>
 </dl>

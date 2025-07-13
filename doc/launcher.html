@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -99,7 +99,9 @@
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Launcher</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#project-folders">Project Folders</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#projects-txt">Projects.txt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#no-launcher-links">No Launcher Links</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="developer_tools.html">Developer Tools</a></li>
@@ -210,12 +212,31 @@
 <h1>Launcher<a class="headerlink" href="#launcher" title="Link to this heading"></a></h1>
 <p>The Ren'Py launcher is mostly documented in other portions of the manual. This
 page contains information about the launcher that doesn't fit anywhere else.</p>
+<section id="project-folders">
+<h2>Project Folders<a class="headerlink" href="#project-folders" title="Link to this heading"></a></h2>
+<p>The launcher supports folders. You can create a folder by creating a directory
+under the projects directory, and moving the project into it, then clicking Refresh.
+Only one level of folders is supported, so you can't create a folder inside a folder.</p>
+<p>Folders can be expanded and collapsed by clicking on the name in the launcher.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Currently, the Ren'Py launcher only supports one project with a given name. So it's not
+possible to have the same project name in different folders.</p>
+</div>
+</section>
 <section id="projects-txt">
 <h2>Projects.txt<a class="headerlink" href="#projects-txt" title="Link to this heading"></a></h2>
 <p>If a file named <code class="docutils literal notranslate"><span class="pre">projects.txt</span></code> exists in the projects directory, it's expected
 to contain a list of full paths, one per line. These paths are treated as if
 they were inside the projects directory, and projects they contain show
 up in the launcher.</p>
+</section>
+<section id="no-launcher-links">
+<h2>No Launcher Links<a class="headerlink" href="#no-launcher-links" title="Link to this heading"></a></h2>
+<p>If a file named <code class="docutils literal notranslate"><span class="pre">no_launcher_links.txt</span></code> exists in the Ren'Py base directory (the one with
+renpy.exe, renpy.sh, and renpy.app in it), the launcher will disable links to renpy.org. While
+not guaranteed, this is intended in educational and homeschool environments to prevent young
+Ren'Py users from seeing adult sponsors.</p>
 </section>
 </section>
 

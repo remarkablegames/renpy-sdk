@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -344,7 +344,7 @@ by the image directory.</p>
 <section id="images-directory">
 <span id="image-directory"></span><span id="id3"></span><h3>Images Directory<a class="headerlink" href="#images-directory" title="Link to this heading"></a></h3>
 <p>The image directory is named &quot;images&quot;, and is placed under the game directory.
-When a file with a .jpg, .jpeg, .jxl, .png, or .webp extension is placed underneath this directory,
+When a file with a .jpg, .jpeg, .png, or .webp extension is placed underneath this directory,
 the extension is stripped, the rest of the filename is forced to lowercase,
 and the resulting filename is used as the image name if an image with that
 name has not been previously defined.</p>
@@ -366,7 +366,7 @@ game is configured, using <a class="reference internal" href="gui_advanced.html#
 image will fill the entire screen.</p>
 <p>When oversampling is enabled, the size that the image is displayed at is
 smaller than the image size would imply. For example, if an image is 3480x2160,
-and has an oversamply of 2, then each axis will be halved, and the image would
+and has an oversample of 2, then each axis will be halved, and the image would
 fill the same 1920x1080 window.</p>
 <p>This is useful when the image might be zoomed in on, and the extra detail is
 required. Oversampling is also useful in conjunction with <a class="reference internal" href="config.html#var-config.physical_width"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.physical_width</span></code></a>
@@ -374,10 +374,15 @@ and <a class="reference internal" href="config.html#var-config.physical_height">
 resolution graphics.</p>
 <p>Oversampling is automatically enabled if the image ends with an '&#64;' followed
 by a number, before the extension. For example, <code class="file docutils literal notranslate"><span class="pre">eileen</span> <span class="pre">happy&#64;2.png</span></code> is
-2x oversampled, and <code class="file docutils literal notranslate"><span class="pre">eileen</span> <span class="pre">happy&#64;3x.png</span></code> will be 3x oversampled. Oversampling
+2x oversampled, and <code class="file docutils literal notranslate"><span class="pre">eileen</span> <span class="pre">happy&#64;3.png</span></code> will be 3x oversampled. Oversampling
 can also be enabled by giving the <cite>oversample</cite> keyword argument to <a class="reference internal" href="displayables.html#Image" title="Image"><code class="xref py py-func docutils literal notranslate"><span class="pre">Image()</span></code></a>.</p>
 <p>A directory can also specify how much to oversample images inside it. For example,
 <code class="file docutils literal notranslate"><span class="pre">images/&#64;2/eileen</span> <span class="pre">happy.png</span></code> will be oversampled 2x.</p>
+<p id="automatic-oversampling">If no oversampling is applied to an image, Ren'Py will attempt to automatically find
+oversampled images to use. For example, if the game is scaled by more than 1x and less than or exactly 2x,
+Ren'Py loading <code class="file docutils literal notranslate"><span class="pre">eileen</span> <span class="pre">happy.png</span></code> will look for <code class="file docutils literal notranslate"><span class="pre">eileen</span> <span class="pre">happy&#64;2.png</span></code>, and use that if it exists. If the scaling
+is greater than 2x, Ren'Py will look for <code class="file docutils literal notranslate"><span class="pre">eileen</span> <span class="pre">happy</span> <span class="pre">&#64;4.png</span></code>, <code class="file docutils literal notranslate"><span class="pre">eileen</span> <span class="pre">happy&#64;3.png</span></code>, and <code class="file docutils literal notranslate"><span class="pre">eileen</span> <span class="pre">happy&#64;2.png</span></code>,
+and use the first one that it finds, or <code class="file docutils literal notranslate"><span class="pre">eileen</span> <span class="pre">happy.png</span></code> if none of them exist.</p>
 </section>
 <section id="image-statement">
 <span id="id5"></span><h3>Image Statement<a class="headerlink" href="#image-statement" title="Link to this heading"></a></h3>
@@ -662,7 +667,7 @@ text of the with clause. For example:</p>
 </div>
 <p>Note that even though this applies to the <a class="reference internal" href="screens.html#show-screen-statement"><span class="std std-ref">Show Screen</span></a>
 and <a class="reference internal" href="screens.html#hide-screen-statement"><span class="std std-ref">Hide Screen</span></a> statements too,
-<a class="reference internal" href="screens.html#call-screen-statement"><span class="std std-ref">Call Screen</span></a> works a bit differently.</p>
+<a class="reference internal" href="screens.html#call-screen-statement"><span class="std std-ref">Call Screen</span></a> differently.</p>
 </section>
 </section>
 <section id="camera-and-show-layer-statements">
@@ -818,6 +823,10 @@ name.</p>
 name.</p>
 </dd>
 </dl>
+<p>This function may only be run from inside an init block. It is an
+error to run this function once the game has started. As the <code class="docutils literal notranslate"><span class="pre">image</span></code>
+statement runs with init priority 500, this should generally be called
+with init priority 501 or higher.</p>
 </dd></dl>
 
 <dl class="py function">

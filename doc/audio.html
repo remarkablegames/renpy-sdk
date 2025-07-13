@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -65,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Audio</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#audio-directory-and-namespace">Audio Directory and Namespace</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#play-statement">Play Statement</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#stop-statement">Stop Statement</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#queue-statement">Queue Statement</a></li>
@@ -72,7 +73,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#sync-start-position">Sync Start Position</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#volume">Volume</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#playing-silence">Playing Silence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#audio-namespace-and-directory">Audio Namespace and Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#actions">Actions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#AudioData"><code class="docutils literal notranslate"><span class="pre">AudioData</span></code></a></li>
@@ -281,12 +281,57 @@ variables, <a class="reference internal" href="config.html#var-config.main_menu_
 for the given music files to be played as the main and game menu music,
 respectively.</p>
 <p>In-game, the usual way to play music and sound in Ren'Py is using
-the three music/sound statements.</p>
+the three music/sound statements. Audio files can either be provided directly
+as strings, or as defined names within the audio namespace.</p>
+<section id="audio-directory-and-namespace">
+<span id="audio-namespace"></span><h2>Audio Directory and Namespace<a class="headerlink" href="#audio-directory-and-namespace" title="Link to this heading"></a></h2>
+<p>When Ren'Py searches for an audio file used by audio statements or functions, it
+will start inside the <code class="docutils literal notranslate"><span class="pre">game</span></code> directory. If the provided file is not found there,
+it will also look in the <code class="docutils literal notranslate"><span class="pre">game/audio</span></code> directory. For example:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">play</span> <span class="k">music</span> <span class="s2">&quot;opening.ogg&quot;</span>
+</pre></div>
+</div>
+<p>will first look for <code class="file docutils literal notranslate"><span class="pre">game/opening.ogg</span></code>. If not found, Ren'Py will look for
+<code class="file docutils literal notranslate"><span class="pre">game/audio/opening.ogg</span></code>. This is consistent with audio files in further
+subdirectories. The following statement:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">play</span> <span class="k">music</span> <span class="s2">&quot;my_music/opening.ogg&quot;</span>
+</pre></div>
+</div>
+<p>will first look for <code class="file docutils literal notranslate"><span class="pre">game/my_music/opening.ogg</span></code>, before looking for
+<code class="file docutils literal notranslate"><span class="pre">game/audio/my_music/opening.ogg</span></code> if the former is not found.</p>
+<p>Files found in the <code class="docutils literal notranslate"><span class="pre">game/audio</span></code> directory, <strong>as well as its subdirectories</strong>, that end with
+a supported extension (currently, .wav, .mp2, .mp3, .ogg, and .opus) are also automatically
+placed by Ren'Py into the audio namespace. This means that <code class="file docutils literal notranslate"><span class="pre">game/audio/Town_theme.ogg</span></code>
+can be played with:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">play</span> <span class="k">music</span> <span class="n">town_theme</span>
+</pre></div>
+</div>
+<p>The usable name is determined by stripping the extension and forcing the rest of
+the filename to lower case. This is only the case for audio files with names that
+can be expressed as Python variables, for example: <code class="file docutils literal notranslate"><span class="pre">my</span> <span class="pre">song.mp3</span></code>, <code class="file docutils literal notranslate"><span class="pre">8track.opus</span></code>,
+or <code class="file docutils literal notranslate"><span class="pre">this-is-a-song.ogg</span></code> will not work. Additionally, if two or more files would
+end up defined under the same name, only the first file (determined alphabetically by its path
+and filename, extension included) will be defined.</p>
+<p>When a file isn't placed automatically into the audio namespace, either due to
+an incompatible name or being inside a different directory, it can still be placed
+there manually with the define statement.</p>
+<p>For example, one can write:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">define</span> <span class="n">audio</span><span class="o">.</span><span class="n">sunflower</span> <span class="o">=</span> <span class="s2">&quot;my_music/sun-flower-slow-jam.ogg&quot;</span>
+</pre></div>
+</div>
+<p>and then use:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">play</span> <span class="k">music</span> <span class="n">sunflower</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">play</span></code> and <code class="docutils literal notranslate"><span class="pre">queue</span></code> statements always evaluate their arguments in the
+audio namespace. Functions do not, meaning they will not work with <code class="docutils literal notranslate"><span class="pre">sunflower</span></code>,
+but will work with <code class="docutils literal notranslate"><span class="pre">audio.sunflower</span></code> instead.</p>
+</section>
 <section id="play-statement">
 <span id="id2"></span><h2>Play Statement<a class="headerlink" href="#play-statement" title="Link to this heading"></a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">play</span></code> statement is used to play sound and music. If a file is
-currently playing on a normal channel, it is interrupted and replaced with
-the new file.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">play</span></code> statement is the most common way used to play sound and music.
+If a file is currently playing on a normal channel, it is interrupted and
+replaced with the new file.</p>
 <p>The name of a channel is expected following the keyword <code class="docutils literal notranslate"><span class="pre">play</span></code>.
 (Usually, this is either &quot;sound&quot;, &quot;music&quot;, &quot;voice&quot;, or &quot;audio&quot;). This is
 followed by audiofile(s), where audiofile(s) can be one file or list of files.
@@ -320,8 +365,8 @@ on the channel, the play instruction doesn't interrupt it.</p>
     <span class="k">jump</span> <span class="n">market_main</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">volume</span></code> clause is also optional, and specifies a relative volume for
-the track, between 0.0 and 1.0. This makes it possible to adjust the volume a
+<p>The <code class="docutils literal notranslate"><span class="pre">volume</span></code> clause is also optional, and specifies a relative amplitude for
+the track, between 0.0 and 1.0. This makes it possible to adjust the amplitude a
 track is played at, each time it's played.</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">play</span> <span class="k">sound</span> <span class="s2">&quot;woof.mp3&quot;</span> <span class="n">volume</span> <span class="mf">0.5</span>
 </pre></div>
@@ -397,7 +442,7 @@ advanced (rarely used) features.</p>
 </section>
 <section id="partial-playback">
 <span id="id3"></span><h2>Partial Playback<a class="headerlink" href="#partial-playback" title="Link to this heading"></a></h2>
-<p>Ren'Py supports partial of audio files. This is done by putting a playback
+<p>Ren'Py supports partial playback of audio files. This is done by putting a playback
 specification, enclosed in angle brackets, at the start of the file.
 The partial playback specification should consist of alternating
 property name and value pairs, with every thing separated by spaces.</p>
@@ -449,13 +494,16 @@ of variables:</p>
 <li><p>the &quot;main&quot; mixer's volume</p></li>
 <li><p>the volume of the mixer which the channel relates to</p></li>
 <li><p>the volume of the channel</p></li>
-<li><p>the relative volume of the track itself</p></li>
+<li><p>the relative amplitude of the track itself</p></li>
+<li><p>the relative amplitude associated with the filename</p></li>
 </ul>
 <p>These four volumes are values between 0 and 1, and their multiplication results
 in the volume the track will be played at.</p>
 <p>For example, if the main volume is 80% (or 0.8), the mixer's volume is 100%,
 the channel volume is 50% (0.5) and the track's relative volume is 25% (0.25),
-the resulting volume is .8*1.*.5*.25 = .1, so 10%.</p>
+and the filename's relative volume is 50% (0.5), the resulting volume is .8*1.*.5*.25*.5 = .0.5 so 5%.</p>
+<p>Note that while all of these volumes are amplitudes, the mixers are presented as
+decibels in the preferences menu.</p>
 <p>The mixers' volumes can be set using <a class="reference internal" href="preferences.html#preferences.set_mixer" title="preferences.set_mixer"><code class="xref py py-func docutils literal notranslate"><span class="pre">preferences.set_mixer()</span></code></a>, using the
 <a class="reference internal" href="screen_actions.html#SetMixer" title="SetMixer"><code class="xref py py-func docutils literal notranslate"><span class="pre">SetMixer()</span></code></a> action, or using the <a class="reference internal" href="screen_actions.html#Preference" title="Preference"><code class="xref py py-func docutils literal notranslate"><span class="pre">Preference()</span></code></a> action with the
 <code class="docutils literal notranslate"><span class="pre">&quot;mixer</span> <span class="pre">&lt;mixer&gt;</span> <span class="pre">volume&quot;</span></code> key.
@@ -467,15 +515,16 @@ useful when several channels use the same mixer. The <code class="docutils liter
 <a class="reference internal" href="#renpy.music.register_channel" title="renpy.music.register_channel"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.music.register_channel()</span></code></a> function sets to which mixer the registered
 channel relates, creating it in the process if it doesn't already exist.</p>
 <p>A track's relative volume is set with the <code class="docutils literal notranslate"><span class="pre">volume</span></code> clause of the <a class="reference internal" href="#play-statement"><span class="std std-ref">Play Statement</span></a>.</p>
+<p>A filename's relative volume is set with a volume clause in angle brackets,
+such as &quot;&lt;volume 0.5&gt;track.opus&quot;.</p>
 <p>In addition to these volume values, there is the mute flag of the mixer which
 the channel relates to. If enabled, it will reduce the played volume to 0.
 They can be set using the <a class="reference internal" href="screen_actions.html#SetMute" title="SetMute"><code class="xref py py-func docutils literal notranslate"><span class="pre">SetMute()</span></code></a> or <a class="reference internal" href="screen_actions.html#ToggleMute" title="ToggleMute"><code class="xref py py-func docutils literal notranslate"><span class="pre">ToggleMute()</span></code></a> actions, or
 using the <a class="reference internal" href="screen_actions.html#Preference" title="Preference"><code class="xref py py-func docutils literal notranslate"><span class="pre">Preference()</span></code></a> action with the &quot;mixer &lt;mixer&gt; mute&quot; key, or using
 the <a class="reference internal" href="preferences.html#preferences.set_mute" title="preferences.set_mute"><code class="xref py py-func docutils literal notranslate"><span class="pre">preferences.set_mute()</span></code></a> function.</p>
-<p>7.. _silence:</p>
 </section>
 <section id="playing-silence">
-<h2>Playing Silence<a class="headerlink" href="#playing-silence" title="Link to this heading"></a></h2>
+<span id="silence"></span><h2>Playing Silence<a class="headerlink" href="#playing-silence" title="Link to this heading"></a></h2>
 <p>A specified duration of silence can played using a filename like
 &quot;&lt;silence 3.0&gt;&quot;, where 3.0 is the number of seconds of silence that is
 desired. This can be used to delay the start of a sound file. For example:</p>
@@ -483,41 +532,6 @@ desired. This can be used to delay the start of a sound file. For example:</p>
 </pre></div>
 </div>
 <p>Will play silence for half a second, and then an explosion sound.</p>
-</section>
-<section id="audio-namespace-and-directory">
-<span id="audio-namespace"></span><h2>Audio Namespace and Directory<a class="headerlink" href="#audio-namespace-and-directory" title="Link to this heading"></a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">play</span></code> and <code class="docutils literal notranslate"><span class="pre">queue</span></code> statements evaluate their arguments in the
-audio namespace. This means it is possible to use the define statement
-to provide an alias for an audio file.</p>
-<p>For example, one can write:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">define</span> <span class="n">audio</span><span class="o">.</span><span class="n">sunflower</span> <span class="o">=</span> <span class="s2">&quot;music/sun-flower-slow-jam.ogg&quot;</span>
-</pre></div>
-</div>
-<p>and then use:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">play</span> <span class="k">music</span> <span class="n">sunflower</span>
-</pre></div>
-</div>
-<p>Ren'Py will also automatically place sound files in the audio namespace,
-if found in the <code class="docutils literal notranslate"><span class="pre">game/audio</span></code> directory. Files in this directory with a
-supported extension (currently, .wav, .mp2, .mp3, .ogg, and .opus) have the
-extension stripped, the rest of the filename forced to lower case, and are
-placed into the audio namespace.</p>
-<p>Note that just because a file is placed into the audio namespace, that doesn't
-mean it can be used. So while you could play a file named <code class="file docutils literal notranslate"><span class="pre">opening_song.ogg</span></code>
-by writing:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">play</span> <span class="k">music</span> <span class="n">opening_song</span>
-</pre></div>
-</div>
-<p>some filenames can't be accessed this way, as their names are not expressable
-as Python variables. For example, <code class="file docutils literal notranslate"><span class="pre">my</span> <span class="pre">song.mp3</span></code>, <code class="file docutils literal notranslate"><span class="pre">8track.opus</span></code>, and
-<code class="file docutils literal notranslate"><span class="pre">this-is-a-song.ogg</span></code> won't work.</p>
-<p>When searching for an audio file, if the file is not found, Ren'Py will look
-in the audio directory. For example:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">play</span> <span class="k">music</span> <span class="s2">&quot;opening.ogg&quot;</span>
-</pre></div>
-</div>
-<p>will first look for <code class="file docutils literal notranslate"><span class="pre">game/opening.ogg</span></code>. If not found, Ren'Py will look for
-<code class="file docutils literal notranslate"><span class="pre">game/audio/opening.ogg</span></code>.</p>
 </section>
 <section id="actions">
 <h2>Actions<a class="headerlink" href="#actions" title="Link to this heading"></a></h2>
@@ -750,7 +764,8 @@ the &quot;music&quot;, &quot;sfx&quot;, and &quot;voice&quot; mixers. Using othe
 and will create the mixer if it doesn't already exist, but making new
 mixers reachable by the player requires changing the preferences screens.</p>
 </dd>
-<dt><cite>loop</cite></dt><dd><p>If true, sounds on this channel loop by default.</p>
+<dt><cite>loop</cite></dt><dd><p>If True or None, sounds on this channel loop by default. If False, sounds on
+this channel do not loop by default.</p>
 </dd>
 <dt><cite>stop_on_mute</cite></dt><dd><p>If true, music on the channel is stopped when the channel is muted.</p>
 </dd>
@@ -773,9 +788,9 @@ be True for audio, and False for movie playback.</p>
 be dropped to keep up with realtime and the soundtrack. If false,
 Ren'Py will display frames late rather than dropping them.</p>
 </dd>
-<dt><cite>synchro_start</cite></dt><dd><p>Does this channel particpate in synchro start? Synchro start determines if
+<dt><cite>synchro_start</cite></dt><dd><p>Does this channel participate in synchro start? Synchro start determines if
 the channel will start playing at the same time as other channels. If None,
-this defaults to <cite>loop</cite>.</p>
+this defaults to <cite>loop</cite> if <cite>movie</cite> is False, and False otherwise.</p>
 </dd>
 </dl>
 </dd></dl>

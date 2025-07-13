@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f79c3bd2"></script>
+        <script src="_static/documentation_options.js?v=ea47c46f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.2 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -119,6 +119,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#Transform.function"><code class="docutils literal notranslate"><span class="pre">Transform.function()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Transform.hide_request"><code class="docutils literal notranslate"><span class="pre">Transform.hide_request</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Transform.hide_response"><code class="docutils literal notranslate"><span class="pre">Transform.hide_response</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Transform.original_child"><code class="docutils literal notranslate"><span class="pre">Transform.original_child</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Transform.set_child"><code class="docutils literal notranslate"><span class="pre">Transform.set_child()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Transform.update"><code class="docutils literal notranslate"><span class="pre">Transform.update()</span></code></a></li>
 </ul>
@@ -377,8 +378,8 @@ bottom of the screen.</p>
 <dl class="std var">
 <dt class="sig sig-object std" id="var-reset">
 <span class="sig-name descname"><span class="pre">reset</span></span><a class="headerlink" href="#var-reset" title="Link to this definition"></a></dt>
-<dd><p>Resets the transform. Places the displayable in the top-left corner of the
-screen, and also eliminates any zoom, rotation, or other effects.</p>
+<dd><p>Resets the transform to the default values of each property, removing any
+properites set before it.</p>
 </dd></dl>
 
 <dl class="std var">
@@ -1070,10 +1071,6 @@ when exiting the game menu.</p>
 <dt><code class="docutils literal notranslate"><span class="pre">replaced</span></code></dt><dd><p>Triggered when the transform is replaced by another. The image will not
 actually hide until the ATL block finishes.</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">update</span></code></dt><dd><p>Triggered when a screen is updated without being shown or replacing another
-screen. This happens in rare but possible cases, such as when the game is
-loaded and when styles or translations change.</p>
-</dd>
 <dt><code class="docutils literal notranslate"><span class="pre">hover</span></code>, <code class="docutils literal notranslate"><span class="pre">idle</span></code>, <code class="docutils literal notranslate"><span class="pre">selected_hover</span></code>, <code class="docutils literal notranslate"><span class="pre">selected_idle</span></code>, <code class="docutils literal notranslate"><span class="pre">insensitive</span></code>, <code class="docutils literal notranslate"><span class="pre">selected_insensitive</span></code></dt><dd><p>Triggered when a button containing this transform, or a button contained by
 this transform, enters the named state.</p>
 </dd>
@@ -1368,13 +1365,17 @@ applied to a displayable (but keep the position), you can use:</p>
 <p>One equivalent to to the simplest ATL transforms is the Transform class.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="Transform">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">child</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Transform" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">child</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Transform" title="Link to this definition"></a></dt>
 <dd><p>Creates a transform which applies operations such as cropping, rotation,
 scaling or alpha-blending to its child. A transform object has fields
 corresponding to the <a class="reference internal" href="transform_properties.html"><span class="doc">transform properties</span></a>,
 which it applies to its child.</p>
 <dl class="simple">
 <dt><cite>child</cite></dt><dd><p>The child the transform applies to.</p>
+</dd>
+<dt><cite>reset</cite></dt><dd><p>If True, the transform will reset properties to their default values
+when it is shown, rather than inheriting those properties from the
+transforms it replaces.</p>
 </dd>
 </dl>
 <dl class="py function">
@@ -1414,6 +1415,13 @@ that the transform is being hidden.</p>
 <span class="sig-name descname"><span class="pre">hide_response</span></span><a class="headerlink" href="#Transform.hide_response" title="Link to this definition"></a></dt>
 <dd><p>If <code class="docutils literal notranslate"><span class="pre">hide_request</span></code> is true, this can be set to false to prevent the
 transform from being hidden.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Transform.original_child">
+<span class="sig-name descname"><span class="pre">original_child</span></span><a class="headerlink" href="#Transform.original_child" title="Link to this definition"></a></dt>
+<dd><p>This is the child Displayable that was set when the transform was created,
+before any calls to set_child. This may be None if no child was during creation.</p>
 </dd></dl>
 
 <dl class="py method">
