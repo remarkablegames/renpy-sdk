@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=ea47c46f"></script>
+        <script src="_static/documentation_options.js?v=9b928e36"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.5.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -804,8 +804,7 @@ to 1 disables this.</p>
 <span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_renderer_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">renpy.display.core.RendererInfo</span></span></span><a class="headerlink" href="#renpy.get_renderer_info" title="Link to this definition"></a></dt>
 <dd><p>Returns a dictionary, giving information about the renderer Ren'Py is
 currently using. Defined keys are:</p>
-<blockquote>
-<div><dl class="simple">
+<dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">&quot;renderer&quot;</span></code></dt><dd><p>A string giving the name of the renderer that is in use.</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">&quot;resizable&quot;</span></code></dt><dd><p>True if and only if the window is resizable.</p>
@@ -815,16 +814,13 @@ currently using. Defined keys are:</p>
 <dt><code class="docutils literal notranslate"><span class="pre">&quot;model&quot;</span></code></dt><dd><p>Present and true if model-based rendering is supported.</p>
 </dd>
 </dl>
-</div></blockquote>
+<p>When using the GL2 renderer, the following keys are also defined:</p>
 <dl class="simple">
-<dt>When using the GL2 renderer, the following keys are also defined:</dt><dd><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">&quot;gpu_vendor&quot;</span></code></dt><dd><p>A string giving the GPU vendor.</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">&quot;gpu_name&quot;</span></code></dt><dd><p>A string giving the GPU name.</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">&quot;gpu_driver_version&quot;</span></code></dt><dd><p>A string giving the driver version.</p>
-</dd>
-</dl>
 </dd>
 </dl>
 <p>Other, renderer-specific, keys may also exist.</p>

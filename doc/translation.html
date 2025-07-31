@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=ea47c46f"></script>
+        <script src="_static/documentation_options.js?v=9b928e36"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.5.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -684,9 +684,16 @@ preferences screen:</p>
 <p>There are two translation-related functions:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.change_language">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">change_language</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.change_language" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">change_language</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rebuild</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.change_language" title="Link to this definition"></a></dt>
 <dd><p>Changes the current language to <cite>language</cite>, which can be a string or
 None to use the default language.</p>
+<dl class="simple">
+<dt><cite>force</cite></dt><dd><p>If true, ensure the Python code is re-executed even if the language
+hasn't changed.</p>
+</dd>
+<dt><cite>rebuild</cite></dt><dd><p>This forces the styles to be rebuilt even if the language hasn't changed.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -820,7 +827,7 @@ doesn't add a blank one.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="renpy.translate_string">
-<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">translate_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language=&lt;renpy.object.Sentinel</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x725d1cdc2000&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.translate_string" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">translate_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language=&lt;renpy.object.Sentinel</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7af6d55b6b10&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.translate_string" title="Link to this definition"></a></dt>
 <dd><p>Returns <cite>s</cite> immediately translated into <cite>language</cite>. If <cite>language</cite>
 is Default, uses the language set in the preferences.
 Strings enclosed in this function will <strong>not</strong> be added

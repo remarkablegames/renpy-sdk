@@ -1,7 +1,7 @@
 {
   "sdk": {
-    "version": "5610e804fb576477bf14500d8789398ec6158516fc9146ba71b9d6b73db81c44",
-    "base_name": "renpy-8.4.0",
+    "version": "07553e70b6e68c83b79e9b41fe6d039f5f906b18cf0af93907887130e2effcd9",
+    "base_name": "renpy-8.4.1",
     "files": [
       "LICENSE.txt",
       "doc/3dstage.html",
@@ -1717,6 +1717,7 @@
       "renpy/__pycache__/error.cpython-312.pyc",
       "renpy/__pycache__/execution.cpython-312.pyc",
       "renpy/__pycache__/game.cpython-312.pyc",
+      "renpy/__pycache__/importer.cpython-312.pyc",
       "renpy/__pycache__/lexer.cpython-312.pyc",
       "renpy/__pycache__/lint.cpython-312.pyc",
       "renpy/__pycache__/loader.cpython-312.pyc",
@@ -2277,6 +2278,7 @@
       "renpy/gl2/live2d.py",
       "renpy/gl2/live2dcsm.pxi",
       "renpy/gl2/live2dmotion.py",
+      "renpy/importer.py",
       "renpy/lexer.py",
       "renpy/lint.py",
       "renpy/loader.py",
@@ -3411,8 +3413,8 @@
       "web/web-presplash.jpg"
     ],
     "xbit": [],
-    "version": "a9f40337ad882593ab5823a38e5442cca0a59388028f5affc162776a284c1b8a",
-    "renpy_version": "8.4.0.25071206",
-    "pretty_version": "Ren'Py 8.4.0.25071206"
+    "version": "510fffa3fae785aac2ec6fe2bea3453b1b5ca9bb7eb6398f5ecbb3f4a6df6512",
+    "renpy_version": "8.4.1.25072401",
+    "pretty_version": "Ren'Py 8.4.1.25072401"
   }
 }

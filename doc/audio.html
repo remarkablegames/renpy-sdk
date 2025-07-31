@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=ea47c46f"></script>
+        <script src="_static/documentation_options.js?v=9b928e36"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.5.0 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -258,12 +258,11 @@ using the following audio file formats:</p>
 enable a mode that is faster and less prone to skipping if the web
 browser supports all modes on the list. If your game is using only
 mp3s, and skips on Safari, then consider changing <a class="reference internal" href="config.html#var-config.webaudio_required_types"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.webaudio_required_types</span></code></a>.</p>
-<p>Ren'Py supports an arbitrary number of audio channels. There are three
+<p>Ren'Py supports an arbitrary number of audio channels. There are two
 normal channels defined by default:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">music</span></code> - A channel for music playback.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sound</span></code> - A channel for sound effects.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">voice</span></code> - A channel for voice.</p></li>
 </ul>
 <p>Normal channels support playing and queueing audio, but only play back
 one audio file at a time. New normal channels can be registered with
@@ -271,9 +270,16 @@ one audio file at a time. New normal channels can be registered with
 <p>The Music Volume, Sound Volume, and Voice Volume settings
 of the in-game preferences menu are used to set individual
 volumes for these channels. See <a class="reference internal" href="#volume"><span class="std std-ref">Volume</span></a> for more information.</p>
-<p>In addition to the normal channel, there is one special channel, <code class="docutils literal notranslate"><span class="pre">audio</span></code>.
-The audio channel supports playing back multiple audio files at one time,
-but does not support queueing sound or stopping playback.</p>
+<p>In addition to the normal channels, there are two special channels:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">audio</span></code> - The audio channel supports playing back multiple audio files at one time,</dt><dd><p>but does not support queueing sound or stopping playback.</p>
+</dd>
+</dl>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">voice</span></code> - The voice chanel is used by Ren'Py's voice system. Ren'Py will automaticall
+play and stop voice files as characters speak, and may adjust the volume of the voice channel.</p></li>
+</ul>
 <p>Sounds can also be set to play when buttons, menu choices, or
 imagemaps enter their hovered or activated states. See
 <a class="reference internal" href="style_properties.html#button-style-properties"><span class="std std-ref">Button Style Properties</span></a>. Two configuration
