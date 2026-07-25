@@ -1,0 +1,1545 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Command Line Interface &mdash; Ren&#39;Py Documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=a5c4661c" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6eda34c5" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="canonical" href="https://www.renpy.org/doc/html/cli.html" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=091c4f53"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/tabs.js?v=3030b3cb"></script>
+      <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Text Editor Integration" href="editor.html" />
+    <link rel="prev" title="Template Projects" href="template_projects.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+<a href="https://www.renpy.org/" style="margin-bottom: 0">Ren'Py Visual Novel Engine
+<img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
+</a>
+
+<a href="index.html" style="margin-bottom: 0px">8.5.3 Documentation</a>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gui.html">GUI Customization Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">The Ren'Py Language</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="language_basics.html">Language Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="label.html">Labels &amp; Control Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dialogue.html">Dialogue and Narration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="displaying_images.html">Displaying Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="menus.html">In-Game Menus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Text, Displayables, Transforms, and Transitions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="text.html">Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="live2d.html">Live2D Cubism</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Customizing Ren'Py</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="style.html">Styles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style_properties.html">Style Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screens.html">Screens and Screen Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screen_actions.html">Screen Actions, Values, and Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screen_special.html">Special Screen Names</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screen_optimization.html">Screen Language Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="launcher.html">Launcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer_tools.html">Developer Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="director.html">Interactive Director</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testcases.html">Automated Testing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Other Functionality</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nvl_mode.html">NVL-Mode Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bubble.html">Speech Bubbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Text Input</a></li>
+<li class="toctree-l1"><a class="reference internal" href="side_image.html">Side Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rooms.html">Image Gallery, Music Room, and Replay Actions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drag_drop.html">Drag and Drop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sprites.html">Sprites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keymap.html">Customizing the Keymap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="achievement.html">Achievements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Dialogue History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multiple.html">Multiple Character Dialogue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="splashscreen_presplash.html">Splashscreen and Presplash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lifecycle.html">Lifecycle of a Running Ren'Py Game</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python and Ren'Py</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
+<li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
+<li class="toctree-l1"><a class="reference internal" href="character_callbacks.html">Character Callbacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file_python.html">File Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="color_class.html">Color Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matrix.html">Matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model.html">Model-Based Rendering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="build.html">Building Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="android.html">Android</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios.html">iOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web.html">Web / HTML5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chromeos.html">Chrome OS/Chromebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raspi.html">Raspberry Pi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iap.html">In-App Purchasing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updater.html">HTTPS/HTTP Updater</a></li>
+<li class="toctree-l1"><a class="reference internal" href="downloader.html">Downloader for Large Games on Mobile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gesture.html">Gestures</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">End-User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="security.html">Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="problems.html">Dealing with Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environment_variables.html">Environment Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="self_voicing.html">Self-Voicing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Library and Tool Developer Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="template_projects.html">Template Projects</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Command Line Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#quick-tasks">Quick Tasks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#run-project">Run project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-distributions">Build distributions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#generate-update-translations">Generate/update translations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#syntax">Syntax</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#global-options">Global options</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#core-workflow-commands">Core Workflow Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cli-run">Run Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quit">Quit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compile">Compile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interactive-director">Interactive Director</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#remove-persistent-data">Remove Persistent Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#update-project">Update Project</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#validation-and-testing">Validation and Testing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#check-script-lint">Check Script (Lint)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run-testcases">Run Testcases</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#build-and-distribution">Build and Distribution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#add-from-to-calls">Add From To Calls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#distribute">Distribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#android-build">Android Build</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ios-create">iOS Create</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ios-populate">iOS Populate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#web-build">Web Build</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#translation-and-localization">Translation and Localization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#translate">Translate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dialogue">Dialogue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extract-strings">Extract Strings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#merge-strings">Merge Strings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#launcher-commands">Launcher Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#generate-gui">Generate GUI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gui-images">GUI Images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get-projects-directory">Get Projects Directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-projects-directory">Set Projects Directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-project">Set Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#update-old-game">Update Old Game</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#custom-commands">Custom Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.arguments.register_command"><code class="docutils literal notranslate"><span class="pre">renpy.arguments.register_command()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Engine Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="editor.html">Text Editor Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="skins.html">Skins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translating_renpy.html">Translating Ren'Py</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Changes, License, and Credits</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog (Ren'Py 7.x-)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog6.html">Changelog (Ren'Py 6.11 - 6.99)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incompatible.html">Incompatible Changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sponsors.html">Ren'Py Development Sponsors</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Ren'Py Visual Novel Engine</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Command Line Interface</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/cli.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="command-line-interface">
+<h1>Command Line Interface<a class="headerlink" href="#command-line-interface" title="Link to this heading"></a></h1>
+<p>Ren'Py includes a command line interface (CLI) that can be used to automate
+some development tasks, allowing for continuous integration and for scripting
+releases. For most purposes, this isn't necessary - all these tasks can be
+done through the Ren'Py launcher.</p>
+<p>The examples on this page assume you're running the CLI from the Ren'Py SDK
+directory (the directory that contains renpy.py, renpy.sh, and renpy.exe).
+Examples are provided for Linux/macOS, and Windows.</p>
+<p>The CLI isn't a stable interface - it may change between Ren'Py releases,
+as required. This page is current as of Ren'Py 8.5.3.</p>
+<section id="quick-tasks">
+<h2>Quick Tasks<a class="headerlink" href="#quick-tasks" title="Link to this heading"></a></h2>
+<p>Use these quick workflows as copy-paste starting points. Replace paths/language codes as needed.</p>
+<section id="run-project">
+<h3>Run project<a class="headerlink" href="#run-project" title="Link to this heading"></a></h3>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/path/to/renpy
+./renpy.sh<span class="w"> </span>/path/to/project<span class="w"> </span>run
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="k">cd</span> C:\path\to\renpy
+.\lib\py3-windows-x86_64\python.exe renpy.py C:\path\to\project run
+</pre></div>
+</div>
+</div></div>
+</section>
+<section id="build-distributions">
+<h3>Build distributions<a class="headerlink" href="#build-distributions" title="Link to this heading"></a></h3>
+<p>Build desktop distributions (Windows/macOS/Linux) from the launcher tool.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-1-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-1-1-0" name="1-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-1-1-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-1" name="1-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-1-1-0" class="sphinx-tabs-panel" id="panel-1-1-0" name="1-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/path/to/renpy
+./renpy.sh<span class="w"> </span>launcher<span class="w"> </span>distribute<span class="w"> </span>/path/to/project<span class="w"> </span>--destination<span class="w"> </span>/path/to/output
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-1-1-1" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-1" name="1-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="k">cd</span> C:\path\to\renpy
+.\lib\py3-windows-x86_64\python.exe renpy.py launcher distribute C:\path\to\project --destination C:\path\to\output
+</pre></div>
+</div>
+</div></div>
+</section>
+<section id="generate-update-translations">
+<h3>Generate/update translations<a class="headerlink" href="#generate-update-translations" title="Link to this heading"></a></h3>
+<p>Generate or update translation files, then export dialogue/strings for translators.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-2-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-2-2-0" name="2-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-2-2-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-2-2-1" name="2-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-2-2-0" class="sphinx-tabs-panel" id="panel-2-2-0" name="2-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/path/to/renpy
+./renpy.sh<span class="w"> </span>/path/to/project<span class="w"> </span>translate<span class="w"> </span>french
+./renpy.sh<span class="w"> </span>/path/to/project<span class="w"> </span>dialogue<span class="w"> </span>french<span class="w"> </span>--strings
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-2-2-1" class="sphinx-tabs-panel" hidden="true" id="panel-2-2-1" name="2-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="k">cd</span> C:\path\to\renpy
+.\lib\py3-windows-x86_64\python.exe renpy.py C:\path\to\project translate french
+.\lib\py3-windows-x86_64\python.exe renpy.py C:\path\to\project dialogue french --strings
+</pre></div>
+</div>
+</div></div>
+</section>
+</section>
+<section id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Notation used on this page:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;name&gt;</span></code> is a value you replace, such as a project path or language code.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[item]</span></code> is optional and does not need to be included.</p></li>
+</ul>
+</div>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-3-3-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-3-3-0" name="3-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-3-3-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-3-3-1" name="3-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-3-3-0" class="sphinx-tabs-panel" id="panel-3-3-0" name="3-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span><span class="o">[</span>global<span class="w"> </span>options...<span class="o">]</span><span class="w"> </span><span class="o">[</span>&lt;basedir&gt;<span class="o">]</span><span class="w"> </span><span class="o">[</span>&lt;command&gt;<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="nb">command</span><span class="w"> </span>options...<span class="o">]</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-3-3-1" class="sphinx-tabs-panel" hidden="true" id="panel-3-3-1" name="3-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\lib\py3-windows-x86_64\python.exe renpy.py [global options...] [<span class="p">&lt;</span>basedir<span class="p">&gt;</span>] [command] [command options...]
+</pre></div>
+</div>
+</div></div>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">&lt;basedir&gt;</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The directory containing the Ren'Py executable (the launcher)</p>
+</dd>
+</dl>
+<p>In the description of the commands below, &lt;basedir&gt; is the path to the
+base directory of the project.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">&lt;command&gt;</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">run</span></code></p>
+</dd>
+</dl>
+<p>Specifies the command to execute.</p>
+</dd></dl>
+
+<section id="global-options">
+<h3>Global options<a class="headerlink" href="#global-options" title="Link to this heading"></a></h3>
+<p>The following flags may be used with any command:</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-savedir">
+<span class="sig-name descname"><span class="pre">--savedir</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;directory&gt;</span></span><a class="headerlink" href="#cmdoption-savedir" title="Link to this definition"></a></dt>
+<dd><p>Specifies the directory where saves and persistent data are placed.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-trace">
+<span class="sig-name descname"><span class="pre">--trace</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;level&gt;</span></span><a class="headerlink" href="#cmdoption-trace" title="Link to this definition"></a></dt>
+<dd><p>Specifies the level of trace Ren'Py will log to trace.txt. (1=per-call, 2=per-line)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-version">
+<span class="sig-name descname"><span class="pre">--version</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-version" title="Link to this definition"></a></dt>
+<dd><p>Displays the version of Ren'Py in use.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-compile">
+<span class="sig-name descname"><span class="pre">--compile</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-compile" title="Link to this definition"></a></dt>
+<dd><p>Forces all .rpy scripts to be recompiled before proceeding.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-compile-python">
+<span class="sig-name descname"><span class="pre">--compile-python</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-compile-python" title="Link to this definition"></a></dt>
+<dd><p>Forces all Python files to be recompiled, rather than read from
+<code class="file docutils literal notranslate"><span class="pre">game/cache/bytecode-*.rpyb</span></code>.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-keep-orphan-rpyc">
+<span class="sig-name descname"><span class="pre">--keep-orphan-rpyc</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-keep-orphan-rpyc" title="Link to this definition"></a></dt>
+<dd><p>If compiling, prevents Ren'Py from deleting <code class="file docutils literal notranslate"><span class="pre">.rpyc</span></code> files that are not associated with
+a <code class="file docutils literal notranslate"><span class="pre">.rpy</span></code> or <code class="file docutils literal notranslate"><span class="pre">_ren.py</span></code> file of the same name.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-errors-in-editor">
+<span class="sig-name descname"><span class="pre">--errors-in-editor</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-errors-in-editor" title="Link to this definition"></a></dt>
+<dd><p>Causes errors to open in a text editor.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-safe-mode">
+<span class="sig-name descname"><span class="pre">--safe-mode</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-safe-mode" title="Link to this definition"></a></dt>
+<dd><p>Forces Ren'Py to start in safe mode, allowing the player to configure graphics.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-help">
+<span id="cmdoption-h"></span><span class="sig-name descname"><span class="pre">--help</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">-h</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-help" title="Link to this definition"></a></dt>
+<dd><p>Displays a help message showing commands and syntax, then exits. This returns
+the most up-to-date command information.</p>
+</dd></dl>
+
+<p>Ren'Py can dump information about the game to a JSON file.
+These options let you select the file, and choose what is dumped.</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-json-dump">
+<span class="sig-name descname"><span class="pre">--json-dump</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;file&gt;</span></span><a class="headerlink" href="#cmdoption-json-dump" title="Link to this definition"></a></dt>
+<dd><p>Specifies the name of the JSON file.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-json-dump-private">
+<span class="sig-name descname"><span class="pre">--json-dump-private</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-json-dump-private" title="Link to this definition"></a></dt>
+<dd><p>Includes private names in the dump. (Names beginning with an underscore <cite>_</cite>)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-json-dump-common">
+<span class="sig-name descname"><span class="pre">--json-dump-common</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-json-dump-common" title="Link to this definition"></a></dt>
+<dd><p>Includes names defined in the common directory in the dump.</p>
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The CLI may change between different releases. To see the latest commands
+and flags, run:</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-4-4-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-4-4-0" name="4-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-4-4-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-4-4-1" name="4-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-4-4-0" class="sphinx-tabs-panel" id="panel-4-4-0" name="4-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span>--help
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-4-4-1" class="sphinx-tabs-panel" hidden="true" id="panel-4-4-1" name="4-1" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>.<span class="se">\l</span>ib<span class="se">\p</span>y3-windows-x86_64<span class="se">\p</span>ython.exe<span class="w"> </span>renpy.py<span class="w"> </span>--help
+</pre></div>
+</div>
+</div></div>
+<p>To see the latest options for a particular command, run:</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-5-5-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-5-5-0" name="5-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-5-5-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-5-5-1" name="5-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-5-5-0" class="sphinx-tabs-panel" id="panel-5-5-0" name="5-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span>&lt;basedir&gt;<span class="w"> </span>&lt;command&gt;<span class="w"> </span>--help
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-5-5-1" class="sphinx-tabs-panel" hidden="true" id="panel-5-5-1" name="5-1" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>.<span class="se">\l</span>ib<span class="se">\p</span>y3-windows-x86_64<span class="se">\p</span>ython.exe<span class="w"> </span>renpy.py<span class="w"> </span>&lt;basedir&gt;<span class="w"> </span>&lt;command&gt;<span class="w"> </span>--help
+</pre></div>
+</div>
+</div></div>
+</div>
+</section>
+</section>
+<section id="core-workflow-commands">
+<h2>Core Workflow Commands<a class="headerlink" href="#core-workflow-commands" title="Link to this heading"></a></h2>
+<section id="cli-run">
+<span id="id1"></span><h3>Run Project<a class="headerlink" href="#cli-run" title="Link to this heading"></a></h3>
+<p>Runs the current project normally. This is the default command that is run if no command is given.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-6-6-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-6-6-0" name="6-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-6-6-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-6-6-1" name="6-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-6-6-0" class="sphinx-tabs-panel" id="panel-6-6-0" name="6-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span>&lt;basedir&gt;<span class="w"> </span>run<span class="w"> </span><span class="o">[</span>options...<span class="o">]</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-6-6-1" class="sphinx-tabs-panel" hidden="true" id="panel-6-6-1" name="6-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\lib\py3-windows-x86_64\python.exe renpy.py <span class="p">&lt;</span>basedir<span class="p">&gt;</span> run [options...]
+</pre></div>
+</div>
+</div></div>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-profile-display">
+<span class="sig-name descname"><span class="pre">--profile-display</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-profile-display" title="Link to this definition"></a></dt>
+<dd><p>Reports the amount of time it takes to draw the screen.</p>
+<p>Equivalent to setting <a class="reference internal" href="config.html#var-config.profile"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.profile</span></code></a> to True.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-debug-image-cache">
+<span class="sig-name descname"><span class="pre">--debug-image-cache</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-debug-image-cache" title="Link to this definition"></a></dt>
+<dd><p>Writes information about the <a class="reference internal" href="displayables.html#images"><span class="std std-ref">image cache</span></a> to image_cache.txt.</p>
+<p>Equivalent to setting <a class="reference internal" href="config.html#var-config.debug_image_cache"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.debug_image_cache</span></code></a> to True.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-warp">
+<span class="sig-name descname"><span class="pre">--warp</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;filename:linenumber&gt;</span></span><a class="headerlink" href="#cmdoption-warp" title="Link to this definition"></a></dt>
+<dd><p>Tries to warp to just before the specified line. This takes as an argument a
+<code class="docutils literal notranslate"><span class="pre">filename:linenumber</span></code> pair.</p>
+<p>The <a class="reference internal" href="developer_tools.html#warping-to-a-line"><span class="std std-ref">warp feature</span></a> requires <a class="reference internal" href="config.html#var-config.developer"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.developer</span></code></a> to be True to operate.</p>
+</dd></dl>
+
+</section>
+<section id="quit">
+<span id="cli-quit"></span><h3>Quit<a class="headerlink" href="#quit" title="Link to this heading"></a></h3>
+<p>Quits the game immediately.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-7-7-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-7-7-0" name="7-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-7-7-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-7-7-1" name="7-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-7-7-0" class="sphinx-tabs-panel" id="panel-7-7-0" name="7-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span>&lt;basedir&gt;<span class="w"> </span>quit
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-7-7-1" class="sphinx-tabs-panel" hidden="true" id="panel-7-7-1" name="7-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\lib\py3-windows-x86_64\python.exe renpy.py <span class="p">&lt;</span>basedir<span class="p">&gt;</span> quit
+</pre></div>
+</div>
+</div></div>
+</section>
+<section id="compile">
+<span id="cli-compile"></span><h3>Compile<a class="headerlink" href="#compile" title="Link to this heading"></a></h3>
+<p>Compiles the game, creating .rpyc files from .rpy files. The
+equivalent of the &quot;Force Recompile&quot; button in the Ren'Py launcher.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-8-8-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-8-8-0" name="8-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-8-8-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-8-8-1" name="8-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-8-8-0" class="sphinx-tabs-panel" id="panel-8-8-0" name="8-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span>&lt;basedir&gt;<span class="w"> </span>compile<span class="w"> </span><span class="o">[</span>--keep-orphan-rpyc<span class="o">]</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-8-8-1" class="sphinx-tabs-panel" hidden="true" id="panel-8-8-1" name="8-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\lib\py3-windows-x86_64\python.exe renpy.py <span class="p">&lt;</span>basedir<span class="p">&gt;</span> compile [--keep-orphan-rpyc]
+</pre></div>
+</div>
+</div></div>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-0">
+<span class="sig-name descname"><span class="pre">--keep-orphan-rpyc</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-0" title="Link to this definition"></a></dt>
+<dd><p>Prevents Ren'Py from deleting <code class="file docutils literal notranslate"><span class="pre">.rpyc</span></code> files that are not associated with
+a <code class="file docutils literal notranslate"><span class="pre">.rpy</span></code> or <code class="file docutils literal notranslate"><span class="pre">_ren.py</span></code> file of the same name.</p>
+</dd></dl>
+
+</section>
+<section id="interactive-director">
+<span id="cli-director"></span><h3>Interactive Director<a class="headerlink" href="#interactive-director" title="Link to this heading"></a></h3>
+<p>Starts the <a class="reference internal" href="director.html"><span class="doc">Interactive Director</span></a> and runs the game afterwards.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-9-9-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-9-9-0" name="9-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-9-9-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-9-9-1" name="9-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-9-9-0" class="sphinx-tabs-panel" id="panel-9-9-0" name="9-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span>&lt;basedir&gt;<span class="w"> </span>director
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-9-9-1" class="sphinx-tabs-panel" hidden="true" id="panel-9-9-1" name="9-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\lib\py3-windows-x86_64\python.exe renpy.py <span class="p">&lt;</span>basedir<span class="p">&gt;</span> director
+</pre></div>
+</div>
+</div></div>
+</section>
+<section id="remove-persistent-data">
+<span id="cli-rmpersistent"></span><h3>Remove Persistent Data<a class="headerlink" href="#remove-persistent-data" title="Link to this heading"></a></h3>
+<p>Deletes <a class="reference internal" href="persistent.html"><span class="doc">Persistent Data</span></a> data. This can be handy since persistent data is
+found in multiple locations:</p>
+<ul class="simple">
+<li><p>the game save folder</p></li>
+<li><p>the location specified by <a class="reference internal" href="config.html#var-config.save_directory"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.save_directory</span></code></a></p></li>
+</ul>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-10-10-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-10-10-0" name="10-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-10-10-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-10-10-1" name="10-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-10-10-0" class="sphinx-tabs-panel" id="panel-10-10-0" name="10-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span>&lt;basedir&gt;<span class="w"> </span>rmpersistent
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-10-10-1" class="sphinx-tabs-panel" hidden="true" id="panel-10-10-1" name="10-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\lib\py3-windows-x86_64\python.exe renpy.py <span class="p">&lt;</span>basedir<span class="p">&gt;</span> rmpersistent
+</pre></div>
+</div>
+</div></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This will reset all game progress, including unlocks, read messages, and preferences.</p>
+</div>
+</section>
+<section id="update-project">
+<span id="cli-update"></span><h3>Update Project<a class="headerlink" href="#update-project" title="Link to this heading"></a></h3>
+<p>Download and install updates to a Ren'Py game from a web host.
+For more information, see <a class="reference internal" href="updater.html"><span class="doc">HTTPS/HTTP Updater</span></a>.</p>
+<p>The parameters are identical to those used in <a class="reference internal" href="updater.html#updater.update" title="updater.update"><code class="xref py py-meth docutils literal notranslate"><span class="pre">updater.update()</span></code></a>.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-11-11-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-11-11-0" name="11-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-11-11-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-11-11-1" name="11-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-11-11-0" class="sphinx-tabs-panel" id="panel-11-11-0" name="11-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span>&lt;basedir&gt;<span class="w"> </span>update<span class="w"> </span>&lt;url&gt;<span class="w"> </span><span class="o">[</span>options...<span class="o">]</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-11-11-1" class="sphinx-tabs-panel" hidden="true" id="panel-11-11-1" name="11-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\lib\py3-windows-x86_64\python.exe renpy.py <span class="p">&lt;</span>basedir<span class="p">&gt;</span> update <span class="p">&lt;</span>url<span class="p">&gt;</span> [options...]
+</pre></div>
+</div>
+</div></div>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-url">
+<span class="sig-name descname"><span class="pre">&lt;url&gt;</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-arg-url" title="Link to this definition"></a></dt>
+<dd><p>Specifies the URL to the updates.json file.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-base">
+<span class="sig-name descname"><span class="pre">--base</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;directory&gt;</span></span><a class="headerlink" href="#cmdoption-base" title="Link to this definition"></a></dt>
+<dd><p>Specifies the base directory of the game to update. Defaults to the current game.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-force">
+<span class="sig-name descname"><span class="pre">--force</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-force" title="Link to this definition"></a></dt>
+<dd><p>Forces the update to run even if the version numbers are the same.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-key">
+<span class="sig-name descname"><span class="pre">--key</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;key&gt;</span></span><a class="headerlink" href="#cmdoption-key" title="Link to this definition"></a></dt>
+<dd><p>A file giving the public key to use of the update.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-simulate">
+<span class="sig-name descname"><span class="pre">--simulate</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;option&gt;</span></span><a class="headerlink" href="#cmdoption-simulate" title="Link to this definition"></a></dt>
+<dd><p>A simulation mode to test update GUIs without actually performing an update.
+One of <code class="docutils literal notranslate"><span class="pre">available</span></code>, <code class="docutils literal notranslate"><span class="pre">not_available</span></code>, or <code class="docutils literal notranslate"><span class="pre">error</span></code>.</p>
+</dd></dl>
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This will modify your game's files. Use with caution.</p>
+</div>
+</section>
+</section>
+<section id="validation-and-testing">
+<h2>Validation and Testing<a class="headerlink" href="#validation-and-testing" title="Link to this heading"></a></h2>
+<section id="check-script-lint">
+<span id="cli-lint"></span><h3>Check Script (Lint)<a class="headerlink" href="#check-script-lint" title="Link to this heading"></a></h3>
+<p>This runs a <a class="reference internal" href="developer_tools.html#lint"><span class="std std-ref">Lint</span></a> report on the game. This checks the script for errors and
+prints script statistics. It's equivalent to the &quot;Check Script (Lint)&quot; button
+in the launcher.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-12-12-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-12-12-0" name="12-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-12-12-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-12-12-1" name="12-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-12-12-0" class="sphinx-tabs-panel" id="panel-12-12-0" name="12-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span>&lt;basedir&gt;<span class="w"> </span>lint<span class="w"> </span><span class="o">[</span>&lt;filename&gt;<span class="o">]</span><span class="w"> </span><span class="o">[</span>options...<span class="o">]</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-12-12-1" class="sphinx-tabs-panel" hidden="true" id="panel-12-12-1" name="12-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\lib\py3-windows-x86_64\python.exe renpy.py <span class="p">&lt;</span>basedir<span class="p">&gt;</span> lint [<span class="p">&lt;</span>filename<span class="p">&gt;</span>] [options...]
+</pre></div>
+</div>
+</div></div>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-filename">
+<span class="sig-name descname"><span class="pre">&lt;filename&gt;</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-arg-filename" title="Link to this definition"></a></dt>
+<dd><p>If given, the lint report will be written to this file rather than
+printed to standard output.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-error-code">
+<span class="sig-name descname"><span class="pre">--error-code</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-error-code" title="Link to this definition"></a></dt>
+<dd><p>Exits with an error code of 1 if there was a lint error. This is useful for CI systems to detect when lint fails.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-no-orphan-tl">
+<span class="sig-name descname"><span class="pre">--no-orphan-tl</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-no-orphan-tl" title="Link to this definition"></a></dt>
+<dd><p>Does not report orphan translations. Orphaned translations are
+<a class="reference internal" href="translation.html#translation-statement"><span class="std std-ref">Translation Statements</span></a> that do not reference a string
+in the primary language.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-reserved-parameters">
+<span class="sig-name descname"><span class="pre">--reserved-parameters</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-reserved-parameters" title="Link to this definition"></a></dt>
+<dd><p>Reports Ren'Py or python reserved names in renpy statement parameters.</p>
+<p>In particular it looks for <a class="reference internal" href="label.html"><span class="doc">label</span></a>, <a class="reference internal" href="screens.html"><span class="doc">screen</span></a>, and <a class="reference internal" href="transforms.html#atl"><span class="std std-ref">ATL</span></a> statements.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-by-character">
+<span class="sig-name descname"><span class="pre">--by-character</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-by-character" title="Link to this definition"></a></dt>
+<dd><p>Reports the count of blocks, words, and characters for each character.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-check-unclosed-tags">
+<span class="sig-name descname"><span class="pre">--check-unclosed-tags</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-check-unclosed-tags" title="Link to this definition"></a></dt>
+<dd><p>Reports unclosed text tags.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-all-problems">
+<span class="sig-name descname"><span class="pre">--all-problems</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-all-problems" title="Link to this definition"></a></dt>
+<dd><p>Reports all problems of a kind, not just the first ten issues.</p>
+</dd></dl>
+
+</section>
+<section id="run-testcases">
+<span id="cli-test"></span><h3>Run Testcases<a class="headerlink" href="#run-testcases" title="Link to this heading"></a></h3>
+<p>This runs <a class="reference internal" href="testcases.html"><span class="doc">automated tests</span></a> on the game.</p>
+<dl class="simple">
+<dt>Examples:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/renpy/renpy/blob/master/tutorial/game/testcases.rpy">https://github.com/renpy/renpy/blob/master/tutorial/game/testcases.rpy</a></p></li>
+<li><p><a class="reference external" href="https://github.com/renpy/renpy/blob/master/gui/game/testcases.rpy">https://github.com/renpy/renpy/blob/master/gui/game/testcases.rpy</a></p></li>
+<li><p><a class="reference external" href="https://github.com/renpy/renpy/blob/master/launcher/game/testcases.rpy">https://github.com/renpy/renpy/blob/master/launcher/game/testcases.rpy</a></p></li>
+</ul>
+</dd>
+</dl>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-13-13-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-13-13-0" name="13-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-13-13-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-13-13-1" name="13-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-13-13-0" class="sphinx-tabs-panel" id="panel-13-13-0" name="13-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span>&lt;basedir&gt;<span class="w"> </span><span class="nb">test</span><span class="w"> </span><span class="o">[</span>&lt;testcase&gt;<span class="o">]</span><span class="w"> </span><span class="o">[</span>options...<span class="o">]</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-13-13-1" class="sphinx-tabs-panel" hidden="true" id="panel-13-13-1" name="13-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\lib\py3-windows-x86_64\python.exe renpy.py <span class="p">&lt;</span>basedir<span class="p">&gt;</span> test [<span class="p">&lt;</span>testcase<span class="p">&gt;</span>] [options...]
+</pre></div>
+</div>
+</div></div>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-testcase">
+<span class="sig-name descname"><span class="pre">&lt;testcase&gt;</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-arg-testcase" title="Link to this definition"></a></dt>
+<dd><p>Specifies the name of the testcase or test suite to run. If not given, the &quot;global&quot;
+test suite will be run.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-enable_all">
+<span class="sig-name descname"><span class="pre">--enable_all</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-enable_all" title="Link to this definition"></a></dt>
+<dd><p>Executes all test cases and test suites, regardless of their <code class="docutils literal notranslate"><span class="pre">enabled</span></code> property.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-overwrite_screenshots">
+<span class="sig-name descname"><span class="pre">--overwrite_screenshots</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-overwrite_screenshots" title="Link to this definition"></a></dt>
+<dd><p>Overwrite existing screenshots when a
+<a class="reference internal" href="testcases.html#test-screenshot-statement"><span class="std std-ref">screenshot statement</span></a> is executed.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-hide-header">
+<span class="sig-name descname"><span class="pre">--hide-header</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-hide-header" title="Link to this definition"></a></dt>
+<dd><p>Disables the header at the start of the test run.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-hide-execution">
+<span class="sig-name descname"><span class="pre">--hide-execution</span></span><span class="sig-prename descclassname"> <span class="pre">{no|hooks|testcases|all}</span></span><a class="headerlink" href="#cmdoption-hide-execution" title="Link to this definition"></a></dt>
+<dd><p>Hides information about test execution. <code class="docutils literal notranslate"><span class="pre">--hide-execution</span> <span class="pre">hooks</span></code> hides hooks,
+<code class="docutils literal notranslate"><span class="pre">--hide-execution</span> <span class="pre">testcases</span></code> hides test cases and hooks, and <code class="docutils literal notranslate"><span class="pre">--hide-execution</span> <span class="pre">all</span></code>
+hides everything.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-hide-summary">
+<span class="sig-name descname"><span class="pre">--hide-summary</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-hide-summary" title="Link to this definition"></a></dt>
+<dd><p>Disables the summary at the end of the test run.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-report-detailed">
+<span class="sig-name descname"><span class="pre">--report-detailed</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-report-detailed" title="Link to this definition"></a></dt>
+<dd><p>Shows detailed information about each test during the run.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-report-skipped">
+<span class="sig-name descname"><span class="pre">--report-skipped</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-report-skipped" title="Link to this definition"></a></dt>
+<dd><p>Shows information about skipped tests. This option should be used together
+with <code class="docutils literal notranslate"><span class="pre">--report-detailed</span></code>.</p>
+</dd></dl>
+
+</section>
+</section>
+<section id="build-and-distribution">
+<h2>Build and Distribution<a class="headerlink" href="#build-and-distribution" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As part of the build process, Ren'Py will create .rpyc files that contain
+information that load the game. A continuous integration system should
+preserve these .rpyc files after a build, and supply them to the next
+build, either directly or in the old-game directory. Failure to do so
+may result in a game that can't load saves.</p>
+</div>
+<section id="add-from-to-calls">
+<span id="cli-add-from"></span><h3>Add From To Calls<a class="headerlink" href="#add-from-to-calls" title="Link to this heading"></a></h3>
+<p>Adds a <code class="docutils literal notranslate"><span class="pre">from</span></code> clause to each <a class="reference internal" href="label.html#call-statement"><span class="std std-ref">call statement</span></a>
+that does not have one. Generally, this should be done before a release, to help
+Ren'Py locate the return point of calls in a modified game.</p>
+<p>Implies <a class="reference internal" href="#cmdoption-compile"><code class="xref std std-option docutils literal notranslate"><span class="pre">--compile</span></code></a>.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-14-14-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-14-14-0" name="14-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-14-14-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-14-14-1" name="14-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-14-14-0" class="sphinx-tabs-panel" id="panel-14-14-0" name="14-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span>&lt;basedir&gt;<span class="w"> </span>add_from
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-14-14-1" class="sphinx-tabs-panel" hidden="true" id="panel-14-14-1" name="14-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\lib\py3-windows-x86_64\python.exe renpy.py <span class="p">&lt;</span>basedir<span class="p">&gt;</span> add_from
+</pre></div>
+</div>
+</div></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This will modify your game's script files.</p>
+</div>
+</section>
+<section id="distribute">
+<span id="cli-distribute"></span><h3>Distribute<a class="headerlink" href="#distribute" title="Link to this heading"></a></h3>
+<p><a class="reference internal" href="build.html"><span class="doc">Builds distributions</span></a> of the game for Windows, macOS, and Linux.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-15-15-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-15-15-0" name="15-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-15-15-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-15-15-1" name="15-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-15-15-0" class="sphinx-tabs-panel" id="panel-15-15-0" name="15-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span>launcher<span class="w"> </span>distribute<span class="w"> </span>&lt;basedir&gt;<span class="w"> </span><span class="o">[</span>options...<span class="o">]</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-15-15-1" class="sphinx-tabs-panel" hidden="true" id="panel-15-15-1" name="15-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\lib\py3-windows-x86_64\python.exe renpy.py launcher distribute <span class="p">&lt;</span>basedir<span class="p">&gt;</span> [options...]
+</pre></div>
+</div>
+</div></div>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-destination">
+<span class="sig-name descname"><span class="pre">--destination</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;directory&gt;</span></span><a class="headerlink" href="#cmdoption-destination" title="Link to this definition"></a></dt>
+<dd><p>Specifies the directory to place the distributions in. The default is a directory
+named &quot;<cite>name</cite>-<cite>version</cite>-dists&quot; in the current directory, taking information
+from <a class="reference internal" href="build.html#var-build.name"><code class="xref std std-var docutils literal notranslate"><span class="pre">build.name</span></code></a> and <a class="reference internal" href="build.html#var-build.version"><code class="xref std std-var docutils literal notranslate"><span class="pre">build.version</span></code></a>.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-format">
+<span class="sig-name descname"><span class="pre">--format</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;format&gt;</span></span><a class="headerlink" href="#cmdoption-format" title="Link to this definition"></a></dt>
+<dd><p>Forces the format of the distribution to be this.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-macapp">
+<span class="sig-name descname"><span class="pre">--macapp</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;app&gt;</span></span><a class="headerlink" href="#cmdoption-macapp" title="Link to this definition"></a></dt>
+<dd><p>Specifies the path to a macapp that's used to sign mac
+packages instead of the macapp that's included with Ren'Py.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-no-archive">
+<span class="sig-name descname"><span class="pre">--no-archive</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-no-archive" title="Link to this definition"></a></dt>
+<dd><p>Does not add files to <a class="reference internal" href="build.html#archives"><span class="std std-ref">Archives</span></a>.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-no-update">
+<span class="sig-name descname"><span class="pre">--no-update</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-no-update" title="Link to this definition"></a></dt>
+<dd><p>Does not build update files which allow the <a class="reference internal" href="updater.html"><span class="doc">HTTPS/HTTP Updater</span></a> to work.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-package">
+<span class="sig-name descname"><span class="pre">--package</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;package&gt;</span></span><a class="headerlink" href="#cmdoption-package" title="Link to this definition"></a></dt>
+<dd><p>Specifies the name of the package to build, where package is a package
+name like &quot;pc&quot;, &quot;mac&quot;, or &quot;markets&quot;. This option can be given multiple
+times to build multiple packages. The default is to build all packages.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-packagedest">
+<span class="sig-name descname"><span class="pre">--packagedest</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;package&gt;</span></span><a class="headerlink" href="#cmdoption-packagedest" title="Link to this definition"></a></dt>
+<dd><p>Specify the output name for a package (without any
+extensions). Requires that exactly one <a class="reference internal" href="#cmdoption-package"><code class="xref std std-option docutils literal notranslate"><span class="pre">--package</span></code></a> is specified.</p>
+</dd></dl>
+
+</section>
+<section id="android-build">
+<span id="cli-android-build"></span><h3>Android Build<a class="headerlink" href="#android-build" title="Link to this heading"></a></h3>
+<p>This builds a release of the game for <a class="reference internal" href="android.html"><span class="doc">Android</span></a>. It's assumed that the launcher
+has been used to install the Android SDK, generate keys, and configure the
+project.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-16-16-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-16-16-0" name="16-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-16-16-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-16-16-1" name="16-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-16-16-0" class="sphinx-tabs-panel" id="panel-16-16-0" name="16-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span>launcher<span class="w"> </span>android_build<span class="w"> </span>&lt;basedir&gt;<span class="w"> </span><span class="o">[</span>options...<span class="o">]</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-16-16-1" class="sphinx-tabs-panel" hidden="true" id="panel-16-16-1" name="16-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\lib\py3-windows-x86_64\python.exe renpy.py launcher android_build <span class="p">&lt;</span>basedir<span class="p">&gt;</span> [options...]
+</pre></div>
+</div>
+</div></div>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-1">
+<span class="sig-name descname"><span class="pre">--destination</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;directory&gt;</span></span><a class="headerlink" href="#cmdoption-1" title="Link to this definition"></a></dt>
+<dd><p>Specifies the directory to place the output in. The default is a directory
+named &quot;<cite>name</cite>-<cite>version</cite>-dists&quot; in the current directory, taking information
+from <a class="reference internal" href="build.html#var-build.name"><code class="xref std std-var docutils literal notranslate"><span class="pre">build.name</span></code></a> and <a class="reference internal" href="build.html#var-build.version"><code class="xref std std-var docutils literal notranslate"><span class="pre">build.version</span></code></a>.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-bundle">
+<span class="sig-name descname"><span class="pre">--bundle</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-bundle" title="Link to this definition"></a></dt>
+<dd><p>Produces a <code class="file docutils literal notranslate"><span class="pre">.aab</span></code> bundle if given. If not given, Ren'Py will
+produce a <code class="file docutils literal notranslate"><span class="pre">.apk</span></code> file.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-install">
+<span class="sig-name descname"><span class="pre">--install</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-install" title="Link to this definition"></a></dt>
+<dd><p>Installs the <code class="file docutils literal notranslate"><span class="pre">.apk</span></code> or <code class="file docutils literal notranslate"><span class="pre">.aab</span></code> file to a connected device.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-launch">
+<span class="sig-name descname"><span class="pre">--launch</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-launch" title="Link to this definition"></a></dt>
+<dd><p>Launches the game on a connected device. This implies <a class="reference internal" href="#cmdoption-install"><code class="xref std std-option docutils literal notranslate"><span class="pre">--install</span></code></a>.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-2">
+<span class="sig-name descname"><span class="pre">--package</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;package&gt;</span></span><a class="headerlink" href="#cmdoption-2" title="Link to this definition"></a></dt>
+<dd><p>Specifies the package to build. Defaults to building the 'android' package.</p>
+</dd></dl>
+
+</section>
+<section id="ios-create">
+<span id="cli-ios-create"></span><h3>iOS Create<a class="headerlink" href="#ios-create" title="Link to this heading"></a></h3>
+<p>Creates an Xcode project that can be used to build an <a class="reference internal" href="ios.html"><span class="doc">iOS</span></a> version of
+the game. It's assumed that the launcher has been used to install iOS
+support once.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-17-17-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-17-17-0" name="17-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-17-17-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-17-17-1" name="17-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-17-17-0" class="sphinx-tabs-panel" id="panel-17-17-0" name="17-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span>launcher<span class="w"> </span>ios_create<span class="w"> </span>&lt;basedir&gt;<span class="w"> </span>&lt;destination&gt;
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-17-17-1" class="sphinx-tabs-panel" hidden="true" id="panel-17-17-1" name="17-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\lib\py3-windows-x86_64\python.exe renpy.py launcher ios_create <span class="p">&lt;</span>basedir<span class="p">&gt;</span> &lt;destination&gt;
+</pre></div>
+</div>
+</div></div>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">&lt;basedir&gt;</span></span></dt>
+<dd><p>Specifies the path to the Ren'Py project.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">&lt;destination&gt;</span></span></dt>
+<dd><p>Specifies the path to the iOS project that will be created.</p>
+</dd></dl>
+
+</section>
+<section id="ios-populate">
+<span id="cli-ios-populate"></span><h3>iOS Populate<a class="headerlink" href="#ios-populate" title="Link to this heading"></a></h3>
+<p>Copies the game into an Xcode project created by <a class="reference internal" href="#cli-ios-create"><span class="std std-ref">ios_create</span></a>. This
+is used to update a project created with the same version of Ren'Py.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-18-18-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-18-18-0" name="18-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-18-18-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-18-18-1" name="18-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-18-18-0" class="sphinx-tabs-panel" id="panel-18-18-0" name="18-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span>launcher<span class="w"> </span>ios_populate<span class="w"> </span>&lt;basedir&gt;<span class="w"> </span>&lt;destination&gt;
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-18-18-1" class="sphinx-tabs-panel" hidden="true" id="panel-18-18-1" name="18-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\lib\py3-windows-x86_64\python.exe renpy.py launcher ios_populate <span class="p">&lt;</span>basedir<span class="p">&gt;</span> &lt;destination&gt;
+</pre></div>
+</div>
+</div></div>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">&lt;basedir&gt;</span></span></dt>
+<dd><p>Specifies the path to the Ren'Py project.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">&lt;destination&gt;</span></span></dt>
+<dd><p>Specifies the path to the iOS project that will be updated.</p>
+</dd></dl>
+
+</section>
+<section id="web-build">
+<span id="cli-web-build"></span><h3>Web Build<a class="headerlink" href="#web-build" title="Link to this heading"></a></h3>
+<p>Builds a release of the game for web. It's assumed that the
+launcher has been used to install web support and that any configuration
+files (such as <code class="file docutils literal notranslate"><span class="pre">progressive_download.txt</span></code>) are in place.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-19-19-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-19-19-0" name="19-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-19-19-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-19-19-1" name="19-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-19-19-0" class="sphinx-tabs-panel" id="panel-19-19-0" name="19-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span>launcher<span class="w"> </span>web_build<span class="w"> </span>&lt;basedir&gt;<span class="w"> </span><span class="o">[</span>options...<span class="o">]</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-19-19-1" class="sphinx-tabs-panel" hidden="true" id="panel-19-19-1" name="19-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\lib\py3-windows-x86_64\python.exe renpy.py launcher web_build <span class="p">&lt;</span>basedir<span class="p">&gt;</span> [options...]
+</pre></div>
+</div>
+</div></div>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-3">
+<span class="sig-name descname"><span class="pre">--destination</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;directory&gt;</span></span><a class="headerlink" href="#cmdoption-3" title="Link to this definition"></a></dt>
+<dd><p>Specifies the directory where the packaged files should be placed.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-4">
+<span class="sig-name descname"><span class="pre">--launch</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-4" title="Link to this definition"></a></dt>
+<dd><p>Starts a webserver and launches the game after build.</p>
+</dd></dl>
+
+</section>
+</section>
+<section id="translation-and-localization">
+<h2>Translation and Localization<a class="headerlink" href="#translation-and-localization" title="Link to this heading"></a></h2>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="translation.html"><span class="doc">Translation</span></a></p></li>
+</ul>
+</div>
+<section id="translate">
+<span id="cli-translate"></span><h3>Translate<a class="headerlink" href="#translate" title="Link to this heading"></a></h3>
+<p>Creates or updates translation files in <code class="docutils literal notranslate"><span class="pre">tl/&lt;language&gt;</span></code> for the project.
+It writes missing dialogue and string entries while leaving existing translated entries unchanged.
+Use <a class="reference internal" href="#cmdoption-count"><code class="xref std std-option docutils literal notranslate"><span class="pre">--count</span></code></a> to report missing translations without writing files.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-20-20-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-20-20-0" name="20-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-20-20-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-20-20-1" name="20-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-20-20-0" class="sphinx-tabs-panel" id="panel-20-20-0" name="20-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span>&lt;basedir&gt;<span class="w"> </span>translate<span class="w"> </span>&lt;language&gt;<span class="w"> </span><span class="o">[</span>options...<span class="o">]</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-20-20-1" class="sphinx-tabs-panel" hidden="true" id="panel-20-20-1" name="20-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\lib\py3-windows-x86_64\python.exe renpy.py <span class="p">&lt;</span>basedir<span class="p">&gt;</span> translate <span class="p">&lt;</span>language<span class="p">&gt;</span> [options...]
+</pre></div>
+</div>
+</div></div>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-language">
+<span class="sig-name descname"><span class="pre">&lt;language&gt;</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-arg-language" title="Link to this definition"></a></dt>
+<dd><p>Specifies the language to generate translations for.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-count">
+<span class="sig-name descname"><span class="pre">--count</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-count" title="Link to this definition"></a></dt>
+<dd><p>Prints a count of missing translations without generating files.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-rot13">
+<span class="sig-name descname"><span class="pre">--rot13</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-rot13" title="Link to this definition"></a></dt>
+<dd><p>Applies rot13 while generating translations.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-piglatin">
+<span class="sig-name descname"><span class="pre">--piglatin</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-piglatin" title="Link to this definition"></a></dt>
+<dd><p>Applies pig latin while generating translations. Overridden by <a class="reference internal" href="#cmdoption-rot13"><code class="xref std std-option docutils literal notranslate"><span class="pre">--rot13</span></code></a>.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-empty">
+<span class="sig-name descname"><span class="pre">--empty</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-empty" title="Link to this definition"></a></dt>
+<dd><p>Produces empty strings while generating translations. Overridden by <a class="reference internal" href="#cmdoption-rot13"><code class="xref std std-option docutils literal notranslate"><span class="pre">--rot13</span></code></a> and <a class="reference internal" href="#cmdoption-piglatin"><code class="xref std std-option docutils literal notranslate"><span class="pre">--piglatin</span></code></a>.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-min-priority">
+<span class="sig-name descname"><span class="pre">--min-priority</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;int&gt;</span></span><a class="headerlink" href="#cmdoption-min-priority" title="Link to this definition"></a></dt>
+<dd><p>Translates strings with priority greater than this value.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-max-priority">
+<span class="sig-name descname"><span class="pre">--max-priority</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;int&gt;</span></span><a class="headerlink" href="#cmdoption-max-priority" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p>499 if <code class="xref std std-var docutils literal notranslate"><span class="pre">config.translate_launcher</span></code> is True, otherwise 299.</p>
+</dd>
+</dl>
+<p>Translates strings with less than this priority.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-strings-only">
+<span class="sig-name descname"><span class="pre">--strings-only</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-strings-only" title="Link to this definition"></a></dt>
+<dd><p>Only translates strings (not dialogue).</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-common-only">
+<span class="sig-name descname"><span class="pre">--common-only</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-common-only" title="Link to this definition"></a></dt>
+<dd><p>Only translates strings from common code.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-no-todo">
+<span class="sig-name descname"><span class="pre">--no-todo</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-no-todo" title="Link to this definition"></a></dt>
+<dd><p>Does not include the TODO flag at the top of generated translation files.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-string">
+<span class="sig-name descname"><span class="pre">--string</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;string&gt;</span></span><a class="headerlink" href="#cmdoption-string" title="Link to this definition"></a></dt>
+<dd><p>Translates a specific string. This option can be given multiple
+times to translate multiple strings.</p>
+</dd></dl>
+
+</section>
+<section id="dialogue">
+<span id="cli-dialogue"></span><h3>Dialogue<a class="headerlink" href="#dialogue" title="Link to this heading"></a></h3>
+<p>Exports dialogue (and optionally translatable strings) to <code class="file docutils literal notranslate"><span class="pre">dialogue.tab</span></code>
+by default, or <code class="file docutils literal notranslate"><span class="pre">dialogue.txt</span></code> when <a class="reference internal" href="#cmdoption-text"><code class="xref std std-option docutils literal notranslate"><span class="pre">--text</span></code></a> is used.</p>
+<p>If a language is provided, it outputs translated text when available. Otherwise, it outputs
+source text.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-21-21-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-21-21-0" name="21-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-21-21-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-21-21-1" name="21-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-21-21-0" class="sphinx-tabs-panel" id="panel-21-21-0" name="21-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span>&lt;basedir&gt;<span class="w"> </span>dialogue<span class="w"> </span>&lt;language&gt;<span class="w"> </span><span class="o">[</span>options...<span class="o">]</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-21-21-1" class="sphinx-tabs-panel" hidden="true" id="panel-21-21-1" name="21-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\lib\py3-windows-x86_64\python.exe renpy.py <span class="p">&lt;</span>basedir<span class="p">&gt;</span> dialogue <span class="p">&lt;</span>language<span class="p">&gt;</span> [options...]
+</pre></div>
+</div>
+</div></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is an export/reporting command. It does not create <code class="file docutils literal notranslate"><span class="pre">tl/&lt;language&gt;</span></code>
+translation script files.</p>
+</div>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">&lt;language&gt;</span></span></dt>
+<dd><p>Specifies the language to extract dialogue for.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-text">
+<span class="sig-name descname"><span class="pre">--text</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-text" title="Link to this definition"></a></dt>
+<dd><p>Outputs the dialogue as plain text. If not given, outputs a tab-delimited file.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-strings">
+<span class="sig-name descname"><span class="pre">--strings</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-strings" title="Link to this definition"></a></dt>
+<dd><p>Outputs all translatable strings, not just dialogue.</p>
+<p>Most of these are defined with the <a class="reference internal" href="translation.html#id0" title="_"><code class="xref py py-func docutils literal notranslate"><span class="pre">_()</span></code></a> and <a class="reference internal" href="translation.html#id2" title="__"><code class="xref py py-func docutils literal notranslate"><span class="pre">__()</span></code></a> functions, as well as
+<a class="reference internal" href="menus.html"><span class="doc">menu choices</span></a>.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-notags">
+<span class="sig-name descname"><span class="pre">--notags</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-notags" title="Link to this definition"></a></dt>
+<dd><p>Strips text tags from the dialogue.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-escape">
+<span class="sig-name descname"><span class="pre">--escape</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-escape" title="Link to this definition"></a></dt>
+<dd><p>Escapes quotes and other special characters.</p>
+</dd></dl>
+
+</section>
+<section id="extract-strings">
+<span id="cli-extract-strings"></span><h3>Extract Strings<a class="headerlink" href="#extract-strings" title="Link to this heading"></a></h3>
+<p>Exports existing translations from the game to a JSON file.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-22-22-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-22-22-0" name="22-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-22-22-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-22-22-1" name="22-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-22-22-0" class="sphinx-tabs-panel" id="panel-22-22-0" name="22-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span>&lt;basedir&gt;<span class="w"> </span>extract_strings<span class="w"> </span>&lt;language&gt;<span class="w"> </span>&lt;destination&gt;<span class="w"> </span><span class="o">[</span>options...<span class="o">]</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-22-22-1" class="sphinx-tabs-panel" hidden="true" id="panel-22-22-1" name="22-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\lib\py3-windows-x86_64\python.exe renpy.py <span class="p">&lt;</span>basedir<span class="p">&gt;</span> extract_strings <span class="p">&lt;</span>language<span class="p">&gt;</span> &lt;destination<span class="p">&gt;</span> [options...]
+</pre></div>
+</div>
+</div></div>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-0">
+<span class="sig-name descname"><span class="pre">&lt;language&gt;</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-arg-0" title="Link to this definition"></a></dt>
+<dd><p>Specifies the language to extract translated strings from.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-destination">
+<span class="sig-name descname"><span class="pre">&lt;destination&gt;</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-arg-destination" title="Link to this definition"></a></dt>
+<dd><p>Specifies the json file to store the translated strings into.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-merge">
+<span class="sig-name descname"><span class="pre">--merge</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-merge" title="Link to this definition"></a></dt>
+<dd><p>Merges the current contents of the file with new contents, preserving existing translations.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-5">
+<span class="sig-name descname"><span class="pre">--force</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-5" title="Link to this definition"></a></dt>
+<dd><p>Does not throw exceptions if the language does not exist.</p>
+</dd></dl>
+
+</section>
+<section id="merge-strings">
+<span id="cli-merge-strings"></span><h3>Merge Strings<a class="headerlink" href="#merge-strings" title="Link to this heading"></a></h3>
+<p>Imports translations from JSON file back into the game.</p>
+<p>Implies <a class="reference internal" href="#cmdoption-compile"><code class="xref std std-option docutils literal notranslate"><span class="pre">--compile</span></code></a>.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-23-23-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-23-23-0" name="23-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-23-23-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-23-23-1" name="23-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-23-23-0" class="sphinx-tabs-panel" id="panel-23-23-0" name="23-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span>&lt;basedir&gt;<span class="w"> </span>merge_strings<span class="w"> </span>&lt;language&gt;<span class="w"> </span>&lt;source&gt;<span class="w"> </span><span class="o">[</span>options...<span class="o">]</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-23-23-1" class="sphinx-tabs-panel" hidden="true" id="panel-23-23-1" name="23-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\lib\py3-windows-x86_64\python.exe renpy.py <span class="p">&lt;</span>basedir<span class="p">&gt;</span> merge_strings <span class="p">&lt;</span>language<span class="p">&gt;</span> &lt;source<span class="p">&gt;</span> [options...]
+</pre></div>
+</div>
+</div></div>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-1">
+<span class="sig-name descname"><span class="pre">&lt;language&gt;</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-arg-1" title="Link to this definition"></a></dt>
+<dd><p>Specifies the language to merge translated strings to.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-source">
+<span class="sig-name descname"><span class="pre">&lt;source&gt;</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-arg-source" title="Link to this definition"></a></dt>
+<dd><p>Specifies the json file to take translated strings from.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-reverse">
+<span class="sig-name descname"><span class="pre">--reverse</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-reverse" title="Link to this definition"></a></dt>
+<dd><p>Reverses the languages in the json file.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-replace">
+<span class="sig-name descname"><span class="pre">--replace</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-replace" title="Link to this definition"></a></dt>
+<dd><p>Replaces non-trivial translations. A trivial translation is
+one that does not exist or if the translation is the same as the primary
+language.</p>
+</dd></dl>
+
+</section>
+</section>
+<section id="launcher-commands">
+<h2>Launcher Commands<a class="headerlink" href="#launcher-commands" title="Link to this heading"></a></h2>
+<p>These commands are used to control the Ren'Py launcher from the command line.</p>
+<section id="generate-gui">
+<span id="cli-generate-gui"></span><h3>Generate GUI<a class="headerlink" href="#generate-gui" title="Link to this heading"></a></h3>
+<p>Generates a GUI for an existing Ren'Py game.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-24-24-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-24-24-0" name="24-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-24-24-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-24-24-1" name="24-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-24-24-0" class="sphinx-tabs-panel" id="panel-24-24-0" name="24-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span>launcher<span class="w"> </span>generate_gui<span class="w"> </span>&lt;basedir&gt;<span class="w"> </span><span class="o">[</span>options...<span class="o">]</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-24-24-1" class="sphinx-tabs-panel" hidden="true" id="panel-24-24-1" name="24-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\lib\py3-windows-x86_64\python.exe renpy.py launcher generate_gui <span class="p">&lt;</span>basedir<span class="p">&gt;</span> [options...]
+</pre></div>
+</div>
+</div></div>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-width">
+<span class="sig-name descname"><span class="pre">--width</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;width&gt;</span></span><a class="headerlink" href="#cmdoption-width" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p>1280</p>
+</dd>
+</dl>
+<p>Specifies the width of the generated gui.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-height">
+<span class="sig-name descname"><span class="pre">--height</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;height&gt;</span></span><a class="headerlink" href="#cmdoption-height" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p>720</p>
+</dd>
+</dl>
+<p>Specifies the height of the generated gui.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-accent">
+<span class="sig-name descname"><span class="pre">--accent</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;color&gt;</span></span><a class="headerlink" href="#cmdoption-accent" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p>#00B8C3</p>
+</dd>
+</dl>
+<p>Specifies the accent color used throughout the gui.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-boring">
+<span class="sig-name descname"><span class="pre">--boring</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;color&gt;</span></span><a class="headerlink" href="#cmdoption-boring" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p>#000000</p>
+</dd>
+</dl>
+<p>Specifies the boring color used for the gui background.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-light">
+<span class="sig-name descname"><span class="pre">--light</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-light" title="Link to this definition"></a></dt>
+<dd><p>Considers this a light theme.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-template">
+<span class="sig-name descname"><span class="pre">--template</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;directory&gt;</span></span><a class="headerlink" href="#cmdoption-template" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p>&quot;gui&quot;</p>
+</dd>
+</dl>
+<p>Specifies the template directory containing source code.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-language">
+<span class="sig-name descname"><span class="pre">--language</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;language&gt;</span></span><a class="headerlink" href="#cmdoption-language" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+<p>Specifies the language to translate strings and comments to.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-start">
+<span class="sig-name descname"><span class="pre">--start</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-start" title="Link to this definition"></a></dt>
+<dd><p>Starts a new project, replacing images and code.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-replace-images">
+<span class="sig-name descname"><span class="pre">--replace-images</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-replace-images" title="Link to this definition"></a></dt>
+<dd><p>Overwrites existing images.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-replace-code">
+<span class="sig-name descname"><span class="pre">--replace-code</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-replace-code" title="Link to this definition"></a></dt>
+<dd><p>Overwrites existing gui.rpy file.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-update-code">
+<span class="sig-name descname"><span class="pre">--update-code</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-update-code" title="Link to this definition"></a></dt>
+<dd><p>Updates existing gui.rpy file.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-minimal">
+<span class="sig-name descname"><span class="pre">--minimal</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-minimal" title="Link to this definition"></a></dt>
+<dd><p>Only updates option.rpy and translations.</p>
+</dd></dl>
+
+</section>
+<section id="gui-images">
+<span id="cli-gui-images"></span><h3>GUI Images<a class="headerlink" href="#gui-images" title="Link to this heading"></a></h3>
+<p>Generates images (e.g. for buttons, bars, radio buttons, etc) based on <a class="reference internal" href="gui.html"><span class="doc">GUI variables</span></a>.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-25-25-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-25-25-0" name="25-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-25-25-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-25-25-1" name="25-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-25-25-0" class="sphinx-tabs-panel" id="panel-25-25-0" name="25-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span>launcher<span class="w"> </span>gui_images<span class="w"> </span>&lt;basedir&gt;<span class="w"> </span><span class="o">[</span>options...<span class="o">]</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-25-25-1" class="sphinx-tabs-panel" hidden="true" id="panel-25-25-1" name="25-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\lib\py3-windows-x86_64\python.exe renpy.py launcher gui_images <span class="p">&lt;</span>basedir<span class="p">&gt;</span> [options...]
+</pre></div>
+</div>
+</div></div>
+</section>
+<section id="get-projects-directory">
+<span id="cli-get-projects-directory"></span><h3>Get Projects Directory<a class="headerlink" href="#get-projects-directory" title="Link to this heading"></a></h3>
+<p>Prints the directory that the Ren'Py launcher uses to store projects.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-26-26-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-26-26-0" name="26-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-26-26-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-26-26-1" name="26-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-26-26-0" class="sphinx-tabs-panel" id="panel-26-26-0" name="26-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span>launcher<span class="w"> </span>get_projects_directory
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-26-26-1" class="sphinx-tabs-panel" hidden="true" id="panel-26-26-1" name="26-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\lib\py3-windows-x86_64\python.exe renpy.py launcher get_projects_directory
+</pre></div>
+</div>
+</div></div>
+</section>
+<section id="set-projects-directory">
+<span id="cli-set-projects-directory"></span><h3>Set Projects Directory<a class="headerlink" href="#set-projects-directory" title="Link to this heading"></a></h3>
+<p>Sets the directory that the Ren'Py launcher uses to store projects. It's
+intended for use on minimal systems where none of the options for selecting
+a projects directory are available.</p>
+<p>This can only be done when the launcher is not running.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-27-27-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-27-27-0" name="27-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-27-27-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-27-27-1" name="27-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-27-27-0" class="sphinx-tabs-panel" id="panel-27-27-0" name="27-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span>launcher<span class="w"> </span>set_projects_directory<span class="w"> </span>&lt;projects&gt;
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-27-27-1" class="sphinx-tabs-panel" hidden="true" id="panel-27-27-1" name="27-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\lib\py3-windows-x86_64\python.exe renpy.py launcher set_projects_directory <span class="p">&lt;</span>projects&gt;
+</pre></div>
+</div>
+</div></div>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">&lt;projects&gt;</span></span></dt>
+<dd><p>Specifies the path to the projects directory.</p>
+</dd></dl>
+
+</section>
+<section id="set-project">
+<span id="cli-set-project"></span><h3>Set Project<a class="headerlink" href="#set-project" title="Link to this heading"></a></h3>
+<p>Sets the current project to the given project. This will change the
+projects directory and currently selected project in the launcher
+to accomplish this goal.</p>
+<p>This can only be done when the launcher is not running.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-28-28-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-28-28-0" name="28-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-28-28-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-28-28-1" name="28-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-28-28-0" class="sphinx-tabs-panel" id="panel-28-28-0" name="28-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span>launcher<span class="w"> </span>set_project<span class="w"> </span>&lt;project&gt;
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-28-28-1" class="sphinx-tabs-panel" hidden="true" id="panel-28-28-1" name="28-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\lib\py3-windows-x86_64\python.exe renpy.py launcher set_project <span class="p">&lt;</span>project&gt;
+</pre></div>
+</div>
+</div></div>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">&lt;project&gt;</span></span></dt>
+<dd><p>Specifies the full path to the project to select.</p>
+</dd></dl>
+
+</section>
+<section id="update-old-game">
+<span id="cli-update-old-game"></span><h3>Update Old Game<a class="headerlink" href="#update-old-game" title="Link to this heading"></a></h3>
+<p>Copies .rpyc files from <code class="file docutils literal notranslate"><span class="pre">&lt;basedir&gt;/game</span></code> to <code class="file docutils literal notranslate"><span class="pre">&lt;basedir&gt;/old-game</span></code>.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-29-29-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-29-29-0" name="29-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-29-29-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-29-29-1" name="29-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-29-29-0" class="sphinx-tabs-panel" id="panel-29-29-0" name="29-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./renpy.sh<span class="w"> </span>launcher<span class="w"> </span>update_old_game<span class="w"> </span>&lt;basedir&gt;
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-29-29-1" class="sphinx-tabs-panel" hidden="true" id="panel-29-29-1" name="29-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\lib\py3-windows-x86_64\python.exe renpy.py launcher update_old_game <span class="p">&lt;</span>basedir&gt;
+</pre></div>
+</div>
+</div></div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="build.html#old-game"><span class="std std-ref">The Old-game Directory</span></a></p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="custom-commands">
+<h2>Custom Commands<a class="headerlink" href="#custom-commands" title="Link to this heading"></a></h2>
+<p>In addition to the commands defined above, it is possible to create commands
+for a particular project using <a class="reference internal" href="#renpy.arguments.register_command" title="renpy.arguments.register_command"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.arguments.register_command()</span></code></a>.</p>
+<p>When running a command, the <a class="reference internal" href="lifecycle.html"><span class="doc">game will first initialize</span></a>, then
+run the command.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.arguments.register_command">
+<span class="sig-prename descclassname"><span class="pre">renpy.arguments.</span></span><span class="sig-name descname"><span class="pre">register_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uses_display</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.arguments.register_command" title="Link to this definition"></a></dt>
+<dd><p>Registers a command that can be invoked when Ren'Py is run on the command
+line. When the command is run, <cite>function</cite> is called with no arguments.</p>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">name</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p>Specifies the name of the command in the interface.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">function</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>function</p>
+</dd>
+</dl>
+<p>Specifies the function that is called when the command is run. <cite>function</cite> is
+called with no arguments.</p>
+<p>If <cite>function</cite> needs to take additional command-line arguments, it should
+instantiate a <code class="xref py py-class docutils literal notranslate"><span class="pre">renpy.arguments.ArgumentParser</span></code>, and then call <code class="xref py py-func docutils literal notranslate"><span class="pre">parse_args()</span></code>
+on it. Otherwise, it should call <code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.arguments.takes_no_arguments()</span></code>.</p>
+<p>If <cite>function</cite> returns True, Ren'Py startup proceeds normally. Otherwise,
+Ren'Py will terminate when <code class="docutils literal notranslate"><span class="pre">function()</span></code> returns.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>For more information about command line parsing, look at the
+<a class="reference external" href="https://docs.python.org/3/library/argparse.html">ArgumentParser documentation</a>.</p>
+</div>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">uses_display</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+<p>If True, Ren'Py will initialize the display. If False, Ren'Py will
+use dummy video and audio drivers.</p>
+</dd></dl>
+
+</dd></dl>
+
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h3>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">init</span> <span class="k">python</span><span class="p">:</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">compute_area_command</span><span class="p">():</span>
+        <span class="n">ap</span> <span class="o">=</span> <span class="n">renpy</span><span class="o">.</span><span class="na">arguments</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Compute the area of various shapes.&#39;</span><span class="p">)</span>
+        <span class="n">ap</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;dimensions&quot;</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;The dimension of the shape.&quot;</span><span class="p">)</span>
+        <span class="n">ap</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--square&quot;</span><span class="p">,</span> <span class="na">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;If given, compute the area as a square.&quot;</span><span class="p">)</span>
+        <span class="n">ap</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--rectangle&quot;</span><span class="p">,</span> <span class="na">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;If given, compute the area as a rectangle.&quot;</span><span class="p">)</span>
+        <span class="n">ap</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--circle&quot;</span><span class="p">,</span> <span class="na">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;If given, compute the area as a circle.&quot;</span><span class="p">)</span>
+
+        <span class="n">args</span> <span class="o">=</span> <span class="n">ap</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">square</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Square: </span><span class="s">{</span><span class="n">args</span><span class="o">.</span><span class="n">dimensions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">2</span><span class="s">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">args</span><span class="o">.</span><span class="n">rectangle</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Rectangle: </span><span class="s">{</span><span class="n">args</span><span class="o">.</span><span class="n">dimensions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">args</span><span class="o">.</span><span class="n">dimensions</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="s">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">args</span><span class="o">.</span><span class="n">circle</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Circle: </span><span class="s">{</span><span class="mf">3.14</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">args</span><span class="o">.</span><span class="n">dimensions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">2</span><span class="s">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Terminate and do not run Ren&#39;Py normally</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="n">renpy</span><span class="o">.</span><span class="na">arguments</span><span class="o">.</span><span class="n">register_command</span><span class="p">(</span><span class="s2">&quot;compute_area&quot;</span><span class="p">,</span> <span class="n">compute_area_command</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The command can then be called as follows:</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-30-30-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-30-30-0" name="30-0" role="tab" tabindex="0">Linux / macOS</button><button aria-controls="panel-30-30-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-30-30-1" name="30-1" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-30-30-0" class="sphinx-tabs-panel" id="panel-30-30-0" name="30-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;<span class="w"> </span>./renpy.sh<span class="w"> </span>&lt;basedir&gt;<span class="w"> </span>compute_area<span class="w"> </span><span class="m">3</span><span class="w"> </span>--square
+
+Square:<span class="w"> </span><span class="m">9</span>.0
+
+&gt;<span class="w"> </span>./renpy.sh<span class="w"> </span>&lt;basedir&gt;<span class="w"> </span>compute_area<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>--rectangle
+
+Rectangle:<span class="w"> </span><span class="m">6</span>.0
+
+&gt;<span class="w"> </span>./renpy.sh<span class="w"> </span>&lt;basedir&gt;<span class="w"> </span>compute_area<span class="w"> </span><span class="m">1</span><span class="w"> </span>--circle
+
+Circle:<span class="w"> </span><span class="m">3</span>.14
+
+&gt;<span class="w"> </span>./renpy.sh<span class="w"> </span>&lt;basedir&gt;<span class="w"> </span>compute_area<span class="w"> </span>--help
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-30-30-1" class="sphinx-tabs-panel" hidden="true" id="panel-30-30-1" name="30-1" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="p">&gt;</span> .\lib\py3-windows-x86_64\python.exe renpy.py basedir compute_area 3 --square
+
+Square: 9.0
+
+<span class="p">&gt;</span> .\lib\py3-windows-x86_64\python.exe renpy.py basedir compute_area 3 2 --rectangle
+
+Rectangle: 6.0
+
+<span class="p">&gt;</span> .\lib\py3-windows-x86_64\python.exe renpy.py basedir compute_area 1 --circle
+
+Circle: 3.14
+
+<span class="p">&gt;</span> .\lib\py3-windows-x86_64\python.exe renpy.py basedir compute_area --help
+</pre></div>
+</div>
+</div></div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="template_projects.html" class="btn btn-neutral float-left" title="Template Projects" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="editor.html" class="btn btn-neutral float-right" title="Text Editor Integration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>
